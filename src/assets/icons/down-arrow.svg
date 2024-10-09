@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="9px" viewBox="0 0 16 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Down Arrow</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Matchmaking" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="Create-Category" transform="translate(-902.000000, -449.000000)" fill-rule="nonzero" stroke="#54676E" stroke-width="1.5">
+            <g id="Pop-Up">
+                <g id="Content" transform="translate(454.000000, 194.000000)">
+                    <g id="Sport-Dropdown" transform="translate(42.000000, 209.000000)">
+                        <g id="Down-Arrow" transform="translate(406.000000, 46.000000)">
+                            <path d="M11.2102175,0.495373528 L10.9888307,8.99248997" id="Line-11" transform="translate(11.099524, 4.743932) rotate(45.000000) translate(-11.099524, -4.743932) "></path>
+                            <path d="M5,0.5 L5,9" id="Line-11" transform="translate(5.000000, 5.000000) rotate(-45.000000) translate(-5.000000, -5.000000) "></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

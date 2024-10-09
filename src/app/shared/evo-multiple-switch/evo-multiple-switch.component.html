@@ -1,0 +1,29 @@
+<div *ngIf="showTitle">
+  <p class="semiBoldMont font12px noMargin" [ngStyle]="{ color: getTitleColor() }">{{title}}</p>
+  <div style="height: 6px;"></div>
+</div>
+<div class="containerShadow bgWhiteHoverColor"
+     [ngStyle]="{ height: containerHeight, cursor: getCursor() }"
+     [ngClass]="{ whiteBg: isDisabled === false, bgGrayColor: isDisabled === true}"
+     style="width: 100%; border-radius: 15px"
+     fxLayoutAlign="center center">
+  <div fxLayoutAlign="center center"  style="background-color: #009CCC; border-radius: 15px; border: none; cursor: pointer; height: 100%">
+    <div
+      fxFlex
+      style="height: 100%; text-align: center; align-content: center"
+      *ngFor="let element of list; let i = index;"
+      [ngClass] = "{greenBg : element.key === _currentValue.key,
+      borderRadiusLeft : i === 0, borderRadiusRight: i === list.length - 1,
+      borderRight : ! (i === list.length - 1), borderLeft : ! (i === 0)}"
+    >
+      <button
+        style="border: none; background: transparent; cursor: pointer; height: 100%"
+        class="whiteColor semiBoldMont font14px"
+        (click)="onButtonClicked(element)"
+      >
+        {{element.value}}
+      </button>
+    </div>
+  </div>
+
+</div>

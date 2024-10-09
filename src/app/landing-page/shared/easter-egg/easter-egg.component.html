@@ -1,0 +1,20 @@
+<div class="modal" *ngIf="easterEggSv.isVisible === true" fxLayoutAlign="center center">
+  <div class="whiteBg defaultShadow"
+       style="border-radius: 6px;">
+    <div fxLayoutAlign="center center" style="max-width: 500px">
+      <img style="max-width: 100px; object-fit: contain" src="../../../../assets/newWebsite/marineEvo.png" alt="evolytes">
+      <div style="width: 50%; max-width: 300px; min-width: 100px" >
+        <div fxLayout="column" fxLayoutAlign="center center">
+          <h1 class="blueColor font18px semiBoldMont noMargin" style="padding: 30px; text-align: center">{{getText()}}</h1>
+          <button class="blueButton whiteColor semiBoldMont font14px"
+                  style="height: 40px; margin-bottom: 30px"
+                  (click)="easterEggSv.close()"
+          >
+            {{getValidation()}}
+          </button>
+        </div>
+      </div>
+      <img style="max-width: 100px; object-fit: contain" src="../../../../assets/newWebsite/mathildeEvo.png" alt="evolytes">
+    </div>
+  </div>
+</div>

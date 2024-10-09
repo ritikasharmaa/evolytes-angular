@@ -1,0 +1,25 @@
+<div style="height: 100%;width:100%;">
+  <div class="defaultScrollBar scrollBarGreenThumb" style="height: 100%; width: 100%; overflow-y: scroll;"
+       fxLayout="row" fxLayoutAlign="center start">
+    <div fxFlex="95">
+      <div style="height:20px"></div>
+      <div class="whiteBg defaultShadow" style="width:100%;border-radius: 4px;" fxLayout.lt-md="row"
+           fxLayoutAlign.gt-sm="start start" fxLayoutAlign.lt-md="center start">
+        <div fxFlex.gt-sm="75" fxFlex.lt-md="90" fxLayoutAlign.gt-sm="center start" fxLayoutAlign.lt-md="center start">
+          <div fxFlex.gt-sm="90">
+            <div style="height:20px"></div>
+
+            <p class="font20px blackColor noMargin boldMont"
+               style="line-height: 44px;">
+              {{ 'sidebar.settings' | translate }}
+            </p>
+            <div style="height: 10px;"></div>
+            <app-settings-bar></app-settings-bar>
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </div>
+      <div style="height: 20px;"></div>
+    </div>
+  </div>
+</div>

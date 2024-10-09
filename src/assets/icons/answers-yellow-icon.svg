@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="31px" height="31px" viewBox="0 0 31 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>QuestionsAnsweredIcon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Tablet_Overview" transform="translate(-273.000000, -143.000000)">
+            <g id="TimeSpentThisWeek" transform="translate(103.000000, 92.000000)">
+                <g id="QuestionsAnsweredIcon" transform="translate(173.000000, 54.000000)">
+                    <text id="?" font-family="Montserrat-SemiBold, Montserrat" font-size="17" font-weight="500" line-spacing="12" fill="#FFCB05">
+                        <tspan x="7" y="23">?</tspan>
+                    </text>
+                    <circle id="Oval-3" stroke="#FFCB05" stroke-width="2.5" fill-rule="nonzero" cx="12.5" cy="12.5" r="13.75"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

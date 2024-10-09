@@ -1,0 +1,37 @@
+<app-modal></app-modal>
+<app-evo-date-picker></app-evo-date-picker>
+<div *ngIf="mobileMenuSv.isVisible">
+  <app-mobile-menu></app-mobile-menu>
+</div>
+<app-user-settings-modal></app-user-settings-modal>
+<app-evo-header></app-evo-header>
+<div style="height: calc(100% - 60px); width: 100%;">
+  <app-evo-sidebar></app-evo-sidebar>
+  <div class="bgLightGrayColor"
+       [ngStyle.gt-xs]="{ width: 'calc(100% - 120px)', display: 'inline-block', 'vertical-align': 'top', height: '100%' }"
+       [ngStyle.xs]="{ width: '100%', display: 'inline-block', 'vertical-align': 'top', height: '100%' }">
+    <div *ngIf="isPaymentNeeded()" style="height: 70px;" fxLayoutAlign="center end">
+      <div class="defaultShadow redBg"
+           style="height: 60px; border-radius: 4px;"
+           fxFlex="96"
+           fxFlex.lt-md="96" fxLayoutAlign="start center">
+        <div fxFlex="20px"></div>
+        <p class="boldMont font18px whiteColor noMargin" fxFlex>
+          {{ getPaymentTitle() }}
+        </p>
+        <div fxFlex="20px"></div>
+        <button class="whiteButton font18px boldMont redColor"
+                fxFlex="180px"
+                style="height: 44px"
+                (click)="onPaymentButtonClicked()">
+          {{ getPaymentButtonTitle() }}
+        </button>
+        <div fxFlex="20px"></div>
+      </div>
+    </div>
+    <div [ngStyle]="{ height: getRouterHeight() }">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+<!--<app-evo-footer></app-evo-footer>-->

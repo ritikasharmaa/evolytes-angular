@@ -1,0 +1,195 @@
+<div>
+  <p class="font16px blackColor noMargin boldMont"
+     style="line-height: 44px;">
+    {{ 'settings.profileSettings.myProfile' | translate }}
+  </p>
+  <p class="semiBoldMont noMargin font14px lightGrayColor" style="width:50%;">
+    {{ 'settings.profileSettings.profileDesc' | translate }}
+  </p>
+  <div style="height: 20px"></div>
+  <div class="line"></div>
+  <div style="height: 10px"></div>
+
+  <p class="font16px lightGrayColor noMargin boldMont"
+     style="line-height: 44px;">
+    {{ 'settings.profileSettings.myInfo' | translate }}
+
+  </p>
+
+  <p class="semiBoldMont noMargin font14px lightGrayColor" style="width:50%;">
+    {{ 'settings.profileSettings.infoDesc' | translate }}
+  </p>
+
+  <div>
+
+    <div style="height: 20px;"></div>
+
+    <div fxLayoutAlign="space-between start" fxHide.xs="true">
+      <div fxFlex="47" fxFlex.xs="100">
+        <app-evo-input title="{{ 'userSettings.emailTitle' | translate }}" [isDisabled]="true"
+                       [value]="getUserEmail()"></app-evo-input>
+      </div>
+      <div fxFlex="47">
+        <app-evo-input title="{{ 'userSettings.phoneTitle' | translate }}" [placeholderText]="'Phone Number'"
+                       [value]="phone" (inputChangedEvent)="phone = $event"></app-evo-input>
+      </div>
+    </div>
+
+    <div fxHide.gt-xs="true">
+      <div>
+        <app-evo-input title="{{ 'userSettings.emailTitle' | translate }}" [isDisabled]="true"
+                       [value]="getUserEmail()"></app-evo-input>
+      </div>
+      <div style="height: 20px"></div>
+      <app-evo-input title="{{ 'userSettings.phoneTitle' | translate }}" [placeholderText]="'Phone Number'"
+                     [value]="phone" (inputChangedEvent)="phone = $event"></app-evo-input>
+
+    </div>
+
+    <div style="height: 20px;"></div>
+
+    <div fxLayoutAlign="space-between start" fxHide.xs="true">
+      <div fxFlex="47">
+        <app-evo-input title="{{ 'userSettings.firstNameTitle' | translate }}" [placeholderText]="'John'"
+                       [value]="firstName" (inputChangedEvent)="firstName = $event"></app-evo-input>
+      </div>
+      <div fxFlex="47">
+        <app-evo-input title="{{ 'userSettings.lastNameTitle' | translate }}" [placeholderText]="'Doe'"
+                       [value]="lastName" (inputChangedEvent)="lastName = $event"></app-evo-input>
+      </div>
+    </div>
+
+    <div fxHide.gt-xs="true">
+      <div>
+        <app-evo-input title="{{ 'userSettings.firstNameTitle' | translate }}" [placeholderText]="'John'"
+                       [value]="firstName" (inputChangedEvent)="firstName = $event"></app-evo-input>
+      </div>
+      <div style="height: 20px;"></div>
+      <div>
+        <app-evo-input title="{{ 'userSettings.lastNameTitle' | translate }}" [placeholderText]="'Doe'"
+                       [value]="lastName" (inputChangedEvent)="lastName = $event"></app-evo-input>
+      </div>
+    </div>
+
+    <div style="height: 20px;"></div>
+    <div fxLayoutAlign="end start">
+      <button class="greenButton semiBoldMont font14px whiteColor"
+              style="width: 140px; height: 40px;"
+              [disabled]="isSaveButtonDisabled()"
+              (click)="onSaveUserInformation()">
+        {{ 'userSettings.saveButtonTitle' | translate }}
+      </button>
+    </div>
+
+  </div>
+  <div style="height: 10px"></div>
+  <div class="line"></div>
+  <div style="height: 10px"></div>
+
+  <p class="font16px lightGrayColor noMargin boldMont"
+     style="line-height: 44px;">
+    {{ 'settings.profileSettings.language' | translate }}
+  </p>
+
+  <p class="semiBoldMont noMargin font14px lightGrayColor" style="width:50%;">
+    {{ 'settings.profileSettings.languageDesc' | translate }}
+  </p>
+  <div style="height: 20px"></div>
+
+  <div fxLayoutAlign="space-between start" fxHide.xs="true">
+    <div fxFlex="47" fxFlex.xs="100">
+      <div style="height: 65px">
+        <app-evo-lang-dropdown [type]="CultureTypes.country"
+                               [currentValue]="country"
+                               [isDisabled]="true">
+        </app-evo-lang-dropdown>
+      </div>
+    </div>
+    <div fxFlex="47" fxFlex.xs="100">
+      <div style="height: 65px;">
+        <app-evo-lang-dropdown [type]="CultureTypes.culture" [currentValue]="culture"
+                               (valueChangedEvent)="culture = $event"></app-evo-lang-dropdown>
+      </div>
+    </div>
+  </div>
+
+  <div fxHide.gt-xs="true">
+    <div>
+      <div style="height: 65px">
+        <app-evo-lang-dropdown [type]="CultureTypes.country"
+                               [currentValue]="country"
+                               [isDisabled]="true">
+        </app-evo-lang-dropdown>
+      </div>
+    </div>
+    <div style="height: 20px"></div>
+    <div>
+      <app-evo-lang-dropdown [type]="CultureTypes.culture" [currentValue]="culture"
+                             (valueChangedEvent)="culture = $event"></app-evo-lang-dropdown>
+    </div>
+  </div>
+  <div style="height: 20px"></div>
+
+  <div fxLayoutAlign="end start">
+    <button class="greenButton semiBoldMont font14px whiteColor"
+            style="width: 140px; height: 40px;"
+            [disabled]="isSaveButtonDisabledLanguages()"
+            (click)="onSaveUserInformationLanguages()">
+      {{ 'userSettings.saveButtonTitle' | translate }}
+    </button>
+  </div>
+
+  <div style="height: 10px"></div>
+  <div class="line"></div>
+  <div style="height: 10px"></div>
+  <p class="font16px lightGrayColor noMargin boldMont"
+     style="line-height: 44px;">
+    {{ 'settings.profileSettings.delete' | translate }}
+  </p>
+  <p class="semiBoldMont noMargin font14px lightGrayColor" style="width:50%;">
+    {{ 'settings.profileSettings.deleteDesc' | translate }}
+  </p>
+  <div style="height: 20px"></div>
+
+  <div fxLayoutAlign="space-between center" fxHide.xs="true">
+    <div fxFlex="55">
+      <app-evo-input title="{{ 'signin.passwordTitle' | translate }}"
+                     placeholderText="{{ 'signin.passwordTitle' | translate }}"
+                     [inputType]="'password'"
+                     [value]="currentPassword"
+                     (inputChangedEvent)="currentPassword = $event">
+      </app-evo-input>
+    </div>
+    <div>
+      <div style="height: 23px"></div>
+      <button class="greenButton semiBoldMont font14px whiteColor"
+              style="width: 140px; height: 40px;"
+              [disabled]="isSaveButtonDisabledDelete()"
+              (click)="onSaveUserInformationLanguages()"
+      >
+        {{ 'settings.profileSettings.delete' | translate }}
+      </button>
+    </div>
+  </div>
+
+  <div fxHide.gt-xs="true">
+    <div>
+      <app-evo-input title="{{ 'userSettings.currentPasswordTitle' | translate }}"
+                     placeholderText="{{ 'userSettings.currentPasswordTitle' | translate }}"
+                     [inputType]="'password'"
+                     [value]="currentPassword"
+                     (inputChangedEvent)="currentPassword = $event">
+      </app-evo-input>
+    </div>
+    <div style="height: 20px"></div>
+    <div fxLayoutAlign="end start">
+      <button class="greenButton semiBoldMont font14px whiteColor"
+              style="width: 140px; height: 40px;"
+              [disabled]="isSaveButtonDisabledDelete()"
+      >
+        {{ 'settings.profileSettings.delete' | translate }}
+      </button>
+    </div>
+  </div>
+  <div style="height: 80px;"></div>
+</div>

@@ -1,0 +1,151 @@
+<div class="defaultScrollBar scrollBarBlueThumb" style="height: 100%; width: 100%; overflow-y: scroll;">
+  <div style="height: 20px;"></div>
+  <div fxLayoutAlign="center start">
+    <div class="whiteBg defaultShadow"
+         style="border-radius: 6px;"
+         fxFlex="94">
+      <div style="height: 10px;"></div>
+      <div style="height: 50px;" fxLayoutAlign="start center">
+        <div fxFlex="20px"></div>
+        <div fxFlex fxLayoutAlign="start center">
+          <p class="semiBoldMont font18px blackColor noMargin">Import Students</p>
+        </div>
+        <div fxFlex="20px"></div>
+        <div fxFlex="120px" fxLayoutAlign="start center">
+          <input type="file"
+                 (change)="onFileChanged($event)"
+                 accept="text/csv"
+                 style="display: none;" #fileUpload>
+          <button class="greenButton whiteColor semiBoldMont font14px"
+                  style="height: 40px;"
+                  fxFlex
+                  (click)="fileUpload.click()">
+            Select File
+          </button>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div>
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-lang-dropdown [type]="'culture'"
+                                 [currentValue]="defaultCulture"
+                                 (valueChangedEvent)="onDefaultCultureChanged($event)">
+          </app-evo-lang-dropdown>
+        </div>
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-dropdown [title]="'School Types'"
+                            [list]="SchoolTypesList"
+                            [currentValue]="defaultSchoolType"
+                            (valueChangedEvent)="onDefaultSchoolTypeChanged($event)">
+          </app-evo-dropdown>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px" *ngIf="students.length > 0"></div>
+      <div *ngIf="students.length > 0">
+        <div fxFlex></div>
+        <button fxFlex="120px"
+                class="greenButton semiBoldMont font14px whiteColor"
+                style="height: 40px"
+                (click)="onUploadClicked()">
+          Upload
+        </button>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px;"></div>
+      <div>
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <div *ngFor="let student of students">
+            <div style="height: 10px;"></div>
+            <div class="whiteBg defaultShadow" style="border-radius: 6px;">
+              <div style="height: 6px;"></div>
+              <div>
+                <div fxFlex="20px"></div>
+                <app-evo-input fxFlex
+                               [title]="'First Name'"
+                               [value]="student.firstName"
+                               (inputChangedEvent)="student.firstName = $event">
+                </app-evo-input>
+                <div fxFlex="10px"></div>
+                <app-evo-input fxFlex
+                               [title]="'Middle Name'"
+                               [value]="student.middleName"
+                               (inputChangedEvent)="student.middleName = $event">
+                </app-evo-input>
+                <div fxFlex="10px"></div>
+                <app-evo-input fxFlex
+                               [title]="'Last Name'"
+                               [value]="student.lastName"
+                               (inputChangedEvent)="student.lastName = $event">
+                </app-evo-input>
+                <div fxFlex="20px"></div>
+              </div>
+              <div style="height: 6px;"></div>
+              <div>
+                <div fxFlex="20px"></div>
+                <app-evo-input-date fxFlex
+                                    [title]="'Birth Date'"
+                                    [currentValue]="student.birthDate"
+                                    (inputChangedEvent)="student.birthDate = $event">
+                </app-evo-input-date>
+                <div fxFlex="10px"></div>
+                <app-evo-lang-dropdown fxFlex
+                                       [type]="'culture'"
+                                       [currentValue]="student.culture"
+                                       (valueChangedEvent)="student.culture = $event">
+                </app-evo-lang-dropdown>
+                <div fxFlex="10px"></div>
+                <app-evo-dropdown fxFlex
+                                  [title]="'School Type'"
+                                  [list]="SchoolTypesList"
+                                  [currentValue]="student.schoolType"
+                                  (valueChangedEvent)="school.schoolType = $event">
+                </app-evo-dropdown>
+                <div fxFlex="20px"></div>
+              </div>
+              <div style="height: 20px" *ngIf="students.length > 0"></div>
+              <div *ngIf="students.length > 0">
+                <div fxFlex="40px"></div>
+                <p fxFlex class="semiBoldMont font14px blackColor noMargin">Teacher Accesses</p>
+                <div fxFlex="20px"></div>
+              </div>
+              <div *ngFor="let relation of student.relationships">
+                <div style="height: 6px"></div>
+                <div>
+                  <div fxFlex="40px"></div>
+                  <app-evo-input fxFlex
+                                 [title]="'Email'"
+                                 [value]="relation.email"
+                                 (inputChangedEvent)="relation.email = $event">
+                  </app-evo-input>
+                  <div fxFlex="10px"></div>
+                  <app-evo-dropdown fxFlex
+                                    [title]="'Access Type'"
+                                    [list]="RelationUserAccessTypes"
+                                    [currentValue]="relation.userAccessType"
+                                    (valueChangedEvent)="relation.userAccessType = $event">
+                  </app-evo-dropdown>
+                  <div fxFlex="10px"></div>
+                  <app-evo-dropdown fxFlex
+                                    [title]="'Relation Type'"
+                                    [list]="RelationTypes"
+                                    [currentValue]="relation.relationshipType"
+                                    (valueChangedEvent)="relation.relationshipType = $event">
+                  </app-evo-dropdown>
+                  <div fxFlex="20px"></div>
+                </div>
+              </div>
+              <div style="height: 6px"></div>
+            </div>
+          </div>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 10px;"></div>
+    </div>
+  </div>
+  <div style="height: 20px;"></div>
+</div>

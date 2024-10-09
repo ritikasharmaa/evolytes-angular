@@ -1,0 +1,410 @@
+<app-modal></app-modal>
+<app-evo-header></app-evo-header>
+<app-evo-decoration-background-signup></app-evo-decoration-background-signup>
+<div class="defaultScrollBar scrollBarGreenThumb"
+     style="height: calc(100% - 60px); width: 100%; z-index: 40; overflow-y: scroll;" fxLayoutAlign="center start">
+
+  <div fxFlex="100">
+    <div style="height: 10px;"></div>
+
+    <div style="height: 30px" fxLayoutAlign="center center">
+      <p fxFlex.gt-md="960px"
+         fxFlex="90"
+         class="boldMont font24px blackColor noMargin"
+         style="text-align: center;">{{ 'selectSub.title' | translate }}</p>
+    </div>
+
+    <div style="height: 10px;"></div>
+
+    <div fxLayoutAlign="center start">
+      <p fxFlex.xs="90"
+         fxFlex.sm="90"
+         fxFlex.gt-sm="700px"
+         class="regularMont font14px grayColor noMargin"
+         style="text-align: center;">{{ 'selectSub.subtitle' | translate }}</p>
+    </div>
+
+    <div style="height: 20px;"></div>
+
+    <div>
+      <div style="height: 40px"></div>
+      <div fxLayout="row"
+           fxLayoutAlign="center start"
+           fxLayout.lt-md="column"
+           fxLayoutAlign.lt-md="start center">
+
+        <!-- Free trial -->
+        <div style="width: 280px"
+             *ngIf="showFreeTrial()">
+          <div class="pricingRoundedTitle greenBg">
+            <div style="height: 20px"></div>
+            <h1 class="boldMont font16px whiteColor noMargin"
+                style="text-align: center">{{ 'lp2.pricing.Subscriptions.freeTrial.title' | translate }}</h1>
+            <div style="height: 20px"></div>
+          </div>
+
+          <div class="cardOneMonth whiteBg">
+            <div style="height: 20px;"></div>
+            <h1 class="boldMont font22px blackColor noMargin"
+                style="text-align: center">
+              {{ pricing.trial.trialLength }} {{ 'lp2.pricing.Subscriptions.freeTrial.message' | translate }}
+            </h1>
+            <div style="height: 20px;"></div>
+            <p class="mediumMont font12px grayColor noMargin centerAlign"
+               style="margin: 0 2em 0">
+              {{ 'lp2.pricing.Subscriptions.freeTrial.detailMessage' | translate }}
+            </p>
+            <div style="height: 20px;"></div>
+            <div fxLayoutAlign="center start">
+              <button class="greenButton" style="height: 50px; width: 160px;" (click)="selectSub('trial')">
+                <p class="semiBoldMont whiteColor font16px noMargin">
+                  {{ 'header.getStarted' | translate }}
+                </p>
+              </button>
+            </div>
+            <div style="height: 20px;"></div>
+            <h1 class="boldMont font14px grayColor noMargin"
+                style="text-align: center">
+              {{ 'lp2.pricing.Subscriptions.includes' | translate }}
+            </h1>
+            <div style="height: 20px;"></div>
+            <div fxLayout="row" fxLayoutAlign="start center">
+              <img src='./assets/icons/CheckmarkGray.png'
+                   style="object-fit: contain; height: 20px; width: 20px; margin-right: 1em; margin-left: 1em">
+              <p class="mediumMont font14px grayColor noMargin">
+                {{ pricing["1M"].messageOne.stringForCulture(CultureModel.getHomepageCulture()) }}
+              </p>
+              <div style="width: 10px;"></div>
+            </div>
+            <div style="height: 20px;"></div>
+            <div fxLayout="row" fxLayoutAlign="start center">
+              <img src='./assets/icons/CheckmarkGray.png'
+                   style="object-fit: contain; height: 20px; width: 20px; margin-right: 1em; margin-left: 1em">
+              <p class="mediumMont font14px grayColor noMargin">
+                {{ pricing["1M"].messageTwo.stringForCulture(CultureModel.getHomepageCulture()) }}
+              </p>
+              <div style="width: 10px;"></div>
+            </div>
+            <div style="height: 20px;"></div>
+            <div fxLayout="row" fxLayoutAlign="start center">
+              <img src='./assets/icons/CheckmarkGray.png'
+                   style="object-fit: contain; height: 20px; width: 20px; margin-right: 1em; margin-left: 1em">
+              <p class="mediumMont font14px grayColor noMargin">
+                {{ pricing["1M"].messageThree.stringForCulture(CultureModel.getHomepageCulture()) }}
+              </p>
+              <div style="width: 10px;"></div>
+            </div>
+            <div class="pricingRoundedBonus blueBg" *ngIf="show1MBook()">
+              <div style="height: 20px"></div>
+              <h1 class="boldMont font18px whiteColor noMargin"
+                  style="margin-left: 1em">
+                {{ 'lp2.pricing.Subscriptions.Bonus' | translate }}
+              </h1>
+              <div style="height: 5px"></div>
+              <p class="regularMont font14px whiteColor noMargin"
+                 style="margin-left: 1em">
+                {{ 'lp2.pricing.Subscriptions.BonusSubtitle' | translate  }}
+              </p>
+              <div style="height: 20px"></div>
+              <div fxLayout="row" fxLayoutAlign="center center">
+                <img src='./assets/books/Book-One-EN.png'
+                     style="object-fit: contain; height: 60px; width: 60px; margin-left: 1em; margin-right: 1em;">
+                <h1 class="semiBoldMont font14px whiteColor noMargin"
+                    style="margin-left: 1em">
+                  {{ 'lp2.pricing.Subscriptions.BookText' | translate }}
+                </h1>
+              </div>
+              <div style="height: 20px"></div>
+            </div>
+            <div style="height: 20px;"></div>
+          </div>
+
+        </div>
+        <div fxFlex="40px" fxFlex.md="60px" fxFlex.gt-md="80px" style="height: 20px;"
+             *ngIf="show1MSubscription()"></div>
+
+        <!-- 1 Month Subscription -->
+        <div style="width: 280px"
+             *ngIf="show1MSubscription()">
+          <div class="pricingRoundedTitle blueBg">
+            <div style="height: 20px"></div>
+            <h1 class="boldMont font16px whiteColor noMargin"
+                style="text-align: center">{{ 'lp2.pricing.Subscriptions.1m.title' | translate }}</h1>
+            <div style="height: 20px"></div>
+          </div>
+
+          <div class="cardOneMonth whiteBg">
+            <div style="height: 20px;"></div>
+            <h1 class="boldMont font22px blackColor noMargin"
+                style="text-align: center">
+              {{ landingPageMonthlyPricing('1M') + ' / '}}{{ 'lp2.pricing.Subscriptions.month' | translate }}
+            </h1>
+            <div style="height: 20px;"></div>
+            <p class="mediumMont font12px grayColor noMargin centerAlign"
+               style="margin: 0 2em 0">
+              {{ 'lp2.pricing.Subscriptions.perChild' | translate }}{{ landingPageTotalPrice('1M') + ' '}}{{ 'lp2.pricing.Subscriptions.paymentFrequency1' | translate }}
+            </p>
+            <div style="height: 20px;"></div>
+            <div fxLayoutAlign="center start">
+              <button class="blueButton" style="height: 50px; width: 160px;" (click)="selectSub('1M')">
+                <p class="semiBoldMont whiteColor font16px noMargin">
+                  {{ 'header.getStarted' | translate }}
+                </p>
+              </button>
+            </div>
+            <div style="height: 20px;"></div>
+            <h1 class="boldMont font14px grayColor noMargin"
+                style="text-align: center">
+              {{ 'lp2.pricing.Subscriptions.includes' | translate }}
+            </h1>
+            <div style="height: 20px;"></div>
+            <div fxLayout="row" fxLayoutAlign="start center">
+              <img src='./assets/icons/CheckmarkGray.png'
+                   style="object-fit: contain; height: 20px; width: 20px; margin-right: 1em; margin-left: 1em">
+              <p class="mediumMont font14px grayColor noMargin">
+                {{ pricing["1M"].messageOne.stringForCulture(CultureModel.getHomepageCulture()) }}
+              </p>
+              <div style="width: 10px;"></div>
+            </div>
+            <div style="height: 20px;"></div>
+            <div fxLayout="row" fxLayoutAlign="start center">
+              <img src='./assets/icons/CheckmarkGray.png'
+                   style="object-fit: contain; height: 20px; width: 20px; margin-right: 1em; margin-left: 1em">
+              <p class="mediumMont font14px grayColor noMargin">
+                {{ pricing["1M"].messageTwo.stringForCulture(CultureModel.getHomepageCulture()) }}
+              </p>
+              <div style="width: 10px;"></div>
+            </div>
+            <div style="height: 20px;"></div>
+            <div fxLayout="row" fxLayoutAlign="start center">
+              <img src='./assets/icons/CheckmarkGray.png'
+                   style="object-fit: contain; height: 20px; width: 20px; margin-right: 1em; margin-left: 1em">
+              <p class="mediumMont font14px grayColor noMargin">
+                {{ pricing["1M"].messageThree.stringForCulture(CultureModel.getHomepageCulture()) }}
+              </p>
+              <div style="width: 10px;"></div>
+            </div>
+            <div class="pricingRoundedBonus blueBg" *ngIf="show1MBook()">
+              <div style="height: 20px"></div>
+              <h1 class="boldMont font18px whiteColor noMargin"
+                  style="margin-left: 1em">
+                {{ 'lp2.pricing.Subscriptions.Bonus' | translate }}
+              </h1>
+              <div style="height: 5px"></div>
+              <p class="regularMont font14px whiteColor noMargin"
+                 style="margin-left: 1em">
+                {{ 'lp2.pricing.Subscriptions.BonusSubtitle' | translate  }}
+              </p>
+              <div style="height: 20px"></div>
+              <div fxLayout="row" fxLayoutAlign="center center">
+                <img src='./assets/books/Book-One-EN.png'
+                     style="object-fit: contain; height: 60px; width: 60px; margin-left: 1em; margin-right: 1em;">
+                <h1 class="semiBoldMont font14px whiteColor noMargin"
+                    style="margin-left: 1em">
+                  {{ 'lp2.pricing.Subscriptions.BookText' | translate }}
+                </h1>
+              </div>
+              <div style="height: 20px"></div>
+            </div>
+            <div style="height: 20px;"></div>
+          </div>
+
+        </div>
+        <div fxFlex="40px" fxFlex.md="60px" fxFlex.gt-md="80px" style="height: 20px;"
+             *ngIf="show3MSubscription()"></div>
+
+        <!-- 3 Month Subscription -->
+        <div style="width: 280px"
+             *ngIf="show3MSubscription()">
+          <div class="pricingRoundedTitle greenBg">
+            <div style="height: 20px"></div>
+            <h1 class="boldMont font16px whiteColor noMargin"
+                style="text-align: center">
+              {{ 'lp2.pricing.Subscriptions.3m.title' | translate }}
+            </h1>
+            <div style="height: 20px"></div>
+          </div>
+
+          <div class="middlePrincingCards whiteBg">
+            <div style="height: 20px;"></div>
+            <h1 class="boldMont font22px blackColor noMargin"
+                style="text-align: center">
+              {{ landingPageMonthlyPricing('3M') + ' / '}}{{ 'lp2.pricing.Subscriptions.month' | translate }}
+            </h1>
+            <div style="height: 20px;"></div>
+            <p class="mediumMont font12px grayColor noMargin centerAlign"
+               style="margin: 0 2em 0">
+              {{ 'lp2.pricing.Subscriptions.perChild' | translate }}{{ landingPageTotalPrice('3M') + ' '}}{{ 'lp2.pricing.Subscriptions.paymentFrequency2' | translate }}
+            </p>
+            <div style="height: 20px;"></div>
+            <div fxLayoutAlign="center start">
+              <button class="greenButton" style="height: 50px; width: 160px;" (click)="selectSub('3M')">
+                <p class="semiBoldMont whiteColor font16px noMargin">
+                  {{ 'header.getStarted' | translate }}
+                </p>
+              </button>
+            </div>
+            <div style="height: 20px;"></div>
+            <h1 class="boldMont font14px grayColor noMargin"
+                style="text-align: center">
+              {{ 'lp2.pricing.Subscriptions.includes' | translate }}
+            </h1>
+            <div style="height: 20px;"></div>
+            <div fxLayout="row" fxLayoutAlign="start center">
+              <img src='./assets/icons/CheckmarkGray.png'
+                   style="object-fit: contain; height: 20px; width: 20px; margin-right: 1em; margin-left: 1em">
+              <p class="mediumMont font14px grayColor noMargin">
+                {{ pricing["3M"].messageOne.stringForCulture(CultureModel.getHomepageCulture()) }}
+              </p>
+              <div style="width: 10px;"></div>
+            </div>
+            <div style="height: 20px;"></div>
+            <div fxLayout="row" fxLayoutAlign="start center">
+              <img src='./assets/icons/CheckmarkGray.png'
+                   style="object-fit: contain; height: 20px; width: 20px; margin-right: 1em; margin-left: 1em">
+              <p class="mediumMont font14px grayColor noMargin">
+                {{ pricing["3M"].messageTwo.stringForCulture(CultureModel.getHomepageCulture()) }}
+              </p>
+              <div style="width: 10px;"></div>
+            </div>
+            <div style="height: 20px;"></div>
+            <div fxLayout="row" fxLayoutAlign="start center">
+              <img src='./assets/icons/CheckmarkGray.png'
+                   style="object-fit: contain; height: 20px; width: 20px; margin-right: 1em ; margin-left: 1em">
+              <p class="mediumMont font14px grayColor noMargin">
+                {{ pricing["3M"].messageThree.stringForCulture(CultureModel.getHomepageCulture()) }}
+              </p>
+              <div style="width: 10px;"></div>
+            </div>
+            <div style="height: 20px;"></div>
+          </div>
+          <div class="pricingRoundedBonus greenBg" *ngIf="show3MBook()">
+            <div style="height: 20px"></div>
+            <h1 class="boldMont font18px whiteColor noMargin"
+                style="margin-left: 1em">{{ 'lp2.pricing.Subscriptions.Bonus' | translate }}</h1>
+            <div style="height: 5px"></div>
+            <p class="regularMont font14px whiteColor noMargin"
+               style="margin-left: 1em">
+              {{ 'lp2.pricing.Subscriptions.BonusSubtitle' | translate  }}
+            </p>
+            <div style="height: 20px"></div>
+            <div fxLayout="row" fxLayoutAlign="center center">
+              <img src='./assets/books/Book-One-EN.png'
+                   style="object-fit: contain; height: 60px; width: 60px; margin-left: 1em; margin-right: 1em;">
+              <h1 class="semiBoldMont font14px whiteColor noMargin"
+                  style="margin-left: 1em">
+                {{ 'lp2.pricing.Subscriptions.BookText' | translate }}
+              </h1>
+            </div>
+            <div style="height: 20px"></div>
+          </div>
+        </div>
+        <div fxFlex="40px" fxFlex.md="60px" fxFlex.gt-md="80px" style="height: 20px;"
+             *ngIf="show6MSubscription()"></div>
+
+        <!-- 6 Month Subscription -->
+        <div style="width: 280px"
+             *ngIf="show6MSubscription()">
+          <div class="pricingRoundedTitle purpleBg">
+            <div style="height: 20px"></div>
+            <h1 class="boldMont font16px whiteColor noMargin"
+                style="text-align: center">
+              {{ 'lp2.pricing.Subscriptions.6m.title' | translate }}
+            </h1>
+            <div style="height: 20px"></div>
+          </div>
+          <div class="middlePrincingCards whiteBg">
+            <div style="height: 20px;"></div>
+            <h1 class="boldMont font22px blackColor noMargin"
+                style="text-align: center">
+              {{ landingPageMonthlyPricing('6M') + ' / '}}{{ 'lp2.pricing.Subscriptions.month' | translate }}
+            </h1>
+            <div style="height: 20px;"></div>
+            <p class="mediumMont font12px grayColor noMargin centerAlign"
+               style="margin: 0 2em 0">
+              {{ 'lp2.pricing.Subscriptions.perChild' | translate }}{{ landingPageTotalPrice('6M') + ' '}}{{ 'lp2.pricing.Subscriptions.paymentFrequency3' | translate }}
+            </p>
+            <div style="height: 20px;"></div>
+            <div fxLayoutAlign="center start">
+              <button class="purpleButton" style="height: 50px; width: 160px;" (click)="selectSub('6M')">
+                <p class="semiBoldMont whiteColor font16px noMargin">
+                  {{ 'header.getStarted' | translate }}
+                </p>
+              </button>
+            </div>
+            <div style="height: 20px;"></div>
+            <h1 class="boldMont font14px grayColor noMargin"
+                style="text-align: center">
+              {{ 'lp2.pricing.Subscriptions.includes' | translate }}
+            </h1>
+            <div style="height: 20px;"></div>
+            <div fxLayout="row" fxLayoutAlign="start center">
+              <img src='./assets/icons/CheckmarkGray.png'
+                   style="object-fit: contain; height: 20px; width: 20px; margin-right: 1em; margin-left: 1em">
+              <p class="mediumMont font14px grayColor noMargin">
+                {{ pricing["6M"].messageOne.stringForCulture(CultureModel.getHomepageCulture()) }}
+              </p>
+              <div style="width: 10px;"></div>
+            </div>
+            <div style="height: 20px;"></div>
+            <div fxLayout="row" fxLayoutAlign="start center">
+              <img src='./assets/icons/CheckmarkGray.png'
+                   style="object-fit: contain; height: 20px; width: 20px; margin-right: 1em; margin-left: 1em">
+              <p class="mediumMont font14px grayColor noMargin">
+                {{ pricing["6M"].messageTwo.stringForCulture(CultureModel.getHomepageCulture()) }}
+              </p>
+              <div style="width: 10px;"></div>
+            </div>
+            <div style="height: 20px;"></div>
+            <div fxLayout="row" fxLayoutAlign="start center">
+              <img src='./assets/icons/CheckmarkGray.png'
+                   style="object-fit: contain; height: 20px; width: 20px; margin-right: 1em; margin-left: 1em">
+              <p class="mediumMont font14px grayColor noMargin">
+                {{ pricing["6M"].messageThree.stringForCulture(CultureModel.getHomepageCulture()) }}
+              </p>
+              <div style="width: 10px;"></div>
+            </div>
+            <div style="height: 20px;"></div>
+          </div>
+          <div class="pricingRoundedBonus purpleBg" *ngIf="show6MBook()">
+            <div style="height: 20px"></div>
+            <h1 class="boldMont font18px whiteColor noMargin"
+                style="margin-left: 1em">
+              {{ 'lp2.pricing.Subscriptions.Bonus' | translate }}
+            </h1>
+            <div style="height: 5px"></div>
+            <p class="regularMont font14px whiteColor noMargin"
+               style="margin-left: 1em">
+              {{ 'lp2.pricing.Subscriptions.BonusSubtitle' | translate  }}
+            </p>
+            <div style="height: 20px"></div>
+            <div fxLayout="row" fxLayoutAlign="center center">
+              <img src='./assets/books/Book-One-EN.png'
+                   style="object-fit: contain; height: 60px; width: 60px; margin-left: 1em; margin-right: 1em;">
+              <h1 class="semiBoldMont font14px whiteColor noMargin"
+                  style="margin-left: 1em">
+                {{ 'lp2.pricing.Subscriptions.BookText' | translate }}
+              </h1>
+            </div>
+            <div style="height: 20px"></div>
+          </div>
+        </div>
+      </div>
+      <div style="height: 50px;"></div>
+
+    </div>
+
+    <div fxLayoutAlign="center start">
+      <app-evo-progress-points [currentIndex]="1"
+                               [numPoints]="4"
+                               [defaultColor]="'#979797'"
+                               [selectedColor]="'#009CCC'">
+      </app-evo-progress-points>
+    </div>
+
+    <div style="height: 20px;"></div>
+
+  </div>
+
+
+</div>

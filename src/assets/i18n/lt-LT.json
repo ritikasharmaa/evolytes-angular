@@ -1,0 +1,1320 @@
+{
+  "lp2": {
+    "common": {
+      "answers": {
+        "amount": "1,200",
+        "label": "ATSAKYMAI",
+        "title": "Atsakymai per dieną",
+        "subtitle": "Evolytes žaidime vaikai atsako iki 1200 klausimų per dieną"
+      },
+      "minutes": {
+        "label": "MINUTĖS",
+        "title": "Vidutiniškai praleistas laikas",
+        "subtitle": "Vaikai vidutiniškai praleidžia 26 minutes kiekvieną kartą atidarydami žaidimą"
+      },
+      "research": {
+        "subtitle": "Evolytes yra paremtas 3 metų tarpdisciplininiais kompiuterių mokslo ir psichologijos tyrimais, siekiant padaryti mokymosi procesą įdomiu, įtraukiančiu bei pagerinančiu įgūdžių įsisavinimą. Evolytes platformos eksperimento rezultatai viršijo mūsų didžiausius lūkesčius.",
+        "answers12": "Tyrimo metu vaikai, turintys mokymosi sutrikimų, parodė geriausius rezultatų augimą",
+        "answers1200": "Vaikai savo noru ir savo laisvalaikio metu atsakė iki 1200 klausimų per dieną Evolytes žaidime",
+        "answers4": "Viso tyrimo metu vaikai atsakė į vidutiniškai 4 kartus daugiau klausimų Evolytes žaidime nei, kad mokykloje",
+        "theory": {
+          "reinforcementTitle": "Sustiprinimo Teorija",
+          "reinforcementDescription": "Padaro žaidimą linksmą ir tuo pačiu apdovanoja mokinius, kad jie išliktų įsitraukę",
+          "flowTitle": "Srauto Teorija",
+          "flowDescription": "Naudojama prisitaikyti prie kiekvieno mokinio įgūdžių lygio, siekiant maksimaliai išnaudoti jų potencialą",
+          "spacingTitle": "Tarpo Efektas",
+          "spacingDescription": "Užtikrina ilgalaikį mokymąsi ir įgūdžių įgijimą atliekant tarpų mokymosi praktiką",
+          "skillTitle": "Įgūdžių Įgijimas",
+          "skillDescription": "Mes naudojame naujus metodus įgūdžių įgijimo tyrimuose, kad pamatuotume ir įvertintume įgūdžius",
+          "multimodalTitle": "Daugiamodalinis Kodavimas",
+          "multimodalDescription": "Mokydamiesi skirtingose aplinkose, mokiniai geriau prisimena tuos įgūdžius realiame gyvenime",
+          "mindsetTitle": "Augimo Mąstysena",
+          "mindsetDescription": "Naudojama mokinių pažangai įvertinti ir parodyti platformoje"
+        }
+      },
+      "androidComingSoon": "Bus pasiekiama 2022 balandį"
+    },
+    "features": {
+      "books": {
+        "titleMenu": "Knygos",
+        "subtitle": "Evolytes knygos yra specialiai sukurtos praktikuotis skaitymo ir rašymo įgūdžius smagiu ir unikaliu būdu.",
+        "skills": "Skaitymo ir rašymo įgūdžiai",
+        "skillsSubtitle": "Knygos yra skirtos lavinti skaitymo ir rašymo įgūdžius, siekiant pagerinti mokymosi rezultatus.",
+        "integration": "Žaidimo integracija",
+        "integrationSubtitle": "Knygos integruojasi su žaidimu per skyrių egzaminus, kas daro mokymasį įdomiu ir įtraukiančiu.",
+        "rewards": "Mokymosi apdovanojimai",
+        "rewardsSubtitle": "Vaikai yra apdovanojami žaidime už darbą knygose, todėl jiems įdomu mokytis matematikos naudojant knygas!",
+        "integrationGame": {
+          "title": "Visos Evolytes knygos yra integruojamos į žaidimą unikaliu būdu",
+          "subtitle": "Evolytes knygos integruojamos į žaidimą naudojant QR kodus, po kurių seka egzaminas. Jei vaikai atsako teisingai, jie gauna žaidimo apdovanojimus, kad išlaikytų jų motyvaciją!",
+          "step1": "Darbas knygoje",
+          "step1Description": "Evolytes knygose vaikai mokosi kaip spręsti naujas problemas, esančias kiekviename skyriuje.",
+          "step2": "Skenuokite QR kodą",
+          "step2Description": "Skyriaus pabaigoje nuskenuokite QR kodą, kad galėtumėte laikyti egzaminą ir peržiūrėti skyrių.",
+          "step3": "Baigti egzaminą",
+          "step3Description": "Kai vaikai sėkmingai užbaigia egzaminą, jie gauna apdovanojimą.",
+          "step4": "Stebėkite knygos progresą",
+          "step4Description": "Monitoriuje galite stebėti, kaip jūsų vaikas knygelėse žengia į priekį, kuriuos skyrius jau baigė arba kuriuose jam sekasi sunkiau."
+        },
+        "shop": {
+          "subtitle": "Mes siūlome keletą knygų, skirtingo amžiaus bei įgūdžių lygiams. Nuolat pridedame naujas knygas su naujomis funkcijomis, būtybėmis ir nuotykiais.",
+          "now": "Apsipirkite dabar",
+          "errorFetchBook": "Atsiprašome, kažkas įvyko klaida gaunant knygas",
+          "age": "metų amžiaus",
+          "grade": "klasė"
+        },
+        "features": {
+          "title": "Funkcijos",
+          "description": "Evolytes knygos siūlo įvairias, unikalias funkcijas, kad matematikos mokymasis Evolytes visatoje būtų įdomus ir įtraukiantis",
+          "feature1": {
+            "title": "Geresni mokymosi rezultatai ir teigiamas požiūris į matematiką",
+            "description1": "Mokiniai knygose mokosi matematikos linksmu būdu, per Evolytes monstriukus ir per unikalią informaciją apie juos.",
+            "description2": "Integruojant knygas į žaidimą - vaikai užbaigia Evolytes knygas per rekordiškai trumpą laiką, pagerina savo mokymosi rezultatus ir daug pozityviau žiūri į matematiką.",
+            "benef1": "Mokymosi rezultatai",
+            "benef2": "Teigiami jausmai"
+          },
+          "feature2": {
+            "title": "Sukurta mokyti vaikus spręsti naujus matematikos uždavinius",
+            "description1": "Evolytes moko vaikus, kaip knygelėse spręsti naujus matematikos uždavinius. Kiekviename skyriuje mokiniai gauna nuoseklias instrukcijas, kaip išspręsti naujus matematikos uždavinius kartu su Evolyte pagalba! ",
+            "description2": "Knygos buvo sukurtos mūsų menininkų ir iliustratorių, kurie turi daugelio metų dizaino bei iliustravimo patirties.",
+            "benef1": "Rašymo įgūdžiai",
+            "benef2": "Skaitymo įgūdžiai"
+          },
+          "feature3": {
+            "title": "Integruota platformoje",
+            "description1": "Evolytes knygos supažindina su žaidimo elementais ir būtybėmis iš Evolytes visatos, tuo pačiu mokant vaikus matematikos.",
+            "description2": "Knygos integruojamos į žaidimą per QR kodus kiekvieno skyriaus pabaigoje. Kodai nukreipia į egzaminus, kurie yra tiesiogiai susieti su turiniu. Jei vaikai sėkmingai išlaiko egzaminą, jie gauna apdovanojimus. Apdovanojimai žaidime motyvuoja mokinius pabaigti knygas per rekordiškai trumpą laiką. Mokytojai gali matyti monitoriuje mokinių pažangą knygose bei visus skyrius, su kuriais mokiniui sekasi sunkiau.",
+            "benef1": "Žaidimo integracija",
+            "benef2": "Apdovanojimai"
+          }
+        }
+      },
+      "game": {
+        "subtitle": "Evolytes žaidimas konkuruoja su žaidimais, kuriuos vaikai žaidžia pramogai, jis padaro matematikos mokymasį įdomiu bei įtraukiančiu.",
+        "math": {
+          "title": "Padaro matematiką linksma",
+          "subtitle": "Aukščiausios kokybės Evolytes žaidimas paverčia matematikos mokymąsi smagiu, kartu su nuostabiais padarais, įtraukiančia visata bei įdomiais nuotykiais.",
+          "explanations": {
+            "title1": "Gaudyk, žaisk ir varžykis",
+            "subtitle1": "Norėdami pagauti, žaisti ar varžytis su kitais padarais, vaikai turi atsakyti į matematinius klausimus.",
+            "title2": "Mokykitės gebėjimų ir tobulėkite",
+            "subtitle2": "Vaikams vis žaidžiant žaidimą, būtybės įgyja naujų gebėjimų ir tobulėja.",
+            "title3": "Nuolat besiplečianti visata",
+            "subtitle3": "Išsirinkite savo veikėją ir atraskite nuolat besiplečiančią Evolytes visatą bei jos istorijas.",
+            "title4": "Paslėptos skrynios",
+            "subtitle4": "Visatoje yra įvairiausių skrynių, vaikai turi atsakyti į klausimus, kad jas atidarytų ir gautų apdovanojimus!"
+          }
+        },
+        "character": {
+          "title": "Pasirinkite savo veikėją",
+          "subtitle": "Vaikai gali išsirinkti savo veikėją bei kompanioną su kuriais žais žaidime. Kiekvienas padaras priklauso evoliucijos šeimai, iš kurios galima rinktis.",
+          "Lucas": "Lucas ir Lighter",
+          "Eva": "Eva ir Swirly",
+          "Oliver": "Oliver ir Badger",
+          "Sarah": "Sara ir Ava"
+        },
+        "story": {
+          "title": "Susipažinkite su istorija",
+          "subtitle": "Vaikai seka istoriją apie 4 draugus, kurie atranda savo Evolyte kompanionus. Žiūrėkite jų prisistatymą žemiau."
+        },
+        "evolve": {
+          "title": "Rinkite ir tobulėkite",
+          "subtitle1": "Daugkartinės evoliucijos",
+          "explanation1": "Kiekvienas Evolyte turi daugybę evoliucijų, suteikiančių jiems unikalių sugebėjimų, kuriuos galite atrasti.",
+          "subtitle2": "Evolyte šeimos",
+          "explanation2": "Kiekvienas Evolyte priklauso šeimos medžiui, kuris apibūdina galimas skirtinga evoliucijas. Kiekviena šeima turi savo unikalias savybes."
+        },
+        "engaged": {
+          "title": "Evolytes yra sukurtas taip, kad jūsų vaikui būtų suteikta pramoga ir išlaikytų jo susidomėjimą",
+          "subtitle": "Evolytes yra paremtas kelerių metų tyrimais ir naudoja pažangiausias psichologines teorijas, kad pagerintų mokymosi rezultatus ir išlaikytų jūsų vaiko susidomėjimą."
+        },
+        "platform": {
+          "title": "Evolytes platforma",
+          "subtitle": "Sužinokite daugiau, kaip knygos, žaidimas ir monitorius padaro Evolytes pirmaujančia matematikos mokymosi platforma.",
+          "booksSubtitle": "Evolytes knygos yra specialiai sukurtos mokyti skaitymo ir rašymo įgūdžių bei integracijos į žaidimą",
+          "monitorSubtitle": "Monitoriuje gaukite išsamias mokymosi įžvalgas realiu laiku apie stipriąsias puses bei sritis, kurias reiktų pagerinti",
+          "gameSubtitle": "Žaidimas Evolytes leidžia mokytis matematikos smagiai ir įtraukiančiai, tuo pačiu metu prisitaikant prie vaikų gebėjimų lygio, kad maksimaliai išnaudotų jų potencialą"
+        }
+      },
+      "monitor": {
+        "subtitle": "Monitorius suteikia įžvalgas realiu laiku apie jūsų vaiko mokymosi pažangą, stipriąsias ir silpnąsias puses",
+        "overview": {
+          "title": "Apžvalga realiuoju laiku",
+          "subtitle": "Su Evolytes vaikai mokosi greičiau ir efektyviau. Įsitikinkite patys: stebėkite jų pažangą Monitoriuje realiu laiku ",
+          "explanations": {
+            "title1": "Valdymo skydelis",
+            "subtitle1": "Pamatykite aiškią vaiko pažangos apžvalgą valdymo skydelyje.",
+            "title2": "Naudojimosi statistika",
+            "subtitle2": "Valdymo skydelio veiklos skiltyje galite matyti savo vaiko naudojimosi statistiką.",
+            "title3": "Knygos progresas",
+            "subtitle3": "Gaukite naujausią informaciją apie savo vaiko progresą knygose ir kas jam gali sektis sunkiau.",
+            "title4": "Atsakymai",
+            "subtitle4": "Galite matyti susidarančius modelius, paremtus visais klausimais, į kuriuos atsakė jūsų vaikas."
+          }
+        },
+        "features": {
+          "title": "Funkcijos",
+          "subtitle": "Monitorius yra nuolat tobulinamas ir siūlo įvairias funkcijas, leidžiančias apžvelgti jūsų vaiko mokymosi pažangą, stiprybes bei tobulinimo sritis.",
+          "explanation": {
+            "title": "Vaiko pažangos apžvalga realiuoju laiku",
+            "subtitle1": "Valdymo skydelis suteikia paprastą ir efektyvią vaiko veiklos, pažangos knygose bei įgūdžių raidos apžvalgą.",
+            "subtitle2": "Valdymo skydelis yra puiki vieta sužinoti, kaip sekasi jūsų vaikui mokytis matematikos.",
+            "progress": "Progreso apžvalga",
+            "realTime": "Duomenys realiu laiku"
+          }
+        },
+        "skills": {
+          "title": "Stebėkite, kaip laikui bėgant vystosi jūsų vaiko įgūdžiai",
+          "subtitle": "Monitoriuje galite matyti, kaip laikui bėgant vystosi jūsų vaiko įgūdžiai ir kaip jie tobulėja. Tai gali jums padėti nustatyti problemines sritis ir tuo pačiu leis stebėti, kaip vaikas įgyją naujus įgūdžius.",
+          "acquisiton": "Įgūdžių įgijimas",
+          "analytics": "Įgūdžių analizė"
+        },
+        "book": {
+          "title": "Peržiūrėkite savo vaiko pažangą knygose",
+          "subtitle1": "Su knygos ir žaidimo integracija, galite gauti įžvalgas apie vaiko pažangą knygose, apie skyrius, kuriuos jis jau užbaigė, bei apie skyrius, su kuriais jam sekasi sunkiau.",
+          "subtitle2": "",
+          "bookProgress": "Knygos progresas",
+          "problem": "Probleminės sritys"
+        },
+        "answers": {
+          "title": "Gaukite išsamią analizę atsakymų skiltyje",
+          "subtitle": "Atsakymų skiltyje galite filtruoti ir analizuoti visus vaiko atsakymus vienoje vietoje, kad galėtumėte matyti kas sekasi ir kur yra probleminės sritys. Ši funkcija leidžia analizuoti vaikų atsakymus giliasniame lygyje , kad suprastumėte iš kur kyla problemos.",
+          "answerIcon": "Atsakymai",
+          "filtering": "Galingas filtravimas"
+        }
+      }
+    },
+    "pricing": {
+      "Subscriptions": {
+        "title": "Prenumeratos",
+        "subtitle": "Yra galimi įvairūs prenumeratų planai, tam, kad jūsų vaikas mokytusi matematikos nauju būdu.",
+        "month": "mėnuo",
+        "perChild": "Per vieną vaiką, ",
+        "paymentFrequency1": "atsiskaitoma kas mėnesį",
+        "paymentFrequency2": "atsiskaitoma kas 3 mėnesius",
+        "paymentFrequency3": "atsiskaitoma kas 6 mėnesius",
+        "buyNow": "Pirkti dabar",
+        "Bonus": "Premija",
+        "BonusSubtitle": "Įtraukta į pirmąjį pirkimą",
+        "BookText": "Jūsų pasirinkta Evolytes kompaniono knyga",
+        "includes": "Įtraukta",
+        "shortDescription": "Evolytes iPad programėlė ir prieiga prie Evolytes Monitoriaus.",
+        "freeTrial": {
+          "title": "Nemokamas bandymas",
+          "message": " dienų nemokama bandomoji versija",
+          "detailMessage": "Nereikia kredito kortelės!",
+          "try": "Pabandykite dabar",
+          "startTrialTitle": "Sveiki atvykę į nemokamą bandomąją versiją",
+          "startTrialMessage": "Netrukus pradėsite 7 dienų nemokamą „Evolytes“ bandomąją versiją. Mes nereikalaujame kredito kortelės ar jokios mokėjimo informacijos. Tikimės, kad jūsų vaikui patiks „Evolytes“ visata ir jis išmoks kiek įmanoma daugiau per jūsų išbandymą!",
+          "expired": "Nemokamas bandymas baigėsi"
+        },
+        "1m": {
+          "title": "1 Mėnuo"
+        },
+        "3m": {
+          "title": "3 Mėnesiai"
+        },
+        "6m": {
+          "title": "6 Mėnesiai"
+        },
+        "12m": {
+          "title": "12 Mėnesių"
+        }
+      },
+      "School": {
+        "title": "Mokyklos",
+        "subtitle": "Evolytes turi specialų kainyną ir funkcijas, specialiai sukurtas mokykloms ir jų poreikiams. Sužinokite, kodėl daugiau nei 50% Islandijos mokyklų renkasi Evolytes!",
+        "subtitle2": "Kas įtraukta",
+        "leftIcon1": {
+          "title": "Evolytes žaidimas",
+          "subtitle": "Visos mokyklos gauna neribotą prieigą prie Evolytes žaidimo, funkcijų ir visų ateities atnaujinimų."
+        },
+        "leftIcon2": {
+          "title": "Evolytes knygos",
+          "subtitle": "Evolytes kompanionų knygos yra specialiai sukurtos išmokyti naujos medžiagos."
+        },
+        "leftIcon3": {
+          "title": "Monitorius",
+          "subtitle": "Evolytes Monitorius suteikia jums įžvalgas apie jūsų mokinių stipriąsias ir problemines sritis realiu laiku."
+        },
+        "rightIcon1": {
+          "title": "Dedikuota pagalba",
+          "subtitle": "Pagalba lengvai pasiekiama kiekvieną savaitės dieną mūsų el. paštu arba telefonu."
+        },
+        "rightIcon2": {
+          "title": "Nemokami kursai",
+          "subtitle": "Visi mokytojai ir administratoriai gali užsiregistruoti į nemokamą kursą, kad sužinotų, kaip išnaudoti visas Evolytes galimybes."
+        },
+        "rightIcon3": {
+          "title": "Mokymosi resursai",
+          "subtitle": "Mokyklos gauna prieigą prie specialių vaizdo įrašų ir gidų, kad sužinoti daugiau apie Evolytes funkcijas."
+        },
+        "buttonGetAQuote": "Gauti kainos pasiūlymą",
+        "buttonRequestADemo": "Prašyti demonstracinės versijos",
+        "textMore": "Reikia daugiau informacijos apie Evolytes skirtą mokykloms?",
+        "MoreButton": "Sužinokite Daugiau"
+      },
+      "Learning": {
+        "title": "Mokymosi rezultatai",
+        "subtitle": "Evolytes yra pagrįsta keletos metų tyrimais ir naudoja pažangiausias psichologines teorijas, kad pagerintų mokymosi rezultatus ir išlaikytų jūsų vaiko įsitraukimą",
+        "endingText": "Pagerinkite savo vaiko ar mokinių įgūdžius su Evolytes platforma jau šiandien."
+      }
+    },
+    "landing": {
+      "tagline": "Mokykitės matematikos smagiu ir įtraukiančiu būdu",
+      "description": "Naudokite Evolytes žaidimą ir knygas, kad mokytumėte vaikus matematikos greitesniu, smagesniu ir įtraukiančiu būdu. Platforma yra skirta 5-9 metų vaikams.",
+      "buyButton": "Pirkti dabar",
+      "login": "Prisijungti",
+      "evolytesPart": {
+        "title": "Keičiame kelią, kuriuo mokosi vaikai",
+        "description": "Evolytes platforma sujungia Evolytes žaidimą, knygas ir Monitorių, kad pagerintų mokymosi rezultatus.",
+        "gameTitle": "Evolytes žaidimas",
+        "gameDescription": "Evolytes žaidimas leidžia mokytis matematikos atvirame pasaulyje su įvairiais nuotykiais.",
+        "bookTitle": "Knygos",
+        "bookDescription": "Evolytes knygos yra specialiai sukurtos lavinti skaitymo ir rašymo įgūdžius.",
+        "monitorTitle": "Monitorius",
+        "monitorDescription": "Naudodami monitorių galite realiu laiku peržiūrėti vaikų mokymosi pažangą, stipriąsias ir silpnąsias puses."
+      },
+      "universePart": {
+        "title": "Evolytes visata",
+        "description": "Evolytes visata, jos veikėjai ir istorijos leis jūsų vaikui neįtikėtinu tempu mokintis matematikos."
+      },
+      "howPart": {
+        "title": "Kaip veikia Evolytes",
+        "description1": "Vaikai žaidžia Evolytes žaidime, kur jie atsako į matematinius klausimus, kad galėtų judėti toliau.",
+        "description2": "Kai vaikas atsako daugiau klausimų, klausimai prisitaiko prie vaiko įgūdžių lygio.",
+        "description3": "Vaikai dirba knygose ir naudoja QR kodus kiekvieno skyriaus pabaigoje, kad laikytų egzaminą ir gautų apdovanojimus.",
+        "description4": "Stebėjimo skiltyje mokytojai ir tėvai gali stebėti vaiko pažangą, stipriąsias ir silpnąsias puses."
+      },
+      "researchPart": {
+        "title": "Įkurta atliekant tyrimus",
+        "description": "Evolytes yra paremtas daugelio metų tyrimais ir naudoja pažangiausias psichologines teorijas, kad pagerintų mokymosi rezultatus ir išlaikytų jūsų vaiko įsitraukimą.",
+        "theory": {
+          "reinforcementTitle": "Sustiprinimo Teorija",
+          "reinforcementDescription": "Padaro žaidimą linksmą ir apdovanoja vaikus už tai, kad išlaikytų jų įsitraukimą",
+          "flowTitle": "Srauto Teorija",
+          "flowDescription": "Naudojama prisitaikyti prie kiekvieno vaiko įgūdžių lygio, kad maksimaliai išnaudoti jo potencialą",
+          "spacingTitle": "Tarpo Efektas",
+          "spacingDescription": "Užtikrina ilgalaikį mokymąsi ir įgūdžių įgijimą atliekant tarpų mokymosi praktiką"
+        }
+      },
+      "featureSection": {
+        "title": "Naujos savybės",
+        "description": "Glaudžiai bendradarbiaujame su mūsų partnerių mokyklomis, kad sukurtume geriausią matematikos mokymo platformą. Jei turite kokių nors funkcijų, kurias norėtumėte įtraukti, nedvejodami susisiekite su mumis, mums visada patinka naujos idėjos!"
+      },
+      "schoolSection": {
+        "title": "Evolytes mokyklose",
+        "description": "Evolytes turi specialią versiją ir kainas mokykloms. Sužinokite, kodėl daugiau nei 50% mokyklų Islandijoje naudoja Evolytes."
+      },
+      "testimonials": {
+        "1": {
+          "position": "",
+          "school": "",
+          "text": ""
+        },
+        "2": {
+          "position": "",
+          "school": "",
+          "text": ""
+        }
+      },
+      "supportPart": {
+        "title": "Parama",
+        "description": "Evolytes platformą parėmė Technologijų Plėtros Fondas ir Islandijos Inovacijų Centras, kurie buvo itin svarbūs platformos sukūrimui."
+      },
+      "startingPriceOne": "Planai prasideda nuo ",
+      "startingPriceTwo": "per mėnesį",
+      "memberButton": "Tapti nariu",
+      "download": "Atsisiųskite",
+      "appStore": "App Store",
+      "appGoogle": "Google Play",
+      "learnMoreButton": "Sužinokite daugiau",
+      "demoButton": "Prašyti demonstracinės versijos"
+    },
+    "schools": {
+      "introduction": {
+        "title": "Evolytes mokykloms",
+        "subtitle": "Evolytes buvo specialiai sukurtas mokykloms, glaudžiai bendradarbiaujant su mūsų partneriais. Norime suteikti mokytojams modernių įrankių, kurie padėtų jų mokiniams tobulėti"
+      },
+      "tool": {
+        "title": "Įrankiai mokytojams",
+        "subtitle": "Evolytes Platforma sukurta suteikti daugiau galimybių mokytojams ir mokiniams. Monitorius suteikia mokytojams įžvalgas realiu laiku apie mokinių pažangą, stipriąsias puses ir tobulinimo sritis.",
+        "monitorDescription": "Monitoriuje galite realiuoju laiku peržiūrėti savo mokinių mokymosi pažangą, stiprybes ir problemines sritis.",
+        "gameDescription": "Mokiniai atsako į matematinius klausimus, kad galėtų žaidime pagauti ir maitinti Evolytes monstriukus."
+      },
+      "engaging": {
+        "title": "Įsitraukiantys mokiniai",
+        "subtitle": "Evolytes žaidimas ir knygos yra sukurti taip, kad išlaikytų mokinius įsitraukusius, susidomėjusius ir leistų atlikti matematinius uždavinius pagal jų įgūdžių lygį, kad maksimaliai išnaudotų jų potencialą.",
+        "individualizedTitle": "Individualizuotas turinys",
+        "individualizedSubtitle1": "Evolytes platformos pagrindas yra vertinimas realiuoju laiku, kuomet mokiniams yra pateikiamas individualizuotas turinys, pagrįstas jų įgūdžių lygiu.",
+        "individualizedSubtitle2": "Mokytojai gauna aiškią apžvalgą ir įžvalgas apie savo mokinių mokymosi pažangą, kad galėtų spręsti problemines sritis. Platforma sutaupo daug mokytojų laiko, kuris yra skiriamas mokinių vertinimui.",
+        "savesTime": "Taupo laiką",
+        "LearningInsights": "Mokymosi įžvalgos",
+        "dashboardTitle": "Valdymo skydelis - apžvalga realiu laiku",
+        "dashboardSubtitle": "Monitoriuje mokytojai realiu laiku gali matyti savo mokinių mokymosi apžvalgą ir įžvalgas. Mokinys gauna individualų turinį pagal savo lygį."
+      },
+      "keeping": {
+        "title": "Išlaiko mokinius įsitraukusius",
+        "description1": "Evolytes yra aukštos kokybės žaidimas, kuris konkuruoja su žaidimais, kuriuos vaikai žaidžia pramogai savo laisvalaikiu. Žaidimas sukurtas tam, kad matematikos mokymasis būtų įdomus ir įtraukiantis per Evolytes visatą, jos istorijas ir personažus.",
+        "description2": "Mokiniai greičiau mokosi Evolytes žaidime, daugiau laiko praleidžia mokydamiesi matematikos namuose ir pozityviau žiūri į visas matematiką bet kokioje formoje.",
+        "fun": "Linksma",
+        "positiveFeeling": "Teigiami jausmai",
+        "pictureTitle": "Atviro pasaulio nuotykis",
+        "pictureSubtitle": "Evolytes turi turtingą, atvirą pasaulį, su daugybe būtybių, užduočių ir istorijų, kad mokiniai būtų susidomėję ir mokytųsi!"
+      },
+      "books": {
+        "title": "Integruota platformoje",
+        "description1": "Evolytes knygos supažindina su žaidimo elementais ir būtybėmis iš Evolytes visatos, tuo pačiu mokant vaikus matematikos.",
+        "description2": "Knygos integruojamos į žaidimą per QR kodus kiekvieno skyriaus pabaigoje. Kodai nukreipia į egzaminus, kurie yra tiesiogiai susieti su turiniu. Jei studentai sėkmingai išlaiko egzaminą, jie gauna apdovanojimus. Apdovanojimai žaidime motyvuoja mokinius pabaigti knygas per rekordiškai trumpą laiką. Monitoriuje mokytojai gali matyti savo mokinių pažangą knygose ir bet kokius skyrius, su kuriais mokiniui sekasi sunkiau.",
+        "writingSkills": "Rašymo įgūdžiai",
+        "readingSkills": "Skaitymo įgūdžiai",
+        "pictureTitle": "Evolytes knygos",
+        "pictureSubtitle": "Evolytes knygos yra specialiai sukurtos lavinti skaitymo ir rašymo įgūdžius, tuo pačiu integruojant Evolytes žaidimą unikaliu būdu."
+      },
+      "how": {
+        "title": "Paslauga mokykloms",
+        "subtitle": "Yra unikali platformos versija, su specialiu palaikymu ir kokybiškomis paslaugomis, kuri skirta tik mokykloms. Visos mokyklos gali gauti nemokamą bandomąją versiją ir nemokamus kursus, kad galėtų išbandyti platformą.",
+        "freeTrial": {
+          "title": "Nemokamas išbandymas",
+          "subtitle": "Mokyklos gali nemokamai išbandyti platformą su keletu mokytojų bei mokinių."
+        },
+        "requestText": "Pasirinkite toliau ir paprašykite nemokamos demonstracinės versijos arba pagal užsakymą pritaikytos kainos pasiūlymo, pagal mokyklos poreikius."
+      },
+      "research": {
+        "title": "Remiantis tyrimais",
+        "subtitle": "Evolytes yra sukurtas remiantis 3 metų tarpdisciplininiais kompiuterių mokslo ir psichologijos tyrimais, kad padarytų mokymosi procesą linksmu, įtraukiančiu bei pagerintų įgūdžių įsisavinimą. Evolytes platformos eksperimento rezultatai viršijo mūsų didžiausius lūkesčius",
+        "learnMore": "Sužinokite daugiau"
+      }
+    },
+    "faq": {
+      "title": "Dažniausiai Užduodami Klausimai",
+      "subtitle": "Prieš skambindami ar rašydami mums el. laišką, peržvelkite dažniausiai užduodamus klausimus, kurie gali padėti rasti greitą sprendimą.",
+      "q1": "Kokiam amžiui skirtas Evolytes?",
+      "a1": "Evolytes yra skirtas 5-9 metų vaikams. Šis amžius yra orientacinis ir gali skirtis priklausomai nuo jūsų vaiko įgūdžių lygio. \n\n Evolytes puikiai tinka visiems vaikams, kurie žengia pirmuosius žingsnius matematikoje. Evolytes yra labai dažnai naudojama 6-12 metų vaikų, turinčių mokymosi trūkumų, nes pagreitina įgūdžių įgijimą ir pateikia individualų turinį realiu laiku. Evolytes taip pat buvo sėkmingai naudojamas jaunesnių vaikų, kurie mokosi skaičiuoti. Jei manote, kad jūsų vaikas yra pasirengęs mokytis matematikos, nieko nelaukite! Evolytes pritaikys turinį pagal vaiko įgūdžių lygį.\n\nEvolytes platforma naudojasi 3-16 metų vaikai. Viskas priklauso nuo kiekvieno žmogaus individualiai, nors edukacinis turinys yra skirtas 5-9 metų vaikams.",
+      "q2": "Su kokiais įrenginiais ir operacinėmis sistemomis yra suderinama Evolytes platforma?",
+      "a2": "Evolytes žaidimas šiuo metu suderinamas tik su iOS planšetiniais kompiuteriais (Apple iPad). 2022 vasarį išleisime naują tarp-platforminę versiją, skirtą visiems iOS ir Android įrenginiams.\n\n Evolytes interneto svetainė ir Monitorius yra suderinami su dauguma naršyklių bei su daugeliu ekrano dydžių.\n\nEvolytes knygos yra fizinės knygos, todėl joms naudoti nereikia jokių įrenginių.",
+      "q3": "Kaip Evolytes knygos integracija veikia su žaidimu ir Monitoriumi?",
+      "a3": "Galite skenuoti QR kodus tik Evolytes knygose, Evolytes mobiliajame žaidime.\n\nAtidarykite Evolytes žaidimą ir pasirinkite vartotoją, kuriam priklauso jūsų naudojama knyga. Pagrindiniame žaidimo ekrane viršutiniame dešiniajame kampe pamatysite kelis mygtukus. Paspauskite mygtuką su kameros piktograma. Svarbu suteikti prieigą žaidimui prie įrenginio kameros, nes kitaip žaidimas negalės nuskenuoti QR kodo. Turėsite pasiekti savo įrenginio nustatymus ir suteikti prieigą prie kameros.\n\nDabar nukreipkite kamerą į QR kodą, kurį norite nuskenuoti. Kai žaidimas atpažins QR kodą, pilkas mygtukas ekrano viduryje taps žaliu. Kai mygtukas pasidaro žalias, galite jį paspausti ir būsite paraginti laikyti skyriaus egzaminą.",
+      "q4": "Kaip nuskenuoti QR kodą Evolytes knygoje?",
+      "a4": "Evolytes knygos yra integruojamos su Evolytes platforma per QR kodus, Evolytes mobiliajame žaidime. QR kodus galima rasti kiekvienos knygos skyriaus pabaigoje. QR kodus galima nuskaityti tik Evolytes mobiliojo žaidimų programėlėje. Negalite naudoti integruotos kameros programos, kad nuskaitytumėte QR kodą knygose.\n\n Kiekvienas knygoje esantis QR kodas patikrins mokinio žinias apie skyriaus turinį ir jei teisingai atsakys į 80% skyriuje pateiktų klausimų gaus apdovanojimą žaidime už tai, kad užbaigė skyrių. Šis metodas leidžia mums teigiamai susieti rašymo įgūdžius su pozityviu stimulu Evolytes mobiliame žaidime.\n\nPrisijungę prie Evolytes platformos internete, čia galite stebėti savo vaiko matematikos progresą bei pažangą Evolytes knygose.",
+      "q5": "Kamera programėlėje neveikia. Kaip tai sutvarkyti?",
+      "a5": "Jei Evolytes žaidime kamera neveikia, tai greičiausiai dėl to, kad programėlei nebuvo suteikta prieiga prie įrenginio kameros. Turėsite išeiti iš žaidimo ir nueiti į įrenginio nustatymus, kad pakeistumėte programėlės prieigos teises.\n\n Nustatymuose, savo programų sąraše, turite rasti mobilųjį žaidimą Evolytes ir leisti jam pasiekti įrenginio kamerą. Kai programėlei bus suteikta prieiga prie kameros, galite atidaryti Evolytes žaidimą ir kamera jau turėtų veikti.",
+      "q6": "Kuo Evolytes yra unikalus?",
+      "a6": "Evolytes matematikos platforma yra pagrįsta unikaliais tarpdisciplininiais tyrimais, kur pirmaujančios psichologinės teorijos buvo naudojamos siekiant pagreitinti mokinių matematikos įgūdžių įgijimą. Ankstesni tyrimai ir eksperimentai leido mums paspartinti mokinių įgūdžių įgijimą, kad mokymasis būtų greitesnis, veiksmingesnis ir liktų linksmas bei įtraukiantis.\n\nKnygos integravimas su Evolytes platforma yra unikali funkcija, kuri buvo sukurta siekiant užtikrinti, kad mokiniai ugdytų skaitymo ir rašymo įgūdžius, kurie pagerins jų mokymosi rezultatus bei pažymius.",
+      "q7": "Kokius įgūdžius lavina Evolytes?",
+      "a7": "Evolytes suteikia jūsų vaikui pagrindus, kurie yra reikalingi matematikoje, tiek su frazėmis, tiek su skaičiais. Reguliariai pridedame naują matematinį turinį. Šiuo metu pateikiame šį matematikos turinį:\n\nSkaičiavimas, sumų sujungimas su skaičiais.\n\nSudėtis 1-999\n\nAtimtis 1-999\n\nVienetų rinkinys, vienetai, dešimtys ir šimtai\n\nKelių parametrų sudėjimas\n\nDaugyba\n\nAlgebra\n\nModeliai\n\nDydžių palyginimas (Didesnis už, mažesnis nei, ir kt.)\n\nFormos\n\nDekodavimas.\n\nMes reguliariai pridedame į žaidimą naujo turinio, todėl šis sąrašas nėra baigtinis ir toliau papildysime turinį, kad programa galėtų augti kartu su jūsų vaiko matematikos progresu.",
+      "q8": "Kaip pakeisti arba atšaukti prenumeratą?",
+      "a8": "Galite atšaukti arba pakeisti savo prenumeratą prisijungę prie savo vartotojo Evolytes interneto svetainės platformoje.\n\nŠiame puslapyje prisijunkite prie Evolytes monitoriaus, pasirinkite vaiką, kurio apmokėjimo informaciją norite keisti. Eikite į nustatymus, apmokėjimo informaciją ir paspauskite modifikuoti prenumeratą.",
+      "q9": "Kokiomis kalbomis galime naudotis Evolytes?",
+      "a9": "Evolytes yra prieinamas islandų, anglų ir prancūzų kalbomis. \n\nEvolytes netrukus pasirodys švedų, norvegų ir vokiečių kalbomis.",
+      "q10": "Kodėl mano Monitorius yra tuščias?",
+      "a10": "Kad Evolytes monitorius rodytų duomenis, jūsų vaikas turi pradėti žaisti Evolytes mobilųjį žaidimą. Jei vis tiek niekas nerodoma, tai gali būti dėl to, kad nesate prisijungę prie interneto.",
+      "q11": "Ar galiu pasidalinti savo Monitoriaus prieiga su vienu iš tėvų arba su mokytoju?",
+      "a11": "Norėdami pasidalinti prieiga su kitu tėvu, globėju ar mokytoju, turėsite atsiųsti mums el. laišką adresu evolytes@evolytes.com ir oficialiai paprašyti, kad duomenys būtų bendrinami su kitu vartotoju. Kad galėtume priimti jūsų užklausą, turėsite pateikti šią informaciją:\n\nEl. pašto adresas, naudojamas prisijungiant prie Evolytes\nVaiko vardas, kuriam norite bendrinti prieigą\n\nNaudotojo, su kuriuo norite bendrinti prieigą, el. pašto adresas.\n\nAsmuo, su kuriuo norite bendrinti prieigą, gaus el. laišką, kad galėtų aktyvuoti savo paskyrą. Tada jie galės vizualiai matyti mokinių pažangą monitoriuje ir atidaryti Evolytes mobilųjį žaidimą su savo prisijungimo duomenimis bei pasirinkti vaiką kaip paskyrą, kad galėtų žaisti.",
+      "q12": "Kaip Evolytes prisitaiko prie mano vaiko / mokinio lygio?",
+      "a12": "Visi atsakymai, kuriuos jūsų vaikas pateikia mokydamasis su Evolytes, naudojami jo įgūdžių lygiui įvertinti. Mes pritaikysime turinį atsižvelgdami į jūsų vaiko stipriąsias ir silpnąsias puses.\n\nPlatforma pritaiko turinio sudėtingumą pagal jūsų vaiko atsakymus realiu laiku. Visi vaikai pradeda nuo lengvos medžiagos, kuri tampa vis sunkesnė, atsižvelgiant į mokinio įgūdžius.\n\nVaikai ir toliau gaus klausimus susijusius su įgūdžiais, kuriuos mes žinome, kad jie jau išsiugdė, siekdami ugdyti ilgalaikį įgūdžių įgijimą ir, kad nepamirštų to, ką jau išmoko anksčiau. Jei mokinys pradės turėti problemų su medžiaga, kurią jau įsisavino prieš tai, tuomet jis turės ją pakartoti dar kartą, o su ta medžiaga susiję klausimai bus parodomi dažniau.",
+      "ManualsButton": "Vartotojo vadovai ir Vaizdo įrašai",
+      "HelpButton": "Pagalbos Centras"
+    },
+    "footer": {
+      "product": "Produktas",
+      "game": "Žaidimas",
+      "research": "Tyrimas",
+      "schools": "Mokyklos",
+      "company": "Įmonė",
+      "aboutUs": "Apie mus",
+      "contactUs": "Susisiekite su mumis",
+      "help": "Pagalba ir Teisinė informacija",
+      "faq": "DUK",
+      "terms": "Terminai ir Sąlygos",
+      "policy": "Privatumo Politika",
+      "email": "evolytes@evolytes.com",
+      "culture": "Didžioji Britanija"
+    },
+    "aboutUs": {
+      "title": "Keičiame metodus, kuriais vaikai mokosi matematikos",
+      "ourStory": {
+        "title": "Mūsų istorija",
+        "description": "Vienas iš mūsų įkūrėjų, Mathieu Grettir Skúlason, matė, kaip jo seseriai sunkiai sekasi namuose su matematika ir suprato, kad gali pritaikyti savo tyrimus psichologijoje, kad padėtų jai išmokti matematikos. Jis atliko eksperimentą, kurio rezultatai buvo labai padrąsinantys, kas galiausiai paskatino sukurti Evolytes.",
+        "y2014": {
+          "title": "Tarpdisciplininiai tyrimai, kuriais grindžiamas Evolytes žaidimas",
+          "description": "Žaidimas Evolytes buvo paremtas trejų metų tarpdisciplininiais tyrimais, sustiprinimo teorijoje, kuriuos atliko Mathieu Grettir Skúlason, Aperio apdovanojimų programoje Reikjaviko Universitete, kuri prasidėjo 2014 metais."
+        },
+        "y2016": {
+          "title": "Eksperimentas, paspartinti matematikos įgūdžių įgijimą",
+          "description": "2016 metais, Mathieu grįžo į namus pas savo seserį, kuriai sunkiai sekėsi su matematika, čia jis suprato, kad gali pritaikyti savo tyrimus, kad padarytų matematikos mokymasį smagiu ir įtraukiančiu. Po Trijų Karalių šventės, jis sukūrė vaizdo žaidimo prototipą, kurį panaudojo eksperimente, kad nustatytų jo poveikį mokymuisi. Rezultatai pranoko jo didžiausius jo lūkesčius."
+        },
+        "y2017": {
+          "title": "Golden Egg verslo planavimo konkursas - 3 vieta",
+          "description": "Eksperimento rezultatai buvo tokie padrąsinantys, jog Mathieu nutarė parodyti projektą Golden Egg verslo planavimo konkurse. Jónas Ingi Valdimarsson ir Íris Eva Gísladóttir prisijungė prie projekto, kur jie įgyvendino įmonės viziją, kuri vėliau tapo Evolytes. Projektas buvo apdovanotas 3-čia vieta, iš daugiau nei 250 kitų komandų."
+        },
+        "y2017bis": {
+          "title": "Startup Reykjavík Greitintuvas ir dotacijos",
+          "description": "Po Golden Egg verslo konkurso, projektas dalyvavo Startup Reykjavík verslo greitintuve, pasivadinę Flow Education. Projekto kapitalas buvo padidintas 2.4 milijono ISK, už 6% bendrovės akcijų, kaip dalis jų dalyvavimo greitintuve. Projektas gavo dotacijas iš Islandijos Technologijų Plėtros Fondo ir Islandijos Inovacijų Centro."
+        },
+        "y2018": {
+          "title": "Dotacija gauta iš Islandijos Technologijų Plėtros Fondo",
+          "description": "Evolytes gavo dvejų metų dotaciją, kurios vertė buvo 20 milijonų Islandijos kronų, kad galėtų plėtoti Evolytes platformą ir pateikti ją į Islandijos rinką. Dotacija lėmė svarbų vaidmenį padarant Evolytes tokiu, kokiu jis yra šiandien."
+        },
+        "y2020": {
+          "title": "Evolytes startavo Islandijoje pavasarį",
+          "description": "Evolytes buvo išleistas 2020 metais, kovo pabaigoje, ir buvo šiltai sutiktas vartotojų. Mokyklos parodė didelį susidomėjimą, 2020-2021 mokslo metais Evolytes platforma naudojosi 15 mokyklų."
+        },
+        "y2021": {
+          "title": "Evolytes yra naudojama daugiau nei 50% Islandijos mokyklų",
+          "description": "Evolytes platforma naudojasi daugiau nei 50 % visų Islandijos mokyklų, kas padaro ją dominuojančia matematikos mokymosi platforma šalyje. Labai džiaugiamės galėdami pakeisti vaikų mokymosi būdą ir suteikti mokytojams modernių įrankių."
+        }
+      },
+      "team": {
+        "title": "Komanda",
+        "description": "Evolytes komanda turi dešimtmečius patirties ir didžiulį tarpdisciplininių įgūdžių rinkinį, nuo psichologijos, pedagogikos ir tyrimų iki iliustravimo, žaidimų kūrimo ir programinės įrangos inžinerijos.",
+        "ceo": "Direktorius ir kūrėjas",
+        "cmo": "Marketingo direktorius ir Dizaineris",
+        "design": "Dizaineris ir iliustratorius",
+        "pedagogy": "Pedagogikos Vadovas",
+        "game": "Žaidimo Dizaineris ir Kūrėjas",
+        "cfo": "Finansų direktorius",
+        "sales": "Pardavimų ir Klientų Atstovas"
+      }
+    },
+    "research": {
+      "learnMore": "Sužinokite daugiau",
+      "exp": {
+        "title": "Eksperimento rezultatas",
+        "conclusion": "Mokiniams buvo duotas žaidimas Evolytes, kad galėtų žaisti namuose ne pamokų metu, buvo pabrėžiama, kad jie turi žaisti savo laisvalaikiu. Jų rezultatai buvo palyginti su matematikos veikla mokykloje."
+      },
+      "positiveTowards": {
+        "title": "Teigiamas požiūris į Matematiką",
+        "descr1": "Tyrimo pabaigoje visi mokiniai turėjo daugiau teigiamų jausmų, susijusių su matematika. Nesvarbu kokia forma būtų matematika, mokiniai buvo labiau atviresni matematikos mokymuisi.",
+        "descr2": "Pateikiant mokiniams individualizuotą turinį linksmu bei įtraukiančiu būdu, mokiniai pradeda teigiamus jausmus susieti su matematika ir įgyja pasitikėjimo, kurio jiems reikia norint tęsti mokslus."
+      },
+      "theoretical": {
+        "title": "Teorinis pagrindas",
+        "description": "Evolytes platforma naudoja keletą skirtingų psichologinių teorijų, kad pagerintų mokymąsi ir įgūdžių įgijimą, tuo pačiu metu padarant procesą įdomiu ir įtraukiančiu."
+      },
+      "history": {
+        "title": "Tyrimo istorija",
+        "description": "Evolytes yra paremtas kelerių metų psichologijos tyrimais, kad mokymasis būtų įdomus ir įtraukiantis.",
+        "y2014": {
+          "season": "Pavasaris",
+          "title": "Kintamų ir fiksuotų stiprinimo tvarkaraščių poveikiai apie vaikų atsaką į vaizdo žaidimus",
+          "descr1": "Mūsų pirmasis tyrimas siekė nustatyti modelius, kaip vaikai reaguoja į skirtingus vaizdo žaidimų stiprinimo planus. Įvairūs eksperimentai parodė, kad žmonės yra nejautrūs planams ir jų modeliai labai skiriasi nuo to, kas yra pastebima su infražmogiškomis rūšimis.",
+          "descr2": "Rezultatai parodė, kad tik fiksuotas santykis turėjo panašų modelį į atsaką, kaip buvo matyta ir paprastesnėse rūšyse. Kiti planai parodė nebūdingus modelius, reagavimo į kintamo santykio, fiksuoto intervalo ir kintamo intervalo sustiprinimo planus."
+        },
+        "y2015": {
+          "season": "Pavasaris",
+          "title": "Amžiaus ir lyties poveikis reaguojant į kintamą ir fiksuotą vaizdo žaidimų sustiprinimą.",
+          "descr1": "Ištyrę reagavimo modelius per pirmąjį eksperimentą, mes nusprendėme patikrinti, ar amžius ir lytis turi įtakos atsako modeliams esant skirtingam sustiprinimo rodikliams.",
+          "descr2": "Rezultatai parodė, kad amžius turėjo įtakos atsako modeliams, ypač sustiprinimo rodikliai ir tam, kiek laiko dalyviai buvo aktyvūs per visą sustiprinimo tvarkaraštį. Jaunesni vaikai parodė didesnį jautrumą skirtingiems sustiprinimo tvarkaraščiams nei vyresni. Taip gali būti dėl to, kad vaikai turi trumpesnę pastiprinimo istoriją nei vyresni mokiniai."
+        },
+        "y2016": {
+          "season": "Ruduo",
+          "title": "Pritaikėme sustiprinimo teorija vaizdo žaidimuose, siekiant pagreitinti matematinių įgūdžių įgijimą",
+          "descr1": "Remdamiesi mūsų ankstesniais eksperimentais, sukūrėme vaizdo žaidimą, pagrįstą optimalia sustiprinimo strategija, kad paskatintume ketvirtos klasės mokinius greičiau mokytis matematikos laisvu laiku namuose.",
+          "descr2": "Rezultatai parodė, kad mokiniai žaidime atsakė vidutiniškai 4 kartus daugiau klausimų, palyginus su tuo pačiu laikotarpiu mokykloje, ir iki 1200 klausimų per dieną. Mokiniai su mokymosi negalią parodė didžiausia augimą klausimų atsakyme, atsakydami iki 12 kartų daugiau klausimų nei mokykloje. Tyrimo pabaigoje visi mokiniai pozityviau žiūrėjo į matematiką."
+        }
+      }
+    },
+    "contactUs": {
+      "title": "Susisiekite su mumis",
+      "description": "Jei turite klausimų, susisiekite su mumis naudodami toliau pateiktą informaciją arba naudokite žinutės formą.",
+      "address": "Bankastræti 5, 101 Reykjavík, Islandija",
+      "messageTitle": "Parašykite mums žinutę",
+      "name": "Pilnas vardas *",
+      "email": "El. paštas *",
+      "phone": "Telefonas",
+      "subject": "Tema *",
+      "placeholderSubject": "Man reikia pagalbos dėl apmokėjimo",
+      "message": "Žinutė *",
+      "placeholderMessage": "Man reikia pagalbos su...",
+      "send": "Siųsti",
+      "required": "Laukeliai su * yra privalomi",
+      "popUpSuccessMessage": "Jūsų užklausa yra gauta. Atsakymą turėtumėte gauti per 48 valandas.",
+      "popUpErrorMessage": "Jūsų užklausos gauti nepavyko. Prašome siųsti el. laišką adresu evolytes@evolytes.com. Į jūsų užklausą atsakysime per 48 valandas.",
+      "popUpMissingNameField": "Vardo laukelis yra būtinas.",
+      "popUpMissingEmailField": "El. pašto laukelis yra privalomas.",
+      "popUpMissingSubjectField": "Temos laukelis yra privalomas.",
+      "popUoMissingMessageField": "Norint išsiųsti užklausą, reikia įrašyti žinutę."
+    },
+    "changeLanguage": {
+      "title": "Pasirinkite šalį ir kalbą"
+    },
+    "newsletter": {
+      "title": "Naujienlaiškis",
+      "subtitle": "Gaukite paskutines Evolytes naujienas, ypatybes bei pasiūlymus!",
+      "buttonTitle": "Prenumeruoti",
+      "alreadySubscribed": "Šis el. pašto adresas jau yra užsiprenumeravęs mūsų naujienlaiškį",
+      "emailInvalid": "El. pašto adresas yra neteisingas.",
+      "subscribed": "Užsiprenumeravote",
+      "subscribedMessage": "Jūs sėkmingai užsiprenumeravote naujienlaiškį el. pašto adresui: "
+    }
+  },
+  "signin": {
+    "title": "Prisijungti",
+    "subtitle": "Jūs esate tik per kelis žingsnelius nuo unikalaus matematikos ugdymo, kad matematikos išmoktumėte greičiau ir efektyviau.",
+    "emailTitle": "El. paštas",
+    "emailPlaceholder": "email@email.com",
+    "passwordTitle": "Slaptažodis",
+    "loginButtonTitle": "Prisijungti",
+    "forgotPasswordTitle": "Pamiršau Slaptažodį",
+    "signupPartOne": "Neturite paskyros?",
+    "signupPartTwo": "Užsiregistruokite dabar!",
+    "signinWrong": "Slaptažodis arba el. pašto adresas yra neteisingas."
+  },
+  "initPassword": {
+    "title": "Slaptažodžio Sukūrimas",
+    "subtitle": "Įveskite slaptažodį savo paskyrai ir patvirtinkite jį. Abu slaptažodžiai turi sutapti.",
+    "password": "Slaptažodis",
+    "confirmPassword": "Patvirtinti Slaptažodį",
+    "save": "Išsaugoti",
+    "tokenExpired": "Ši slaptažodžio sukūrimo nuoroda nebegalioja arba yra netinkamai suformuota. Slaptažodžio sukūrimo el. laiškas baigs galioti po 24 valandų.",
+    "passwordsDoNotMatch": "Slaptažodžiai nesutampa, įveskite abu slaptažodžius iš naujo.",
+    "success": "Slaptažodžio sukūrimas buvo sėkmingas. Norėdami prisijungti, paspauskite žemiau esantį mygtuką."
+  },
+  "signup": {
+    "title": "Registruotis!",
+    "subtitle": "Pateiktas el. paštas ir slaptažodis bus naudojami prisijungiant prie žaidimo ir platformos.",
+    "firstNameTitle": "Vardas",
+    "lastNameTitle": "Pavardė",
+    "emailTitle": "El. paštas",
+    "emailPlaceholderTitle": "email@email.com",
+    "passwordTitle": "Slaptažodis",
+    "confirmPasswordTitle": "Patvirtinti Slaptažodį",
+    "signupButtonTitle": "Registruotis",
+    "signinPartOne": "Turite paskyrą?",
+    "signinPartTwo": "Prisijunkite dabar!",
+    "passwordCriteria": "Slaptažodis turi būti bent 7 simbolių ilgio ir turi būti sudarytas iš abėcėlės bei skaitinių simbolių",
+    "termsMessage": "Užsiregistruodami jūs sutinkate su mūsų",
+    "terms": "Taisyklės ir Sąlygos",
+    "privacyMessage": "Norėdami sužinoti daugiau apie tai, kaip Evolytes naudoja, dalijasi ir renka jūsų asmeninius duomenis, skaitykite Evolytes",
+    "privacy": "Privatumo Politika",
+    "passwordsDoNotMatch": "Slaptažodžiai nesutampa, įveskite abu slaptažodžius iš naujo.",
+    "passwordMissing": "Neįvestas slaptažodis.",
+    "passwordNotLongEnough": "Slaptažodis turi būti bent 7 simbolių ilgio",
+    "passwordMustIncludeAlpha": "Slaptažodyje turi būti bent vienas abėcėlės simbolis",
+    "passwordMustIncludeNumeric": "Slaptažodyje turi būti bent vienas skaitinis simbolis",
+    "selectCountry": "Pasirinkite šalį",
+    "selectLanguage": "Pasirinkite kalbą"
+  },
+  "selectCountry": {
+    "title": "Pasirinkite Šalį"
+  },
+  "selectLanguage": {
+    "title": "Pasirinkite Kalba"
+  },
+  "createStudent": {
+    "title": "Sukurti Mokinį",
+    "subtitle": "Šiame žingsnyje jūs sukuriate mokinio profilį, skirtą vienam vartotojui, kad mes galėtume prisitaikyti prie jo įgūdžių lygio ir pateikti jam individualų turinį.",
+    "firstName": "Vardas",
+    "middleName": "Antras vardas",
+    "lastName": "Pavardė",
+    "birthDate": "Gimimo data",
+    "birthDatePlaceholder": "dd/mm/yyyy",
+    "schoolType": "Mokyklos Tipas",
+    "nextButton": "Kitas",
+    "firstNameRequired": "Vardas yra privalomas.",
+    "lastNameRequired": "Pavardė yra privaloma.",
+    "birthDateInvalid": "Įveskite tinkamą gimimo datą. Gimimo datos formatas turėtų būti 23/03/2012 (dd/mm/yyyy)."
+  },
+  "createGroup": {
+    "title": "Sukurti Grupę",
+    "name": "Vardas"
+  },
+  "emailVerifyReminder": {
+    "title": "Patvirtinkite savo el. paštą",
+    "subtitlePartOne": "Jūsų el. paštas nėra patvirtintas. El. laiškas buvo išsiųstas į",
+    "subtitlePartTwo": "su instrukcijomis, kaip patvirtinti el. pašto adresą. Gali užtrukti keletą minučių, kol el. laiškas atkeliaus.",
+    "resendEmail": "Negavote laiško? Norėdami gauti naują el. laišką, paspauskite žemiau esantį mygtuką.",
+    "skipButtonTitle": "Praleisti",
+    "sendAgainTitle": "Siųsti iš naujo"
+  },
+  "verifyEmail": {
+    "title": "El. pašto adresas yra patvirtinamas",
+    "subtitleInProgress": "Šiuo metu tikriname jūsų el. pašto adresą, šiek tiek palaukite.",
+    "subtitleError": "Mums kilo problemų patvirtinant jūsų el. pašto adresą, kad galėtumėte gauti naujus el. pašto prisijungimus. Žemiau esantis mygtukas nukreips jus į mūsų namų puslapį.",
+    "success": "Pasisekė",
+    "successMessage": "Jūsų el. paštas buvo sėkmingai patvirtintas.",
+    "done": "Atlikta",
+    "emailSentPartOne": "Patvirtinimo laiškas buvo išsiųstas į: ",
+    "emailSentPartTwo": " turėtumėte jį gauti akimirksniu."
+  },
+  "resetPassword": {
+    "title": "Atkurti Slaptažodį",
+    "subtitle": "Įveskite naują paskyros slaptažodį ir patvirtinkite. Abu slaptažodžiai turi sutapti.",
+    "password": "Naujas Slaptažodis",
+    "confirmPassword": "Patvirtinti Naują Slaptažodį",
+    "reset": "Nustatyti iš naujo",
+    "tokenExpired": "Ši slaptažodžio atkūrimo iš naujo nuoroda nebegalioja arba yra netinkamai suformuota. Slaptažodžio atkūrimo laiškas baigs galioti po 24 valandų.",
+    "passwordsDoNotMatch": "Slaptažodžiai nesutampa, įveskite abu slaptažodžius iš naujo.",
+    "success": "Slaptažodžio atkūrimas iš naujo buvo sėkmingas. Norėdami prisijungti, paspauskite žemiau esantį mygtuką."
+  },
+  "forgotPassword": {
+    "title": "Pamiršau Slaptažodį",
+    "subtitle": "Žemiau įveskite savo el. pašto adresą, kad iš naujo nustatytumėte slaptažodį. Mes išsiųsime jums el. laišką, su nuoroda slaptažodžio atkūrimui.",
+    "emailTitle": "El. paštas",
+    "emailPlaceholder": "email@email.com",
+    "sendButtonTitle": "Siųsti",
+    "signinPartOne": "Turite paskyrą?",
+    "signinPartTwo": "Prisijungti!",
+    "signupPartOne": "Neturite paskyros?",
+    "signupPartTwo": "Registruotis!",
+    "success": "Laiškas jūsų slaptažodžio atkūrimui buvo išsiųstas į el. paštą: "
+  },
+  "selectStudent": {
+    "title": "Pasirinkite Paskyrą",
+    "nameTitle": "Vardas",
+    "stateTitle": "Būsena",
+    "ageTitle": "Amžius",
+    "addAccount": "Pridėti Paskyrą",
+    "statusActive": "Aktyvus",
+    "statusFailed": "Apmokėjimas Nepavyko",
+    "statusNotSetup": "Nenustatyta",
+    "licenseExpired": "Pasibaigęs licencijos galiojimas",
+    "active": "Aktyvus",
+    "future": "Būsima Prenumerata",
+    "in_trial": "Bandomoji versija",
+    "trial_over": "nemokamas bandymas baigėsi",
+    "paused": "Pristabdyta",
+    "cancelled": "Atšauktas",
+    "not_subscribed": "Nėra prenumeratos",
+    "student": "Studentas",
+    "students": "Studentai",
+    "groups": "Grupės"
+  },
+  "selectSub": {
+    "title": "Pasirinkite Prenumeratą",
+    "subtitle": "Pasirinkite jums tinkančią prenumeratą. Evolytes edukacinė knyga įtraukta į kiekvieną naują prenumeratą, kurią pasirinksite kitame žingsnyje.",
+    "nextButtonTitle": "Kitas"
+  },
+  "selectBook": {
+    "title": "Pasirinkite Knygą",
+    "subtitle": "Pasirinkite knygą, kuri labiausiai tinka jūsų vaikui. Rekomenduojame pasirinkti lengvesnę knygą, nes labiau tikėtina, kad ji įžiebs jūsų vaiko susidomėjimą matematika kartu su Evolytes žaidimu.",
+    "nextButtonTitle": "Kitas",
+    "ageTitle": "metų amžiaus",
+    "contentsTitle": "Turinys"
+  },
+  "confirmSubscription": {
+    "title": "Patvirtinkite Pirkimą",
+    "subtitle": "Pabaikite užpildyti mokėjimo informaciją, kad suteiktumėte savo vaikui unikalų matematikos išsilavinimą.",
+    "subscriptionTitle": "Prenumerata",
+    "bookIncluded": "Mokomoji Knyga Įtraukta",
+    "bookContents": "Turinys",
+    "deliveryTitle": "Pristatymas",
+    "deliverySubtitle": "Siuntinys su sekimo numeriu, turėtų atvykti per 3-5 darbo dienas.",
+    "breakdownTitle": "Klaida",
+    "breakdownSubscriptionTitle": "Prenumerata: ",
+    "breakdownDeliveryTitle": "Pristatymas: ",
+    "billingInformationTitle": "Apmokėjimo Informacija",
+    "shippingInformationTitle": "Pristatymo Informacija",
+    "shippingSameAsBillingTitle": "Toks pat, kaip apmokėjimo adresas",
+    "confirmButtonTitle": "Apmokėti",
+    "total": "Iš viso",
+    "companyInformationTitle": "Apie Evolytes",
+    "companyInformationString": "Evolytes ehf., registracijos numeris: 600617-1250, pvm id: 128833. Adresas: Bankastræti 5, 101 Reykjavík, Islandija.",
+    "tcAgreeMessage": "Aš sutinku su ",
+    "tcLinkMessage": "Taisyklės ir Sąlygos bei Pinigų Grąžinimo ir Atšaukimo politika."
+  },
+  "billingInformation": {
+    "fullName": "Vardas ir Pavardė",
+    "address": "Adresas",
+    "city": "Miestas",
+    "zip": "Pašto kodas",
+    "state": "Rajonas",
+    "statePlaceholder": "Rajonas",
+    "phoneNumber": "Telefono Numeris",
+    "country": "Šalis",
+    "subscriptionExistsMessage": "Šiam mokiniui prenumerata jau užsakyta. Būsite nukreipti į mokinių valdymo skydelį."
+  },
+  "subscriptions": {
+    "monthBreakdown": "mėnesis(-iai)"
+  },
+  "billingComplete": {
+    "title": "Ačiū, kad pirkote!",
+    "subtitle": "Jūs gavote el. laišką su jūsų pirkimo patvirtinimu.",
+    "subtitleTwo": "Mes tikimės, kad jums patiks stebėti, kaip jūsų vaiko matematikos gebėjimai auga greičiau ir efektyviau! Pradėkite paspausdami mygtuką esantį žemiau.",
+    "getStartedButtonTitle": "Pradėti",
+    "invoiceTitle": "Sąskaita faktūra",
+    "billedToTitle": "Sąskaita išsiųsta",
+    "productsTitle": "Produktai",
+    "priceTitle": "Kaina",
+    "evolytesProductTitle": "Evolytes Platforma",
+    "evolytesProductSubtitle": "6 mėnesių prenumerata",
+    "includedTitle": "Įskaitant",
+    "total": "Iš viso",
+    "6m": {
+      "evolytesProductSubtitle": "6 mėnesių prenumerata"
+    },
+    "3m": {
+      "evolytesProductSubtitle": "3 mėnesių prenumerata"
+    },
+    "1m": {
+      "evolytesProductSubtitle": "1 mėnesio prenumerata"
+    }
+  },
+  "bookIntro": {
+    "title": "Evolytes knyga",
+    "subtitle": "Evolytes knyga turėtų būti pristatyta per 3-5 darbo dienas į atsiskaitymo metu nurodytą adresą.",
+    "nextButtonTitle": "Kitas"
+  },
+  "gameIntro": {
+    "title": "Evolytes iPad Žaidimas",
+    "subtitle": "Evolytis iPad žaidimą galima parsisiųsti iš App Store. Naudokite tuos pačius prisijungimo duomenis, norėdami prisijungti prie žaidimo.",
+    "nextButtonTitle": "Kitas"
+  },
+  "monitorIntro": {
+    "title": "Evolytes Monitorius",
+    "subtitle": "Galite naudoti Evolytes monitorių bet kuriuo metu per internetą ir stebėti savo vaiko veiklą, pažangą ir įgūdžius realiu laiku.",
+    "nextButtonTitle": "Baigti"
+  },
+  "dashboard": {
+    "paymentError": {
+      "trialExpired": "Bandomasis laikotarpis baigėsi",
+      "cancelled": "Prenumerata Atšaukta",
+      "notSubscribed": "Nėra Prenumeratos"
+    },
+    "answersTitle": "Atsakymai",
+    "timeTitle": "Laikas",
+    "answersListTitle": "Atsakymai",
+    "columnProgressTitle": "Progresas",
+    "bookProgressTitle": "Knygos progresas",
+    "minuteDelimeter": "min.",
+    "hourDelimeter": "val.",
+    "dayDelimeter": "",
+    "noQRScannedTitle": "QR kodas nenuskenuotas",
+    "noQRScannedMessage": "Evolytes knygos progresas bus rodoma čia, kai mokinys nuskaitys knygoje esantį QR kodą ir atsakys į jos klausimus.",
+    "noAnswerTitle": "Nėra atsakymo",
+    "noAnswersMessage": "Atsakymai bus rodomi čia, kai mokinys pradės žaisti.",
+    "noProfileMessage": "Norėdami pradėti žaisti, turite atsisiųsti programėlę.",
+    "objective": "Tikslas",
+    "selectObjective": "Netrukus",
+    "age": "metų amžiaus",
+    "activity": "Veikla",
+    "chart": {
+      "timeSpent": "Praleistas Laikas",
+      "thisWeek": "Šią Savaitę",
+      "lastWeek": "Praėjusią Savaitę",
+      "lastMonth": "Praėjusį Mėnesį",
+      "thisMonth": "Šį Mėnesį",
+      "skillProgress": "Įgūdžių Progresas",
+      "skills": "Įgūdžiai, su kuriais dirbta",
+      "home": "Namai",
+      "school": "Mokykla"
+    }
+  },
+  "books": {
+    "bookProgressTitle": "Knygos progresas",
+    "nextChapterTitle": "Kitas Skyrius",
+    "finishedTitle": "Ką tik Baigta",
+    "failedTitle": "Reikia Pagalbos",
+    "chaptersTitle": "Skyriai",
+    "noNextChapterTitle": "Jūs baigėte knygą",
+    "noFailedTitle": "Jums nereikia pagalbos su šiuo skyriumi",
+    "back": "Atgal į Knygas"
+  },
+  "answers": {
+    "moreData": "Įkelti Daugiau",
+    "dateFilter": "Duomenų Filtras",
+    "startDate": "Pradžios Data",
+    "endDate": "Pabaigos Data",
+    "category": "Kategorija",
+    "answer": "Atsakymas",
+    "skill": "Įgūdis",
+    "progress": "Progresas",
+    "answerType": "Atsakymo Tipas",
+    "clear": "Išvalyti",
+    "apply": "Pritaikyti",
+    "filters": {
+      "noFilter": "Nėra Filtro",
+      "dateRange": "Data nuo-iki",
+      "startDate": "Pradžios Data",
+      "endDate": "Pabaigos Data"
+    }
+  },
+  "recentActivity": {
+    "title": "Veikla Paskutinias 7 dienas",
+    "time": "Praleistas Laikas",
+    "answers": "Atsakymai",
+    "skills": "Įgūdžiai",
+    "total": "Iš viso"
+  },
+  "sidebar": {
+    "dashboard": "Valdymo skydelis",
+    "answers": "Atsakymai",
+    "help": "Pagalba",
+    "settings": "Nustatymai",
+    "logout": "Atsijungti"
+  },
+  "header": {
+    "getStarted": "Pradėti",
+    "login": "Prisijungti",
+    "logout": "Atsijungti",
+    "dashboard": "Valdymo skydelis",
+    "research": "Tyrimas",
+    "princing": "Kainynas",
+    "schools": "Mokyklos",
+    "features": "Funkcijos"
+  },
+  "schoolAdministration": {
+    "settingsDropdown": {
+      "administration": "Administracija",
+      "settings": "Nustatymai",
+      "logout": "Atsijungti",
+      "selectStudent": "Pasirinkite mokinį",
+      "switchStudent": "Keisti mokinį"
+    },
+    "licenses":{
+      "title": "Licencijos",
+      "assigned": "Priskirta",
+      "available": "Prieinama",
+      "licenseStart": "Licencijos Pradžia",
+      "licenseEnd": "Licencijos Pabaiga",
+      "licenseType": "Licencijos Tipas",
+      "licenseTypes": {
+        "trial": "Bandomasis laikotarpis",
+        "full": "Pilnas"
+      },
+      "licenseCost": "Kaina vienam studentui",
+      "total": "Iš viso",
+      "licenseHistory": "Licencijos Istorija",
+      "createdBy": "Sukurta"
+    },
+    "groups": {
+      "title": "Grupės",
+      "search": "Ieškoti grupių",
+      "searchPlaceholder": "Grupės pavadinimas",
+      "addGroup": "Pridėti Grupę",
+      "nameLegend": "Vardas",
+      "createdAtLegend": "Sukurta",
+      "updateGroupMessage": "Grupės informacija sėkmingai atnaujinta.",
+      "deleteGroupModalWarning": "Jūs ketinate ištrinti grupę, šio veiksmo atkurti nebebus įmanoma. Ar tikrai norite tęsti?",
+      "deleteGroupModalSuccess": "Grupė sėkmingai ištrinta.",
+      "deleteGroupTitle": "Ištrinti Grupę",
+      "deleteStudentFromGroupModalSuccess": "Mokinys buvo sėkmingai pašalintas iš grupės.",
+      "deleteTeacherFromGroupModalSuccess": "Mokytojas buvo sėkmingai pašalintas iš grupės.",
+      "addTeacherButtonTitle": "Pridėti Mokytoją",
+      "addTeacherTitle": "Pridėti mokytojus",
+      "teachersListTitle": "Mokytojų sąrašas"
+    },
+    "students": {
+      "title": "Mokiniai",
+      "search": "Ieškokite mokinių",
+      "searchPlaceholder": "Mokinio vardas",
+      "addStudent": "Pridėti Mokinį",
+      "import": "Importuoti",
+      "nameLegend": "Vardas",
+      "birthYearLegend": "Gimimo metai",
+      "statusLegend": "Būsena",
+      "licenseExpiresAtLegend": "Licencijos galiojimo laikas",
+      "createdAtLegend": "Sukurta",
+      "importStudents": "Importuoti Mokinius",
+      "selectFile": "Pasirinkite Failą",
+      "deleteStudentTitle": "Ištrinti Mokinį",
+      "studentsCreatedModalMessage": "Mokiniai buvo sėkmingai sukurti ir pridėti.",
+      "updateStudentMessage": "Mokinio informacija buvo sėkmingai atnaujinta.",
+      "deleteStudentModalWarning": "Ketinate ištrinti mokinį, šio veiksmo atkurti neįmanoma. Ar tikrai norite tęsti?",
+      "deleteStudentModalSuccess": "Mokinio paskyra buvo sėkmingai ištrinta."
+    },
+    "teachers": {
+      "title": "Mokytojai",
+      "teachersInvitationsTitle": "Kvietimai",
+      "search": "Ieškokite mokytojų",
+      "searchPlaceholder": "Mokytojo vardas arba el. pašto adresas",
+      "inviteTeacher": "Pakvieskite mokytoją",
+      "addTeacherButtonTitle": "Pridėkite kitą mokytoją",
+      "addMore": "Pridėti daugiau",
+      "nameLegend": "Vardas",
+      "accountTypeLegend": "Paskyros Tipas",
+      "memberSinceLegend": "Narys Nuo",
+      "inviteTeacherTitle": "Pakvieskite Mokytoją",
+      "studentsListTitle": "Mokinių Sąrašas",
+      "addStudentButtonTitle": "Pridėti Mokinį",
+      "addStudentTitle": "Sujunkite Mokinius",
+      "updateTeacherMessage": "Mokytojo informacija sėkmingai atnaujinta.",
+      "deleteTeacherTitle": "Ištrinti Mokytoją",
+      "deleteTeacherModalWarning": "Ketinate ištrinti mokytoją. Šio veiksmo atkurti neįmanoma.",
+      "deleteTeacherModalMessage": "Mokytojo, mokinio prieiga ir kiti duomenys buvo sėkmingai ištrinti."
+    },
+    "teachersInvitations": {
+      "importTeachersInvitations": "Importuoti Pakvietimus",
+      "teachersInvitationsTitle": "Laukiantys pakvietimai",
+      "teacherInvitationSentLegend": "Pakvietimas išsiųstas",
+      "teacherInvitationStatusLegend": "Pakvietimo būsena",
+      "updateTeacherInvitationMessage": "Mokytojo kvietimo informacija sėkmingai atnaujinta.",
+      "resendTeacherInvitationTitle": "Siųsti kvietimą iš naujo",
+      "lastTeacherInvitationSentTitle": "Paskutinis Pakvietimas išsiųstas",
+      "resendTeacherInvitationModalWarning": "Ketinate dar kartą išsiųsti pakvietimo laišką mokytojui. Šio veiksmo nebus galima anuliuoti.",
+      "resendTeacherInvitationModalMessage": "Mokytojo pakvietimas sėkmingai išsiųstas iš naujo.",
+      "deleteTeacherInvitationTitle": "Ištrinti Mokytojo Pakvietimą",
+      "deleteTeacherInvitationModalWarning": "Ketinate ištrinti mokytojo pakvietimą. Šio veiksmo anuliuoti nebus galima.",
+      "deleteTeacherInvitationModalMessage": "Mokytojo pakvietimas sėkmingai ištrintas."
+    },
+    "sidebar": {
+      "students": "Mokiniai",
+      "teachers": "Mokytojai",
+      "groups": "Grupės"
+    },
+    "licenseState": {
+      "active": "Aktyvus"
+    }
+  },
+  "schoolInvitation": {
+    "title": "Jūs buvote pakviesti į",
+    "subtitle": "Jūs buvote pakviestas į mokyklą, su šiuo paskyros tipu",
+    "wrongAccountMessagePartOne": "Šiuo metu prisijungusio vartotojo el. pašto adresas nesutampa su pakvietimo el. pašto adresu.",
+    "wrongAccountMessagePartTwo": "Atsijunkite, kad sukurtumėte paskyrą su pakvietimu.",
+    "wrongAccountMessageTwoPartOne": "Kvietimo el. pašto adresas sutampa su esama paskyra.",
+    "wrongAccountMessageTwoPartTwo": "Prisijunkite, kad pasiektumėte pakvietimą.",
+    "wrongTokenTypeMessage": "Nuoroda, kuri buvo panaudota yra netinkamo formato. Paprašykite mokyklos administratoriaus naujo pakvietimo.",
+    "tokenExpired": "Kvietimo nuorodos galiojimo laikas baigėsi, pasikalbėkite su mokyklos administratoriumi, kad gautumėte naują pakvietimą",
+    "firstNameRequiredError": "Norėdami priimti kvietimą, turite nurodyti savo vardą.",
+    "lastNameRequiredError": "Norėdami priimti kvietimą, turite nurodyti savo pavardę."
+  },
+  "reusable": {
+    "buyNow": "Pirkti Dabar",
+    "renewNow": "Atnaujinkite Dabar",
+    "close": "Uždaryti",
+    "invitation": "Pakvietimas",
+    "selectFile": "Pasirinkite Failą",
+    "import": "Importuoti",
+    "resend": "Siųsti iš naujo",
+    "active": "Aktyvus",
+    "expired": "Baigėsi galiojimo laikas",
+    "cultureTitle": "Kalba",
+    "countryTitle": "Šalis",
+    "selectCulture": "Pasirinkite kalbą",
+    "selectCountry": "Pasirinkite šalį",
+    "chapter": "Skyrius",
+    "error": "Klaida",
+    "unknownError": "Įvyko nežinoma klaida, bandykite dar kartą vėliau.",
+    "success": "Pasisekė",
+    "done": "Atlikta",
+    "cancel": "Atšaukti",
+    "accept": "Priimti",
+    "attempt": "Bandymas",
+    "attempts": "Bandymai",
+    "required": "Būtinas",
+    "finished": "Baigta",
+    "unfinished": "Nebaigta",
+    "result": "Rezultatas",
+    "noTrial": "Nėra bandomosios versijos",
+    "grade": "Klasė",
+    "edition": "Tiražas",
+    "none": "Nė vienas",
+    "book": "Knyga",
+    "books": "Knygos",
+    "next": "Kitas",
+    "send": "Siųsti",
+    "save": "Išsaugoti",
+    "delete": "Ištrinti",
+    "add": "Pridėti",
+    "faster": "Greičiau",
+    "create": "Sukurti",
+    "warning": "Įspėjimas",
+    "clearAll": "Išvalyti viską",
+    "birthYear": "Gimimo metai",
+    "filters": "Filtrai",
+    "profile": "Profilis",
+    "qrCode": "QR Kodo",
+    "dayNames": {
+      "1": "Pirmadienis",
+      "2": "Antradienis",
+      "3": "Trečiadienį",
+      "4": "Ketvirtadienis",
+      "5": "Penktadienis",
+      "6": "Šeštadienis",
+      "7": "Sekmadienis"
+    },
+    "dayShortNames": {
+      "1": "Pr",
+      "2": "An",
+      "3": "Tr",
+      "4": "Ke",
+      "5": "Pn",
+      "6": "Še",
+      "7": "Se"
+    },
+    "monthNames": {
+      "1": "Sausis",
+      "2": "Vasaris",
+      "3": "Kovas",
+      "4": "Balandis",
+      "5": "Gegužė",
+      "6": "Birželis",
+      "7": "Liepa",
+      "8": "Rugpjūtis",
+      "9": "Rugsėjis",
+      "10": "Spalis",
+      "11": "Lapkritis",
+      "12": "Lapkritis"
+    }
+  },
+  "months": {
+    "January": "Sausis",
+    "February": "Vasaris",
+    "March": "Kovas",
+    "April": "Balandis",
+    "May": "Gegužė",
+    "June": "Birželis",
+    "July": "Liepa",
+    "August": "Rugpjūtis",
+    "September": "Rugsėjis",
+    "October": "Spalis",
+    "November": "Lapkritis",
+    "December": "Gruodis"
+  },
+  "settings": {
+    "profileSettings": {
+      "profile": "Profilis",
+      "myProfile": "Mano Profilis",
+      "profileDesc": "Čia galite valdyti daugumą savo paskyros nustatymų.",
+      "myInfo": "Mano informacija",
+      "infoDesc": "Ši informacija yra naudojama susisiekti su jumis ir patvirtinti jūsų paskyros tapatybę.",
+      "language": "Kalba ir Regionas",
+      "languageDesc": "Galite pakeisti kalbos nustatymus. Jei norite pakeisti regioną, turėsite susisiekti su mumis el. paštu",
+      "delete": "Ištrinti",
+      "deleteDesc": "Paskyros ištrynimas yra visam laikui, ištrinamos visos su ja susietos antrinės paskyros ir atšaukiamos visos prenumeratos. Šio veiksmo atkurti neįmanoma."
+    },
+    "passwordSettings": {
+      "password": "Slaptažodis",
+      "passwordDesc": "Žemiau galite pakeisti savo slaptažodį ir kitus autentifikavimo metodus, kuomet jie bus pridėti.",
+      "changePassword": "Keisti Slaptažodį",
+      "changeDesc": "Įveskite dabartinį slaptažodį ir patvirtinkite jį nauju slaptažodžiu."
+    },
+    "newBillingSettings": {
+      "billing": "Apmokėjimai",
+      "billingDesc": "Čia galite matyti apmokėjimų būsenas už mokinių paskyras. Norėdami gauti apmokėjimų istoriją už kiekvieną paskyrą, eikite į tos paskyros apmokėjimų tvarkymą."
+    },
+    "accountSettings": {
+      "accounts": "Paskyra",
+      "accountsDesc": "Galite redaguoti pasirinktos mokinio paskyros informaciją, pavyzdžiui, vardą, kalbą ar kitą susijusią informaciją.",
+      "accountInfo": "Paskyros Informacija",
+      "language": "Kalba ir Šalis"
+    },
+    "authSettings": {
+      "auth": "Autentifikacija",
+      "authDesc": "Žemiau galite aktyvuoti ir naudoti skirtingus mokinių autentifikavimo metodus. Vis dar galite prisijungti naudodami savo paskyrą. Tai yra papildomas autentifikavimo mechanizmas, skirtas tik mokinių paskyroms.",
+      "qrCode": "QR Kodo Autentifikavimas",
+      "qrCodeDesc": "Galite naudoti QR kodą, kad vaikas galėtų prisijungti prie savo paskyros Evolytes žaidime. QR kodas veikia kaip slaptažodis, todėl, jei trečioji šalis jį gautų, galite sugeneruoti naują ir panaikinti senąjį kodą. Galite kodą atsispausdinti ir laikyti ten, kur jūsų vaikas gali lengvai jį pasiekti",
+      "enable": "Įgalinti",
+      "newCode": "Naujas Kodas",
+      "download": "Atsisiųsti",
+      "pinConfirmation": "PIN Patvirtinimas",
+      "pinDesc": "Jei turite keletos vaikų paskyrų, galite pridėti keturių skaičių PIN kodą, kad vaikai ar mokiniai negalėtų persijungti tarp paskyrų. Norėdami patekti į pasirinktą paskyrą vaikas ar mokinys turės naudoti savo PIN kodą.",
+      "pin": "PIN kodas",
+      "email": "El. pašto ir Slaptažodžio Autentifikavimas",
+      "emailDesc": "Jei jūsų vaikas turi elektroninį paštą, galite jam sukurti paskyrą naudojant el. pašto adresą ir slaptažodį, tada turėsite patvirtinti el. pašto adresą, kad vaikas galėtų prisijungti prie žaidimo."
+    },
+    "userSettingsTitle": "Jūsų Nustatymai",
+    "accountSettingsTitle": "Paskyros Nustatymai",
+    "billingSettingsTitle": "Apmokėjimo Nustatymai",
+    "tcSettingsTitle": "Taisyklės ir Sąlygos"
+  },
+  "userSettings": {
+    "userSectionTitle": "Jūsų Informacija",
+    "emailTitle": "El. paštas",
+    "emailPlaceholder": "email@email.com",
+    "firstNameTitle": "Vardas",
+    "lastNameTitle": "Pavardė",
+    "phoneTitle": "Telefonas",
+    "changePasswordSectionTitle": "Pakeisti Slaptažodį",
+    "currentPasswordTitle": "Dabartinis Slaptažodis",
+    "newPasswordTitle": "Naujas Slaptažodis",
+    "newPasswordConfirmTitle": "Patvirtinti Naują Slaptažodį",
+    "saveButtonTitle": "Išsaugoti"
+  },
+  "studentSettings": {
+    "studentInformationTitle": "Paskyros Informacija",
+    "firstName": "Vardas",
+    "middleName": "Middle Name",
+    "lastName": "Pavardė",
+    "birthDate": "Gimimo Data",
+    "datePlaceholder": "dd/mm/yyyy",
+    "schoolType": "Mokyklos Tipas"
+  },
+  "billingSettings": {
+    "title": "Prenumeratos Būsena",
+    "manageSubscription": "Tvarkyti Prenumeratą",
+    "statusTitle": "Būsena",
+    "renewNow": "Atnaujinkite Dabar",
+    "renewalDateTitle": "Atnaujinimo Data",
+    "renewalPriceTitle": "Atnaujinimo Kaina",
+    "cardNumberTitle": "Kortelės Numeris",
+    "cardType": "Kortelės Tipas",
+    "billingInformationTitle": "Apmokėjimo Informacija",
+    "invoiceTitle": "Sąskaitos faktūros",
+    "viewTitle": "Žiūrėti"
+  },
+  "schoolTypes": {
+    "public": "Viešoji Mokykla",
+    "private": "Privati Mokykla",
+    "home": "Namų Mokykla"
+  },
+  "schoolAccessTypes": {
+    "admin": "Administratorius",
+    "teacher": "Mokytojas"
+  },
+  "tc": {
+    "title": "Taisyklės ir Sąlygos"
+  },
+  "privacy": {
+    "title": "Privatumo Politika"
+  },
+  "categories": {
+    "none": "Nė vienas",
+    "addition": "Papildymas",
+    "count": "Suskaičiuoti",
+    "subtraction": "Atimtis",
+    "multiplication": "Daugyba",
+    "sizeComparison": "Dydžiai",
+    "numberPatterns": "Skaičių Raštai",
+    "imagePatterns": "Nuotraukų Raštai",
+    "shapes": "Formos",
+    "placeValue": "Vietos Vertė"
+  },
+  "answerTypes": {
+    "none": "Nė vienas",
+    "input": "Įvesti",
+    "multipleChoice": "Keli Pasirinkimai"
+  },
+  "answerCorrect": {
+    "none": "Nė vienas",
+    "correct": "Teisingai",
+    "wrong": "Neteisingai"
+  },
+  "subscriptionStatuses": {
+    "FirstBillingFailed": "Apmokėjimas Nepavyko",
+    "BillingFailed": "Apmokėjimas Nepavyko",
+    "Active": "Aktyvus",
+    "NotSetup": "Nenustatyta",
+    "Test": "Testas"
+  },
+  "cbSubscriptionStatuses": {
+    "active": "Aktyvus",
+    "future": "Būsima Prenumerata",
+    "in_trial": "Bandomoji versija",
+    "paused": "Pristabdyta",
+    "cancelled": "Atšauktas",
+    "not_subscribed": "Nėra prenumeratos"
+  },
+  "videosPage": {
+    "title": "Pagalbos vaizdo įrašai"
+  },
+  "platformVideos": [
+    {
+      "name": "platformInf",
+      "title": "Monitorius",
+      "iconLink": "./assets/sidebar/dashboard-overview-2.svg",
+      "subCategories": [
+        {
+          "subCatTitle": "Prisijungti ir Mokiniai",
+          "videos": [
+            {
+              "urlId": "671067510",
+              "videoTitle": "Prisijungti",
+              "videoDescription": "Sužinokite, kaip prisijungti ir pasikeisti mokinius"
+            }
+          ]
+        },
+        {
+          "subCatTitle": "Monitorius",
+          "videos": [
+            {
+              "urlId": "671100653",
+              "videoTitle": "Monitorius",
+              "videoDescription": "Sužinokite apie Evolytes Monitorių.  Kaip tikriname mokinių statusą ir tiriame atsakymų modelius."
+            }
+          ]
+        },
+        {
+          "subCatTitle": "Nustatymai",
+          "videos": [
+            {
+              "urlId": "671100318",
+              "videoTitle": "Nustatymai",
+              "videoDescription": "Sužinokite apie paskyros nustatymus, t.y. kaip pakeisti el. pašto adresą ir slaptažodį."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "platformos žaidimas",
+      "title": "Evolytes žaidimas",
+      "iconLink": "./assets/sidebar/dashboard-overview-2.svg",
+      "subCategories": [
+        {
+          "subCatTitle": "Prisijungti",
+          "videos": [
+            {
+              "urlId": "672715442",
+              "videoTitle": "Prisijungti",
+              "videoDescription": "Sužinokite, kaip prisijungti prie žaidimo ir pasirinkti/pakeisti mokinius."
+            }
+          ]
+        },
+        {
+          "subCatTitle": "Mygtukai ir Vartotojo Sąsaja",
+          "videos": [
+            {
+              "urlId": "672716320",
+              "videoTitle": "Pagrindinė vartotojo sąsaja",
+              "videoDescription": "Sužinokite apie 4 pagrindinius Evolytes žaidimo vartotojo sąsajos mygtukus."
+            }
+          ]
+        },
+        {
+          "subCatTitle": "Varžybos ir Klausimai",
+          "videos": [
+            {
+              "urlId": "672715537",
+              "videoTitle": "Kaip veikia varžybos",
+              "videoDescription": "Sužinokite, kaip veikia varžybos Evolytes žaidime."
+            }
+          ]
+        },
+        {
+          "subCatTitle": "Evolytes Kolekcionavimas",
+          "videos": [
+            {
+              "urlId": "672715828",
+              "videoTitle": "Kristalų Gaudymas",
+              "videoDescription": "Sužinokite, kaip naudoti kristalus, kad gautumėte naujus Evolytes monstrus."
+            }
+          ]
+        },
+        {
+          "subCatTitle": "Žemėlapiai ir Misijos",
+          "videos": [
+            {
+              "urlId": "672715723",
+              "videoTitle": "Sala 1",
+              "videoDescription": "Sužinokite apie 1-os salos išdėstymą ir svarbių dalykų išdėstymo vietas."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "adminVideos": [
+    {
+      "name": "mokyklos administratorius",
+      "title": "Administravimo sistema",
+      "iconLink": "./assets/school-admin/school-grey.svg",
+      "subCategories": [
+        {
+          "subCatTitle": "Administratorius",
+          "videos": [
+            {
+              "urlId": "671100995",
+              "videoTitle": "Administravimo sistema",
+              "videoDescription": "Sužinokite, kaip naudojame administravimo sistemą valdyti mokytojus ir mokinius jūsų mokykloje."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": {
+    "LicenseLimitReached": "Pasiekėte licencijos limitą. Ištrinkite studentą arba įsigykite papildomų licencijų."
+  }
+}

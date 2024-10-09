@@ -1,0 +1,304 @@
+<div *ngIf="school" class="defaultScrollBar scrollBarGreenThumb"
+     style="width: 100%; height: 100%; overflow-y: scroll;">
+  <div style="height: 20px"></div>
+  <div fxLayoutAlign="center center">
+    <div class="whiteBg defaultShadow"
+         style="border-radius: 6px; "
+         fxFlex.lt-md="94"
+         fxFlex.md="94"
+         fxFlex.gt-md="1000px">
+      <div style="height: 50px"
+           fxLayoutAlign="start center">
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-input [placeholderText]="'School Name'"
+                         [value]="school.name"
+                         (inputChangedEvent)="school.name = $event">
+          </app-evo-input>
+        </div>
+        <div fxFlex="20px"></div>
+        <div fxFlex="120px">
+          <div style="height: 6px;"></div>
+          <button class="greenButton whiteColor semiBoldMont font14px"
+                  style="height: 40px; width: 100%;"
+                  (click)="onSaveClicked()">
+            {{saveButtonTitle()}}
+          </button>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px;" ngStyle.xs="height: 10px"></div>
+      <div>
+        <div fxFlex="20px"></div>
+        <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+          <div fxFlex>
+            <app-evo-input [isDisabled]="true" [value]="school._id" [title]="'id'"></app-evo-input>
+          </div>
+          <div fxFlex="20px" fxFlex.xs="10px"></div>
+          <div fxFlex>
+            <app-evo-input [title]="'address'"
+                           [placeholderText]="'address'"
+                           [value]="school.address"
+                           (inputChangedEvent)="school.address = $event">
+            </app-evo-input>
+          </div>
+
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px;" ngStyle.xs="height: 10px"></div>
+      <div>
+        <div fxFlex="20px"></div>
+        <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+          <div fxFlex>
+            <app-evo-input [title]="'city'"
+                           [placeholderText]="'city'"
+                           [value]="school.city"
+                           (inputChangedEvent)="school.city = $event">
+            </app-evo-input>
+          </div>
+          <div fxFlex="20px" fxFlex.xs="10px"></div>
+          <div fxFlex>
+            <app-evo-input [title]="'zip'"
+                           [placeholderText]="'zip'"
+                           [value]="school.zip"
+                           (inputChangedEvent)="school.zip = $event">
+            </app-evo-input>
+          </div>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px;" ngStyle.xs="height: 10px"></div>
+      <div style=" min-height: 62px;" ngStyle.xs="min-height: 62px;">
+        <div fxFlex="20px"></div>
+        <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+          <div fxFlex>
+            <app-evo-lang-dropdown [type]="CultureTypes.country"
+                                   [currentValue]="school.country"
+                                   (valueChangedEvent)="school.country = $event">
+            </app-evo-lang-dropdown>
+          </div>
+          <div fxFlex="20px" fxFlex.xs="10px"></div>
+          <div fxFlex>
+            <app-evo-lang-dropdown [type]="CultureTypes.culture"
+                                   [currentValue]="school.culture"
+                                   (valueChangedEvent)="school.culture = $event">
+            </app-evo-lang-dropdown>
+          </div>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px;" ngStyle.xs="height: 10px;"></div>
+      <div>
+        <div fxFlex="20px"></div>
+        <p class="boldMont font14px blackColor noMargin">Licenses</p>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 10px;"></div>
+      <div>
+        <div fxFlex="20px"></div>
+        <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+          <div fxFlex>
+            <app-evo-input [title]="'Number of Licenses'"
+                           [placeholderText]="'Number of licenses'"
+                           [value]="school.numLicenses"
+                           (inputChangedEvent)="school.numLicenses = $event">
+            </app-evo-input>
+          </div>
+          <div fxFlex="20px" fxFlex.xs="10px"></div>
+          <div fxFlex>
+            <app-evo-input [title]="'Price Per Student'"
+                           [placeholderText]="'Price Per Student'"
+                           [value]="school.pricePerStudent"
+                           (inputChangedEvent)="school.pricePerStudent = $event">
+            </app-evo-input>
+          </div>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px;" ngStyle.xs="height: 10px;"></div>
+      <div>
+        <div fxFlex="20px"></div>
+        <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+          <div fxFlex>
+            <app-evo-date-input [title]="'License Start'"
+                                [placeholder]="'License Start'"
+                                [showUpcomingYears]="12"
+                                [currentValue]="school.licenseStartsAt"
+                                (valueChangedEvent)="school.licenseStartsAt = $event">
+            </app-evo-date-input>
+          </div>
+          <div fxFlex="20px" fxFlex.xs="10px"></div>
+          <div fxFlex>
+            <app-evo-date-input [title]="'License End'"
+                                [placeholder]="'License End'"
+                                [currentValue]="school.licenseExpiresAt"
+                                [showUpcomingYears]="12"
+                                (valueChangedEvent)="school.licenseExpiresAt = $event">
+            </app-evo-date-input>
+          </div>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px;" ngStyle.xs="height: 10px;"></div>
+      <div>
+        <div fxFlex="20px"></div>
+        <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+          <div fxFlex style="height: 62px;">
+            <app-evo-dropdown title="Currency"
+                              [list]="PricingModel.currenciesDropdown()"
+                              [currentValue]="school.currency"
+                              (valueChangedEvent)="school.currency = $event">
+            </app-evo-dropdown>
+          </div>
+          <div fxFlex="20px" fxFlex.xs="10px"></div>
+          <div fxFlex>
+          </div>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px;"></div>
+    </div>
+  </div>
+
+
+
+  <div style="height: 20px;"></div>
+  <div *ngIf="isEditMode" fxLayoutAlign="center center">
+    <div class="whiteBg defaultShadow"
+         style="border-radius: 6px;"
+         fxFlex="94"
+         fxFlex.gt-md="1000px">
+      <div style="height: 70px">
+        <div fxFlex="20px"></div>
+        <div fxFlex fxLayoutAlign="start center">
+          <p class="semiBoldMont font18px blackColor noMargin">Teachers</p>
+        </div>
+
+        <div fxFlex="20px" fxFlex.xs="10px"></div>
+        <div fxFlex="120px" fxFlex.xs="80px" fxLayoutAlign="start center">
+          <button fxFlex
+                  class="greenButton semiBoldMont font14px whiteColor"
+                  style="height: 40px;"
+                  (click)="onInvitationsClicked()">
+            Invitations
+          </button>
+        </div>
+        <div fxFlex="20px" fxFlex.xs="10px"></div>
+        <div fxFlex="120px" fxHide.xs="true" fxLayoutAlign="start center">
+          <button class="greenButton semiBoldMont font14px whiteColor"
+                  fxFlex
+                  style="height: 40px"
+                  (click)="onImportUsersClicked()">
+            Import
+          </button>
+        </div>
+        <div fxFlex="20px" fxHide.xs="true"></div>
+        <div fxFlex="120px" fxFlex.xs="80px" fxLayoutAlign="center center">
+          <button class="greenButton semiBoldMont font14px whiteColor noMargin"
+                  fxFlex
+                  style="height: 40px" (click)="onUserClicked(null)">
+            Create
+          </button>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 300px">
+        <div fxFlex="20px"></div>
+        <div fxFlex
+             class="lightGrayBg defaultScrollBar scrollBarBlueThumb"
+             style="height: 300px; border-radius: 6px; margin-bottom: 10px; overflow-y: scroll;">
+          <div *ngFor="let user of users">
+            <div style="height: 10px"></div>
+            <div fxLayoutAlign="start start">
+              <div fxFlex="10px"></div>
+              <div fxFlex class="bgWhiteHoverColor defaultShadow"
+                   style="height: 50px; border-radius: 4px; cursor: pointer;"
+                   fxLayoutAlign="start center" (click)="onUserClicked(user)">
+                <div fxFlex="20px"></div>
+                <div fxFlex fxLayoutAlign="start center">
+                  <div>
+                    <p class="semiBoldMont font18px blackColor noMargin">{{user.firstName}} {{user.lastName}}</p>
+                  </div>
+                </div>
+                <div fxFlex="50px" fxLayoutAlign="center center">
+                  <p class="semiBoldMont font26px greenColor noMargin">></p>
+                </div>
+              </div>
+              <div fxFlex="10px"></div>
+            </div>
+          </div>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px"></div>
+    </div>
+  </div>
+  <div style="height: 20px" *ngIf="isEditMode"></div>
+  <div *ngIf="isEditMode" fxLayoutAlign="center center">
+    <div class="whiteBg defaultShadow"
+         style="border-radius: 6px;"
+         fxFlex="94"
+         fxFlex.gt-md="1000px">
+      <div style="height: 70px">
+        <div fxFlex="20px"></div>
+        <div fxFlex fxLayoutAlign="start center">
+          <p class="semiBoldMont font18px blackColor noMargin">Students</p>
+        </div>
+        <div fxFlex="20px" fxFlex.xs="10px"></div>
+        <div fxFlex="120px" fxHide.xs="true" fxLayoutAlign="start center">
+          <button class="greenButton semiBoldMont font14px whiteColor noMargin"
+                  fxFlex
+                  style="height: 40px"
+                  (click)="onImportStudentsClicked()">
+            Import
+          </button>
+        </div>
+        <div fxFlex="20px" fxHide.xs="true"></div>
+        <div fxFlex="120px" fxFlex.xs="80px" fxLayoutAlign="center center">
+          <button class="greenButton semiBoldMont font14px whiteColor noMargin"
+                  fxFlex
+                  style="height: 40px"
+                  (click)="onStudentClicked(null)">
+            Create
+          </button>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 300px">
+        <div fxFlex="20px"></div>
+        <div fxFlex class="lightGrayBg defaultScrollBar scrollBarBlueThumb"
+             style="height: 300px; border-radius: 6px; overflow-y: scroll;">
+          <div *ngFor="let student of students">
+            <div style="height: 10px"></div>
+            <div fxLayoutAlign="start start">
+              <div fxFlex="10px"></div>
+              <div fxFlex class="bgWhiteHoverColor defaultShadow"
+                   style="height: 50px; border-radius: 4px; cursor: pointer;"
+                   fxLayoutAlign="start center"
+                   (click)="onStudentClicked(student)">
+                <div fxFlex="20px"></div>
+                <div fxFlex fxLayoutAlign="start center">
+                  <div>
+                    <p
+                      class="semiBoldMont font18px blackColor noMargin">{{student.firstName}} {{student.middleName}} {{student.lastName}}</p>
+                  </div>
+                </div>
+                <div fxFlex="50px" fxLayoutAlign="center center">
+                  <p class="semiBoldMont font26px greenColor noMargin">></p>
+                </div>
+              </div>
+              <div fxFlex="10px"></div>
+            </div>
+          </div>
+
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px"></div>
+    </div>
+  </div>
+  <div style="height: 20px;"></div>
+
+</div>
+

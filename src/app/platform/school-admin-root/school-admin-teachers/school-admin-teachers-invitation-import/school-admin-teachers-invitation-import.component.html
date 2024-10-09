@@ -1,0 +1,109 @@
+<div style="width: 100%; height: 100%;">
+  <div fxFlex="30px"></div>
+  <div fxFlex>
+    <div style="height: 20px;"></div>
+    <!-- Title and buttons -->
+    <div fxLayoutAlign="start center">
+      <p
+        class="boldMont font24px blackColor noMargin">{{ 'schoolAdministration.teachersInvitations.importTeachersInvitations' | translate }}</p>
+      <div fxFlex></div>
+      <div fxFlex="120px" fxLayoutAlign="start center">
+        <input type="file"
+               (change)="onFileChanged($event)"
+               accept="text/csv"
+               style="display: none;" #fileUpload>
+        <button class="greenButton whiteColor semiBoldMont font14px"
+                style="height: 40px;"
+                fxFlex
+                (click)="fileUpload.click()">
+          {{ 'reusable.selectFile' | translate }}
+        </button>
+      </div>
+      <div fxFlex="10px"></div>
+    </div>
+    <div style="height: 20px;"></div>
+    <div style="height: calc(100% - 140px); overflow-y: scroll; overflow-x: visible;">
+      <div fxFlex="5px"></div>
+      <div fxFlex>
+        <div style="height: 10px;"></div>
+        <div *ngFor="let teacherToInvite of teachersToInvite; let i = index;">
+          <div class="whiteBg smallShadow" style="border-radius: 4px;">
+            <div fxFlex="20px"></div>
+            <div fxFlex>
+              <div style="height: 10px;"></div>
+              <div style="height: 40px;" fxLayoutAlign="start center">
+                <div fxFlex="20px"></div>
+                <p class="boldMont font18px blackColor noMargin">{{ 'reusable.invitation' | translate }} {{ i + 1 }}</p>
+                <div fxFlex="20px"></div>
+              </div>
+              <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center">
+                <div fxFlex style="height: 65px;" ngStyle.lt-md="width:90%;">
+                  <app-evo-input fxFlex title="{{ 'userSettings.emailTitle' | translate }}"
+                                 placeholderText="{{ 'userSettings.emailPlaceholder' | translate }}"
+                                 [value]="teacherToInvite.email"
+                                 (inputChangedEvent)="teacherToInvite.email = $event">
+                  </app-evo-input>
+                </div>
+                <div fxFlex="20px" fxFlex.lt-md="10px"></div>
+                <div fxFlex style="height: 65px;" ngStyle.lt-md="width:90%;">
+                  <app-evo-dropdown fxFlex title="{{'schoolAdministration.teachers.accountTypeLegend' | translate}}"
+                                    [list]="AccessTypes"
+                                    style="height: 65px;"
+                                    [currentValue]="teacherToInvite.schoolAccessType"
+                                    (valueChangedEvent)="teacherToInvite.schoolAccessType = $event">
+                  </app-evo-dropdown>
+                </div>
+              </div>
+              <div style="height: 10px;"></div>
+              <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center">
+                <div fxFlex style="height: 65px;" ngStyle.lt-md="width:90%;">
+                  <app-evo-input fxFlex title="{{ 'userSettings.firstNameTitle' | translate }}"
+                                 [value]="teacherToInvite.firstName"
+                                 (inputChangedEvent)="teacherToInvite.firstName = $event">
+                  </app-evo-input>
+                </div>
+                <div fxFlex="20px" fxFlex.lt-md="10px"></div>
+                <div fxFlex style="height: 65px;" ngStyle.lt-md="width:90%;">
+                  <app-evo-input fxFlex title="{{ 'userSettings.lastNameTitle' | translate }}"
+                                 [value]="teacherToInvite.lastName"
+                                 (inputChangedEvent)="teacherToInvite.lastName = $event">
+                  </app-evo-input>
+                </div>
+              </div>
+              <div style="height: 20px;"></div>
+            </div>
+            <div fxFlex="20px"></div>
+          </div>
+          <div style="height: 10px;"></div>
+        </div>
+      </div>
+      <div fxFlex="5px"></div>
+    </div>
+    <!-- https://stackoverflow.com/questions/3258943/css3-drop-shadow-under-another-div-z-index-not-working -->
+    <div class="whiteBg defaultShadow"
+         style="height: 60px; position: relative; z-index: 11; border-radius: 4px 4px 0 0;" fxLayoutAlign="end center">
+      <button fxFlex="140px" class="redButton semiBoldMont font14px whiteColor" style="height: 40px;"
+              (click)="onCancelClicked()">{{ 'reusable.cancel' | translate }}</button>
+      <div fxFlex="20px"></div>
+      <button fxFlex="140px"
+              class="greenButton semiBoldMont font14px whiteColor"
+              style="height: 40px;"
+              [disabled]="teachersToInvite.length === 0"
+              (click)="onCreateClicked()">
+        {{ 'reusable.create' | translate }}
+      </button>
+      <div fxFlex="20px"></div>
+    </div>
+  </div>
+  <div fxFlex="30px"></div>
+</div>
+
+<div
+  style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.2); z-index: 2000;"
+  *ngIf="isDisabled">
+  <div fxLayoutAlign="center center" style="height:100%; overflow: hidden;">
+    <div fxflex="80">
+      <div class="loader"></div>
+    </div>
+  </div>
+</div>

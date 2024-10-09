@@ -1,0 +1,133 @@
+<div>
+  <div style="height: 40px;" fxLayoutAlign="start center">
+    <p fxFlex class="boldMont font14px blackColor noMargin">{{ title }}</p>
+    <div fxFlex="10px"></div>
+    <button fxFlex="120px"
+            class="whiteColor semiBoldMont font14px"
+            [ngClass]="{ greenButton: getAvailability(), redButton: getAvailability() === false }"
+            style="height: 40px;"
+            (click)="onAvailabilityClicked()">
+      {{ getAvailabilityText() }}
+    </button>
+  </div>
+  <div style="height: 10px;"></div>
+  <div>
+    <app-evo-translated-input [inputTitle]="'Description Korta (only english letters)'"
+                              [cultures]="CultureModel.dropdownList()"
+                              [descr]="pricing.description">
+    </app-evo-translated-input>
+  </div>
+  <div style="height: 10px"></div>
+  <div *ngIf="getAvailability()">
+    <div style="height: 65px;">
+      <app-evo-dropdown fxFlex
+                        title="Currency"
+                        [currentValue]="getCurrency()"
+                        [list]="currencies"
+                        (valueChangedEvent)="setCurrency($event)">
+      </app-evo-dropdown>
+      <div fxFlex="20px"></div>
+      <app-evo-input [value]="getCurrencySymbol()"
+                     [isDisabled]="true"
+                     title="Currency Symbol">
+      </app-evo-input>
+    </div>
+    <div style="height: 10px"></div>
+    <div>
+      <app-evo-input fxFlex
+                     title="Subscription Plan Id"
+                     [value]="getSubscriptionPlanId()"
+                     (inputChangedEvent)="_pricing.subPlanId = $event">
+      </app-evo-input>
+    </div>
+    <div style="height: 10px"></div>
+    <div>
+      <app-evo-input fxFlex
+                     title="User Visible Price"
+                     [value]="getUserVisiblePrice()"
+                     (inputChangedEvent)="_pricing.userVisiblePrice = $event">
+      </app-evo-input>
+      <div fxFlex="20px"></div>
+      <app-evo-input fxFlex
+                     title="User Visible Shipping Price"
+                     [value]="getUserVisibleShippingPrice()"
+                     (inputChangedEvent)="_pricing.userVisibleShippingPrice = $event"
+                     [isDisabled]="!getIncludesBook()">
+      </app-evo-input>
+    </div>
+    <div style="height: 10px"></div>
+    <div>
+      <div fxFlex>
+        <app-evo-dropdown title="Image"
+                          [list]="images"
+                          [currentValue]="getImage()"
+                          (valueChangedEvent)="_pricing.image = $event">
+        </app-evo-dropdown>
+      </div>
+      <div fxFlex="20px"></div>
+      <div fxFlex>
+        <p class="semiBoldMont font12px grayColor noMargin">Includes Book</p>
+        <div style="height: 6px;"></div>
+        <div style="height: 40px">
+          <app-evo-checkmark [isChecked]="getIncludesBook()"
+                             (valueChanged)="_pricing.includesBook = $event"
+                             fxFlex="40px">
+          </app-evo-checkmark>
+        </div>
+      </div>
+    </div>
+    <div style="height: 10px;"></div>
+    <div>
+      <app-evo-input fxFlex
+                     title="User Visible Total Price (price + shipping)"
+                     [value]="getUserVisibleFirstPrice()"
+                     (inputChangedEvent)="_pricing.userVisibleFirstPrice = $event">
+      </app-evo-input>
+      <div fxFlex="20px"></div>
+      <app-evo-input fxFlex
+                     title="Monthly Price"
+                     [value]="getMonthlyPrice()"
+                     (inputChangedEvent)="_pricing.monthlyPrice = $event">
+      </app-evo-input>
+    </div>
+    <div style="height: 10px;"></div>
+    <div>
+      <app-evo-input fxFlex
+                     title="Monthly Repeat Interval"
+                     [isDisabled]="true"
+                     [value]="getRepeatInterval()">
+      </app-evo-input>
+      <div fxFlex="20px"></div>
+      <div fxFlex></div>
+    </div>
+    <div style="height: 10px;"></div>
+    <div style="height: 65px;">
+      <app-evo-translated-input [cultures]="CultureModel.dropdownList()"
+                                [descr]="pricing.messageOne"
+                                [inputTitle]="'Message One'">
+      </app-evo-translated-input>
+    </div>
+    <div style="height: 10px;"></div>
+    <div style="height: 65px;">
+      <app-evo-translated-input [cultures]="CultureModel.dropdownList()"
+                                [descr]="pricing.messageTwo"
+                                [inputTitle]="'Message Two'">
+      </app-evo-translated-input>
+    </div>
+    <div style="height: 10px;"></div>
+    <div style="height: 65px;">
+      <app-evo-translated-input [cultures]="CultureModel.dropdownList()"
+                                [descr]="pricing.messageThree"
+                                [inputTitle]="'Message Three'">
+      </app-evo-translated-input>
+    </div>
+    <div style="height: 10px;"></div>
+    <div style="height: 65px;">
+      <app-evo-translated-input [cultures]="CultureModel.dropdownList()"
+                                [descr]="pricing.messageFour"
+                                [inputTitle]="'Message Four'">
+      </app-evo-translated-input>
+    </div>
+    <div style="height: 10px;"></div>
+  </div>
+</div>

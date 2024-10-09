@@ -1,0 +1,91 @@
+<div style="width: 100%; height: 100%;">
+  <div fxFlex="30px" fxFlex.lt-md="3"></div>
+  <div fxFlex fxFlex.xs="94" fxFlex.sm="calc(94%-200px)">
+    <div style="height: 20px;" ngStyle.xs="height: 15px;"></div>
+    <div fxLayoutAlign="start center">
+      <p class="boldMont font24px blackColor noMargin">Users</p>
+      <div fxFlex></div>
+      <div fxFlex="10px"></div>
+    </div>
+    <div style="height: 20px;" ngStyle.xs="height: 10px;"></div>
+    <div fxLayoutAlign="center center" fxLayout="row" fxLayout.xs="column">
+      <div fxFlex="80" fxFlex.sm="65" fxFlex.xs="65px" ngStyle.xs="width:80%;">
+        <div fxLayoutAlign="start center">
+          <app-evo-input style="width: 100%;"
+                         title="Search for users"
+                         placeholderText="User name or email"
+                         (inputChangedEvent)="searchFilteredUsers($event, userFilter.country)">
+          </app-evo-input>
+        </div>
+      </div>
+      <div fxFlex="20px" fxFlex.xs="10px"></div>
+      <div fxFlex="20" fxFlex.sm="30" fxFlex.xs="65px" ngStyle.xs="width:80%;">
+        <div fxLayoutAlign="end center">
+          <app-evo-lang-dropdown style="height: 65px; width: 100%;"
+                                 (valueChangedEvent)="searchFilteredUsers(userFilter.name, $event)"
+                                 [countryDropdownList]="countryDropdownList"
+                                 [currentValue]="countryDropdownList[0]">
+          </app-evo-lang-dropdown>
+        </div>
+      </div>
+    </div>
+    <div style="height: 20px;" ngStyle.xs="height: 15px;"></div>
+    <div style="height: calc(100% - 192px);"
+         ngStyle.sm="overflow-y:hidden; height: calc(100% - 170px);"
+         ngStyle.xs="overflow-y:hidden; height: calc(100% - 235px);">
+      <div style="height:100%; min-width: 535px;" ngStyle.xs="max-width: 535px;">
+        <div>
+          <div fxFlex="20px"></div>
+          <p fxFlex
+             class="semiBoldMont font12px grayColor noMargin">Name</p>
+          <div fxFlex="30px"></div>
+          <p fxFlex
+             class="semiBoldMont font12px grayColor noMargin">Email</p>
+          <div fxFlex="30px"></div>
+          <p fxFlex="40px"
+             class="semiBoldMont font12px grayColor noMargin">Country</p>
+          <div fxFlex="35px"></div>
+        </div>
+        <div style="height: 10px;"></div>
+        <div class="bgGrayDarkColor" style="height: 1px"></div>
+        <div class="noScrollBar" style="height: 100%; overflow-y: scroll;"
+             ngStyle.lt-md="height:95%;">
+          <div style="height: 10px;"></div>
+          <div *ngFor="let user of users">
+            <div>
+              <div fxFlex="2px"></div>
+              <div fxFlex class="smallShadow bgWhiteHoverColor pointer"
+                   style="height: 64px; border-radius: 4px;"
+                   fxLayoutAlign="start center"
+                   (click)="onUserClicked(user)">
+                <div fxFlex="15px"></div>
+                <div fxFlex fxLayoutAlign="start center">
+                  <div fxFlex>
+                    <p class="semiBoldMont font16px blackColor noMargin">{{user.getFullName()}}</p>
+                  </div>
+                  <div fxFlex="35px"></div>
+                  <p fxFlex
+                     class="semiBoldMont font16px blackColor noMargin">{{user.email}}</p>
+                  <div fxFlex="35px"></div>
+                  <p fxFlex="40px"
+                     class="semiBoldMont font16px blackColor noMargin">{{user.country}}</p>
+                  <div fxFlex="20px"></div>
+                </div>
+              </div>
+              <div fxFlex="2px"></div>
+            </div>
+            <div style="height: 10px;"></div>
+          </div>
+          <button class="blueButton whiteColor font14px semiBoldMont"
+                  style="height: 42px; width: 100%;"
+                  *ngIf="users.length % userFilter.limit === 0 && users.length > 0 && hasMoreData === true"
+                  (click)="onFetchMoreUsers()">
+            Load More
+          </button>
+          <div style="height: 10px;" ngStyle.sm="height: 30px;" ngStyle.xs="height: 20px:"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div fxFlex="30px" fxFlex.lt-md="3"></div>
+</div>

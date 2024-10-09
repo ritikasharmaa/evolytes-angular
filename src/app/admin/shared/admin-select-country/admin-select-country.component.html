@@ -1,0 +1,52 @@
+<div style="position: absolute; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); z-index: 5000;"
+     fxLayoutAlign="center center"
+     *ngIf="countrySv.isVisible">
+
+  <div fxFlex="400px"
+       fxFlex.xs="90"
+       class="whiteBg defaultShadow"
+       style="height: 320px; border-radius: 4px;">
+    <div class="greenBg"
+         style="height: 60px; border-radius: 4px 4px 0 0;"
+         fxLayoutAlign="center center">
+      <p class="boldMont font20px whiteColor">Select Country</p>
+    </div>
+    <div class="defaultScrollBar scrollBarGreenThumb" style="height: calc(100% - 110px); overflow: scroll;">
+      <div *ngFor="let country of countrySv.countries">
+        <div style="height: 10px"></div>
+        <div fxLayoutAlign="center center">
+          <div class="bgWhiteHoverColor defaultShadow"
+               [ngClass]="{ selected: country.key === countrySv.currentCountry }"
+               style="border-radius: 4px; height: 40px; cursor: pointer;"
+               fxFlex="70"
+               fxLayoutAlign="start center"
+               (click)="countrySv.currentCountry = country.key">
+            <div fxFlex="10px"></div>
+            <div fxFlex="26px" style="height: 40px" fxLayoutAlign="start center">
+              <img [src]="country.iconURL" style="height: 26px; width: 26px; object-fit: contain;">
+            </div>
+            <div fxFlex="10px"></div>
+            <p class="semiBoldMont font14px blackColor noMargin">{{ country.value }}</p>
+            <div fxFlex="10px"></div>
+          </div>
+        </div>
+        <div style="height: 10px;"></div>
+      </div>
+    </div>
+    <div fxLayoutAlign="space-around center" style="height: 50px">
+      <button fxFlex="120px"
+              class="redButton defaultShadow boldMont font16px whiteColor"
+              style="height: 40px;"
+              (click)="countrySv.selected(null)">
+        Cancel
+      </button>
+      <button fxFlex="120px"
+              class="greenButton defaultShadow boldMont font16px whiteColor"
+              style="height: 40px;"
+              (click)="countrySv.selected(countrySv.currentCountry)">
+        Select
+      </button>
+    </div>
+  </div>
+
+</div>

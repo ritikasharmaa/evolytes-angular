@@ -1,0 +1,252 @@
+<div class="defaultScrollBar scrollBarGreenThumb" style="width: 100%; height: 100%; overflow-y: scroll;">
+  <div style="height: 20px;"></div>
+  <div fxLayoutAlign="center center">
+    <div class="whiteBg defaultShadow"
+         style="border-radius: 6px;"
+         fxFlex="94"
+         fxFlex.gt-md="1000px">
+      <div style="height: 10px"></div>
+      <div style="height: 50px">
+        <div fxFlex="20px"></div>
+        <div fxFlex fxLayoutAlign="start center">
+          <p class="semiBoldMont font18px blackColor noMargin">{{title()}}</p>
+        </div>
+        <div fxFlex="20px"></div>
+        <div fxFlex="120px" fxLayoutAlign="start center">
+          <button fxFlex class="greenButton semiBoldMont whiteColor font14px"
+                  style="height: 40px;" (click)="onSaveClicked()">
+            {{saveButtonTitle()}}
+          </button>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px;"></div>
+      <div>
+        <div fxFlex="20px"></div>
+        <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+          <div fxFlex>
+            <app-evo-input [isDisabled]="true"
+                           [value]="student._id"
+                           [title]="'id'">
+            </app-evo-input>
+          </div>
+          <div fxFlex="20px" fxFlex.xs="10px"></div>
+          <div fxFlex>
+            <app-evo-input [title]="'SSID'"
+                           [placeholderText]="'SSID'"
+                           [isDisabled]="true">
+            </app-evo-input>
+          </div>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px;" ngStyle.xs="height: 10px"></div>
+      <div>
+        <div fxFlex="20px"></div>
+        <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+          <div fxFlex>
+            <app-evo-input [value]="student.firstName"
+                           (inputChangedEvent)="student.firstName = $event"
+                           [title]="'First Name'"
+                           [placeholderText]="'First Name'">
+            </app-evo-input>
+          </div>
+          <div fxFlex="20px" fxFlex.xs="10px"></div>
+          <div fxFlex>
+            <app-evo-input [value]="student.middleName"
+                           (inputChangedEvent)="student.middleName = $event"
+                           [title]="'Middle Name'"
+                           [placeholderText]="'Middle Name'">
+            </app-evo-input>
+          </div>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px;" ngStyle.xs="height: 10px"></div>
+      <div>
+        <div fxFlex="20px"></div>
+        <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+          <div fxFlex>
+            <app-evo-input [value]="student.lastName"
+                           (inputChangedEvent)="student.lastName = $event"
+                           [title]="'Last Name'"
+                           [placeholderText]="'Last Name'">
+            </app-evo-input>
+          </div>
+          <div fxFlex="20px" fxFlex.xs="10px"></div>
+          <div fxFlex>
+            <app-evo-input-date [title]="'Birth date'"
+                                [placeholderText]="'dd/mm/yyyy'"
+                                [currentValue]="student.birthDate"
+                                (inputChangedEvent)="student.birthDate = $event">
+            </app-evo-input-date>
+          </div>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px;" ngStyle.xs="height: 10px"></div>
+      <div style=" min-height: 62px; max-height: 62px;"
+           [ngStyle.xs]="{'min-height': '62px;', 'max-height': isEditMode ? '138px' : '15px;'}">
+        <div fxFlex="20px"></div>
+        <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+          <div fxFlex>
+            <app-evo-dropdown [title]="'School Type'"
+                              [list]="SchoolTypes"
+                              [currentValue]="student.schoolType"
+                              (valueChangedEvent)="student.schoolType = $event">
+            </app-evo-dropdown>
+          </div>
+          <div fxFlex="20px" fxFlex.xs="10px"></div>
+          <div fxFlex>
+            <app-evo-lang-dropdown [type]="'culture'"
+                                   [currentValue]="student.culture"
+                                   (valueChangedEvent)="student.culture = $event"
+                                   *ngIf="isEditMode">
+            </app-evo-lang-dropdown>
+          </div>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px;" ngStyle.xs="height: 10px" *ngIf="isEditMode"></div>
+      <div style=" min-height: 62px; max-height: 62px;" ngStyle.xs="min-height: 62px; max-height: 138px;"
+           *ngIf="isEditMode">
+        <div fxFlex="20px"></div>
+        <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+          <div fxFlex>
+            <app-evo-input [value]="student.schoolId"
+                           [isDisabled]="true"
+                           [title]="'School Id'"
+                           [placeholderText]="'School Id'">
+            </app-evo-input>
+          </div>
+          <div fxFlex="20px" fxFlex.xs="10px"></div>
+          <div fxFlex>
+            <app-evo-input [title]="'Teacher Id'"
+                           [placeholderText]="'Teacher Id'"
+                           [isDisabled]="true"
+                           [value]="student.teacherId">
+            </app-evo-input>
+          </div>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 10px;"></div>
+    </div>
+  </div>
+  <div style="height: 20px;" *ngIf="isEditMode"></div>
+  <div fxLayoutAlign="center center" *ngIf="isEditMode && student.evolytesProfile">
+    <div class="whiteBg defaultShadow"
+         style="border-radius: 6px;"
+         fxFlex="94"
+         fxFlex.gt-md="1000px">
+      <div style="height: 10px"></div>
+      <div style="height: 50px" fxLayoutAlign="start center">
+        <div fxFlex="20px"></div>
+        <p class="semiBoldMont font18px blackColor noMargin">Evolytes Profile</p>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px;" ngStyle.xs="height: 10px;"></div>
+      <div *ngIf="isEditMode">
+        <div fxFlex="20px"></div>
+        <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+          <div fxFlex>
+            <app-evo-input [value]="student.evolytesProfile.character"
+                           [isDisabled]="true"
+                           [title]="'Character'"
+                           [placeholderText]="'Character'">
+            </app-evo-input>
+          </div>
+          <div fxFlex="20px" fxFlex.xs="10px"></div>
+          <div fxFlex>
+            <app-evo-input [title]="'Coins'"
+                           [placeholderText]="'Coins'"
+                           [isDisabled]="true"
+                           [value]="student.evolytesProfile.coins">
+            </app-evo-input>
+          </div>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px;" ngStyle.xs="height: 10px"></div>
+      <div *ngIf="isEditMode">
+        <div fxFlex="20px"></div>
+        <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+          <div fxFlex>
+            <app-evo-input [value]="student.evolytesProfile.map"
+                           [isDisabled]="true"
+                           [title]="'Map'"
+                           [placeholderText]="'Map'">
+            </app-evo-input>
+          </div>
+          <div fxFlex="20px" fxFlex.xs="10px"></div>
+          <div fxFlex>
+            <app-evo-input [title]="'Map Type'"
+                           [placeholderText]="'Map Type'"
+                           [isDisabled]="true"
+                           [value]="student.evolytesProfile.mapType">
+            </app-evo-input>
+          </div>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px;" ngStyle.xs="height: 10px"></div>
+      <div *ngIf="isEditMode">
+        <div fxFlex="20px"></div>
+        <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+          <div fxFlex>
+            <app-evo-input [value]="student.evolytesProfile.crystalMap"
+                           [isDisabled]="true"
+                           [title]="'Crystal Map'"
+                           [placeholderText]="'Crystal Map'">
+            </app-evo-input>
+          </div>
+          <div fxFlex="20px" fxFlex.xs="10px"></div>
+          <div fxFlex>
+            <app-evo-input [title]="'Crystal Map Type'"
+                           [placeholderText]="'Crystal Map Type'"
+                           [isDisabled]="true"
+                           [value]="student.evolytesProfile.crystalMapType">
+            </app-evo-input>
+          </div>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px;" ngStyle.xs="height: 10px"></div>
+      <div *ngIf="isEditMode">
+        <div fxFlex="20px"></div>
+        <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+          <div fxFlex>
+            <app-evo-input fxFlex
+                           [value]="student.evolytesProfile.location.x"
+                           [isDisabled]="true"
+                           [title]="'Location x'">
+            </app-evo-input>
+            <div fxFlex="10px"></div>
+            <app-evo-input fxFlex
+                           [title]="'y'"
+                           [value]="student.evolytesProfile.location.y"
+                           [isDisabled]="true">
+            </app-evo-input>
+          </div>
+          <div fxFlex="20px" fxFlex.xs="10px"></div>
+          <div fxFlex>
+            <app-evo-input fxFlex
+                           [title]="'Crystal Location x'"
+                           [isDisabled]="true"
+                           [value]="student.evolytesProfile.crystalLocation.x">
+            </app-evo-input>
+            <div fxFlex="10px"></div>
+            <app-evo-input fxFlex
+                           [title]="'y'"
+                           [isDisabled]="true"
+                           [value]="student.evolytesProfile.crystalLocation.y">
+            </app-evo-input>
+          </div>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 10px"></div>
+    </div>
+  </div>
+  <div style="height: 20px;"></div>
+</div>

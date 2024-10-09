@@ -1,0 +1,22 @@
+/* lt-lg */
+@media only screen and (max-width: 1279px) {
+  .gif {
+    height: calc(90vw * 0.56);
+    max-height: 270px;
+    width: 90%;
+    max-width: 480px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+  }
+}
+
+/*gt-md*/
+@media only screen and (min-width: 1280px) {
+  .gif {
+    height: calc(40vw * 0.56);
+  }
+}
+
+div.content {
+
+}

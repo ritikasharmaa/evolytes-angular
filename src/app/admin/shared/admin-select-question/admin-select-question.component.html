@@ -1,0 +1,107 @@
+<div class="overlayBg"
+     style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 400;"
+     fxLayoutAlign="center center"
+     *ngIf="selectQSv.isVisible">
+  <div class="whiteBg" fxFlex="80" style="height: 80%; border-radius: 8px;">
+    <div class="greenBg" style="height: 60px; border-radius: 8px 8px 0 0;" fxLayoutAlign="center center">
+      <p class="semiBoldMont font18px whiteColor noMargin">Select Question</p>
+    </div>
+    <div class="scrollBarPurpleThumb defaultScrollBar lightGrayBg" style="height: calc(100% - 120px); overflow-y: scroll;">
+      <div fxFlex="20px"></div>
+      <div fxFlex>
+        <div style="height: 10px;"></div>
+        <div *ngFor="let cat of selectQSv.categories; let i = index">
+          <div *ngIf="subcategories(cat.category).length > 0">
+            <div style="height: 40px; border-radius: 6px; cursor: pointer;"
+                 [ngStyle]="{ 'background-color': getColor(i) }"
+                 (click)="cat.isVisible = !cat.isVisible"
+                 fxLayoutAlign="start center">
+              <div fxFlex="10px"></div>
+              <p class="semiBoldMont font14px whiteColor noMargin" fxFlex>{{cat.category}}</p>
+              <div fxFlex="40px" fxLayoutAlign="center center">
+                <p class="semiBoldMont font18px whiteColor noMargin" *ngIf="cat.isVisible">-</p>
+                <p class="semiBoldMont font18px whiteColor noMargin" *ngIf="!cat.isVisible">+</p>
+              </div>
+            </div>
+            <div style="height: 10px;"></div>
+            <div *ngIf="cat.isVisible">
+              <div *ngFor="let subCat of subcategories(cat.category);">
+                <div fxFlex="40px"></div>
+                <div fxFlex (click)="subCat.isVisible = !subCat.isVisible">
+                  <div style="height: 40px; border-radius: 6px; cursor: pointer;"
+                       [ngStyle]="{ 'background-color': getColor(i) }"
+                       fxLayoutAlign="start center">
+                    <div fxFlex="10px"></div>
+                    <p class="semiBoldMont font14px whiteColor noMargin" fxFlex>{{subCat.subCategory}}</p>
+                    <div fxFlex="40px" fxLayoutAlign="center center">
+                      <p class="semiBoldMont font18px whiteColor noMargin" *ngIf="subCat.isVisible">-</p>
+                      <p class="semiBoldMont font18px whiteColor noMargin" *ngIf="!subCat.isVisible">+</p>
+                    </div>
+                  </div>
+                  <div style="height: 10px;"></div>
+                  <!-- Here we display questions if they are visible -->
+                  <div *ngIf="subCat.isVisible === true">
+                    <div style="height: 10px;"></div>
+                    <div *ngFor="let q of subCat.questions">
+                      <div fxLayoutAlign="center start">
+                        <div fxFlex="5px"></div>
+                        <div fxFlex class="bgWhiteHoverColor defaultShadow"
+                             style="border-radius: 4px; cursor: pointer;"
+                             (click)="onQuestionClicked(q)">
+                          <div style="height: 10px"></div>
+                          <div>
+                            <div fxFlex="20px"></div>
+                            <div fxFlex fxLayoutAlign="start center">
+                              <div>
+                                <p class="boldMont font14px blackColor noMargin">{{q.name}}</p>
+                                <p class="semiBoldMont font10px greenColor noMargin">{{q.subCategory}}</p>
+                                <p class="semiBoldMont purpleColor font10px noMargin">{{q.answerType}}</p>
+                                <p class="semiBoldMont blueColor font10px noMargin">{{q.representation}}</p>
+                              </div>
+                            </div>
+                            <div fxFlex="50px" *ngIf="q.isStarterQuestion" fxLayoutAlign="center center">
+                              <p class="semiBoldMont orangeColor font12px noMargin">Starter</p>
+                            </div>
+                            <div fxFlex="100px" fxLayoutAlign="center center">
+                              <p class="semiBoldMont blueColor font12px noMargin">{{q.rank.toFixed(2)}}</p>
+                            </div>
+                            <div fxFlex="60px" fxLayoutAlign="center center">
+                              <p class="semiBoldMont greenColor font12px noMargin">{{q.correctnessRatioPercentageString(UserModel.getAdminCountry())}}</p>
+                            </div>
+                            <div fxFlex="70px" fxLayoutAlign="center center">
+                              <p class="semiBoldMont font12px noMargin"
+                                 [ngClass]="{ greenColor: q.isPublished, redColor: q.isPublished === false }">
+                                {{questionPublishedState(q)}}
+                              </p>
+                            </div>
+                            <div fxFlex="20px">
+
+                            </div>
+                          </div>
+                          <div style="height: 10px"></div>
+                        </div>
+                        <div fxFlex="5px"></div>
+                      </div>
+                      <div style="height: 10px;"></div>
+                    </div>
+                    <div style="height: 10px;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="height: 10px;"></div>
+      </div>
+      <div fxFlex="20px"></div>
+    </div>
+    <div style="height: 60px;" fxLayoutAlign="center center">
+      <button fxFlex="120px"
+              class="redButton semiBoldMont font14px whiteColor"
+              style="height: 40px;"
+              (click)="onQuestionClicked(null)">
+        Cancel
+      </button>
+    </div>
+  </div>
+</div>

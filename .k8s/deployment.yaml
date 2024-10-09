@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: evolyte-web
+  name: web
+  namespace: evolyte-dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: evolyte-web
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: evolyte-web
+    spec:
+      containers:
+      - image: evolytesinc/web:6
+        name: web-container
+        resources: {}
+      imagePullSecrets:
+       - name: regcred

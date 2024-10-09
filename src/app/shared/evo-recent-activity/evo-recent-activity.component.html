@@ -1,0 +1,77 @@
+<div style="width: 100%; height: 200px;">
+  <div class="whiteBg defaultShadow" style="width: 100%; border-radius: 4px;">
+    <div style="height: 40px; border-top-left-radius: 12px;" fxLayoutAlign="start center" class="bgTitle">
+      <div fxFlex="20px"></div>
+      <p class="font16px grayColor noMargin boldMont centerAlign"
+         style="line-height: 40px; text-align: center;">
+        {{ 'recentActivity.title' | translate }}
+      </p>
+    </div>
+    <div fxLayoutAlign="space-around start">
+      <div fxFlex="32">
+        <div fxLayoutAlign="center center" style="height: 50px">
+          <img src="./assets/icons/clock-green-icon.png" style="object-fit: contain; height: 30px;">
+        </div>
+        <div fxLayoutAlign="center center">
+          <p class="semiBoldMont font12px greenColor noMargin" style="max-height: 15px">{{ 'recentActivity.time' | translate }}</p>
+        </div>
+        <div style="height: 5px;"></div>
+        <div fxLayoutAlign="center center">
+          <p class="regularMont font14px grayColor noMargin" style="max-height: 17px">{{sessionRangeDurationString()}}</p>
+        </div>
+
+        <div style="height: 15px;"></div>
+
+        <div fxLayoutAlign="center center" style="max-height: 15px">
+          <p class="semiBoldMont font12px greenColor noMargin" style="max-height: 15px">{{ 'recentActivity.total' | translate }}</p>
+        </div>
+        <div style="height: 5px;"></div>
+        <div fxLayoutAlign="center center">
+          <p class="regularMont font14px grayColor noMargin" style="max-height: 17px">{{sessionTotalDurationString()}}</p>
+        </div>
+      </div>
+      <div fxFlex="32">
+        <div fxLayoutAlign="center center" style="height: 50px">
+          <img src="./assets/icons/answers-purple-icon.png" style="object-fit: contain; height: 30px;">
+        </div>
+        <div fxLayoutAlign="center center">
+          <p class="semiBoldMont font12px purpleColor noMargin" style="max-height: 15px">{{ 'recentActivity.answers' | translate }}</p>
+        </div>
+        <div style="height: 5px"></div>
+        <div fxLayoutAlign="center center">
+          <p class="regularMont font14px grayColor noMargin" style="max-height: 17px">{{numAnswersRangeString()}}</p>
+        </div>
+        <div style="height: 15px;"></div>
+        <div fxLayoutAlign="center center">
+          <p class="semiBoldMont font12px purpleColor noMargin" style="max-height: 15px">{{ 'recentActivity.total' | translate }}</p>
+        </div>
+        <div style="height: 5px;"></div>
+        <div fxLayoutAlign="center center">
+          <p class="regularMont font14px grayColor noMargin" style="max-height: 17px">{{numAnswersTotalString()}}</p>
+        </div>
+      </div>
+      <div fxFlex="25" fxHide>
+        <div fxLayoutAlign="center center" style="height: 50px">
+          <img src="./assets/icons/skills-blue-icon2.png" style="object-fit: contain; height: 30px;">
+        </div>
+        <div fxLayoutAlign="center center">
+          <p class="semiBoldMont font12px blueColor noMargin" style="max-height: 15px" >{{ 'recentActivity.skills' | translate }}</p>
+        </div>
+        <div style="height: 5px;"></div>
+        <div fxLayoutAlign="center center">
+          <p class="regularMont font14px grayColor noMargin" style="max-height: 17px">{{skillProgressRangeString()}}</p>
+        </div>
+        <div style="height: 15px;"></div>
+        <div fxLayoutAlign="center center">
+          <p class="semiBoldMont font12px blueColor noMargin" style="max-height: 15px">{{ 'recentActivity.total' | translate }}</p>
+        </div>
+        <div style="height: 5px;"></div>
+        <div fxLayoutAlign="center center">
+          <p class="regularMont font14px grayColor noMargin" style="max-height: 17px">{{skillProgressTotalString()}}</p>
+        </div>
+      </div>
+    </div>
+    <div style="height: 15px"></div>
+  </div>
+  <div style="height: 2px"></div>
+</div>

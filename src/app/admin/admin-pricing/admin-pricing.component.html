@@ -1,0 +1,98 @@
+<div class="defaultScrollBar scrollBarGreenThumb" style="width: 100%; height: 100%; overflow-y: scroll;">
+  <div fxFlex="20px"></div>
+  <div fxFlex>
+    <div style="height: 20px;"></div>
+    <div class="whiteBg defaultShadow" style="border-radius: 8px;">
+      <div style="height: 60px;" fxLayoutAlign="start center">
+        <div fxFlex="10px"></div>
+        <p class="boldMont font18px blackColor noMargin" fxFlex>Pricing</p>
+        <div fxFlex="20px"></div>
+        <button class="greenButton semiBoldMont font14px whiteColor"
+                fxFlex="120px"
+                style="height: 40px;"
+                (click)="onSave()">Save</button>
+        <div fxFlex="10px"></div>
+      </div>
+      <div style="height: 20px;"></div>
+      <div>
+        <div fxFlex="10px"></div>
+        <div fxFlex *ngIf="this.pricing">
+          <!-- Free Trial -->
+          <div style="height: 40px;" fxLayoutAlign="start center">
+            <p fxFlex class="boldMont font14px blackColor noMargin">{{ 'Free Trial' }}</p>
+            <div fxFlex="10px"></div>
+            <button fxFlex="120px"
+                    class="whiteColor semiBoldMont font14px"
+                    [ngClass]="{ greenButton: getAvailability(), redButton: getAvailability() === false }"
+                    style="height: 40px;"
+                    (click)="onAvailabilityClicked()">
+              {{ getAvailabilityText() }}
+            </button>
+          </div>
+          <div *ngIf="getAvailability()">
+            <div style="height: 10px;"></div>
+            <div>
+              <app-evo-input inputType="number" [value]="getTrialDuration()" (inputChangedEvent)="getTrial().trialLength = $event"></app-evo-input>
+            </div>
+            <div style="height: 10px;"></div>
+            <div style="height: 65px;">
+              <app-evo-translated-input [cultures]="CultureModel.dropdownList()"
+                                        [descr]="getTrial().messageOne"
+                                        [inputTitle]="'Message One'">
+              </app-evo-translated-input>
+            </div>
+            <div style="height: 10px;"></div>
+            <div style="height: 65px;">
+              <app-evo-translated-input [cultures]="CultureModel.dropdownList()"
+                                        [descr]="getTrial().messageTwo"
+                                        [inputTitle]="'Message Two'">
+              </app-evo-translated-input>
+            </div>
+            <div style="height: 10px;"></div>
+            <div style="height: 65px;">
+              <app-evo-translated-input [cultures]="CultureModel.dropdownList()"
+                                        [descr]="getTrial().messageThree"
+                                        [inputTitle]="'Message Three'">
+              </app-evo-translated-input>
+            </div>
+            <div style="height: 10px;"></div>
+            <div style="height: 65px;">
+              <app-evo-translated-input [cultures]="CultureModel.dropdownList()"
+                                        [descr]="getTrial().messageFour"
+                                        [inputTitle]="'Message Four'">
+              </app-evo-translated-input>
+            </div>
+          </div>
+          <div style="height: 20px;"></div>
+          <app-admin-monthly-pricing [title]="'1 Month Subscription'"
+                                     [pricing]="getPricing1M()">
+          </app-admin-monthly-pricing>
+          <div style="height: 10px;"></div>
+          <app-admin-monthly-pricing [title]="'3 Month Subscription'"
+                                     [pricing]="getPricing3M()">
+          </app-admin-monthly-pricing>
+          <div style="height: 10px;"></div>
+          <app-admin-monthly-pricing [title]="'6 Month Subscription'"
+                                     [pricing]="getPricing6M()">
+          </app-admin-monthly-pricing>
+          <div style="height: 10px;"></div>
+          <app-admin-monthly-pricing [title]="'12 Month Subscription'"
+                                     [pricing]="getPricing12M()">
+          </app-admin-monthly-pricing>
+        </div>
+        <div fxFlex *ngIf="!this.pricing">
+          <button fxFlex
+                  class="greenButton boldMont whiteColor font14px"
+                  style="height: 40px;"
+                  (click)="createPricing()">
+            Create pricing
+          </button>
+        </div>
+        <div fxFlex="10px"></div>
+      </div>
+      <div style="height: 20px;"></div>
+    </div>
+    <div style="height: 20px;"></div>
+  </div>
+  <div fxFlex="20px"></div>
+</div>

@@ -1,0 +1,257 @@
+<app-land2-nav-header [hidden]="hidden" (onBurgerClicked)="setHidden()"></app-land2-nav-header>
+
+<div class="landcontent" appEgg>
+
+  <!-- To adapt with the burger menu of the navbar -->
+  <div [ngClass]="{burgerMenu: !hidden}"></div>
+
+  <!-- Based on research section -->
+  <div>
+    <div style="height: 50px;"></div>
+    <div ngStyle.xs="width: 90%; margin: 0 auto;"
+         ngStyle.sm="width: 72%; margin: 0 auto;"
+         ngStyle.gt-sm="width: 760px; margin: 0 auto;">
+      <h1 class="boldMont blackColor font30px noMargin paddingBottom"
+          style="text-align: center;">
+        {{ 'lp2.research.exp.title' | translate }}
+      </h1>
+      <div style="height: 10px"></div>
+      <p class="regularMont grayColor font20px noMargin centerAlign">
+        {{ 'lp2.common.research.subtitle' | translate }}
+      </p>
+    </div>
+
+    <div style="height: 50px"></div>
+
+    <div fxLayoutAlign="center center" >
+      <div fxFlex.lt-md="95" fxFlex.md="95" fxFlex.gt-md="80" fxLayout.gt-sm="row"  fxLayout.lt-sm="column"  fxLayout.sm="column" fxLayoutAlign.gt-sm="space-around center">
+
+        <!-- answers 12x -->
+        <div>
+          <h1 class="boldMont noMargin purpleColor font60px centerAlign">
+            12x
+          </h1>
+          <div style="height: 6px"></div>
+          <h1 class="boldMont font20px purpleColor noMargin"
+              style="text-align: center;">
+            {{ 'lp2.common.answers.label' | translate }}
+          </h1>
+          <div style="height: 6px"></div>
+          <p class="mediumMont font16px disabledColor noMargin centerAlign"
+             ngStyle.gt-xs="width: 300px; margin: 0 auto;"
+             ngStyle.xs="width: 90%; margin: 0 auto;">
+            {{ 'lp2.common.research.answers12' | translate }}
+          </p>
+        </div>
+
+        <div fxHide.gt-sm="true"  style="height: 40px"></div>
+
+        <!-- answers 1.200 -->
+        <div>
+          <h1 class="boldMont font60px greenColor noMargin centerAlign">
+            1.200
+          </h1>
+          <div style="height: 6px"></div>
+          <h1 class="boldMont noMargin greenColor font20px centerAlign">
+            {{ 'lp2.common.answers.label' | translate }}
+          </h1>
+          <div style="height: 6px"></div>
+          <p class="mediumMont font16px disabledColor noMargin centerAlign"
+             ngStyle.gt-xs="width: 300px; margin: 0 auto;"
+             ngStyle.xs="width: 90%; margin: 0 auto;">
+            {{ 'lp2.common.research.answers1200' | translate }}
+          </p>
+        </div>
+
+        <div fxHide.gt-sm="true"  style="height: 40px"></div>
+
+        <!-- answers 12x -->
+        <div>
+          <h1 class="boldMont noMargin blueColor font60px"
+              style="text-align: center;">
+            4x
+          </h1>
+          <div style="height: 6px"></div>
+          <h1 class="boldMont noMargin blueColor font20px centerAlign">
+            {{ 'lp2.common.answers.label' | translate }}
+          </h1>
+          <div style="height: 6px"></div>
+          <p class="mediumMont font16px disabledColor noMargin centerAlign"
+             ngStyle.gt-xs="width: 300px; margin: 0 auto;"
+             ngStyle.xs="width: 90%; margin: 0 auto;">
+            {{ 'lp2.common.research.answers4' | translate }}
+          </p>
+        </div>
+
+      </div>
+    </div>
+    <div style="height: 50px"></div>
+    <div ngStyle.xs="width: 90%; margin: 0 auto;"
+         ngStyle.sm="width: 80%; margin: 0 auto;"
+         ngStyle.gt-sm="width: 840px; margin: 0 auto;">
+      <h1 class="noMargin grayColor regularMont font16px centerAlign">
+        {{'lp2.research.exp.conclusion' | translate}}
+      </h1>
+    </div>
+    <div style="height: 50px;"></div>
+  </div>
+
+  <!-- Positive Towards Math-->
+  <div  class="lightGrayBg" style="padding: 50px 0 50px 0" fxLayoutAlign="center center">
+    <div fxLayout="row" fxFlex.gt-md="75" fxFlex.md="90%" fxLayoutAlign="center center">
+      <div fxHide.sm="true" fxHide.lt-sm="true" fxFlex="30" fxLayoutAlign="center center" style="padding-right: 40px">
+        <img style="object-fit: contain; width: 90%" src="../../../../assets/newWebsite/MorePositiveTowardsMath.png">
+      </div>
+      <div fxFlex.gt-sm="60" fxFlex.sm="80" fxFlex.lt-sm="80" fxLayout="column" fxLayoutAlign.lt-sm="center center" fxLayoutAlign.sm="center center">
+        <h1 class="noMargin blackColor boldMont font30px paddingBottom">
+          {{'lp2.research.positiveTowards.title' | translate}}
+        </h1>
+        <img fxHide.gt-sm="true" style="object-fit: contain; width: 50%" src="../../../../assets/newWebsite/MorePositiveTowardsMath.png">
+        <div style="height: 20px;"></div>
+        <h1 class="grayColor noMargin regularMont font16px">{{'lp2.research.positiveTowards.descr1' | translate}}</h1>
+        <div style="height: 30px;"></div>
+        <h1 class="grayColor noMargin regularMont font16px">{{'lp2.research.positiveTowards.descr2' | translate}}</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- Theories -->
+  <div style="padding: 50px 0 50px 0" fxLayout="column" fxLayoutAlign="center center">
+    <div ngStyle.xs="width: 90%; margin: 0 auto;"
+         ngStyle.sm="width: 72%; margin: 0 auto;"
+         ngStyle.gt-sm="width: 760px; margin: 0 auto;">
+      <h1 class="boldMont blackColor font30px noMargin centerAlign">
+        {{'lp2.research.theoretical.title' | translate}}
+      </h1>
+      <div style="height: 10px"></div>
+      <p class="regularMont grayColor font18px noMargin centerAlign">
+        {{'lp2.research.theoretical.description' | translate}}
+      </p>
+    </div>
+    <div style="height: 40px;"></div>
+    <div fxLayout="column" fxLayoutAlign="center center" style="width: 90%">
+
+      <!-- LARGE -->
+      <div fxHide.lt-md="true" *ngFor="let tab of theoriesTabLarge" style="width: 100%; height: 225px; margin: 20px" fxLayoutAlign="center center">
+        <div *ngFor="let theorie of tab" style="height: 100%">
+          <div fxFlex="235px" class="smallShadow" style="padding: 12px; margin: 0 30px 0 30px; height: 100%" fxLayout="column"
+               fxLayoutAlign="center center">
+            <img [src]="'assets/newWebsite/' + theorie.icon" style="height: 35px; padding-bottom: 10px">
+            <p class="boldMont noMargin blackColor font18px centerAlign">
+              {{theorie.title | translate}}
+            </p>
+            <div style="height: 5px;"></div>
+            <p class="regularMont noMargin grayColor font14px centerAlign">
+              {{ theorie.description | translate}}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- MEDIUM -->
+      <div fxHide.gt-md="true" fxHide.md="true" fxHide.lt-sm="true" *ngFor="let tab of theoriesTabMedium" style="width: 100%; height: 225px; margin: 20px" fxLayoutAlign="center center">
+        <div *ngFor="let theorie of tab" style="height: 100%" >
+          <div fxFlex="235px" class="smallShadow" style="padding: 12px; margin: 0 30px 0 30px; height: 100%" fxLayout="column"
+               fxLayoutAlign="center center">
+            <img [src]="'assets/newWebsite/' + theorie.icon" style="height: 35px; padding-bottom: 10px">
+            <p class="boldMont noMargin blackColor font18px centerAlign">
+              {{theorie.title | translate}}
+            </p>
+            <div style="height: 5px;"></div>
+            <p class="regularMont noMargin grayColor font14px centerAlign">
+              {{ theorie.description | translate}}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SMALL -->
+      <div fxHide.gt-sm="true" fxHide.sm="true" *ngFor="let tab of theoriesTabSmall" style="width: 100%; height: 225px; margin: 20px" fxLayoutAlign="center center">
+        <div *ngFor="let theorie of tab" style="height: 100%" >
+          <div fxFlex="235px" class="smallShadow" style="padding: 12px; margin: 0 30px 0 30px; height: 100%" fxLayout="column"
+               fxLayoutAlign="center center">
+            <img [src]="'assets/newWebsite/' + theorie.icon" style="height: 35px; padding-bottom: 10px">
+            <p class="boldMont noMargin darkBlueColor font18px centerAlign">
+              {{theorie.title | translate}}
+            </p>
+            <div style="height: 5px;"></div>
+            <p class="regularMont noMargin grayColor font14px centerAlign">
+              {{ theorie.description | translate}}
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- history part computer -->
+  <div fxHide.lt-sm="true" class="lightGrayBg" fxLayoutAlign="center center" style="padding: 50px 0 50px 0;">
+    <div ngStyle.gt-md="width: 90%" ngStyle.lt-md="width: 94%" ngStyle.md="width: 90%" fxLayoutAlign="start center" fxLayout="column">
+      <h1 class="boldMont noMargin blackColor font30px paddingBottom centerAlign">
+        {{'lp2.research.history.title' | translate}}
+      </h1>
+      <div style="height: 20px;"></div>
+      <div style="max-width: 800px; width: 80%">
+        <h1 class="regularMont noMargin grayColor font18px centerAlign">
+            {{'lp2.research.history.description' | translate}}
+        </h1>
+      </div>
+      <div style="height: 60px"></div>
+      <div *ngFor="let text of tabText; let i = index"
+           ngStyle.gt-md="width: 90%; max-width: 1200px; margin-bottom: 50px"
+           ngStyle.lt-lg="width: 100%; margin-bottom: 50px">
+        <div fxFlex="30" fxLayoutAlign="start center" fxLayout="column">
+          <h1 class="boldMont noMargin font60px" [ngStyle]="{'color': colorIndex(i)}">{{text.year}}</h1>
+          <h1 class="boldMont noMargin font26px paddingBottom" [ngStyle]="{'color': colorIndex(i), 'text-align': 'center'}">{{text.season | translate}}</h1>
+          <div style="height: 100%;" fxLayoutAlign="center center">
+            <div style="height: 100%; width: 10px"
+                 [ngStyle]="{'border-color': colorIndex(i), 'border-width': '0 3px 0 0', 'border-style': 'solid'}">
+            </div>
+            <div style="height: 100%; width: 10px"
+                 [ngStyle]="{'border-color': colorIndex(i), 'border-width': '0 0 0 3px', 'border-style': 'solid'}">
+            </div>
+          </div>
+        </div>
+        <div fxFlex="70">
+          <h1 class="boldMont noMargin blackColor font24px paddingBottom">{{text.title | translate}}</h1>
+          <div style="height: 20px;"></div>
+          <h1 class="regularMont noMargin grayColor font18px paddingBottom">{{text.descr1 | translate}}</h1>
+          <div style="height: 10px;"></div>
+          <h1 class="regularMont noMargin grayColor font18px paddingBottom">{{text.descr2 | translate}}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- History part mobile -->
+  <div fxHide.gt-xs="true" class="lightGrayBg" fxLayoutAlign="center center" style="padding: 50px 0 50px 0;">
+    <div style="width: 90%" fxLayoutAlign="start center" fxLayout="column">
+      <h1 class="boldMont noMargin blackColor font30px paddingBottom"
+          style="text-align: center">{{'lp2.research.history.title' | translate}}</h1>
+      <h1 class="regularMont noMargin grayColor font20px"
+          style="text-align: center">{{'lp2.research.history.description' | translate}}</h1>
+      <div style="height: 40px"></div>
+      <div *ngFor="let text of tabText; let i = index" style="width: 100%; padding-bottom: 20px">
+        <div style="width: 100%; height: 72%" fxLayoutAlign="start center">
+          <div style="padding-right: 30px" fxLayoutAlign="center center" fxLayout="column">
+            <h1 class="boldMont noMargin font60px" [ngStyle]="{'color': colorIndex(i)}">{{text.year}}</h1>
+            <h1 class="boldMont noMargin font26px paddingBottom" [ngStyle]="{'color': colorIndex(i), 'text-align': 'center'}">{{text.season | translate}}</h1>
+          </div>
+          <div fxFlex="70" fxLayout="column" fxLayoutAlign="center center">
+            <div fxFlex="50" style="width: 100%" [ngStyle]="{'border-color': colorIndex(i), 'border-width': '0 0 3px 0', 'border-style': 'solid'}"></div>
+            <div fxFlex="50" style="width: 100%" [ngStyle]="{'border-color': colorIndex(i), 'border-width': '3px 0 0 0', 'border-style': 'solid'}"></div>
+          </div>
+        </div>
+        <h1 class="boldMont noMargin blackColor font22px paddingBottom">{{text.title | translate}}</h1>
+        <div style="height: 20px;"></div>
+        <h1 class="regularMont noMargin grayColor font16px paddingBottom">{{text.descr1 | translate}}</h1>
+        <div style="height: 10px;"></div>
+        <h1 class="regularMont noMargin grayColor font16px paddingBottom">{{text.descr2 | translate}}</h1>
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</div>
+

@@ -1,0 +1,16 @@
+div.underline {
+  border-bottom: 5px solid #28A745;
+}
+
+div.noUnderline {
+  border-bottom: 5px solid transparent;
+}
+
+div.shadowHover:hover {
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+
+div.content {
+
+}

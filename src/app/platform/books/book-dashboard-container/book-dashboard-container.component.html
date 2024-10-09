@@ -1,0 +1,33 @@
+<div class="whiteBg defaultShadow" style="width: 100%; height: 500px; border-radius: 12px;">
+  <div style="height: 40px; border-top-left-radius: 12px;" fxLayoutAlign="start center" class="bgTitle">
+    <div fxFlex="20px"></div>
+    <p class="font16px grayColor noMargin boldMont centerAlign"
+       style="line-height: 40px; text-align: center;">
+      {{ 'dashboard.bookProgressTitle' | translate }}
+    </p>
+  </div>
+  <div style="height: calc(100% - 40px);" *ngIf="currentBookVersion">
+    <!-- Header -->
+    <app-book-container
+      [containerHeight]="'100%'"
+      [bookVersion]="currentBookVersion"
+      [showOnlyAttemptedIntegrations]="true"
+      [includeShadow]="false">
+    </app-book-container>
+  </div>
+  <div style="height: calc(100% - 40px);" *ngIf="currentBookVersion === null">
+    <div style="height: calc(100% - 130px);" fxLayoutAlign="center center">
+      <img src="./assets/icons/qr-code.svg" style="height: 120px; width: 120px; object-fit: contain;">
+    </div>
+    <div style="height: 50px" fxLayoutAlign="center center">
+      <p class="semiBoldMont font14px blackColor noMargin"
+         style="text-align: center;">{{ 'dashboard.noQRScannedTitle' | translate }}</p>
+    </div>
+    <div fxLayoutAlign="center center">
+      <div fxFlex="80" style="height: 80px;">
+        <p class="mediumMont font12px blackColor noMargin"
+           style="text-align: center;">{{ 'dashboard.noQRScannedMessage' | translate }}</p>
+      </div>
+    </div>
+  </div>
+</div>

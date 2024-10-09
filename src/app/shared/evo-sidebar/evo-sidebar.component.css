@@ -1,0 +1,47 @@
+img {
+  object-fit: contain;
+}
+
+.selectItemInactive {
+  border-left-width: 3px;
+  border-left-style: solid;
+  border-left-color: transparent;;
+  border-right-width: 3px;
+  border-right-style: solid;
+  border-right-color: transparent;
+  cursor: pointer;
+}
+
+.selectItemBlueActive {
+  border-right-color: #009CCC;
+  border-left-color: #009CCC;
+}
+
+.selectItemPurpleActive {
+  border-right-color: #9B59B6;
+  border-left-color: #9B59B6;
+}
+
+.selectItemYellowActive {
+  border-right-color: #FFCB05;
+  border-left-color: #FFCB05;
+}
+
+.selectItemGreenActive {
+  border-right-color: #28A745;
+  border-left-color: #28A745;
+}
+
+.selectItemOrangeActive {
+  border-right-color: #F26522;
+  border-left-color: #F26522;
+}
+
+.selectItemRedActive {
+  border-right-color: #D0021B;
+  border-left-color: #D0021B;
+}
+
+div:focus {
+  outline: none;
+}

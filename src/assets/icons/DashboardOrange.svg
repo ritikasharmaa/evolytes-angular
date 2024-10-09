@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="24px" viewBox="0 0 34 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>gauge-dashboard</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Landing-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Features---Monitor" transform="translate(-1071.000000, -3543.000000)" stroke="#F26523" stroke-width="1.5">
+            <g id="Engaging-Students-/-Individualized" transform="translate(0.000000, 2871.000000)">
+                <g id="Benefits" transform="translate(716.000000, 276.000000)">
+                    <g id="Positive-feelings" transform="translate(336.000000, 373.000000)">
+                        <g id="gauge-dashboard" transform="translate(20.000000, 24.000000)">
+                            <circle id="Oval" cx="16" cy="15.6666667" r="2"></circle>
+                            <path d="M17.4133333,14.252 L24.0146667,7.65333333" id="Shape"></path>
+                            <path d="M3.33333333,16.3333333 L6,16.3333333" id="Shape"></path>
+                            <path d="M28.6666667,16.3333333 L26,16.3333333" id="Shape"></path>
+                            <path d="M27.7013333,10.82 L25.2386667,11.84" id="Shape"></path>
+                            <path d="M20.8466667,3.964 L19.8266667,6.428" id="Shape"></path>
+                            <path d="M16,3 L16,5.66666667" id="Shape"></path>
+                            <path d="M11.1533333,3.964 L12.1733333,6.428" id="Shape"></path>
+                            <path d="M7.044,6.70933333 L8.92666667,8.596" id="Shape"></path>
+                            <path d="M4.29866667,10.82 L6.76,11.84" id="Shape"></path>
+                            <path d="M16,0.333333333 C7.53163384,0.333333333 0.666666667,7.1983005 0.666666667,15.6666667 L0.666666667,20.3333333 C0.666666667,21.069713 1.26362033,21.6666667 2,21.6666667 L30,21.6666667 C30.7363797,21.6666667 31.3333333,21.069713 31.3333333,20.3333333 L31.3333333,15.6666667 C31.3333333,7.1983005 24.4683662,0.333333333 16,0.333333333 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,12 @@
+<app-evo-dropdown [showTitle]="showTitle"
+                  [showIcon]="true"
+                  [leftIndent]="'1px'"
+                  [currentValue]="getAutoSelectValue()"
+                  [iconContainerWidth]="'60px'"
+                  [iconStyle]="{ width: '30px', height: '30px' }"
+                  title="{{ getTitle() | translate }}"
+                  placeholderText="{{ getPlaceholder() | translate }}"
+                  [list]="getDropdownList()"
+                  [isDisabled]="isDisabled"
+                  (valueChangedEvent)="onValueChanged($event)">
+</app-evo-dropdown>

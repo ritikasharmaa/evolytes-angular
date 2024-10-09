@@ -1,0 +1,110 @@
+<div
+  style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.3); z-index: 2000;"
+  fxLayoutAlign="center center"
+  *ngIf="showCreateGroup">
+  <div class="whiteBg" fxFlex="420px" style="border-radius: 8px;">
+    <div class="lightGrayBg2" style="height: 60px; border-radius: 4px 4px 0 0;" fxLayoutAlign="center center">
+      <p class="boldMont font18px blackColor noMargin">{{ 'createGroup.title' | translate }}</p>
+    </div>
+    <div fxLayoutAlign="center start">
+      <div fxFlex="80">
+        <div style="height: 10px;"></div>
+        <app-evo-input title="{{ 'createGroup.name' | translate }}"
+                       [value]="group.name"
+                       (inputChangedEvent)="group.name = $event">
+        </app-evo-input>
+        <div style="height: 10px;"></div>
+        <div style="height: 20px;"></div>
+      </div>
+    </div>
+    <div class="lightGrayBg2" style="height: 60px; border-radius: 0 0 4px 4px;" fxLayoutAlign="center center">
+      <div>
+        <button class="redButton semiBoldMont font12px whiteColor noMargin"
+                fxFlex="140px"
+                style="height: 40px;"
+                (click)="closeCreateGroupClicked()">
+          {{ 'reusable.cancel' | translate }}
+        </button>
+        <div fxFlex="40px"></div>
+        <button class="greenButton semiBoldMont font12px whiteColor noMargin"
+                fxFlex="140px"
+                style="height: 40px;"
+                (click)="createGroupClicked()">
+          {{ 'reusable.next' | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="width: 100%; height: 100%;">
+  <div fxFlex="30px" fxFlex.lt-md="3"></div>
+  <div fxFlex fxFlex.xs="94" fxFlex.sm="calc(94%-200px)">
+    <div style="height: 20px;"></div>
+    <!-- Title and buttons -->
+    <div fxLayoutAlign="start center">
+      <p class="boldMont font24px blackColor noMargin">{{ 'schoolAdministration.groups.title' | translate }}</p>
+      <div fxFlex></div>
+      <button class="greenButton semiBoldMont font12px whiteColor"
+              fxFlex="140px"
+              style="height: 40px; border-radius: 4px;"
+              (click)="showCreateGroup = true">
+        {{ 'schoolAdministration.groups.addGroup' | translate }}
+      </button>
+    </div>
+    <div style="height: 20px;"></div>
+    <div>
+      <app-evo-input title="{{ 'schoolAdministration.groups.search' | translate }}"
+                     placeholderText="{{ 'schoolAdministration.groups.searchPlaceholder' | translate }}"
+                     (inputChangedEvent)="searchFilteredGroups($event)">
+      </app-evo-input>
+    </div>
+    <div style="height: 20px;"></div>
+    <div ngStyle.lt-md="overflow-x:scroll; overflow-y:hidden; height: calc(100% - 170px);"
+         style="height: calc(100% - 192px);">
+      <div ngStyle.lt-md="width: 745px;" style="height:100%;">
+        <div>
+          <p fxFlex
+             class="semiBoldMont font12px grayColor noMargin">{{ 'schoolAdministration.groups.nameLegend' | translate }}</p>
+          <p fxFlex="300px"
+             class="semiBoldMont font12px grayColor noMargin">{{ 'schoolAdministration.groups.createdAtLegend' | translate }}</p>
+          <div fxFlex="10px"></div>
+        </div>
+        <div style="height: 10px;"></div>
+        <div class="bgGrayDarkColor" style="height: 1px"></div>
+        <div class="noScrollBar" style="height: 100%; overflow-y: scroll;" ngStyle.lt-md="height:95%;">
+          <div style="height: 10px;"></div>
+          <div *ngFor="let group of groups">
+            <div (click)="onGroupClicked(group)">
+              <div fxFlex="2px"></div>
+              <div fxFlex class="smallShadow bgWhiteHoverColor pointer" style="height: 64px; border-radius: 4px;"
+                   fxLayoutAlign="start center">
+                <div fxFlex="20px"></div>
+                <div fxFlex="48px" fxLayoutAlign="center center">
+                  <div class="smallShadow" style="border-radius: 30px; height: 48px; width: 48px;"
+                       fxLayoutAlign="center center">
+                    <p class="boldMont font18px blackColor noMargin">{{ group.getTwoInitials() }}</p>
+                  </div>
+                </div>
+                <div fxFlex="20px"></div>
+                <p fxFlex class="semiBoldMont font14px blackColor noMargin">{{ group.name }}</p>
+                <p fxFlex="300px"
+                   class="semiBoldMont font12px blackColor noMargin">{{ group.createdAt | date: 'dd / MM / yyyy' }}</p>
+                <div fxFlex="10px"></div>
+              </div>
+              <div fxFlex="2px"></div>
+            </div>
+            <div style="height: 10px;"></div>
+          </div>
+          <button class="blueButton semiBoldMont font14px whiteColor"
+                  style="height: 42px; width: 100%;"
+                  *ngIf="groups.length % filter.limit === 0 && groups.length > 0 && hasMoreGroups === true"
+                  (click)="fetchMoreGroups()">
+            {{ 'answers.moreData' | translate }}
+          </button>
+          <div style="height: 10px;" ngStyle.sm="height: 30px;" ngStyle.xs="height: 20px:"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div fxFlex="30px" fxFlex.lt-md="3"></div>
+</div>

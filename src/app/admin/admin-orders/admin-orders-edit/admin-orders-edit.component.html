@@ -1,0 +1,172 @@
+<div class="defaultScrollBar scrollBarBlueThumb"
+     style="height: 100%; width: 100%; overflow-y: scroll;">
+
+  <div style="height: 20px;"></div>
+
+  <div fxLayoutAlign="center center">
+    <div class="whiteBg defaultShadow"
+         style="border-radius: 6px;"
+         fxFlex.lt-md="94"
+         fxFlex.md="90"
+         fxFlex.gt-md="1000px">
+
+      <div fxFlex="20px"></div>
+      <div fxFlex>
+        <div style="height: 10px;"></div>
+        <div fxLayoutAlign="start center">
+          <div fxFlex>
+            <app-evo-input [value]="getOrderId()" [isDisabled]="true"></app-evo-input>
+          </div>
+          <div fxFlex="20px"></div>
+          <div fxFlex="140px">
+            <div style="height: 6px"></div>
+            <button class="greenButton whiteColor semiBoldMont font14px"
+                    style="height: 40px; width: 100%;"
+                    (click)="onSaveClicked()">Save</button>
+          </div>
+        </div>
+        <div style="height: 20px;"></div>
+        <div style="height: 90px">
+          <div fxFlex="100px" fxLayoutAlign="center center">
+            <img [src]="getBookVersionImgURL()" *ngIf="getBookVersionImgURL()" style="width: 60px; height: 80%; object-fit: contain;">
+          </div>
+          <div fxFlex fxLayoutAlign="start center">
+            <div>
+              <p class="semiBoldMont font14px blueColor noMargin">{{getBookVersionName()}}</p>
+              <div style="height: 10px"></div>
+              <div>
+                <div>
+                  <p class="semiBoldMont font10px greenColor noMargin">Edition</p>
+                  <p class="mediumMont font12px blackColor noMargin">{{getBookVersionEdition()}}</p>
+                </div>
+                <div fxFlex="20px"></div>
+                <div>
+                  <p class="semiBoldMont font10px greenColor noMargin">Language</p>
+                  <p class="mediumMont font12px blackColor noMargin">{{getBookCountry()}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="height: 20px"></div>
+        <div style="height: 90px;">
+          <div fxFlex>
+            <p class="semiBoldMont font12px grayColor noMargin">User</p>
+            <div style="height: 6px"></div>
+            <div class="defaultShadow bgWhiteHoverColor" style="height: 70px; border-radius: 6px; cursor: pointer;" fxLayoutAlign="start center">
+              <div fxFlex="20px"></div>
+              <div fxFlex>
+                <p class="semiBoldMont blackColor font14px noMargin">{{getUserName()}}</p>
+                <div>
+                  <p class="semiBoldMont font10px blueColor noMargin">Email</p>
+                  <p class="mediumMont blackColor font12px noMargin">{{getUserEmail()}}</p>
+                </div>
+              </div>
+              <div fxFlex="20px">
+                <p class="semiBoldMont greenColor font26px noMargin">></p>
+              </div>
+              <div fxFlex="20px"></div>
+            </div>
+          </div>
+          <div fxFlex="20px"></div>
+          <div fxFlex>
+            <p class="semiBoldMont font12px grayColor noMargin">Student</p>
+            <div style="height: 6px"></div>
+            <div class="defaultShadow bgWhiteHoverColor" style="height: 70px; border-radius: 6px; cursor: pointer;" fxLayoutAlign="start center">
+              <div fxFlex="20px"></div>
+              <div fxFlex>
+                <p class="semiBoldMont blackColor font14px noMargin">{{getStudentName()}}</p>
+                <div style="height: 2px;"></div>
+                <div>
+                  <p class="semiBoldMont font10px blueColor noMargin">Character</p>
+                  <p class="mediumMont font12px blackColor noMargin">{{getStudentCharacter()}}</p>
+                </div>
+              </div>
+              <div fxFlex="20px">
+                <p class="semiBoldMont greenColor font26px noMargin">></p>
+              </div>
+              <div fxFlex="20px"></div>
+            </div>
+          </div>
+        </div>
+        <div style="height: 20px;"></div>
+        <div fxLayoutAlign="start center">
+          <div fxFlex>
+            <app-evo-input [value]="getTrackingNumber()" [title]="'Tracking Number'" (inputChangedEvent)="this.order.trackingNumber = $event;"></app-evo-input>
+          </div>
+          <div fxFlex="20px"></div>
+          <div fxFlex style="height: 65px;">
+            <app-evo-dropdown [list]="dropdownList"
+                              [title]="'Status'"
+                              [currentValue]="getStatus()"
+                              (valueChangedEvent)="setStatus($event)">
+            </app-evo-dropdown>
+          </div>
+        </div>
+        <div style="height: 20px;"></div>
+        <div fxLayoutAlign="start center">
+          <div fxFlex>
+            <app-evo-input-date [title]="'Shipped At'" [currentValue]="getShippedDate()" (inputChangedEvent)="this.order.shippedAt = $event"></app-evo-input-date>
+          </div>
+          <div fxFlex="20px"></div>
+          <div fxFlex>
+            <app-evo-input [title]="'Ordered At'" [value]="getOrderDate()" [isDisabled]="true"></app-evo-input>
+          </div>
+        </div>
+        <div style="height: 20px"></div>
+        <div fxLayoutAlign="start center">
+          <div fxFlex>
+            <app-evo-input [title]="'Order Name'"
+                           [value]="getOrderName()"
+                           [isDisabled]="true">
+            </app-evo-input>
+          </div>
+          <div fxFlex="20px"></div>
+          <div fxFlex>
+            <app-evo-input [title]="'Order Address'"
+                           [value]="getOrderPhoneNumber()"
+                           [isDisabled]="true">
+            </app-evo-input>
+          </div>
+        </div>
+        <div style="height: 20px"></div>
+        <div fxLayoutAlign="start center">
+          <div fxFlex>
+            <app-evo-input [title]="'Order Address'"
+                           [value]="getOrderAddress()"
+                           [isDisabled]="true">
+            </app-evo-input>
+          </div>
+          <div fxFlex="20px"></div>
+          <div fxFlex>
+            <app-evo-input [title]="'Order Zip'"
+                           [value]="getOrderZip()"
+                           [isDisabled]="true">
+            </app-evo-input>
+          </div>
+        </div>
+        <div style="height: 20px;"></div>
+        <div fxLayoutAlign="start center">
+          <div fxFlex>
+            <app-evo-input [title]="'Order City'"
+                           [value]="getOrderCity()"
+                           [isDisabled]="true">
+            </app-evo-input>
+          </div>
+          <div fxFlex="20px"></div>
+          <div fxFlex>
+            <app-evo-input [title]="'Order Country'"
+                           [value]="getOrderCountry()"
+                           [isDisabled]="true">
+            </app-evo-input>
+          </div>
+        </div>
+        <div style="height: 10px;"></div>
+      </div>
+      <div fxFlex="20px"></div>
+    </div>
+  </div>
+
+  <div style="height: 20px"></div>
+
+</div>

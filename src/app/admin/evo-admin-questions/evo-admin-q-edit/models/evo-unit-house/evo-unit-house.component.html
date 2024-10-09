@@ -1,0 +1,44 @@
+<div *ngIf="showQuestion()">
+  <div style="height: 50px" ngStyle.xs="height: 20px;" fxLayoutAlign="center center">
+    <p class="semiBoldMont font18px blackColor noMargin" style="text-align: center"></p>
+  </div>
+  <div>
+    <div fxFlex="20px"></div>
+    <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+      <div fxFlex>
+        <app-evo-input [title]="'Num Units'"
+                       [inputType]="'number'"
+                       [value]="question.model.numUnits"
+                       (inputChangedEvent)="question.model.numUnits = $event">
+        </app-evo-input>
+        <div style="height: 20px"></div>
+        <app-evo-reusable-range [title]="'Unit Range'"
+                                [range]="question.model.unitRange">
+        </app-evo-reusable-range>
+        <div style="height: 20px"></div>
+        <app-evo-reusable-range [title]="'Hundreds Range'"
+                                [range]="question.model.hundredsRange"
+                                *ngIf="question.model.numUnits > 2">
+        </app-evo-reusable-range>
+        <div style="height: 20px"></div>
+        <app-evo-reusable-range [title]="'Ten Thousands Range'"
+                                [range]="question.model.tenThousandsRange"
+                                *ngIf="question.model.numUnits > 4">
+        </app-evo-reusable-range>
+      </div>
+      <div fxFlex="20px" fxFlex.xs="10px"></div>
+      <div fxFlex>
+        <div style="height: 85px;" ngStyle.xs="height: 10px;"></div>
+        <app-evo-reusable-range [title]="'Tens Range'"
+                                [range]="question.model.tensRange">
+        </app-evo-reusable-range>
+        <div style="height: 20px"></div>
+        <app-evo-reusable-range [title]="'Thousands Range'"
+                                [range]="question.model.thousandsRange"
+                                *ngIf="question.model.numUnits > 3">
+        </app-evo-reusable-range>
+      </div>
+    </div>
+    <div fxFlex="20px"></div>
+  </div>
+</div>

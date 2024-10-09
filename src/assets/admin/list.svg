@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="22px" viewBox="0 0 24 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>list-bullets</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Tablet_Overview-Copy-10" transform="translate(-422.000000, -125.000000)" stroke="#54676E">
+            <g id="Group" transform="translate(422.000000, 124.000000)">
+                <g id="list-bullets">
+                    <circle id="Oval" cx="2.5" cy="4.498" r="2"></circle>
+                    <path d="M8.5,4.498 L23.5,4.498" id="Shape"></path>
+                    <circle id="Oval" cx="2.5" cy="12.498" r="2"></circle>
+                    <path d="M8.5,12.498 L23.5,12.498" id="Shape"></path>
+                    <circle id="Oval" cx="2.5" cy="20.498" r="2"></circle>
+                    <path d="M8.5,20.498 L23.5,20.498" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

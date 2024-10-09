@@ -1,0 +1,28 @@
+<div style="position: absolute; top: 0; right: 0; left: 0; z-index: 15; overflow: hidden; width: 100%; height: 60px;">
+  <img src="../../../assets/decor/Addition-Blue-Icon.svg" style="object-fit: contain; width: 20px; height: 20px; top: 40px; left: 5px; position: absolute;">
+  <img src="../../../assets/decor/Triangle-Green-Icon.svg" style="object-fit: contain; width: 42px; height: 42px; top: -14px; left: 380px; position: absolute;">
+  <img src="../../../assets/decor/Circle-Yellow-Icon.svg" style="object-fit: contain; width: 34px; height: 34px; top: 20px; left: 620px; position: absolute;">
+  <img src="../../../assets/decor/Equal-Sign-Purple.svg" style="object-fit: contain; width: 16px; height: 16px; top: -4px; left: 900px; position: absolute;">
+  <img src="../../../assets/decor/Pentago-Blue-Icon.svg" style="object-fit: contain; width: 36px; height: 36px; top: -8px; left: 1240px; position: absolute;">
+</div>
+<div class="evoHomeNav">
+  <div style="height: 100%; position: relative; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); z-index: 20">
+    <div fxFlex="3"></div>
+    <div fxFlex.xs="80px" fxFlex="120px" (click)="navigateHome()" fxLayoutAlign="center start">
+      <img src="./assets/evolytes-vector.svg" style="height: 100%; width: 100%; cursor: pointer;">
+    </div>
+    <div fxFlex></div>
+    <!--
+    <div fxFlex="80px" fxHide.xs="true" class="login" style="cursor: pointer;" fxLayoutAlign="center center" *ngIf="onlyIcon === false">
+      <p class="boldMont font14px grayColor noMargin" routerLink="/login">Login</p>
+    </div>
+    <div fxFlex.xs="20px" fxFlex="40px" *ngIf="onlyIcon === false"></div>
+    -->
+    <div fxLayoutAlign="start center" *ngIf="onlyIcon === false">
+      <button class="greenButton defaultShadow" style="height: 40px;" fxFlex="120px" fxLayoutAlign="center center" (click)="getStartedClicked()">
+        <p class="semiBoldMont whiteColor font14px noMargin" [translate]="buttonTitle()"></p>
+      </button>
+  </div>
+    <div fxFlex="3"></div>
+  </div>
+</div>

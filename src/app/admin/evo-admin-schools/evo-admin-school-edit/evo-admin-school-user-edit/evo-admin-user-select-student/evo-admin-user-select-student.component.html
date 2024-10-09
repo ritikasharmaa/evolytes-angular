@@ -1,0 +1,51 @@
+<div class="modal" *ngIf="sv.isVisible" fxLayoutAlign="center center">
+  <div class="whiteBg defaultShadow"
+       fxFlex="80"
+       fxFlex.gt-md="1000px"
+       style="height: 80%; border-radius: 6px;">
+    <div style="height: 60px" fxLayoutAlign="start center">
+      <div fxFlex="20px"></div>
+      <p fxFlex
+         class="semiBoldMont font22px blackColor noMargin"
+         style="text-align: center;">
+        Relationships
+      </p>
+      <div fxFlex="20px"></div>
+    </div>
+    <div style="height: calc(100% - 120px);">
+      <div fxFlex="20px"></div>
+      <div fxFlex class="lightGrayBg" style="border-radius: 6px; height: 100%; overflow-y: scroll;">
+        <div *ngFor="let student of sv.students">
+          <div style="height: 10px;"></div>
+          <div style="height: 60px;">
+            <div fxFlex="20px"></div>
+            <div fxFlex class="bgWhiteHoverColor defaultShadow" style="height: 60px; border-radius: 6px;" fxLayoutAlign="start center">
+              <div fxFlex="20px"></div>
+              <div fxFlex fxLayoutAlign="start center">
+                <p class="semiBoldMont font18px blackColor noMargin">{{student.firstName}} {{student.middleName}} {{student.lastName}}</p>
+              </div>
+              <div fxFlex="20px"></div>
+              <button fxFlex="120px"
+                      [ngClass]="{ redButton: hasRelationship(student), greenButton: hasRelationship(student) === false }"
+                      class="semiBoldMont whiteColor font14px"
+                      style="height: 40px;"
+                      (click)="onStudentButtonClicked(student)">
+                {{getButtonTitle(student)}}
+              </button>
+              <div fxFlex="20px"></div>
+            </div>
+            <div fxFlex="20px"></div>
+          </div>
+        </div>
+        <div style="height: 10px;"></div>
+      </div>
+      <div fxFlex="20px"></div>
+    </div>
+    <div style="height: 60px" fxLayoutAlign="center center">
+      <button fxFlex="120px"
+              class="greenButton semiBoldMont font14px whiteColor"
+              style="height: 40px;"
+              (click)="sv.done()">Done</button>
+    </div>
+  </div>
+</div>

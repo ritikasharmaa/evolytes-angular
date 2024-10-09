@@ -1,0 +1,525 @@
+<div class="content">
+  <!-- introduction part -->
+  <div class="whiteBg" fxLayoutAlign="center start" style="padding-bottom: 50px;">
+    <div fxFlex="100">
+      <!-- Mobile version -->
+      <div fxHide.gt-sm="true">
+
+        <div style="width: 90%; max-width: 600px; height: calc(90vw * 0.738); max-height: 443px; padding-bottom: 20px; margin: 0 auto;">
+          <div style="padding:0 0 0 0;
+              position:relative; height: 100%; width: 100%;
+              border-radius: 10px;
+              overflow: hidden;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.7)">
+            <iframe
+              [src]="trailer"
+              id="needTimerVideoIntro1"
+              allow="autoplay; fullscreen; picture-in-picture"
+              frameborder="0"
+              style="position:absolute; top:0; left:0; width:101%; height:101%;"
+              title="Evolytes Trailer">
+            </iframe>
+          </div>
+        </div>
+        <div style="height: 20px;"></div>
+        <h1 class="regularMont noMargin grayColor font18px"
+            ngStyle.xs="width: 90%; text-align: center; margin: 0 auto;"
+            ngStyle.sm="width: 72%; margin: 0 auto; text-align: center;">
+          {{'lp2.features.game.subtitle' | translate}}
+        </h1>
+        <div style="height: 40px"></div>
+        <!-- Banner image for mobile -->
+        <img src="../../../../../assets/newWebsite/AllMonsters.png">
+
+      </div>
+      <div fxHide.lt-md="true">
+        <h1 class="regularMont noMargin grayColor font20px"
+            ngStyle.gt-sm="width: 760px; margin: 0 auto; text-align: center;">
+          {{'lp2.features.game.subtitle' | translate}}
+        </h1>
+        <div style="height: 40px"></div>
+        <div style="background-image: url('../../../../../assets/newWebsite/HomeUniverseSectionMonstersNoCut.png'); background-size: cover; background-repeat: no-repeat; background-position: bottom; height: calc(100vw * 0.32)"
+             fxLayout="column"
+             fxLayoutAlign="end center">
+          <div style="height: 20px"></div>
+          <div style="padding:0 0 0 0; position:relative; height: 90%; width: calc(100vw *  0.32 * 0.9 * 1.335); border-radius: 10px; overflow: hidden; box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);">
+            <iframe
+              [src]="trailer"
+              id="needTimerVideoIntro2"
+              allow="autoplay; fullscreen; picture-in-picture"
+              frameborder="0"
+              style="position:absolute; top:0; left:0; width:101%; height:101%;"
+              title="Evolytes Trailer">
+            </iframe>
+          </div>
+        </div>
+      </div>
+
+      <div style="height: 35px"></div>
+
+      <div style="width: 100%;"
+           fxLayout.xs="column"
+           fxLayout.gt-xs="row"
+           fxLayoutAlign="center center">
+        <div fxFlex.xs="60px" fxFlex="180px" fxLayoutAlign="center start" style="cursor: pointer;">
+          <a (click)="CultureModel.openAppStore()">
+            <img [src]="CultureModel.getLocalizedAppStoreBadge(CultureModel.getHomepageCulture())" style="height: 66px; width: 176px; object-fit: contain; cursor: pointer;"/>
+          </a>
+        </div>
+        <div fxFlex.xs="10px" fxFlex="3"></div>
+        <div fxFlex.xs="90px" fxFlex="180px" style="position: relative; cursor: pointer;">
+          <a (click)="CultureModel.openPlayStore()">
+            <img [src]="CultureModel.getLocalizedPlayStoreBadge(CultureModel.getHomepageCulture())" style="height: 70px; width: 190px; object-fit: contain;">
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Math part -->
+  <div class="lightGrayBg"
+       fxLayout="column"
+       fxLayoutAlign="center center"
+       style="padding: 50px 0 50px 0; width: 100%">
+
+    <div ngStyle.xs="width: 90%;"
+         ngStyle.sm="width: 72%; margin: 0 auto;"
+         ngStyle.gt-sm="width: 760px; margin: 0 auto;">
+      <h1 class="boldMont noMargin blackColor font30px"
+          style="text-align: center;">
+        {{ 'lp2.features.game.math.title' | translate }}
+      </h1>
+      <div style="height: 20px;"></div>
+      <h1 class="regularMont noMargin grayColor font18px"
+          style="text-align: center;">
+        {{'lp2.features.game.math.subtitle' | translate}}
+      </h1>
+    </div>
+
+    <div fxLayoutAlign="center center"
+         style="padding: 30px 0 30px 0; width: 100%"
+         fxLayout.gt-sm="row"
+         fxLayout.lt-md="column">
+      <div fxFlex.gt-sm="37"
+           class="mathGif"
+           style="margin-bottom: 30px">
+        <div
+          style="padding:0 0 0 0; position:relative; height: 100%; width: 100%;">
+          <iframe
+            [src]="makingMathFunGif"
+            id="needTimerGif1"
+            allow="autoplay; fullscreen; picture-in-picture"
+            style="position:absolute; top:0; left:0; width:100%; height:100%; border: black 0 solid"
+            title="gif game 1">
+          </iframe>
+        </div>
+      </div>
+
+      <div fxFlex="5" fxHide.lt-md="true"></div>
+
+      <div fxFlex.gt-sm="37">
+        <div *ngFor="let pres of gif1IntegrationTab; let i = index"
+             ngStyle.xs="padding: 0"
+             ngStyle.sm="padding: 20px 35px 0 35px"
+             ngStyle.gt-sm="padding: 0"
+             [fxHide.lt-md]="i !== gif1Step"
+             style="width:100%; max-width: 550px">
+          <h1 class="boldMont noMargin font16px"
+              [ngClass]="i === gif1Step ? 'blackColor' : 'disabledColor'"
+              ngStyle.xs="margin: 0 4% 5px 4%"
+              ngStyle.gt-xs="margin-bottom: 5px">
+            {{ pres.title | translate }}
+          </h1>
+          <h1 class="regularMont noMargin font16px"
+              [ngClass]="i === gif1Step ? 'blackColor' : 'disabledColor'"
+              ngStyle.xs="margin: 0 4% 0 4%"
+              ngStyle.gt-xs="margin-bottom: 20px">
+            {{ pres.description | translate}}
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="semiBoldMont noMargin grayColor font18px"
+        style="text-align: center; padding-bottom: 15px">
+      {{'lp2.landing.startingPriceOne' | translate}}
+      {{ getStartPrice() }}
+      {{'lp2.landing.startingPriceTwo' | translate}}
+    </h1>
+    <button class="greenButton semiBoldMont font18px whiteColor pointer"
+            (click)="goToSignup()"
+            style="height: 50px; width: 260px">
+      {{'lp2.landing.memberButton' | translate }}
+    </button>
+
+  </div>
+
+  <!-- Character part -->
+  <div style="padding-bottom: 50px; padding-top: 50px">
+
+    <!-- Title and subtitle resposive size styling -->
+    <div ngStyle.xs="width: 90%; margin: 0 auto;"
+         ngStyle.sm="width: 72%; margin: 0 auto;"
+         ngStyle.gt-sm="width: 760px; margin: 0 auto;">
+      <h1 class="boldMont noMargin blackColor font30px"
+          style="text-align: center">
+        {{'lp2.features.game.character.title' | translate}}
+      </h1>
+      <div style="height: 20px"></div>
+      <h1 class="regularMont noMargin grayColor font18px"
+          style="text-align: center;">
+        {{'lp2.features.game.character.subtitle' | translate}}
+      </h1>
+    </div>
+
+    <div style="height: 40px;"></div>
+
+    <div fxLayout="row" fxLayoutAlign="space-evenly center">
+      <div fxFlex="30" fxLayout="column" fxLayoutAlign="center center" style="position: relative;">
+        <img src="../../../../../assets/land-images/LucasAndLighter.png" alt="">
+        <div style="height: 20px"></div>
+        <p class="semiBoldMont font16px blackColor noMargin"
+        > {{ 'lp2.features.game.character.Lucas' | translate }}</p>
+      </div>
+
+      <div fxFlex="25" fxLayout="column" fxLayoutAlign="center center" style="position: relative;">
+        <img src="../../../../../assets/land-images/Eva%20&%20Swirly.png" alt="">
+        <div style="height: 20px"></div>
+        <p class="semiBoldMont font16px blackColor noMargin"
+        > {{ 'lp2.features.game.character.Eva' | translate }}</p>
+      </div>
+    </div>
+
+    <div style="height: 40px"></div>
+
+    <div fxLayout="row" fxLayoutAlign="space-evenly center">
+      <div fxFlex="30" fxLayout="column" fxLayoutAlign="center center" style="position: relative;">
+        <img src="../../../../../assets/land-images/Oliver%20&%20Badger.png" alt="">
+        <div style="height: 20px"></div>
+        <p class="semiBoldMont font16px blackColor noMargin">
+          {{ 'lp2.features.game.character.Oliver' | translate }}
+        </p>
+      </div>
+
+      <div fxFlex="25" fxLayout="column" fxLayoutAlign="center center" style="position: relative;">
+        <img src="../../../../../assets/land-images/Sarah%20&%20Ava.png" alt="">
+        <div style="height: 20px"></div>
+        <p class="semiBoldMont font16px blackColor noMargin">
+          {{ 'lp2.features.game.character.Sarah' | translate }}
+        </p>
+      </div>
+    </div>
+    <div style="height: 20px"></div>
+  </div>
+
+  <!-- Story part -->
+  <div class="lightGrayBg"
+       style="padding-bottom: 50px; padding-top: 50px"
+       fxLayoutAlign="center center">
+
+    <div fxFlex fxFlex.gt-sm="900px">
+      <div ngStyle.xs="width: 90%; margin: 0 auto;"
+           ngStyle.sm="width: 72%; margin: 0 auto;"
+           ngStyle.gt-sm="width: 760px; margin: 0 auto;">
+        <h1 class="boldMont noMargin blackColor font30px"
+            style="text-align: center">
+          {{'lp2.features.game.story.title' | translate}}
+        </h1>
+        <div style="height: 20px"></div>
+        <h1 class="regularMont noMargin grayColor font18px"
+            style="text-align: center;">
+          {{'lp2.features.game.story.subtitle' | translate}}
+        </h1>
+      </div>
+
+      <div style="height: 20px"></div>
+
+      <!-- height is width * 0.565 -->
+      <div ngStyle.xs="width: 90vw; height: 51vw; margin: 0 auto;"
+           ngStyle.sm="width: 80vw; height: 45vw; margin: 0 auto;"
+           ngStyle.gt-sm="width: 60vw; height: 34vw; max-width: 900px; max-height: calc(900px * 0.565); margin: 0 auto;">
+        <div style="padding:0 0 0 0; position:relative; height: 100%; width: 100%">
+          <iframe
+            [src]="storyTrailer"
+            id="needTimerVideoStory"
+            allow="autoplay; fullscreen; picture-in-picture"
+            style="position:absolute; top:0; left:0; width:100%; height:100%;"
+            frameborder="0"
+            title="Evolytes Story">
+          </iframe>
+        </div>
+      </div>
+      <div style="height: 20px"></div>
+    </div>
+  </div>
+
+  <!--- Collect part -->
+  <div style="height: 40px"></div>
+  <div fxLayoutAlign="center center" fxHide.gt-sm="true">
+
+    <h1 class="boldMont noMargin blackColor font30px"
+        style="text-align: center">
+      {{'lp2.features.game.evolve.title' | translate}}
+    </h1>
+
+  </div>
+
+  <div fxLayoutAlign="center center"
+       style="padding: 40px 0 50px 0; width: 100%"
+       fxLayout.gt-sm="row"
+       fxLayout.lt-md="column">
+    <div fxFlex.gt-sm="37"
+         class="gifCollect"
+         ngStyle.lt-md="margin-bottom: 40px">
+      <div
+        style="padding:0 0 0 0; position:relative; height: 100%; width: 100%">
+        <iframe
+          src="https://player.vimeo.com/video/585365113?badge=0&amp;muted=1&loop=1&autopause=0&autoplay=0amp;player_id=0&amp;app_id=58479"
+          frameborder="0"
+          id="needTimerGif2"
+          allow="autoplay; fullscreen; picture-in-picture"
+          style="position:absolute; top:0; left:0; width:100%; height:100%; border: black 0 solid"
+          title="Evolution Showcase GIF 2">
+        </iframe>
+      </div>
+    </div>
+
+    <div fxFlex="5" fxHide.lt-md="true"></div>
+
+    <div fxFlex.gt-sm="37"
+         style="height: 100%"
+         fxLayout="column"
+         fxLayoutAlign="space-between center">
+
+      <div fxHide.lt-md="true">
+
+        <h1 class="boldMont noMargin blackColor font30px"
+            style="text-align: center; margin: 0 auto;">
+          {{'lp2.features.game.evolve.title' | translate}}
+        </h1>
+
+        <div style="height: 40px;"></div>
+
+      </div>
+
+      <div>
+        <div *ngFor="let pres of gif2IntegrationTab; let i = index"
+             ngStyle.xs="padding: 0"
+             ngStyle.sm="padding: 20px 35px 0 35px"
+             ngStyle.gt-sm="padding: 0"
+             [fxHide.lt-md]="i !== gif2Step"
+             style="width:100%; max-width: 550px">
+          <h1 class="boldMont noMargin font16px"
+              [ngClass]="i === gif2Step ? 'blackColor' : 'disabledColor'"
+              ngStyle.xs="margin: 0 4% 5px 4%"
+              ngStyle.gt-xs="margin-bottom: 5px">
+            {{ pres.title | translate }}
+          </h1>
+          <h1 class="regularMont noMargin font16px"
+              [ngClass]="i === gif2Step ? 'blackColor' : 'disabledColor'"
+              ngStyle.xs="margin: 0 4% 0 4%"
+              ngStyle.gt-xs="margin-bottom: 20px">
+            {{ pres.description | translate}}
+          </h1>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Figures part-->
+  <div class="lightGrayBg">
+
+    <div style="height: 60px;"></div>
+
+    <div ngStyle.xs="width: 90%; margin: 0 auto;"
+         ngStyle.sm="width: 72%; margin: 0 auto;"
+         ngStyle.gt-sm="width: 760px; margin: 0 auto;">
+      <h1 class="boldMont noMargin blackColor font30px"
+          style="text-align: center">
+        {{'lp2.features.game.engaged.title' | translate}}
+      </h1>
+      <div style="height: 20px"></div>
+      <h1 class="regularMont noMargin grayColor font18px"
+          style="text-align: center;">
+        {{'lp2.features.game.engaged.subtitle' | translate}}
+      </h1>
+    </div>
+
+    <div style="height: 60px"></div>
+
+    <div fxLayoutAlign="center center">
+      <div fxFlex.lt-lg="95" fxFlex.gt-md="80"
+           fxLayout.gt-sm="row"
+           fxLayout.lt-md="column"
+           fxLayoutAlign.gt-sm="space-around center">
+
+        <!-- answers 12x -->
+        <div>
+          <h1 class="boldMont noMargin purpleColor font60px"
+              style="text-align: center;">
+            12x
+          </h1>
+
+          <div style="height: 6px"></div>
+          <h1 class="boldMont noMargin purpleColor font20px"
+              style="text-align: center;">
+            {{ 'lp2.common.answers.label' | translate }}
+          </h1>
+          <div style="height: 6px"></div>
+          <div fxLayoutAlign="center center" style="width: 100%">
+            <div fxFlex="200px">
+              <p class="mediumMont font18px disabledColor noMargin"
+                 style="text-align: center">{{ 'lp2.common.research.answers12' | translate }}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Padding in column view -->
+        <div fxHide.gt-md="true" style="height: 40px"></div>
+        <!-- answers 1.200 -->
+        <div>
+
+          <h1 class="boldMont noMargin greenColor font60px"
+              style="text-align: center;">{{ 'lp2.common.answers.amount' | translate }}</h1>
+
+          <div style="height: 6px"></div>
+          <h1 class="boldMont noMargin greenColor font20px"
+              style="text-align: center;">   {{ 'lp2.common.answers.label' | translate }}</h1>
+          <div style="height: 6px"></div>
+          <div fxLayoutAlign="center center" style="width: 100%">
+            <div fxFlex="200px">
+              <p class="mediumMont font18px disabledColor noMargin"
+                 style="text-align: center">{{ 'lp2.common.research.answers1200' | translate }}</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Padding in column view -->
+        <div fxHide.gt-md="true" style="height: 40px"></div>
+        <!-- answers 12x -->
+        <div>
+
+          <h1 class="boldMont noMargin blueColor font60px"
+              style="text-align: center;">
+            4x
+          </h1>
+
+          <div style="height: 6px"></div>
+          <h1 class="boldMont noMargin blueColor font20px"
+              style="text-align: center;">   {{ 'lp2.common.answers.label' | translate }}</h1>
+          <div style="height: 6px"></div>
+          <div fxLayoutAlign="center center" style="width: 100%">
+            <div fxFlex="200px">
+              <p class="mediumMont font18px disabledColor noMargin"
+                 style="text-align: center">{{ 'lp2.common.research.answers4' | translate }}</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div style="height: 40px"></div>
+    <div fxLayoutAlign="center start">
+      <button class="greenButton pointer" style="height: 40px; width: 200px;" (click)="goToResearch()">
+        <p class="semiBoldMont whiteColor font14px noMargin">{{ 'lp2.schools.research.learnMore' | translate }}</p>
+      </button>
+    </div>
+    <div style="height: 40px"></div>
+  </div>
+
+  <div style="height: 40px"></div>
+
+  <!--- Platform part--->
+  <div>
+    <div ngStyle.xs="width: 90%; margin: 0 auto;"
+         ngStyle.sm="width: 72%; margin: 0 auto;"
+         ngStyle.gt-sm="width: 760px; margin: 0 auto;">
+      <h1 class="boldMont noMargin blackColor font30px"
+          style="text-align: center">
+        {{'lp2.features.game.platform.title' | translate}}
+      </h1>
+      <div style="height: 20px"></div>
+      <h1 class="regularMont noMargin grayColor font18px"
+          style="text-align: center;">
+        {{'lp2.features.game.platform.subtitle' | translate}}
+      </h1>
+    </div>
+    <div style="height: 50px;"></div>
+    <div ngStyle.lt-lg="width: 90%; max-width: 900px;"
+         ngStyle.gt-md="width: 900px;"
+         style="margin: 0 auto;">
+      <div fxLayout.gt-sm="row"
+           fxLayout.lt-md="column"
+           fxLayoutAlign="space-evenly center">
+
+        <div fxFlex.gt-sm="30"
+             fxLayout="column"
+             fxLayoutAlign="center center"
+             ngStyle.xs="width: 80%"
+             ngStyle.sm="width: 300px"
+             style="position: relative;">
+          <img src="../../../../../assets/land-images/Books.png" style="object-fit: contain; height: 250px; width: 250px;">
+
+          <p class="boldMont font16px blackColor noMargin">
+            {{ 'lp2.features.books.titleMenu' | translate }}
+          </p>
+
+          <div style="height: 20px"></div>
+
+          <div fxLayoutAlign="center center">
+            <h1 class="regularMont noMargin grayColor font16px"
+                style="text-align: center; max-width: 600px">
+              {{'lp2.features.game.platform.booksSubtitle' | translate}}
+            </h1>
+          </div>
+
+          <div style="height: 40px"></div>
+
+          <div fxLayoutAlign="center start">
+            <button class="greenButton" style="height: 40px; width: 200px;" (click)="goToBooks()">
+              <p class="semiBoldMont whiteColor font14px noMargin">{{ 'lp2.schools.research.learnMore' | translate }}</p>
+            </button>
+          </div>
+
+        </div>
+        <div fxHide.lt-md="true" style="width: 5px"></div>
+        <div fxFlex.gt-sm="30"
+             fxLayout="column"
+             fxLayoutAlign="center center"
+             ngStyle.xs="width: 80%"
+             ngStyle.sm="width: 300px"
+             style="position: relative;">
+          <img src="../../../../../assets/land-images/MonitorAllDevices.png" style="object-fit: contain; height: 250px; width: 250px;">
+
+          <p class="boldMont font16px blackColor noMargin">
+            {{ 'lp2.landing.evolytesPart.monitorTitle' | translate }}
+          </p>
+
+          <div style="height: 20px"></div>
+
+          <div fxLayoutAlign="center center">
+            <h1 class="regularMont noMargin grayColor font16px"
+                style="text-align: center; max-width: 600px">
+              {{'lp2.features.game.platform.monitorSubtitle' | translate}}
+            </h1>
+          </div>
+
+          <div style="height: 40px"></div>
+          <div fxLayoutAlign="center start">
+            <button class="greenButton" style="height: 40px; width: 200px;" (click)="goToMonitor()">
+              <p class="semiBoldMont whiteColor font14px noMargin">
+                {{ 'lp2.schools.research.learnMore' | translate }}
+              </p>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div style="height: 60px"></div>
+  </div>
+
+</div>

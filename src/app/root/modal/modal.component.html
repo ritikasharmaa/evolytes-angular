@@ -1,0 +1,32 @@
+<!-- Modal -->
+<div class="modal" fxLayoutAlign="space-around center" *ngIf="modalSv.isVisisble">
+  <div fxFlex="400px" fxFlex.xs="90" class="whiteBg defaultShadow" style="height: 240px; border-radius: 4px;">
+    <div fxLayout="row">
+      <div fxFlex style="height: 60px; border-radius: 4px 4px 0 0;" [class]="modalSv.classColor" fxLayoutAlign="space-around center">
+        <h1 class="boldMont font20px noMargin" style="color: white">{{modalSv.title}}</h1>
+      </div>
+    </div>
+    <div style="height: 10px"></div>
+    <div fxLayout="row" fxLayoutAlign="center center" style="height: 100px">
+      <div fxFlex="360px" fxFlex.xs="90" style="max-height: 120px">
+        <p class="regularMont font16px grayColor noMargin" style="text-align: center;">{{modalSv.message}}</p>
+      </div>
+    </div>
+    <div style="height: 10px"></div>
+    <div fxLayout="row" fxLayoutAlign="space-around center">
+      <button fxFlex="120px" class="defaultShadow boldMont font16px whiteColor"
+              style="height: 40px;"
+              [ngClass]="modalSv.buttonColor"
+              (click)="modalSv.acceptClicked()">
+        {{modalSv.firstButtonTitle}}
+      </button>
+      <button fxFlex="120px"
+              class="redButton defaultShadow boldMont font16px whiteColor"
+              style="height: 40px;"
+              (click)="modalSv.cancelClicked()"
+              *ngIf="modalSv.type === 'choice'">
+        {{modalSv.secondButtonTitle}}
+      </button>
+    </div>
+  </div>
+</div>

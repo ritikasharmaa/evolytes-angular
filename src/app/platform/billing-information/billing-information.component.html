@@ -1,0 +1,341 @@
+<app-modal></app-modal>
+<app-evo-header></app-evo-header>
+<app-evo-decoration-background-signup></app-evo-decoration-background-signup>
+<!-- Free trial -->
+<div style="height: calc(100% - 60px); z-index: 10; overflow-y: scroll;"
+     class="defaultScrollBar scrollBarBlueThumb"
+     fxLayoutAlign="center start" *ngIf="subscriptionType === 'trial'">
+
+  <form #f="ngForm"
+        fxFlex.gt-sm="960px"
+        fxFlex.sm="500px"
+        fxFlex.xs="90"
+        style="width: 100%;">
+
+    <div style="height: 20px;"></div>
+
+    <div style="height: 30px" fxLayoutAlign="center center">
+      <p class="boldMont font24px blackColor noMargin" style="text-align: center;">{{ 'lp2.pricing.Subscriptions.freeTrial.startTrialTitle' | translate }}</p>
+    </div>
+
+    <div style="height: 10px;"></div>
+
+    <div fxLayoutAlign="center center">
+      <p fxFlex="100" fxFlex.gt-sm="700px" class="regularMont font16px grayColor noMargin" style="text-align: center;">
+        {{ 'lp2.pricing.Subscriptions.freeTrial.startTrialMessage' | translate }}
+      </p>
+    </div>
+
+    <div style="height: 20px;"></div>
+
+    <div>
+
+      <div fxLayoutAlign="center start">
+        <div fxFlex.lt-md="100" fxFlex.gt-sm="60">
+          <div style="height: 20px;"></div>
+          <div class="defaultShadow whiteBg" style="width: 100%; border-radius: 6px;">
+
+            <div style="height: 20px"></div>
+            <!-- Subscription Information -->
+            <div>
+              <div fxFlex="10px"></div>
+              <div>
+                <div fxFlex="40" fxLayoutAlign="center center">
+                  <img src="../../../assets/land-images/AllProductsiMac.png" style="width: 80%; height: 80%; object-fit: contain;">
+                </div>
+                <div fxFlex>
+                  <p class="semiBoldMont font12px grayColor noMargin">{{ 'lp2.pricing.Subscriptions.freeTrial.title' | translate }}</p>
+                  <div style="height: 5px"></div>
+                  <p class="semiBoldMont font14px greenColor noMargin">{{ getTrialDuration() }} {{ 'lp2.pricing.Subscriptions.freeTrial.message' | translate }}</p>
+                  <div style="height: 15px"></div>
+                  <p class="semiBoldMont font12px grayColor noMargin">{{ 'lp2.pricing.Subscriptions.includes' | translate }}</p>
+                  <div style="height: 5px"></div>
+                  <p class="mediumMont font12px grayColor noMargin">{{ 'lp2.pricing.Subscriptions.shortDescription' | translate }}</p>
+                </div>
+              </div>
+              <div fxFlex="10px"></div>
+            </div>
+
+            <div style="height: 20px;"></div>
+
+            <div>
+              <div fxFlex="10px"></div>
+              <div fxFlex>
+                <div fxFlex="40"></div>
+                <div fxFlex>
+                  <p class="semiBoldMont font12px grayColor noMargin">{{ 'confirmSubscription.breakdownTitle' | translate }}</p>
+                  <div style="height: 5px;"></div>
+                  <p class="mediumMont font12px grayColor noMargin">{{ 'confirmSubscription.breakdownSubscriptionTitle' | translate }} {{ getTrialCost() }}</p>
+                  <div style="height: 5px;"></div>
+                  <p class="semiBoldMont font14px blackColor noMargin">{{ 'confirmSubscription.total' | translate }} {{ getTrialCost() }}</p>
+                </div>
+              </div>
+              <div fxFlex="10px"></div>
+            </div>
+
+            <div style="height: 20px"></div>
+
+            <!-- Company Information -->
+            <div fxLayoutAlign="center start">
+              <div fxFlex="80">
+                <p class="semiBoldMont font12px grayColor noMargin">{{ 'confirmSubscription.companyInformationTitle' | translate }}</p>
+                <div style="height: 4px;"></div>
+                <p class="mediumMont font12px grayColor noMargin">{{ 'confirmSubscription.companyInformationString' | translate }}</p>
+              </div>
+            </div>
+
+            <div style="height: 20px"></div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div style="height: 40px"></div>
+
+      <div fxLayoutAlign="center center">
+        <div fxFlex="20px" style="height: 20px;">
+          <app-evo-checkmark [ngModel]="acceptTCs"
+                             [checkmarkHeight]="'16px'"
+                             [checkmarkWidth]="'16px'"
+                             [ngModelOptions]="{ standalone: true }"
+                             (valueChanged)="acceptTCs = $event">
+          </app-evo-checkmark>
+        </div>
+        <div fxFlex="10px"></div>
+        <p class="semiBoldMont grayColor font12px noMargin">{{ 'confirmSubscription.tcAgreeMessage' | translate}}</p>
+        <div fxFlex="4px"></div>
+        <p class="semiBoldMont blueHoverColor font12px noMargin" (click)="onTCsClicked()">{{ 'confirmSubscription.tcLinkMessage' | translate }}</p>
+      </div>
+
+    </div>
+
+    <div style="height: 20px"></div>
+
+    <div fxLayoutAlign="center start">
+      <button class="greenButton whiteColor semiBoldMont font14px noMargin"
+              style="height: 40px; width: 140px;"
+              fxLayoutAlign="center center"
+              (click)="onStartTrialClicked()"
+              [disabled]="!acceptTCs">
+        {{ 'confirmSubscription.confirmButtonTitle' | translate }}
+      </button>
+    </div>
+
+    <div style="height: 20px"></div>
+
+    <div fxLayoutAlign="center start">
+      <app-evo-progress-points [currentIndex]="2"
+                               [numPoints]="4"
+                               [defaultColor]="'#979797'"
+                               [selectedColor]="'#009CCC'">
+      </app-evo-progress-points>
+    </div>
+
+    <div style="height: 40px"></div>
+
+  </form>
+  <!-- Solution https://stackoverflow.com/questions/53472103/angular-6-redirect-to-external-url-using-post -->
+
+
+</div>
+
+<!-- Subscriptions -->
+<div style="height: calc(100% - 60px); z-index: 10; overflow-y: scroll;"
+     class="defaultScrollBar scrollBarBlueThumb"
+     fxLayoutAlign="center start"
+     *ngIf="subscriptionType !== 'trial'">
+
+  <form #f="ngForm"
+        fxFlex.gt-sm="960px"
+        fxFlex.sm="500px"
+        fxFlex.xs="90"
+        style="width: 100%;">
+
+    <div style="height: 20px;"></div>
+
+    <div style="height: 30px" fxLayoutAlign="center center">
+      <p class="boldMont font24px blackColor noMargin" style="text-align: center;">{{ 'confirmSubscription.title' | translate }}</p>
+    </div>
+
+    <div style="height: 10px;"></div>
+
+    <div fxLayoutAlign="center center">
+      <p fxFlex="100" fxFlex.gt-sm="700px" class="regularMont font16px grayColor noMargin" style="text-align: center;">
+        {{ 'confirmSubscription.subtitle' | translate }}
+      </p>
+    </div>
+
+    <div style="height: 20px;"></div>
+
+    <div>
+
+      <div fxLayoutAlign="center start">
+        <div fxFlex.lt-md="100" fxFlex.gt-sm="60">
+          <div style="height: 20px;"></div>
+          <div class="defaultShadow whiteBg" style="width: 100%; border-radius: 6px;">
+
+            <div style="height: 20px"></div>
+            <!-- Subscription Information -->
+            <div>
+              <div fxFlex="10px"></div>
+              <div>
+                <div fxFlex="40" fxLayoutAlign="center center">
+                  <img src="../../../assets/land-images/AllProductsiMac.png" style="width: 80%; height: 80%; object-fit: contain;">
+                </div>
+                <div fxFlex>
+                  <p class="semiBoldMont font12px grayColor noMargin">{{ 'confirmSubscription.subscriptionTitle' | translate }} {{ getSubscriptionTitle() | translate }}</p>
+                  <div style="height: 5px"></div>
+                  <p class="semiBoldMont font14px greenColor noMargin">{{ subPricing.monthlyPriceWithCurrencySymbol() + ' / ' }} {{ 'lp2.pricing.Subscriptions.month' | translate }}</p>
+                  <div style="height: 5px"></div>
+                  <p class="semiBoldMont font12px grayColor noMargin">{{ 'lp2.pricing.Subscriptions.includes' | translate }}</p>
+                  <div style="height: 5px"></div>
+                  <p class="mediumMont font12px grayColor noMargin">{{ 'lp2.pricing.Subscriptions.shortDescription' | translate }}</p>
+                </div>
+              </div>
+              <div fxFlex="10px"></div>
+            </div>
+
+            <div style="height: 20px;"></div>
+
+            <!--Book Information -->
+            <div *ngIf="subPricing.includesBook">
+              <div fxFlex="10px"></div>
+              <div fxFlex>
+                <div fxFlex="40" style="height: 180px" fxLayoutAlign="center center">
+                  <img [src]="bookVersionImgURL()" style="height: 120px; width: 80%; object-fit: contain;"  *ngIf="bookVersionImgURL()">
+                </div>
+                <div fxFlex>
+                  <div style="height: 20px; overflow: hidden;">
+                    <p class="semiBoldMont font12px grayColor noMargin">{{ 'confirmSubscription.bookIncluded' | translate }}</p>
+                  </div>
+                  <div style="height: 10px"></div>
+                  <div style="max-height: 40px; overflow: hidden;">
+                    <p class="semiBoldMont font14px purpleColor noMargin">{{bookVersionName()}}</p>
+                  </div>
+                  <div style="height: 5px"></div>
+                  <div style="height: 20px; overflow: hidden;">
+                    <p class="semiBoldMont font12px grayColor noMargin">{{ 'confirmSubscription.bookContents' | translate }}</p>
+                  </div>
+                  <div style="height: 5px"></div>
+                  <div style="height: 46px; overflow: hidden;">
+                    <p class="mediumMont font12px grayColor noMargin">{{bookVersionDescription()}}</p>
+                  </div>
+                  <div style="height: 10px"></div>
+                  <div style="height: 20px; overflow: hidden;">
+                    <p class="semiBoldMont font12px grayColor noMargin">{{ 'reusable.cultureTitle' | translate }}</p>
+                  </div>
+                  <div style="height: 5px"></div>
+                  <div style="height: 20px; overflow: hidden;" fxLayoutAlign="start center">
+                    <img fxFlex="20px" [src]="bookVersionCountryIconURL()" style="height: 20px; object-fit: contain;" *ngIf="bookVersionCountryIconURL()">
+                    <div fxFlex="10px"></div>
+                    <p fxFlex class="mediumMont font12px grayColor noMargin">{{bookVersionCountryTitle()}}</p>
+                  </div>
+                </div>
+              </div>
+              <div fxFlex="10px"></div>
+            </div>
+
+            <div style="height: 20px" *ngIf="subPricing.includesBook"></div>
+
+            <div *ngIf="subPricing.includesBook">
+              <div fxFlex="10px"></div>
+              <div fxFlex>
+                <div fxFlex="40" style="height: 80px" fxLayoutAlign="center center">
+                  <img src="../../../assets/icons/delivery-icon-blue.png" style="width: 60px; height: 60px; object-fit: contain;">
+                </div>
+                <div fxFlex>
+                  <p class="semiBoldMont font12px grayColor noMargin">{{ 'confirmSubscription.deliveryTitle' | translate }}</p>
+                  <div style="height: 5px"></div>
+                  <p class="semiBoldMont font14px blueColor noMargin">{{ subPricing.getShippingWithCurrencySymbol() }}</p>
+                  <div style="height: 5px"></div>
+                  <p class="mediumMont font12px grayColor noMargin">{{ 'confirmSubscription.deliverySubtitle' | translate }}</p>
+                </div>
+              </div>
+              <div fxFlex="10px"></div>
+            </div>
+
+            <div style="height: 20px"></div>
+
+            <div>
+              <div fxFlex="10px"></div>
+              <div fxFlex>
+                <div fxFlex="40"></div>
+                <div fxFlex>
+                  <p class="semiBoldMont font12px grayColor noMargin">{{ 'confirmSubscription.breakdownTitle' | translate }}</p>
+                  <div style="height: 5px;"></div>
+                  <p class="mediumMont font12px grayColor noMargin">{{ 'confirmSubscription.breakdownSubscriptionTitle' | translate }} {{ subPricing.monthlyPriceWithCurrencySymbol() }} x {{ subPricing.repeatInterval }} {{ 'subscriptions.monthBreakdown' | translate }}</p>
+                  <div style="height: 5px;"></div>
+                  <p class="mediumMont font12px grayColor noMargin" *ngIf="subPricing.includesBook">{{ 'confirmSubscription.breakdownDeliveryTitle' | translate }} {{ subPricing.getShippingWithCurrencySymbol() }}</p>
+                  <div style="height: 15px" *ngIf="subPricing.includesBook"></div>
+                  <p class="semiBoldMont font14px blackColor noMargin">{{ 'confirmSubscription.total' | translate }}  {{ subPricing.userVisibleFirstPriceWithCurrencySymbol() }}</p>
+                </div>
+              </div>
+              <div fxFlex="10px"></div>
+            </div>
+
+            <div style="height: 20px"></div>
+
+            <!-- Company Information -->
+            <div fxLayoutAlign="center start">
+              <div fxFlex="80">
+                <p class="semiBoldMont font12px grayColor noMargin">{{ 'confirmSubscription.companyInformationTitle' | translate }}</p>
+                <div style="height: 4px;"></div>
+                <p class="mediumMont font12px grayColor noMargin">{{ 'confirmSubscription.companyInformationString' | translate }}</p>
+              </div>
+            </div>
+
+            <div style="height: 20px"></div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div style="height: 40px"></div>
+
+      <div fxLayoutAlign="center center">
+        <div fxFlex="20px" style="height: 20px;">
+          <app-evo-checkmark [ngModel]="acceptTCs"
+                             [checkmarkHeight]="'16px'"
+                             [checkmarkWidth]="'16px'"
+                             [ngModelOptions]="{ standalone: true }"
+                             (valueChanged)="acceptTCs = $event">
+          </app-evo-checkmark>
+        </div>
+        <div fxFlex="10px"></div>
+        <p class="semiBoldMont grayColor font12px noMargin">{{ 'confirmSubscription.tcAgreeMessage' | translate}}</p>
+        <div fxFlex="4px"></div>
+        <p class="semiBoldMont blueHoverColor font12px noMargin" (click)="onTCsClicked()">{{ 'confirmSubscription.tcLinkMessage' | translate }}</p>
+      </div>
+
+    </div>
+
+    <div style="height: 20px"></div>
+
+    <div fxLayoutAlign="center start">
+      <button class="greenButton whiteColor semiBoldMont font14px noMargin"
+              style="height: 40px; width: 140px;"
+              fxLayoutAlign="center center"
+              (click)="openCheckout()"
+              [disabled]="!acceptTCs">
+        {{ 'confirmSubscription.confirmButtonTitle' | translate }}
+      </button>
+    </div>
+
+    <div style="height: 20px"></div>
+
+    <div fxLayoutAlign="center start">
+      <app-evo-progress-points [currentIndex]="2"
+                               [numPoints]="4"
+                               [defaultColor]="'#979797'"
+                               [selectedColor]="'#009CCC'">
+      </app-evo-progress-points>
+    </div>
+
+    <div style="height: 40px"></div>
+
+  </form>
+  <!-- Solution https://stackoverflow.com/questions/53472103/angular-6-redirect-to-external-url-using-post -->
+
+</div>

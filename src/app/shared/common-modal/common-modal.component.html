@@ -1,0 +1,60 @@
+<div class="container-fluid">
+  <button class="greenButton whiteColor semiBoldMont font12px" fxFlex="120px"
+    style="height: 40px; width: 100%; border-radius: 4px" (click)="openModal(modalOneContent)">
+    License History
+  </button>
+
+  <ng-template class="content-container" #modalOneContent let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">License History</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <div style="height: 50px"></div>
+    </div>
+    <div *ngIf="!hasData()" style="text-align:center; padding-right: 10px; margin: top 10px">No Data Found</div>
+    <div class="flex-container" *ngIf="hasData()">
+      <div ngStyle.lt-md="width: 100%;" style="height: 100%">
+        <div class="container">
+          <h6 style="padding-right: 10px; margin: top 10px">License Created</h6>
+          <div fxFlex fxLayoutAlign="start center">
+            <div fxFlex>
+              <p class="semiBoldMont font16px blackColor noMargin" style="padding-left: 80px">
+                {{ createDate }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <table class="table table-hover" style="text-align: center; ">
+
+          <thead>
+            <tr>
+              <th>Number license</th>
+              <th>Student per price</th>
+              <th>Update License</th>
+              <th>License Expiration</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr *ngFor="let license of licenses">
+              <td id="license.numLicenses">{{license.numLicenses}}</td>
+              <td id="license.pricePerStudent"> {{license.pricePerStudent}}</td>
+              <td id="license.licenseUpdatedAt.toLocaleDateString()">
+                {{license.licenseUpdatedAt.toLocaleDateString()}}</td>
+              <td id="expiresAt"> {{ expiresAt}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <button class="loadMoreButton whiteColor font14px semiBoldMont" *ngIf=" licenses.length % licenseFilter.limit === 0 && licenses.length > 0 && 
+      hasMoreData === true " (click)="onFetchMoreUsers()">
+      Load More
+    </button>
+    <div style="height: 10px" ngStyle.sm="height: 30px;" ngStyle.xs="height: 20px:"></div>
+  </ng-template>
+</div>

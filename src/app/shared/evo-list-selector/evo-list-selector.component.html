@@ -1,0 +1,43 @@
+<div class="blackBg modal"
+     style="height: 100%; width: 100%; z-index: 4000;"
+     fxLayoutAlign="center center"
+     *ngIf="sv.isVisible">
+  <div fxFlex="80" class="whiteBg" style="height: 80%; border-radius: 6px;">
+    <div style="height: 60px;" fxLayoutAlign="center center">
+      <p class="semiBoldMont blackColor font18px noMargin">Select Item</p>
+    </div>
+    <div class="defaultScrollBar scrollBarGreenThumb" style="height: calc(100% - 120px); overflow-y: scroll;">
+      <div style="height: 10px;"></div>
+      <div *ngFor="let key of sv.getList()">
+        <div fxLayoutAlign="center start">
+          <div fxFlex="96"
+               class="defaultShadow"
+               [ngClass]="{ bgWhiteHoverColor: isCurrentItem(key) === false, bgGreenHoverColor: isCurrentItem(key) }"
+               style="height: 42px; border-radius: 4px; cursor: pointer;"
+               (click)="selectedItem(key)">
+            <div fxFlex="10px"></div>
+            <div fxFlex fxLayoutAlign="start center">
+              <p class="semiBoldMont font14px noMargin" [ngClass]="{ blackColor: isCurrentItem(key) === false, whiteColor: isCurrentItem(key) }">{{key}}</p>
+            </div>
+            <div fxFlex="10px"></div>
+          </div>
+        </div>
+        <div style="height: 10px;"></div>
+      </div>
+    </div>
+    <div style="height: 60px;" fxLayoutAlign="center center">
+      <div>
+        <button fxFlex="120px"
+                class="greenButton semiBoldMont font14px whiteColor"
+                style="height: 42px;"
+                [disabled]="hasItem() === false"
+                (click)="onSelectClicked()">Add</button>
+        <div fxFlex="40px"></div>
+        <button fxFlex="120px"
+                class="redButton semiBoldMont font14px whiteColor"
+                style="height: 42px;"
+                (click)="onCancelClicked()">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>

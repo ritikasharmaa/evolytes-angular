@@ -1,0 +1,51 @@
+img {
+  object-fit: contain;
+  width: 100%;
+}
+
+/* lt-lg */
+@media only screen and (max-width: 1279px) {
+
+  .storyVideo {
+    height: calc(100vw * 200/355.5);
+    max-height: 270px;
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .mathGif {
+    height: calc(100vw * 250/444);
+    max-height: 270px;
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .gifCollect {
+    height: calc(100vw * 350/622);
+    max-height: 270px;
+    width: 100%;
+    max-width: 480px;
+  }
+
+}
+
+/* gt-md */
+@media only screen and (min-width: 1280px) {
+
+  .storyVideo{
+    height: calc(60vw * 200/355.5);
+    width: 60%;
+  }
+
+  .mathGif {
+    height: calc(37vw * 250/444);
+  }
+
+  .gifCollect{
+    height: calc(37vw * 350/622);
+  }
+}
+
+div.content {
+
+}

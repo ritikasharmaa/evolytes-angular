@@ -1,0 +1,86 @@
+<div style="width: 100%; height: 100%;">
+  <div fxFlex="30px" fxFlex.lt-md="3"></div>
+  <div fxFlex fxFlex.xs="94" fxFlex.sm="calc(94%-200px)">
+    <div style="height: 20px;"></div>
+    <!-- Title and buttons -->
+    <div fxLayoutAlign="start center">
+      <p class="boldMont font24px blackColor noMargin">{{ 'schoolAdministration.teachers.title' | translate }}</p>
+      <div fxFlex></div>
+      <button class="greenButton semiBoldMont font12px whiteColor"
+              fxFlex="140px"
+              style="height: 40px; border-radius: 4px;"
+              (click)="onInvitationsClicked()">
+        {{ 'schoolAdministration.teachers.teachersInvitationsTitle' | translate }}
+      </button>
+      <div fxFlex="10px"></div>
+    </div>
+    <div style="height: 20px;"></div>
+    <div>
+      <app-evo-input title="{{ 'schoolAdministration.teachers.search' | translate }}"
+                     placeholderText="{{ 'schoolAdministration.teachers.searchPlaceholder' | translate }}"
+                     (inputChangedEvent)="searchFilteredTeachers($event)"></app-evo-input>
+    </div>
+    <div style="height: 20px;"></div>
+    <div ngStyle.lt-md="overflow-x:scroll; overflow-y:hidden; height: calc(100% - 170px);"
+         style="height: calc(100% - 192px);">
+      <div ngStyle.lt-md="width: 745px;" style="height:100%;">
+        <div>
+          <p fxFlex
+             class="semiBoldMont font12px grayColor noMargin">{{ 'schoolAdministration.teachers.nameLegend' | translate }}</p>
+          <p fxFlex="200px"
+             class="semiBoldMont font12px grayColor noMargin">{{ 'schoolAdministration.teachers.accountTypeLegend' | translate }}</p>
+          <p fxFlex="200px"
+             class="semiBoldMont font12px grayColor noMargin">{{ 'schoolAdministration.teachers.memberSinceLegend' | translate }}</p>
+          <div fxFlex="10px"></div>
+        </div>
+        <div style="height: 10px;"></div>
+        <div class="bgGrayDarkColor" style="height: 1px"></div>
+        <div class="noScrollBar" style="height: 100%; overflow-y: scroll;"
+             ngStyle.lt-md="height:95%;">
+          <div style="height: 10px;"></div>
+          <div *ngFor="let teacher of teachers">
+            <div>
+              <div fxFlex="2px"></div>
+              <div fxFlex class="smallShadow bgWhiteHoverColor pointer"
+                   style="height: 64px; border-radius: 4px;"
+                   fxLayoutAlign="start center"
+                   (click)="onTeacherClicked(teacher)">
+                <div fxFlex="20px"></div>
+                <div fxFlex="48px" fxLayoutAlign="center center">
+                  <div class="smallShadow" style="border-radius: 30px; height: 48px; width: 48px;"
+                       fxLayoutAlign="center center">
+                    <p class="boldMont font18px blackColor noMargin">{{ teacher.getTwoInitials() }}</p>
+                  </div>
+                </div>
+                <div fxFlex="20px"></div>
+                <div fxFlex fxLayoutAlign="start center">
+                  <div>
+                    <p class="semiBoldMont font14px blackColor noMargin">{{ teacher.getFullName() }}</p>
+                    <div style="height: 2px;"></div>
+                    <p class="semiBoldMont font10px grayColor noMargin">{{ teacher.email }}</p>
+                  </div>
+                </div>
+                <p fxFlex="180px"
+                   class="semiBoldMont font12px blackColor noMargin">{{ 'schoolAccessTypes.' + teacher.getSchoolAccessType() | translate }}</p>
+                <div fxFlex="20px"></div>
+                <p fxFlex="180px"
+                   class="semiBoldMont font12px blackColor noMargin">{{ teacher.createdAt | date: 'dd / MM / yyyy' }}</p>
+                <div fxFlex="20px"></div>
+              </div>
+              <div fxFlex="2px"></div>
+            </div>
+            <div style="height: 10px;"></div>
+          </div>
+          <button class="blueButton whiteColor font14px semiBoldMont"
+                  style="height: 42px; width: 100%;"
+                  *ngIf="teachers.length % teacherFilter.limit === 0 && teachers.length > 0 && hasMoreData === true"
+                  (click)="onFetchMoreTeachers()">
+            {{ 'answers.moreData' | translate }}
+          </button>
+          <div style="height: 10px;" ngStyle.sm="height: 30px;" ngStyle.xs="height: 20px:"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div fxFlex="30px" fxFlex.lt-md="3"></div>
+</div>

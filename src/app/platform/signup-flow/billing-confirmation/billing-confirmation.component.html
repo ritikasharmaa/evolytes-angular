@@ -1,0 +1,51 @@
+<app-modal></app-modal>
+<app-evo-header></app-evo-header>
+<app-evo-decoration-background-signup></app-evo-decoration-background-signup>
+<div class="defaultScrollBar scrollBarGreenThumb" style="height: calc(100% - 60px); overflow-y: scroll;" fxLayoutAlign="center start">
+
+  <div fxFlex.md="960px" fxFlex.lg="1280px">
+
+    <div style="height: 40px"></div>
+
+    <div fxLayoutAlign="space-around center">
+
+      <div fxFlex.gt-sm="900px" fxFlex="90">
+        <div fxLayoutAlign="center start">
+          <p fxFlex="80" class="boldMont font22px blackColor noMargin" style="text-align: center;">{{ 'billingComplete.title' | translate }}</p>
+        </div>
+        <div style="height: 5px"></div>
+        <div fxLayoutAlign="center start">
+          <p fxFlex="80" class="regularMont font14px grayColor noMargin" style="text-align: center;">{{ 'billingComplete.subtitle' | translate }}</p>
+        </div>
+        <div fxLayoutAlign="center center">
+          <img fxFlex.gt-xs="40" fxFlex.xs="60" src="../../../../assets/land-images/AllProductsiMac.png" style="object-fit: contain;">
+        </div>
+        <div fxLayoutAlign="center start">
+          <p fxFlex="80" class="regularMont font14px grayColor noMargin" style="text-align: center;">{{ 'billingComplete.subtitleTwo' | translate }}</p>
+        </div>
+        <div style="height: 20px"></div>
+        <div fxLayoutAlign="center start">
+          <button class="greenButton semiBoldMont whiteColor font14px noMargin"
+                  style="width: 120px; height: 40px;"
+                  (click)="onNextClicked()">
+            {{ 'reusable.next' | translate }}
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 20px"></div>
+
+    <div fxLayoutAlign="center start">
+      <app-evo-progress-points [currentIndex]="0"
+                               [numPoints]="4"
+                               [defaultColor]="'#979797'"
+                               [selectedColor]="'#009CCC'">
+      </app-evo-progress-points>
+    </div>
+
+  </div>
+
+
+
+</div>

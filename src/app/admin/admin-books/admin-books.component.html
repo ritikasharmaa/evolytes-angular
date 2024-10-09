@@ -1,0 +1,137 @@
+<div class="defaultScrollBar scrollBarBlueThumb" style="width: 100%; height: 100%; overflow-y: scroll;">
+  <div fxFlex="20px" fxFlex.xs="10px"></div>
+  <div fxFlex style="width: calc(100% - 40px);" ngStyle.xs="width: calc(100% - 20px);">
+    <div style="height: 20px;"></div>
+    <div class="bgGreenHoverColor defaultShadow"
+         style="height: 50px; border-radius: 6px; cursor: pointer;"
+         fxLayoutAlign="start center"
+         (click)="onAddBookClicked()">
+      <div fxFlex="20px"></div>
+      <p class="semiBoldMont font18px whiteColor noMargin">+</p>
+      <div fxFlex="4px"></div>
+      <p class="semiBoldMont font14px whiteColor noMargin">Add Book</p>
+    </div>
+    <div style="height: 10px;"></div>
+    <div *ngFor="let book of books">
+      <div class="whiteBg defaultShadow" style="border-radius: 6px;" ngStyle.gt-xs="height: 300px;">
+        <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+          <div fxFlex="220px"
+               fxFlex.xs
+               class="bgWhiteHoverColor"
+               style="cursor: pointer; border-radius: 6px;"
+               (click)="onBookClicked(book)">
+            <div style="height: 20px;"></div>
+            <div fxLayoutAlign="center center" style="height: 160px;">
+              <img [src]="book.imgURL" style="width: 140px; height: 160px; object-fit: contain;" *ngIf="book.imgURL">
+            </div>
+            <div style="height: 10px"></div>
+            <div style="height: 50px" fxLayoutAlign="center center">
+              <p fxFlex="74"
+                 class="mediumMont font14px blackColor noMargin"
+                 style="text-align: center;">
+                {{book.name}}
+              </p>
+            </div>
+            <div style="height: 4px;"></div>
+            <div>
+              <div fxFlex="20px"></div>
+              <div fxFlex="40">
+                <p class="semiBoldMont font10px grayColor noMargin"
+                   style="text-align: center;">Culture</p>
+                <div style="height: 4px;"></div>
+                <p class="semiBoldMont font10px grayColor noMargin"
+                   style="text-align: center;">
+                  {{book.culture}}
+                </p>
+              </div>
+              <div fxFlex></div>
+              <div fxFlex="40">
+                <p class="semiBoldMont font10px grayColor noMargin"
+                   style="text-align: center;">Age Range</p>
+                <div style="height: 4px;"></div>
+                <p class="semiBoldMont font10px grayColor noMargin"
+                   style="text-align: center;">
+                  {{book.ageRange}}
+                </p>
+              </div>
+              <div fxFlex="20px"></div>
+            </div>
+          </div>
+          <div fxFlex="2px" style="height: 100%;" fxLayoutAlign="center center">
+            <div class="lightGrayBg" style="height: 80%; width: 100%;"></div>
+          </div>
+          <div fxFlex ngStyle.gt-xs="overflow-x: hidden;">
+            <div fxFlex="40px"></div>
+            <div fxFlex ngStyle.gt-xs="overflow-x: hidden;">
+              <div style="height: 14px"></div>
+              <p class="mediumMont font16px grayColor noMargin">Editions</p>
+              <div style="height: 14px;"></div>
+              <div class="bgLightGrayColor defaultScrollBar scrollBarGreenThumb"
+                   style="height: 230px; border-radius: 4px; width: 100%; overflow-x: scroll;">
+                <div fxFlex="20px"></div>
+                <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+                  <div fxFlex.xs="10px"></div>
+                  <div fxFlex="180px"
+                       fxFlex.xs
+                       *ngFor="let version of book.versions"
+                       fxLayoutAlign="start center"
+                       fxLayoutAlign.xs="center center"
+                       (click)="onBookVersionClicked(book, version)">
+                    <div fxFlex="160px" fxFlex.xs="180px"
+                         class="bgWhiteHoverColor defaultShadow"
+                         style="height: 200px; border-radius: 4px; cursor: pointer;">
+                      <div style="height: 20px"></div>
+                      <div fxLayoutAlign="center center">
+                        <img [src]="version.bookVersionImgURL()"
+                             style="width: 80px; height: 110px; object-fit: contain;"
+                             *ngIf="version.imgType">
+                      </div>
+                      <div style="height: 8px;"></div>
+                      <div fxLayoutAlign="center start">
+                        <p fxFlex="90px"
+                           class="mediumMont font12px grayColor noMargin"
+                           style="text-align: center;">
+                          {{version.name}}
+                        </p>
+                      </div>
+                      <div style="height: 8px;"></div>
+                      <div>
+                        <p class="mediumMont font10px grayColor noMargin"
+                           style="text-align: center;">
+                          {{version.editionNumber}} edition
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div fxFlex.xs="20px"></div>
+                  <div fxFlex="160px"
+                       fxFlex.xs
+                       fxLayoutAlign="start center"
+                       fxLayoutAlign.xs="center center"
+                       (click)="onAddBookVersionClicked(book)">
+                    <div fxFlex fxFlex.xs="160px" class="bgGreenHoverColor defaultShadow"
+                         style="height: 200px; border-radius: 4px; cursor: pointer;">
+                      <div style="height: 80px;"></div>
+                      <p class="mediumMont font26px whiteColor noMargin" style="text-align: center;">+</p>
+                      <div style="height: 14px;"></div>
+                      <div>
+                        <p class="mediumMont font14px whiteColor noMargin" style="text-align: center;">Create
+                          Version</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div fxFlex.xs="10px"></div>
+                </div>
+                <div fxFlex="20px"></div>
+              </div>
+            </div>
+            <div fxFlex="20px"></div>
+          </div>
+        </div>
+      </div>
+      <div style="height: 10px;"></div>
+    </div>
+    <div style="height: 20px;"></div>
+  </div>
+  <div fxFlex="20px" fxFlex.xs="10px"></div>
+</div>

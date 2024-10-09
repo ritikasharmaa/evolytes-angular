@@ -1,0 +1,537 @@
+<div
+  style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.3); z-index: 2000;"
+  fxLayoutAlign="center center"
+  *ngIf="showAddStudents">
+  <div class="whiteBg" fxFlex="94" fxFlex.gt-md="900px" style="border-radius: 8px; height: 94%;">
+    <div class="lightGrayBg2" style="height: 90px; border-radius: 4px 4px 0 0;">
+      <div style="height: 10px;"></div>
+      <p class="boldMont font16px blackColor noMargin"
+         style="text-align: center;">{{ 'schoolAdministration.teachers.addStudentTitle' | translate }}</p>
+      <div style="height: 10px;"></div>
+      <div style="position: relative">
+        <div>
+          <div fxFlex="20px"></div>
+          <app-evo-input fxFlex
+                         [showTitle]="false"
+                         placeholderText="{{ 'schoolAdministration.students.searchPlaceholder' | translate }}"
+                         [value]="studentsNoRelationshipFilter.name"
+                         (inputChangedEvent)="searchFilteredNoRelationshipStudents($event)">
+          </app-evo-input>
+          <div fxFlex="20px"></div>
+          <div class="bgWhiteHoverColor containerShadow pointer"
+               fxFlex="140px"
+               style="height: 42px; border-radius: 4px;"
+               (click)="onNoRelationshipFilterPressed()"
+               fxLayoutAlign="start center">
+            <div fxFlex="10px"></div>
+            <img src="./assets/icons/filter-gray.svg" style="object-fit: contain; width: 18px; height: 18px;">
+            <div fxFlex="12px"></div>
+            <p class="semiBoldMont font12px grayColor noMargin">{{ 'reusable.filters' | translate }}</p>
+            <div fxFlex="10px"></div>
+          </div>
+          <div fxFlex="20px"></div>
+          <!--<div [fxFlex]="scrollBarWidth.scrollbarWidthString()"></div>-->
+        </div>
+        <div class="defaultShadow whiteBg"
+             style="position: absolute; top: 50px; right: 20px; width: 340px; border-radius: 8px;"
+             *ngIf="showStudentNoRelationshipFilter"
+             fxLayoutAlign="center start">
+          <div fxFlex="90">
+            <div style="height: 20px;"></div>
+            <div fxLayoutAlign="start end">
+              <p fxFlex class="boldMont font18px blackColor noMargin">{{ 'reusable.filters' | translate }}</p>
+              <div fxFlex="10px"></div>
+              <p class="boldMont font12px blueHoverColor pointer noMargin"
+                 (click)="onClearAllNoRelationshipFiltersPressed()">
+                {{ 'reusable.clearAll' | translate }}
+              </p>
+            </div>
+            <div style="height: 16px;"></div>
+            <p class="boldMont font14px grayColor noMargin">{{ 'reusable.birthYear' | translate }}</p>
+            <div style="height: 8px;"></div>
+            <app-evo-input [showTitle]="false"
+                           placeholderText="{{ 'reusable.birthYear' | translate }}"
+                           inputType="number"
+                           [value]="studentsNoRelationshipFilter.toAge"
+                           (inputChangedEvent)="onNoRelationshipBirthYearChanged($event)">
+            </app-evo-input>
+            <div style="height: 10px;"></div>
+            <div style="height: 60px;" fxLayoutAlign="center center">
+              <div>
+                <button fxFlex="120px"
+                        class="redButton semiBoldMont font14px whiteColor noMargin"
+                        style="height: 40px;"
+                        (click)="onNoRelationshipCancelFilter()">
+                  {{ 'reusable.cancel' | translate }}
+                </button>
+                <div fxFlex="40px"></div>
+                <button fxFlex="120px"
+                        class="greenButton semiBoldMont font14px whiteColor noMargin"
+                        style="height: 40px;"
+                        (click)="onApplyNoRelationshipFilter()">
+                  {{ 'answers.apply' | translate }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="height: calc(100% - 150px); overflow-y: scroll;">
+      <div fxFlex="20px"></div>
+      <div fxFlex>
+        <div style="height: 10px;"></div>
+        <div *ngFor="let student of studentsNoRelationshipToGroup">
+          <div class="defaultShadow whiteBg" style="height: 56px; border-radius: 4px;" fxLayoutAlign="start center">
+            <div fxFlex="14px"></div>
+            <div fxFlex="32px" style="height: 32px;">
+              <app-evo-circle-checkmark [currentValue]="isStudentAdded(student)"
+                                        (valueChanged)="addOrRemoveStudent(student)"></app-evo-circle-checkmark>
+            </div>
+            <div fxFlex="10px"></div>
+            <div fxFlex="36px" fxLayoutAlign="center center">
+              <img [src]="student.evolytesProfile.profileImage()"
+                   style="height: 36px; width: 36px; border-radius: 20px; border-style: solid; border-width: 2px; object-fit:  contain"
+                   [ngStyle]="{ borderColor: student.evolytesProfile.profileOutlineColor() }">
+            </div>
+            <div fxFlex="14px"></div>
+            <p fxFlex class="semiBoldMont font14px blackColor noMargin">{{ student.fullName() }}</p>
+            <div fxFlex="10px"></div>
+            <p fxFlex="160px"
+               class="semiBoldMont font12px blackColor noMargin">{{ student.birthDate | date: 'yyyy' }}</p>
+            <p fxFlex="160px"
+               class="semiBoldMont font12px blackColor noMargin">{{ 'schoolAdministration.licenseState.active' | translate }}</p>
+            <p fxFlex="160px"
+               class="semiBoldMont font12px blackColor noMargin">{{ student.createdAt | date: 'dd / MM / yyyy' }}</p>
+            <div fxFlex="10px"></div>
+          </div>
+          <div style="height: 10px;"></div>
+        </div>
+        <button class="blueButton semiBoldMont whiteColor font14px noMargin"
+                style="height: 42px; width: 100%;"
+                (click)="fetchMoreStudentsWithNoRelationship()"
+                *ngIf="this.studentsNoRelationshipToGroup.length % this.studentsNoRelationshipFilter.limit === 0 && this.studentsNoRelationshipToGroup.length > 0 && hasMoreStudentsWithNoRelationshipData">
+          {{ 'answers.moreData' | translate }}
+        </button>
+      </div>
+      <div fxFlex="20px"></div>
+    </div>
+    <div class="lightGrayBg2" style="height: 60px; border-radius: 0 0 4px 4px;" fxLayoutAlign="center center">
+      <div>
+        <button class="redButton semiBoldMont font12px whiteColor noMargin"
+                fxFlex="140px"
+                style="height: 40px;"
+                (click)="onCloseAddStudents()">
+          {{ 'reusable.cancel' | translate }}
+        </button>
+        <div fxFlex="40px"></div>
+        <button class="greenButton semiBoldMont font12px whiteColor noMargin"
+                fxFlex="140px"
+                style="height: 40px;"
+                [disabled]="isAddStudentDisabled()"
+                (click)="onAddStudents()">
+          {{ 'reusable.add' | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div
+  style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.3); z-index: 2000;"
+  fxLayoutAlign="center center"
+  *ngIf="showAddTeachers">
+  <div class="whiteBg" fxFlex="94" fxFlex.gt-md="900px" style="border-radius: 8px; height: 94%;">
+    <div class="lightGrayBg2" style="height: 90px; border-radius: 4px 4px 0 0;">
+      <div style="height: 10px;"></div>
+      <p class="boldMont font16px blackColor noMargin"
+         style="text-align: center;">{{ 'schoolAdministration.groups.addTeacherTitle' | translate }}</p>
+      <div style="height: 10px;"></div>
+      <div style="position: relative">
+        <div>
+          <div fxFlex="20px"></div>
+          <app-evo-input fxFlex
+                         [showTitle]="false"
+                         placeholderText="{{ 'schoolAdministration.teachers.searchPlaceholder' | translate }}"
+                         [value]="teachersNoRelationshipFilter.name"
+                         (inputChangedEvent)="searchFilteredNoRelationshipTeachers($event)">
+          </app-evo-input>
+          <div fxFlex="20px"></div>
+          <!--<div [fxFlex]="scrollBarWidth.scrollbarWidthString()"></div>-->
+        </div>
+      </div>
+    </div>
+    <div style="height: calc(100% - 150px); overflow-y: scroll;">
+      <div fxFlex="20px"></div>
+      <div fxFlex>
+        <div style="height: 10px;"></div>
+        <div *ngFor="let teacher of teachersNoRelationshipToGroup">
+          <div class="defaultShadow whiteBg" style="height: 56px; border-radius: 4px;" fxLayoutAlign="start center">
+            <div fxFlex="14px"></div>
+            <div fxFlex="32px" style="height: 32px;">
+              <app-evo-circle-checkmark [currentValue]="isTeacherAdded(teacher)"
+                                        (valueChanged)="addOrRemoveTeacher(teacher)"></app-evo-circle-checkmark>
+            </div>
+            <div fxFlex="10px"></div>
+            <div fxFlex="48px" fxLayoutAlign="center center">
+              <div class="smallShadow" style="border-radius: 30px; height: 48px; width: 48px;"
+                   fxLayoutAlign="center center">
+                <p class="boldMont font18px blackColor noMargin">{{ teacher.getTwoInitials() }}</p>
+              </div>
+            </div>
+            <div fxFlex="14px"></div>
+            <p fxFlex class="semiBoldMont font14px blackColor noMargin">{{ teacher.getFullName() }}</p>
+            <div fxFlex="10px"></div>
+            <p fxFlex="160px"
+               class="semiBoldMont font12px blackColor noMargin">{{ getTeacherAccessType(teacher) }}
+            <p>
+            <p fxFlex="160px"
+               class="semiBoldMont font12px blackColor noMargin">{{ teacher.createdAt | date: 'dd / MM / yyyy' }}</p>
+            <div fxFlex="10px"></div>
+          </div>
+          <div style="height: 10px;"></div>
+        </div>
+        <button class="blueButton semiBoldMont whiteColor font14px noMargin"
+                style="height: 42px; width: 100%;"
+                (click)="fetchMoreStudentsWithNoRelationship()"
+                *ngIf="this.teachersNoRelationshipToGroup.length % this.teachersNoRelationshipFilter.limit === 0 && this.teachersNoRelationshipToGroup.length > 0 && hasMoreTeachersWithNoRelationshipData">
+          {{ 'answers.moreData' | translate }}
+        </button>
+      </div>
+      <div fxFlex="20px"></div>
+    </div>
+    <div class="lightGrayBg2" style="height: 60px; border-radius: 0 0 4px 4px;" fxLayoutAlign="center center">
+      <div>
+        <button class="redButton semiBoldMont font12px whiteColor noMargin"
+                fxFlex="140px"
+                style="height: 40px;"
+                (click)="onCloseAddTeachers()">
+          {{ 'reusable.cancel' | translate }}
+        </button>
+        <div fxFlex="40px"></div>
+        <button class="greenButton semiBoldMont font12px whiteColor noMargin"
+                fxFlex="140px"
+                style="height: 40px;"
+                [disabled]="isAddTeacherDisabled()"
+                (click)="onAddTeachers()">
+          {{ 'reusable.add' | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="width: 100%; height: 100%; overflow-y: scroll;">
+  <div fxFlex="30px"></div>
+  <div fxFlex>
+    <div style="height: 20px;"></div>
+    <div class="defaultShadow whiteBg" style="border-radius: 8px;">
+      <div fxFlex="20px"></div>
+      <div fxFlex>
+        <div style="height: 20px;"></div>
+        <div style="height: 100px;" fxLayoutAlign="start center">
+          <div fxFlex="48px" fxLayoutAlign="center center">
+            <div class="smallShadow" style="border-radius: 30px; height: 48px; width: 48px;"
+                 fxLayoutAlign="center center">
+              <p class="boldMont font18px blackColor noMargin">{{ group.getTwoInitials() }}</p>
+            </div>
+          </div>
+          <div fxFlex="30px"></div>
+          <div fxFlex>
+            <p class="boldMont font20px blackColor noMargin">{{ group.name }}</p>
+            <div style="height: 4px;"></div>
+            <p class="semiBoldMont font14px grayColor noMargin">{{ group.createdAt | date: 'dd / MM / yyyy' }}</p>
+          </div>
+          <div fxFlex="20px"></div>
+          <div fxFlex>
+            <app-evo-input fxFlex
+                           title="{{ 'createGroup.name' | translate }}"
+                           [value]="group.name"
+                           (inputChangedEvent)="group.name = $event">
+            </app-evo-input>
+          </div>
+          <div fxFlex>
+            <div style="height:20px;"></div>
+            <div fxLayoutAlign="end center">
+              <button class="greenButton semiBoldMont font14px whiteColor noMargin"
+                      style="width: 140px; height: 42px;"
+                      (click)="onUpdateGroupClicked()">
+                {{ 'reusable.save' | translate }}
+              </button>
+            </div>
+          </div>
+        </div>
+        <div style="height: 30px;"></div>
+      </div>
+      <div fxFlex="50px"></div>
+    </div>
+    <div style="height: 20px;"></div>
+    <div class="defaultShadow whiteBg" style="border-radius: 8px;">
+      <div fxFlex="20px"></div>
+      <div fxFlex>
+        <div style="position: relative;">
+          <div style="height: 20px;"></div>
+          <div style="height: 40px;" fxLayoutAlign="start center">
+            <p fxFlex
+               class="boldMont font20px blackColor noMargin">{{ 'schoolAdministration.teachers.studentsListTitle' | translate }}</p>
+            <app-evo-input fxFlex
+                           [showTitle]="false"
+                           placeholderText="{{ 'schoolAdministration.students.searchPlaceholder' | translate }}"
+                           [value]="studentsFilter.name"
+                           (inputChangedEvent)="searchFilteredStudents($event)">
+            </app-evo-input>
+            <div fxFlex="60px"></div>
+            <div class="bgWhiteHoverColor containerShadow pointer"
+                 fxFlex="140px"
+                 style="height: 42px; border-radius: 4px;"
+                 (click)="onFilterPressed()"
+                 fxLayoutAlign="start center">
+              <div fxFlex="10px"></div>
+              <img src="./assets/icons/filter-gray.svg" style="object-fit: contain; width: 18px; height: 18px;">
+              <div fxFlex="12px"></div>
+              <p class="semiBoldMont font12px grayColor noMargin">{{ 'reusable.filters' | translate }}</p>
+              <div fxFlex="10px"></div>
+            </div>
+            <div fxFlex="60px"></div>
+            <button fxFlex="140px"
+                    class="greenButton semiBoldMont font14px whiteColor noMargin"
+                    style="height: 40px;"
+                    (click)="onShowAddStudents()">
+              {{ 'schoolAdministration.teachers.addStudentButtonTitle' | translate }}
+            </button>
+          </div>
+          <div class="defaultShadow whiteBg"
+               style="position: absolute; top: 67px; right: 0; width: 340px; border-radius: 8px;"
+               *ngIf="showStudentFilter"
+               fxLayoutAlign="center start">
+            <div fxFlex="90">
+              <div style="height: 20px;"></div>
+              <div fxLayoutAlign="start end">
+                <p fxFlex class="boldMont font18px blackColor noMargin">{{ 'reusable.filters' | translate }}</p>
+                <div fxFlex="10px"></div>
+                <p class="boldMont font12px blueHoverColor pointer noMargin"
+                   (click)="onClearAllFiltersPressed()">
+                  {{ 'reusable.clearAll' | translate }}
+                </p>
+              </div>
+              <div style="height: 16px;"></div>
+              <p class="boldMont font14px grayColor noMargin">{{ 'reusable.birthYear' | translate }}</p>
+              <div style="height: 8px;"></div>
+              <app-evo-input [showTitle]="false"
+                             placeholderText="{{ 'reusable.birthYear' | translate }}"
+                             inputType="number"
+                             [value]="studentsFilter.toAge"
+                             (inputChangedEvent)="onBirthYearChanged($event)">
+              </app-evo-input>
+              <div style="height: 10px;"></div>
+              <div style="height: 60px;" fxLayoutAlign="center center">
+                <div>
+                  <button fxFlex="120px"
+                          class="redButton semiBoldMont font14px whiteColor noMargin"
+                          style="height: 40px;"
+                          (click)="onCancelFilter()">
+                    {{ 'reusable.cancel' | translate }}
+                  </button>
+                  <div fxFlex="40px"></div>
+                  <button fxFlex="120px"
+                          class="greenButton semiBoldMont font14px whiteColor noMargin"
+                          style="height: 40px;"
+                          (click)="onApplyFilter()">
+                    {{ 'answers.apply' | translate }}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="height: 26px;"></div>
+        <div>
+          <p fxFlex
+             class="semiBoldMont font12px grayColor noMargin">{{ 'schoolAdministration.students.nameLegend' | translate }}</p>
+          <p fxFlex="160px"
+             class="semiBoldMont font12px grayColor noMargin">{{ 'schoolAdministration.students.birthYearLegend' | translate }}</p>
+          <p fxFlex="160px"
+             class="semiBoldMont font12px grayColor noMargin">{{ 'schoolAdministration.students.statusLegend' | translate }}</p>
+          <p fxFlex="160px"
+             class="semiBoldMont font12px grayColor noMargin">{{ 'schoolAdministration.students.createdAtLegend' | translate }}</p>
+          <div fxFlex="10px"></div>
+          <div fxFlex="42px"></div>
+          <div fxFlex="10px"></div>
+        </div>
+        <div style="height: 10px;"></div>
+        <div class="bgGrayDarkColor" style="height: 1px"></div>
+        <div class="noScrollBar" style="height: 460px; overflow-y: scroll;">
+          <div style="height: 10px;"></div>
+          <div *ngFor="let student of students">
+            <div>
+              <div fxFlex="2px"></div>
+              <div fxFlex fxLayoutAlign="start center" class="smallShadow bgWhiteHoverColor pointer"
+                   style="height: 54px; border-radius: 4px;">
+                <div fxFlex fxLayoutAlign="start center" (click)="onStudentClicked(student)">
+                  <div fxFlex="14px"></div>
+                  <div fxFlex="36px" fxLayoutAlign="center center">
+                    <img [src]="student.evolytesProfile.profileImage()"
+                         style="height: 36px; width: 36px; border-radius: 20px; border-style: solid; border-width: 2px; object-fit:  contain"
+                         [ngStyle]="{ borderColor: student.evolytesProfile.profileOutlineColor() }">
+                  </div>
+                  <div fxFlex="14px"></div>
+                  <p fxFlex class="semiBoldMont font14px blackColor noMargin">{{ student.fullName() }}</p>
+                  <div fxFlex="10px"></div>
+                  <p fxFlex="160px"
+                     class="semiBoldMont font12px blackColor noMargin">{{ student.birthDate | date: 'yyyy' }}</p>
+                  <p fxFlex="160px"
+                     class="semiBoldMont font12px blackColor noMargin">{{ 'schoolAdministration.licenseState.active' | translate }}</p>
+                  <p fxFlex="160px"
+                     class="semiBoldMont font12px blackColor noMargin">{{ student.createdAt | date: 'dd / MM / yyyy' }}</p>
+                  <div fxFlex="10px"></div>
+                </div>
+                <div fxFlex="43px" fxLayoutAlign="start center">
+                  <button fxFlex="32px"
+                          class="redButton"
+                          style="height: 32px; border-radius: 4px;"
+                          fxLayoutAlign="center center"
+                          (click)="onRemoveStudentClicked(student)">
+                    <img src="./assets/icons/close-icon.svg" style="object-fit: contain; width: 16px; height: 16px;">
+                  </button>
+                  <div fxFlex="10px"></div>
+                </div>
+              </div>
+              <div fxFlex="2px"></div>
+            </div>
+
+            <div style="height: 10px;"></div>
+          </div>
+          <button class="blueButton whiteColor font14px semiBoldMont noMargin"
+                  style="height: 42px; width: 100%;"
+                  (click)="fetchMoreStudentsForGroup()"
+                  *ngIf="students.length % studentsFilter.limit === 0 && students.length > 0 && hasMoreStudents === true">
+            {{ 'answers.moreData' | translate }}
+          </button>
+        </div>
+        <div style="height: 20px;"></div>
+      </div>
+      <div fxFlex="50px"></div>
+    </div>
+    <div style="height: 20px;"></div>
+    <div class="defaultShadow whiteBg" style="border-radius: 8px;">
+      <div fxFlex="20px"></div>
+      <div fxFlex>
+        <div style="position: relative;">
+          <div style="height: 20px;"></div>
+          <div style="height: 40px;" fxLayoutAlign="start center">
+            <p fxFlex
+               class="boldMont font20px blackColor noMargin">{{ 'schoolAdministration.groups.teachersListTitle' | translate }}</p>
+            <app-evo-input fxFlex
+                           [showTitle]="false"
+                           placeholderText="{{ 'schoolAdministration.teachers.searchPlaceholder' | translate }}"
+                           [value]="teachersFilter.name"
+                           (inputChangedEvent)="searchFilteredTeachers($event)">
+            </app-evo-input>
+            <div fxFlex="60px"></div>
+            <button fxFlex="140px"
+                    class="greenButton semiBoldMont font14px whiteColor noMargin"
+                    style="height: 40px;"
+                    (click)="onShowAddTeachers()">
+              {{ 'schoolAdministration.groups.addTeacherButtonTitle' | translate }}
+            </button>
+          </div>
+        </div>
+        <div style="height: 26px;"></div>
+        <div>
+          <p fxFlex
+             class="semiBoldMont font12px grayColor noMargin">{{ 'schoolAdministration.teachers.nameLegend' | translate }}</p>
+          <p fxFlex="160px"
+             class="semiBoldMont font12px grayColor noMargin">{{ 'schoolAdministration.teachers.accountTypeLegend' | translate }}</p>
+          <p fxFlex="160px"
+             class="semiBoldMont font12px grayColor noMargin">{{ 'schoolAdministration.teachers.memberSinceLegend' | translate }}</p>
+          <div fxFlex="10px"></div>
+          <div fxFlex="42px"></div>
+          <div fxFlex="10px"></div>
+        </div>
+        <div style="height: 10px;"></div>
+        <div class="bgGrayDarkColor" style="height: 1px"></div>
+        <div class="noScrollBar" style="height: 460px; overflow-y: scroll;">
+          <div style="height: 10px;"></div>
+          <div *ngFor="let teacher of teachers">
+            <div>
+              <div fxFlex="2px"></div>
+              <div fxFlex class="smallShadow bgWhiteHoverColor pointer" style="height: 54px; border-radius: 4px;"
+                   fxLayoutAlign="start center">
+                <div fxFlex fxLayoutAlign="start center" (click)="onTeacherClicked(teacher)">
+                  <div fxFlex="14px"></div>
+                  <div fxFlex="48px" fxLayoutAlign="center center">
+                    <div class="smallShadow" style="border-radius: 30px; height: 48px; width: 48px;"
+                         fxLayoutAlign="center center">
+                      <p class="boldMont font18px blackColor noMargin">{{ teacher.getTwoInitials() }}</p>
+                    </div>
+                  </div>
+                  <div fxFlex="14px"></div>
+                  <p fxFlex class="semiBoldMont font14px blackColor noMargin">{{ teacher.getFullName() }}</p>
+                  <div fxFlex="10px"></div>
+                  <p fxFlex="160px"
+                     class="semiBoldMont font12px blackColor noMargin">{{ getTeacherAccessType(teacher) }}
+                  <p>
+                  <p fxFlex="160px"
+                     class="semiBoldMont font12px blackColor noMargin">{{ teacher.createdAt | date: 'dd / MM / yyyy' }}</p>
+                  <div fxFlex="10px"></div>
+                </div>
+                <div fxFlex="43px" fxLayoutAlign="start center">
+                  <button fxFlex="32px"
+                          class="redButton"
+                          style="height: 32px; border-radius: 4px;"
+                          fxLayoutAlign="center center"
+                          (click)="onRemoveTeacherClicked(teacher)">
+                    <img src="./assets/icons/close-icon.svg" style="object-fit: contain; width: 16px; height: 16px;">
+                  </button>
+                  <div fxFlex="10px"></div>
+                </div>
+              </div>
+              <div fxFlex="2px"></div>
+            </div>
+            <div style="height: 10px;"></div>
+          </div>
+          <button class="blueButton whiteColor font14px semiBoldMont noMargin"
+                  style="height: 42px; width: 100%;"
+                  (click)="fetchMoreTeachersForGroup()"
+                  *ngIf="teachers.length % teachersFilter.limit === 0 && teachers.length > 0 && hasMoreTeachers === true">
+            {{ 'answers.moreData' | translate }}
+          </button>
+        </div>
+        <div style="height: 20px;"></div>
+      </div>
+      <div fxFlex="50px"></div>
+    </div>
+    <div style="height: 20px;"></div>
+    <div class="defaultShadow whiteBg" style="border-radius: 8px;">
+      <div fxFlex="20px"></div>
+      <div fxFlex>
+        <div style="height: 20px;"></div>
+        <p
+          class="boldMont font20px blackColor noMargin">{{ 'schoolAdministration.groups.deleteGroupTitle' | translate }}</p>
+        <div style="height: 20px;"></div>
+        <div fxLayoutAlign="start center">
+          <app-evo-input fxFlex
+                         title="{{ 'signin.passwordTitle' | translate }}"
+                         placeholderText="{{ 'signin.passwordTitle' | translate }}"
+                         inputType="password"
+                         [value]="password"
+                         (inputChangedEvent)="password = $event">
+          </app-evo-input>
+          <div fxFlex="20px"></div>
+          <div fxFlex="140px">
+            <div style="height: 21px;"></div>
+            <button class="redButton semiBoldMont font14px whiteColor noMargin"
+                    style="height: 42px; width: 140px;"
+                    [disabled]="isPasswordButtonDisabled()"
+                    (click)="onDeleteGroupClicked()">
+              {{ 'reusable.delete' | translate }}
+            </button>
+          </div>
+        </div>
+        <div style="height: 20px;"></div>
+      </div>
+      <div fxFlex="20px"></div>
+    </div>
+    <div style="height: 20px;"></div>
+  </div>
+  <div fxFlex="30px"></div>
+</div>

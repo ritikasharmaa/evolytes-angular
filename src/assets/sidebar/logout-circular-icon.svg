@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Tablet_Overview-Copy-6" transform="translate(-26.000000, -426.000000)" stroke="#54676E">
+            <g id="Sidebar" transform="translate(-4.000000, 72.000000)">
+                <g id="Logout" transform="translate(19.000000, 354.000000)">
+                    <g id="Group" transform="translate(11.000000, 0.000000)">
+                        <g id="logout">
+                            <path d="M1.7675,20.625 C4.44115977,26.9128568 11.1714636,30.4498279 17.866557,29.0855245 C24.5616504,27.721221 29.3712566,21.8326861 29.3712566,15 C29.3712566,8.16731391 24.5616504,2.27877895 17.866557,0.914475507 C11.1714636,-0.449827941 4.44115977,3.08714324 1.7675,9.375" id="Shape"></path>
+                            <polyline id="Shape" points="15.625 20 20.625 15 15.625 10"></polyline>
+                            <path d="M20.625,15 L0.625,15" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,116 @@
+<div class="defaultScrollBar scrollBarGreenThumb"
+     style="width: 100%; height: 100%; overflow-y: scroll;">
+  <div style="height: 20px"></div>
+  <div fxLayoutAlign="center center">
+    <div class="whiteBg defaultShadow"
+         style="border-radius: 6px;"
+         fxFlex="94">
+      <div style="height: 10px"></div>
+      <div style="height: 50px"
+           fxLayoutAlign="start center">
+        <div fxFlex="20px"></div>
+        <div fxFlex fxLayoutAlign="start center">
+          <p class="semiBoldMont font18px blackColor noMargin">Import Teachers</p>
+        </div>
+        <div fxFlex="20px"></div>
+        <div fxFlex="120px" fxLayoutAlign="start center">
+          <input type="file" (change)="onFileChanged($event)" accept="text/csv" style="display: none;" #fileUpload>
+          <button class="greenButton whiteColor semiBoldMont font14px"
+                  style="height: 40px;"
+                  fxFlex
+                  (click)="fileUpload.click()">
+            Select File
+          </button>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 10px;"></div>
+      <div>
+        <div fxFlex="20px">
+        </div>
+        <div fxFlex>
+          <app-evo-input [title]="'Default Password'"
+                         [value]="defaultPassword"
+                         (inputChangedEvent)="onPasswordChanged($event)">
+          </app-evo-input>
+        </div>
+        <div fxFlex="20px">
+        </div>
+        <div fxFlex>
+          <app-evo-lang-dropdown [type]="'culture'"
+                                 [currentValue]="defaultCulture"
+                                 (valueChangedEvent)="onCultureChanged($event)">
+          </app-evo-lang-dropdown>
+        </div>
+        <div fxFlex="20px">
+        </div>
+      </div>
+      <div style="height: 20px" *ngIf="users.length > 0"></div>
+      <div style="height: 50px" fxLayoutAlign="start center" *ngIf="users.length > 0">
+        <div fxFlex></div>
+        <button fxFlex="120px"
+                class="greenButton whiteColor semiBoldMont font14px"
+                style="height: 40px"
+                (click)="onUploadClicked()">
+          Upload
+        </button>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px"></div>
+      <div>
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <div *ngFor="let user of users">
+            <div style="height: 10px;"></div>
+            <div class="whiteBg defaultShadow" style="border-radius: 6px;">
+              <div style="height: 6px"></div>
+              <div>
+                <div fxFlex="20px"></div>
+                <app-evo-input fxFlex
+                               [title]="'firstName'"
+                               [value]="user.firstName"
+                               (inputChangedEvent)="user.firstName = $event">
+                </app-evo-input>
+                <div fxFlex="10px"></div>
+                <app-evo-input fxFlex
+                               [title]="'lastName'"
+                               [value]="user.lastName"
+                               (inputChangedEvent)="user.lastName = $event">
+                </app-evo-input>
+                <div fxFlex="10px"></div>
+                <app-evo-input fxFlex
+                               [title]="'email'"
+                               [value]="user.email"
+                               (inputChangedEvent)="user.email = $event">
+                </app-evo-input>
+                <div fxFlex="20px"></div>
+              </div>
+              <div style="height: 6px;"></div>
+              <div>
+                <div fxFlex="20px"></div>
+                <app-evo-input fxFlex
+                               [title]="'phone'"
+                               [value]="user.phone"
+                               (inputChangedEvent)="user.phone = $event">
+                </app-evo-input>
+                <div fxFlex="20px"></div>
+                <app-evo-lang-dropdown fxFlex
+                                       [type]="'culture'"
+                                       [currentValue]="user.culture"
+                                       (valueChangedEvent)="user.culture = $event">
+                </app-evo-lang-dropdown>
+                <div fxFlex="20px"></div>
+              </div>
+              <div style="height: 6px;"></div>
+            </div>
+          </div>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+
+      <div style="height: 10px;"></div>
+
+    </div>
+  </div>
+  <div style="height: 20px"></div>
+</div>

@@ -1,0 +1,99 @@
+<div style="width: 100%; height: 100%; overflow-y: scroll;">
+  <div fxFlex="30px"></div>
+  <div fxFlex>
+    <div style="height: 20px;"></div>
+    <div class="defaultShadow whiteBg" style="border-radius: 8px;">
+      <div fxFlex="20px"></div>
+      <div fxFlex>
+        <div style="height: 20px;"></div>
+        <div style="height: 100px;" fxLayoutAlign="start center">
+          <img fxFlex="100px"
+               [src]="student.evolytesProfile.profileImage()"
+               style="height: 100px; border-width: 3px; border-radius: 50px; border-style: solid;"
+               [ngStyle]="{ borderColor: student.evolytesProfile.profileOutlineColor() }">
+          <div fxFlex="30px"></div>
+          <div fxFlex>
+            <p class="boldMont font20px blackColor noMargin">{{ student.fullName() }}</p>
+            <div style="height: 4px;"></div>
+            <p class="semiBoldMont font14px grayColor noMargin">{{ student.birthDate | date: 'yyyy' }}</p>
+          </div>
+        </div>
+        <div style="height: 30px;"></div>
+        <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center">
+          <app-evo-input fxFlex ngStyle.lt-md="width:90%;"
+                         title="{{ 'createStudent.firstName' | translate }}"
+                         [value]="student.firstName"
+                         (inputChangedEvent)="student.firstName = $event">
+          </app-evo-input>
+          <div fxFlex="20px"></div>
+          <app-evo-input fxFlex ngStyle.lt-md="width:90%;"
+                         title="{{ 'createStudent.middleName' | translate }}"
+                         [value]="student.middleName"
+                         (inputChangedEvent)="student.middleName = $event">
+          </app-evo-input>
+        </div>
+        <div style="height: 30px;"></div>
+        <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center">
+          <div fxFlex style="height: 65px;" ngStyle.lt-md="width:90%;">
+            <app-evo-input fxFlex
+                           title="{{ 'createStudent.lastName' | translate }}"
+                           [value]="student.lastName"
+                           (inputChangedEvent)="student.lastName = $event">
+            </app-evo-input>
+          </div>
+          <div fxFlex="20px"></div>
+          <div fxFlex style="height: 65px;" ngStyle.lt-md="width:90%;">
+            <app-evo-lang-dropdown type="culture"
+                                   [currentValue]="student.culture"
+                                   (valueChangedEvent)="student.culture = $event">
+            </app-evo-lang-dropdown>
+          </div>
+        </div>
+        <div style="height: 30px;"></div>
+        <div fxLayoutAlign="end start">
+          <button class="greenButton semiBoldMont font14px whiteColor noMargin"
+                  style="width: 140px; height: 42px;"
+                  (click)="onUpdateStudentClicked()">
+            {{ 'reusable.save' | translate }}
+          </button>
+        </div>
+        <div style="height: 30px;"></div>
+      </div>
+      <div fxFlex="50px" fxFlex.xs="20px"></div>
+    </div>
+    <div style="height: 20px;"></div>
+    <div class="defaultShadow whiteBg" style="border-radius: 8px;">
+      <div fxFlex="20px"></div>
+      <div fxFlex>
+        <div style="height: 20px;"></div>
+        <p
+          class="boldMont font20px blackColor noMargin">{{ 'schoolAdministration.students.deleteStudentTitle' | translate }}</p>
+        <div style="height: 20px;"></div>
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayout.xs="column" fxLayoutAlign.xs="center center">
+          <app-evo-input fxFlex
+                         ngStyle.lt-md="width:90%;"
+                         title="{{ 'signin.passwordTitle' | translate }}"
+                         placeholderText="{{ 'signin.passwordTitle' | translate }}"
+                         inputType="password"
+                         [value]="password"
+                         (inputChangedEvent)="password = $event">
+          </app-evo-input>
+          <div fxFlex="20px"></div>
+          <div fxFlex="140px" fxFlex.xs ngStyle.lt-md="width:90%;" fxLayoutAlign.xs="center center">
+            <div style="height: 21px;" fxHide.xs="true"></div>
+            <button class="redButton semiBoldMont font14px whiteColor noMargin"
+                    style="height: 42px; width: 140px;"
+                    [disabled]="isPasswordButtonDisabled()"
+                    (click)="onDeleteStudentClicked()">
+              {{ 'reusable.delete' | translate }}
+            </button>
+          </div>
+        </div>
+        <div style="height: 20px;"></div>
+      </div>
+      <div fxFlex="20px"></div>
+    </div>
+    <div style="height: 20px;"></div>
+  </div>
+  <div fxFlex="30px"></div>
+</div>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Tablet_Overview-Copy-6" transform="translate(-26.000000, -102.000000)" stroke="#54676E">
+            <g id="Group" transform="translate(26.000000, 102.000000)">
+                <g id="gauge-dashboard-1">
+                    <circle id="Oval" cx="15" cy="15" r="14.375"></circle>
+                    <path d="M16.7675,16.7675 C15.7865528,17.7149305 14.2272881,17.7013809 13.2629536,16.7370464 C12.2986191,15.7727119 12.2850695,14.2134472 13.2325,13.2325 C14.20875,12.25625 23.3975,6.6075 23.3975,6.6075 C23.3975,6.6075 17.75,15.79125 16.7675,16.7675 Z" id="Shape"></path>
+                    <path d="M4.375,15 L6.25,15" id="Shape"></path>
+                    <path d="M7.4875,7.4875 L8.8125,8.8125" id="Shape"></path>
+                    <path d="M15,4.375 L15,6.25" id="Shape"></path>
+                    <path d="M25.625,15 L23.75,15" id="Shape"></path>
+                    <path d="M25.79125,24.5 C22.6230941,22.3136854 18.8486158,21.176926 15,21.25 C11.1513842,21.176926 7.37690586,22.3136854 4.20875,24.5" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

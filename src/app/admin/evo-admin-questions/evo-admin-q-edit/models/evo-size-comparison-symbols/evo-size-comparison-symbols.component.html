@@ -1,0 +1,27 @@
+<div>
+  <div style="height: 50px;" fxLayoutAlign="center center">
+    <p class="semiBoldMont font18px blackColor noMargin">{{question.model.firstRange.getRange()}} (< | > |
+      =) {{question.model.firstRange.getRange()}}</p>
+  </div>
+  <div>
+    <div fxFlex="20px"></div>
+    <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+      <div fxFlex>
+        <app-evo-reusable-range [title]="'Range'"
+                                [range]="question.model.firstRange">
+        </app-evo-reusable-range>
+        <div style="height: 5px;"></div>
+      </div>
+      <div fxFlex="20px" fxFlex.xs="10px"></div>
+      <div fxFlex>
+        <div style="height: 65px;">
+          <app-evo-dropdown [list]="QuestionModel.ImageTypes.dropdownList()"
+                            [title]="'Image Type'"
+                            [(ngModel)]="question.model.imageTypeOne">
+          </app-evo-dropdown>
+        </div>
+      </div>
+    </div>
+    <div fxFlex="20px"></div>
+  </div>
+</div>

@@ -1,0 +1,96 @@
+<div style="width: 100%; height: 100%; position: absolute; z-index: 10000; background-color: rgba(0, 0, 0, 0.4);"
+     fxLayoutAlign="center center"
+     *ngIf="dateSv.isVisible"
+     (click)="onBackgroundClicked($event)">
+  <div class="whiteBg"
+       style="width: 320px; min-height: 390px; max-height: 100%; border-radius: 8px;"
+       (click)="$event.stopPropagation();">
+    <div>
+      <div style="height: 6px;"></div>
+      <div style="height: 46px; cursor: pointer;" fxLayoutAlign="start center">
+          <p class="boldMont px20 blackColor centerAlign noMargin"
+             style="width: 100%;"
+             (click)="onYearTitleClicked()">
+            {{ this.dateSv.date.year }}
+          </p>
+        </div>
+        <div style="height: 40px;" fxLayoutAlign="center start">
+          <app-evo-dropdown fxFlex="200px"
+                        containerHeight="36px"
+                        [showTitle]="false"
+                        [list]="monthsDropdown"
+                        [currentValue]="dateSv.month.toString()"
+                        [dropdownHeight]="'200px'"
+                        rowHeight="36px"
+                        (valueChangedEvent)="onMonthChanged($event)">
+          </app-evo-dropdown>
+        </div>
+      <div style="height: 6px;"></div>
+      </div>
+    <div class="lightGrayBgColor" style="height: 2px"></div>
+    <div style="height: 16px;" *ngIf="yearSelection === false"></div>
+    <div style="margin: 0 13px;" *ngIf="yearSelection === false">
+      <div>
+        <p fxFlex="42px" class="mediumMont font10px grayColor noMargin centerAlign">{{ 'reusable.dayShortNames.1' | translate }}</p>
+        <p fxFlex="42px" class="mediumMont font10px grayColor noMargin centerAlign">{{ 'reusable.dayShortNames.2' | translate }}</p>
+        <p fxFlex="42px" class="mediumMont font10px grayColor noMargin centerAlign">{{ 'reusable.dayShortNames.3' | translate }}</p>
+        <p fxFlex="42px" class="mediumMont font10px grayColor noMargin centerAlign">{{ 'reusable.dayShortNames.4' | translate }}</p>
+        <p fxFlex="42px" class="mediumMont font10px grayColor noMargin centerAlign">{{ 'reusable.dayShortNames.5' | translate }}</p>
+        <p fxFlex="42px" class="mediumMont font10px grayColor noMargin centerAlign">{{ 'reusable.dayShortNames.6' | translate }}</p>
+        <p fxFlex="42px" class="mediumMont font10px grayColor noMargin centerAlign">{{ 'reusable.dayShortNames.7' | translate }}</p>
+      </div>
+      <div style="height: 6px;"></div>
+      <div>
+        <!-- Rows -->
+        <div *ngFor="let row of this.dateSv.getRows()">
+          <div fxFlex="42px"
+               style="height: 42px;"
+               *ngFor="let day of this.dateSv.getWeekdays()">
+            <div [ngClass]="{ bgGreenHoverColor: isCurrentDay(row, day)}"
+                 class="hover"
+                 fxFlex="36px"
+                 style="height: 36px; border-radius: 18px; cursor: pointer;"
+                 fxLayoutAlign="center center"
+                 (click)="onClick(row, day)">
+              <p class="semiBoldMont font12px centerAlign noMargin"
+                 [ngClass]="{ lightGrayColor: isPreviousMonth(row, day) || isNextMonth(row, day), blackColor: isCurrentMonth(row, day) && !isCurrentDay(row, day), whiteColor: isCurrentDay(row, day) }">
+                {{ getDayOfMonth(row, day) }}
+              </p>
+            </div>
+          </div>
+          <div style="height: 4px"></div>
+        </div>
+      </div>
+    </div>
+    <div class="grayScrollBar" style="margin: 10px 13px; height: 274px; overflow-y: scroll;" *ngIf="yearSelection">
+      <div style="height: 6px;"></div>
+      <div *ngFor="let row of getYearRows(3)">
+        <div style="height: 40px;" fxLayoutAlign="start center">
+          <div class="hover pointer"
+               style="height: 40px; border-radius: 8px;"
+               fxFlex
+               fxLayoutAlign="center center"
+               (click)="onYearSelected(row, 3, 0)">
+            <p class="boldMont font18px blackColor centerAlign noMargin">{{ getYear(row, 3, 0)  }}</p>
+          </div>
+          <div class="hover pointer"
+               style="height: 40px; border-radius: 8px;"
+               fxFlex
+               fxLayoutAlign="center center"
+               (click)="onYearSelected(row, 3, 1)">
+            <p class="boldMont font18px blackColor centerAlign noMargin">{{ getYear(row, 3, 1)  }}</p>
+          </div>
+          <div class="hover pointer"
+               style="height: 40px; border-radius: 8px;"
+               fxFlex
+               fxLayoutAlign="center center"
+               (click)="onYearSelected(row, 3, 2)">
+            <p class="boldMont font18px blackColor centerAlign noMargin">{{ getYear(row, 3, 2)  }}</p>
+          </div>
+        </div>
+        <div style="height: 6px;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+

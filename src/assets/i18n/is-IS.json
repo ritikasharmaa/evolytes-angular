@@ -1,0 +1,1311 @@
+{
+  "lp2": {
+    "common": {
+      "answers": {
+        "amount": "1.200",
+        "label": "SVÖR",
+        "title": "Svarað daglega",
+        "subtitle": "Börn svöruðu allt að 1.200 spurningum á dag í Evolytes námskerfinu. "
+      },
+      "minutes": {
+        "label": "MÍNÚTUR",
+        "title": "Meðal tími í námsleiknum",
+        "subtitle": "Börn læra að meðaltali 26 mínútur í hvert skipti sem þau opna námsleikinn. "
+      },
+      "research": {
+        "subtitle": "Evolytes byggir á þremur árum af þverfaglegum rannsóknum sem gerir námið skemmtilegra og knýr fram bættan námsárangur. Niðurstöður rannsóknanna fóru fram úr okkar björtustu vonum.",
+        "answers12": "Börn með undirliggjandi vanda sýndu fram á mestan vöxt í rannsókninni.",
+        "answers1200": "Börn svöruðu allt að 1.200 spurningum á dag í Evolytes leiknum að eigin frumkvæði í frítíma sínum. ",
+        "answers4": "Börn sýndu að meðaltali fram á fjórfalt meiri vöxt í námsefninu með því að nota kerfið miðað við í skólanum.",
+        "theory": {
+          "reinforcementTitle": "Styrkingahættir",
+          "reinforcementDescription": "Gerir námsleikinn skemmtilegri og heldur áhuga barna til lengri tíma.",
+          "flowTitle": "Flæðiskenningin",
+          "flowDescription": "Er notuð til þess að aðlaga erfiðleikastig námsefnisins að getu hvers barns til þess að hámarka árangur þess.",
+          "spacingTitle": "Áhrif bils",
+          "spacingDescription": "Tryggir að um raunfærni sé að ræða sem mun nýtast barninu um ókomna tíð.",
+          "skillTitle": "Hæfnimyndun",
+          "skillDescription": "Framúrstefnulegar rannsóknir á hæfnimyndun eru notaðar til að rannsaka og meta hæfni barna.",
+          "multimodalTitle": "Fjölþætt hæfnimyndun",
+          "multimodalDescription": "Börn eru líklegri til að mynda auðnýtanlega raunfærni með því að læra á ólíku formi.",
+          "mindsetTitle": "Vaxtar hugarfar",
+          "mindsetDescription": "Greining námsárangurs og framsetning upplýsinga byggja á vaxtar hugarfari."
+        }
+      },
+      "androidComingSoon": "Væntanlegt apríl 2022"
+    },
+    "features": {
+      "books": {
+        "titleMenu": "Bækur",
+        "subtitle": "Evolytes bækurnar eru hannaðar til að æfa skriflega getu og lestur á einstakan og skemmtilegan máta",
+        "skills": "Lestrar- og skrifhæfileikar",
+        "skillsSubtitle": "Bækurnar eru hannaðar til að æfa skriflega getu og lestur til þess að bæta námsárangur.",
+        "integration": "Samtenging við leik",
+        "integrationSubtitle": "Bækurnar tengjast inn í námskerfið í gegnum leikinn. Börn fara í kaflapróf til að kanna þekkingu þeirra á efni kaflans.",
+        "rewards": "Árangurstengd verðlaun",
+        "rewardsSubtitle": "Börn fá verðlaun í námsleiknum við lok hvers kafla í bókinni sem knýr áfram löngun þeirra til skriflegrar æfingar. ",
+        "integrationGame": {
+          "title": "Evolytes bækurnar tengjast leiknum með einstökum hætti",
+          "subtitle": "Evolytes bækurnar tengjast tæknilega inn í leikinn í gegnum QR-kóða sem finnast í bókunum. Skönnun þeirra hrindir af stað könnun úr námsefninu sem börn fá verðlaun fyrir að leysa rétt.",
+          "step1": "Leysa verkefni í bók",
+          "step1Description": "Börn læra að leysa ný stærðfræði dæmi í hverjum kafla í Evolytes bókunum.",
+          "step2": "Skanna kóða",
+          "step2Description": "Kóðinn virkjar könnun úr námsefni kaflans, svari börn rétt fá þau verðlaun í leiknum. ",
+          "step3": "Klára kaflapróf",
+          "step3Description": "Við það að klára kaflapróf í námsleiknum fá börn verðlaun fyrir að klára kaflann.",
+          "step4": "Skoðaðu framförina",
+          "step4Description": "Fylgstu með framför barnsins í bókinni og árangur þess í könnununum í upplýsingakerfinu."
+        },
+        "shop": {
+          "subtitle": "Í boði eru bækur með mismunandi erfiðleikastig. Við munum bæta við fleirri bókum, bæta við leikinn, víkka ævintýrið og fjölga vinsælu Evolytes dýrunum.",
+          "now": "Kaupa núna",
+          "errorFetchBook": "Sorry, something's wrong during the fetch of the books",
+          "age": "ára",
+          "grade": "bekk"
+        },
+        "features": {
+          "title": "Eiginleikar bókanna",
+          "description": "Evolytes bækurnar eru hannaðar með einstökum eiginleikum sem gera stærðfræði nám í þeim skemmtilegra",
+          "feature1": {
+            "title": "Bættur námsárangur og jákvætt viðhorf til stærðfræði",
+            "description1": "Börn læra stærðfræði með skemmtilegum hætti í Evolytes bókunum auk þess sem þau fá einnig áhugaverðar upplýsingar um Evolytes dýrin.",
+            "description2": "Einstök samtenging bókanna við námsleikinn fær börn til þess að klára námsefnið á met tíma, bætir námsárangur þeirra og ýtir undir jákvætt viðhorf þeirra til stærðfræði.",
+            "benef1": "Betri námsárangur",
+            "benef2": "Jákvætt viðhorf"
+          },
+          "feature2": {
+            "title": "Hannað til að kenna börnum ný viðfangsefni í stærðfræði",
+            "description1": "Evolytes bækurnar kenna börnum hvernig á að leysa ný viðfangsefni í stærðfræðinni. Evolyte dýrin leiða börn áfram skref fyrir skref í gegnum ný stærðfræðidæmi.",
+            "description2": "Hönnun bókanna er í senn grípandi og auðskiljanleg sem knýr fram bættan námsárangur.",
+            "benef1": "Skrifleg geta",
+            "benef2": "Lesskilningur"
+          },
+          "feature3": {
+            "title": "Tæknileg tenging Evolytes bókanna við námskerfið",
+            "description1": "Við lok hvers kafla er QR-kóða sem hægt er að skanna í gegnum Evolytes leikinn. Það sækir könnun sem birtist í leiknum úr námsefninu sem farið var yfir í kaflanum. Ef barnið svarar að minnsta kosti 80% af könnuninni rétt fá þau verðlaun í leiknum.",
+            "description2": "Í upplýsingakerfinu er hægt að sjá niðurstöður hverrar könnunar og hvort það þurfi að aðstoða barnið frekar við viðfangsefnið. Í hverjum kafla er einnig hægt að lesa skemmtilegar upplýsingar um Evolytes dýrin.",
+            "benef1": "Tæknileg tenging",
+            "benef2": "Verðlaun"
+          }
+        }
+      },
+      "game": {
+        "subtitle": "Evolytes leikurinn er á pari við það skemmtiefni sem börn sækjast í og gerir því stærðfræðinám áhugavert og skemmtilegt.",
+        "math": {
+          "title": "Gerir stærðfræði skemmtilega",
+          "subtitle": "Evolytes leikurinn er hágæða leikur sem gerir stærðfræði skemmtilega. Í honum safnar barnið þitt fallegum dýrum, hugsar um þau og lendir í skemmtilegum ævintýrum með þeim.",
+          "explanations": {
+            "title1": "Evolytes dýrin",
+            "subtitle1": "Safnaðu dýrum, gefðu þeim að borða og þjálfaðu þau með því að svara stærðfræðispurningum rétt.",
+            "title2": "Þróaðu dýrin þín",
+            "subtitle2": "Þjálfaðu dýrin þín til þess að þau eignist fleiri hæfileika og þróist í stærri og sterkari dýr.",
+            "title3": "Sístækkandi ævintýraheimur",
+            "subtitle3": "Veldu þér persónu og byrjaðu að kanna Evolytes ævintýraheiminn og sögurnar sem leynast í honum.",
+            "title4": "Faldir fjarsjóðir",
+            "subtitle4": "Finndu fjarsjóðskistu í umhverfinu og leystu dæmin til þess að sjá hvað leynist í þeim."
+          }
+        },
+        "character": {
+          "title": "Evolytarnir þínir",
+          "subtitle": "Börnin fá að velja hvaða persónu þau vilja spila og hvaða dýr, evolýt, þau byrja með. Sérhver evolýti bíður upp á fjölskyldu af evolýtum sem hægt er að þróa þá í.",
+          "Lucas": "Lúkas & Logi",
+          "Eva": "Eva & Sæný",
+          "Oliver": "Óliver & Baddi",
+          "Sarah": "Sara & Ava"
+        },
+        "story": {
+          "title": "Kynntu þér söguna",
+          "subtitle": "Evolytes söguheimurinn fylgir eftir fjórum vinum sem eru að uppgötva evolýta á eyjunni sinni. Sjáðu upphaf sögunnar hér fyrir neðan."
+        },
+        "evolve": {
+          "title": "Safnaðu og þróaðu",
+          "subtitle1": "Fjölmargir evolýtar til þess að velja",
+          "explanation1": "Evolýti getur þróast í mismunandi stærri evolýta. Sjáðu hér til hliðar. Sérhver evolýti hefur svo einstaka hæfileika og brögð sem börnin uppgötva.",
+          "subtitle2": "Evolýta fjölskyldurnar",
+          "explanation2": "Evolýtar eiga allir sitt sérstæða fjölskyldutré. Það er því hægt að þróa hvern evolýt í mismunandi evolýta. Fjölskyldurnar hafa allar sín séreinkenni."
+        },
+        "engaged": {
+          "title": "Evolytes er hannað til þess að vekja áhuga barna",
+          "subtitle": "Evolytes er byggt þverfaglegum rannsóknum og notar framúrstefnulegar sálfræðikenningar til þess að bæta námsárangur barna og til þess að halda áhuga þess til lengri tíma."
+        },
+        "platform": {
+          "title": "Evolytes námskerfið",
+          "subtitle": "Sjáðu hvað gerir Evolytes námskerfið einstakt og hvernig samvirkni varanna gerir námskerfið að einu fremsta námstæknitóli á markaði í dag.",
+          "booksSubtitle": "Evolytes bækurnar eru hannaðar til að æfa nýtt námsefni og veita skriflega æfingu. Þær tengjast einnig tæknilega inn í leikinn.",
+          "monitorSubtitle": "Fáðu nákvæma sýn á framvindu barnsins í námsefninu, styrkleika og veikleika þess, í rauntíma inn í upplýsingakerfinu.",
+          "gameSubtitle": "Evolytes leikurinn aðlagar erfiðleikastig námsefnisins að hverju barni í rauntíma og gerir æfinguna skemmtilega."
+        }
+      },
+      "monitor": {
+        "subtitle": "Í upplýsingakerfinu er hægt að fylgjast með námsframvindu barnsins í rauntíma.",
+        "overview": {
+          "title": "Rauntíma upplýsingar",
+          "subtitle": "Börn læra hraðar og með meiri árangri með Evolytes. Við viljum ekki bara að þú trúir okkur í blindni, þú getur séð það með þínum eigin augum í upplýsingakerfinu.",
+          "explanations": {
+            "title1": "Mælaborð",
+            "subtitle1": "Þú færð skýra og auðlesanlega mynd af námsframvindu barnsins þíns á mælaborðinu.",
+            "title2": "Upplýsingar",
+            "subtitle2": "Fylgstu með tíma og fjölda spurninga sem barnið þitt leysir vikulega.",
+            "title3": "Framför í bók",
+            "subtitle3": "Fylgstu með hvernig barninu gengur í bókinni og sjáðu hvaða efni barnið á í erfiðleikum með.",
+            "title4": "Svör",
+            "subtitle4": "Þú getur séð öll dæmi og svör sem barnið hefur svarað í námsleiknum og lesið hvar styrkleikar og veikleikar barnsins eru byggt á þeim."
+          }
+        },
+        "features": {
+          "title": "Eiginleikar",
+          "subtitle": "Upplýsingakerfið bíður upp á ýmsar upplýsingar varðandi námsframvindu barnsins þíns.",
+          "explanation": {
+            "title": "Rauntíma upplýsingar um námsframvindu",
+            "subtitle1": "Upplýsingakerfið veitir þér auðlesanlegar upplýsingar um námsframvindu barnsins þín. Þú sérð nýjustu upplýsingarnar fyrst og getur því auðveldlega séð hverjir styrkleikar þess og veikleikar eru á hverjum tíma.",
+            "subtitle2": "Mælaborðið er besta leiðin til að vera alltaf upplýstur um stöðu barnsins þíns. ",
+            "progress": "Námsframvinda",
+            "realTime": "Rauntíma upplýsingar"
+          }
+        },
+        "skills": {
+          "title": "Skoðaðu hvernig færni barnsins þíns þróast",
+          "subtitle": "Þú getur fylgst með námshæfileikum barnsins þróast í rauntíma inn í upplýsingakerfinu. Bæði stöðu þeirra nú og hvernig námshæfileikarnir hafa þróast við notkun kerfisins. Þannig getur þú komið fljótt og örugglega auga á þá þætti sem barnið þarf aðstoð með.",
+          "acquisiton": "Hæfnimyndun",
+          "analytics": "Innsýn í framvindu"
+        },
+        "book": {
+          "title": "Árangur í bók, könnun í lok kafla og verðlaun",
+          "subtitle1": "Þú getur fylgst með árangri barnsins í bókunum inn upplýsingakerfinu. Lesið stöðu barnsins þíns í námsefninu, hvaða kafla þau hafa lokið og hvaða kafla þau eiga í erfiðleikum með.",
+          "subtitle2": "Þessi virkni gerir þér kleift að sjá án fyrirhafnar hvar barninu gengur vel og hvar það þarf aðstoð.",
+          "bookProgress": "Árangur í bók",
+          "problem": "Þörf á aðstoð"
+        },
+        "answers": {
+          "title": "Fáðu nákvæmari innsýn á námsárangur",
+          "subtitle": "Þú getur kafað dýpra ofaní námsframvindu barnsins í upplýsingakerfinu þar sem þú getur séð allar spurningar sem barnið hefur svarað og árangur barnsins í þeim. Þú getur auðveldlega greint svörin þeirra nánar með því að sigta fram upplýsingarnar sem þú leitar að.",
+          "answerIcon": "Svör",
+          "filtering": "Auðnýtanlegar síur"
+        }
+      }
+    },
+    "pricing": {
+      "Subscriptions": {
+        "title": "Áskriftarleiðir",
+        "subtitle": "Við bjóðum upp á mismunandi áskriftarleiðir sem munu breyta því hvernig barnið þitt lærir stærðfræði.",
+        "month": "mánuði",
+        "perChild": "fyrir hvert barn, ",
+        "paymentFrequency1": " greitt mánaðarlega",
+        "paymentFrequency2": "greitt á 3 mánaða fresti",
+        "paymentFrequency3": "greitt á 6 mánaða fresti",
+        "buyNow": "Kaupa núna",
+        "Bonus": "Kaupauki",
+        "BonusSubtitle": "Innifalið við fyrstu greiðslu",
+        "BookText": "Evolyets bók að eigin vali",
+        "includes": "Innifalið",
+        "shortDescription": "Námsleikur, upplýsingakerfi og einstaklingsmiðað námsefni.",
+        "freeTrial": {
+          "title": "Prufa",
+          "message": " daga frí prufa",
+          "detailMessage": "Ekkert kreditkort, engin skuldbinding!",
+          "try": "Prófa",
+          "startTrialTitle": "Velkomin í fría prufu",
+          "startTrialMessage": "Þú ert að hefja 7 daga prufu á Evolytes námskerfinu. Við krefjumst ekki kreditkorts eða neinna greiðsluupplýsinga til að þú byrjir að prófa námskerfið. Vonum að barnið þitt njóti Evolytes heimsins og læri sem mest!",
+          "expired": "Prufu lokið"
+        },
+        "1m": {
+          "title": "1 mánuður"
+        },
+        "3m": {
+          "title": "3 mánuðir"
+        },
+        "6m": {
+          "title": "6 mánuðir"
+        },
+        "12m": {
+          "title": "12 mánuðir"
+        }
+      },
+      "School": {
+        "title": "Skólar",
+        "subtitle": "Við bjóðum skólum sérstök verð sem sniðin eru að hverjum skóla. Hafðu samband og heyrðu hvers vegna skólar á Íslandi bítast um að taka upp kerfið. ",
+        "subtitle2": "Hvað er innifalið?",
+        "leftIcon1": {
+          "title": "Evolytes leikur",
+          "subtitle": "Allir skólar fá ótakmarkaðan aðgang að Evolytes leiknum, allri hans virkni án auglýsinga eða takmarkana."
+        },
+        "leftIcon2": {
+          "title": "Evolytes bækur",
+          "subtitle": "Bækurnar sem fylgja námskerfinu eru hannaðar til að kenna nýtt námsefni og æfa skriflega hæfni."
+        },
+        "leftIcon3": {
+          "title": "Upplýsingakerfi",
+          "subtitle": "Upplýsingakerfið veitir upplýsingar um námsframvindu nemenda, styrkleika og veikleika, í rauntíma."
+        },
+        "rightIcon1": {
+          "title": "Framúrskarandi þjónusta",
+          "subtitle": "Þjónusta er í boði alla daga vikunnar í síma, tölvupósti eða á netinu."
+        },
+        "rightIcon2": {
+          "title": "Frí námskeið",
+          "subtitle": "Allir kennarar og aðrir starfsmenn skólans geta fengið námskeið til að kynna sér og læra á námskerfið. "
+        },
+        "rightIcon3": {
+          "title": "Hjálparefni",
+          "subtitle": "Skólar fá aðgang að sérgerðum myndböndum, kennsluhandbók og námskeiðum."
+        },
+        "buttonGetAQuote": "Fá tilboð",
+        "buttonRequestADemo": "Fá prufuaðgang",
+        "textMore": "Vantar þig meiri upplýsingar um notkun Evolytes námskerfisins í skólum?",
+        "MoreButton": "Læra meira"
+      },
+      "Learning": {
+        "title": "Bættur námsárangur",
+        "subtitle": "Evolytes byggir á áralöngum þverfaglegum rannsóknum þar sem framúrstefnulegar kenningar eru nýttar til að bæta námsárangur barna og halda þeim áhugasömum til lengri tíma.",
+        "endingText": "Komdu barninu þínu eða nemendum á bragðið í dag og sjáðu þau skara framúr í stærðfræði með Evolytes."
+      }
+    },
+    "landing": {
+      "tagline": "Skemmtileg og árangursrík leið til að læra stærðfræði",
+      "description": "Evolytes námskerfið kennir börnum 5-8 ára stærðfræði hraðar með skemmtilegri og árangursríkari hætti.",
+      "buyButton": "Kaupa núna",
+      "login": "Innskráning",
+      "evolytesPart": {
+        "title": "Breytum því hvernig börn læra",
+        "description": "Evolytes námskerfið sameinar námsleik, námsbók og upplýsingakerfi til þess að bæta námsárangur barna.",
+        "gameTitle": "Evolytes leikurinn",
+        "gameDescription": "Námsleikurinn gerir stærðfræðinám skemmtilegt í gegnum opinn ævintýraheim sem börnin gleyma sér í.",
+        "bookTitle": "Bækur",
+        "bookDescription": "Evolytes bækurnar eru hannaðar til að veita barninu þínu skriflega æfingu í námsefninu.",
+        "monitorTitle": "Upplýsingakerfi",
+        "monitorDescription": "Þú getur fylgst með námsframvindu barnsins þíns í rauntíma. Séð styrkleika þeirra og veikleika í námsefninu."
+      },
+      "universePart": {
+        "title": "Evolytes ævintýraheimurinn",
+        "description": "Ævintýraheimurinn knýr námsárangur barna áfram á ótrúlegum hraða, þar sem börn gleyma sér við að læra stærðfræði."
+      },
+      "howPart": {
+        "title": "Hvernig virkar Evolytes?",
+        "description1": "Barnið þitt svarar spurningum til að komast áfram í skemmtilega ævintýraheim Evolytes leiksins.",
+        "description2": "Námskerfið greinir svör barnsins þíns og aðlagar erfiðleikastig spurninganna að getu barnsins þíns.",
+        "description3": "Námsbókin tengist inn í námskerfið með QR-kóðum. Barnið skannar kóðann í lok hvers kafla til að sækja sér verðlaun.",
+        "description4": "Þú getur svo fylgst með framvindu barnsins þíns í námsefninu inn í upplýsingakerfinu, séð styrkleika þess og veikleika."
+      },
+      "researchPart": {
+        "title": "Rannsóknabyggt námskerfi",
+        "description": "Evolytes námskerfið varð til við þverfaglegar rannsóknir þar sem sálfræðikenningar voru nýttar til þess að bæta námsárangur barna og gera viðhorf þeirra til námsins jákvæðara.",
+        "theory": {
+          "reinforcementTitle": "Styrkingarhættir",
+          "reinforcementDescription": "Gerir námsleikinn skemmtilegri og heldur áhuga barna til lengri tíma.",
+          "flowTitle": "Flæðiskenningin",
+          "flowDescription": "Er notuð til þess að aðlaga erfiðleikastig námsefnisins að getu hvers barns til þess að hámarka árangur þess.",
+          "spacingTitle": "Áhrif bils",
+          "spacingDescription": "Tryggir að hæfnin sem barnið lærir með Evolytes færist yfir í langtíma minnið."
+        }
+      },
+      "featureSection": {
+        "title": "Nýir Eiginleikar",
+        "description": "Við vinnum náið með skólum til að halda áfram að þróa besta stærðfræði námskerfi sem völ er á. Ef þú hefur hugmynd að breytingum eða viðbótum við kerfið endilega hafið samband. Okkur finnst frábært að fá ferskar hugmyndir!"
+      },
+      "schoolSection": {
+        "title": "Evolytes í skólum",
+        "description": "Við bjóðum upp á sérverð fyrir skóla. Kynntu þér málið og sjáðu afhverju stór hluti skóla á Íslandi velja að nota Evolytes námskerfið."
+      },
+      "testimonials": {
+        "1": {
+          "position": "Verkefnastjóri í upplýsingatækni",
+          "school": "Grunnskóli Fjallabyggðar",
+          "text": "Nú eru nokkrir nemendur lagðir af stað í Evolytes ævintýrið og veistu, þetta er SNILLD. Þvílíkur árangur sem sést strax hjá nemendum! Þið fáið eitt risa hrós hjá okkur!"
+        },
+        "2": {
+          "position": "Nemandi í 5. bekk",
+          "school":"Varmársskóli",
+          "text": "Venjulega eru leikir sem kenna eitthvað barnalegir og leiðinlegir. Evolytes er ekki svoleiðis!"
+        }
+      },
+      "supportPart": {
+        "title": "Stuðningsaðilar",
+        "description": "Við hjá Evolytes viljum þakka Tækniþróunarsjóði og Nýsköpunarmiðstöð Íslands fyrir þann stuðning sem okkur var veitt við þróun Evolytes námskerfisins."
+      },
+      "startingPriceOne": "Verð frá ",
+      "startingPriceTwo": " á mánuði",
+      "memberButton": "Kaupa núna",
+      "download": "Download on",
+      "appStore": "App Store",
+      "appGoogle": "Google play",
+      "learnMoreButton": "Læra meira",
+      "demoButton": "Fá prufuaðgang"
+    },
+    "schools": {
+      "introduction": {
+        "title": "Evolytes fyrir skóla",
+        "subtitle": "Evolytes námskerfið hefur verið sérstaklega aðlagað að þörfum skóla í nánu samstarfi við kennara víðsvegar um landið. Við viljum valdefla kennara með nútímavæddum tólum sem auðveldar þeim að hjálpa börnum að ná árangri."
+      },
+      "tool": {
+        "title": "Tól fyrir kennara",
+        "subtitle": "Evolytes námskerfið er hannað til að valdefla kennara og nemendur. Upplýsingakerfið gefur rauntíma upplýsingar um framgang nemenda í námsefninu sem létta undir með kennurum.",
+        "monitorDescription": "Í skjánum er hægt að hafa rauntíma yfirlit yfir námsframvindu barnsins, styrkleika og veikleika.",
+        "gameDescription": "Nemendur svara stærðfræðispurningu til að framkvæma aðgerðir í leiknum eins og til dæmis að gefa dýri að borða."
+      },
+      "engaging": {
+        "title": "Vekur áhuga nemenda",
+        "subtitle": "Evolytes leikurinn og bækurnar eru hannaðar til að halda áhuga og athygli nemenda til lengri tíma svo nemendur finni sig sjálfa knúna til að læra.",
+        "individualizedTitle": "Einstaklingsmiðað námsefni",
+        "individualizedSubtitle1": "Kjarni námskerfisins er gagnadrifinn hugbúnaður sem metur svör nemenda í rauntíma og aðlagar erfiðleikastig námsefnisins að þeirra getustigi.",
+        "individualizedSubtitle2": "Hugbúnaðurinn veitir kennurum einnig rauntíma yfirlit yfir framgang nemendanna í námsefninu svo kennarar geti auðveldlega séð stöðu nemendanna í námsefninu. Það minnkar vinnuálag kennara við námsmat.",
+        "savesTime": "Sparar tíma",
+        "LearningInsights": "Námsmat",
+        "dashboardTitle": "Stjórnborðið - Rauntíma upplýsingar",
+        "dashboardSubtitle": "Kennarar fá rauntíma upplýsingar um stöðu nemenda á meðan þau læra inn í upplýsingakerfinu og nemendur fá einstaklingsmiðað námsefni."
+      },
+      "keeping": {
+        "title": "Heldur nemendum áhugasömum",
+        "description1": "Evolytes leikurinn er hágæða námsleikur sem er á pari við það skemmtiefni sem börn sækja í. Ævintýraheimurinn, frásagnir hans og persónurnar sem nemendur kynnast þar gera lærdóminn skemmtilegan.",
+        "description2": "Nemendur læra hraðar með Evolytes, eru tilbúin til að eyða meiri tíma í að læra og verða jákvæðari gagnvart námsefninu.",
+        "fun": "Skemmtilegt",
+        "positiveFeeling": "Jákvæðni",
+        "pictureTitle": "Opinn ævintýraheimur",
+        "pictureSubtitle": "Ævintýraheimur Evolytes er opinn heimur þar sem hægt er að safna fjölda dýra, hugsa um þau, leysa verkefni og komast lengra inn í söguna."
+      },
+      "books": {
+        "title": "Bækurnar tengjast við námskerfið",
+        "description1": "Bækurnar eru hannaðar út frá ævintýraheimi Evolytes. Evolytes dýrin leiða nemendur áfram í náminu og í þeim er einnig hægt að lesa nánar um Evolytes dýrin sem finnast í ævintýraheiminum.",
+        "description2": "Í lok hvers kafla má finna QR-kóða sem hægt er að skanna inn í leiknum. Kóðinn hleypir af stað kennslukönnun út úr námsefni kaflans. Verðlaun eru í boði fyrir nemandann inn í leiknum ef hann sýnir fram á hæfilegan árangur í könnuninni. Kennarar geta fylgst með niðurstöðum kannannna í upplýsingakerfinu.",
+        "writingSkills": "Skrifleg hæfni",
+        "readingSkills": "Leshæfni",
+        "pictureTitle": "Bækurnar",
+        "pictureSubtitle": "Eru sérstaklega hannaða til að leggja inn nýtt námsefni og þjálfa skriflega æfingu. Þær tengjast tæknilega inn í námskerfið með einstökum hætti."
+      },
+      "how": {
+        "title": "Þjónusta við skóla",
+        "subtitle": "Allir skólar geta fengið fría prufuáskrift til að kynnast námskerfinu en Evolytes býður upp á sérstaka útgáfu fyrir skóla með námskeiðum, hjálparefni og auka þjónustu",
+        "freeTrial": {
+          "title": "Frír prufuaðgangur",
+          "subtitle": "Öllum kennurum og starfsmönnum skólans býðst frír prufuaðgangur til að kynnast virkni námskerfisins."
+        },
+        "requestText": "Þegar þú biður um prufuaðgang færðu aðgang að kerfinu bæði sem kennari og nemandi svo þú getir kynnst kostum kerfisins. Fáðu tilboð í leið sem hentar þínum skóla."
+      },
+      "research": {
+        "title": "Byggt á rannsóknum",
+        "subtitle": "Evolytes er byggt á þriggja ára þverfaglegum rannsóknum í tölvunarfræði og sálfræði til að gera nám skemmtilegt, taka þátt og bæta hæfniöflun. Niðurstöður rannsóknanna fóru fram úr björtustu væntingum.",
+        "learnMore": "Læra meira"
+      }
+    },
+    "faq": {
+      "title": "Algengar spurningar",
+      "subtitle": "Hér getur þú fundið svör við algengustu spurningum um Evolytes námskerfið.",
+      "q1": "Fyrir hvaða aldur er Evolytes námskerfið?",
+      "a1": "Evolytes námskerfið er ætlað börnum 5-9 ára. Um viðmiðunaraldur er að ræða, en námskerfið leggur inn grunnþekkingu í stærðfræði. \n\nNámskerfið hentar einkar vel þeim börnum sem eiga í erfiðleikum með grunnþætti stærðfræði. Algengt er að námskerfið sé notað fyrir nemendur í sérkennslu upp allt grunnskólastigið. Einnig getur námskerfið hentað yngri börnum. Ef þú telur að barnið þitt sé tilbúið að læra stærðfræði fyrr þá má alveg nýta það fyrir yngri börn.\n\nNámskerfið getur því nýst börnum 3-16 ára. Fer allt eftir stöðu hvers einstaklings. \n",
+      "q2": "Á hvaða tækjum er hægt að keyra Evolytes námskerfið á?",
+      "a2": "Evolytes námsleikurinn er aðeins til fyrir iOS spjaldtölvur (Apple ipad). Von bráðar verður hægt að keyra námsleikinn á öllum gerðum spjaldtölva og snjallsíma, en uppfærsla á námsleiknum er væntanleg.\n\nUpplýsingakerfið virkar á öllum helstu vöfrum. Þú getur því opnað það á öllum gerðum tölva, spjaldtölva og snjallsíma. \n\n\nNámsbækurnar eru á skriflegu formi og því þarf ekki nein tæki til að nýta þær.",
+      "q3": "Hvernig tengist námsbókin við leikinn og upplýsingakerfið?",
+      "a3": "Námsbókin tengist við námskerfið í gegnum Evolytes leikinn í gegnum QR-kóðana sem finna má í lok hvers kafla í bókunum. Ath! Aðeins er hægt að skanna QR-kóðana í gegnum námsleikinn. Ekki er hægt að nota myndavélina í tækinu þínu beint. \n\nQR-kóðinn virkjar kennslukönnun úr námsefni kaflans, en með því að sýna fram á þekkingu á námsefni kaflans (svara 80% spurninga rétt) fá börn verðlaun fyrir að hafa klárað kaflann. Á þennan hátt er hægt að tengja skriflega æfinguna í bókina inn í tæknilegan hluta námskerfisins. \n\nInn í upplýsingakerfinu getur þú fylgst með árangri barnsins í bókinni með því að lesa árangur barnsins í kennslukönnun hvers kafla.",
+      "q4": "Hvernig skanna ég QR-kóðann í bókinni?",
+      "a4": "Aðeins er hægt að skanna QR-kóðana í bókunum í gegnum Evolytes leikinn. \n\nOpnaðu leikinn og farðu inn á þann notanda sem á tiltekna námsbók. Í aðalvalmynd leiksins má sjá þrjá takka í efra hægra horni skjásins. Ýttu á takkann sem er með myndavél í. Mikilvægt er að veita leiknum aðgang að myndavél tækisins, án þess er ekki hægt að skanna kóðann. Þú þarf að fara í stillingar tækisins og heimila notkun leiksins á myndavél ef myndavélin virkar ekki og enginn gluggi poppar upp.  \n\nBeindu nú myndavél tækisins að QR-kóðanum sem þú ætlar að skanna. Þegar leikurinn hefur greint QR-kóðann verður grái takkinn á skjánum grænn. Þegar takkinn er grænn getur þú ýtt á hann. Nú hefur þú skannað QR-kóðann.",
+      "q5": "Myndavélin/myndavélatakkinn virkar ekki. Hvernig virkja ég hann?",
+      "a5": "Ef myndavélin virkar ekki inn í námsleiknum er líklegast að leikurinn hafi ekki heimild til að nota myndavélina í tækinu. Þú þarft að fara út úr leiknum og inn í stillingar tækisins til að breyta þessu. \n\nInn í stillingum getur þú fundið forritið og heimilað notkun þess á myndavélinni. Þegar því er lokið er best að endurræsa leikinn og þá ætti myndavélin að virka.",
+      "q6": "Hvað er einstakt við Evolytes?",
+      "a6": "Evolytes námskerfið byggir á áralöngum einstökum þverfaglegum rannsóknum þar sem sálfræðikenningar eru nýttar til að knýja fram aukna námsfærni hjá nemendum. Nýting niðurstaðna úr rannsóknunum gerir okkur kleift að hraða færniupptöku barna og fá þau til að læra meira og með betri árangri. \n\nEinnig er samtenging skriflegrar bókar við námsleik og upplýsingakerfi er einstakt á heimsvísu. Bækurnar veita bæði skriflega æfingu og auka líkurnar á því að færnin sem barnið aflar í Evolytes námskerfinu myndi raunfærni sem barnið býr yfir til framtíðar.",
+      "q7": "Hvaða færni æfir Evolytes?",
+      "a7": "Evolytes námskerfið æfir grunnfærni í stærðfræði, bæði orðanotkun og talnaskilninginn á bakvið. Núverandi námsefni fer sérstaklega yfir; \nTalningu, tengingu magns við tölu\nSamlagningu 1-999\nFrádrátt 1-999\nTalnahúsið, einingar, tugir og hundruð.\nSamlagning margra þátta\nMargföldun\nAlgebru\nMynstur\nStærri og minni en\nGrunnformin\nAfkóðun\n\nViðbætur við námsefnið bætast við reglulega og því mun námskerfið fylgja framför barnsins þíns. \n",
+      "q8": "Hvernig breyti ég eða segi upp áskrift minni?",
+      "a8": "Þú getur breytt áskriftinni þinni og sagt upp áskrift inn í upplýsingakerfinu. \n\nSkráðu þig inn í upplýsingakerfið og farðu í stillingar. Undir greiðsluupplýsingum er hægt að finna takka (Breyta áskrift) þar sem þú getur breytt áskriftinni þinni. \n",
+      "q9": "Á hvaða tungumálum er Evolytes fáanlegt?",
+      "a9": "Evolytes er fáanlegt á íslensku, ensku og frönsku.",
+      "q10": "Af hverju er skjárinn minn tómur?",
+      "a10": "Líklegast er að skjárinn þinn sé tómur vegna þess að þú ert ekki tengdur við netið. Athugaðu nettenginguna þína og endurræstu leikinn.",
+      "q11": "Get ég deilt aðgangi mínum að skjánum með foreldri eða kennara?",
+      "a11": "Ef þú vilt deila aðgangi þínum með öðrum aðilum þarft þú að senda okkur tölvupóst á evolytes@evolytes.com og óska eftir því að deila upplýsingunum. Fram þarf að koma eftirfarandi upplýsingar; \nNetfangið sem notað er við innskráningu í Evolytes námskerfið\nNafn barns (þess barns sem deila á upplýsingum um ef notandi hefur fleiri en eitt barn í námskerfinu)\nNetfang þess aðila sem ætlað er að deila með\n\nEf allar upplýsingar liggja fyrir mun aðilinn sem á að deila með fá tölvupóst á netfangið sitt þar sem aðilinn getur virkað aðganginn sinn. Upplýsingar um námsframvindu barnsins mun þá birstast inn á þeim aðgangi.",
+      "q12": "Hvernig aðlagast Evolytes að stigi barnsins / nemanda míns?",
+      "a12": "Öll svör sem börn svara í Evolytes námskerfinu eru notuð til að meta hvar barn er statt í námsefninu. Hvar barnið sýnir fram á fulla færni og hvar barnið þarf á meiri æfingu að halda. \n\nNámskerfið aðlagar erfiðleikastig námsefnisins að getustigi barnsins í rauntíma byggt á fyrri svörum þess. Öll börn byrja á sama stað í námsefninu en með því að sýna fram á fulla færni verður námsefnið smám saman erfiðara. \n\nAthugið að börn halda áfram að fá spurningar úr námsefni sem vitað er að þau hafi fulla færni í þar sem námskerfið vill tryggja að barnið hafi myndað raunfærni í námsefninu og sé ekki búið að gleyma færninni. Sýni barnið fram á að geta ekki svarað námsefninu rétt lengur mun það fara að æfa sig í því námsefni aftur.",
+      "ManualsButton": "Handbækur & myndbönd",
+      "HelpButton": "Help Center"
+    },
+    "footer": {
+      "product": "Evolytes",
+      "game": "Námsleikur",
+      "research": "Rannsóknir",
+      "schools": "Skólar",
+      "company": "Fyrirtækið",
+      "aboutUs": "Um okkur",
+      "contactUs": "Hafðu samband",
+      "help": "Aðstoð",
+      "faq": "Algengar spurningar",
+      "terms": "Notendaskilmálar",
+      "policy": "Persónuverndarstefna",
+      "email": "evolytes@evolytes.com",
+      "culture": "Great Britain"
+    },
+    "aboutUs": {
+      "title": "Breytum því hvernig börn læra!",
+      "ourStory": {
+        "title": "Sagan okkar",
+        "description": "Einn stofnenda fyrirtækisins, Mathieu G. Skúlason, sá erfiðleika systur sinnar í námi og gerði sér grein fyrir að hann gæti nýtt þverfaglega nálgun byggt á rannsóknunum hans til að hjálpa henni að læra stærðfræði. Það varð kveikjan að frekari rannsóknum og síðar frekari þróun á námskerfinu.",
+        "y2014": {
+          "title": "Þverfaglegar rannsóknir sem Evolytes námskerfið byggir á",
+          "description": "Þróun Evolytes námskerfisins hófst á þverfaglegum rannsóknum í sálfræði og tölvunarfræði um áhrif styrkingahátta í tölvuleikjum á fólk sem framkvæmdar voru af Mathieu Gretti Skúlasyni inn í afburðarkerfinu Aperio í Háskólanum í Reykjavík."
+        },
+        "y2016": {
+          "title": "Rannsókn á hraðari færniupptöku í stærðfræði",
+          "description": "Niðurstöður um notkun styrkingahátta í tölvuleikjum yfirfærðar á rannsóknir ætlaðar til að hraða fyrir og bæta færniupptöku í stærðfræðinámi. Niðurstöður sýndu a lærðu lærðu ekki bara hraðar, þau voru líklegri til að svara rétt með þessum hætti og urðu jákvæðari gagnvart stærðfræði."
+        },
+        "y2017": {
+          "title": "Gulleggið frumkvöðlakeppni - 3. sæti",
+          "description": "Niðurstöður rannsóknanna voru það jákvæðar að stofnað var teymi um verkefnið og það tekið áfram í frumkvöðlakeppni þar sem hugmyndin var mótuð enn frekar.\n\nVerkefnið fékk góðar undirtektir og hafnaði í þriðja sæti af 250 verkefnum."
+        },
+        "y2017bis": {
+          "title": "Startup Reykjavík viðskiptahraðall og styrkveitingar",
+          "description": "Verkefnið tók þátt í Startup Reykjavík viðskiptahraðlinum, þá undir nafninu Flow Education eða Námsflæði. Startup Reykjavík Invest fjárfesti 2,4 m.kr. fyrir 6% hlut í fyrirtækinu. \n\nAuk þess hlaut verkefnið styrkinn Fræ frá Tækniþróunarsjóði og styrk frá Nýsköpunarmiðstöð Íslands."
+        },
+        "y2018": {
+          "title": "Tækniþróunarsjóður Íslands styrkir verkefnið",
+          "description": "Verkefnið hlýtur styrkinn Sprota upp á 20 m.kr. fyrir áframhaldandi þróun á Evolytes námskerfinu. Styrkurinn spilaði stórt hlutverk við þróun og útgáfu Evolytes námskerfisins hérlendis."
+        },
+        "y2020": {
+          "title": "Útgáfa Evolytes námskerfisins á Íslandi",
+          "description": "Evolytes námskerfið kom út á einstaklingsmarkaði við mjög góðar undirtektir í mars árið 2020. Í kjölfarið sýndu skólar mikinn áhuga á upptöku námskerfisins og var það tekið upp í 15 skólum strax um haustið."
+        },
+        "y2021": {
+          "title": "Evolytes leiðandi gagnadrifið tól í skólum landsins",
+          "description": "Evolytes námskerfið er leiðandi gagnadrifið tól sem auðveldar vinnu kennara og gerir stærðfræðinám árangursríkara og skemmtilegra. Það er þessvegna sem 40% grunnskóla á Íslandi hafa lagt af stað í Evolytes ævintýrið."
+        }
+      },
+      "team": {
+        "title": "Teymið",
+        "description": "Evolytes teymið samanstendur af fjölbreyttum hóp einstaklinga með enn fjölbreyttari bakgrunn. Allt frá sálfræði, uppeldisfræði, hönnun, töluvleikjaþróun og forritun.",
+        "ceo": "Framkvæmdastjóri og forritari",
+        "cmo": "Viðmóts- og bókahönnuður",
+        "design": "Listrænn stjórnandi og hönnuður",
+        "pedagogy": "Kennslufræði og námsefnisgerð",
+        "game": "Leikjahönnuður og leikjaþróun",
+        "cfo": "Fjármálastjóri",
+        "sales": "Sölustjóri og þjónustufulltrúi"
+      }
+    },
+    "research": {
+      "learnMore": "Læra meira",
+      "exp": {
+        "title": "Niðurstöður rannsókna",
+        "conclusion": "Í rannsókninni fengu nemendur Evolytes leikinn með sér heim og notuðu utan skólatíma þar sem áhersla var lögð á að notkunin væri að frumkvæði barnanna. Árangurinn var borinn saman við hefðbundið nám í skóla."
+      },
+      "positiveTowards": {
+        "title": "Jákvæðari gagnvart stærðfræði",
+        "descr1": "Börnin sem tóku þátt í rannsókninni voru jákvæðari í garð stærðfræði við lok rannsóknarinnar en fyrir. Hvort sem það var að læra stærðfræði með Evolytes eða á öðru formi.",
+        "descr2": "Með því að veita börnum einstaklingsmiðað námsefni í námsumhverfi sem þeim finnst áhugavert og skemmtilegt er hægt að tengja jákvæðar tilfinningar við námsefnið og auka sjálfstraust þeirra í náminu."
+      },
+      "theoretical": {
+        "title": "Fræðilegur grunnur",
+        "description": "Evolytes námskerfið notar fjölmargar kenningar til að bæta námsárangur barna, hraða og auka færni upptöku auk þess að gera námsferlið skemmtilegra og árangursríkara."
+      },
+      "history": {
+        "title": "Rannsóknir",
+        "description": "Evolytes byggir á áralöngum þverfaglegum rannsóknum sem gerir námið skemmtilegra og knýr fram bættan námsárangur.",
+        "y2014": {
+          "season": "Vor",
+          "title": "Áhrif breytilegra og fastra styrkingarhátta á svörun barna í tölvuleikjum",
+          "descr1": "Markmið fyrstu rannsóknarinnar var að finna mynstur á bak við svörun barna í tölvuleikjum á mismunandi styrkingarháttum. Fyrri rannsóknir hafa verið framkvæmdar á einföldum dýrum þar sem mikið af rannsóknum hafa sýnt að ekki er hægt að yfirfæra þær niðurstöður á mannfólk.",
+          "descr2": "Niðurstöður rannsóknarinnar sýndu að aðeins fastur hlutfallsháttur var með svipaða svörun og einfaldari dýr. Aðrir styrkingarhættir, fastur- og breytilegur tímabilsháttur, breytilegur hlutfallsháttur sýndu allt önnur mynstur og svörun en það sem sést í einfaldari lífverum."
+        },
+        "y2015": {
+          "season": "Vor",
+          "title": "Áhrif aldurs og kyns á svörun barna við föstum og breytilegum styrkingarháttum í tölvuleikjum",
+          "descr1": "Í framhaldi af fyrstu rannsókninni vildum við rannsaka hvort að aldur og kyn barna hefði áhrif á svörun barna við mismunandi styrkingarhætti.",
+          "descr2": "Niðurstöðurnar sýndi að aldur hafði áhrif á svar mynstur, sérstaklega hraða svörunar og hversu lengi þátttakendur voru virkir á mismunandi styrkinarháttum. Yngri börn voru viðkvæmari fyrir undirliggjandi virkni styrkingarháttana samanborið við eldri börn. Við töldum það vera vegna þess að yngri börn eiga sér ekki langa styrkingar sögu samanborið við eldri nemendur."
+        },
+        "y2016": {
+          "season": "Haust",
+          "title": "Beyting styrkingarhátta í tölvuleikjum til að hraða fyrir færniupptöku í stærfræði",
+          "descr1": "Við þróuðum námsleik byggt á niðurstöðum fyrri rannsókna til að finna góða blöndu styrkingarhátta til að styrkja stærðfræði reikning barna í 4. bekk til að hámarka stærðfræði færniupptöku þeirra í frítíma sínum.",
+          "descr2": "Niðurstöðurnar sýndu að nemendur reiknuðu að meðaltali 4x meira í námsleiknum samanborið við það magn spurninga sem þau svöruðu í skólanum. Börn svöruðu allt að 1.200 spurningum á dag í rannsókninni. Nemendur með undirliggjandi námsörðugleika sýndu hutfallslega betri árangur þar sem þau reiknuðu allt að 12x meira samanborið við það sem þau reiknuðu í skólanum. Við lok rannsóknarinnar voru allir nemendurnir jákvæðari gagnvart stærðfræði."
+        }
+      }
+    },
+    "contactUs": {
+      "title": "Hafa samband",
+      "description": "Ef þú hefur einhverjar spurningar eða glímir við vandamál ekki hika við að hafa samband. Við munum svara eins fljótt og auðið er.",
+      "address": "Bankastræti 5, 101 Reykjavík, Iceland",
+      "messageTitle": "Skilaboðin þín",
+      "name": "Fullt nafn *",
+      "email": "Netfang *",
+      "phone": "Sími",
+      "subject": "Viðfangsefni *",
+      "placeholderSubject": "Ég þarf hjálp með...",
+      "message": "Skilaboð *",
+      "placeholderMessage": "Ég þarf hjálp með..",
+      "send": "Senda",
+      "required": "Nauðsynlegt er að fylla í reitin með *",
+      "popUpSuccessMessage": "Beiðnin þín hefur veirð móttekin. Þú ættir að fá svar á næstu tveimur sólarhringi.",
+      "popUpErrorMessage": "Beiðnin þín mistókst. Endilega sendu tölvupóst á evolytes@evolytes.com með beiðni þinni. Við munum afgreiða hana á innan við tveimur sólarhringum.",
+      "popUpMissingNameField": "Nafn verður að vera tilgreint.",
+      "popUpMissingEmailField": "Netfang verður að vera tilgreint.",
+      "popUpMissingSubjectField": "Viðfangsefnið þarf að vera tilgreint fyrir erindið.",
+      "popUoMissingMessageField": "Skilaboð verða að vera fyllt út fyrir erindið."
+    },
+    "changeLanguage": {
+      "title": "Veldu land og tungumál"
+    }
+  },
+  "signin": {
+    "title": "Skráðu þig inn",
+    "subtitle": "Skráðu þig inn á Evolytes upplýsingakerfið, þar sem þú getur fylgst með framgangi barnsins þíns í námsefninu.",
+    "emailTitle": "Netfang",
+    "emailPlaceholder": "netfang@netfang.is",
+    "passwordTitle": "Lykilorð",
+    "loginButtonTitle": "Skrá inn",
+    "forgotPasswordTitle": "Gleymt lykilorð",
+    "signupPartOne": "Átt þú ekki aðgang?",
+    "signupPartTwo": "Fáðu aðgang í dag!",
+    "signinWrong": "Lykilorð eða netfang er rangt."
+  },
+  "initPassword": {
+    "title": "",
+    "subtitle": "",
+    "password": "",
+    "confirmPassword": "",
+    "save": "",
+    "tokenExpired": "",
+    "passwordsDoNotMatch": "",
+    "success": ""
+  },
+  "signup": {
+    "title": "Opnaðu aðgang!",
+    "subtitle": "Þú ert bara fáeinum skrefum frá því að hjálpa barninu þínu að læra stærðfræði hraðar og með meiri árangri.",
+    "firstNameTitle": "Fornafn",
+    "lastNameTitle": "Eftirnafn",
+    "emailTitle": "Netfang",
+    "emailPlaceholderTitle": "netfang@netfang.is",
+    "passwordTitle": "Lykilorð",
+    "confirmPasswordTitle": "Endurtekið lykilorð",
+    "signupButtonTitle": "Stofna aðgang",
+    "signinPartOne": "Áttu aðgang?",
+    "signinPartTwo": "Skráðu þig inn!",
+    "passwordCriteria": "Lykilorðið þarf að vera að minnsta kosti 7 stafa langt og innihalda bæði bókstafi og tölustafi.",
+    "termsMessage": "Með því að stofna aðgang samþykkir þú",
+    "terms": "Notendaskilmála Evolytes",
+    "privacyMessage": "Þú getur einnig lesið þér til um hvernig Evolytes notar, deilir og safnar gögnum með því að lesa",
+    "privacy": "Persónuverndarstefna",
+    "passwordsDoNotMatch": "Lykilorðin passa ekki saman. Skráðu þau aftur.",
+    "passwordNotLongEnough": "Lykilorðið þarf að vera að minnsta kosti 7 stafa langt.",
+    "passwordMustIncludeAlpha": "Lykilorð þarf að innihalda að minnsta kosti einn bókstaf.",
+    "passwordMustIncludeNumeric": "Lykilorð þarf að innihalda að minnsta kosti einn tölustaf.",
+    "passwordMissing": "Vantar lykilorð.",
+    "selectCountry": "Veldu tungumál",
+    "selectLanguage": "Veldu land"
+  },
+  "selectCountry": {
+    "title": "Veldu Land"
+  },
+  "selectLanguage": {
+    "title": "Veldu Tungumál"
+  },
+  "createStudent": {
+    "title": "Skrá nýjan nemanda",
+    "subtitle": "Í þessu skrefi skráirðu nemandann sem mun nota kerfið.",
+    "firstName": "Fornafn",
+    "middleName": "Millinafn",
+    "lastName": "Eftirnafn",
+    "birthDate": "Fæðingardagur",
+    "birthDatePlaceholder": "dd/mm/áááá",
+    "schoolType": "Gerð skólagöngu",
+    "nextButton": "Áfram",
+    "firstNameRequired": "Fornafns er krafist til að búa til nemenda aðgang",
+    "lastNameRequired": "Eftirnafns er krafist til að búa til nemenda aðgang",
+    "birthDateInvalid": "Fæðingardagur er rangt uppsettur ætti að vera á forminu 23/03/2012 (dd/mm/áááá)."
+  },
+  "createGroup": {
+    "title": "Búa til hóp",
+    "name": "Nafn hóps"
+  },
+  "emailVerifyReminder": {
+    "title": "Staðfestu netfangið þitt",
+    "subtitlePartOne": "Þú hefur ekki staðfest netfangið þitt. Við sendum þér tölvupóst á",
+    "subtitlePartTwo": "með leiðbeiningum svo þú getir staðfest netfangið þitt. Það gæti tekið tölvupóstinn nokkrar mínútur að berast.",
+    "resendEmail": "Fékkstu ekki tölvupóstinn? Ýttu á takkan hér að neðan til að fá nýjan tölvupóst.",
+    "skipButtonTitle": "Sleppa",
+    "sendAgainTitle": "Senda aftur"
+  },
+  "verifyEmail": {
+    "title": "Staðfesta Netfang",
+    "subtitleInProgress": "Við erum að klára að staðfesta netfangið þitt. Gefðu okkur smá stund.",
+    "subtitleError": "Villa kom upp við að staðfesta netfangið þitt. Vinsamlegast reynið aftur síðan eða hafið samband. Takkinn hér að neðan mun taka þig á lendingarsíðuna.",
+    "success": "Staðfest",
+    "successMessage": "Þú hefur staðfest netfangið þitt.",
+    "done": "Klára",
+    "emailSentPartOne": "Tölvupóstur til að staðfesta netfang var sendur á netfangið: ",
+    "emailSentPartTwo": " tölvupósturinn ætti að berast eftir skamma stund."
+  },
+  "resetPassword": {
+    "title": "Nýtt Lykilorð",
+    "subtitle": "Sláðu inn nýtt lykilorð fyrir aðganginn þinn og staðfestu það hér að neðan.",
+    "password": "Nýtt Lykilorð",
+    "confirmPassword": "Staðfesta nýtt lykilorð",
+    "reset": "Klára",
+    "tokenExpired": "Hlekkurinn til að búa til nýtt lykilorð er útrunninn. Mundu að tölvupósturinn til að búa til nýtt lykilorð rennur út eftir 24 klukkustundir.",
+    "passwordsDoNotMatch": "Lykilorðin passa ekki saman. Skráðu þau aftur.",
+    "success": "Nýtt lykilorð hefur verið skráð. Ýttu á takkann fyrir neðan til að skrá þig inn."
+  },
+  "forgotPassword": {
+    "title": "Gleymt Lykilorð",
+    "subtitle": "Skráðu netfangið þitt hér fyrir neðan. Þá færðu sendan tölvupóst til að búa til nýtt lykilorð.",
+    "emailTitle": "Netfang",
+    "emailPlaceholder": "netfang@netfang.is",
+    "sendButtonTitle": "senda",
+    "signinPartOne": "Áttu aðgang?",
+    "signinPartTwo": "Skráðu þig inn!",
+    "signupPartOne": "Átt þú ekki aðgang?",
+    "signupPartTwo": "Fáðu aðgang í dag!",
+    "success": "An email to reset your password has been sent to the email: "
+  },
+  "selectStudent": {
+    "title": "Veldu Aðgang",
+    "nameTitle": "Nafn",
+    "stateTitle": "Staða",
+    "ageTitle": "Aldur",
+    "addAccount": "Bæta við aðgang",
+    "statusActive": "Virkur",
+    "statusFailed": "Greiðslu villa",
+    "statusNotSetup": "Óuppsettur",
+    "licenseExpired": "Leyfi útrunnið",
+    "active": "Virkur",
+    "future": "Virkur",
+    "in_trial": "Prófun",
+    "trial_over": "Prófun lokið",
+    "paused": "Í hlé",
+    "cancelled": "Sagt upp",
+    "not_subscribed": "Engin áskrift",
+    "student": "Nemandi",
+    "students": "Nemendur",
+    "groups": "Hópar"
+  },
+  "selectSub": {
+    "title": "Veldu áskrift",
+    "subtitle": "Veldu áskrift sem hentar þér. Evolytes námsbók fylgir öllum nýjum áskriftum sem þú munt fá tækifæri á að velja í næsta skrefi.",
+    "nextButtonTitle": "Áfram"
+  },
+  "selectBook": {
+    "title": "Veldu námsbók",
+    "subtitle": "Veldu þá bók sem hentar þínu barni best. Við mælum með því að velja frekar auðveldari námsbók en erfiðari þar sem auðveldari bók er líklegri til þess að vekja áhuga barnsins þíns.",
+    "nextButtonTitle": "Áfram",
+    "ageTitle": "ára",
+    "contentsTitle": "Námsefni"
+  },
+  "confirmSubscription": {
+    "title": "Staðfesta kaup",
+    "subtitle": "Þú ert bara fáeinum skrefum frá því að hjálpa barninu þínu að læra stærðfræði hraðar og með betri árangri.",
+    "subscriptionTitle": "Áskriftarleið:",
+    "bookIncluded": "Námsbók innifalin",
+    "bookContents": "Námsefni",
+    "deliveryTitle": "Sending",
+    "deliverySubtitle": "Rekjanleg sending, ætti að berast inn 3-5 virkra daga.",
+    "breakdownTitle": "Niðurbrot",
+    "breakdownSubscriptionTitle": "Áskrift: ",
+    "breakdownDeliveryTitle": "sending: ",
+    "billingInformationTitle": "Heimilisfang reiknings",
+    "shippingInformationTitle": "Heimilisfang sendingar",
+    "shippingSameAsBillingTitle": "Sama og heimilisfang reiknings",
+    "confirmButtonTitle": "Áfram",
+    "total": "Samtals",
+    "companyInformationTitle": "Um Evolytes",
+    "companyInformationString": "Evolytes ehf., kt. 600617-1250, vsk nr: 128833. Heimilisfang: Bankastræti 5, 101 Reykjavík, Ísland.",
+    "tcAgreeMessage": "Ég samþykki ",
+    "tcLinkMessage": "notendaskilmálana jafnt sem endurgreiðslu- og afpöntunarskilmála."
+  },
+  "billingInformation": {
+    "fullName": "Fullt Nafn",
+    "address": "Heimilisfang",
+    "city": "Borg",
+    "zip": "Póstnúmer",
+    "state": "Fylki",
+    "statePlaceholder": "Fylki",
+    "phoneNumber": "Símanúmer",
+    "country": "Land",
+    "subscriptionExistsMessage": "Áskrift er þegar til fyrir nemandann. Þér verður beint að stjórnborði nemandans."
+  },
+  "subscriptions": {
+    "monthBreakdown": "mánuð(ur/ir)"
+  },
+  "billingComplete": {
+    "title": "Takk fyrir að velja Evolytes!",
+    "subtitle": "Þú hefur fengið staðfesting á kaupunum og kvittun senda á netfangið þitt. ",
+    "subtitleTwo": "Við vonum að þú njótir þess að sjá getu barnsins þíns vaxa. Þú getur hafist handa við það með því að smella á hnappinn hér að neðan.",
+    "getStartedButtonTitle": "Byrja",
+    "invoiceTitle": "Kvittun",
+    "billedToTitle": "Greiðandi",
+    "productsTitle": "Vörur",
+    "priceTitle": "Verð",
+    "evolytesProductTitle": "Evolytes námskerfið",
+    "evolytesProductSubtitle": "6 mánaða áskrift",
+    "includedTitle": "Innifalið",
+    "total": "Samtals",
+    "6m": {
+      "evolytesProductSubtitle": "6 mánaða áskrift"
+    },
+    "3m": {
+      "evolytesProductSubtitle": "3 mánaða áskrift"
+    },
+    "1m": {
+      "evolytesProductSubtitle": "1 mánaða áskrift"
+    }
+  },
+  "bookIntro": {
+    "title": "Evolytes námsbókin",
+    "subtitle": "Evolytes námsbókin ætti að berast innan 3-5 virkra daga á heimilisfangið sem gefið var upp í kaupferlinu.",
+    "nextButtonTitle": "Áfram"
+  },
+  "gameIntro": {
+    "title": "Evolytes námsleikurinn",
+    "subtitle": "Þú getur halað námsleiknum niður í gegnum 'App-Store' á spjaldtölvunni þinni. Þú notar sama lykilorðið fyrir námsleikinn til að auðkenna þig.",
+    "nextButtonTitle": "Áfram"
+  },
+  "monitorIntro": {
+    "title": "Evolytes Upplýsingakerfið",
+    "subtitle": "Þú hefur alltaf aðgang að upplýsingum um barnið þitt inn á upplýsingakerfinu sem þú getur nálgast í gegnum heimasíðuna. Þú skráir þig inn með notendanafni og lykilorðinu sem þú bjóst til þegar þú keyptir námskerfið.",
+    "nextButtonTitle": "Klára"
+  },
+  "dashboard": {
+    "paymentError": {
+      "trialExpired": "Prófun lokið",
+      "cancelled": "Áskrift hætt",
+      "notSubscribed": "Engin áskrift"
+    },
+    "answersTitle": "Svör",
+    "timeTitle": "Tími",
+    "answersListTitle": "Svör",
+    "columnProgressTitle": "Framför",
+    "bookProgressTitle": "Staða í námsbók",
+    "minuteDelimeter": "m",
+    "hourDelimeter": "k",
+    "noQRScannedTitle": "Enginn QR kóði skannaður",
+    "noQRScannedMessage": "Framför í námsbókum verður birt hér þegar að nemandinn hefur skannað QR kóða í námsbókinni.",
+    "noAnswerTitle": "Engin svör",
+    "noAnswersMessage": "Svör verða sýnd hér þegar að nemandinn eða barnið hefur byrjað að spila Evolytes námsleikinn.",
+    "noProfileMessage": "Til að fá upplýsingar hér þarf að hala niður Evolytes appinu og byrja að spila.",
+    "objective": "Hæfniviðmið",
+    "selectObjective": "Kemur út bráðlega",
+    "age": "ára",
+    "activity": "Virkni",
+    "chart": {
+      "timeSpent": "Time spent",
+      "thisWeek": "Þessi vika",
+      "lastWeek": "Síðasta vika",
+      "lastMonth": "Síðasti mánuður",
+      "thisMonth": "Þessi mánuður",
+      "skillProgress": "Færni framför",
+      "skills": "Skills Worked On",
+      "home": "Heima",
+      "school": "Skóla"
+    }
+  },
+  "books": {
+    "bookProgressTitle": "Framför í bók",
+    "nextChapterTitle": "Næsti kafli",
+    "finishedTitle": "Var að klára",
+    "failedTitle": "Þarf hjálp með",
+    "chaptersTitle": "Kaflar",
+    "noNextChapterTitle": "Þú hefur klárað námsbókina",
+    "noFailedTitle": "Er ekki í vandræðum með neinn kafla í námsbókinni.",
+    "back": "Til baka"
+  },
+  "answers": {
+    "moreData": "Sækja Meira",
+    "dateFilter": "Sía eftir dagsetningu",
+    "startDate": "Upphaf",
+    "endDate": "Endir",
+    "category": "Flokkur",
+    "answer": "Svar",
+    "skill": "Hæfni",
+    "progress": "Framför",
+    "answerType": "Tegund svars",
+    "clear": "Hreinsa",
+    "apply": "Sía",
+    "filters": {
+      "noFilter": "Engin sía",
+      "dateRange": "Bil",
+      "startDate": "Frá",
+      "endDate": "Til"
+    }
+  },
+  "recentActivity": {
+    "title": "Notkun síðustu 7 daga",
+    "time": "Tími",
+    "answers": "Svör",
+    "skills": "Færni",
+    "total": "Samtals"
+  },
+  "sidebar": {
+    "dashboard": "Stjórnborð",
+    "answers": "Svör",
+    "help": "Hjálp",
+    "settings": "Stillingar",
+    "logout": "Skrá út"
+  },
+  "header": {
+    "getStarted": "Hefja leik",
+    "login": "Innskráning",
+    "logout": "Skrá út",
+    "dashboard": "Stjórnborð",
+    "research": "Rannsóknir",
+    "princing": "Verðskrá",
+    "schools": "Skólar",
+    "features": "Námskerfið"
+  },
+  "schoolAdministration": {
+    "settingsDropdown": {
+      "administration": "Stjórnun",
+      "settings": "Stillingar",
+      "logout": "Skrá út",
+      "selectStudent": "Velja nemanda",
+      "switchStudent": "Skipta um nemanda"
+    },
+    "licenses":{
+      "title": "Leyfi",
+      "assigned": "Í notkun",
+      "available": "Laus",
+      "licenseStart": "Upphaf leyfistímabils",
+      "licenseEnd": "Endir leyfistímabils",
+      "licenseType": "Leyfis gerð",
+      "licenseTypes": {
+        "trial": "Prufa",
+        "full": "Fullgilt Leyfi"
+      },
+      "licenseCost": "Verð per leyfi",
+      "total": "Samtals",
+      "licenseHistory": "Saga leyfistímabila",
+      "createdBy": "Búið til af"
+    },
+    "teachers": {
+      "title": "Kennarar",
+      "teachersInvitationsTitle": "Boð",
+      "search": "Leita að kennara",
+      "searchPlaceholder": "Nafn eða netfang kennara",
+      "inviteTeacher": "Bjóða",
+      "addTeacherButtonTitle": "Bjóða öðrum kennara",
+      "addMore": "Bæta við öðrum",
+      "nameLegend": "Nafn",
+      "accountTypeLegend": "Aðgangs gerð",
+      "memberSinceLegend": "Meðlimur síðan",
+      "inviteTeacherTitle": "Bjóða kennara",
+      "studentsListTitle": "Nemendalisti",
+      "addStudentButtonTitle": "Bæta við",
+      "addStudentTitle": "Tengja nemendur",
+      "updateTeacherMessage": "Kennara upplýsingar hafa verið uppfærðar.",
+      "deleteTeacherTitle": "Eyða kennara",
+      "deleteTeacherModalWarning": "Þú ert að fara að eyða kennara, ekki er hægt að taka þessa aðgerð til baka.",
+      "deleteTeacherModalMessage": "Kennaranum, nemenda aðgangur kennara og önnur önnur gögn tengd honum hefur verið eytt."
+    },
+    "students": {
+      "title": "Nemendur",
+      "search": "Leita að nemendum",
+      "searchPlaceholder": "Nafn nemanda",
+      "addStudent": "Bæta við",
+      "import": "Flytja inn",
+      "nameLegend": "Nafn",
+      "birthYearLegend": "Fæðingarár",
+      "statusLegend": "Staða",
+      "licenseExpiresAtLegend": "Gildistími leyfis",
+      "createdAtLegend": "Aðgangur stofnaður",
+      "importStudents": "Flytja inn nemendur",
+      "selectFile": "Velja skrá",
+      "deleteStudentTitle": "Eyða Nemanda",
+      "studentsCreatedModalMessage": "Nemendurnir voru stofnaðir.",
+      "updateStudentMessage": "Nemenda upplýsingar hafa verið uppfærðar.",
+      "deleteStudentModalWarning": "Þú ert að fara að eyða nemenda, ekki er hægt að taka þessa aðgerð til baka, ertu viss um að þú viljir eyða nemandanum?",
+      "deleteStudentModalSuccess": "Nemenda aðgangnum hefur verið eytt."
+    },
+    "groups": {
+      "title": "Hópar",
+      "search": "Leita að hóp",
+      "searchPlaceholder": "Nafn hóps",
+      "addGroup": "Bæta við hóp",
+      "nameLegend": "Nafn",
+      "createdAtLegend": "Búin til",
+      "updateGroupMessage": "Upplýsingarnar um hópinn hafa verið uppfærðar.",
+      "deleteGroupModalWarning": "Þú ert að fara að eyða hóp, ekki er hægt að taka þessa aðgerð til baka, ertu viss um að þú viljir eyða hópnum?",
+      "deleteGroupModalSuccess": "Hópnum hefur verið eytt.",
+      "deleteGroupTitle": "Eyða hóp",
+      "deleteStudentFromGroupModalSuccess": "Nemandinn hefur verið fjarlægður úr hópnum.",
+      "deleteTeacherFromGroupModalSuccess": "Kennarinn hefur verið fjarlægður úr hópnum.",
+      "addTeacherButtonTitle": "Bæta við kennara",
+      "addTeacherTitle": "Bæta við kennara",
+      "teachersListTitle": "Kennarar"
+    },
+    "teachersInvitations": {
+      "importTeachersInvitations": "Flytja inn boð",
+      "teachersInvitationsTitle": "Ósamþykkt boð",
+      "teacherInvitationSentLegend": "Send boð",
+      "teacherInvitationStatusLegend": "Staða",
+      "updateTeacherInvitationMessage": "Boð kennarans hefur verið uppfært.",
+      "resendTeacherInvitationTitle": "Endursenda boð",
+      "lastTeacherInvitationSentTitle": "Síðasta boð sent",
+      "resendTeacherInvitationModalWarning": "Þú ert að fara að endursenda boð til kennara, ekki er hægt að taka þessa aðgerð til baka.",
+      "resendTeacherInvitationModalMessage": "Boðið hefur verið sent.",
+      "deleteTeacherInvitationTitle": "Eyða boði",
+      "deleteTeacherInvitationModalWarning": "Þú ert að fara að eyða boði fyrir kennara, það er ekki hægt að taka þessa aðgerð til baka.",
+      "deleteTeacherInvitationModalMessage": "Boðinu hefur verið eytt."
+    },
+    "sidebar": {
+      "students": "Nemendur",
+      "teachers": "Kennarar",
+      "groups": "Hópar"
+    },
+    "licenseState": {
+      "active": "Virkur"
+    }
+  },
+  "schoolInvitation": {
+    "title": "Þér hefur verið boðið",
+    "subtitle": "Þér var boðið að vera hluti af skólanum með eftirfarandi aðgangsréttindi",
+    "wrongAccountMessagePartOne": "Netfangið hjá notandanum sem er skráður inn passar ekki við netfangið fyrir þetta boð.",
+    "wrongAccountMessagePartTwo": "Skráðu þig út til að búa til aðgang og samþykkja þetta boð.",
+    "wrongAccountMessageTwoPartOne": "Aðgangur er til fyrir netfangið sem þetta boð er tengt við",
+    "wrongAccountMessageTwoPartTwo": "Skráðu þig inn til að skoða boðið",
+    "wrongTokenTypeMessage": "Hlekkurinn sem var notaður er ekki á réttu formi, fáðu nýtt boð með nýjum hlekk.",
+    "tokenExpired": "Hlekkurinn sem þú notaðir er útruninn, fáðu nýtt boð með nýjum hlekk til að skrá þig.",
+    "firstNameRequiredError": "Til þess að samþykkja boðið þarftu að skrá fornafn.",
+    "lastNameRequiredError": "Til þess að samþykkja boðið þarftu að skrá eftirnafn."
+  },
+  "reusable": {
+    "buyNow": "Kaupa núna",
+    "renewNow": "Endurnýja",
+    "close": "Loka",
+    "invitation": "Boð",
+    "selectFile": "Velja skrá",
+    "import": "Flytja inn",
+    "resend": "Endursenda",
+    "active": "Virkur",
+    "expired": "Útrunnið",
+    "cultureTitle": "Tungumál",
+    "countryTitle": "Land",
+    "selectCulture": "Veldu tungumál",
+    "selectCountry": "Veldu land",
+    "chapter": "Kafli",
+    "error": "Villa",
+    "unknownError": "Óþekkt villa átti sér stað reynið aftur síðar.",
+    "success": "Aðgerð tókst",
+    "done": "Ljúka",
+    "cancel": "Hætta við",
+    "accept": "Samþykkja",
+    "attempt": "Tilraun",
+    "attempts": "Tilraunir",
+    "required": "Lágmark",
+    "finished": "Lokið",
+    "unfinished": "Óklárað",
+    "result": "Útkoma",
+    "noTrial": "Ekki prófað",
+    "grade": "bekkur",
+    "edition": "útgáfa",
+    "none": "Á ekki við",
+    "book": "Námsbók",
+    "books": "Bækur",
+    "next": "Áfram",
+    "send": "Senda",
+    "save": "Vista",
+    "delete": "Eyða",
+    "add": "Tengja",
+    "faster": "Hraðar",
+    "create": "Stofna",
+    "warning": "Aðvörun",
+    "clearAll": "Hreinsa allt",
+    "birthYear": "Fæðingarár",
+    "filters": "Síur",
+    "apply": "Sía",
+    "profile": "Nemandi",
+    "qrCode": "QR Kóði",
+    "dayNames": {
+      "1": "Mánudagur",
+      "2": "Þriðjudagur",
+      "3": "Miðvikudagur",
+      "4": "Fimmtudagur",
+      "5": "Föstudagur",
+      "6": "Laugardagur",
+      "7": "Sunnudagur"
+    },
+    "dayShortNames": {
+      "1": "Mán",
+      "2": "Þri",
+      "3": "Mið",
+      "4": "Fim",
+      "5": "Fös",
+      "6": "Lau",
+      "7": "Sun"
+    },
+    "monthNames": {
+      "1": "Janúar",
+      "2": "Febrúar",
+      "3": "Mars",
+      "4": "Apríl",
+      "5": "Maí",
+      "6": "Júní",
+      "7": "Júlí",
+      "8": "Ágúst",
+      "9": "September",
+      "10": "Október",
+      "11": "Nóvember",
+      "12": "Desember"
+    }
+  },
+  "months": {
+    "January": "janúar",
+    "February": "febrúar",
+    "March": "mars",
+    "April": "apríl",
+    "May": "maí",
+    "June": "júní",
+    "July": "júlí",
+    "August": "ágúst",
+    "September": "september",
+    "October": "október",
+    "November": "nóvember",
+    "December": "desember"
+  },
+  "settings": {
+    "profileSettings": {
+      "profile": "Aðgangur",
+      "myProfile": "Minn Aðgangur",
+      "profileDesc": "Hér geturðu breytt helstu stillingum er varða aðganginn þinn hjá Evolytes.",
+      "myInfo": "Mínar upplýsingar",
+      "infoDesc": "Þessar upplýsingar eru notaðar til að hafa samband við þig og auðkenna.",
+      "language": "Land og Tungumál",
+      "languageDesc": "Þú getur breytt tungumálinu þínu hér fyrir neðan en ef þú villt breyta um land þarftu að hafa samband við okkur.",
+      "delete": "Eyða",
+      "deleteDesc": "Þegar þú eyðir aðgangnum þínum verður öllum nemendum sem þú bjóst til eytt og áskriftunum þeirra. Ekki er hægt að afturkalla þessa aðgerð."
+    },
+    "passwordSettings": {
+      "password": "Lykilorð",
+      "passwordDesc": "Hér geturðu breytt lykilorðinu þínu og öðrum auðkennisleiðum þegar þeim verður bætt við.",
+      "changePassword": "Breyta Lykilorði",
+      "changeDesc": "Til að búa til nýtt lykilorð þarftu að staðfesta breytinguna hér að neðan með núverandi lykilorði."
+    },
+    "newBillingSettings": {
+      "billing": "Greiðslur",
+      "billingDesc": "Hér geturðu séð greiðslu stöður fyrir nemendurna sem þú átt. Til að breyta greiðslu upplýsingunum, finna reikninga eða áskrift ýttu á breyta áskrift og finndu þá áskrift sem þú villt breyta."
+    },
+    "accountSettings": {
+      "accounts": "Nemandi",
+      "accountsDesc": "Þú getur breytt upplýsingum fyrir núverandi nemanda eins og nafn, tungumál og aðrar upplýsingar.",
+      "accountInfo": "Upplýsingar",
+      "language": "Land og tungumál"
+    },
+    "authSettings": {
+      "auth": "Auðkenning",
+      "authDesc": "Þú getur notað mismunandi auðkenningaleiðir fyrir nemendur. Þessar auðkenningaleiðir eru sérstaklega gerðar fyrir nemendur til að þeir geti auðkennt sig sjálfir.  Þú getur alltaf auðkennt þig með þínum aðgangi og fengið lista af nemendum.",
+      "qrCode": "QR Kóða Auðkenning",
+      "qrCodeDesc": "Þú getur notað QR kóða til að nemandi geti skráð sig inn í Evolytes leikinn. QR kóðinn virkar eins og lykilorð svo það er mikilvægt að aðrir aðilar hafa ekki beinan aðgang að honum. Ef að einhver óprúttinn aðili hefur skráð sig inn á aðganginn hjá nemandanum með QR kóðanum geturðu búið til nýjan QR kóða sem skráir út alla sem notuðu gamla kóðann til að skrá sig inn. Það getur verið sniðugt að prenta út kóðann og líma aftast í námsbókina hjá nemendum svo þeir hafi auðveldan aðgang að kóðanum.",
+      "enable": "Virkja",
+      "newCode": "Nýr kóði",
+      "download": "Hala niður",
+      "pinConfirmation": "PIN staðfesting",
+      "pinDesc": "Þegar þú skráir þig inn sem kennari geturðu sett upp pin auðkenni sem nemendur þurfa að nota þegar þeir velja reikninginn sinn úr listanum þínum sem kennari.",
+      "pin": "PIN",
+      "email": "Netfang og lykilorðs auðkenning",
+      "emailDesc": "Hægt er að nota netfang og lykilorð fyrir nemanda svo hann geti skráð sig inn í Evolytes námsleikinn."
+    },
+    "userSettingsTitle": "Þínar stillingar",
+    "accountSettingsTitle": "Aðgangsstillingar",
+    "billingSettingsTitle": "Greiðsluupplýsingar",
+    "tcSettingsTitle": "Skilmálar"
+  },
+  "userSettings": {
+    "userSectionTitle": "Þínar upplýsingar",
+    "emailTitle": "Netfang",
+    "emailPlaceholder": "netfang@netfang.is",
+    "firstNameTitle": "Fornafn",
+    "lastNameTitle": "Eftirnafn",
+    "phoneTitle": "Sími",
+    "changePasswordSectionTitle": "Breyta lykilorði",
+    "currentPasswordTitle": "Núverandi lykilorð",
+    "newPasswordTitle": "Nýtt lykilorð",
+    "newPasswordConfirmTitle": "Staðfesta nýtt lykilorð",
+    "saveButtonTitle": "Vista"
+  },
+  "studentSettings": {
+    "studentInformationTitle": "Aðgangs upplýsingar",
+    "firstName": "Fornafn",
+    "middleName": "Middle Name",
+    "lastName": "Efnirnafn",
+    "birthDate": "Fæðingardagur",
+    "datePlaceholder": "dd/mm/áááá",
+    "schoolType": "Gerð skólagöngu"
+  },
+  "billingSettings": {
+    "title": "Staða áskriftar",
+    "manageSubscription": "Breyta áskrift",
+    "statusTitle": "Staða",
+    "renewNow": "Endurnýja",
+    "renewalDateTitle": "Endurnýjun áksriftar",
+    "renewalPriceTitle": "Verð við endurnýjun",
+    "cardNumberTitle": "Kortanúmer",
+    "cardType": "Kortagerð",
+    "billingInformationTitle": "Greiðsluupplýsingar",
+    "invoiceTitle": "Reikningar",
+    "viewTitle": "Skoða"
+  },
+  "schoolTypes": {
+    "public": "Almenn Skólaganga",
+    "private": "Einkaskóli",
+    "home": "Heimakennsla"
+  },
+  "schoolAccessTypes": {
+    "admin": "Stjórnandi",
+    "teacher": "Kennari"
+  },
+  "tc": {
+    "title": "Notendaskilmálar"
+  },
+  "privacy": {
+    "title": "Persónuverndarstefna"
+  },
+  "categories": {
+    "none": "Engin Sía",
+    "addition": "Samlagning",
+    "count": "Talning",
+    "subtraction": "Frádráttur",
+    "multiplication": "Margföldun",
+    "sizeComparison": "Stærðir",
+    "numberPatterns": "Tölu Mynstur",
+    "imagePatterns": "Mynda Mynstur",
+    "shapes": "Form",
+    "placeValue": "Talnagildi"
+  },
+  "answerTypes": {
+    "none": "Engin Sía",
+    "input": "Innsláttur",
+    "multipleChoice": "Fjölvalsspurning"
+  },
+  "answerCorrect": {
+    "none": "Engin Sía",
+    "correct": "Rétt",
+    "wrong": "Rangt"
+  },
+  "subscriptionStatuses": {
+    "FirstBillingFailed": "Greiðslu villa",
+    "BillingFailed": "Greiðslu villa",
+    "Active": "Virkt",
+    "NotSetup": "Óuppsett",
+    "Test": "Prufa"
+  },
+  "cbSubscriptionStatuses": {
+    "active": "Virk",
+    "future": "Framtíðar áskrift",
+    "in_trial": "Prófun",
+    "paused": "Í hlé",
+    "cancelled": "Sagt upp",
+    "not_subscribed": "Engin áskrift"
+  },
+  "videosPage": {
+    "title": "Hjálpar myndbönd"
+  },
+  "platformVideos": [
+    {
+      "name": "platformInf",
+      "title": "Upplýsingakerfið",
+      "iconLink": "./assets/sidebar/dashboard-overview-2.svg",
+      "subCategories": [
+        {
+          "subCatTitle": "Innskráning og nemendur",
+          "videos": [
+            {
+              "urlId": "671067510",
+              "videoTitle": "Innskráning",
+              "videoDescription": "Lærum hvernig á að skrá okkur inn og skipta um nemendur"
+            }
+          ]
+        },
+        {
+          "subCatTitle": "Upplýsingakefið",
+          "videos": [
+            {
+              "urlId": "671100653",
+              "videoTitle": "Upplýsingakerfið",
+              "videoDescription": "Lærum um upplýsingakerfi Evolytes.  Hvernig við skoðum stöðu nemenda og rýnum í svör."
+            }
+          ]
+        },
+        {
+          "subCatTitle": "Stillingar",
+          "videos": [
+            {
+              "urlId": "671100318",
+              "videoTitle": "Stillingar",
+              "videoDescription": "Lærum á stillingar, t.d. hvernig á að breyta um netfang og lykilorð."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "platformGame",
+      "title": "Evolytes leikurinn",
+      "iconLink": "./assets/sidebar/dashboard-overview-2.svg",
+      "subCategories": [
+        {
+          "subCatTitle": "Innskráning",
+          "videos": [
+            {
+              "urlId": "672715442",
+              "videoTitle": "Innskráning",
+              "videoDescription": "Lærum hvernig við skráum okkur inn og veljum/skiptum um nemanda í leiknum."
+            }
+          ]
+        },
+        {
+          "subCatTitle": "Takkar og viðmót",
+          "videos": [
+            {
+              "urlId": "672716320",
+              "videoTitle": "Aðal viðmót",
+              "videoDescription": "Lærum um 4 helstu viðmót Evolytes leiksins"
+            }
+          ]
+        },
+        {
+          "subCatTitle": "Keppni og spurningar",
+          "videos": [
+            {
+              "urlId": "672715537",
+              "videoTitle": "Hvernig við keppum",
+              "videoDescription": "Lærum um hvernig keppnir í Evolytes heiminum ganga fyrir sig."
+            }
+          ]
+        },
+        {
+          "subCatTitle": "Safna Evolytes",
+          "videos": [
+            {
+              "urlId": "672715828",
+              "videoTitle": "Krystalsnotkun",
+              "videoDescription": "Lærum hvernig við notum krystala til að safna nýjum Evolýtum."
+            }
+          ]
+        },
+        {
+          "subCatTitle": "Kort og verkefni",
+          "videos": [
+            {
+              "urlId": "672715723",
+              "videoTitle": "Eyja 1",
+              "videoDescription": "Lærum hvernig eyja 1 liggur og hvar skemmtilega hluti má finna."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "adminVideos": [
+    {
+      "name": "schoolAdmin",
+      "title": "Stjórnunnarkerfið",
+      "iconLink": "./assets/school-admin/school-gray.svg",
+      "subCategories": [
+        {
+          "subCatTitle": "Stjórnunnarkerfið",
+          "videos": [
+            {
+              "urlId": "671100995",
+              "videoTitle": "Stjórnun",
+              "videoDescription": "Lærum hvernig á að nota stjórnunnar kerfi Evolytes til að stjórna kennurum og nemendum skólans."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": {
+    "LicenseLimitReached": "Þú hefur náð hámarki fjölda leyfa. Eyddu nemendum sem eru ekki í notkun eða bættu við þig leyfum."
+  }
+}

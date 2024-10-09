@@ -1,0 +1,35 @@
+button.greenButton:disabled {
+  background-color: #D8D8D8;
+}
+
+.ring {
+  border: 8px solid #9ee3f8e8;
+  border-radius: 50%;
+  border-top: 8px solid black;
+  border-bottom: 8px solid #0294c0ca;
+  border-right: 8px solid #0294c0ca;
+  border-left: 8px solid #009ccc58;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  /* Setting up animation in any browser */
+  animation: spin 2s linear infinite;
+}
+
+/* browser configuration */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,56 @@
+<div style="height: 100%; width: 100%;">
+
+  <div style="height: 10px;"></div>
+  <div style="height: 50px;" fxLayoutAlign="center center">
+    <p class="semiBoldMont font20px blackColor noMargin">Orders</p>
+  </div>
+  <div style="height: 10px;"></div>
+
+  <div class="defaultScrollBar scrollBarBlueThumb"
+       style="height: calc(100% - 70px); overflow-y: scroll;"
+       fxLayoutAlign="center start">
+
+    <div fxFlex="92">
+      <div style="height: 20px"></div>
+
+      <div *ngFor="let order of orders">
+        <div class="defaultShadow bgWhiteHoverColor"
+             style="border-radius: 6px; cursor: pointer;"
+             (click)="onOrderClicked(order)">
+          <div fxFlex="10px"></div>
+          <div fxFlex="80px" fxLayoutAlign="center center">
+            <img style="width: 60px; height: 80%; object-fit: contain;"
+                 [src]="getBookVersionImgUrl(order.bookId, order.bookVersionId)"
+                 *ngIf="getBookVersionImgUrl(order.bookId, order.bookVersionId)">
+          </div>
+          <div fxFlex fxLayoutAlign="start center">
+            <div>
+              <div style="height: 10px"></div>
+              <p class="semiBoldMont font14px blueColor noMargin">{{ order.orderId }}</p>
+              <div style="height: 2px;"></div>
+              <p class="mediumMont font10px grayColor noMargin">{{order.name}}</p>
+              <p class="mediumMont font10px grayColor noMargin">{{ order.address }}, {{ order.zip }}, {{ order.city }}</p>
+              <p class="mediumMont font10px grayColor noMargin">{{ order.country }}</p>
+              <div style="height: 10px"></div>
+            </div>
+          </div>
+          <div fxFlex="80px" fxLayoutAlign="center center">
+            <p class="mediumMont font12px grayColor noMargin">{{ getOrderDate(order) }}</p>
+          </div>
+          <div fxFlex="20px"></div>
+          <div fxFlex="80px" fxLayoutAlign="center center">
+            <p class="mediumMont font12px noMargin" [ngClass]="{
+            redColor: order.status === 'BillingFailed',
+            yellowColor: order.status === 'Processing',
+            greenColor: order.status === 'Delivered'
+            }">{{ order.status }}</p>
+          </div>
+          <div fxFlex="10px"></div>
+        </div>
+        <div style="height: 10px;"></div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

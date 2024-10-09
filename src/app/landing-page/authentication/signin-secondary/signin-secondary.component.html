@@ -1,0 +1,96 @@
+<ng-container *ngIf="!fromInvitation">
+  <app-land-nav-header [onlyIcon]="true"></app-land-nav-header>
+  <app-evo-decoration-background-signup></app-evo-decoration-background-signup>
+</ng-container>
+<div>
+  <form #f="ngForm" style="width: 100%; height: 100%;" fxLayoutAlign="center start">
+    <div fxFlex.xs="95" fxFlex.gt-xs="540px">
+
+      <div style="height: 20px"></div>
+
+      <div fxLayoutAlign="center start">
+        <p fxFlex="90"
+           class="boldMont font22px blackColor noMargin"
+           style="text-align: center"
+           [translate]="'signin.title'"></p>
+      </div>
+
+
+      <div fxHide.xs="true">
+        <div style="height: 5px"></div>
+
+        <div fxLayoutAlign="center start">
+          <p fxFlex="80"
+             class="regularMont font14px grayColor noMargin"
+             style="text-align: center;"
+             [translate]="'signin.subtitle'"></p>
+        </div>
+
+        <div style="height: 10px;"></div>
+
+        <div fxLayoutAlign="center start">
+          <img src="../../../../assets/land-images/AllProductsiMac.png" style="width: 100%; height: 120px; object-fit: contain;">
+        </div>
+
+      </div>
+
+
+      <div style="height: 20px;"></div>
+
+      <div fxLayoutAlign="center start">
+        <div fxFlex="80">
+          <app-evo-input title="{{ 'signin.emailTitle' | translate }}"
+                         placeholderText="{{ 'signin.emailPlaceholder' | translate }}"
+                         ngModel
+                         name="email">
+          </app-evo-input>
+          <div style="height: 20px;"></div>
+          <app-evo-input title="{{ 'signin.passwordTitle' | translate }}"
+                         [inputType]="'password'"
+                         placeholderText="{{ 'signin.passwordTitle' | translate }}"
+                         ngModel
+                         name="password">
+          </app-evo-input>
+        </div>
+      </div>
+
+      <div style="height: 30px"></div>
+
+      <div fxLayoutAlign="center start">
+        <button class="greenButton defaultShadow"
+                style="width: 140px; height: 40px;"
+                fxLayoutAlign="center center"
+                (click)="onSignInClicked(f)">
+          <p class="semiBoldMont font16px whiteColor noMargin" [translate]="'signin.loginButtonTitle'"></p>
+        </button>
+      </div>
+
+      <div style="height: 30px"
+           fxLayoutAlign="center center">
+        <p fxFlex="90" class="regularMont font14px blueHoverColor noMargin"
+           style="text-align: center; cursor: pointer;"
+           [translate]="'signin.forgotPasswordTitle'"
+           (click)="onForgotPassClicked()">
+          Forgot Password?
+        </p>
+      </div>
+
+      <div style="height: 20px"></div>
+
+      <div fxLayoutAlign="center start">
+        <p class="regularMont font14px grayColor noMargin"
+           style="text-align: center"
+           [translate]="'signin.signupPartOne'"></p>
+        <div fxFlex="5px"></div>
+        <p class="semiBoldMont font14px blueHoverColor noMargin"
+           style="cursor: pointer"
+           [translate]="'signin.signupPartTwo'"
+           (click)="onSignupClicked()"></p>
+      </div>
+
+      <div style="height: 20px"></div>
+
+    </div>
+  </form>
+
+</div>

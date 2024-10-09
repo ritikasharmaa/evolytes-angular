@@ -1,0 +1,105 @@
+<div>
+  <div style="height: 50px" fxLayoutAlign="center center">
+    <p class="semiBoldMont font18px blackColor noMargin" style="text-align: center">
+      [{{question.model.firstRange.getRange()}}] - [{{question.model.secondRange.getRange()}}]
+      = {{getOutcomeString()}}</p>
+  </div>
+  <div>
+    <div fxFlex="20px"></div>
+    <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+      <div fxFlex>
+        <app-evo-reusable-range [title]="'First Range'"
+                                [range]="question.model.firstRange">
+        </app-evo-reusable-range>
+        <div style="height: 5px;"></div>
+      </div>
+      <div fxFlex="20px" fxFlex.xs="10px"></div>
+      <div fxFlex>
+        <app-evo-reusable-range [title]="'Second Range'"
+                                [range]="question.model.secondRange">
+        </app-evo-reusable-range>
+        <div style="height: 5px;"></div>
+      </div>
+    </div>
+    <div fxFlex="20px"></div>
+  </div>
+  <div style="height: 20px" ngStyle.lt-md="height: 10px"></div>
+  <div>
+    <div fxFlex="20px"></div>
+    <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+      <div fxFlex>
+        <app-evo-reusable-range [title]="'Third Range'" [range]=""></app-evo-reusable-range>
+      </div>
+      <div fxFlex="20px" fxFlex.xs="10px"></div>
+      <div fxFlex>
+        <div>
+          <div *ngIf="question.answerType === QuestionModel.AnswerTypes.multipleChoice">
+            <app-evo-reusable-range [title]="'Answers Range'"
+                                    [range]="question.model.possibleAnswers">
+            </app-evo-reusable-range>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div fxFlex="20px"></div>
+  </div>
+  <div style="height: 20px" ngStyle.lt-md="height: 10px"></div>
+  <div>
+    <div fxFlex="20px"></div>
+    <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+      <div fxFlex>
+        <div style="height: 65px">
+          <app-evo-dropdown [list]="QuestionModel.ImageTypes.dropdownList()"
+                            [title]="'Image Type One'"
+                            [(ngModel)]="question.model.imageTypeOne">
+          </app-evo-dropdown>
+        </div>
+        <div style="height: 10px"></div>
+        <div>
+          <app-evo-input [title]="'1. Min Outcome'"
+                         [placeholderText]="'Min Outcome'"
+                         [inputType]="'number'"
+                         [(ngModel)]="question.model.firstMinOutcome">
+          </app-evo-input>
+        </div>
+        <div style="height: 10px"></div>
+        <div>
+          <app-evo-input [title]="'1. Max Outcome'"
+                         [placeholderText]="'Max Outcome'"
+                         [inputType]="'number'"
+                         [(ngModel)]="question.model.firstMaxOutcome">
+          </app-evo-input>
+        </div>
+      </div>
+      <div fxFlex="20px" fxFlex.xs="10px"></div>
+      <div fxFlex>
+        <div style="height: 65px">
+          <div *ngIf="question.answerType === QuestionModel.AnswerTypes.multipleChoice">
+            <app-evo-input [title]="'Number of Answers'"
+                           [inputType]="'number'"
+                           [(ngModel)]="question.model.numAnswers">
+            </app-evo-input>
+          </div>
+        </div>
+        <div style="height: 10px"></div>
+        <div>
+          <app-evo-input [title]="'2. Min Outcome'"
+                         [placeholderText]="'Min Outcome'"
+                         [inputType]="'number'"
+                         [(ngModel)]="question.model.secondMinOutcome">
+          </app-evo-input>
+        </div>
+        <div style="height: 10px"></div>
+        <div>
+          <app-evo-input [title]="'2. Max Outcome'"
+                         [placeholderText]="'Max Outcome'"
+                         [inputType]="'number'"
+                         [(ngModel)]="question.model.secondMaxOutcome">
+          </app-evo-input>
+        </div>
+      </div>
+    </div>
+    <div fxFlex="20px"></div>
+  </div>
+  <div style="height: 20px"></div>
+</div>

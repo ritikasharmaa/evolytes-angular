@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="30px" viewBox="0 0 26 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>filter-1</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Landing-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Features---Monitor" transform="translate(-318.000000, -5453.000000)" stroke="#28A745" stroke-width="1.5">
+            <g id="Keeping-Students-Engaged" transform="translate(0.000000, 4975.000000)">
+                <g id="Benefits" transform="translate(73.000000, 141.000000)">
+                    <g id="Learning-Insights" transform="translate(222.000000, 317.000000)">
+                        <g id="filter-1" transform="translate(22.000000, 21.000000)">
+                            <path d="M25.4333333,2.45 C25.6984738,2.09647941 25.7411224,1.62349884 25.5434984,1.22825081 C25.3458744,0.833002772 24.9419007,0.583333333 24.5,0.583333333 L3.47783333,0.583333333 C3.0359326,0.583333333 2.63195896,0.833002772 2.43433494,1.22825081 C2.23671093,1.62349884 2.27935956,2.09647941 2.5445,2.45 L11.6538333,14.6895 L11.6538333,26.25 C11.6538333,26.6919007 11.9035028,27.0958744 12.2987508,27.2934984 C12.6939988,27.4911224 13.1669794,27.4484738 13.5205,27.1833333 L15.8538333,25.4333333 C16.1476068,25.2130032 16.3205,24.8672169 16.3205,24.5 L16.3205,14.6883333 L25.4333333,2.45 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

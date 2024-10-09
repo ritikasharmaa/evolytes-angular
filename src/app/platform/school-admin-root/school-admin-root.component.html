@@ -1,0 +1,12 @@
+<app-modal></app-modal>
+<app-evo-date-picker></app-evo-date-picker>
+<div *ngIf="mobileMenuSv.isVisible">
+  <app-mobile-school-admin-sidebar></app-mobile-school-admin-sidebar>
+</div>
+<app-school-admin-header></app-school-admin-header>
+<div style="height: calc(100% - 60px);">
+  <app-school-admin-sidebar></app-school-admin-sidebar>
+  <div fxFlex class="bgLightGrayColor" style="width: 100%; height:100%" ngStyle.sm="width: calc(100% - 200px)">
+    <router-outlet></router-outlet>
+  </div>
+</div>

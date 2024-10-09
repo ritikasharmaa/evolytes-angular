@@ -1,0 +1,29 @@
+<div style="width: 100%;">
+  <div *ngIf="showTitle">
+    <p class="semiBoldMont font12px grayColor" style="margin: 0;">
+      {{getTitle()}}
+    </p>
+  </div>
+  <div style="height: 6px" *ngIf="showTitle"></div>
+  <div class="containerShadow"
+       [ngClass]="{ whiteBg: isDisabled === false, bgGrayColor: isDisabled === true }"
+       style="height: 44px; border-radius: 4px;">
+    <div fxFlex="10px" *ngIf="showIcon === false"></div>
+    <div fxFlex="60px" fxLayoutAlign="space-around center" *ngIf="showIcon">
+      <img [src]="getIcon()" style="width: 18px; object-fit: contain;">
+    </div>
+    <input class="mediumMont font14px grayColor"
+           [placeholder]="getPlaceholder()"
+           type="text"
+           [ngModel]="value"
+           [ngStyle]="{ 'font-size': fontSize }"
+           [disabled]="isDisabled"
+           (keyup)="inputChanged($event)"
+           (focusin)="isFocused = true; onInputFocus()"
+           (focusout)="isFocused = false"
+           [ngClass]="{ whiteBgColor: !isDisabled, grayBgColor: isDisabled }"
+           style="outline: none; border: none; border-radius: 4px; background-color: transparent; height: 100%;"
+           fxFlex>
+    <div fxFlex="10px"></div>
+  </div>
+</div>

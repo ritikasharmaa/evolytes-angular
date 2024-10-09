@@ -1,0 +1,116 @@
+<div fxHide.xs="true"
+     class="whiteBg noScrollBar"
+     style="height: 100%; width: 120px; display: inline-block; vertical-align: top;">
+  <div class="noScrollBar" style="height: calc(100% - 70px); overflow-y: scroll;">
+    <div style="height: 30px"></div>
+    <div class="selectItemInactive"
+         style="height: 70px"
+         routerLink="/platform/dash"
+         routerLinkActive="selectItemOrangeActive"
+         fxLayoutAlign="center center"
+         (click)="onDashboardClicked()">
+      <div fxFlex>
+        <div fxLayoutAlign="center center">
+          <img style="height: 34px; width: 34px;" src="./assets/sidebar/dashboard-overview-2.svg">
+        </div>
+        <div style="height: 8px;"></div>
+        <p class="mediumMont font12px grayColor noMargin"
+           style="text-align: center;">
+          {{ 'sidebar.dashboard' | translate }}
+        </p>
+      </div>
+    </div>
+    <div style="height: 20px"></div>
+    <div class="selectItemInactive"
+         style="height: 70px"
+         routerLink="/platform/books"
+         routerLinkActive="selectItemBlueActive"
+         fxLayoutAlign="center center"
+         (click)="onBooksClicked()">
+      <div fxFlex>
+        <div fxLayoutAlign="center center">
+          <img style="height: 34px; width: 34px;"
+               src="./assets/sidebar/book-circular-icon.svg">
+        </div>
+        <div style="height: 8px;"></div>
+        <p class="mediumMont font12px grayColor noMargin"
+           style="text-align: center;">
+          {{ 'reusable.books' | translate }}
+        </p>
+      </div>
+    </div>
+    <div style="height: 20px"></div>
+    <div class="selectItemInactive"
+         style="height: 70px"
+         routerLink="/platform/answers"
+         routerLinkActive="selectItemGreenActive"
+         fxLayoutAlign="center center"
+         (click)="onAnswersClicked()">
+      <div fxFlex>
+        <div fxLayoutAlign="center center">
+          <img style="height: 34px; width: 34px;"
+               src="./assets/sidebar/answers-cricle-gray-icon.svg">
+        </div>
+        <div style="height: 8px;"></div>
+        <p class="mediumMont font12px grayColor noMargin"
+           style="text-align: center;">
+          {{ 'sidebar.answers' | translate }}
+        </p>
+      </div>
+    </div>
+    <!--
+    <div style="height: 20px"></div>
+    <div class="selectItemInactive"
+         style="height: 70px"
+         routerLink="/platform/videos"
+         routerLinkActive="selectItemYellowActive"
+         fxLayoutAlign="center center"
+         (click)="onHelpClicked()">
+      <div fxFlex>
+        <div fxLayoutAlign="center center">
+          <img style="height: 34px; width: 34px;"
+               src="./assets/sidebar/questions-circular-gray.svg">
+        </div>
+        <div style="height: 8px;"></div>
+        <p class="mediumMont font12px grayColor noMargin"
+           style="text-align: center;">
+          {{ 'sidebar.help' | translate }}
+        </p>
+      </div>
+    </div>
+    -->
+    <div style="height: 20px"></div>
+    <div class="selectItemInactive"
+         style="height: 70px"
+         routerLink="/platform/settings"
+         routerLinkActive="selectItemPurpleActive"
+         fxLayoutAlign="center center"
+         (click)="onSettingsClicked()">
+      <div fxFlex>
+        <div fxLayoutAlign="center center">
+          <img style="height: 34px; width: 34px;"
+               src="./assets/sidebar/settings-circular-icon.svg">
+        </div>
+        <div style="height: 8px;"></div>
+        <p class="mediumMont font12px grayColor noMargin"
+           style="text-align: center;">
+          {{ 'sidebar.settings' | translate }}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div style="height: 70px; cursor: pointer;"
+       fxLayoutAlign="center center"
+       (click)="onLogoutClicked()">
+    <div fxFlex>
+      <div fxLayoutAlign="center center">
+        <img style="height: 34px; width: 34px;" src="../../../assets/sidebar/logout-circular-icon.svg">
+      </div>
+      <div style="height: 8px;"></div>
+      <p class="mediumMont font12px grayColor noMargin"
+         style="text-align: center;">
+        {{ 'sidebar.logout' | translate }}
+      </p>
+    </div>
+  </div>
+</div>

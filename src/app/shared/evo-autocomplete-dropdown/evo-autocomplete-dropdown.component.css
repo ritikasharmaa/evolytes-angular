@@ -1,0 +1,19 @@
+.containerShadow {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.dropdownContainer {
+
+}
+
+input:focus {
+  outline: none;
+}
+
+div.wholeHeight {
+  height: 100%;
+}
+
+div.partialHeight {
+  height: calc(100% - 18px);
+}

@@ -1,0 +1,131 @@
+<app-modal></app-modal>
+<app-evo-header [type]="'logout'" [hideHamburgerIcon]="true"></app-evo-header>
+<app-evo-decoration-background-signup></app-evo-decoration-background-signup>
+<div style="height: calc(100% - 60px); z-index: 10;" fxLayoutAlign="center start">
+
+  <div fxFlex.gt-md="55" fxFlex.md="65" fxFlex.sm="70" fxFlex.xs="90">
+
+    <div style="height: 40px"></div>
+    <div *ngIf="isTeacher()" fxLayoutAlign="center start">
+      <div fxFlex="50" style="height:40px; border-radius: 8px;" class="defaultShadow" fxLayout="row"
+           fxLayoutAlign="center end">
+        <div fxFlex="15"></div>
+        <div style="height: 37px;"
+             class="pointer"
+             [ngClass]="{blueUnderLine: categorySelected === 'students', noBlueUnderLine: categorySelected !== 'students'}"
+             (click)="showStudents()" fxLayoutAlign="center center" fxFlex>
+          <p class="semiBoldMont noMargin lightGrayColor font16px">
+            {{ 'selectStudent.students' | translate }}
+          </p>
+        </div>
+        <div fxFlex="20"></div>
+        <div style="height: 37px;"
+             class="pointer"
+             [ngClass]="{blueUnderLine: categorySelected === 'groups', noBlueUnderLine: categorySelected !== 'groups'}"
+             (click)="showGroups()" fxLayoutAlign="center center" fxFlex>
+          <p class="semiBoldMont noMargin lightGrayColor font16px">
+            {{ 'selectStudent.groups' | translate }}
+          </p>
+        </div>
+        <div fxFlex="15"></div>
+      </div>
+    </div>
+    <div style="height: 18px"></div>
+
+    <div style="height: calc(100% - 70px);" *ngIf="categorySelected === 'students'">
+      <div style="height: 80px" *ngIf="isTeacher() === false">
+        <div class="studentRow defaultShadow bgGreenHoverColor"
+             style="height: 60px;border-radius: 8px;"
+             (click)="onAddStudentClicked()">
+          <div fxFlex="20px"></div>
+          <div fxFlex fxLayoutAlign="start center">
+            <p class="semiBoldMont font16px whiteColor noMargin">{{ 'selectStudent.addAccount' | translate }}</p>
+          </div>
+        </div>
+      </div>
+      <div *ngFor="let student of students" style="height: 80px;">
+        <div class="studentRow defaultShadow bgWhiteHoverColor pointer"
+             style="height: 70px; border-radius: 8px;"
+             (click)="onStudentClicked(student)" fxLayout="row" fxLayoutAlign="start center">
+          <div fxFlex="20px"></div>
+          <img [src]="student.evolytesProfile.profileImage()"
+               style="width: 42px; height: 42px; object-fit: contain; border-radius: 24px; border-style: solid; border-width: 2px;"
+               [ngStyle]="{ borderColor: student.evolytesProfile.profileOutlineColor() }">
+          <div fxFlex="20px"></div>
+          <div>
+            <p class="semiBoldMont font16px blackColor noMargin">{{student.fullName()}}</p>
+            <div fxLayout="row">
+              <p class="semiBoldMont font12px lightGrayColor noMargin">{{ convertBirthDate(student.birthDate) }} </p>
+              <div fxFlex="5px"></div>
+              <p class="semiBoldMont font12px lightGrayColor noMargin"> - </p>
+              <div fxFlex="5px"></div>
+              <p class="semiBoldMont font12px noMargin"
+                 [ngClass]="{ greenColor: student.isBillingActive(),
+               redColor: student.isBillingCancelled(),
+               yellowColor: student.isBillingPaused() }">
+                {{ student.studentStatus() | translate }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: calc(100% - 70px);" *ngIf="categorySelected === 'groups'">
+      <div *ngFor="let group of groups;let i = index;">
+        <div class="studentRow defaultShadow bgWhiteHoverColor pointer"
+             style="height: 70px; border-radius: 8px;"
+             fxLayout="row" fxLayoutAlign="start center"
+             (click)="showStudentsOfGroup(i)"
+        >
+          <div fxFlex="30px"></div>
+          <div>
+            <p class="semiBoldMont font16px blackColor noMargin">{{group.name}}</p>
+            <div fxLayout="row">
+              <p *ngIf="group.studentIds.length === 1"
+                 class="semiBoldMont font14px lightGrayColor noMargin">{{ group.studentIds.length }} {{ 'selectStudent.student' | translate }}</p>
+              <p *ngIf="group.studentIds.length !== 1"
+                 class="semiBoldMont font14px lightGrayColor noMargin">{{ group.studentIds.length }} {{ 'selectStudent.students' | translate }}</p>
+            </div>
+          </div>
+        </div>
+        <div style="height: 18px;"></div>
+        <div *ngIf="showList[i] && group.studentIds.length > 0">
+          <div class="line"></div>
+          <div style="height: 18px;"></div>
+          <div *ngFor="let student of group.students" style="height: 80px;" fxLayoutAlign="end start">
+            <div class="studentRow defaultShadow bgWhiteHoverColor"
+                 style="height: 70px; border-radius: 8px;"
+                 fxLayout="row" fxLayoutAlign="start center"
+                 fxFlex="96"
+                 (click)="onStudentClicked(student)"
+            >
+              <div fxFlex="20px"></div>
+              <img [src]="student.evolytesProfile.profileImage()"
+                   style="width: 42px; height: 42px; object-fit: contain; border-radius: 24px; border-style: solid; border-width: 2px;"
+                   [ngStyle]="{ borderColor: student.evolytesProfile.profileOutlineColor() }">
+              <div fxFlex="20px"></div>
+              <div>
+                <p class="semiBoldMont font16px blackColor noMargin">{{student.fullName()}}</p>
+                <div fxLayout="row">
+                  <p
+                    class="semiBoldMont font12px lightGrayColor noMargin">{{ convertBirthDate(student.birthDate) }} </p>
+                  <div fxFlex="5px"></div>
+                  <p class="semiBoldMont font12px lightGrayColor noMargin"> - </p>
+                  <div fxFlex="5px"></div>
+                  <p class="semiBoldMont font12px noMargin"
+                     [ngClass]="{ greenColor: student.isBillingActive(),
+                     redColor: student.isBillingCancelled(),
+                     yellowColor: student.isBillingPaused() }">
+                    {{ student.studentStatus() | translate }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="height: 10px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

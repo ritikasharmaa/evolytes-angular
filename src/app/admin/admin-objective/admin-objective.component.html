@@ -1,0 +1,122 @@
+<div style="width: 100%; height: 100%;">
+  <div fxFlex="30px" fxFlex.lt-md="3"></div>
+  <div fxFlex fxFlex.xs="94" fxFlex.sm="calc(94%-200px)">
+    <div style="height: 20px;" ngStyle.xs="height: 15px;"></div>
+    <!-- Title and buttons -->
+    <div fxLayoutAlign="start center" fxLayout="row" fxLayout.xs="column">
+      <p class="boldMont font24px blackColor noMargin">Objectives</p>
+      <div fxFlex fxFlex.xs="10px"></div>
+      <div>
+        <button class="greenButton semiBoldMont font12px whiteColor"
+                fxFlex="140px"
+                fxFlex.xs="120px"
+                style="height: 40px; border-radius: 4px;"
+                ngStyle.xs="width: 130px"
+                (click)="onCreateClicked()">
+          Create Objective
+        </button>
+        <div fxFlex="20px" fxFlex.xs="10px"></div>
+        <div class="bgWhiteHoverColor pointer defaultShadow"
+             fxFlex="42px"
+             style="height: 42px; border-radius: 4px; box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); width: 50px"
+             fxLayoutAlign="center center" (click)="displayType = 'list'">
+          <img src="./assets/admin/list.svg" style="width: 30px; height: 30px;">
+        </div>
+        <div fxFlex="10px"></div>
+        <div class="bgWhiteHoverColor pointer defaultShadow"
+             fxFlex="42px"
+             style="height: 42px; border-radius: 4px; box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); width: 50px"
+             fxLayoutAlign="center center" (click)="displayType = 'grouped'">
+          <img src="./assets/admin/grouped-list.svg" style="width: 26px; height: 26px;">
+        </div>
+      </div>
+      <div fxFlex="10px"></div>
+    </div>
+    <div style="height: 20px;" ngStyle.xs="height: 10px;"></div>
+    <div fxLayoutAlign="center center" fxLayout="row" fxLayout.xs="column">
+      <div fxFlex="80" fxFlex.sm="65" fxFlex.xs="65px" ngStyle.xs="width:80%;">
+        <div fxLayoutAlign="start center">
+          <app-evo-input style="width: 100%;"
+                         title="Search for objectives level"
+                         placeholderText="Objective level name"
+                         (inputChangedEvent)="searchFilteredObjectives($event, objectiveFilter.country)">
+          </app-evo-input>
+        </div>
+      </div>
+      <div fxFlex="20px" fxFlex.xs="10px"></div>
+      <div fxFlex="20" fxFlex.sm="30" fxFlex.xs="65px" ngStyle.xs="width:80%;">
+        <div fxLayoutAlign="end center">
+          <app-evo-lang-dropdown style="height: 65px; width: 100%;"
+                                 (valueChangedEvent)="searchFilteredObjectives(objectiveFilter.level, $event)"
+                                 [countryDropdownList]="countryDropdownList"
+                                 [currentValue]="countryDropdownList[0]">
+          </app-evo-lang-dropdown>
+        </div>
+      </div>
+    </div>
+    <div style="height: 20px;" ngStyle.xs="height: 15px;"></div>
+    <div *ngIf="objectives.length !== 0 && displayType==='list'"
+         style="height: calc(100% - 192px);"
+         ngStyle.sm="overflow-y:hidden; height: calc(100% - 170px);"
+         ngStyle.xs="overflow-y:hidden; height: calc(100% - 275px);">
+      <div style="height:100%;">
+        <div>
+          <div fxFlex="20px"></div>
+          <p fxFlex
+             class="semiBoldMont font12px grayColor noMargin">Country</p>
+          <div fxFlex="40px"></div>
+          <p fxFlex
+             class="semiBoldMont font12px grayColor noMargin">Name</p>
+          <div fxFlex="10px"></div>
+        </div>
+        <div style="height: 10px;"></div>
+        <div class="bgGrayDarkColor" style="height: 1px"></div>
+        <div class="noScrollBar" style="height: 100%; overflow-y: scroll;"
+             ngStyle.lt-md="height:95%;">
+          <div style="height: 10px;"></div>
+          <div *ngFor="let objective of objectives">
+            <div>
+              <div fxFlex="2px"></div>
+              <div fxFlex class="smallShadow bgWhiteHoverColor pointer"
+                   style="height: 64px; border-radius: 4px;"
+                   fxLayoutAlign="start center"
+                   (click)="onObjectiveClicked(objective)">
+                <div fxFlex="15px"></div>
+                <div fxFlex fxLayoutAlign="start center">
+                  <div fxFlex>
+                    <p class="semiBoldMont font16px blackColor noMargin">{{objective.country}}</p>
+                  </div>
+                  <div fxFlex="40px"></div>
+                  <p fxFlex
+                     class="semiBoldMont font16px blackColor noMargin">{{cultureLevel(objective.level)}}</p>
+                  <div fxFlex="20px"></div>
+                </div>
+              </div>
+              <div fxFlex="2px"></div>
+            </div>
+            <div style="height: 10px;"></div>
+          </div>
+          <button class="blueButton whiteColor font14px semiBoldMont"
+                  style="height: 42px; width: 100%;"
+                  *ngIf="objectives.length % objectiveFilter.limit === 0 && objectives.length > 0 && hasMoreData === true"
+                  (click)="onFetchMoreObjectives()">
+            Load More
+          </button>
+          <div style="height: 10px;" ngStyle.sm="height: 30px;" ngStyle.xs="height: 20px:"></div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="objectives.length !== 0 && displayType==='grouped'"
+         class="defaultScrollBar scrollBarGreenThumb"
+         style="height: calc(100% - 192px);  overflow-y: scroll;" ngStyle.lt-md="height: calc(100% - 170px);"
+         fxLayoutAlign="center start">
+      <div style="height: 100%; width: 100%;">
+        <app-admin-objective-by-country [treeObjective]="treeObjective"
+                                        (outputObjective)="onObjectiveClicked($event)"
+                                        fxFlex="92"
+        ></app-admin-objective-by-country>
+      </div>
+    </div>
+  </div>
+  <div fxFlex="30px" fxFlex.lt-md="3"></div>
+</div>

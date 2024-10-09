@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>remove-bold</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Platform" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Administration---Schools---Teacher-Detail" transform="translate(-1314.000000, -812.000000)" fill="#FFFFFF">
+            <g id="Students" transform="translate(370.000000, 760.000000)">
+                <g transform="translate(0.000000, 22.000000)" id="User-One">
+                    <g>
+                        <g id="Remove-Button" transform="translate(934.000000, 20.000000)">
+                            <g id="remove-bold" transform="translate(10.000000, 10.000000)">
+                                <path d="M6.25,10 L1.00583333,15.2441667 C0.680515051,15.5695832 0.680515051,16.0970835 1.00583333,16.4225 L3.5775,18.9941667 C3.90291654,19.3194849 4.43041679,19.3194849 4.75583333,18.9941667 L10,13.75 L15.2441667,18.9941667 C15.5695832,19.3194849 16.0970835,19.3194849 16.4225,18.9941667 L18.9941667,16.4225 C19.3194849,16.0970835 19.3194849,15.5695832 18.9941667,15.2441667 L13.75,10 L18.9941667,4.75583333 C19.3194849,4.43041679 19.3194849,3.90291654 18.9941667,3.5775 L16.4225,1.00583333 C16.0970835,0.680515051 15.5695832,0.680515051 15.2441667,1.00583333 L10,6.25 L4.75583333,1.00583333 C4.43041679,0.680515051 3.90291654,0.680515051 3.5775,1.00583333 L1.00583333,3.5775 C0.680515051,3.90291654 0.680515051,4.43041679 1.00583333,4.75583333 L6.25,10 Z" id="Shape"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

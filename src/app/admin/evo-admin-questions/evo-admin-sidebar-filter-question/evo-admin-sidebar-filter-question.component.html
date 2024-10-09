@@ -1,0 +1,142 @@
+<div fxFlex="100"
+     class="noScrollBar"
+     ngClass.gt-sm="whiteBg"
+     style="height: 100%;">
+  <div class="noScrollBar" style="height: calc(100% - 70px); overflow-y: scroll;"
+       ngStyle.lt-md="height: 100%; width: 100%;">
+    <div style="height: 30px" fxHide.lt-md="true"></div>
+    <div fxLayoutAlign="center start" fxHide.lt-md="true">
+      <p class="semiBoldMont font18px blackColor noMargin">Question filters</p>
+    </div>
+
+    <div style="height: 20px" fxHide.lt-md="true"></div>
+
+    <div>
+      <div fxFlex="30px"></div>
+      <app-evo-dropdown [title]="'subject'"
+                        [list]="listSubject"
+                        [placeholderText]="'question subject'"
+                        [currentValue]="subjectSelected"
+                        (valueChangedEvent)="subjectSelected = $event"
+                        style="width: 100%"
+      >
+      </app-evo-dropdown>
+      <div fxFlex="30px"></div>
+    </div>
+
+    <div style="height: 20px"></div>
+
+    <div>
+      <div fxFlex="30px"></div>
+      <app-evo-dropdown [title]="'category'"
+                        [list]="listCategory"
+                        [currentValue]="categorySelected"
+                        [placeholderText]="'question category'"
+                        (valueChangedEvent)="categorySelected = $event"
+                        style="width: 100%"
+      >
+      </app-evo-dropdown>
+      <div fxFlex="30px"></div>
+    </div>
+
+    <div style="height: 20px"></div>
+
+    <div>
+      <div fxFlex="30px"></div>
+      <app-evo-autocomplete-dropdown [title]="'sub-category'"
+                                     [list]="listSubCategory"
+                                     [currentValue]="subCategorySelected"
+                                     [placeholderText]="'question sub-category'"
+                                     (valueChangedEvent)="subCategorySelected = $event"
+                                     style="width: 100%"
+      >
+      </app-evo-autocomplete-dropdown>
+      <div fxFlex="30px"></div>
+    </div>
+
+    <div style="height: 20px"></div>
+
+    <div>
+      <div fxFlex="30px"></div>
+      <app-evo-dropdown [title]="'topic'"
+                        [list]="listTopic"
+                        [currentValue]="topicSelected"
+                        [placeholderText]="'question topic'"
+                        (valueChangedEvent)="topicSelected = $event"
+                        style="width: 100%"
+      >
+      </app-evo-dropdown>
+      <div fxFlex="30px"></div>
+    </div>
+
+    <div style="height: 20px"></div>
+
+    <div>
+      <div fxFlex="30px"></div>
+      <app-evo-select-mutliple-choice [list]="listRepresentation"
+                                      [title]="'question representation'"
+                                      [currentValues]="representationSelected"
+                                      [placeholderText]="'question representation'"
+                                      (valueChangedEvent)="representationSelected = $event"
+                                      style="width: 100%"
+      ></app-evo-select-mutliple-choice>
+      <div fxFlex="30px"></div>
+    </div>
+
+    <div style="height: 20px"></div>
+
+    <div>
+      <div fxFlex="30px"></div>
+      <app-evo-select-mutliple-choice [list]="listAnswerType"
+                                      [title]="'answer type'"
+                                      [currentValues]="answerTypesSelected"
+                                      [placeholderText]="'answer type'"
+                                      (valueChangedEvent)="answerTypesSelected = $event"
+                                      style="width: 100%"
+      ></app-evo-select-mutliple-choice>
+      <div fxFlex="30px"></div>
+    </div>
+
+    <div style="height: 20px"></div>
+
+    <div>
+      <div fxFlex="30px"></div>
+      <app-evo-multiple-switch [title]="'is published'"
+                               [list]="listIsPublished"
+                               [currentValue]="{key: null, value: 'not matter', iconURL: null}"
+                               (valueChangedEvent)="isPublishedSelected = $event"
+      ></app-evo-multiple-switch>
+      <div fxFlex="30px"></div>
+    </div>
+
+    <div style="height: 40px"></div>
+
+    <div fxLayout="row" fxLayoutAlign="center end">
+      <div fxFlex></div>
+
+      <div fxFlex="120px">
+        <div style="height: 6px;"></div>
+        <button class="redButton whiteColor semiBoldMont font14px"
+                style="height: 40px; width: 100%;"
+                (click)="onCancelClicked()">
+          Cancel
+        </button>
+      </div>
+
+      <div fxFlex></div>
+
+      <div fxFlex="120px">
+        <div style="height: 6px;"></div>
+        <button class="greenButton whiteColor semiBoldMont font14px"
+                style="height: 40px; width: 100%;"
+                (click)="onFilterClicked()">
+          Filter
+        </button>
+      </div>
+
+      <div fxFlex></div>
+    </div>
+
+
+  </div>
+</div>

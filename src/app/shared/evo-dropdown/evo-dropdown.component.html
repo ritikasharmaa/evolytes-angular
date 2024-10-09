@@ -1,0 +1,63 @@
+<div *ngIf="showTitle">
+  <p class="semiBoldMont font12px noMargin" [ngStyle]="{ color: getTitleColor() }">{{title}}</p>
+  <div style="height: 6px;"></div>
+</div>
+<div class="containerShadow bgWhiteHoverColor"
+     [ngStyle]="{ height: containerHeight, cursor: getCursor() }"
+     [ngClass]="{ whiteBg: isDisabled === false, bgGrayColor: isDisabled === true}"
+     style="border-radius: 4px; width: 100%;"
+     (click)="onContainerClicked()"
+     fxLayoutAlign="start center">
+  <div [fxFlex]="leftIndent"></div>
+  <div [fxFlex]="iconContainerWidth" *ngIf="showIcon" fxLayoutAlign="center center">
+    <img [src]="getCurrentIconURL()"
+         style="object-fit: contain;"
+         [ngStyle]="iconStyle"
+         *ngIf="getCurrentIconURL() !== null">
+  </div>
+  <p fxFlex class="grayColor noMargin"
+     [ngClass]="{ mediumMont: semibold === false, semiBoldMont: semibold === true }"
+     [ngStyle]="{ 'font-size': fontSize }"
+     *ngIf="_currentValue === null">{{placeholderText}}</p>
+  <p fxFlex class="noMargin"
+     [ngClass]="{ mediumMont: semibold === false, semiBoldMont: semibold === true, blackColor: textColor === 'blackColor', grayColor: textColor === 'grayColor'}"
+     [ngStyle]="{ 'font-size': fontSize }"
+     [fxLayoutAlign]="layoutAlign"
+     *ngIf="_currentValue !== null">{{ getCurrentValue() | translate }}</p>
+  <div fxFlex="40px" fxLayoutAlign="center center">
+    <img src="../../../assets/icons/down-arrow.svg" style="object-fit: contain; width: 18px; height: 18px;">
+  </div>
+  <div fxFlex="10px"></div>
+</div>
+<div style="height: 2px;"></div>
+<!-- Dropdown Container -->
+<div style="position: relative; z-index: 100;"
+     *ngIf="isOpen">
+  <div class="containerShadow"
+       [ngStyle]="{ height: getDropdownHeight(), 'overflow-y': getOverflowY() }"
+       style="border-radius: 4px; width: 100%;">
+    <div *ngFor="let el of list;"
+         class="bgWhiteHoverColor"
+         [ngStyle]="{ height: rowHeight }"
+         style="cursor: pointer"
+         (click)="onRowClicked(el)"
+         fxLayoutAlign="start center">
+      <div [fxFlex]="leftIndent"></div>
+      <div [fxFlex]="iconContainerWidth" *ngIf="showIcon" fxLayoutAlign="center center">
+        <img [src]="el.iconURL"
+             style="object-fit: contain;"
+             [ngStyle]="iconStyle"
+             *ngIf="el.iconURL !== null">
+      </div>
+      <div fxLayoutAlign="start center">
+        <p class="noMargin"
+           [ngClass]="{ mediumMont: semibold === false, semiBoldMont: semibold === true, blackColor: textColor === 'blackColor', grayColor: textColor === 'grayColor'}"
+           [ngStyle]="{ 'font-size': fontSize }">
+          {{ el.value | translate }}
+        </p>
+      </div>
+      <div fxFlex="50px"></div>
+    </div>
+  </div>
+  <div style="height: 20px;"></div>
+</div>

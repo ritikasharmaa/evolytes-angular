@@ -1,0 +1,274 @@
+<div class="defaultScrollBar scrollBarGreenThumb"
+     style="width: 100%; height: 100%; overflow-y: scroll;">
+  <div fxFlex="20px"></div>
+  <div fxFlex>
+    <div style="height: 20px;"></div>
+    <div class="whiteBg defaultShadow" style="border-radius: 8px;">
+      <div style="height: 60px;"
+           fxLayoutAlign="start center">
+        <div fxFlex="20px"></div>
+        <app-evo-input fxFlex
+                       [showTitle]="false"
+                       [placeholderText]="'Integration Name'"
+                       [value]="integration.name"
+                       (inputChangedEvent)="integration.name = $event">
+        </app-evo-input>
+        <div fxFlex="20px"></div>
+        <button class="redButton semiBoldMont font14px whiteColor"
+                fxFlex="120px"
+                style="height: 40px;"
+                (click)="onDelete()"
+                *ngIf="isEditMode">
+          Delete
+        </button>
+        <div fxFlex="20px" *ngIf="isEditMode"></div>
+        <button class="greenButton semiBoldMont font14px whiteColor"
+                fxFlex="120px"
+                style="height: 40px;"
+                (click)="onSave()">
+          {{getTitle()}}
+        </button>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px;"></div>
+      <div>
+        <div fxFlex="20px"></div>
+        <div fxFlex fxLayoutAlign="center center">
+          <qrcode [qrdata]="integration._id" [size]="240" *ngIf="integration._id"></qrcode>
+        </div>
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-input title="_id"
+                         placeholderText="_id"
+                         [isDisabled]="true"
+                         [value]="integration._id">
+          </app-evo-input>
+          <div style="height: 10px;"></div>
+          <div style="height: 65px;">
+            <app-evo-dropdown title="Type"
+                              [list]="IntegrationModel.IntegrationTypes.dropdownList()"
+                              [currentValue]="integration.type"
+                              (valueChangedEvent)="integration.type = $event">
+            </app-evo-dropdown>
+          </div>
+          <div style="height: 10px;"></div>
+          <div style="height: 65px;">
+            <app-evo-dropdown title="icon"
+                              [list]="IntegrationModel.Icons.dropdownList()"
+                              [currentValue]="integration.iconName"
+                              (valueChangedEvent)="integration.iconName = $event">
+            </app-evo-dropdown>
+          </div>
+          <div style="height: 10px;"></div>
+          <app-evo-input title="Chapter"
+                         placeholderText="Chapter"
+                         inputType="number"
+                         [value]="integration.chapter"
+                         (inputChangedEvent)="integration.chapter = $event">
+          </app-evo-input>
+          <div style="height: 10px;"></div>
+          <app-evo-input title="Page"
+                         placeholderText="Page"
+                         inputType="number"
+                         [value]="integration.page"
+                         (inputChangedEvent)="integration.page = $event">
+          </app-evo-input>
+          <div style="height: 10px;"></div>
+
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px;"></div>
+    </div>
+    <div style="height: 20px;"></div>
+    <div class="whiteBg defaultShadow" style="border-radius: 8px;" *ngIf="isEditMode">
+      <div style="height: 50px;" fxLayoutAlign="start center">
+        <div fxFlex="20px"></div>
+        <p class="semiBoldMont font18px blackColor noMargin">Integration Model</p>
+        <div fxFlex="20px"></div>
+      </div>
+      <div>
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <div style="height: 10px;"></div>
+          <div style="height: 65px;">
+            <app-evo-translated-input inputTitle="Game Title"
+                                      [cultures]="CultureModel.privateDropdownList()"
+                                      [descr]="integration.names">
+            </app-evo-translated-input>
+          </div>
+          <div style="height: 10px;"></div>
+          <div style="height: 65px;">
+            <app-evo-translated-input inputTitle="Monitor Title"
+                                      [cultures]="CultureModel.privateDropdownList()"
+                                      [descr]="integration.monitorNames">
+            </app-evo-translated-input>
+          </div>
+          <div style="height: 10px;"></div>
+          <div *ngIf="integration.type === IntegrationModel.IntegrationTypes.Exam">
+            <app-evo-input title="Num Correct Answers"
+                           placeholderText="Num Correct Answers"
+                           inputType="number"
+                           [value]="integration.numCorrect"
+                           (inputChangedEvent)="integration.numCorrect = $event">
+            </app-evo-input>
+          </div>
+          <div *ngIf="integration.type === IntegrationModel.IntegrationTypes.VideoHelp">
+            <app-evo-input title="Video URL"
+                           placeholderText="Video URL"
+                           [value]="integration.videoURL"
+                           (inputChangedEvent)="integration.videoURL = $event">
+            </app-evo-input>
+          </div>
+          <div *ngIf="integration.type === IntegrationModel.IntegrationTypes.Passcode">
+            <div style="height: 65px;">
+              <app-evo-dropdown title="Passphrase Type"
+                                [list]="IntegrationModel.PassphraseTypes.dropdownList()"
+                                [currentValue]="integration.passphraseType"
+                                (valueChangedEvent)="integration.passphraseType = $event">
+              </app-evo-dropdown>
+            </div>
+            <div style="height: 10px;"></div>
+            <app-evo-input title="Passphrase"
+                           placeholderText="Passphrase"
+                           [value]="integration.passphrase"
+                           (inputChangedEvent)="integration.passphrase = $event">
+            </app-evo-input>
+            <div style="height: 10px;"></div>
+            <app-evo-input title="Passphrase Length"
+                           placeholderText="Passphrase Length"
+                           inputType="number"
+                           [value]="integration.passphraseLength"
+                           (inputChangedEvent)="integration.passphraseLength = $event">
+            </app-evo-input>
+          </div>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 10px;"></div>
+      <div *ngIf="integration.type === IntegrationModel.IntegrationTypes.Exam">
+        <div fxFlex="20px"></div>
+        <div fxFlex class="bgLightGrayColor defaultScrollBar scrollBarGreenThumb" style="border-radius: 6px; height: 400px; overflow-y: scroll;">
+          <div fxFlex="10px"></div>
+          <div fxFlex>
+            <div style="height: 10px;"></div>
+            <div class="bgGreenHoverColor defaultShadow"
+                 style="height: 50px; border-radius: 4px; cursor: pointer;"
+                 fxLayoutAlign="start center"
+                 (click)="onAddQuestionClicked()">
+              <div fxFlex="20px"></div>
+              <p fxFlex class="semiBoldMont font14px whiteColor noMargin">+ Add Question</p>
+              <div fxFlex="20px"></div>
+            </div>
+            <div style="height: 10px;"></div>
+            <div *ngFor="let question of integration.questions">
+              <div style="height: 110px;">
+                <div class="bgWhiteHoverColor defaultShadow"
+                     style="height: 100px; border-radius: 4px; cursor: pointer;"
+                     fxLayoutAlign="center center">
+                  <div class="defaultShadow"
+                       style="height: 80px; border-radius: 4px;"
+                       fxFlex="40"
+                       fxLayoutAlign="center center">
+                    <div fxFlex="86">
+                      <p class="semiBoldMont font12px blackColor noMargin">{{getQuestionName(question.questionId)}}</p>
+                      <p class="semiBoldMont font10px greenColor noMargin">{{getQuestionSubCategory(question.questionId)}}</p>
+                      <p class="semiBoldMont font10px purpleColor noMargin">{{getQuestionAnswerType(question.questionId)}}</p>
+                      <p class="semiBoldMont font10px blueColor noMargin">{{getQuestionRepresentation(question.questionId)}}</p>
+                    </div>
+                  </div>
+                  <div fxFlex="4"></div>
+                  <app-evo-input fxFlex="40"
+                                 inputType="number"
+                                 title="Num Questions"
+                                 [value]="question.numQuestions"
+                                 (inputChangedEvent)="question.numQuestions = $event">
+                  </app-evo-input>
+                  <div fxFlex="4"></div>
+                  <div fxFlex="40px">
+                    <div style="height: 21px"></div>
+                    <button class="redButton semiBoldMont font12px whiteColor"
+                            (click)="onDeleteQuestion(question)"
+                            style="height: 40px; width: 100%;">X</button>
+                  </div>
+                </div>
+                <div style="height: 10px;"></div>
+              </div>
+              <div style="height: 10px;"></div>
+            </div>
+            <div style="height: 10px;"></div>
+          </div>
+          <div fxFlex="10px"></div>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 10px;"></div>
+    </div>
+    <div style="height: 20px;"></div>
+    <div class="whiteBg defaultShadow" style="border-radius: 8px;" *ngIf="isEditMode">
+      <div fxFlex="20px"></div>
+      <div fxFlex>
+        <div style="height: 20px;"></div>
+        <div>
+          <app-evo-input fxFlex="60"
+                         title="Coin Reward"
+                         [value]="integration.coinReward"
+                         (inputChangedEvent)="integration.coinReward = $event">
+          </app-evo-input>
+        </div>
+        <div style="height: 20px;"></div>
+        <p class="semiBoldMont font12px grayColor noMargin">Rewards</p>
+        <div style="height: 4px;"></div>
+        <div class="bgLightGrayColor defaultScrollBar scrollBarGreenThumb" style="height: 300px; border-radius: 4px; overflow-y: scroll;">
+          <div fxFlex="10px"></div>
+          <div fxFlex>
+            <div style="height: 10px;"></div>
+            <div class="bgGreenHoverColor defaultShadow"
+                 style="height: 50px; border-radius: 4px; cursor: pointer;"
+                 fxLayoutAlign="start center"
+                 (click)="onAddRewardClicked()">
+              <div fxFlex="20px"></div>
+              <p class="semiBoldMont font14px whiteColor noMargin">+ Add reward</p>
+              <div fxFlex="20px"></div>
+            </div>
+            <div style="height: 10px;"></div>
+            <div *ngFor="let reward of integration.rewards">
+              <div class="whiteBg defaultShadow"
+                   style="height: 80px; border-radius: 4px;"
+                   fxLayoutAlign="start center">
+                <div fxFlex="20px"></div>
+                <app-evo-input fxFlex
+                               title="Unique Id"
+                               [value]="reward.uniqueId"
+                               (inputChangedEvent)="reward.uniqueId = $event">
+                </app-evo-input>
+                <div fxFlex="20px"></div>
+                <app-evo-input fxFlex
+                               title="Num Items"
+                               inputType="number"
+                               [value]="reward.numItems"
+                               (inputChangedEvent)="reward.numItems = $event">
+                </app-evo-input>
+                <div fxFlex="10px"></div>
+                <div fxFlex="40px">
+                  <div style="height: 21px"></div>
+                  <button class="redButton semiBoldMont font12px whiteColor"
+                          (click)="onDeleteReward(reward)"
+                          style="height: 40px; width: 100%;">X</button>
+                </div>
+                <div fxFlex="20px"></div>
+              </div>
+              <div style="height: 10px;"></div>
+            </div>
+            <div style="height: 10px;"></div>
+          </div>
+          <div fxFlex="10px"></div>
+        </div>
+        <div style="height: 20px;"></div>
+      </div>
+      <div fxFlex="20px"></div>
+    </div>
+    <div style="height: 20px;"></div>
+  </div>
+  <div fxFlex="20px"></div>
+</div>

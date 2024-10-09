@@ -1,0 +1,798 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.centerAlign {
+  text-align: center;
+}
+
+.leftAlign {
+  text-align: left;
+}
+
+/** Font Selectors **/
+.font60px {
+  font-size: 60px;
+}
+
+.font46px {
+  font-size: 46px;
+}
+
+.font42px {
+  font-size: 42px;
+}
+
+.font40px {
+  font-size: 40px;
+}
+
+.font38px {
+  font-size: 38px;
+}
+
+.font36px {
+  font-size: 36px;
+}
+
+.font34px {
+  font-size: 34px;
+}
+
+.font32px {
+  font-size: 32px;
+}
+
+.font30px {
+  font-size: 30px;
+}
+
+.font28px {
+  font-size: 28px;
+}
+
+.font26px {
+  font-size: 26px;
+}
+
+.font24px {
+  font-size: 24px;
+}
+
+.font22px {
+  font-size: 22px;
+}
+
+.font20px {
+  font-size: 20px;
+}
+
+.font18px {
+  font-size: 18px;
+}
+
+.font16px {
+  font-size: 16px;
+}
+
+.font14px {
+  font-size: 14px;
+}
+
+.font12px {
+  font-size: 12px;
+}
+
+.font10px {
+  font-size: 10px;
+}
+
+.font9px {
+  font-size: 9px;
+}
+
+.font8px {
+  font-size: 8px;
+}
+
+.font7px {
+  font-size: 7px;
+}
+
+/** Background Colors **/
+
+.bgTitle {
+  background: linear-gradient(130deg, #F8F9F9 200px, #11ffee00 0%);
+}
+.bgTitleLittle {
+  background: linear-gradient(130deg, #F8F9F9 150px, #11ffee00 0%);
+}
+
+div.whiteBg {
+  background-color: #ffffff;
+}
+
+div.titleBg {
+  background-color: #F3F4F8;
+}
+
+div.blueBg {
+  background-color: #009CCC;
+}
+
+div.greenBg {
+  background-color: #28A745;
+}
+
+div.greenLightBg {
+  background-color: #79C570;
+}
+
+div.purpleBg {
+  background-color: #9B59B6;
+}
+
+div.orangeBg {
+  background-color: #F26522;
+}
+
+div.yellowBg {
+  background-color: #FFCB05;
+}
+
+div.redBg {
+  background-color: #D0021B;
+}
+
+div.lightGrayBg {
+  background-color: rgba(84, 103, 110, 0.04);
+}
+
+div.lightGrayBg2 {
+  background-color: #f3f6f9;
+}
+
+div.grayBg {
+  background-color: #54676E;
+}
+
+div.disabledBg {
+  background-color: #979797;
+}
+
+div.blackBg {
+  background-color: black;
+}
+
+.overlayBg {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.line {
+  border: 1px solid;
+  border-color: #F3F6F9;
+}
+
+/** Foreground Colors */
+.whiteColor {
+  color: white;
+}
+
+.blackColor {
+  color: black;
+}
+
+.lightBlueColor {
+  color: #25ccff;
+}
+
+.blueColor {
+  color: #009CCC;
+}
+
+.darkBlueColor {
+  color: #00455A;
+}
+
+.yellowColor {
+  color: #FFCB05;
+}
+
+.purpleColor {
+  color: #9B59B6;
+}
+
+.orangeColor {
+  color: #F26522;
+}
+
+.greenColor {
+  color: #79C570;
+}
+
+.darkGreenColor {
+  color: #1e7e34;
+}
+
+.redColor {
+  color: #D0021B;
+}
+
+.disabledColor {
+  color: #979797;
+}
+
+.grayColor {
+  color: #54676E;
+}
+
+.lightGrayColor {
+  color: #80949A;
+}
+.buttonDisabledColor {
+  color: #D8D8D8;
+}
+
+/** Hover Colors */
+
+.yellowHoverColor {
+  color: #FFCB05;
+}
+
+.yellowHoverColor:hover {
+  color: #d1a600;
+}
+
+.purpleHoverColor {
+  color: #9B59B6;
+}
+
+.purpleHoverColor:hover {
+  color: #804399;
+}
+
+.orangeHoverColor {
+  color: #F26522;
+}
+
+.orangeHoverColor:hover {
+  color: #d54d0d;
+}
+
+.blueHoverColor {
+  color: #009CCC;
+}
+
+.blueHoverColor:hover {
+  color: #007599;
+}
+
+.greenHoverColor {
+  color: #28A745;
+}
+
+.greenHoverColor:hover {
+  color: #1e7e34;
+}
+
+.redHoverColor {
+  color: #D0021B;
+}
+
+.redHoverColor:hover {
+  color: #9e0214;
+}
+
+.grayHoverColor {
+  color: #54676E;
+}
+
+.grayHoverColor:hover {
+  color: #000000;
+}
+
+/** Background Hover Colors */
+
+.bgYellowHoverColor {
+  background-color: #FFCB05;
+}
+
+.bgYellowHoverColor:hover {
+  background-color: #d1a600;
+}
+
+.bgPurpleHoverColor {
+  background-color: #9B59B6;
+}
+
+.bgPurpleHoverColor:hover {
+  background-color: #804399;
+}
+
+.bgOrangeHoverColor {
+  background-color: #F26522;
+}
+
+.bgOrangeHoverColor:hover {
+  background-color: #d54d0d;
+}
+
+.bgBlueHoverColor {
+  background-color: #009CCC;
+}
+
+.bgBlueHoverColor:hover {
+  background-color: #007599;
+}
+
+.bgGreenHoverColor {
+  background-color: #28A745;
+}
+
+.bgGreenHoverColor:hover {
+  background-color: #1e7e34;
+}
+
+.bgGreenLightHoverColor {
+  background-color: #79C570;
+}
+
+.bgGreenLightHoverColor:hover {
+  background-color: #57b64c;
+}
+
+.bgRedHoverColor {
+  background-color: #D0021B;
+}
+
+.bgRedHoverColor:hover {
+  background-color: #9e0214;
+}
+
+.bgWhiteHoverColor {
+  background-color: #ffffff;
+}
+
+.bgWhiteHoverColor:hover {
+  background-color: #F3F4F8;
+}
+
+.bgGrayColor {
+  background-color: rgba(84, 103, 110, 0.04);
+}
+
+.bgGrayDarkColor {
+  background-color: #54676E;
+}
+
+.bgLightGrayColor {
+  background-color: #F8F9F9;
+}
+
+/** Font Selectors **/
+.lightMont {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+.regularMont {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.mediumMont {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.semiBoldMont {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.boldMont {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+/** The content for landing page **/
+div.landcontent {
+  position: absolute;
+  width: 100%;
+  top: 80px;
+  bottom: 0;
+  overflow: auto;
+  z-index: 0;
+}
+
+/** top burger menu **/
+div.burgerMenu {
+  height: 200px
+}
+
+/** Get Started Button **/
+button.evoButton {
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+button.evoButton:active {
+  opacity: 0.7;
+}
+
+button.evoButton:disabled {
+  background-color: #979797;
+}
+
+button.evoButton:focus {
+  outline: none;
+}
+
+button.greenButton {
+  background-color: #28A745;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+button.greenButton:hover {
+  background-color: #1e7e34;
+}
+
+button.greenButton:active {
+  opacity: 0.7;
+}
+
+button.greenButton:focus {
+  outline: none;
+}
+
+button.blackButton {
+  background-color: #000000;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+button.blackButton:hover {
+  background-color: #282828;
+}
+
+button.blackButton:active {
+  opacity: 0.7;
+}
+
+button.blackButton:focus {
+  outline: none;
+}
+
+button.whiteButton {
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+button.whiteButton:hover {
+  background-color: #cbcbcb;
+}
+
+button.whiteButton:active {
+  opacity: 0.7;
+}
+
+button.whiteButton:focus {
+  outline: none;
+}
+
+button.purpleButton {
+  background-color: #9B59B6;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+button.purpleButton:hover {
+  background-color: #804399;
+}
+
+button.purpleButton:active {
+  opacity: 0.7;
+}
+
+button.purpleButton:focus {
+  outline: none;
+}
+
+button.redButton {
+  background-color: #D0021B;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+button.redButton:hover {
+  background-color: #bf0219;
+}
+
+button.redButton:active {
+  opacity: 0.7;
+}
+
+button.redButton:focus {
+  outline: none;
+}
+
+button.orangeButton {
+  background-color: #F26522;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+button.orangeButton:hover {
+  background-color: #d54d0d;
+}
+
+button.orangeButton:active {
+  opacity: 0.7;
+}
+
+button.orangeButton:focus {
+  outline: none;
+}
+
+button.redButton:disabled,
+button.greenButton:disabled,
+button.blueButton:disabled,
+button.purpleButton:disabled,
+button.yellowButton:disabled {
+  background-color: #979797;
+}
+
+button.blueButton {
+  background-color: #009CCC;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+button.blueButton:hover {
+  background-color: #008CB7;
+}
+
+button.blueButton:active {
+  opacity: 0.7;
+}
+
+button.blueButton:focus {
+  outline: none;
+}
+
+button.yellowButton {
+  background-color: #FFCB05;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+button.yellowButton:hover {
+  background-color: #d1a600;
+}
+
+button.yellowButton:active {
+  opacity: 0.7;
+}
+
+button.yellowButton:focus {
+  outline: none;
+}
+
+.noMargin {
+  margin: 0;
+}
+
+.defaultShadow {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.smallShadow {
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+div.underline, p.underline {
+  border-bottom: 5px solid #28A745;
+}
+
+div.noUnderlineLight, p.noUnderlineLight {
+  border-bottom: 2px solid transparent;
+}
+
+div.blueUnderline, p.blueUnderline {
+  border-bottom: 2px solid #008CB7;
+
+}
+/**
+Box
+ */
+
+.bgBox {
+  background: linear-gradient(90deg, rgba(84, 103, 110, 0.04) 120px, #11ffee00 0%);
+}
+
+.redBgIcon {
+  background-color: #dd4242;
+}
+
+.bigLeftIcon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.bigAttachmentIcon {
+  height: 24px;
+  width: 18px;
+  object-fit: contain;
+}
+
+.bigCheckmarkIcon {
+  height: 18px;
+  width: 20px;
+  object-fit: contain;
+}
+
+.bigCloseIcon {
+  height: 18px;
+  width: 20px;
+  object-fit: contain;
+}
+
+.smallCheckmarkIcon {
+  height: 10px;
+  width: 14px;
+  object-fit: contain;
+}
+
+.smallHashtagIcon {
+  height: 12px;
+  width: 12px;
+  object-fit: contain;
+}
+div.underline {
+  border-bottom: 5px solid #28A745;
+}
+
+div.noUnderline {
+  border-bottom: 5px solid transparent;
+}
+
+div.blueUnderLine {
+  border-bottom: 3px solid #009CCC;
+  position: center;
+}
+
+div.noBlueUnderLine {
+  border-bottom: 3px solid transparent;
+}
+
+div.blueSideLine {
+  border-right: 3px solid #009CCC;
+  position: center;
+}
+
+/**
+Scroll bars
+ */
+.defaultScrollBar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.defaultScrollBar::-webkit-scrollbar-track {
+  width: 6px;
+  height: 6px;
+  background-color: transparent;
+}
+
+.noScrollBar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.noScrollBar::-webkit-scrollbar-track {
+  width: 0;
+  height: 0;
+}
+
+.scrollBarGrayThumb::-webkit-scrollbar-thumb {
+  background-color: #54676E;
+}
+
+.scrollBarGrayThumb::-webkit-scrollbar-thumb:hover {
+  background-color: #3E4C51;
+}
+
+.scrollBarBlueThumb::-webkit-scrollbar-thumb {
+  background-color: #009CCC;
+}
+
+.scrollBarBlueThumb::-webkit-scrollbar-thumb:hover {
+  background-color: #008CB7;
+}
+
+.scrollBarGreenThumb::-webkit-scrollbar-thumb {
+  background-color: #28A745;
+}
+
+.scrollBarGreenThumb::-webkit-scrollbar-thumb:hover {
+  background-color: #1e7e34;
+}
+
+.scrollBarPurpleThumb::-webkit-scrollbar-thumb {
+  background-color: #9B59B6;
+}
+
+.scrollBarPurpleThumb::-webkit-scrollbar-thumb:hover {
+  background-color: #804399;
+}
+
+.scrollBarOrangeThumb::-webkit-scrollbar-thumb {
+  background-color: #F26522;
+}
+
+.scrollBarOrangeThumb::-webkit-scrollbar-thumb:hover {
+  background-color: #d54d0d;
+}
+
+.scrollBarYellowThumb::-webkit-scrollbar-thumb {
+  background-color: #FFCB05;
+}
+
+.scrollBarYellowThumb::-webkit-scrollbar-thumb:hover {
+  background-color: #d1a600;
+}
+
+.scrollBarRedThumb::-webkit-scrollbar-thumb {
+  background-color: #D0021B;
+}
+
+.scrollBarRedThumb::-webkit-scrollbar-thumb:hover {
+  background-color: #bf0219;
+}
+
+
+/**
+Loader
+ */
+.loader {
+  height: 65px;
+  width: 65px;
+  color: #009CCC;
+  position: relative;
+  display: inline-block;
+  border: 5px solid;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: rotate 1s linear infinite;
+}
+
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

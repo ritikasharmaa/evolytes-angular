@@ -1,0 +1,7 @@
+div.selected {
+  border: 1px solid #28A745;
+}
+
+div.unselected {
+  border: 1px solid transparent;;
+}

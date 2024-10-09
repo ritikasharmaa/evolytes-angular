@@ -1,0 +1,17 @@
+<app-evo-date-picker></app-evo-date-picker>
+<app-admin-select-question></app-admin-select-question>
+<app-admin-select-country></app-admin-select-country>
+<app-evo-list-selector></app-evo-list-selector>
+<app-evo-admin-user-select-student></app-evo-admin-user-select-student>
+<app-modal></app-modal>
+<div *ngIf="mobileMenuSv.isVisible">
+  <app-admin-mobile-menu></app-admin-mobile-menu>
+</div>
+<app-evo-admin-header></app-evo-admin-header>
+<app-admin-passord-validation></app-admin-passord-validation>
+<div style="height: calc(100% - 60px);">
+  <app-evo-admin-sidebar></app-evo-admin-sidebar>
+  <div fxFlex class="bgLightGrayColor" style="height: 100%; width: 100%;"  ngStyle.sm="width: calc(100% - 80px);">
+    <router-outlet></router-outlet>
+  </div>
+</div>

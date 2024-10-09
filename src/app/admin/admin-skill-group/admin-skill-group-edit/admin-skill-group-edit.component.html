@@ -1,0 +1,282 @@
+<div class="defaultScrollBar scrollBarGreenThumb"
+     style="width: 100%; height: 100%; overflow-y: scroll;">
+
+  <div style="height: 20px"></div>
+
+  <div fxLayoutAlign="center center">
+    <div class="whiteBg defaultShadow"
+         style="border-radius: 6px;"
+         fxFlex.lt-md="94"
+         fxFlex.md="94"
+         fxFlex.gt-md="1000px">
+
+      <div style="height: 10px;"></div>
+      <div style="height: 70px">
+        <div fxFlex="20px"></div>
+        <div fxFlex fxLayoutAlign="start center">
+          <p class="semiBoldMont font18px blackColor noMargin">Skill Group Information</p>
+        </div>
+      </div>
+      <div style="height: 10px;"></div>
+
+      <div fxLayoutAlign="start center">
+        <div fxFlex="20px"></div>
+        <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+          <div fxFlex>
+            <app-evo-input [placeholderText]="'Objective Id'"
+                           [value]="skillGroup._id"
+                           [isDisabled]="true">
+            </app-evo-input>
+          </div>
+          <div fxFlex="20px" fxFlex.xs="10px"></div>
+          <div fxFlex fxLayout="row" fxLayoutAlign="center center" style="width: 100%;">
+            <div *ngIf="!isEditMode">
+              <div style="height: 6px;"></div>
+              <button class="greenButton whiteColor semiBoldMont font14px"
+                      style="height: 40px; width: 120px;"
+                      (click)="onCreateClicked()">
+                Create
+              </button>
+            </div>
+            <div *ngIf="isEditMode">
+              <div style="height: 6px;"></div>
+              <button class="greenButton whiteColor semiBoldMont font14px"
+                      style="height: 40px; width: 120px;"
+                      (click)="onSaveClicked()">
+                Save
+              </button>
+            </div>
+            <div fxFlex="20px" fxFlex.xs="10px"></div>
+            <div>
+              <div style="height: 6px;"></div>
+              <button class="orangeButton whiteColor semiBoldMont font14px"
+                      style="height: 40px; width: 120px;"
+                      (click)="onCancelClick()">
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+
+      <div style="height: 20px"></div>
+
+      <div>
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-translated-input fxFlex [descr]="skillGroup.name" [cultures]="cultures"></app-evo-translated-input>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+
+      <div style="height: 70px" *ngIf="isEditMode">
+        <div style="height: 20px"></div>
+        <div fxFlex fxLayoutAlign="end end">
+          <button class="redButton whiteColor semiBoldMont font14px"
+                  style="height: 40px; width: 100px;"
+                  (click)="onDeleteClick()">
+            Delete
+          </button>
+          <div fxFlex="20px"></div>
+        </div>
+      </div>
+
+      <div style="height: 15px"></div>
+    </div>
+  </div>
+
+  <div style="height: 15px"></div>
+
+  <div fxLayoutAlign="center center">
+    <div class="whiteBg defaultShadow"
+         style="border-radius: 6px;"
+         fxFlex.lt-md="94"
+         fxFlex.md="94"
+         fxFlex.gt-md="1000px">
+      <div>
+        <div fxFlex="20px"></div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center" style="width: 100%;">
+          <div fxFlex.xs="10px" fxHide.gt-xs="true"></div>
+          <p fxFlex class="semiBoldMont font18px blackColor noMargin" ngClass.lt-md="font16px">
+            Questions
+          </p>
+          <div fxFlex.xs="10px" fxHide.gt-xs="true"></div>
+          <div>
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center" style="width: 100%;">
+              <div fxFlex>
+                <app-evo-input [placeholderText]="'skill group name'"
+                               [value]="searchFirstTermQuestion"
+                               (inputChangedEvent)="searchFirstTermQuestion = $event"
+                               [title]="'search by name'">
+                </app-evo-input>
+              </div>
+              <div fxFlex="20px" fxFlex.xs="10px"></div>
+              <div fxFlex>
+                <div style="height: 20px;" fxHide.xs="true"></div>
+                <button class="blueButton whiteColor semiBoldMont font14px"
+                        style="height: 40px; width: 120px;"
+                        (click)="onFirstSearchClick()">
+                  Search
+                </button>
+              </div>
+            </div>
+            <div fxFlex="20px" fxHide.xs="true"></div>
+          </div>
+        </div>
+      </div>
+      <div style="height: 10px"></div>
+      <div style="max-height: 400px">
+        <div fxFlex="20px"></div>
+        <div fxFlex
+             class="lightGrayBg defaultScrollBar scrollBarBlueThumb"
+             style="max-height: 300px; border-radius: 6px; overflow-y: scroll;"
+             *ngIf="filteredQuestions.length > 0">
+          <div *ngFor="let question of filteredQuestions; index as i">
+            <div style="height: 10px"></div>
+            <div fxLayoutAlign="start start">
+              <div fxFlex="10px"></div>
+              <div fxFlex="95" fxFlex.xs="500px" class="bgWhiteHoverColor defaultShadow"
+                   style="height: 50px; border-radius: 4px; cursor: pointer;"
+                   fxLayoutAlign="start center">
+                <div fxFlex="20px"></div>
+                <div fxFlex>
+                  <p class="semiBoldMont font12px blueColor noMargin">{{question.name}}</p>
+                </div>
+                <div fxFlex="20px"></div>
+                <div fxFlex>
+                  <p class="mediumMont font12px grayColor noMargin">{{question.topic}}</p>
+                </div>
+                <div fxFlex="20px"></div>
+                <div fxFlex>
+                  <p class="mediumMont font12px grayColor noMargin">{{question.category}}</p>
+                </div>
+                <div fxFlex="20px"></div>
+                <div fxFlex>
+                  <p class="mediumMont font12px grayColor noMargin">{{question.answerType}}</p>
+                </div>
+              </div>
+              <div fxFlex="20px"></div>
+              <div fxFlex="50px" class="bgWhiteHoverColor defaultShadow"
+                   style="height: 50px; border-radius: 4px; cursor: pointer;"
+                   fxLayoutAlign="start center" (click)="onRemovedClicked(i)">
+                <div fxFlex="50px" fxLayoutAlign="center center">
+                  <p class="semiBoldMont font26px redColor noMargin">-</p>
+                </div>
+              </div>
+              <div fxFlex="10px"></div>
+            </div>
+          </div>
+          <div style="height: 10px;"></div>
+        </div>
+
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 10px"></div>
+      <div fxLayoutAlign="end end" *ngIf="isEditMode">
+        <div class="bgGreenHoverColor"
+             style="width: 40px; height: 40px; border-radius: 20px; cursor: pointer;"
+             fxLayoutAlign="center center"
+             (click)="onAddClick()">
+          <p class="semiBoldMont font24px whiteColor noMargin">
+            +
+          </p>
+        </div>
+        <div fxFlex="4"></div>
+      </div>
+      <div style="height: 20px"></div>
+    </div>
+  </div>
+
+  <div style="height: 15px"></div>
+
+  <div fxLayoutAlign="center center">
+    <div class="whiteBg defaultShadow"
+         style="border-radius: 6px;"
+         fxFlex.lt-md="94"
+         fxFlex.md="94"
+         fxFlex.gt-md="1000px"
+         *ngIf="addOpen">
+      <div>
+        <div fxFlex="20px"></div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center" style="width: 100%;">
+          <div fxFlex.xs="10px" fxHide.gt-xs="true"></div>
+          <p fxFlex class="semiBoldMont font18px blackColor noMargin">
+            Other Questions
+          </p>
+          <div fxFlex.xs="10px" fxHide.gt-xs="true"></div>
+          <div>
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start center" style="width: 100%;">
+              <div fxFlex>
+                <app-evo-input [placeholderText]="'skill group name'"
+                               [value]="searchSecondTermQuestion"
+                               (inputChangedEvent)="searchSecondTermQuestion = $event"
+                               [title]="'search by name'">
+                </app-evo-input>
+              </div>
+              <div fxFlex="20px" fxFlex.xs="10px"></div>
+              <div fxFlex>
+                <div style="height: 20px;" fxHide.xs="true"></div>
+                <button class="blueButton whiteColor semiBoldMont font14px"
+                        style="height: 40px; width: 120px;"
+                        (click)="onSecondSearchClick()">
+                  Search
+                </button>
+              </div>
+            </div>
+            <div fxFlex="20px" fxHide.xs="true"></div>
+          </div>
+        </div>
+      </div>
+      <div style="height: 10px"></div>
+      <div style="max-height: 400px">
+        <div fxFlex="20px"></div>
+        <div fxFlex
+             class="lightGrayBg defaultScrollBar scrollBarBlueThumb"
+             style="max-height: 300px; border-radius: 6px; overflow-y: scroll;">
+          <div *ngFor="let question of filteredOtherQuestions; index as i">
+            <div style="height: 10px"></div>
+            <div fxLayoutAlign="start start">
+              <div fxFlex="10px"></div>
+              <div fxFlex="95" fxFlex.xs="500px" class="bgWhiteHoverColor defaultShadow"
+                   style="height: 50px; border-radius: 4px; cursor: pointer;"
+                   fxLayoutAlign="start center">
+                <div fxFlex="20px"></div>
+                <div fxFlex>
+                  <p class="semiBoldMont font12px blueColor noMargin">{{question.name}}</p>
+                </div>
+                <div fxFlex="20px"></div>
+                <div fxFlex>
+                  <p class="mediumMont font12px grayColor noMargin">{{question.topic}}</p>
+                </div>
+                <div fxFlex="20px"></div>
+                <div fxFlex>
+                  <p class="mediumMont font12px grayColor noMargin">{{question.category}}</p>
+                </div>
+                <div fxFlex="20px"></div>
+                <div fxFlex>
+                  <p class="mediumMont font12px grayColor noMargin">{{question.answerType}}</p>
+                </div>
+              </div>
+              <div fxFlex="20px"></div>
+              <div fxFlex="50px" class="bgWhiteHoverColor defaultShadow"
+                   style="height: 50px; border-radius: 4px; cursor: pointer;"
+                   fxLayoutAlign="start center" (click)="onAddQuestionClick(i)">
+                <div fxFlex="50px" fxLayoutAlign="center center">
+                  <p class="semiBoldMont font26px greenColor noMargin">+</p>
+                </div>
+              </div>
+              <div fxFlex="10px"></div>
+            </div>
+          </div>
+          <div style="height: 10px;"></div>
+        </div>
+
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px"></div>
+    </div>
+  </div>
+
+  <div style="height: 20px"></div>
+</div>

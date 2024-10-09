@@ -1,0 +1,45 @@
+<div>
+  <div style="height: 60px; position: relative; z-index: 20">
+    <div fxFlex="20px" fxHide.xs="true"></div>
+    <div fxFlex="60px"
+         fxHide.gt-xs="true"
+         [ngClass]="{ pointer: hideHamburgerIcon === false }"
+         fxLayoutAlign="center center"
+         (click)="onMobileMenuClicked()">
+      <app-hamburger-button *ngIf="hideHamburgerIcon === false"></app-hamburger-button>
+    </div>
+    <div fxFlex.xs="80px" fxFlex="120px" (click)="navigateHome()" fxLayoutAlign="center start">
+      <img src="./assets/evolytes-vector.svg" style="height: 100%; width: 100%; cursor: pointer;">
+    </div>
+    <div fxFlex.xs="20px"></div>
+    <div fxFlex fxHide.xs="true"></div>
+    <div fxFlex.gt-xs="240px"
+         fxFlex
+         class="bgWhiteHoverColor"
+         style="height: 60px; cursor: pointer;"
+         fxLayoutAlign="center center"
+         (click)="onSelectCountry()">
+      <div fxFlex fxLayoutAlign="center center">
+        <div>
+          <div fxFlex="10px"></div>
+          <div fxFlex="30px" fxLayoutAlign="center center">
+            <img [src]="getCountryFlag()" *ngIf="getCountryFlag() !== null" style="height: 30px; width: 30px; object-fit: contain;">
+          </div>
+          <div fxFlex="10px"></div>
+          <div fxFlex fxLayoutAlign="start center">
+            <p class="semiBoldMont blackColor font14px noMargin">{{getCurrentCountryTitle()}}</p>
+          </div>
+        </div>
+      </div>
+      <div fxFlex="10px;"></div>
+    </div>
+  </div>
+</div>
+
+<div style="position: absolute; top: 0; right: 0; left: 0; z-index: 15; overflow: hidden; width: 100%; height: 60px;">
+  <img src="../../../assets/decor/Addition-Blue-Icon.svg" style="object-fit: contain; width: 20px; height: 20px; top: 40px; left: 5px; position: absolute;">
+  <img src="../../../assets/decor/Triangle-Green-Icon.svg" style="object-fit: contain; width: 42px; height: 42px; top: -14px; left: 380px; position: absolute;">
+  <img src="../../../assets/decor/Circle-Yellow-Icon.svg" style="object-fit: contain; width: 34px; height: 34px; top: 20px; left: 620px; position: absolute;">
+  <img src="../../../assets/decor/Equal-Sign-Purple.svg" style="object-fit: contain; width: 16px; height: 16px; top: -4px; left: 900px; position: absolute;">
+  <img src="../../../assets/decor/Pentago-Blue-Icon.svg" style="object-fit: contain; width: 36px; height: 36px; top: -8px; left: 1240px; position: absolute;">
+</div>

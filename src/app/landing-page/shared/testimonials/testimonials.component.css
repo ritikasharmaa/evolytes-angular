@@ -1,0 +1,20 @@
+
+.redQuotes{
+  filter: invert(8%) sepia(96%) saturate(5533%) hue-rotate(347deg) brightness(111%) contrast(108%);
+}
+
+.greenQuotes{
+  filter: invert(57%) sepia(42%) saturate(766%) hue-rotate(82deg) brightness(85%) contrast(93%);
+}
+
+.blueQuotes{
+  filter: invert(42%) sepia(93%) saturate(2054%) hue-rotate(164deg) brightness(94%) contrast(101%);
+}
+
+.purpleQuotes{
+  filter: invert(50%) sepia(20%) saturate(1469%) hue-rotate(238deg) brightness(82%) contrast(89%);
+}
+
+.yellowQuotes{
+  filter: invert(77%) sepia(94%) saturate(2804%) hue-rotate(352deg) brightness(102%) contrast(104%);
+}

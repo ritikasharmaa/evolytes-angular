@@ -1,0 +1,6 @@
+div.modalContent {
+  height: 240px;
+  background-color: white;
+  border-radius: 4px;
+  overflow: hidden;
+}

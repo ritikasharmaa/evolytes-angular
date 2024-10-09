@@ -1,0 +1,42 @@
+.blueSelectOutline {
+  border: 2px solid #009CCC;
+}
+
+.greenSelectOutline {
+  border: 2px solid #28A745;
+}
+
+.purpleSelectOutline {
+  border: 2px solid #9B59B6;
+}
+
+.orangeSelectOutline {
+  border: 2px solid #F26522;
+}
+
+.yellowSelectOutline {
+  border: 2px solid #FFCB05;
+}
+
+.noSelectOutline {
+  border: 2px solid transparent;
+}
+
+div.pricingRoundedTitle {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 8px 8px 0px 0px;
+}
+
+div.cardOneMonth {
+  border-radius: 0px 0px 8px 8px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+div.middlePrincingCards {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+div.pricingRoundedBonus {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  border-radius:  0px 0px 8px 8px;
+}

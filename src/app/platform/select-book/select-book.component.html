@@ -1,0 +1,110 @@
+<app-modal></app-modal>
+<app-evo-header></app-evo-header>
+<app-evo-decoration-background-signup></app-evo-decoration-background-signup>
+<div class="defaultScrollBar scrollBarBlueThumb" style="height: calc(100% - 60px); overflow: scroll; z-index: 10;" fxLayoutAlign="center start">
+
+  <div fxFlex.gt-sm="960px" fxFlex.md="100" fxFlex.lt-md="100">
+    <div style="height: 10px;"></div>
+
+    <div style="height: 30px" fxLayoutAlign="center center">
+      <p class="boldMont font24px blackColor noMargin" style="text-align: center;">{{ 'selectBook.title' | translate }}</p>
+    </div>
+
+    <div style="height: 10px;"></div>
+
+    <div fxLayoutAlign="center start">
+      <p fxFlex="92" fxFlex.gt-sm="700px" class="regularMont font14px grayColor noMargin"
+         style="text-align: center;">
+        {{ 'selectBook.subtitle' | translate }}
+      </p>
+    </div>
+
+    <div style="height: 20px;"></div>
+
+    <div>
+      <div fxHide.gt-xs="true" >
+        <div *ngFor="let row of rowsWithItemsPerRow(1)" style="width: 100%; margin-bottom: 20px;" fxLayoutAlign="center start">
+          <div fxFlex="290px">
+            <app-select-book-container [book]="bookAtIndex(0, row, 1)"
+                                       [bookVersion]="bookVersionAtIndex(0, row, 1)"
+                                       [isSelected]="isBookSelected(bookAtIndex(0, row, 1))"
+                                       (click)="onBookSelection(bookAtIndex(0, row, 1))">
+            </app-select-book-container>
+          </div>
+        </div>
+      </div>
+      <div fxHide.gt-sm="true" fxHide.xs="true">
+        <div *ngFor="let row of rowsWithItemsPerRow(2)" style="width: 100%; margin-bottom: 20px;" fxLayoutAlign="center start">
+          <div fxFlex fxLayoutAlign="space-around start">
+            <div fxFlex="290px">
+              <app-select-book-container [book]="bookAtIndex(0, row, 2)"
+                                         [bookVersion]="bookVersionAtIndex(0, row, 2)"
+                                         [isSelected]="isBookSelected(bookAtIndex(0, row, 2))"
+                                         (click)="onBookSelection(bookAtIndex(0, row, 2))">
+              </app-select-book-container>
+            </div>
+            <div fxFlex="290px" *ngIf="bookAtIndex(1, row, 2)">
+              <app-select-book-container [book]="bookAtIndex(1, row, 2)"
+                                         [bookVersion]="bookVersionAtIndex(1, row, 2)"
+                                         [isSelected]="isBookSelected(bookAtIndex(1, row, 2))"
+                                         (click)="onBookSelection(bookAtIndex(1, row, 2))">
+              </app-select-book-container>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div fxHide.lt-md="true">
+        <div *ngFor="let row of rowsWithItemsPerRow(3);" style="width: 100%; margin-bottom: 20px;" fxLayoutAlign="center start">
+          <div fxFlex fxLayoutAlign="space-around start">
+            <div fxFlex="290px">
+              <app-select-book-container [book]="bookAtIndex(0, row, 3)"
+                                         [bookVersion]="bookVersionAtIndex(0, row, 3)"
+                                         [isSelected]="isBookSelected(bookAtIndex(0, row, 3))"
+                                         (click)="onBookSelection(bookAtIndex(0, row, 3))">
+              </app-select-book-container>
+            </div>
+            <div fxFlex="290px" *ngIf="bookAtIndex(1, row, 3)">
+              <app-select-book-container [book]="bookAtIndex(1, row, 3)"
+                                         [bookVersion]="bookVersionAtIndex(1, row, 3)"
+                                         [isSelected]="isBookSelected(bookAtIndex(1, row, 3))"
+                                         (click)="onBookSelection(bookAtIndex(1, row, 3))"
+                                         *ngIf="bookAtIndex(1, row, 3)">
+              </app-select-book-container>
+            </div>
+            <div fxFlex="290px" *ngIf="bookAtIndex(2, row, 3)">
+              <app-select-book-container [book]="bookAtIndex(2, row, 3)"
+                                         [bookVersion]="bookVersionAtIndex(2, row, 3)"
+                                         [isSelected]="isBookSelected(bookAtIndex(2, row, 3))"
+                                         (click)="onBookSelection(bookAtIndex(2, row, 3))">
+              </app-select-book-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div fxLayoutAlign="center start">
+      <button class="greenButton whiteColor semiBoldMont font14px noMargin"
+              style="height: 40px; width: 140px;"
+              fxLayoutAlign="center center"
+              [disabled]="isNextDisabled()"
+              (click)="onNextClicked()">
+        {{ 'selectBook.nextButtonTitle' | translate }}
+      </button>
+    </div>
+
+    <div style="height: 10px"></div>
+
+    <div fxLayoutAlign="center start">
+      <app-evo-progress-points [currentIndex]="2"
+                               [numPoints]="4"
+                               [defaultColor]="'#979797'"
+                               [selectedColor]="'#009CCC'">
+      </app-evo-progress-points>
+    </div>
+
+    <div style="height: 30px;"></div>
+
+  </div>
+
+</div>

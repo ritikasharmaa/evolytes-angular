@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="58px" height="58px" viewBox="0 0 58 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>pin-location-1</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Landing-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Contact-Us" transform="translate(-110.000000, -483.000000)" stroke="#54676E" stroke-width="3">
+            <g id="Intro-Section" transform="translate(0.000000, 98.000000)">
+                <g id="Information" transform="translate(50.000000, 86.000000)">
+                    <g id="Location" transform="translate(61.000000, 281.000000)">
+                        <g id="pin-location-1" transform="translate(0.000000, 19.000000)">
+                            <circle id="Oval" cx="28" cy="16.3333333" r="8.16666667"></circle>
+                            <path d="M28,1.16666667 C36.834172,1.1679552 43.9950001,8.32982791 43.995,17.164 C43.995,24.6656667 32.4636667,43.2623333 28.9823333,48.7036667 C28.7678347,49.0384496 28.3976045,49.2409429 28,49.2409429 C27.6023955,49.2409429 27.2321653,49.0384496 27.0176667,48.7036667 C23.5363333,43.2623333 12.005,24.6703333 12.005,17.164 C12.0043811,12.921458 13.6892905,8.85246768 16.689002,5.85231863 C19.6887135,2.85216958 23.7574579,1.16666662 28,1.16666667 Z" id="Shape"></path>
+                            <path d="M39.6666667,45.9666667 C48.6453333,46.7226667 54.8333333,48.321 54.8333333,50.1666667 C54.8333333,52.745 42.8213333,54.8333333 28,54.8333333 C13.1786667,54.8333333 1.16666667,52.745 1.16666667,50.1666667 C1.16666667,48.3233333 7.315,46.7296667 16.2353333,45.9666667" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

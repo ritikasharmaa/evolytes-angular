@@ -1,0 +1,40 @@
+<div *ngFor="let entry of treeObjective; let i = index">
+  <div style="height: 40px; border-radius: 6px; cursor: pointer;"
+       [ngStyle]="{ 'background-color': getColor(i) }"
+       (click)="entry[1].isVisible = !entry[1].isVisible"
+       fxLayoutAlign="start center">
+    <div fxFlex="10px"></div>
+    <p class="semiBoldMont font14px whiteColor noMargin" fxFlex>{{entry[0]}}</p>
+    <div fxFlex="40px" fxLayoutAlign="center center">
+      <p class="semiBoldMont font18px whiteColor noMargin" *ngIf="entry[1].isVisible">-</p>
+      <p class="semiBoldMont font18px whiteColor noMargin" *ngIf="!entry[1].isVisible">+</p>
+    </div>
+  </div>
+  <div style="height: 10px"></div>
+  <div *ngIf="entry[1].isVisible">
+    <div *ngFor="let obj of entry[1].objs;">
+      <div fxFlex="40px"></div>
+      <div fxFlex>
+        <div style="height: 40px; border-radius: 6px; cursor: pointer;"
+             [ngStyle]="{ 'background-color': 'white' }"
+             fxLayoutAlign="start center">
+          <div fxFlex="100" fxLayoutAlign="start center" (click)="onObjectiveClicked(obj)">
+            <div fxFlex="60" fxFlex.lt-md="70" fxLayoutAlign="start center">
+              <p fxFlex="15" class="semiBoldMont font22px blueColor noMargin" ngClass.lt-md="font18px"
+                 ngClass.xs="font16px">{{obj.country}}</p>
+              <div fxFlex.sm="10px" fxFlex.xs="20px"></div>
+              <p fxFlex="40" fxFlex.lt-md="70"
+                 class="semiBoldMont font22px blueColor noMargin" ngClass.lt-md="font18px"
+                 ngClass.xs="font16px" ngStyle.xs="overflow-x: scroll;">{{cultureLevel(obj.level)}}</p>
+            </div>
+            <div fxFlex="40" fxFlex.lt-md="30" fxLayoutAlign="end center">
+              <p clasS="mediumMont font12px grayColor noMargin">{{obj.skillGroups.length}}
+                skillGroups</p>
+            </div>
+          </div>
+        </div>
+        <div style="height: 10px;"></div>
+      </div>
+    </div>
+  </div>
+</div>

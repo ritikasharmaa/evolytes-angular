@@ -1,0 +1,316 @@
+<div class="defaultScrollBar scrollBarGreenThumb" style="width: 100%; height: 100%; overflow-y: scroll;">
+  <div style="height: 20px;"></div>
+  <div fxLayoutAlign="center center">
+    <div class="whiteBg defaultShadow"
+         style="border-radius: 6px;"
+         fxFlex="94"
+         fxFlex.gt-md="1000px">
+      <div style="height: 10px"></div>
+      <div style="height: 50px">
+        <div fxFlex="20px"></div>
+        <div fxFlex fxLayoutAlign="start center">
+          <p class="semiBoldMont font18px blackColor noMargin">Student Information</p>
+        </div>
+        <div fxFlex="20px"></div>
+        <div fxFlex="120px" fxLayoutAlign="start center">
+          <button fxFlex class="greenButton semiBoldMont whiteColor font14px"
+                  style="height: 40px;" (click)="onSaveClicked()">
+            Save
+          </button>
+        </div>
+        <div fxFlex="20px"></div>
+        <div fxFlex="120px">
+          <div style="height: 6px;"></div>
+          <button class="redButton whiteColor semiBoldMont font14px"
+                  style="height: 40px; width: 100%;"
+                  (click)="onCancelClick()">
+            Cancel
+          </button>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px;"></div>
+      <div style="height: 62px">
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-input [isDisabled]="true"
+                         [value]="student._id"
+                         [title]="'id'">
+          </app-evo-input>
+        </div>
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-input [title]="'SSID'"
+                         [placeholderText]="'SSID'"
+                         [isDisabled]="true">
+          </app-evo-input>
+        </div>
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-dropdown [title]="'Billing status'"
+                            [list]="ListBillingStatus"
+                            [currentValue]="student.billingStatus"
+                            (valueChangedEvent)="student.billingStatus = $event">
+          </app-evo-dropdown>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px;"></div>
+      <div style="height: 62px">
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-input [value]="student.firstName"
+                         (inputChangedEvent)="student.firstName = $event"
+                         [title]="'First Name'"
+                         [placeholderText]="'First Name'">
+          </app-evo-input>
+        </div>
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-input [value]="student.middleName"
+                         (inputChangedEvent)="student.middleName = $event"
+                         [title]="'Middle Name'"
+                         [placeholderText]="'Middle Name'">
+          </app-evo-input>
+        </div>
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-input [value]="student.lastName"
+                         (inputChangedEvent)="student.lastName = $event"
+                         [title]="'Last Name'"
+                         [placeholderText]="'Last Name'">
+          </app-evo-input>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+
+      <div style="height: 20px"></div>
+      <div style="height: 62px">
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-input-date [title]="'Birth date'"
+                              [placeholderText]="'dd/mm/yyyy'"
+                              [currentValue]="student.birthDate"
+                              (inputChangedEvent)="student.birthDate = $event">
+          </app-evo-input-date>
+        </div>
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-lang-dropdown [type]="'culture'"
+                                 [currentValue]="student.culture"
+                                 (valueChangedEvent)="student.culture = $event">
+          </app-evo-lang-dropdown>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px;"></div>
+      <div style="height: 62px"
+           fxLayoutAlign="start center">
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-dropdown [title]="'School Type'"
+                            [list]="SchoolTypes"
+                            [currentValue]="student.schoolType"
+                            (valueChangedEvent)="student.schoolType = $event">
+          </app-evo-dropdown>
+        </div>
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-input [placeholderText]="'Teacher id'"
+                         [title]="'Teacher id'"
+                         [value]="student.teacherId"
+                         [isDisabled]="true"
+          >
+          </app-evo-input>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 10px;"></div>
+    </div>
+  </div>
+  <div style="height: 20px;"></div>
+  <div fxLayoutAlign="center center" *ngIf="student.schoolId">
+    <div class="whiteBg defaultShadow"
+         style="border-radius: 6px;"
+         fxFlex.lt-md="94"
+         fxFlex.md="94"
+         fxFlex.gt-md="1000px">
+      <div style="height: 10px;"></div>
+      <div style="height: 70px">
+        <div fxFlex="20px"></div>
+        <div fxFlex fxLayoutAlign="start center">
+          <p class="semiBoldMont font18px blackColor noMargin">School Information</p>
+        </div>
+      </div>
+      <div style="height: 10px;"></div>
+
+      <div style="height: 10px;"></div>
+      <div style="height: 62px"
+           fxLayoutAlign="start center">
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-input [placeholderText]="'school id'"
+                         [title]="'id'"
+                         [value]="school._id"
+                         [isDisabled]="true"
+          >
+          </app-evo-input>
+        </div>
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-input [placeholderText]="'Name'"
+                         [title]="'Name'"
+                         [value]="school.name"
+                         [isDisabled]="true"
+          >
+          </app-evo-input>
+        </div>
+
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px;"></div>
+      <div style="height: 62px"
+           fxLayoutAlign="start center">
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-input [placeholderText]="'Address'"
+                         [title]="'Address'"
+                         [value]="school.address"
+                         [isDisabled]="true"
+          >
+          </app-evo-input>
+        </div>
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-input [placeholderText]="'City'"
+                         [title]="'City'"
+                         [value]="school.city"
+                         [isDisabled]="true"
+          >
+          </app-evo-input>
+        </div>
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-input [placeholderText]="'ZIP'"
+                         [title]="'ZIP'"
+                         [value]="school.zip"
+                         [isDisabled]="true"
+          >
+          </app-evo-input>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 10px;"></div>
+    </div>
+  </div>
+  <div style="height: 20px;"></div>
+  <div fxLayoutAlign="center center" *ngIf="student.evolytesProfile">
+    <div class="whiteBg defaultShadow"
+         style="border-radius: 6px;"
+         fxFlex="94"
+         fxFlex.gt-md="1000px">
+      <div style="height: 10px"></div>
+      <div style="height: 50px" fxLayoutAlign="start center">
+        <div fxFlex="20px"></div>
+        <p class="semiBoldMont font18px blackColor noMargin">Evolytes Profile</p>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px;"></div>
+      <div style="height: 62px">
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-input [value]="student.evolytesProfile.character"
+                         [isDisabled]="true"
+                         [title]="'Character'"
+                         [placeholderText]="'Character'">
+          </app-evo-input>
+        </div>
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-input [title]="'Coins'"
+                         [placeholderText]="'Coins'"
+                         [isDisabled]="true"
+                         [value]="student.evolytesProfile.coins">
+          </app-evo-input>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px;"></div>
+      <div style="height: 62px">
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-input [value]="student.evolytesProfile.map"
+                         [isDisabled]="true"
+                         [title]="'Map'"
+                         [placeholderText]="'Map'">
+          </app-evo-input>
+        </div>
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-input [title]="'Map Type'"
+                         [placeholderText]="'Map Type'"
+                         [isDisabled]="true"
+                         [value]="student.evolytesProfile.mapType">
+          </app-evo-input>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 30px"></div>
+      <div style="height: 62px">
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-input [value]="student.evolytesProfile.crystalMap"
+                         [isDisabled]="true"
+                         [title]="'Crystal Map'"
+                         [placeholderText]="'Crystal Map'">
+          </app-evo-input>
+        </div>
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-input [title]="'Crystal Map Type'"
+                         [placeholderText]="'Crystal Map Type'"
+                         [isDisabled]="true"
+                         [value]="student.evolytesProfile.crystalMapType">
+          </app-evo-input>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px;"></div>
+      <div style="height: 62px">
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-input fxFlex
+                         [value]="student.evolytesProfile.location.x"
+                         [isDisabled]="true"
+                         [title]="'Location x'">
+          </app-evo-input>
+          <div fxFlex="10px"></div>
+          <app-evo-input fxFlex
+                         [title]="'y'"
+                         [value]="student.evolytesProfile.location.y"
+                         [isDisabled]="true">
+          </app-evo-input>
+        </div>
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-input fxFlex
+                         [title]="'Crystal Location x'"
+                         [isDisabled]="true"
+                         [value]="student.evolytesProfile.crystalLocation.x">
+          </app-evo-input>
+          <div fxFlex="10px"></div>
+          <app-evo-input fxFlex
+                         [title]="'y'"
+                         [isDisabled]="true"
+                         [value]="student.evolytesProfile.crystalLocation.y">
+          </app-evo-input>
+      </div>
+        <div fxFlex="20px"></div>
+    </div>
+      <div style="height: 10px"></div>
+  </div>
+</div>
+  <div style="height: 20px;"></div>
+</div>
+
+

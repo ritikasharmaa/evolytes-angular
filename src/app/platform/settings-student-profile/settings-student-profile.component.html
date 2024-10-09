@@ -1,0 +1,142 @@
+<div>
+  <div fxLayoutAlign="space-between start" fxHide.xs="true">
+    <div fxFlex="45">
+      <app-evo-input title="{{ 'studentSettings.firstName' | translate }}"
+                     [value]="firstName"
+                     (inputChangedEvent)="firstName = $event">
+      </app-evo-input>
+    </div>
+    <div fxFlex="45">
+      <app-evo-input title="{{ 'studentSettings.middleName' | translate }}"
+                     [value]="middleName"
+                     (inputChangedEvent)="middleName = $event">
+      </app-evo-input>
+    </div>
+  </div>
+
+  <div fxHide.gt-xs="true">
+    <div>
+      <app-evo-input title="{{ 'studentSettings.firstName' | translate }}"
+                     [value]="firstName"
+                     (inputChangedEvent)="firstName = $event">
+      </app-evo-input>
+    </div>
+    <div style="height: 20px;"></div>
+    <div>
+      <app-evo-input title="{{ 'studentSettings.middleName' | translate }}"
+                     [value]="middleName"
+                     (inputChangedEvent)="middleName = $event">
+      </app-evo-input>
+    </div>
+  </div>
+
+  <div style="height: 20px"></div>
+
+  <div fxLayoutAlign="space-between start" fxHide.xs="true">
+    <div fxFlex="45">
+      <app-evo-input title="{{ 'studentSettings.lastName' | translate }}"
+                     [value]="lastName"
+                     (inputChangedEvent)="lastName = $event">
+      </app-evo-input>
+    </div>
+    <div fxFlex="45">
+      <div style="height: 65px;">
+        <app-evo-input-date title="{{ 'studentSettings.birthDate' | translate }}"
+                            placeholderText="{{ 'studentSettings.datePlaceholder' | translate }}"
+                            [currentValue]="birthDate"
+                            (inputChangedEvent)="birthDate = $event">
+        </app-evo-input-date>
+      </div>
+    </div>
+  </div>
+
+  <div fxHide.gt-xs="true">
+    <div>
+      <app-evo-input title="{{ 'studentSettings.lastName' | translate }}"
+                     [value]="lastName"
+                     (inputChangedEvent)="lastName = $event">
+      </app-evo-input>
+    </div>
+    <div style="height: 20px;"></div>
+    <div>
+      <div style="height: 65px;">
+        <div>
+          <app-evo-input-date title="{{ 'studentSettings.birthDate' | translate }}"
+                              placeholderText="{{ 'studentSettings.datePlaceholder' | translate }}"
+                              [currentValue]="birthDate"
+                              (inputChangedEvent)="birthDate = $event">
+          </app-evo-input-date>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="height: 20px;"></div>
+  <div fxLayoutAlign="end start">
+    <button class="greenButton semiBoldMont font14px whiteColor"
+            style="width: 140px; height: 40px;"
+            [disabled]="isSaveDisabledFirstInfo()"
+            (click)="onSaveClickedFirstInfo(); updateName()">
+      {{ 'userSettings.saveButtonTitle' | translate }}
+    </button>
+  </div>
+
+  <div style="height: 20px;"></div>
+  <p class="font14px lightGrayColor noMargin boldMont"
+     style="line-height: 44px;">
+    {{ 'settings.accountSettings.language' | translate }}
+  </p>
+  <div style="height: 10px;"></div>
+
+  <div fxLayoutAlign="space-between start" fxHide.xs="true">
+    <div fxFlex="45">
+      <div style="height: 65px">
+        <app-evo-lang-dropdown [type]="CultureTypes.country"
+                               [currentValue]="country"
+                               [isDisabled]="true">
+        </app-evo-lang-dropdown>
+      </div>
+    </div>
+    <div fxFlex="45">
+      <div style="height: 65px;">
+        <app-evo-lang-dropdown [type]="CultureTypes.culture"
+                               [currentValue]="culture"
+                               (valueChangedEvent)="culture = $event">
+        </app-evo-lang-dropdown>
+      </div>
+    </div>
+  </div>
+
+  <div fxHide.gt-xs="true">
+    <div>
+      <div style="height: 65px">
+        <app-evo-lang-dropdown [type]="CultureTypes.country"
+                               [currentValue]="country"
+                               [isDisabled]="true">
+        </app-evo-lang-dropdown>
+      </div>
+    </div>
+    <div style="height: 20px;"></div>
+    <div>
+      <div style="height: 65px;">
+        <app-evo-lang-dropdown [type]="CultureTypes.culture"
+                               [currentValue]="culture"
+                               (valueChangedEvent)="culture = $event">
+        </app-evo-lang-dropdown>
+      </div>
+    </div>
+  </div>
+
+  <div style="height: 20px;"></div>
+
+  <div fxLayoutAlign="end start">
+    <button class="greenButton semiBoldMont font14px whiteColor"
+            style="width: 140px; height: 40px;"
+            [disabled]="isSaveDisabledLanguage()"
+            (click)="onSaveClickedLanguages();">
+      {{ 'userSettings.saveButtonTitle' | translate }}
+    </button>
+  </div>
+</div>
+
+
+

@@ -1,0 +1,18 @@
+.containerShadow {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+textarea {
+  padding: 0;
+}
+
+textarea::placeholder {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #54676E;
+}
+
+textarea:disabled {
+  background-color: transparent;
+}

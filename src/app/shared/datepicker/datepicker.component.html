@@ -1,0 +1,9 @@
+<div class="input-group">
+  <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [disabled]="isDisabled"  (ngModelChange)="updateMyDate($event)" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+  <div class="input-group-append">
+    <div class="input-group-append">
+      <button style="cursor: pointer;" class="btn btn-outline-secondary calendar fa fa-calendar" (click)="d.toggle()"
+        type="button"></button>
+    </div>
+  </div>
+</div>

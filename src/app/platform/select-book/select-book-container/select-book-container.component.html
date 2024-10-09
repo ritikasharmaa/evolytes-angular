@@ -1,0 +1,38 @@
+<div class="defaultShadow whiteBg"
+     style="width: 100%; border-radius: 6px; cursor: pointer;"
+     [ngClass]="{ noBorder: !isSelected, blueBorder: isSelected }">
+  <div style="height: 20px"></div>
+  <div>
+    <div fxFlex="10px"></div>
+    <div fxFlex>
+      <div style="height: 20px">
+        <p class="semiBoldMont font14px grayColor noMargin" style="text-align: center;">{{getAgeRange()}} {{ 'selectBook.ageTitle' | translate }}</p>
+      </div>
+      <div style="height: 5px"></div>
+      <div style="height: 30px; overflow: hidden;" fxLayoutAlign="center center">
+        <p class="semiBoldMont font16px blueColor noMargin" style="text-align: center;">{{getBookVersionName()}}</p>
+      </div>
+      <div style="height: 10px"></div>
+      <div style="height: 180px" fxLayoutAlign="center center">
+        <img [src]="getBookImgURL()" style="width: 80%; height: 160px; object-fit: contain;" *ngIf="hasBookImgURL()">
+      </div>
+      <div style="height: 5px"></div>
+      <div style="height: 40px" fxLayoutAlign="center center">
+        <img fxFlex="22px"
+             [src]="getCountryImage()"
+             style="height: 20px; object-fit: contain;">
+        <div fxFlex="8px"></div>
+        <p class="mediumMont font12px grayColor noMargin">{{getCountryCulture()}}</p>
+      </div>
+      <div style="height: 20px">
+        <p class="semiBoldMont font14px grayColor noMargin" style="text-align: center;">{{ 'selectBook.contentsTitle' | translate }}</p>
+      </div>
+      <div style="height: 5px;"></div>
+      <div style="height: 50px" fxLayoutAlign="center start">
+        <p fxFlex="85" class="mediumMont font12px grayColor noMargin" style="text-align: center; height: 46px; overflow: hidden;">{{getDescription()}}</p>
+      </div>
+    </div>
+    <div fxFlex="10px"></div>
+  </div>
+  <div style="height: 20px"></div>
+</div>

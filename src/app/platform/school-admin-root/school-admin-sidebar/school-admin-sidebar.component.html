@@ -1,0 +1,95 @@
+<div class="whiteBg noScrollBar"
+     fxHide.xs="true"
+     style="height: 100%; z-index: 10; box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3); overflow-y: scroll;" fxFlex="240px" fxFlex.sm="200px">
+  <div style="height: 14px;"></div>
+  <div style="height: 50px;" *ngIf="isPartOfSchool()" fxLayoutAlign="start center">
+    <div fxFlex="20px"></div>
+    <img src="./assets/school-admin/school.svg" style="height: 100%; width: 30px; object-fit: contain;">
+    <div fxFlex="16px"></div>
+    <p class="semiBoldMont font16px blackColor noMargin">{{ schoolName() }}</p>
+    <div fxFlex="20px"></div>
+  </div>
+  <div style="height: 4px;"></div>
+  <div>
+    <div fxFlex="20px"></div>
+    <div>
+      <p class="semiBoldMont font14px blackColor noMargin" style="text-align: left;">{{ userFullName() }}</p>
+      <div style="height: 4px;"></div>
+      <p class="semiBoldMont font10px grayColor noMargin">{{ userEmail() }}</p>
+    </div>
+    <div fxFlex="20px"></div>
+  </div>
+  <div style="height: 12px;"></div>
+  <div style="height: 2px;">
+    <div fxFlex="20px"></div>
+    <div fxFlex class="lightGrayBg2" style="height: 2px;"></div>
+    <div fxFlex="20px"></div>
+  </div>
+
+  <div style="height: 20px;"></div>
+  <div class="selectItemInactive pointer"
+       style="height: 30px;"
+       fxLayoutAlign="start center"
+       routerLink="/schooladmin/licenses"
+       routerLinkActive="selectItemGreenActive">
+    <div fxFlex="20px"></div>
+    <img src="./assets/school-admin/dashboard-gray.svg" style="width: 26px; height: 26px; object-fit: contain;">
+    <div fxFlex="16px"></div>
+    <p class="mediumMont font14px grayColor noMargin">{{ 'schoolAdministration.licenses.title' | translate }}</p>
+    <div fxFlex="20px"></div>
+  </div>
+
+  <div style="height: 20px;"></div>
+  <div class="selectItemInactive pointer"
+       style="height: 30px;"
+       fxLayoutAlign="start center"
+       routerLink="/schooladmin/teachers"
+       routerLinkActive="selectItemGreenActive">
+    <div fxFlex="20px"></div>
+    <img src="./assets/school-admin/teachers.svg" style="width: 26px; height: 26px; object-fit: contain;">
+    <div fxFlex="16px"></div>
+    <p class="mediumMont font14px grayColor noMargin">{{ 'schoolAdministration.sidebar.teachers' | translate }}</p>
+    <div fxFlex="20px"></div>
+  </div>
+  <div style="height: 20px;"></div>
+  <div class="selectItemInactive pointer"
+       style="height: 30px;"
+       fxLayoutAlign="start center"
+       routerLink="/schooladmin/students"
+       routerLinkActive="selectItemBlueActive">
+    <div fxFlex="23px"></div>
+    <img src="./assets/school-admin/students.svg" style="width: 20px; height: 22px; object-fit: contain;">
+    <div fxFlex="19px"></div>
+    <p class="mediumMont font14px grayColor noMargin">{{ 'schoolAdministration.sidebar.students' | translate }}</p>
+    <div fxFlex="20px"></div>
+  </div>
+  <div style="height: 20px;"></div>
+
+  <div class="selectItemInactive pointer"
+       style="height: 30px;"
+       fxLayoutAlign="start center"
+       routerLink="/schooladmin/groups"
+       routerLinkActive="selectItemOrangeActive">
+    <div fxFlex="23px"></div>
+    <img src="./assets/school-admin/groups-gray.svg" style="width: 20px; height: 22px; object-fit: contain;">
+    <div fxFlex="19px"></div>
+    <p class="mediumMont font14px grayColor noMargin">{{ 'schoolAdministration.sidebar.groups' | translate }}</p>
+    <div fxFlex="20px"></div>
+  </div>
+
+  <div style="height: 20px;"></div>
+
+  <!--
+  <div class="selectItemInactive pointer"
+       style="height: 30px;"
+       fxLayoutAlign="start center"
+       routerLink="/schooladmin/videos"
+       routerLinkActive="selectItemYellowActive">
+    <div fxFlex="23px"></div>
+    <img src="./assets/sidebar/questions-circular-gray.svg" style="width: 20px; height: 22px; object-fit: contain;">
+    <div fxFlex="19px"></div>
+    <p class="mediumMont font14px grayColor noMargin">{{ 'sidebar.help' | translate }}</p>
+    <div fxFlex="20px"></div>
+  </div>
+  -->
+</div>

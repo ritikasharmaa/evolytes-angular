@@ -1,0 +1,26 @@
+<div>
+  <p class="font16px blackColor noMargin boldMont"
+     style="line-height: 44px;">
+    {{ 'settings.accountSettings.accounts' | translate }}
+  </p>
+  <p class="semiBoldMont noMargin font14px lightGrayColor" style="width:70%;">
+    {{ 'settings.accountSettings.accountsDesc' | translate }}
+  </p>
+  <div style="height: 20px"></div>
+  <div class="line"></div>
+
+  <app-account-name [student]="student">
+  </app-account-name>
+
+  <div style="height: 10px"></div>
+
+  <p class="font14px lightGrayColor noMargin boldMont"
+     style="line-height: 44px;">
+    {{ 'settings.accountSettings.accountInfo' | translate }}
+  </p>
+  <app-settings-student-profile [student]="student">
+  </app-settings-student-profile>
+
+  <div style="height:30px;"></div>
+
+</div>

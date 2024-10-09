@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Tablet_Overview-Copy-6" transform="translate(-26.000000, -183.000000)" stroke="#54676E">
+            <g id="Group" transform="translate(26.000000, 183.000000)">
+                <g id="question-help-circle">
+                    <path d="M10.3125,12.1775 C10.3088803,9.71827405 12.205437,7.67388996 14.6580234,7.49326432 C17.1106097,7.31263867 19.2862051,9.05712093 19.6428997,11.490344 C19.9995942,13.923567 18.4162365,16.2190871 16.015,16.75 C15.4310851,16.8652023 15.0076573,17.3736285 15,17.96875 L15,19.36" id="Shape"></path>
+                    <path d="M15,22.49 C15.172589,22.49 15.3125,22.629911 15.3125,22.8025 C15.3125,22.975089 15.172589,23.115 15,23.115 C14.827411,23.115 14.6875,22.975089 14.6875,22.8025 C14.6875,22.629911 14.827411,22.49 15,22.49" id="Shape"></path>
+                    <circle id="Oval" cx="15" cy="15.00125" r="14.375"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

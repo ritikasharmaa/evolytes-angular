@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>close</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Platform" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Settings---Profile" transform="translate(-991.000000, -151.000000)" stroke="#000000" stroke-width="4">
+            <g id="Student" transform="translate(130.000000, 92.000000)">
+                <g id="close" transform="translate(863.000000, 61.000000)">
+                    <path d="M0.5,0.499 L23.5,23.499" id="Shape"></path>
+                    <path d="M23.5,0.499 L0.5,23.499" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

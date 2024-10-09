@@ -1,0 +1,115 @@
+<div fxFlex="100"
+     fxHide.xs="true"
+     class="whiteBg noScrollBar"
+     style="height: 100%;">
+  <div class="noScrollBar" style="height: calc(100% - 35px); overflow-y: scroll;">
+    <div style="height: 30px"></div>
+    <div fxLayoutAlign="center start"
+    >
+      <p class="semiBoldMont font18px blackColor noMargin">Student filters</p>
+    </div>
+
+    <div style="height: 20px"></div>
+
+    <div fxLayout="column" fxLayoutAlign="space-between stretch" style="height: 90%" >
+
+      <div >
+        <div>
+          <div fxFlex="30px"></div>
+          <app-evo-input [value]="filter.searchFirstName"
+                         [placeholderText]="'user firstname'"
+                         [title]="'firstname'"
+                         (inputChangedEvent)="filter.searchFirstName = $event"
+          >
+          </app-evo-input>
+          <div fxFlex="30px"></div>
+        </div>
+
+        <div style="height: 20px"></div>
+
+        <div>
+          <div fxFlex="30px"></div>
+          <app-evo-input [value]="filter.searchLastName"
+                         [placeholderText]="'user lastname'"
+                         [title]="'lastname'"
+                         (inputChangedEvent)="filter.searchLastName = $event"
+          >
+          </app-evo-input>
+          <div fxFlex="30px"></div>
+        </div>
+
+        <div style="height: 20px"></div>
+
+        <div>
+          <div fxFlex="30px"></div>
+          <app-evo-dropdown [list]="country"
+                            [currentValue]="filter.searchCountry"
+                            [title]="'country'"
+                            (valueChangedEvent)="filter.searchCountry = $event"
+                            [placeholderText]="'country'"
+          >
+          </app-evo-dropdown>
+          <div fxFlex="30px"></div>
+        </div>
+
+        <div style="height: 40px"></div>
+
+        <div fxLayout="row" fxLayoutAlign="center end">
+          <div fxFlex></div>
+
+          <div fxFlex="120px">
+            <div style="height: 6px;"></div>
+            <button class="redButton whiteColor semiBoldMont font14px"
+                    style="height: 40px; width: 100%;"
+                    (click)="onCancelClicked()">
+              Cancel
+            </button>
+          </div>
+
+          <div fxFlex></div>
+
+          <div fxFlex="120px">
+            <div style="height: 6px;"></div>
+            <button class="greenButton whiteColor semiBoldMont font14px"
+                    style="height: 40px; width: 100%;"
+                    (click)="onFilterClicked()">
+              Filter
+            </button>
+          </div>
+
+          <div fxFlex></div>
+        </div>
+      </div>
+
+      <div >
+        <div>
+          <div fxFlex="30px"></div>
+          <app-evo-input [value]="filter._max"
+                         [placeholderText]="'max user in a page'"
+                         [title]="'number of users'"
+                         (inputChangedEvent)="filter._max = $event"
+          ></app-evo-input>
+          <div fxFlex="30px"></div>
+        </div>
+
+        <div style="height: 20px"></div>
+
+        <div fxLayout="row" fxLayoutAlign="center end">
+          <div fxFlex></div>
+
+          <div fxFlex="120px">
+            <div style="height: 6px;"></div>
+            <button class="blueButton whiteColor semiBoldMont font14px"
+                    style="height: 40px; width: 100%;"
+                    (click)="onFilterClicked()">
+              Apply
+            </button>
+          </div>
+
+          <div fxFlex></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

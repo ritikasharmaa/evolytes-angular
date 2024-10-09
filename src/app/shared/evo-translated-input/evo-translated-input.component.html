@@ -1,0 +1,16 @@
+<div ngStyle.xs="height: 140px;" ngStyle.gt-xs="height: 70px;">
+  <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+    <app-evo-input fxFlex
+                   [title]="inputTitle"
+                   [value]="getCurrentValue()"
+                   (inputChangedEvent)="setCurrentValue($event)">
+    </app-evo-input>
+    <div fxFlex="20px" fxFlex.xs="10px"></div>
+    <app-evo-lang-dropdown fxFlex="280px" fxFlex.lt-md
+                           [type]="'culture'"
+                           [currentValue]="culture"
+                           (valueChangedEvent)="culture = $event"
+                           [cultureDropdownList]="getCultures()">
+    </app-evo-lang-dropdown>
+  </div>
+</div>

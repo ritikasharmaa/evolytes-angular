@@ -1,0 +1,126 @@
+<div style="height: 100%;width:100%;">
+  <div class="defaultScrollBar scrollBarGreenThumb" style="height: 100%; width: 100%; overflow-y: scroll;"
+       fxLayout="row" fxLayoutAlign="center start">
+    <div fxFlex="95">
+      <div style="height:10px"></div>
+      <div class="whiteBg defaultShadow pointer"
+           style="height:40px; border-radius: 4px;" (click)="goBackBooks()" fxLayout="row" fxLayoutAlign="start center">
+        <div style="height: 100%; border-top-left-radius: 4px;border-bottom-left-radius: 4px;" class="bgTitle" fxFlex>
+          <div fxFlex="10px"></div>
+          <p class="font16px grayColor noMargin boldMont centerAlign"
+             style="line-height: 40px; text-align: center;">
+            {{ 'books.back' | translate }}
+          </p>
+        </div>
+        <img src="../../assets/icons/wrong-red-icon.png" fxFlex.gt-sm="2" fxFlex.lt-md="3">
+        <div fxFlex.gt-sm="1" fxFlex.lt-md="2"></div>
+      </div>
+      <div style="height:10px"></div>
+      <div class="whiteBg defaultShadow" style="width:100%;border-radius: 4px;" fxLayout.lt-md="row"
+           fxLayoutAlign.lt-md="center start">
+
+        <div fxFlex.lt-md="90">
+
+          <div fxLayout.gt-sm="row" fxLayoutAlign.gt-sm="center center">
+            <div fxFlex.gt-sm="2"></div>
+            <app-book-infos *ngIf="notEmpty"
+                            [bookVersion]="currentBookVersion"
+                            [includeShadow]="false" fxFlex.gt-md="20" fxFlex.md="25">
+            </app-book-infos>
+            <div fxHide.gt-sm style="height: 20px"></div>
+            <div fxFlex.gt-sm="4"></div>
+            <div fxFlex.gt-md="71" fxFlex.md="66">
+              <div style="height: 40px; border-top-left-radius: 12px;" class="bgTitle" fxLayout="row"
+                   fxLayoutAlign="start center">
+                <div fxFlex="20px"></div>
+                <p class="font16px grayColor noMargin boldMont centerAlign"
+                   style="line-height: 40px; text-align: center;">
+                  {{ 'books.chaptersTitle' | translate }}
+                </p>
+              </div>
+              <div style="height: 10px;"></div>
+              <div class="bgLightGrayColor"
+                   style="width: 100%; margin: 0 auto; border-top: 2px solid #f3f6f9; border-radius: 8px;"
+              >
+                <div class="noScrollBar" style="width: 99%; overflow-y: scroll;">
+                  <div style="height: 10px;"></div>
+                  <div *ngIf="notEmpty" fxLayout="row"
+                       style=" border-radius: 4px;">
+                    <div *ngFor="let integration of currentBookVersion.integrations">
+                      <div fxFlex="10px"></div>
+                      <div
+                        [ngClass]="{noUnderline: currentIntegration !== null, blueUnderLine: integration == currentIntegration, noUnderline: integration !== currentIntegration}">
+                        <app-new-chapter [integration]="integration"
+                                         [currentIntegration]="currentIntegration"
+                                         (click)="showAttemptsOfChapter(integration._id);">
+                        </app-new-chapter>
+                        <div style="height: 10px;"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div fxFlex.gt-sm></div>
+          </div>
+          <div fxLayout.gt-sm="row"
+               fxLayoutAlign.gt-sm="center center">
+            <div fxFlex.gt-sm="2"></div>
+            <div fxFlex.gt-md="23" fxFlex.md="28">
+              <div ngStyle.gt-sm="height: 30px" ngStyle.lt-md="height: 20px"></div>
+              <div style="height: 40px; border-top-left-radius: 12px;" class="bgTitle" fxLayout="row"
+                   fxLayoutAlign="start center">
+                <div fxFlex="20px"></div>
+                <p class="font16px grayColor noMargin boldMont centerAlign"
+                   style="line-height: 40px; text-align: center;">
+                  {{ 'reusable.attempts' | translate }}
+                </p>
+              </div>
+              <div style="height: 20px;"></div>
+              <div class="bgLightGrayColor"
+                   ngStyle.gt-sm="width: 100%; height: 540px; border-radius: 8px;"
+                   ngStyle.lt-md="height: 70px; border-radius: 8px;">
+                <div class="noScrollBar" ngStyle.gt-sm="width: 100%; height:99%; margin: 0 auto; overflow-y: scroll;"
+                     ngStyle.lt-md="width: 99%; height:99%; margin: 0 auto; overflow-y: scroll;border-radius: 8px;">
+                  <div *ngIf="notEmptyAttempts" fxLayout.gt-sm="column" fxLayout.lt-md="row">
+                    <div fxFlex.lt-md="1px"></div>
+                    <div *ngFor="let attempt of currentAttempts">
+                      <div style="height: 7px;"></div>
+                      <div
+                        [ngClass.gt-sm]="{noUnderline: currentIntegration !== null, blueSideLine: attempt == currentAttempt, noUnderline: attempt !== currentAttempt}">
+                        <div fxFlex="3"></div>
+                        <div fxHide.gt-sm style="width:5px"></div>
+
+                        <app-attempt-container [integration]="currentIntegration"
+                                               [attempt]="attempt"
+                                               (click)="showAnswersOfChapter();updateFilter(attempt._id);"
+                                               fxFlex
+
+                        >
+                        </app-attempt-container>
+                        <div fxFlex="3"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div fxHide.gt-sm style="height: 20px"></div>
+            <div fxFlex.gt-sm="1"></div>
+            <div class="noScrollBar bgLightGrayColor"
+                 style="width: 100%; height: 630px; border-radius: 8px; overflow-y: scroll;" fxFlex.gt-md="71"
+                 fxFlex.md="66"
+                 fxFlexAlign="start">
+              <app-answers-list *ngIf="notEmptyAnswers" [filterQuery]="filter"
+                                style="width: 100%;"></app-answers-list>
+            </div>
+            <div fxFlex.gt-sm></div>
+          </div>
+          <div style="height:20px"></div>
+        </div>
+      </div>
+      <div style="height:20px"></div>
+    </div>
+  </div>
+</div>
+

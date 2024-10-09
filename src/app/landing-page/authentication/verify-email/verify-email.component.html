@@ -1,0 +1,58 @@
+<app-land-nav-header [onlyIcon]="true"></app-land-nav-header>
+<app-evo-decoration-background-signup></app-evo-decoration-background-signup>
+<div style="width: 100%; height: calc(100% - 80px);">
+
+  <form style="width: 100%; height: 100%;">
+    <div fxFlex.xs="100" fxFlex.gt-xs="320px" style="overflow-y: auto;">
+
+      <div style="height: 40px"></div>
+
+      <div fxLayoutAlign="center start">
+        <p fxFlex.gt-sm="90" class="boldMont font22px blackColor noMargin" style="text-align: center">{{ 'verifyEmail.title' | translate }}</p>
+      </div>
+
+      <div style="height: 40px;"></div>
+
+      <div fxLayoutAlign="center start">
+        <div fxFlex="80">
+          <p class="regularMont font14px grayColor noMargin" style="text-align: center;" *ngIf="message === null">{{ 'verifyEmail.subtitleInProgress' | translate }}</p>
+          <p class="regularMont font14px grayColor noMargin" style="text-align: center;" *ngIf="message">{{ message | translate }}</p>
+        </div>
+      </div>
+
+      <div style="height: 40px"></div>
+      <!--
+      <div fxLayoutAlign="center start">
+        <div fxFlex="90">
+          <p class="regularMont font14px grayColor noMargin" style="text-align: center">Trouble verifying your email?</p>
+        </div>
+      </div>
+
+      <div fxLayoutAlign="center start">
+        <div fxFlex="90">
+          <p class="regularMont font14px blueHoverColor noMargin" style="text-align: center">Resend verification email</p>
+        </div>
+      </div>
+
+      <div style="height: 20px"></div>
+      -->
+      <div fxLayoutAlign="center start">
+        <button class="greenButton defaultShadow"
+                style="width: 140px; height: 40px;"
+                fxLayoutAlign="center center"
+                [disabled]="disabled"
+                (click)="onHomeClick()">
+          <p class="semiBoldMont font16px whiteColor noMargin">{{ 'verifyEmail.done' | translate }}</p>
+        </button>
+      </div>
+
+      <div style="height: 40px"></div>
+
+
+    </div>
+    <div fxHide.xs="true">
+      <img src="../../../../assets/land-images/LoginCoverCloseUpNoLogo.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+  </form>
+
+</div>

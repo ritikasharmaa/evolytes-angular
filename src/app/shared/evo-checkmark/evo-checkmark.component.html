@@ -1,0 +1,10 @@
+<div style="width: 100%; height: 100%;" fxLayoutAlign="center center">
+
+  <div style="width: calc(100% - 4px); height: calc(100% - 4px); box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);"
+       [ngStyle]="{ borderRadius: this.borderRadius }"
+       (click)="onClick()"
+       fxLayoutAlign="center center">
+    <img [src]="checkmarkImage()" [ngStyle]="{ height: checkmarkHeight, width: checkmarkWidth }" *ngIf="isChecked">
+  </div>
+
+</div>

@@ -1,0 +1,1320 @@
+{
+  "lp2": {
+    "common": {
+      "answers": {
+        "amount": "1,200",
+        "label": "ANSWERS",
+        "title": "Answers per day",
+        "subtitle": "Children answer up to 1,200 questions a day in the Evolytes game"
+      },
+      "minutes": {
+        "label": "MINUTES",
+        "title": "Average time spent",
+        "subtitle": "Children spend on average 26 minutes each time they open the game"
+      },
+      "research": {
+        "subtitle": "Evolytes is based on 3 years of interdisciplinary research in computer science and psychology to make learning fun, engaging and to improve skill acquisition. The results of the experiment behind the Evolytes platform exceeded our wildest expectations.",
+        "answers12": "Children with learning disabilities showed the greatest growth throughout the study",
+        "answers1200": "Children answered up to 1,200 questions a day in the Evolytes game in their own free time of their own volition",
+        "answers4": "Children answered on average 4 times more questions in Evolytes than at school throughout the study",
+        "theory": {
+          "reinforcementTitle": "Reinforcement Theory",
+          "reinforcementDescription": "Makes the game entertaining and rewards students to keep them engaged",
+          "flowTitle": "Flow Theory",
+          "flowDescription": "Used to adapt to the skill level of each student to maximize their potential",
+          "spacingTitle": "Spacing Effect",
+          "spacingDescription": "Ensures long-term learning and skill acquisition by spacing practice",
+          "skillTitle": "Skill Acquisition",
+          "skillDescription": "We use new developments in skill acquisition research to measure and assess skills",
+          "multimodalTitle": "Multimodal Encoding",
+          "multimodalDescription": "By learning in different environments, students are better at recalling those skills in real life",
+          "mindsetTitle": "Growth Mindset",
+          "mindsetDescription": "Used to assess and display student progress in the platform"
+        }
+      },
+      "androidComingSoon": "Coming April 2022"
+    },
+    "features": {
+      "books": {
+        "titleMenu": "Books",
+        "subtitle": "The Evolytes books are specifically designed to practise reading and writing skills in a fun and unique way.",
+        "skills": "Reading & writing skills",
+        "skillsSubtitle": "The books are designed to practise reading and writing skills in order to improve learning outcomes.",
+        "integration": "Game integration",
+        "integrationSubtitle": "The books integrate with the game through chapter exams which makes learning fun and engaging.",
+        "rewards": "Learning rewards",
+        "rewardsSubtitle": "Children are rewarded in the game for working in the books which makes them excited to learn maths using books!",
+        "integrationGame": {
+          "title": "All Evolytes books integrate with the game in a unique way",
+          "subtitle": "The Evolytes books integrate with the game through QR codes followed by an exam. If children answer correctly, they get in-game rewards to keep them motivated!",
+          "step1": "Work in the book",
+          "step1Description": "Children learn how to solve new problems in the Evolytes books in each chapter.",
+          "step2": "Scan the QR code",
+          "step2Description": "At the end of the chapter, scan the QR code to take an exam to review the chapter.",
+          "step3": "Finish exam",
+          "step3Description": "When children successfully complete an exam, they receive a reward.",
+          "step4": "Monitor book progress",
+          "step4Description": "In the Monitor you can see how your child is advancing in the books and which chapters they have finished or are struggling with."
+        },
+        "shop": {
+          "subtitle": "We offer several books for different ages and skill levels. We are constantly adding new books with new features, creatures and adventures.",
+          "now": "shop now",
+          "errorFetchBook": "Sorry, something's wrong during the fetch of the books",
+          "age": "years old",
+          "grade": "grade"
+        },
+        "features": {
+          "title": "Features",
+          "description": "The Evolytes books offer various unique features to make learning maths fun and engaging in the Evolytes universe",
+          "feature1": {
+            "title": "Improved learning outcomes and positive attitude towards maths",
+            "description1": "Students learn maths in a fun way in the books through the Evolytes and the unique information about them.",
+            "description2": "By integrating the books with the game, children finish the Evolytes books in record time, improve their learning outcomes and become more positive towards maths.",
+            "benef1": "Learning outcomes",
+            "benef2": "Positive feelings"
+          },
+          "feature2": {
+            "title": "Designed to teach children to solve new maths problems",
+            "description1": "The Evolytes teach children how to solve new maths problems in the books. In each chapter students get step-by-step instructions on how to solve new maths problems with the help of an Evolyte! ",
+            "description2": "The books have been designed by our artists and illustrators who have decades of experience in design and illustration.",
+            "benef1": "Writing skills",
+            "benef2": "Reading skills"
+          },
+          "feature3": {
+            "title": "Integrated with the platform",
+            "description1": "The Evolytes books introduce game elements and creatures from the Evolytes universe while teaching children maths.",
+            "description2": "The books integrate with the game through QR codes at the end of each chapter. The codes link to exams, which are directly tied to the content. If children successfully finish the exam, they get rewards. The in-game rewards motivate students to finish the books in record time. Teachers can see the students' progress in the books and any chapters the student struggles with in the Monitor.",
+            "benef1": "Game integration",
+            "benef2": "Rewards"
+          }
+        }
+      },
+      "game": {
+        "subtitle": "The Evolytes game rivals the games children play for fun and makes learning maths fun and engaging.",
+        "math": {
+          "title": "Making maths fun",
+          "subtitle": "The Evolytes game makes learning maths fun through a high-quality game, beautiful creatures, engaging universe and exciting adventures.",
+          "explanations": {
+            "title1": "Catch, play & compete",
+            "subtitle1": "In order to catch, play or compete with other creatures, children have to answer maths questions.",
+            "title2": "Learn abilities & evolve",
+            "subtitle2": "As children play the game more, the creatures learn new abilities and evolve.",
+            "title3": "Ever-expanding universe",
+            "subtitle3": "Choose your character and discover the ever-expanding Evolytes universe and its stories.",
+            "title4": "Hidden chests",
+            "subtitle4": "There are various chests in the universe where children have to answer questions to open them and gain rewards!"
+          }
+        },
+        "character": {
+          "title": "Choose your character",
+          "subtitle": "Children get to choose which character and companion creature to play in the game. Each creature belongs to a family of evolutions to choose from.",
+          "Lucas": "Lucas & Lighter",
+          "Eva": "Eva & Swirly",
+          "Oliver": "Oliver & Badger",
+          "Sarah": "Sarah & Ava"
+        },
+        "story": {
+          "title": "Get to know the story",
+          "subtitle": "Children follow the story of 4 friends who are discovering their Evolyte companions. Watch their introduction below."
+        },
+        "evolve": {
+          "title": "Collect and evolve",
+          "subtitle1": "Multiple evolutions",
+          "explanation1": "Every Evolyte has multiple evolutions which grants them unique abilities to discover.",
+          "subtitle2": "Evolyte families",
+          "explanation2": "Every Evolyte belong to a family tree which outlines its different possible evolutions. Every family has its unique characteristics."
+        },
+        "engaged": {
+          "title": "Evolytes is designed to keep your child entertained and engaged",
+          "subtitle": "Evolytes is based on several years of research and uses leading psychological theories to improve learning outcomes and keep your child engaged."
+        },
+        "platform": {
+          "title": "Evolytes platform",
+          "subtitle": "Learn more about how the books, game and Monitor make Evolytes a leading maths learning platform.",
+          "booksSubtitle": "The Evolytes books are specifically designed to teach reading and writing skills and integrate with the game",
+          "monitorSubtitle": "Get in-depth learning insights into strengths and areas of improvement in real time with the Monitor",
+          "gameSubtitle": "The Evolytes game makes learning maths fun and engaging while adapting to children's skill levels to maximize their potential"
+        }
+      },
+      "monitor": {
+        "subtitle": "The monitor give you real time insights into your childs learning progress, strengths and weakness",
+        "overview": {
+          "title": "Real-time overview",
+          "subtitle": "Children learn faster and more effectively with Evolytes. Don't take our word for it: follow their progress in real time in the Monitor",
+          "explanations": {
+            "title1": "Dashboard",
+            "subtitle1": "Get a clear overview of your child's progress in the dashboard.",
+            "title2": "Usage statistics",
+            "subtitle2": "In the activity section of the dashboard, you can see usage statistics for your child.",
+            "title3": "Book progress",
+            "subtitle3": "Be up to date on your child's progress in the books and what they are struggling with.",
+            "title4": "Answers",
+            "subtitle4": "You can see patterns emerge based on all of the questions your child has answered."
+          }
+        },
+        "features": {
+          "title": "Features",
+          "subtitle": "The Monitor is constantly evolving and offers various features to give you an overview of your child's learning progress, strengths and areas of improvement.",
+          "explanation": {
+            "title": "Real-time overview of your child's progress",
+            "subtitle1": "The dashboard gives you a simple and effective overview of your child's activity, progress in the books and skill evolutions.",
+            "subtitle2": "The dashboard is the perfect place to keep up to date with your child's maths learning.",
+            "progress": "Progress overview",
+            "realTime": "Real-time data"
+          }
+        },
+        "skills": {
+          "title": "See your child's skills evolve over time",
+          "subtitle": "In the monitor you can see how your child's skills evolve over time and how they are progressing. This can help you identify problem areas and stay on top of your child's skill acquisition.",
+          "acquisiton": "Skill acquisition",
+          "analytics": "Skill analytics"
+        },
+        "book": {
+          "title": "View your child's progress in the books",
+          "subtitle1": "With the book and game integration you can get insights into your child's progress in the books, the chapters they have finished and the chapters they are struggling with.",
+          "subtitle2": "",
+          "bookProgress": "Book progress",
+          "problem": "Problem areas"
+        },
+        "answers": {
+          "title": "Get in-depth analysis in the answers section",
+          "subtitle": "In the answers section you can filter and analyze all of your child's answers in one place, allowing you to uncover trends and difficult areas. This feature enables you to analyse children's answers at a deeper level to understand where problems occur.",
+          "answerIcon": "Answers",
+          "filtering": "Powerful filtering"
+        }
+      }
+    },
+    "pricing": {
+      "Subscriptions": {
+        "title": "Subscriptions",
+        "subtitle": "Various subscription plans are available to transform the way your child learns maths.",
+        "month": "month",
+        "perChild": "Per child, ",
+        "paymentFrequency1": "billed monthly",
+        "paymentFrequency2": "billed every 3 months",
+        "paymentFrequency3": "billed every 6 months",
+        "buyNow": "Buy now",
+        "Bonus": "Bonus",
+        "BonusSubtitle": "Included in first purchase",
+        "BookText": "Your choice of Evolytes companion book",
+        "includes": "Includes",
+        "shortDescription": "Evolytes iPad App and Access to the Evolytes Monitor.",
+        "freeTrial": {
+          "title": "Trial",
+          "message": " day free trial",
+          "detailMessage": "No credit card required!",
+          "try": "Try now",
+          "startTrialTitle": "Welcome to your free trial",
+          "startTrialMessage": "You are about to start a 7 day free trial of Evolytes. We do not require a credit card or any payment information. We hope your child enjoys the Evolytes universe and learns as much as possible during your trial!",
+          "expired": "Trial over"
+        },
+        "1m": {
+          "title": "1 Month"
+        },
+        "3m": {
+          "title": "3 Months"
+        },
+        "6m": {
+          "title": "6 Months"
+        },
+        "12m": {
+          "title": "12 Months"
+        }
+      },
+      "School": {
+        "title": "Schools",
+        "subtitle": "Evolytes has a special pricing and features specifically designed for schools and their needs. Learn why over 50% of schools in Iceland choose Evolytes!",
+        "subtitle2": "What's included",
+        "leftIcon1": {
+          "title": "Evolytes game",
+          "subtitle": "All schools get unlimited access to the Evolytes game, features and all future updates."
+        },
+        "leftIcon2": {
+          "title": "Evolytes books",
+          "subtitle": "Evolytes companion books are specifically designed to teach new material."
+        },
+        "leftIcon3": {
+          "title": "Monitor",
+          "subtitle": "The Evolytes Monitor gives you real-time insights into your students strengths and problem areas."
+        },
+        "rightIcon1": {
+          "title": "Dedicated support",
+          "subtitle": "Support is easily available every day of the week via our email or phone."
+        },
+        "rightIcon2": {
+          "title": "Free courses",
+          "subtitle": "All teachers and administrators can sign up for a free course to learn how to get the most out of Evolytes."
+        },
+        "rightIcon3": {
+          "title": "Learning resources",
+          "subtitle": "Schools get access to special videos and guides to dive deep into the features of Evolytes."
+        },
+        "buttonGetAQuote": "Get a quote",
+        "buttonRequestADemo": "Request a demo",
+        "textMore": "Need more information about Evolytes for schools ?",
+        "MoreButton": "Learn More"
+      },
+      "Learning": {
+        "title": "Learning outcomes",
+        "subtitle": "Evolytes is based on several years of research and uses leading psychological theories to improve learning outcomes and keep your child engaged",
+        "endingText": "Start empowering your child or students with the Evolytes platform today."
+      }
+    },
+    "landing": {
+      "tagline": "Learn maths in a fun and engaging way",
+      "description": "Use the Evolytes game and books to teach children maths faster, in a fun and engaging way. The platform is designed for children aged 5—9 years old.",
+      "buyButton": "Buy now",
+      "login": "Login",
+      "evolytesPart": {
+        "title": "Changing the way children learn",
+        "description": "The Evolytes platform combines the Evolytes game, books and Monitor to improve learning outcomes.",
+        "gameTitle": "Evolytes game",
+        "gameDescription": "The Evolytes game makes learning maths fun in a open world with various adventures.",
+        "bookTitle": "Books",
+        "bookDescription": "The Evolytes books are specifically designed to develop reading and writing skills.",
+        "monitorTitle": "Monitor",
+        "monitorDescription": "With monitor you can have a real-time overview of children learning progress, strengths and weaknesses."
+      },
+      "universePart": {
+        "title": "The Evolytes universe",
+        "description": "The Evolytes universe, its characters and stories will keep your child calculating maths at an incredible pace."
+      },
+      "howPart": {
+        "title": "How Evolytes works",
+        "description1": "Children play in the Evolytes game where they answer maths questions to advance in the game.",
+        "description2": "As the child answers more questions, the questions adapt to the child's skill level.",
+        "description3": "Children work in the books and use the QR codes at the end of each chapter to take an exam and get rewards.",
+        "description4": "Teachers and parents can monitor the child's progress, strengths and areas of improvement in the monitoring section."
+      },
+      "researchPart": {
+        "title": "Founded in research",
+        "description": "Evolytes is based on many years of research and uses leading psychological theories to improve learning outcomes and keep your child engaged.",
+        "theory": {
+          "reinforcementTitle": "Reinforcement Theory",
+          "reinforcementDescription": "Makes the game entertaining and rewards children to keep them engaged",
+          "flowTitle": "Flow Theory",
+          "flowDescription": "Used to adapt to the skill level of each child, to maximize their potential",
+          "spacingTitle": "Spacing Effect",
+          "spacingDescription": "Ensures long-term learning and skill acquisition by spacing practice"
+        }
+      },
+      "featureSection": {
+        "title": "Feature Requests",
+        "description": "We work closely with our partnering schools to create the best math educational platform out there. If you have any features you would like us to add feel free to reach out, we always love fresh new ideas!"
+      },
+      "schoolSection": {
+        "title": "Evolytes in schools",
+        "description": "Evolytes has a special version and pricing for schools. Learn why over 50% of schools in Iceland use Evolytes."
+      },
+      "testimonials": {
+        "1": {
+          "position": "Head of Information Technology",
+          "school": "Fjallabyggð Elementary School",
+          "text": "A couple of students have started the Evolytes adventure. This is AMAZING. We have seen tremendous growth immediately from our students! Huge compliments from us! There were several teachers green with envy who want to add their students to the Evolytes platform."
+        },
+        "2": {
+          "position": "Student in 5th grade",
+          "school":"Varmársskóli Elementary School",
+          "text": "Usually games that teach you something are childish and boring. Evolytes is not like that..."
+        }
+      },
+      "supportPart": {
+        "title": "Support",
+        "description": "The Evolytes platform received support from the Technology Development Fund and the Innovation Center of Iceland, which were crucial to the development of the platform."
+      },
+      "startingPriceOne": "Plans starting from ",
+      "startingPriceTwo": "a month",
+      "memberButton": "Become a member",
+      "download": "Download on",
+      "appStore": "App Store",
+      "appGoogle": "Google play",
+      "learnMoreButton": "Learn more",
+      "demoButton": "Request a demo"
+    },
+    "schools": {
+      "introduction": {
+        "title": "Evolytes for schools",
+        "subtitle": "Evolytes has been specifically designed for schools, in close collaboration with our partners. We want to empower teachers with modern tools to help their students succeed"
+      },
+      "tool": {
+        "title": "Tools for teachers",
+        "subtitle": "The Evolytes Platform is designed to empower teachers and students. The monitor gives teachers real-time insights into students' progress, strengths and areas of improvement.",
+        "monitorDescription": "In the monitor you can have a a real-time overview of your students' learning progress, strengths and difficult areas.",
+        "gameDescription": "Students answer a maths question in order to operations in the game such as catching and feeding Evolytes."
+      },
+      "engaging": {
+        "title": "Engaging students",
+        "subtitle": "The Evolytes game and books are designed to keep students engaged, interested and calculating maths based on their skill level to maximize their potential.",
+        "individualizedTitle": "Individualized content",
+        "individualizedSubtitle1": "The core of the Evolytes platform is the real-time assessment where students are provided with individualized content based on their skill level.",
+        "individualizedSubtitle2": "Teachers get a clear overview and insights into their students' learning progress to address problem areas. The platform saves teachers a great deal of time, which goes into student assessment.",
+        "savesTime": "Saves time",
+        "LearningInsights": "Learning insights",
+        "dashboardTitle": "Dashboard - Real-time overview",
+        "dashboardSubtitle": "In the Monitor teachers have a real-time overview and insights into their students' learning. The student gets individualized content based on their level."
+      },
+      "keeping": {
+        "title": "Keeping students engaged",
+        "description1": "Evolytes is a high-quality game which rivals the games children play for fun in their own free time. The game is designed to make learning maths fun and engaging through the Evolytes universe, its stories and characters.",
+        "description2": "Students learn faster in the Evolytes game, spend more time learning maths at home and are more positive towards maths in all its forms.",
+        "fun": "Fun",
+        "positiveFeeling": "Positive feelings",
+        "pictureTitle": "Open world adventure",
+        "pictureSubtitle": "Evolytes features a rich open world with dozens of creatures, quests and stories to keep students engaged and learning!"
+      },
+      "books": {
+        "title": "Integrated with the platform",
+        "description1": "The Evolytes books introduce game elements and creatures from the Evolytes universe while teaching children maths.",
+        "description2": "The books integrate with the game through QR codes at the end of each chapter. The codes link to exams, which are directly tied to the content. If students successfully finish the exam, they get rewards. The in-game rewards motivate students to finish the books in record time. Teachers can see their students' progress in the books and any chapters students struggle with in the Monitor.",
+        "writingSkills": "Writing skills",
+        "readingSkills": "Reading skills",
+        "pictureTitle": "Evolytes books",
+        "pictureSubtitle": "The evolytes books are specifically designed to develop reading and writing skills while integrating with the Evolytes game in a unique way."
+      },
+      "how": {
+        "title": "Service for schools",
+        "subtitle": "There is a unique version of the platform, with special support and quality service, just for schools. All schools can get a free trial and courses to try out the platform.",
+        "freeTrial": {
+          "title": "Free trial",
+          "subtitle": "Schools can get a free trial to test the platform with a handful of teachers and students."
+        },
+        "requestText": "Choose below to request your free demo or a tailor-made quote based on your school's needs."
+      },
+      "research": {
+        "title": "Based on research",
+        "subtitle": "Evolytes is based on 3 years of interdisciplinary research in computer science and psychology to make learning fun, engaging and improving skill acquisition. The results of the experiment behind the Evolytes platform exceeded our wildest expectations",
+        "learnMore": "Learn more"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Before you go to the trouble of calling or emailing us, our frequently asked questions could help you find a quick solution.",
+      "q1": "Which ages is Evolytes for?",
+      "a1": "Evolytes is design for children 5 - 9 years old. These ages are for reference and may vary depending on your child's skill level. \n\n Evolytes works great for all kinds of children who are taking their first steps in maths. Evolytes is very often used by children with learning deficiencies from 6 - 12 years old as it speeds up skill acquisition and provides individualized content in real time. Evolytes has also been used with great results with younger chidlren who are learning to count. If you believe your child is ready to learn maths just go for it! Evolytes will adapt the content to their skill level.\n\nEvolytes is used by children aged 3-16 years old. It all depends on each and every individual although the educational content is designed for children aged 5 - 9 years old.",
+      "q2": "Which devices and operating systems is Evolytes compatible with?",
+      "a2": "The Evolytes game is currently only compatible with iOS tablets (Apple iPda). In February 2022 we will be releasing a new cross platform version for all iOS and Android devices.\n\n The Evolytes webpage and monitor are compatible with majority of browsers for majority of screen sizes.\n\nEvolytes books are physical books and therefore do not require any devices to use them.",
+      "q3": "How does the Evolytes book integration work with the game and Monitor?",
+      "a3": "You can only scan QR codes in Evolytes books in the Evolytes mobile game.\n\nOpen the Evolytes game and select the user who owns the book you are using. In the main screen of the game you will see several buttons in the upper right corner. Press the button with the camera icon. It is important to grant the game access to the camera of the device or the game will be unable to scan the QR code. You will need to access your devices settings and give it access to the camera.\n\nNow aim the camera on the QR code which you will scan. When the game has recognized the QR code the gray button in the middle of the screen will turn green. When the button turns green you can press it and you will be prompted with a chapter exam.",
+      "q4": "How do I scan a QR code in an Evolytes book?",
+      "a4": "Evolytes books integrate with the Evolytes platform through QR codes in the Evolytes mobile game. The QR codes can be found at the end of each chapter in the books. The QR codes can only be scanned in the Evolytes mobile game app. You cannot use the built in camera app to scan the QR code in the books.\n\n Each QR code in the books will test the student's knowledge of the contents of the chapter and if they answer 80% of the questions correctly in the chapter they will get a reward in game for finishing the chapter. This method allows us to positively associated writing skills with positive stimuli of the Evolytes mobile game.\n\nBy logging into the Evolytes platform on the web you can monitor your child's maths progress and their progress in the Evolytes books.",
+      "q5": "The camera does not work in the app. How do I fix it?",
+      "a5": "If the camera does not work in the Evolytes game it is most likely due to the fact that the app has not been granted access to the device's camera. You will need to exit the game and go to the device's settings to change its access rights.\n\n In Settings you need to find your the Evolytes mobile game in your list of apps and allow it to access the devices camera. When the app has been granted access to the camera you can open the Evolytes game and the camera should work.",
+      "q6": "What's unique about Evolytes?",
+      "a6": "The Evolytes maths platform is based on unique interdisciplinary research where leading psychological theories were used to speed up student skill acquisition in maths. Prior studies and experiments enabled us to speed up student skill acquisition to make learning faster, more effective while staying fun and engaging.\n\nThe book integration with the Evolytes platform is a unique feature which was developed to ensure student develop reading and writing skills which will improve their learning outcomes and grades.",
+      "q7": "What skills does Evolytes practise?",
+      "a7": "Evolytes gives your child the foundation they need in mathematics, both phrasing and number sense associated. We regularly add new maths content. Currently we go over the following maths content:\n\nCounting, connecting amounts with numbers.\n\nAddition 1-999\n\nSubtraction 1-999\n\nUnit house, units, tens and hundreds\n\nAddition of multiple parameters\n\nMultiplication\n\nAlgebra\n\nPaterns\n\nComparing sizes (Great than, smaller than, etc...)\n\nForms\n\nDecoding.\n\nWe regularly add new content to the game so this list is not exhaustive and we will keep adding content so the app can grow with your child's maths progression.",
+      "q8": "How do I change or cancel my subscription?",
+      "a8": "You can cancel or modify your subscription by logging in to your user on the Evolytes web platform.\n\nLog into the Evolytes monitor on this page, select the child you want to modify the billing information for. Go to settings, billing information and press modify subscription.",
+      "q9": "What languages is Evolytes available in?",
+      "a9": "Evolytes is available in Icelandic, English and French. \n\nEvolytes will soon be available in Swedish, Norwegian and German.",
+      "q10": "Why is my Monitor empty?",
+      "a10": "In order to the Evolytes monitor to show data your child needs to start playing the Evolytes mobile game. If still nothing is displayed it may be due to the fact that your not connected to the internet.",
+      "q11": "Can I share my Monitor access with a parent or teacher?",
+      "a11": "In order to share your access to a student with another parent, guardian or teacher you will need to send us an email at evolytes@evolytes.com and formally request that the data will be shared with another user. In order for us to process the request you will need to provide the following information:\n\nThe email used to log into Evolytes\nThe name of the child you want to share your access for\n\nThe email of the user you want to share access with.\n\nThe person whom you want to share your access to will receive an email so they can activate their account. They will then be able to visualize the students progress in the monitor and open the Evolytes mobile game with their credentials and select the child as an account to play.",
+      "q12": "How does Evolytes adapt to my child's / student's level ?",
+      "a12": "All of the answers your child provides while learning in Evolytes are used to assess its skill level. We will then adapt the content based on your child's strenghts and weaknesses.\n\nThe platform adapts the difficulty of the content based on your child's answers in real time. All children start with easy material which is then made harder based on the student's proficiency.\n\nChildren will keep getting questions for skills we know they have developed in order to develop long term skill acquisition and does not forget what they have learned previously. If the student starts to struggle with material they have mastered before they will have to practice it again and the question type associated with it will start being prompted more often again.",
+      "ManualsButton": "Manuals & Videos",
+      "HelpButton": "Help Center"
+    },
+    "footer": {
+      "product": "Product",
+      "game": "Game",
+      "research": "Research",
+      "schools": "Schools",
+      "company": "Company",
+      "aboutUs": "About us",
+      "contactUs": "Contact us",
+      "help": "Help & Legal",
+      "faq": "FAQ",
+      "terms": "Terms & Conditions",
+      "policy": "Privacy Policy",
+      "email": "evolytes@evolytes.com",
+      "culture": "Great Britain"
+    },
+    "aboutUs": {
+      "title": "Changing the way children learn maths",
+      "ourStory": {
+        "title": "Our story",
+        "description": "One of our founders, Mathieu Grettir Skúlason, saw his sister struggle with maths at home and realized he could apply his research in psychology to help her learn maths. He carried out an experiment that had very encouraging results, which ultimately led to the development of Evolytes.",
+        "y2014": {
+          "title": "Interdisciplinary research which the Evolytes game is based on",
+          "description": "The Evolytes game was based on three years of interdisciplinary research in reinforcement theory by Mathieu Grettir Skúlason in the Aperio honors program at Reykjavík University, which started in 2014."
+        },
+        "y2016": {
+          "title": "Experiment to speed up mathematics skill acquisition",
+          "description": "In 2016 Mathieu came home to his sister struggling with maths where he realized he could apply his research to make learning maths fun and engaging. Following his epiphany, he developed a prototype video game that he used in an experiment to see its effect on learning. The results were beyond his wildest expectation."
+        },
+        "y2017": {
+          "title": "Golden egg business planning competition - 3rd place",
+          "description": "The experimental results were so encouraging that Mathieu took the project to the Golden Egg business planning competition. Jónas Ingi Valdimarsson and Íris Eva Gísladóttir joined the project where they fledged out the vision of the company which would later become Evolytes. The project was awarded 3rd place out of over 250 other teams."
+        },
+        "y2017bis": {
+          "title": "Startup Reykjavík Accelerator and grants",
+          "description": "Following the Golden Egg business competition, the project took part in the Startup Reykjavík business accelerator under the name Flow Education. The project received a capital increase of 2.4 million ISK for 6% share in the company as part of their participation in the accelerator. The project received grants from the Technology Development Fund of Iceland and the Innovation Center of Iceland."
+        },
+        "y2018": {
+          "title": "Grant received from the Technology Development Fund of Iceland",
+          "description": "Evolytes received a two year grant, worth 20 million ISK, to develop the Evolytes platform and get it to market in Iceland. The grant played a crucial role in making Evolytes what it is today."
+        },
+        "y2020": {
+          "title": "Evolytes launched in Iceland in spring",
+          "description": "Evolytes was released in late March of 2020 with a warm reception from consumers. Schools showed a great interest in the platform as Evolytes was used in 15 schools during the school year of 2020-2021."
+        },
+        "y2021": {
+          "title": "Evolytes used in over 50% of Icelandic schools",
+          "description": "Evolytes is used by over 50% of all schools in Iceland, making it the dominant maths learning platform in the country. We’re very excited to change the way children learn and empower teachers with modern tools."
+        }
+      },
+      "team": {
+        "title": "The team",
+        "description": "The team behind Evolytes has decades of experience and a vast interdisciplinary skill set ranging from psychology, pedagogy and research to illustration, game development and software engineering",
+        "ceo": "CEO & Developer",
+        "cmo": "CMO & Designer",
+        "design": "Designer & Illustrator",
+        "pedagogy": "Head of Pedagogy",
+        "game": "Game Designer & Developer",
+        "cfo": "CFO",
+        "sales": "Sales & Customer Representative"
+      }
+    },
+    "research": {
+      "learnMore": "Learn more",
+      "exp": {
+        "title": "Experimental result",
+        "conclusion": "Students were given the Evolytes game to play at home outside of schools hours, where it was stressed they had to play it in their own free time. Their performance was compared to their maths activity at school."
+      },
+      "positiveTowards": {
+        "title": "Positive attitude towards Maths",
+        "descr1": "At the end of the study, all students had more positive feelings associated with maths. No matter the form of maths, students were more open to studying mathematics.",
+        "descr2": "By providing students with individualized content, in a fun and engaging way, students associate positive feelings with maths and gain the confidence they need to keep studying."
+      },
+      "theoretical": {
+        "title": "Theoretical foundation",
+        "description": "The Evolytes platform uses several different psychological theories to improve learning and skill acquisition while making the process fun and engaging."
+      },
+      "history": {
+        "title": "Research history",
+        "description": "Evolytes is based on several years of research in psychology to make learning fun and engaging.",
+        "y2014": {
+          "season": "Spring",
+          "title": "Effects of variable and fixed reinforcement schedules on children’s responding in video games",
+          "descr1": "Our first study set out to shed light on patterns of responding of children for different reinforcement schedules in video games. Various experiments have shown humans to be insensitive to the schedules and their patterns deviate significantly from what is observed with infrahuman species.",
+          "descr2": "The results showed that only fixed ratio had a similar pattern of responding as seen in simpler species. Others schedules showed uncharacteristic patterns of responding for variable ratio, fixed interval and variable interval reinforcement schedules."
+        },
+        "y2015": {
+          "season": "Spring",
+          "title": "Effects of age and gender on responding to variable and fixed rates of reinforcement in video games",
+          "descr1": "After having studied the patterns of responding in our first experiment, we set out to see if age and gender has an effect on resonding patterns under different rates of reinforcement.",
+          "descr2": "The results showed that age had an effect on patterns of responding, specifically the rate of reinforcement and how long participants were active throughout the reinforcement schedule. Younger children showed greater sensitivity to the different reinforcement schedules than older ones. This may be due to the fact that children have a shorter reinforcement history than older students."
+        },
+        "y2016": {
+          "season": "Autumn",
+          "title": "Applied reinforcement theory in video games to speed up mathematical skill acquisition",
+          "descr1": "Based on our prior experiments, we created a video game based on an optimal reinforcement strategy to incentivize 4th grade students to learn maths faster at home in their own free time.",
+          "descr2": "The results showed that students answered on average 4 times more questions in the game compared to the same period at school and up to 1,200 questions a day. Students with learning disabilities showed the greatest growth in answering answered up to 12 times more questions compared to at school. At the end of the study all students were more positive towards maths."
+        }
+      }
+    },
+    "contactUs": {
+      "title": "Contact us",
+      "description": "If you have any questions please contact us using the details below or use the message form.",
+      "address": "Bankastræti 5, 101 Reykjavík, Iceland",
+      "messageTitle": "Send us a message",
+      "name": "Full Name *",
+      "email": "Email *",
+      "phone": "Phone",
+      "subject": "Subject *",
+      "placeholderSubject": "I need help with billing",
+      "message": "Message *",
+      "placeholderMessage": "I need help with...",
+      "send": "Send",
+      "required": "Attributes with * are required",
+      "popUpSuccessMessage": "Your request has been received. You should get a response within 48 hours.",
+      "popUpErrorMessage": "Your request failed. Please send an email to evolytes@evolytes.com. We will respond within 48 hours to your request.",
+      "popUpMissingNameField": "The name field is required.",
+      "popUpMissingEmailField": "The email field is required.",
+      "popUpMissingSubjectField": "The subject field is required.",
+      "popUoMissingMessageField": "A message is required to send a request."
+    },
+    "changeLanguage": {
+      "title": "Select country and language"
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "subtitle": "Get the latest news, features and offers for Evolytes!",
+      "buttonTitle": "Subscribe",
+      "alreadySubscribed": "This email has already subscribed to the newsletter",
+      "emailInvalid": "The email address is invalid.",
+      "subscribed": "Subscribed",
+      "subscribedMessage": "You have successfully subscribed to the newsletter for the email: "
+    }
+  },
+  "signin": {
+    "title": "Sign in",
+    "subtitle": "You are only a few steps away from giving your a unique mathematics education to learn maths faster and more effectively.",
+    "emailTitle": "Email",
+    "emailPlaceholder": "email@email.com",
+    "passwordTitle": "Password",
+    "loginButtonTitle": "Sign in",
+    "forgotPasswordTitle": "Forgot Password",
+    "signupPartOne": "Don't have an account?",
+    "signupPartTwo": "Signup now!",
+    "signinWrong": "Password or email is incorrect."
+  },
+  "initPassword": {
+    "title": "Initialize Password",
+    "subtitle": "Enter a password for your account and confirm it. Both passwords have to match.",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "save": "Save",
+    "tokenExpired": "This password initialization link is expired or malformed. The password initialization email expires after 24 hours.",
+    "passwordsDoNotMatch": "The passwords do not match, re-enter your passwords.",
+    "success": "The password initialization was successful. Press the button below to go to login."
+  },
+  "signup": {
+    "title": "Sign Up!",
+    "subtitle": "The email and password provided will be used to login to the game and platform.",
+    "firstNameTitle": "First name",
+    "lastNameTitle": "Last name",
+    "emailTitle": "Email",
+    "emailPlaceholderTitle": "email@email.com",
+    "passwordTitle": "Password",
+    "confirmPasswordTitle": "Confirm Password",
+    "signupButtonTitle": "Sign up",
+    "signinPartOne": "Have an account?",
+    "signinPartTwo": "Sign in now!",
+    "passwordCriteria": "The password needs to be at least 7 characters long and contain numeric and alphabetic characters",
+    "termsMessage": "By signing up you agree to our",
+    "terms": "Terms and Conditions",
+    "privacyMessage": "To learn more about how Evolytes uses, shares and collects your personal date read Evolytes'",
+    "privacy": "Privacy Policy",
+    "passwordsDoNotMatch": "The passwords do not match, re-enter your passwords.",
+    "passwordMissing": "Password is missing.",
+    "passwordNotLongEnough": "Password has to be at least 7 characters long",
+    "passwordMustIncludeAlpha": "Password must include at least one alphabetic character",
+    "passwordMustIncludeNumeric": "Password must include at least one numeric character",
+    "selectCountry": "Select a country",
+    "selectLanguage": "Select a language"
+  },
+  "selectCountry": {
+    "title": "Choose Country"
+  },
+  "selectLanguage": {
+    "title": "Choose Language"
+  },
+  "createStudent": {
+    "title": "Create Student",
+    "subtitle": "In this step you create a student profile which is made for a single user so we can adapt to their skill level and provide them with individualized content.",
+    "firstName": "First Name",
+    "middleName": "Middle Name",
+    "lastName": "Last Name",
+    "birthDate": "Date of Birth",
+    "birthDatePlaceholder": "dd/mm/yyyy",
+    "schoolType": "School Type",
+    "nextButton": "Next",
+    "firstNameRequired": "First name is required.",
+    "lastNameRequired": "Last name is required.",
+    "birthDateInvalid": "Enter a valid birth date. The birth date format should be 23/03/2012 (dd/mm/yyyy)."
+  },
+  "createGroup": {
+    "title": "Create Group",
+    "name": "Name"
+  },
+  "emailVerifyReminder": {
+    "title": "Verify Your Email",
+    "subtitlePartOne": "Your email is not verified. An email was sent to",
+    "subtitlePartTwo": "with instruction on how to verify your email. The email may take a couple of minutes to arrive.",
+    "resendEmail": "Did not receive an email? Press the button below to receive a new email.",
+    "skipButtonTitle": "Skip",
+    "sendAgainTitle": "Resend"
+  },
+  "verifyEmail": {
+    "title": "Verifying Email",
+    "subtitleInProgress": "We are currently verifying your email, give us a moment.",
+    "subtitleError": "We had trouble verifying your email in order to get a new email sign in. The button below will take you to our landing page.",
+    "success": "Success",
+    "successMessage": "Your email was successfully verified.",
+    "done": "Done",
+    "emailSentPartOne": "A verification email has been sent to: ",
+    "emailSentPartTwo": " you should receive it momentarily."
+  },
+  "resetPassword": {
+    "title": "Reset Password",
+    "subtitle": "Enter a new password for your account and confirm it. Both passwords have to match.",
+    "password": "New Password",
+    "confirmPassword": "Confirm New Password",
+    "reset": "Reset",
+    "tokenExpired": "This password reset link is expired or malformed. The password reset email expires after 24 hours.",
+    "passwordsDoNotMatch": "The passwords do not match, re-enter your passwords.",
+    "success": "The password reset was successful. Press the button below to go to login."
+  },
+  "forgotPassword": {
+    "title": "Forgot Password",
+    "subtitle": "Input your email below to reset your password. We will send you an email with a link to reset your password.",
+    "emailTitle": "Email",
+    "emailPlaceholder": "email@email.com",
+    "sendButtonTitle": "Send",
+    "signinPartOne": "Have an account?",
+    "signinPartTwo": "Sign in!",
+    "signupPartOne": "Don't have an account?",
+    "signupPartTwo": "Signup!",
+    "success": "An email to reset your password has been sent to the email: "
+  },
+  "selectStudent": {
+    "title": "Select Account",
+    "nameTitle": "Name",
+    "stateTitle": "Status",
+    "ageTitle": "Age",
+    "addAccount": "Add Account",
+    "statusActive": "Active",
+    "statusFailed": "Billing Failed",
+    "statusNotSetup": "Not Setup",
+    "licenseExpired": "License expired",
+    "active": "Active",
+    "future": "Future Subscription",
+    "in_trial": "Trial",
+    "trial_over": "Trial over",
+    "paused": "Paused",
+    "cancelled": "Cancelled",
+    "not_subscribed": "Not Subscribed",
+    "student": "Student",
+    "students": "Students",
+    "groups": "Groups"
+  },
+  "selectSub": {
+    "title": "Select a Subscription",
+    "subtitle": "Select a subscription that suits you. An Evolytes educational book is included in every new subscription which you will select in the next step.",
+    "nextButtonTitle": "Next"
+  },
+  "selectBook": {
+    "title": "Select a Book",
+    "subtitle": "Select a book which suits your child best. We recommed choosing an easier book as it is likelier to spark your childs interest in maths in combination with the Evolytes game.",
+    "nextButtonTitle": "Next",
+    "ageTitle": "years old",
+    "contentsTitle": "Contents"
+  },
+  "confirmSubscription": {
+    "title": "Confirm Purchase",
+    "subtitle": "Finalize the payment information to give your child a unique maths education.",
+    "subscriptionTitle": "Subscription",
+    "bookIncluded": "Educational Book Included",
+    "bookContents": "Content",
+    "deliveryTitle": "Delivery",
+    "deliverySubtitle": "Tracked delivery, should arrive in 3-5 business days.",
+    "breakdownTitle": "Breakdown",
+    "breakdownSubscriptionTitle": "Subscription: ",
+    "breakdownDeliveryTitle": "Delivery: ",
+    "billingInformationTitle": "Billing Information",
+    "shippingInformationTitle": "Shipping Information",
+    "shippingSameAsBillingTitle": "Same as billing address",
+    "confirmButtonTitle": "Checkout",
+    "total": "Total",
+    "companyInformationTitle": "About Evolytes",
+    "companyInformationString": "Evolytes ehf., registration number: 600617-1250, vat id: 128833. Address: Bankastræti 5, 101 Reykjavík, Iceland.",
+    "tcAgreeMessage": "I agree to the ",
+    "tcLinkMessage": "Terms and Conditions and the Refund and Cancellation policy."
+  },
+  "billingInformation": {
+    "fullName": "Full Name",
+    "address": "Address",
+    "city": "City",
+    "zip": "Zip",
+    "state": "State",
+    "statePlaceholder": "State",
+    "phoneNumber": "Phone Number",
+    "country": "Country",
+    "subscriptionExistsMessage": "A subscription for the student already exists. You will be taken to the students dashboard."
+  },
+  "subscriptions": {
+    "monthBreakdown": "month(s)"
+  },
+  "billingComplete": {
+    "title": "Thank you for the purchase!",
+    "subtitle": "You have received an email with the confirmation of your purchase.",
+    "subtitleTwo": "We hope you will enjoy watching your child’s mathematics ability grow faster and more effectively! Get started by pressing the button below.",
+    "getStartedButtonTitle": "Get started",
+    "invoiceTitle": "Invoice",
+    "billedToTitle": "Billed to",
+    "productsTitle": "Products",
+    "priceTitle": "Price",
+    "evolytesProductTitle": "Evolytes Platform",
+    "evolytesProductSubtitle": "6 months subscription",
+    "includedTitle": "Included",
+    "total": "Total",
+    "6m": {
+      "evolytesProductSubtitle": "6 months subscription"
+    },
+    "3m": {
+      "evolytesProductSubtitle": "3 months subscription"
+    },
+    "1m": {
+      "evolytesProductSubtitle": "1 month subscription"
+    }
+  },
+  "bookIntro": {
+    "title": "Evolytes book",
+    "subtitle": "The Evolytes book should arrive within 3-5 working days to the shipping address provided during checkout.",
+    "nextButtonTitle": "Next"
+  },
+  "gameIntro": {
+    "title": "Evolytes iPad Game",
+    "subtitle": "The evolytes iPad game is accessible on the app store. You use the same login credentials to login into the game.",
+    "nextButtonTitle": "Next"
+  },
+  "monitorIntro": {
+    "title": "Evolytes Monitor",
+    "subtitle": "You can use the Evolytes monitor at any time through the web to monitor your child's activity, progress and skills in real time.",
+    "nextButtonTitle": "Finish"
+  },
+  "dashboard": {
+    "paymentError": {
+      "trialExpired": "Trial Expired",
+      "cancelled": "Subscription Cancelled",
+      "notSubscribed": "No subscription"
+    },
+    "answersTitle": "Answers",
+    "timeTitle": "Time",
+    "answersListTitle": "Answers",
+    "columnProgressTitle": "Progress",
+    "bookProgressTitle": "Book Progress",
+    "minuteDelimeter": "m",
+    "hourDelimeter": "h",
+    "noQRScannedTitle": "No QR Code Scanned",
+    "noQRScannedMessage": "Progress in the Evolytes book will be displayed here once the student has scanned a QR code in the book and answered its questions.",
+    "noAnswerTitle": "No answer",
+    "noAnswersMessage": "The answers will be displayed here once the student has started playing.",
+    "noProfileMessage": "To start playing, you need to download the application.",
+    "objective": "Objective",
+    "selectObjective": "Coming Soon",
+    "age": "years",
+    "activity": "Activity",
+    "chart": {
+      "timeSpent": "Time spent",
+      "thisWeek": "This week",
+      "lastWeek": "Last week",
+      "lastMonth": "Last month",
+      "thisMonth": "This month",
+      "skillProgress": "Skill Progress",
+      "skills": "Skills Worked On",
+      "home": "Home",
+      "school": "School"
+    }
+  },
+  "books": {
+    "bookProgressTitle": "Book Progress",
+    "nextChapterTitle": "Next Chapter",
+    "finishedTitle": "Just Finished",
+    "failedTitle": "Needs Help",
+    "chaptersTitle": "Chapters",
+    "noNextChapterTitle": "You have finished the book",
+    "noFailedTitle": "You do not need help with a chapter",
+    "back": "Back To Books"
+  },
+  "answers": {
+    "moreData": "Load More",
+    "dateFilter": "Date Filter",
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "category": "Category",
+    "answer": "Answer",
+    "skill": "Skill",
+    "progress": "Progress",
+    "answerType": "Answer Type",
+    "clear": "Clear",
+    "apply": "Apply",
+    "filters": {
+      "noFilter": "No Filter",
+      "dateRange": "Date Range",
+      "startDate": "Start Date",
+      "endDate": "End Date"
+    }
+  },
+  "recentActivity": {
+    "title": "Activity Last 7 days",
+    "time": "Time Spent",
+    "answers": "Answers",
+    "skills": "Skills",
+    "total": "Total"
+  },
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "answers": "Answers",
+    "help": "Help",
+    "settings": "Settings",
+    "logout": "Log out"
+  },
+  "header": {
+    "getStarted": "Get started",
+    "login": "Login",
+    "logout": "Logout",
+    "dashboard": "Dashboard",
+    "research": "Research",
+    "princing": "Pricing",
+    "schools": "Schools",
+    "features": "Features"
+  },
+  "schoolAdministration": {
+    "settingsDropdown": {
+      "administration": "Administration",
+      "settings": "Settings",
+      "logout": "Logout",
+      "selectStudent": "Select student",
+      "switchStudent": "Switch student"
+    },
+    "licenses":{
+      "title": "Licenses",
+      "assigned": "Assigned",
+      "available": "Available",
+      "licenseStart": "License Start",
+      "licenseEnd": "License End",
+      "licenseType": "License Type",
+      "licenseTypes": {
+        "trial": "Trial",
+        "full": "Full"
+      },
+      "numLicenses": "Number of licenses",
+      "licenseCost": "Price per student",
+      "total": "Total",
+      "licenseHistory": "License History",
+      "createdBy": "Created by"
+    },
+    "groups": {
+      "title": "Groups",
+      "search": "Search for groups",
+      "searchPlaceholder": "Group name",
+      "addGroup": "Add Group",
+      "nameLegend": "Name",
+      "createdAtLegend": "Created at",
+      "updateGroupMessage": "The group information has been successfully updated.",
+      "deleteGroupModalWarning": "You are about to delete a group, this action cannot be undone, are you sure you want to proceed?",
+      "deleteGroupModalSuccess": "The group was successfully deleted.",
+      "deleteGroupTitle": "Delete Group",
+      "deleteStudentFromGroupModalSuccess": "The student has been successfully removed from the group.",
+      "deleteTeacherFromGroupModalSuccess": "The teacher has been successfully removed from the group.",
+      "addTeacherButtonTitle": "Add Teacher",
+      "addTeacherTitle": "Add teachers",
+      "teachersListTitle": "Teacher list"
+    },
+    "students": {
+      "title": "Students",
+      "search": "Search for students",
+      "searchPlaceholder": "Student name",
+      "addStudent": "Add Student",
+      "import": "Import",
+      "nameLegend": "Name",
+      "birthYearLegend": "Birth year",
+      "statusLegend": "Status",
+      "licenseExpiresAtLegend": "License expiration",
+      "createdAtLegend": "Created at",
+      "importStudents": "Import Students",
+      "selectFile": "Select File",
+      "deleteStudentTitle": "Delete Student",
+      "studentsCreatedModalMessage": "The students were successfully created and added.",
+      "updateStudentMessage": "The student information has been successfully updated.",
+      "deleteStudentModalWarning": "You are about to delete a student, this action cannot be undone, are you sure you want to proceed?",
+      "deleteStudentModalSuccess": "The student account was successfully deleted."
+    },
+    "teachers": {
+      "title": "Teachers",
+      "teachersInvitationsTitle": "Invitations",
+      "search": "Search for teachers",
+      "searchPlaceholder": "Teacher name or email",
+      "inviteTeacher": "Invite teacher",
+      "addTeacherButtonTitle": "Add another teacher",
+      "addMore": "Add more",
+      "nameLegend": "Name",
+      "accountTypeLegend": "Account Type",
+      "memberSinceLegend": "Member Since",
+      "inviteTeacherTitle": "Invite Teacher",
+      "studentsListTitle": "Student List",
+      "addStudentButtonTitle": "Add Student",
+      "addStudentTitle": "Connect Students",
+      "updateTeacherMessage": "The teacher information has been successfully updated.",
+      "deleteTeacherTitle": "Delete Teacher",
+      "deleteTeacherModalWarning": "You are about to delete a teacher, this action cannot be undone.",
+      "deleteTeacherModalMessage": "The teacher, student access and other data have been successfully deleted."
+    },
+    "teachersInvitations": {
+      "importTeachersInvitations": "Import Invitations",
+      "teachersInvitationsTitle": "Pending invitations",
+      "teacherInvitationSentLegend": "Invitation Sent",
+      "teacherInvitationStatusLegend": "Invitation Status",
+      "updateTeacherInvitationMessage": "The teacher invitation information has been successfully updated.",
+      "resendTeacherInvitationTitle": "Resend Invitation",
+      "lastTeacherInvitationSentTitle": "Last Invitation sent",
+      "resendTeacherInvitationModalWarning": "You are about to resend an invitation email to a teacher, this action cannot be undone.",
+      "resendTeacherInvitationModalMessage": "The teacher invitation have been successfully resent.",
+      "deleteTeacherInvitationTitle": "Delete Teacher Invitation",
+      "deleteTeacherInvitationModalWarning": "You are about to delete a teacher invitation, this action cannot be undone.",
+      "deleteTeacherInvitationModalMessage": "The teacher invitation have been successfully deleted."
+    },
+    "sidebar": {
+      "students": "Students",
+      "teachers": "Teachers",
+      "groups": "Groups"
+    },
+    "licenseState": {
+      "active": "Active"
+    }
+  },
+  "schoolInvitation": {
+    "title": "You have been invited to",
+    "subtitle": "You were invited to the school with the following account type",
+    "wrongAccountMessagePartOne": "The email of the currently logged in user does not match the invitation email.",
+    "wrongAccountMessagePartTwo": "Logout to create an account with the invitation.",
+    "wrongAccountMessageTwoPartOne": "The email of the invitation matches with an existing account.",
+    "wrongAccountMessageTwoPartTwo": "Login to access to the invitation.",
+    "wrongTokenTypeMessage": "The link that was used does not have the correct format. Request a new invite from a school administrator.",
+    "tokenExpired": "The invite link has expired, talk to a school administrator to get a new invitation",
+    "firstNameRequiredError": "In order to accept the invitation you need to provide a first name.",
+    "lastNameRequiredError": "In order to accept the invitation you need to provide a last name."
+  },
+  "reusable": {
+    "buyNow": "Buy now",
+    "renewNow": "Renew Now",
+    "close": "Close",
+    "invitation": "Invitation",
+    "selectFile": "Select File",
+    "import": "Import",
+    "resend": "Resend",
+    "active": "Active",
+    "expired": "Expired",
+    "cultureTitle": "Language",
+    "countryTitle": "Country",
+    "selectCulture": "Select a Language",
+    "selectCountry": "Select a Country",
+    "chapter": "Chapter",
+    "error": "Error",
+    "unknownError": "An unknown error occurred, try again later.",
+    "success": "Success",
+    "done": "Done",
+    "cancel": "Cancel",
+    "accept": "Accept",
+    "attempt": "Attempt",
+    "attempts": "Attempts",
+    "required": "Required",
+    "finished": "Finished",
+    "unfinished": "Unfinished",
+    "result": "Result",
+    "noTrial": "No trial",
+    "grade": "Grade",
+    "edition": "Edition",
+    "none": "None",
+    "book": "Book",
+    "books": "Books",
+    "next": "Next",
+    "send": "Send",
+    "save": "Save",
+    "delete": "Delete",
+    "add": "Add",
+    "faster": "Faster",
+    "create": "Create",
+    "warning": "Warning",
+    "clearAll": "Clear all",
+    "birthYear": "Birth year",
+    "filters": "Filters",
+    "profile": "Profile",
+    "qrCode": "QR Code",
+    "dayNames": {
+      "1": "Monday",
+      "2": "Tuesday",
+      "3": "Wednesday",
+      "4": "Thursday",
+      "5": "Friday",
+      "6": "Saturday",
+      "7": "Sunday"
+    },
+    "dayShortNames": {
+      "1": "Mon",
+      "2": "Tue",
+      "3": "Wed",
+      "4": "Thu",
+      "5": "Fri",
+      "6": "Sat",
+      "7": "Sun"
+    },
+    "monthNames": {
+      "1": "January",
+      "2": "February",
+      "3": "March",
+      "4": "April",
+      "5": "May",
+      "6": "June",
+      "7": "July",
+      "8": "August",
+      "9": "September",
+      "10": "October",
+      "11": "November",
+      "12": "December"
+    }
+  },
+  "months": {
+    "January": "January",
+    "February": "February",
+    "March": "March",
+    "April": "April",
+    "May": "May",
+    "June": "June",
+    "July": "July",
+    "August": "August",
+    "September": "September",
+    "October": "October",
+    "November": "November",
+    "December": "December"
+  },
+  "settings": {
+    "profileSettings": {
+      "profile": "Profile",
+      "myProfile": "My Profile",
+      "profileDesc": "Here you can manage majority of the settings surrounding your account.",
+      "myInfo": "My information",
+      "infoDesc": "This information is used to contact you and authenticate your account.",
+      "language": "Language & Region",
+      "languageDesc": "You can change your language settings. If you need to change regions you will have to contact us via email.",
+      "delete": "Delete",
+      "deleteDesc": "Deleting account is permanent and it deletes all child accounts associated with it and cancels all subscriptions. This action cannot be undone."
+    },
+    "passwordSettings": {
+      "password": "Password",
+      "passwordDesc": "Below you can change your password and other authentication methods when they are added.",
+      "changePassword": "Change Password",
+      "changeDesc": "Input your current password and confirm it with your new password."
+    },
+    "newBillingSettings": {
+      "billing": "Billing",
+      "billingDesc": "Here you can see the billing status for student accounts. In order to get your billing history for each account go to manage billing for that account."
+    },
+    "accountSettings": {
+      "accounts": "Account",
+      "accountsDesc": "You can edit the information for the selecte dstudent account such as name, language and other related information.",
+      "accountInfo": "Account Information",
+      "language": "Language & Country"
+    },
+    "authSettings": {
+      "auth": "Authentication",
+      "authDesc": "Below you can activate and use different authentication methods for students. You can still login through your own account. This is an additional authentication mechanism for student accounts only.",
+      "qrCode": "QR Code Authentication",
+      "qrCodeDesc": "You can use a QR code so that the child can login to their account in the Evolytes game. The QR Code works like a password so if a third party gets ahold of it you can generate a new one and invalidate the old code. You can print the code and keep where your child has easy access to it",
+      "enable": "Enable",
+      "newCode": "New Code",
+      "download": "Download",
+      "pinConfirmation": "Pin Confirmation",
+      "pinDesc": "If you have multiple child accounts you can add a four number PIN so that children or students cannot switch between accounts. In order to get into the selected account the child or student will have to use their PIN.",
+      "pin": "PIN",
+      "email": "Email & Password Authentication",
+      "emailDesc": "If your child has an email account you can create an email and password, you will need to confirm the email so that your child can login with it into the game."
+    },
+    "userSettingsTitle": "Your Settings",
+    "accountSettingsTitle": "Account Settings",
+    "billingSettingsTitle": "Billing Settings",
+    "tcSettingsTitle": "Terms and Conditions"
+  },
+  "userSettings": {
+    "userSectionTitle": "Your Information",
+    "emailTitle": "Email",
+    "emailPlaceholder": "email@email.com",
+    "firstNameTitle": "First Name",
+    "lastNameTitle": "Last Name",
+    "phoneTitle": "Phone",
+    "changePasswordSectionTitle": "Change Password",
+    "currentPasswordTitle": "Current Password",
+    "newPasswordTitle": "New Password",
+    "newPasswordConfirmTitle": "Confirm New Password",
+    "saveButtonTitle": "Save"
+  },
+  "studentSettings": {
+    "studentInformationTitle": "Account Information",
+    "firstName": "First Name",
+    "middleName": "Middle Name",
+    "lastName": "Last Name",
+    "birthDate": "Birth Date",
+    "datePlaceholder": "dd/mm/yyyy",
+    "schoolType": "School Type"
+  },
+  "billingSettings": {
+    "title": "Subscription Status",
+    "manageSubscription": "Manage Subscription",
+    "statusTitle": "Status",
+    "renewNow": "Renew Now",
+    "renewalDateTitle": "Renewal Date",
+    "renewalPriceTitle": "Renewal Price",
+    "cardNumberTitle": "Card Number",
+    "cardType": "Card Type",
+    "billingInformationTitle": "Billing Information",
+    "invoiceTitle": "Invoices",
+    "viewTitle": "View"
+  },
+  "schoolTypes": {
+    "public": "Public School",
+    "private": "Private School",
+    "home": "Home School"
+  },
+  "schoolAccessTypes": {
+    "admin": "Administrator",
+    "teacher": "Teacher"
+  },
+  "tc": {
+    "title": "Terms and Conditions"
+  },
+  "privacy": {
+    "title": "Privacy Policy"
+  },
+  "categories": {
+    "none": "None",
+    "addition": "Addition",
+    "count": "Count",
+    "subtraction": "Subtraction",
+    "multiplication": "Multiplication",
+    "sizeComparison": "Sizes",
+    "numberPatterns": "Number Patterns",
+    "imagePatterns": "Image Patterns",
+    "shapes": "Shapes",
+    "placeValue": "Place Value"
+  },
+  "answerTypes": {
+    "none": "None",
+    "input": "Input",
+    "multipleChoice": "Multiple Choice"
+  },
+  "answerCorrect": {
+    "none": "None",
+    "correct": "Correct",
+    "wrong": "Wrong"
+  },
+  "subscriptionStatuses": {
+    "FirstBillingFailed": "Billing Failed",
+    "BillingFailed": "Billing Failed",
+    "Active": "Active",
+    "NotSetup": "Not Setup",
+    "Test": "Test"
+  },
+  "cbSubscriptionStatuses": {
+    "active": "Active",
+    "future": "Future Subscription",
+    "in_trial": "Trial",
+    "paused": "Paused",
+    "cancelled": "Cancelled",
+    "not_subscribed": "Not Subscribed"
+  },
+  "videosPage": {
+    "title": "Support videos"
+  },
+  "platformVideos": [
+    {
+      "name": "platformInf",
+      "title": "The Monitor",
+      "iconLink": "./assets/sidebar/dashboard-overview-2.svg",
+      "subCategories": [
+        {
+          "subCatTitle": "Log in & Students",
+          "videos": [
+            {
+              "urlId": "671067510",
+              "videoTitle": "Log in",
+              "videoDescription": "Learn how we log in and switch between students"
+            }
+          ]
+        },
+        {
+          "subCatTitle": "The Monitor",
+          "videos": [
+            {
+              "urlId": "671100653",
+              "videoTitle": "The Monitor",
+              "videoDescription": "Learn about Evolytes’ Monitor.  How we check a students status and study answering patterns."
+            }
+          ]
+        },
+        {
+          "subCatTitle": "Settings",
+          "videos": [
+            {
+              "urlId": "671100318",
+              "videoTitle": "Settings",
+              "videoDescription": "Learn about account settings, i.e. how to change email and password."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "platformGame",
+      "title": "The Evolytes game",
+      "iconLink": "./assets/sidebar/dashboard-overview-2.svg",
+      "subCategories": [
+        {
+          "subCatTitle": "Log in",
+          "videos": [
+            {
+              "urlId": "672715442",
+              "videoTitle": "Log in",
+              "videoDescription": "Learn how to log into the game and pick/switch students."
+            }
+          ]
+        },
+        {
+          "subCatTitle": "Buttons and User Interface",
+          "videos": [
+            {
+              "urlId": "672716320",
+              "videoTitle": "Main user interface",
+              "videoDescription": "Learn about the 4 main user interface buttons of the Evolytes game."
+            }
+          ]
+        },
+        {
+          "subCatTitle": "Matches & Questions",
+          "videos": [
+            {
+              "urlId": "672715537",
+              "videoTitle": "How matches work",
+              "videoDescription": "Learn how matches work in the Evolytes game."
+            }
+          ]
+        },
+        {
+          "subCatTitle": "Collecting Evolytes",
+          "videos": [
+            {
+              "urlId": "672715828",
+              "videoTitle": "Crystal Catching",
+              "videoDescription": "Learn how to use the crystals to collect new Evolytes."
+            }
+          ]
+        },
+        {
+          "subCatTitle": "Maps and Missions",
+          "videos": [
+            {
+              "urlId": "672715723",
+              "videoTitle": "Island 1",
+              "videoDescription": "Learn about the layout of island 1 and where important things are located."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "adminVideos": [
+    {
+      "name": "schoolAdmin",
+      "title": "Admin system",
+      "iconLink": "./assets/school-admin/school-gray.svg",
+      "subCategories": [
+        {
+          "subCatTitle": "Admin",
+          "videos": [
+            {
+              "urlId": "671100995",
+              "videoTitle": "Administration system",
+              "videoDescription": "Learn how we use the admin system to control teachers and students in your school."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": {
+    "LicenseLimitReached": "You have reached your license limit. Delete a student or buy extra licenses."
+  }
+}

@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://www.evolytes.com/home/en-GB/landing</loc>
+    <xhtml:link
+      rel="alternate"
+      hreflang="de"
+      href="https://www.evolytes.com/home/de-DE/landing"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="https://www.evolytes.com/home/fr-FR/landing"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="is"
+      href="https://www.evolytes.com/home/is-IS/landing"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="lt"
+      href="https://www.evolytes.com/home/lt-LT/landing"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="no"
+      href="https://www.evolytes.com/home/nb-NO/landing"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="se"
+      href="https://www.evolytes.com/home/sv-SE/landing"/>
+
+    <image:image>
+      <image:loc>https://www.evolytes.com/assets/newWebsite/HomeChangeSectionGame.png</image:loc>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://www.evolytes.com/assets/newWebsite/monitor/dashboardTop-enGB.jpg</image:loc>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://www.evolytes.com/assets/books/spreads/bookOne/enGB/Chapter1.png</image:loc>
+    </image:image>
+
+    <!--
+    <video:video>
+      <video:title>Evolytes Universe</video:title>
+      <video:player_loc>https://player.vimeo.com/video/479310723?badge=0&amp;amp;muted=1&amp;loop=1&amp;autopause=0&amp;amp;player_id=0&amp;amp;app_id=58479</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+
+    <video:video>
+      <video:title>How it works</video:title>
+      <video:player_loc>https://player.vimeo.com/video/584880863?badge=0&amp;amp;muted=1&amp;loop=1&amp;autopause=0&amp;amp;player_id=0&amp;amp;app_id=58479</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+    -->
+
+    <lastmod>2022-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+
+  </url>
+  <url>
+    <loc>https://www.evolytes.com/home/fr-FR/landing</loc>
+    <xhtml:link
+      rel="alternate"
+      hreflang="de"
+      href="https://www.evolytes.com/home/de-DE/landing"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="https://www.evolytes.com/home/en-GB/landing"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="is"
+      href="https://www.evolytes.com/home/is-IS/landing"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="lt"
+      href="https://www.evolytes.com/home/lt-LT/landing"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="no"
+      href="https://www.evolytes.com/home/nb-NO/landing"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="se"
+      href="https://www.evolytes.com/home/sv-SE/landing"/>
+
+    <image:image>
+      <image:loc>https://www.evolytes.com/assets/newWebsite/HomeChangeSectionGame.png</image:loc>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://www.evolytes.com/assets/newWebsite/monitor/dashboardTop-frFR.jpg</image:loc>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://www.evolytes.com/assets/books/spreads/bookOne/enGB/Chapter1.png</image:loc>
+    </image:image>
+
+    <!--
+    <video:video>
+      <video:title>L'univers Evolytes</video:title>
+      <video:player_loc>https://player.vimeo.com/video/479310723?badge=0&amp;amp;muted=1&amp;loop=1&amp;autopause=0&amp;amp;player_id=0&amp;amp;app_id=58479</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+
+    <video:video>
+      <video:title>Comment fonctionne Evolytes</video:title>
+      <video:player_loc>https://player.vimeo.com/video/584880863?badge=0&amp;amp;muted=1&amp;loop=1&amp;autopause=0&amp;amp;player_id=0&amp;amp;app_id=58479</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+    -->
+
+    <lastmod>2022-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+
+  </url>
+  <url>
+    <loc>https://www.evolytes.com/home/is-IS/landing</loc>
+    <xhtml:link
+      rel="alternate"
+      hreflang="de"
+      href="https://www.evolytes.com/home/de-DE/landing"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://www.evolytes.com/home/en-GB/landing"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="https://www.evolytes.com/home/fr-FR/landing"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="lt"
+      href="https://www.evolytes.com/home/lt-LT/landing"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="no"
+      href="https://www.evolytes.com/home/nb-NO/landing"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="se"
+      href="https://www.evolytes.com/home/sv-SE/landing"/>
+
+    <image:image>
+      <image:loc>https://www.evolytes.com/assets/newWebsite/HomeChangeSectionGame.png</image:loc>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://www.evolytes.com/assets/newWebsite/monitor/dashboardTop-isIS.jpg</image:loc>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://www.evolytes.com/assets/books/spreads/bookOne/isIS/Chapter1.png</image:loc>
+    </image:image>
+
+    <!--
+    <video:video>
+      <video:title>Evolytes ævintýraheimurinn</video:title>
+      <video:player_loc>https://player.vimeo.com/video/479310723?badge=0&amp;amp;muted=1&amp;loop=1&amp;autopause=0&amp;amp;player_id=0&amp;amp;app_id=58479</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+
+    <video:video>
+      <video:title>Hvernig virkar Evolytes?</video:title>
+      <video:player_loc>https://player.vimeo.com/video/584880863?badge=0&amp;amp;muted=1&amp;loop=1&amp;autopause=0&amp;amp;player_id=0&amp;amp;app_id=58479</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+    -->
+    <lastmod>2022-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+
+  </url>
+  <url>
+    <loc>https://www.evolytes.com/home/lt-LT/landing</loc>
+    <xhtml:link
+      rel="alternate"
+      hreflang="de"
+      href="https://www.evolytes.com/home/de-DE/landing"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://www.evolytes.com/home/en-GB/landing"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="https://www.evolytes.com/home/fr-FR/landing"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="is"
+      href="https://www.evolytes.com/home/is-IS/landing"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="no"
+      href="https://www.evolytes.com/home/nb-NO/landing"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="se"
+      href="https://www.evolytes.com/home/sv-SE/landing"/>
+
+    <image:image>
+      <image:loc>https://www.evolytes.com/assets/newWebsite/HomeChangeSectionGame.png</image:loc>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://www.evolytes.com/assets/newWebsite/monitor/dashboardTop-frFR.jpg</image:loc>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://www.evolytes.com/assets/books/spreads/bookOne/enGB/Chapter1.png</image:loc>
+    </image:image>
+
+    <!--
+    <video:video>
+      <video:title>L'univers Evolytes</video:title>
+      <video:player_loc>https://player.vimeo.com/video/479310723?badge=0&amp;amp;muted=1&amp;loop=1&amp;autopause=0&amp;amp;player_id=0&amp;amp;app_id=58479</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+
+    <video:video>
+      <video:title>Comment fonctionne Evolytes</video:title>
+      <video:player_loc>https://player.vimeo.com/video/584880863?badge=0&amp;amp;muted=1&amp;loop=1&amp;autopause=0&amp;amp;player_id=0&amp;amp;app_id=58479</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+    -->
+
+    <lastmod>2022-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+
+  </url>
+  <url>
+    <loc>https://www.evolytes.com/home/nb-NO/landing</loc>
+    <xhtml:link
+      rel="alternate"
+      hreflang="de"
+      href="https://www.evolytes.com/home/de-DE/landing"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://www.evolytes.com/home/en-GB/landing"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="https://www.evolytes.com/home/fr-FR/landing"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="is"
+      href="https://www.evolytes.com/home/is-IS/landing"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="lt"
+      href="https://www.evolytes.com/home/lt-LT/landing"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="se"
+      href="https://www.evolytes.com/home/sv-SE/landing"/>
+
+    <image:image>
+      <image:loc>https://www.evolytes.com/assets/newWebsite/HomeChangeSectionGame.png</image:loc>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://www.evolytes.com/assets/newWebsite/monitor/dashboardTop-frFR.jpg</image:loc>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://www.evolytes.com/assets/books/spreads/bookOne/enGB/Chapter1.png</image:loc>
+    </image:image>
+
+    <!--
+    <video:video>
+      <video:title>L'univers Evolytes</video:title>
+      <video:player_loc>https://player.vimeo.com/video/479310723?badge=0&amp;amp;muted=1&amp;loop=1&amp;autopause=0&amp;amp;player_id=0&amp;amp;app_id=58479</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+
+    <video:video>
+      <video:title>Comment fonctionne Evolytes</video:title>
+      <video:player_loc>https://player.vimeo.com/video/584880863?badge=0&amp;amp;muted=1&amp;loop=1&amp;autopause=0&amp;amp;player_id=0&amp;amp;app_id=58479</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+    -->
+
+    <lastmod>2022-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+
+  </url>
+  <url>
+    <loc>https://www.evolytes.com/home/sv-SE/landing</loc>
+    <xhtml:link
+      rel="alternate"
+      hreflang="de"
+      href="https://www.evolytes.com/home/de-DE/landing"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://www.evolytes.com/home/en-GB/landing"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="https://www.evolytes.com/home/fr-FR/landing"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="is"
+      href="https://www.evolytes.com/home/is-IS/landing"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="lt"
+      href="https://www.evolytes.com/home/lt-LT/landing"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="no"
+      href="https://www.evolytes.com/home/nb-NO/landing"/>
+
+    <image:image>
+      <image:loc>https://www.evolytes.com/assets/newWebsite/HomeChangeSectionGame.png</image:loc>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://www.evolytes.com/assets/newWebsite/monitor/dashboardTop-frFR.jpg</image:loc>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://www.evolytes.com/assets/books/spreads/bookOne/enGB/Chapter1.png</image:loc>
+    </image:image>
+
+    <!--
+    <video:video>
+      <video:title>L'univers Evolytes</video:title>
+      <video:player_loc>https://player.vimeo.com/video/479310723?badge=0&amp;amp;muted=1&amp;loop=1&amp;autopause=0&amp;amp;player_id=0&amp;amp;app_id=58479</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+
+    <video:video>
+      <video:title>Comment fonctionne Evolytes</video:title>
+      <video:player_loc>https://player.vimeo.com/video/584880863?badge=0&amp;amp;muted=1&amp;loop=1&amp;autopause=0&amp;amp;player_id=0&amp;amp;app_id=58479</video:player_loc>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+    -->
+
+    <lastmod>2022-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+
+  </url>
+  
+
+
+  <url>
+
+    <loc>https://www.evolytes.com/selectCountry</loc>
+    <lastmod>2022-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.1</priority>
+
+  </url>
+
+</urlset>

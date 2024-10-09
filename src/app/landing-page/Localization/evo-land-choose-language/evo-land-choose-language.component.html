@@ -1,0 +1,31 @@
+<app-evo-decoration-background-signup></app-evo-decoration-background-signup>
+<div style="height: 100%; width: 100%;">
+  <div style="height: 100px" fxLayoutAlign="center center">
+    <img src="../../../../assets/evolytes-vector.svg" style="width: 240px; height: 80px; object-fit: contain;">
+  </div>
+  <div style="height: 10px"></div>
+  <p class="boldMont font22px blackColor noMargin" style="text-align: center;">Choose Language</p>
+  <div style="height: 20px"></div>
+  <div class="defaultScrollBar" style="height: calc(100% - 157px);" fxLayoutAlign="center start">
+
+    <div fxFlex="90" fxFlex.sm="400px" fxFlex.gt-sm="600px">
+
+      <div *ngFor="let el of list">
+        <div class="defaultShadow bgWhiteHoverColor"
+             style="height: 42px; cursor: pointer; border-radius: 4px;"
+             (click)="onLanguageSelected(el.key)">
+          <div fxFlex="1px"></div>
+          <div fxFlex="60px" fxLayoutAlign="center center">
+            <img [src]="el.iconURL" style="width: 30px; height: 30px; object-fit: contain">
+          </div>
+          <div fxFlex fxLayoutAlign="start center">
+            <p class="blackColor semiBoldMont font14px noMargin">{{el.value}}</p>
+          </div>
+          <div fxFlex="10px"></div>
+        </div>
+        <div style="height: 10px;"></div>
+      </div>
+
+    </div>
+  </div>
+</div>

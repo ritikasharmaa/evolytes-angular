@@ -1,0 +1,42 @@
+<div *ngIf="showQuestion()">
+  <div style="height: 50px;" fxLayoutAlign="center center">
+    <p class="semiBoldMont font18px blackColor noMargin">[{{question.model.firstRange.getRange()}}] *
+      [{{question.model.secondRange.getRange()}}] = {{getOutcomeString()}}</p>
+  </div>
+  <div>
+    <div fxFlex="20px"></div>
+    <div fxFlex>
+      <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+        <div fxFlex>
+          <app-evo-reusable-range [title]="'First Range'"
+                                  [range]="question.model.firstRange">
+          </app-evo-reusable-range>
+        </div>
+        <div fxFlex="20px" fxFlex.xs="10px"></div>
+        <div fxFlex>
+          <app-evo-reusable-range [title]="'Second Range'"
+                                  [range]="question.model.secondRange">
+          </app-evo-reusable-range>
+        </div>
+      </div>
+      <div style="height: 20px" ngStyle.lt-md="height: 10px"></div>
+      <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+        <div fxFlex>
+          <app-evo-input [title]="'Number of Answers'"
+                         [inputType]="'number'"
+                         [value]="question.model.numAnswers"
+                         (inputChangedEvent)="question.model.numAnswers = $event">
+          </app-evo-input>
+        </div>
+        <div fxFlex="20px" fxFlex.xs="10px"></div>
+        <div fxFlex>
+          <app-evo-reusable-range [title]="'Possible Answers'"
+                                  [range]="question.model.possibleAnswers">
+          </app-evo-reusable-range>
+        </div>
+      </div>
+      <div style="height: 20px" ngStyle.lt-md="height: 10px"></div>
+    </div>
+    <div fxFlex="20px"></div>
+  </div>
+</div>

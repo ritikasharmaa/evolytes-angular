@@ -1,0 +1,40 @@
+<div>
+  <p class="font16px blackColor noMargin boldMont"
+     style="line-height: 44px;">
+    {{ 'settings.newBillingSettings.billing' | translate }}
+  </p>
+  <p class="semiBoldMont noMargin font14px lightGrayColor" style="width:50%;">
+    {{ 'settings.newBillingSettings.billingDesc' | translate }}
+  </p>
+  <div style="height: 30px;"></div>
+  <div *ngFor="let student of students">
+    <div class="line"></div>
+    <div style="height: 15px;"></div>
+    <div fxLayout="row" fxLayoutAlign="start center">
+      <div fxFlex="10px"></div>
+      <img [src]="student.evolytesProfile.profileImage()"
+           style="width: 36px; height: 36px; object-fit: contain; border-radius: 18px; border-style: solid; border-width: 2px;"
+           [ngStyle]="{ borderColor: student.evolytesProfile.profileOutlineColor() }">
+      <div fxFlex="15px"></div>
+      <div fxLayout="column" fxFlex="200px">
+        <p class="semiBoldMont blackColor font12px noMargin">
+          {{ student.fullName() }}
+        </p>
+        <p class="semiBoldMont font12px noMargin"
+           [ngClass]="{ greenColor: student.isBillingActive(),
+               redColor: student.isBillingCancelled(),
+               yellowColor: student.isBillingPaused() }">
+          {{ student.studentStatus() | translate }}
+        </p>
+      </div>
+      <div fxFlex="50"></div>
+      <app-manage-settings-button [student]="student"></app-manage-settings-button>
+      <div fxFlex="10px"></div>
+    </div>
+    <div style="height: 15px;"></div>
+  </div>
+  <div class="line"></div>
+
+  <div style="height: 65px;">
+  </div>
+</div>

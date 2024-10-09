@@ -1,0 +1,67 @@
+<div *ngIf="showQuestion()">
+  <div style="height: 50px;" fxLayoutAlign="center center">
+    <p class="semiBoldMont font18px blackColor noMargin"
+       style="text-align: center">
+      ({{ question.model.firstRange.getRange() }}) {{ question.model.shape }} + {{ question.model.otherShapes }}</p>
+  </div>
+  <div>
+    <div fxFlex="20px"></div>
+    <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+      <div fxFlex>
+        <app-evo-reusable-range [title]="'Range'"
+                                [range]="question.model.firstRange">
+        </app-evo-reusable-range>
+        <div style="height: 20px;"></div>
+        <app-evo-dropdown [title]="'Shape'"
+                          [list]="QuestionModel.ShapeTypes.dropdownList()"
+                          [currentValue]="question.model.shape"
+                          (valueChangedEvent)="question.model.shape = $event">
+        </app-evo-dropdown>
+        <div style="height: 20px"></div>
+        <app-evo-input [title]="'Num Answers'"
+                       [value]="question.model.numAnswers"
+                       (inputChangedEvent)="question.model.numAnswers = $event">
+        </app-evo-input>
+      </div>
+      <div fxFlex="20px" fxFlex.xs="10px"></div>
+      <div fxFlex>
+        <app-evo-reusable-range [title]="'Possible Answers'"
+                                [range]="question.model.possibleAnswers"></app-evo-reusable-range>
+        <div style="height: 20px;"></div>
+        <p class="semiBoldMont grayColor noMargin font12px">Other Shapes</p>
+        <div style="height: 6px;"></div>
+        <div class="noScrollBar" style="height: 216px; overflow-y: scroll;">
+          <div style="height: 5px;"></div>
+          <div *ngFor="let shape of question.model.otherShapes; let i = index;">
+            <div fxLayoutAlign="center start">
+              <div fxFlex="95" class="defaultShadow" style="height: 42px; border-radius: 4px;">
+                <div fxFlex="10px"></div>
+                <div fxFlex fxLayoutAlign="start center">
+                  <p class="semiBoldMont blackColor font14px noMargin">{{shape}}</p>
+                </div>
+                <div fxFlex="30px" fxLayoutAlign="center center">
+                  <div class="bgRedHoverColor" style="width: 30px; height: 30px; border-radius: 4px; cursor: pointer;"
+                       (click)="removeShape(i)" fxLayoutAlign="center center">
+                    <p class="semiBoldMont font18px whiteColor noMargin">x</p>
+                  </div>
+                </div>
+                <div fxFlex="10px"></div>
+              </div>
+            </div>
+            <div style="height: 10px;"></div>
+          </div>
+          <div fxLayoutAlign="center start">
+            <button class="defaultShadow greenButton semiBoldMont font12px whiteColor"
+                    fxFlex="95"
+                    style="height: 42px;"
+                    (click)="showSelector()">Add Shape
+            </button>
+          </div>
+          <div style="height: 5px;"></div>
+        </div>
+      </div>
+    </div>
+    <div fxFlex="20px"></div>
+  </div>
+  <div style="height: 20px;"></div>
+</div>

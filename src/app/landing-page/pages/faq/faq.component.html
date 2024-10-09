@@ -1,0 +1,76 @@
+<app-land2-nav-header [hidden]="hidden" (onBurgerClicked)="setHidden()"></app-land2-nav-header>
+
+<div appEgg class="landcontent defaultScrollBar scrollBarBlueThumb">
+
+  <!-- To adapt with the burger menu of the navbarre -->
+  <div [ngClass]="{burgerMenu: !hidden}"></div>
+
+  <!-- Introduction --->
+  <div class="whiteBg" fxLayoutAlign="center center" style="padding-bottom: 50px; padding-top: 50px">
+
+    <div style="width: 80%">
+      <h1 class="boldMont noMargin blackColor font30px"
+          style="text-align: center">{{'lp2.faq.title' | translate}}</h1>
+      <div style="height: 20px"></div>
+      <div fxLayoutAlign="center center">
+        <h1 class="regularMont noMargin grayColor font20px"
+            style="text-align: center; max-width: 900px; ">{{'lp2.faq.subtitle' | translate}}</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q & A --->
+  <div class="whiteBg" fxLayoutAlign="center center">
+
+    <div fxFlex="90" fxFlex.gt-md="1000px" fxFlex.md="900px">
+      <div *ngFor="let d of data">
+      <button class="accordion mediumMont blackColor font16px">{{d.question | translate }}</button>
+      <div class="panel regularMont grayColor font16px">
+        <p style="white-space: pre-wrap;">{{d.answer | translate }}</p>
+      </div>
+
+      <div style="height: 10px"></div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <!-- Buttons --->
+  <div fxLayout="row" fxLayoutAlign.gt-xs="center start"
+       fxLayout.xs="column" fxLayoutAlign.xs="center center" style="padding-bottom: 50px; padding-top: 50px">
+    <button class="greenButton" style="height: 80px; width: 140px;" (click)="goContactUs()">
+      <p
+        class="semiBoldMont whiteColor font14px noMargin"> {{ 'lp2.footer.contactUs' | translate }}</p>
+    </button>
+
+
+
+    <!-- TODO put back these buttons (manual & video, help center) with the redirection -->
+    <!--
+       <div fxFlex="50px" fxFlex.gt-md="90px" style="height: 40px;"></div>
+
+       <button class="blueButton" style="height: 80px; width: 140px;">
+         <p fxLayoutAlign="center center">
+           <span fxFlex="60">
+             <span
+               class="semiBoldMont whiteColor font14px noMargin"> {{ 'lp2.faq.ManualsButton' | translate }}
+             </span>
+           </span>
+         </p>
+       </button>
+
+       <div fxFlex="50px" fxFlex.gt-md="90px" style="height: 40px;"></div>
+
+       <button class="purpleButton" style="height: 80px; width: 140px;">
+         <p
+           class="semiBoldMont whiteColor font14px noMargin"> {{ 'lp2.faq.HelpButton' | translate }}</p>
+       </button>
+       -->
+
+    <div style="height: 40px"></div>
+  </div>
+
+  <app-footer></app-footer>
+</div>
+

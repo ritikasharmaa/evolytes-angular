@@ -1,0 +1,127 @@
+<div style="width: 100%;">
+  <div class="whiteBg defaultShadow" style="width: 100%; border-radius: 8px;">
+    <div style="width: 100%;">
+      <div style="height: 20px;"></div>
+      <!-- Selector -->
+      <div class="smallShadow" style="width: 80%; margin: 0 auto; border-radius: 8px;">
+        <div fxFlex fxLayoutAlign="center start">
+          <div [ngClass]="{
+                blueUnderline: this.state === ProfileStates.profile,
+                noUnderlineLight: this.state !== ProfileStates.profile
+                }"
+               (click)="state = ProfileStates.profile">
+            <div style="height: 10px;"></div>
+            <p class="boldMont noMargin font14px lightGrayColor centerAlign pointer">
+              {{ 'reusable.profile' | translate }}
+            </p>
+            <div style="height: 10px;"></div>
+          </div>
+        </div>
+        <div fxFlex fxLayoutAlign="center start">
+          <div [ngClass]="{
+                blueUnderline: this.state === ProfileStates.qrcode,
+                noUnderlineLight: this.state !== ProfileStates.qrcode
+                }"
+               (click)="state = ProfileStates.qrcode">
+            <div style="height: 10px;"></div>
+            <p class="boldMont noMargin font14px lightGrayColor centerAlign pointer">
+              {{ 'reusable.qrCode' | translate }}
+            </p>
+            <div style="height: 10px;"></div>
+          </div>
+        </div>
+      </div>
+      <div style="height: 20px;"></div>
+      <div style="height: 375px;"
+           fxLayout="column"
+           fxLayoutAlign="center center"
+           *ngIf="state === ProfileStates.profile">
+        <img [src]="currentStudent().evolytesProfile.profileImage()"
+             style="width: 120px; height: 120px; object-fit: contain; border-radius: 77px; border-style: solid; border-width: 2px;"
+             [ngStyle]="{ borderColor: currentStudent().evolytesProfile.profileOutlineColor() }">
+        <div style="height: 15px;"></div>
+        <p class="semiBoldMont font12px grayColor noMargin">
+          {{currentStudent().ageYears()}} {{'dashboard.age' | translate}}
+        </p>
+        <p class="semiBoldMont font12px grayColor noMargin">
+          {{fullYear()}}
+        </p>
+        <div style="height: 10px;"></div>
+        <p fxFlex class="boldMont font16px noMargin"
+           style="max-height: 30px;">
+          {{ currentStudent().fullName() }}
+        </p>
+        <div style="height: 25px;"></div>
+        <div style="height: 100px; width: 90%;">
+          <div class="defaultShadow" style="border-radius: 4px;" fxFlex="45">
+            <div style="height: 10px;"></div>
+            <p class="boldMont font12px grayColor centerAlign noMargin">{{ 'dashboard.timeTitle' | translate }}</p>
+            <div style="height: 20px;"></div>
+            <p class="boldMont font18px blackColor centerAlign noMargin">{{ getTimeSpentString() }}</p>
+          </div>
+          <div fxFlex></div>
+          <div class="defaultShadow" style="border-radius: 4px;" fxFlex="45">
+            <div style="height: 10px;"></div>
+            <p class="boldMont font12px grayColor centerAlign noMargin">{{ 'dashboard.answersTitle' | translate }}</p>
+            <div style="height: 20px;"></div>
+            <p class="boldMont font18px blackColor centerAlign noMargin">{{ getNumAnswersString() }}</p>
+          </div>
+        </div>
+        <!--
+        <div class="defaultShadow" style="width: 90%; border-radius: 8px; height: 110px;">
+          <div fxFlex="5"></div>
+          <div fxFlex>
+            <div style="height: 10px;"></div>
+            <p class="semiBoldMont font10px grayColor noMargin">{{ 'dashboard.objective' | translate}}</p>
+            <div style="height: 70px;" fxLayoutAlign="start center">
+              <p class="boldMont font16px noMargin">{{ 'dashboard.selectObjective' | translate}}</p>
+            </div>
+          </div>
+        </div>
+        -->
+        <div style="height: 25px;"></div>
+      </div>
+      <div style="height: 375px;"
+           fxLayout="column"
+           fxLayoutAlign="start center"
+           *ngIf="state === ProfileStates.qrcode">
+        <div>
+          <p class="font14px lightGrayColor noMargin boldMont">
+            {{ 'settings.authSettings.enable' | translate }}
+          </p>
+          <div style="height: 10px"></div>
+          <app-toggle-switch [ngModel]="isQRCodeEnabled()"
+                             (valueChanged)="onQRCodeEnable()">
+          </app-toggle-switch>
+        </div>
+        <div style="height: 20px;"></div>
+        <div class="smallShadow" style="width: 160px; height: 160px; border-radius: 4px;"
+             fxLayoutAlign="center center">
+          <div class="ring" *ngIf="loading else loaded"></div>
+          <ng-template #loaded>
+            <qrcode [qrdata]="QRCodeData()" size="140" *ngIf="hasQRCode()"></qrcode>
+          </ng-template>
+        </div>
+        <div style="height: 20px;"></div>
+        <button class="greenButton semiBoldMont whiteColor font14px noMargin"
+                style="width: 160px; height: 40px;"
+                (click)="newCode()">
+          {{ 'settings.authSettings.newCode' | translate }}
+        </button>
+        <div style="height: 10px" *ngIf="hasQRCode()"></div>
+        <button class="blueButton semiBoldMont whiteColor font14px noMargin"
+                ngStyle.xs="width: 100%;"
+                style="width: 160px; height: 40px;"
+                (click)="saveAsImage(parent)"
+                *ngIf="hasQRCode()">
+          {{ 'settings.authSettings.download' | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Loaded in dynamically -->
+<div style="display: none;">
+  <qrcode [qrdata]="QRCodeData()" [size]="512" #qrimage></qrcode>
+</div>

@@ -1,0 +1,91 @@
+<div class="defaultScrollBar scrollBarGreenThumb" style="height: calc(100% - 60px); overflow-y: scroll;"
+     ngStyle.xs="overflow-y: visible;">
+  <div style="height: 30px;"></div>
+  <div>
+    <div style="height: 60px;" fxLayoutAlign="center start">
+      <app-evo-dropdown fxFlex="80"
+                        title="{{ 'answers.dateFilter' | translate }}"
+                        [titleColor]="'#28A745'"
+                        [list]="dateFilterList"
+                        [currentValue]="currentDateFilter"
+                        (valueChangedEvent)="updateDateFilter($event)">
+      </app-evo-dropdown>
+    </div>
+    <div *ngIf="showStartDate()">
+      <div style="height: 15px"></div>
+      <div fxLayoutAlign="center start">
+        <div fxFlex="80" fxLayoutAlign="end start">
+          <app-evo-input-date fxFlex="90"
+                              title="{{ 'answers.startDate' | translate }}"
+                              [titleColor]="'#28A745'"
+                              [placeholderText]="'dd/mm/yyyy'"
+                              (inputChangedEvent)="updateStartDate($event)">
+          </app-evo-input-date>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="showEndDate()">
+      <div style="height: 15px"></div>
+      <div fxLayoutAlign="center start">
+        <div fxFlex="80" fxLayoutAlign="end start">
+          <app-evo-input-date fxFlex="90"
+                              title="{{ 'answers.endDate' | translate }}"
+                              [titleColor]="'#28A745'"
+                              [placeholderText]="'dd/mm/yyyy'"
+                              (inputChangedEvent)="updateEndDate($event)">
+          </app-evo-input-date>
+        </div>
+      </div>
+    </div>
+    <div style="height: 20px"></div>
+    <div style="height: 60px" fxLayoutAlign="center start">
+      <app-evo-dropdown fxFlex="80"
+                        title="{{ 'answers.category' | translate }}"
+                        [titleColor]="'#009CCC'"
+                        [list]="categoryFilterList"
+                        [currentValue]="currentCategory"
+                        (valueChangedEvent)="updateCurrentCategory($event)">
+      </app-evo-dropdown>
+    </div>
+    <div style="height: 20px"></div>
+    <div style="height: 60px" fxLayoutAlign="center start">
+      <app-evo-dropdown fxFlex="80"
+                        title="{{ 'answers.answer' | translate }}"
+                        [titleColor]="'#9B59B6'"
+                        [list]="isCorrectFilterList"
+                        [currentValue]="currentIsCorrect"
+                        (valueChangedEvent)="updateIsCorrect($event)">
+      </app-evo-dropdown>
+    </div>
+    <div style="height: 20px"></div>
+    <div style="height: 60px" fxLayoutAlign="center start">
+      <app-evo-dropdown fxFlex="80"
+                        title="{{ 'answers.answerType' | translate }}"
+                        [titleColor]="'#F26522'"
+                        [list]="answerTypeFilterList"
+                        [currentValue]="currentAnswerType"
+                        (valueChangedEvent)="updateAnswerType($event)">
+      </app-evo-dropdown>
+    </div>
+    <div style="height: 20px"></div>
+    <div fxLayoutAlign="center start">
+
+    </div>
+  </div>
+</div>
+<div style="height: 60px;" fxLayoutAlign="space-around center">
+  <button fxFlex="35"
+          class="redButton defaultShadow"
+          style="height: 36px;"
+          (click)="clearFilter()"
+          fxLayoutAlign="center center">
+    <p class="semiBoldMont font12px whiteColor noMargin">{{ 'answers.clear' | translate }}</p>
+  </button>
+  <button fxFlex="35"
+          class="greenButton defaultShadow"
+          style="height: 36px;"
+          (click)="updateFilter(); onFilterClicked();"
+          fxLayoutAlign="center center">
+    <p class="semiBoldMont font12px whiteColor noMargin">{{ 'answers.apply' | translate }}</p>
+  </button>
+</div>

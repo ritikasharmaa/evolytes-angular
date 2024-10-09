@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="75px" height="75px" viewBox="0 0 75 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Polygon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.6">
+        <g id="Desktop-HD-Copy-5" transform="translate(-277.000000, -1123.000000)" stroke="#009CCC" stroke-width="5">
+            <g id="Top-part" transform="translate(714.500000, 1197.000000) scale(-1, -1) translate(-714.500000, -1197.000000) translate(-32.000000, 13.000000)">
+                <polygon id="Polygon" transform="translate(1146.455874, 1225.942543) scale(1, -1) rotate(-29.000000) translate(-1146.455874, -1225.942543) " points="1146.45587 1192.9981 1181.09571 1218.16542 1167.86447 1258.88698 1125.04728 1258.88698 1111.81604 1218.16542"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

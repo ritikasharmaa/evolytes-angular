@@ -1,0 +1,422 @@
+<app-land2-nav-header [hidden]="hidden" (onBurgerClicked)="setHidden()"></app-land2-nav-header>
+<div class="landcontent" appEgg>
+
+  <!-- To adapt with the burger menu of the navbarre -->
+  <div [ngClass]="{burgerMenu: !hidden}"></div>
+
+  <!-- introduction section medium and greater -->
+  <div class="whiteBg" fxHide.lt-md="true" fxLayoutAlign="center start" style="padding-bottom: 50px; padding-top: 50px">
+    <div style="max-width: 1200px; width: 90%">
+      <div style="width: 100%" fxLayoutAlign="center center">
+        <div fxFlex="40">
+          <h1 class="boldMont noMargin blackColor font42px">
+            {{'lp2.schools.introduction.title' | translate}}
+          </h1>
+          <div style="height: 10px"></div>
+          <h1 class="regularMont noMargin grayColor font20px" style="text-align: left">
+            {{'lp2.schools.introduction.subtitle' | translate}}
+          </h1>
+          <div style="height: 30px"></div>
+          <div fxLayoutAlign="start start">
+            <button class="greenButton semiBoldMont font16px whiteColor"
+                    (click)="goToContact('lp2.pricing.School.buttonRequestADemo')"
+                    style="height: 50px; width: 200px">
+              {{'lp2.pricing.School.buttonRequestADemo' | translate }}
+            </button>
+            <div fxFlex="5"></div>
+            <button class="greenButton semiBoldMont font16px whiteColor"
+                    (click)="goToContact('lp2.pricing.School.buttonGetAQuote')"
+                    style="height: 50px; width: 200px">
+              {{'lp2.pricing.School.buttonGetAQuote' | translate }}
+            </button>
+          </div>
+        </div>
+        <div fxFlex="5"></div>
+        <div fxFlex="60" fxLayoutAlign="center center">
+          <img src="../../../../assets/newWebsite/HomeIntroImage.png" alt="children learning with Evolytes picture"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- introduction section Mobile-->
+  <div class="whiteBg"
+       fxHide.gt-sm="true"
+       style="padding-bottom: 30px; padding-top: 30px"
+       fxLayoutAlign="center center">
+    <div fxFlex="92">
+      <h1 class="boldMont noMargin blackColor font30px"
+          ngClass.xs="boldMont noMargin blackColor font32px"
+          ngClass.sm="boldMont noMargin blackColor font42px"
+          ngStyle.xs="width: 90%; margin: 0 auto;"
+          ngStyle.sm="width: 80%; margin: 0 auto;"
+          style="text-align: center">
+        {{'lp2.schools.introduction.title' | translate}}
+      </h1>
+      <div style="height: 20px"></div>
+      <img src="../../../../assets/newWebsite/HomeIntroImage.png" style="max-height: 300px;" alt="children learning with Evolytes picture"/>
+      <div style="height: 25px"></div>
+      <h1 class="regularMont noMargin grayColor font18px"
+          ngStyle.xs="width: 90%; margin: 0 auto;"
+          ngStyle.sm="width: 80%; margin: 0 auto;"
+          style="text-align: center;">
+        {{'lp2.schools.introduction.subtitle' | translate}}
+      </h1>
+      <div style="height: 30px"></div>
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <button class="greenButton semiBoldMont font16px whiteColor"
+                (click)="goToContact('lp2.pricing.School.buttonRequestADemo')"
+                style="height: 50px; width: 200px">
+          {{'lp2.pricing.School.buttonRequestADemo' | translate }}
+        </button>
+        <div style="height: 10px"></div>
+        <button class="greenButton semiBoldMont font16px whiteColor"
+                (click)="goToContact('lp2.pricing.School.buttonGetAQuote')"
+                style="height: 50px; width: 200px">
+          {{'lp2.pricing.School.buttonGetAQuote' | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tool section-->
+  <div class="lightGrayBg" fxLayoutAlign="center center" style="padding-bottom: 50px; padding-top: 50px">
+
+    <div fxFlex="90">
+      <div ngStyle.xs="width: 100%;"
+           ngStyle.sm="width: 80%; margin: 0 auto;"
+           ngStyle.gt-sm="width: 760px; margin: 0 auto;">
+        <h1 class="boldMont noMargin blackColor font30px"
+            style="text-align: center">
+          {{'lp2.schools.tool.title' | translate}}
+        </h1>
+        <div style="height: 20px"></div>
+        <h1 class="regularMont noMargin grayColor font18px"
+            style="text-align: center;">
+          {{'lp2.schools.tool.subtitle' | translate}}
+        </h1>
+      </div>
+      <div style="height: 20px"></div>
+      <!-- carousel Computer-->
+      <app-shools-carousel fxHide.lt-sm="true" style="margin: 30px"></app-shools-carousel>
+
+      <!-- pictures mobile-->
+      <div style="height: 20px"></div>
+
+      <div fxHide.gt-xs="true">
+        <div style="position: relative; width: 100%">
+          <img [src]="getTranslatedBookImg()" alt="book picture">
+          <div style="height: 1em"></div>
+          <div style="width: 100%; height: 100%" fxLayoutAlign="start center">
+            <div style="position: relative; width: 25%; height: 100%;" fxLayoutAlign="center center">
+              <img style="width: 100%; height: 30px; z-index: 15; position: relative"
+                   src="../../../../assets/newWebsite/book.svg"/>
+            </div>
+            <div fxFlex="2"></div>
+            <div style="position: relative">
+              <p style="z-index: 15"
+                 class="semiBoldMont noMargin blackColor font18px">
+                {{'lp2.landing.evolytesPart.bookTitle' | translate}}
+              </p>
+              <p style="z-index: 15"
+                 class="mediumMont noMargin blackColor font12px">
+                {{'lp2.landing.evolytesPart.bookDescription' | translate}}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div style="height: 30px"></div>
+        <div style="position: relative; width: 100%">
+          <img [src]="getTranslatedMonitorImg()" alt="monitor picture">
+          <div style="height: 1em"></div>
+          <div style="width: 100%; height: 100%" fxLayoutAlign="start center">
+            <div style="position: relative; width: 25%; height: 100%; margin-right: 10px"
+                 fxLayoutAlign="center center">
+              <img style="width: 100%; height: 30px; z-index: 15; position: relative"
+                   src="../../../../assets/newWebsite/monitor.svg"/>
+            </div>
+            <div fxFlex="2"></div>
+            <div style="position: relative">
+              <p style="z-index: 15"
+                 class="semiBoldMont noMargin blackColor font18px">{{'lp2.landing.evolytesPart.monitorTitle' | translate}}</p>
+              <p style="z-index: 15"
+                 class="mediumMont noMargin blackColor font12px">{{'lp2.schools.tool.monitorDescription' | translate}}</p>
+            </div>
+          </div>
+        </div>
+        <div style="height: 30px"></div>
+        <div style="position: relative; width: 100%">
+          <img [src]="getTranslatedGameImg()" alt="game question picture">
+          <div style="height: 1em"></div>
+          <div style="width: 100%; height: 100%" fxLayoutAlign="start center">
+            <div style="position: relative; width: 25%; height: 100%;" fxLayoutAlign="center center">
+              <img style="width: 100%; height: 30px; z-index: 15; position: relative"
+                   src="../../../../assets/newWebsite/game.svg"/>
+            </div>
+            <div fxFlex="2"></div>
+            <div style="position: relative">
+              <p style="z-index: 15"
+                 class="semiBoldMont noMargin blackColor font18px">{{'lp2.landing.evolytesPart.gameTitle' | translate}}</p>
+              <p style="z-index: 15"
+                 class="mediumMont noMargin blackColor font12px">{{'lp2.schools.tool.gameDescription' | translate}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--End pictures mobile-->
+      <div fxHide.gt-sm="true" style="height: 20px"></div>
+      <div style="width: 100%" fxLayoutAlign="center">
+        <button class="greenButton semiBoldMont font16px whiteColor"
+          (click)="goToContact('lp2.pricing.School.buttonRequestADemo')"
+          style="height: 50px; width: 200px">{{'lp2.pricing.School.buttonRequestADemo' | translate }}</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Engaging students section-->
+  <div class="whiteBg" fxLayoutAlign="center center" style="padding-bottom: 50px; padding-top: 50px">
+
+    <div style="width: 80%; max-width: 900px;">
+      <h1 class="boldMont noMargin blackColor font30px"
+          style="text-align: center">{{'lp2.schools.engaging.title' | translate}}</h1>
+      <div style="height: 20px"></div>
+      <div fxLayoutAlign="center center">
+        <h1 class="regularMont noMargin grayColor font18px"
+            style="text-align: center;">{{'lp2.schools.engaging.subtitle' | translate}}</h1>
+      </div>
+    </div>
+  </div>
+
+  <app-feature-tab [beginByWhite]="1" [featureTab]="featureTab"></app-feature-tab>
+
+  <!-- How section -->
+  <div class="lightGrayBg" fxLayoutAlign="center start">
+    <div fxFlex.gt-md="1300px">
+      <div style="height: 40px;"></div>
+      <div>
+        <h1 class="boldMont noMargin blackColor font30px"
+            style="text-align: center">
+          {{ 'lp2.schools.how.title' | translate }}
+        </h1>
+        <div style="height: 6px"></div>
+        <div fxLayoutAlign="center center" style="width: 100%">
+          <div style="width: 80%; max-width: 900px">
+            <p class="regularMont noMargin font18px grayColor centerAlign">
+              {{ 'lp2.schools.how.subtitle' | translate }}
+            </p>
+          </div>
+
+        </div>
+        <div style="height: 20px"></div>
+      </div>
+      <div style="height: 40px"></div>
+      <div fxLayoutAlign="center start">
+        <div fxFlex.xs="90" fxFlex.sm="90" fxFlex="900px" fxLayout="row" fxLayoutAlign.gt-sm="space-evenly start"
+             fxLayout.lt-md="column" fxLayoutAlign.lt-md="space-evenly center">
+          <!-- left section -->
+          <div style="margin-right: 2em">
+            <!-- icon 1 -->
+            <div>
+              <div fxFlex="40px"></div>
+              <div fxFlex="40px" style="height: 80px" fxLayoutAlign="center center">
+                <img src="../../../../assets/icons/HeadsetIcon.svg" style="object-fit: contain; height: 40px; width: 40px;">
+              </div>
+              <div fxFlex="40px"></div>
+              <div fxFlex fxLayoutAlign="start center">
+                <div>
+                  <p class="semiBoldMont font16px blackColor noMargin"
+                  > {{ 'lp2.pricing.School.rightIcon1.title' | translate }}</p>
+                  <div style="height: 8px"></div>
+                  <p class="regularMont font16px grayColor noMargin"
+                  >{{ 'lp2.pricing.School.rightIcon1.subtitle' | translate }}</p>
+                </div>
+              </div>
+            </div>
+            <div style="height: 20px"></div>
+            <!-- icon 2 -->
+            <div>
+              <div fxFlex="40px"></div>
+              <div fxFlex="40px" style="height: 80px" fxLayoutAlign="center center">
+                <img src="../../../../assets/icons/BooksOrangeIcon.svg" style="object-fit: contain; height: 40px; width: 40px;">
+              </div>
+              <div fxFlex="40px"></div>
+              <div fxFlex fxLayoutAlign="start center">
+                <div>
+                  <p class="semiBoldMont font16px blackColor noMargin"
+                  > {{ 'lp2.pricing.School.rightIcon3.title' | translate }}</p>
+                  <div style="height: 8px"></div>
+                  <p class="regularMont font16px grayColor noMargin"
+                  >{{ 'lp2.pricing.School.rightIcon3.subtitle' | translate }}</p>
+                </div>
+              </div>
+            </div>
+            <div style="height: 20px"></div>
+          </div>
+          <!-- right section -->
+          <div style="margin-right: 2em">
+
+            <!-- icon 1 -->
+            <div>
+              <div fxFlex="40px"></div>
+              <div fxFlex="40px" style="height: 80px" fxLayoutAlign="center center">
+                <img src="../../../../assets/land-icons/projector-content-blue-icon.svg"
+                     style="object-fit: contain; height: 40px; width: 40px;">
+              </div>
+              <div fxFlex="40px"></div>
+              <div fxFlex fxLayoutAlign="start center">
+                <div>
+                  <p class="semiBoldMont font16px blackColor noMargin"
+                  > {{ 'lp2.pricing.School.rightIcon2.title' | translate }}</p>
+                  <div style="height: 8px"></div>
+                  <p class="regularMont font16px grayColor noMargin"
+                  >{{ 'lp2.pricing.School.rightIcon2.subtitle' | translate }}</p>
+                </div>
+              </div>
+            </div>
+            <div style="height: 20px"></div>
+            <!-- icon 2 -->
+            <div>
+              <div fxFlex="40px"></div>
+              <div fxFlex="40px" style="height: 80px" fxLayoutAlign="center center">
+                <img src="../../../../assets/icons/SchoolFreeTrialPurple.svg"
+                     style="object-fit: contain; height: 40px; width: 40px;">
+              </div>
+              <div fxFlex="40px"></div>
+              <div fxFlex fxLayoutAlign="start center">
+                <div>
+                  <p class="semiBoldMont font16px blackColor noMargin"
+                  > {{ 'lp2.schools.how.freeTrial.title' | translate }}</p>
+                  <div style="height: 8px"></div>
+                  <p class="regularMont font16px grayColor noMargin"
+                  >{{ 'lp2.schools.how.freeTrial.subtitle' | translate }}</p>
+                </div>
+              </div>
+            </div>
+            <div style="height: 20px"></div>
+          </div>
+        </div>
+      </div>
+      <div fxLayoutAlign="center center" style="padding-bottom: 50px; padding-top: 50px">
+        <div fxFlex="90">
+          <div fxLayoutAlign="center center">
+            <h1 class="regularMont noMargin grayColor font16px"
+                style="text-align: center; max-width: 600px">{{'lp2.schools.how.requestText' | translate}}</h1>
+          </div>
+        </div>
+      </div>
+      <div fxLayout="row" fxLayoutAlign.gt-xs="center start"
+           fxLayout.xs="column" fxLayoutAlign.xs="center center">
+        <button class="greenButton semiBoldMont whiteColor font16px noMargin"
+                style="height: 50px; width: 200px;"
+                (click)="goToContact('lp2.pricing.School.buttonGetAQuote')">
+          {{ 'lp2.pricing.School.buttonGetAQuote' | translate }}
+        </button>
+        <div fxFlex.xs="20px" fxFlex="50px" fxFlex.gt-md="90px" style="height: 40px;"></div>
+        <button class="greenButton semiBoldMont whiteColor font16px noMargin"
+                style="height: 50px; width: 200px;"
+                (click)="goToContact('lp2.pricing.School.buttonRequestADemo')">
+          {{ 'lp2.pricing.School.buttonRequestADemo' | translate }}
+        </button>
+      </div>
+      <div style="height: 50px"></div>
+    </div>
+  </div>
+
+  <!-- Based on research section -->
+  <div>
+    <div style="height: 40px;"></div>
+    <div>
+      <h1 class="boldMont noMargin blackColor font30px"
+          style="text-align: center;">   {{ 'lp2.schools.research.title' | translate }}</h1>
+      <div style="height: 6px"></div>
+      <div fxLayoutAlign="center center" style="width: 100%">
+        <div style="width: 80%; max-width: 900px">
+          <p class="regularMont noMargin font20px grayColor"
+             style="text-align: center">{{ 'lp2.schools.research.subtitle' | translate }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 50px"></div>
+
+    <div fxLayoutAlign="center center">
+      <div fxFlex.lt-md="95" fxFlex.md="95" fxFlex.gt-md="80" fxLayout.gt-sm="row" fxLayout.lt-sm="column"
+           fxLayout.sm="column" fxLayoutAlign.gt-sm="space-around center">
+        <!-- answers 12x -->
+        <div>
+          <h1 class="boldMont noMargin purpleColor font60px"
+              style="text-align: center;">12x</h1>
+
+          <div style="height: 6px"></div>
+          <h1 class="boldMont noMargin purpleColor font20px"
+              style="text-align: center;">{{ 'reusable.faster' | translate }}</h1>
+          <div style="height: 6px"></div>
+          <div fxLayoutAlign="center center" style="width: 100%">
+            <div fxFlex="200px">
+              <p class="mediumMont font18px disabledColor noMargin"
+                 style="text-align: center">{{ 'lp2.common.research.answers12' | translate }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div fxHide.gt-sm="true" style="height: 40px"></div>
+        <!-- answers 1.200 -->
+        <div>
+
+          <h1 class="boldMont noMargin greenColor font60px"
+              style="text-align: center;">
+            {{ 'lp2.common.answers.amount' | translate }}
+          </h1>
+
+          <div style="height: 6px"></div>
+          <h1 class="boldMont noMargin greenColor font20px"
+              style="text-align: center;">   {{ 'lp2.common.answers.label' | translate }}</h1>
+          <div style="height: 6px"></div>
+          <div fxLayoutAlign="center center" style="width: 100%">
+            <div fxFlex="200px">
+              <p class="mediumMont font18px disabledColor noMargin"
+                 style="text-align: center">{{ 'lp2.common.research.answers1200' | translate }}</p>
+            </div>
+
+          </div>
+        </div>
+
+        <div fxHide.gt-sm="true" style="height: 40px"></div>
+        <!-- answers 12x -->
+        <div>
+
+          <h1 class="boldMont noMargin blueColor font60px"
+              style="text-align: center;">4x</h1>
+
+          <div style="height: 6px"></div>
+          <h1 class="boldMont noMargin blueColor font20px"
+              style="text-align: center;">   {{ 'reusable.faster' | translate }}</h1>
+          <div style="height: 6px"></div>
+          <div fxLayoutAlign="center center" style="width: 100%">
+            <div fxFlex="200px">
+              <p class="mediumMont font18px disabledColor noMargin"
+                 style="text-align: center">{{ 'lp2.common.research.answers4' | translate }}</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div style="height: 40px"></div>
+    <div fxLayoutAlign="center start">
+      <button class="greenButton semiBoldMont whiteColor font16px noMargin"
+              style="height: 40px; width: 200px;"
+              (click)="goToResearch()">
+        {{ 'lp2.schools.research.learnMore' | translate }}
+      </button>
+    </div>
+    <div style="height: 40px"></div>
+  </div>
+  <div style="height: 150px"></div>
+
+  <!-----testimonials---->
+  <app-testimonials type="feature"></app-testimonials>
+
+  <app-footer></app-footer>
+</div>

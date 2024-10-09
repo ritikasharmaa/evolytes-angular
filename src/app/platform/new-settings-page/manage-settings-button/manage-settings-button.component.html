@@ -1,0 +1,26 @@
+<div fxFlex fxLayoutAlign="center start">
+  <div fxFlex="10"></div>
+  <div fxFlex>
+
+    <div *ngIf="isAccountOwner()">
+      <button fxFlex="180px"
+              fxFlex.lt-md="100px"
+              class="greenButton semiBoldMont font12px whiteColor"
+              style="height: 40px; border-radius: 8px;"
+              (click)="onRenewClicked()"
+              *ngIf="getBillingStatus() === SubscriptionStatusTypes.inTrial || getBillingStatus() === SubscriptionStatusTypes.notSubscribed || !getBillingStatus()">
+        {{ 'lp2.pricing.Subscriptions.buyNow' | translate  }}
+      </button>
+      <button fxFlex="180px"
+              fxFlex.lt-md="100px"
+              class="blueButton semiBoldMont font12px whiteColor"
+              style="height: 40px; border-radius: 8px;"
+              (click)="onManageSubscriptionClicked()"
+              *ngIf="getBillingStatus() === SubscriptionStatusTypes.active || getBillingStatus() === SubscriptionStatusTypes.cancelled || getBillingStatus() === SubscriptionStatusTypes.nonRenewing || getBillingStatus() === SubscriptionStatusTypes.paused || getBillingStatus() === SubscriptionStatusTypes.future">
+        {{ 'billingSettings.manageSubscription' | translate }}
+      </button>
+    </div>
+
+  </div>
+  <div fxFlex="10"></div>
+</div>

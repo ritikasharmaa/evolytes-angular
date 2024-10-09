@@ -1,0 +1,266 @@
+<div class="defaultScrollBar scrollBarGreenThumb"
+     style="width: 100%; height: 100%; overflow-y: scroll;">
+  <div style="height: 20px"></div>
+  <div fxLayoutAlign="center center">
+    <div class="whiteBg defaultShadow"
+         style="border-radius: 6px;"
+         fxFlex.lt-md="94"
+         fxFlex.md="94"
+         fxFlex.gt-md="1000px">
+
+      <div style="height: 10px;"></div>
+      <div style="height: 70px">
+        <div fxFlex="20px"></div>
+        <div fxFlex fxLayoutAlign="start center">
+          <p class="semiBoldMont font18px blackColor noMargin">User Information</p>
+        </div>
+      </div>
+      <div style="height: 10px;"></div>
+      <div style="height: 50px"
+           fxLayoutAlign="start center">
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-input [placeholderText]="'User id'"
+                         [value]="user._id"
+                         [isDisabled]="true"
+                         >
+          </app-evo-input>
+        </div>
+        <div fxFlex="20px"></div>
+        <div fxFlex="120px">
+          <div style="height: 6px;"></div>
+          <button class="greenButton whiteColor semiBoldMont font14px"
+                  style="height: 40px; width: 100%;"
+                  (click)="onSaveClicked()">
+            Save
+          </button>
+        </div>
+        <div fxFlex="20px"></div>
+        <div fxFlex="120px">
+          <div style="height: 6px;"></div>
+          <button class="redButton whiteColor semiBoldMont font14px"
+                  style="height: 40px; width: 100%;"
+                  (click)="onCancelClick()">
+            Cancel
+          </button>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+
+      <div style="height: 20px"></div>
+
+      <div style="height: 62px">
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-input [value]="user.lastName"
+                         [placeholderText]="'User lastname'"
+                         [title]="'lastname'"
+                         (inputChangedEvent)="user.lastName = $event">
+          </app-evo-input>
+        </div>
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-input [title]="'firstname'"
+                         [placeholderText]="'User firstname'"
+                         [value]="user.firstName"
+                         (inputChangedEvent)="user.firstName = $event">
+          </app-evo-input>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+
+      <div style="height: 20px;"></div>
+
+      <div style="height: 62px">
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-input [title]="'email'"
+                         [placeholderText]="'User email'"
+                         [value]="user.email"
+                         (inputChangedEvent)="user.email = $event">
+          </app-evo-input>
+        </div>
+        <div fxFlex="20px"></div>
+        <div fxFlex="120px">
+          <div style="height: 22px;"></div>
+          <button [className] =" isVerifiedColor() + ' whiteColor semiBoldMont font14px'"
+                  style="height: 40px; width: 100%;"
+                  (click)="user.isEmailVerified = !user.isEmailVerified">
+            {{isVerified()}}
+          </button>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+
+      <div style="height: 20px;"></div>
+
+      <div style="height: 62px">
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-input [title]="'phone number'"
+                         [placeholderText]="'User phone number'"
+                         [value]="user.phone"
+                         (inputChangedEvent)="user.phone = $event">
+          </app-evo-input>
+        </div>
+        <div fxFlex="20px"></div>
+        <div fxFlex="120px">
+          <div style="height: 22px;"></div>
+          <button [className] =" isAdminColor() + ' whiteColor semiBoldMont font14px'"
+                  style="height: 40px; width: 100%;"
+                  (click)="user.isAdmin = !user.isAdmin">
+            {{isAdmin()}}
+          </button>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+
+      <div style="height: 20px"></div>
+
+      <div style="height: 62px">
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-lang-dropdown [type]="CultureTypes.country"
+                                 [currentValue]="user.country"
+                                 (valueChangedEvent)="user.country = $event">
+          </app-evo-lang-dropdown>
+        </div>
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-lang-dropdown [type]="CultureTypes.culture"
+                                 [currentValue]="user.culture"
+                                 (valueChangedEvent)="user.culture = $event">
+          </app-evo-lang-dropdown>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 10px;"></div>
+    </div>
+  </div>
+  <div style="height: 20px;"></div>
+  <div *ngIf="user.schoolId" fxLayoutAlign="center center">
+    <div class="whiteBg defaultShadow"
+         style="border-radius: 6px;"
+         fxFlex.lt-md="94"
+         fxFlex.md="94"
+         fxFlex.gt-md="1000px">
+
+      <div style="height: 10px;"></div>
+
+      <div style="height: 70px">
+        <div fxFlex="20px"></div>
+        <div fxFlex fxLayoutAlign="start center">
+          <p class="semiBoldMont font18px blackColor noMargin">School Information</p>
+        </div>
+      </div>
+
+      <div style="height: 10px;"></div>
+
+      <div style="height: 62px"
+           fxLayoutAlign="start center">
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-input [placeholderText]="'School id'"
+                         [title]="'Id'"
+                         [value]="school._id"
+                         [isDisabled]="true"
+          >
+          </app-evo-input>
+        </div>
+        <div fxFlex="20px"></div>
+        <app-evo-input [placeholderText]="'Access Type'"
+                       [title]="'Access Type'"
+                       [value]="user.schoolAccessType"
+                       [isDisabled]="true">
+        </app-evo-input>
+        <div fxFlex="20px"></div>
+      </div>
+
+      <div style="height: 20px;"></div>
+
+      <div style="height: 62px"
+           fxLayoutAlign="start center">
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-input [placeholderText]="'Name'"
+                         [title]="'Name'"
+                         [value]="school.name"
+                         [isDisabled]="true"
+          >
+          </app-evo-input>
+        </div>
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-input [placeholderText]="'City'"
+                         [title]="'City'"
+                         [value]="school.city"
+                         [isDisabled]="true"
+          >
+          </app-evo-input>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+
+      <div style="height: 20px;"></div>
+
+      <div style="height: 50px"
+           fxLayoutAlign="end center">
+        <div fxFlex="120px">
+          <button class="blueButton whiteColor semiBoldMont font14px"
+                  style="height: 40px; width: 100%;"
+                  (click)="onSchoolClicked()">
+            More details
+          </button>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px"></div>
+    </div>
+  </div>
+  <div style="height: 20px"></div>
+  <div fxLayoutAlign="center center">
+    <div class="whiteBg defaultShadow"
+         style="border-radius: 6px;"
+         fxFlex="94"
+         fxFlex.gt-md="1000px"
+         *ngIf="students.length > 0">
+      <div style="height: 70px">
+        <div fxFlex="20px"></div>
+        <div fxFlex fxLayoutAlign="start center">
+          <p class="semiBoldMont font18px blackColor noMargin">Students Information</p>
+        </div>
+      </div>
+      <div style="max-height: 300px">
+        <div fxFlex="20px"></div>
+        <div fxFlex
+             class="lightGrayBg defaultScrollBar scrollBarBlueThumb"
+             style="max-height: 300px; border-radius: 6px; overflow-y: scroll;">
+          <div *ngFor="let student of students">
+            <div style="height: 10px"></div>
+            <div fxLayoutAlign="start start">
+              <div fxFlex="10px"></div>
+              <div fxFlex class="bgWhiteHoverColor defaultShadow"
+                   style="height: 50px; border-radius: 4px; cursor: pointer;"
+                   fxLayoutAlign="start center" (click)="onStudentClicked(student)">
+                <div fxFlex="20px"></div>
+                <div fxFlex fxLayoutAlign="start center">
+                  <div>
+                    <p class="semiBoldMont font18px blackColor noMargin">{{student.firstName}} {{student.lastName}}</p>
+                  </div>
+                </div>
+                <div fxFlex="50px" fxLayoutAlign="center center">
+                  <p class="semiBoldMont font26px greenColor noMargin">></p>
+                </div>
+              </div>
+              <div fxFlex="10px"></div>
+            </div>
+          </div>
+          <div style="height: 10px;"></div>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px"></div>
+    </div>
+  </div>
+  <div style="height: 20px"></div>
+</div>

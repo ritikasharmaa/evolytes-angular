@@ -1,0 +1,20 @@
+<div style="height: 10px"></div>
+<div fxLayout="row" fxLayoutAlign="start center">
+  <div fxFlex="10px"></div>
+  <img [src]="student.evolytesProfile.profileImage()"
+       style="width: 36px; height: 36px; object-fit: contain; border-radius: 18px; border-style: solid; border-width: 2px;"
+       [ngStyle]="{ borderColor: student.evolytesProfile.profileOutlineColor() }">
+  <div fxFlex="15px"></div>
+  <div>
+    <p class="semiBoldMont blackColor font12px noMargin">
+      {{ student.fullName() }}
+    </p>
+    <p class="semiBoldMont font12px noMargin"
+       [ngClass]="{ greenColor: student.isBillingActive(),
+               redColor: student.isBillingCancelled(),
+               yellowColor: student.isBillingPaused() }">
+      {{ student.studentStatus() | translate }}
+    </p>
+  </div>
+</div>
+<div style="height: 10px"></div>

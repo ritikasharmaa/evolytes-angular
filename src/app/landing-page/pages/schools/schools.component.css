@@ -1,0 +1,11 @@
+img {
+  object-fit: contain;
+  width: 100%;
+}
+
+div.grayBorder {
+  padding: 0.5em;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+

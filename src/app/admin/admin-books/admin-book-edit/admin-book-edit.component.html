@@ -1,0 +1,109 @@
+<div class="defaultScrollBar scrollBarGreenThumb"
+     style="width: 100%; height: 100%; overflow-y: scroll;">
+  <div style="height: 20px"></div>
+  <div fxLayoutAlign="center center">
+    <div class="whiteBg defaultShadow"
+         style="border-radius: 6px;"
+         fxFlex.lt-md="94"
+         fxFlex.md="94"
+         fxFlex.gt-md="1000px">
+      <div style="height: 10px;"></div>
+      <div fxLayoutAlign="start center">
+        <div fxFlex="20px"></div>
+        <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+          <div fxFlex fxLayoutAlign.xs="center center">
+            <div style="width: 400px;" ngStyle.sm="width: 300px;" ngStyle.xs="width: 250px;">
+              <app-evo-input [showTitle]="false"
+                             [placeholderText]="'Book name'"
+                             [value]="book.name"
+                             (inputChangedEvent)="book.name = $event">
+              </app-evo-input>
+            </div>
+          </div>
+          <div fxFlex="20px" fxFlex.xs="10px" *ngIf="isEditMode"></div>
+          <div fxFlex fxLayoutAlign.gt-xs="center center" fxLayoutAlign.xs="center center">
+            <button class="redButton semiBoldMont font14px whiteColor"
+                    style="height: 40px; width: 120px;"
+                    (click)="onDelete()"
+                    *ngIf="isEditMode">
+              Delete
+            </button>
+          </div>
+          <div fxFlex="20px" fxFlex.xs="10px" *ngIf="isEditMode"></div>
+          <div fxFlex fxLayoutAlign.gt-xs="center center" fxLayoutAlign.xs="center center">
+            <button [ngClass]="{ greenButton: !getIsPublished(), redButton: getIsPublished() }" class="semiBoldMont font14px whiteColor"
+                    style="height: 40px; width: 120px;"
+                    (click)="onPublish()">
+              {{ getPublishTitle() }}
+            </button>
+          </div>
+          <div fxFlex="20px" fxFlex.xs="10px"></div>
+          <div fxFlex fxLayoutAlign.xs="center center">
+            <button class="greenButton semiBoldMont font14px whiteColor"
+                    style="height: 40px; width: 120px;"
+                    (click)="onSave()">
+              {{getTitle()}}
+            </button>
+          </div>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px;" ngStyle.lt-md="height: 10px;"></div>
+      <div>
+        <div fxFlex="20px"></div>
+        <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+          <div fxFlex fxLayoutAlign="center center">
+            <img [src]="book.imgURL" style="width: 80%; height: 240px; object-fit: contain;" *ngIf="book.imgURL">
+          </div>
+          <div fxFlex="20px"></div>
+          <div fxFlex>
+            <app-evo-input title="_id"
+                           placeholderText="_id"
+                           [isDisabled]="true"
+                           [value]="book._id">
+            </app-evo-input>
+            <div style="height: 10px;"></div>
+            <div style="height: 65px;">
+              <app-evo-lang-dropdown type="culture"
+                                     [currentValue]="book.culture"
+                                     [cultureDropdownList]="CultureModel.privateDropdownList()"
+                                     (valueChangedEvent)="book.culture = $event">
+              </app-evo-lang-dropdown>
+            </div>
+            <div style="height: 10px;"></div>
+            <app-evo-input title="Age range"
+                           placeholderText="Age range"
+                           [value]="book.ageRange"
+                           (inputChangedEvent)="book.ageRange = $event">
+            </app-evo-input>
+            <div style="height: 10px;"></div>
+            <app-evo-input title="Book number"
+                           placeholderText="book Number"
+                           inputType="number"
+                           [value]="book.number"
+                           (inputChangedEvent)="book.number = $event">
+            </app-evo-input>
+            <div style="height: 10px;"></div>
+            <app-evo-input title="Img URL"
+                           [value]="book.imgURL"
+                           (inputChangedEvent)="book.imgURL = $event">
+            </app-evo-input>
+          </div>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px;" ngStyle.lt-md="height: 10px;"></div>
+      <div>
+        <div fxFlex="20px"></div>
+        <app-evo-translated-input fxFlex
+                                  inputTitle="Translated Description"
+                                  [descr]="book.translatedDescription"
+                                  [cultures]="CultureModel.privateDropdownList()">
+        </app-evo-translated-input>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px;"></div>
+    </div>
+  </div>
+  <div style="height: 20px"></div>
+</div>

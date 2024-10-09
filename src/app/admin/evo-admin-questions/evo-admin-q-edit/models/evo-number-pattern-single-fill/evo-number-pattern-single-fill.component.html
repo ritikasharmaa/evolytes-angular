@@ -1,0 +1,54 @@
+<div *ngIf="showQuestion()">
+  <div>
+    <p class="semiBoldMont font18px blackColor noMargin"
+       style="text-align: center;">
+      {{questionString()}}
+    </p>
+  </div>
+  <div style="height: 20px;"></div>
+  <div>
+    <div fxFlex="20px"></div>
+    <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+      <div fxFlex>
+        <app-evo-reusable-range [title]="'Start Range'"
+                                [range]="question.model.firstRange">
+        </app-evo-reusable-range>
+        <div style="height: 20px;"></div>
+        <div style="height: 65px;">
+          <app-evo-dropdown [title]="'Pattern Operation'"
+                            [list]="QuestionModel.OperationTypes.dropdownList()"
+                            [currentValue]="question.model.patternOpType"
+                            (valueChangedEvent)="question.model.patternOpType = $event">
+          </app-evo-dropdown>
+        </div>
+        <div style="height: 20px;"></div>
+        <app-evo-input [title]="'Missing Value Index'"
+                       [value]="question.model.missingValueIndex"
+                       (inputChangedEvent)="question.model.missingValueIndex = $event">
+        </app-evo-input>
+        <div style="height: 20px;"></div>
+        <app-evo-input [title]="'Num Pattern Values'"
+                       [value]="question.model.numPatternValues"
+                       (inputChangedEvent)="question.model.numPatternValues = $event">
+        </app-evo-input>
+        <div style="height: 20px;"></div>
+        <app-evo-input [title]="'Num Answers'"
+                       [inputType]="'number'"
+                       [value]="question.model.numAnswers"
+                       (inputChangedEvent)="question.model.numAnswers = $event">
+        </app-evo-input>
+      </div>
+      <div fxFlex="20px" fxFlex.xs="10px"></div>
+      <div fxFlex>
+        <app-evo-reusable-range [title]="'Pattern Value'"
+                                [range]="question.model.patternValue">
+        </app-evo-reusable-range>
+        <div style="height: 20px"></div>
+        <app-evo-reusable-range [title]="'Possible Answers'"
+                                [range]="question.model.possibleAnswers">
+        </app-evo-reusable-range>
+      </div>
+    </div>
+    <div fxFlex="20px"></div>
+  </div>
+</div>

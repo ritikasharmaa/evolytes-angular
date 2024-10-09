@@ -1,0 +1,14 @@
+<div style="height: 100%; width: 100%; position: relative;">
+  <p class="boldMont font20px blackColor noMargin centerAlign"
+     style="position: absolute; top: 45px; left: 45px; bottom: 45px; right: 45px; line-height: 50px; z-index: 100; margin: auto;">
+    {{ chartTitle }}
+  </p>
+  <canvas baseChart
+          chartType="doughnut"
+          [datasets]="chartData"
+          [labels]="chartDataLabels"
+          [legend]="false"
+          width="100%"
+          height="100%">
+  </canvas>
+</div>

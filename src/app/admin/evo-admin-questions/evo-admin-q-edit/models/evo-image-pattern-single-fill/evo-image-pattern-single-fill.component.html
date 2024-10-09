@@ -1,0 +1,97 @@
+<div *ngIf="showQuestion()">
+  <div style="height: 50px;" fxLayoutAlign="center center">
+    <p class="semiBoldMont font18px blackColor noMargin"
+       style="text-align: center">
+      {{ questionString() }}
+    </p>
+  </div>
+  <div>
+    <div fxFlex="20px"></div>
+    <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+      <div fxFlex>
+        <p class="semiBoldMont grayColor noMargin font12px">Pattern</p>
+        <div style="height: 6px;"></div>
+        <div class="noScrollBar" style="height: 216px; overflow-y: scroll;">
+          <div style="height: 5px;"></div>
+          <div *ngFor="let imageName of question.model.pattern; let i = index;">
+            <div fxLayoutAlign="center start">
+              <div fxFlex="95" class="defaultShadow" style="height: 42px; border-radius: 4px;">
+                <div fxFlex="10px"></div>
+                <div fxFlex fxLayoutAlign="start center">
+                  <p class="semiBoldMont blackColor font14px noMargin">{{imageName}}</p>
+                </div>
+                <div fxFlex="30px" fxLayoutAlign="center center">
+                  <div class="bgRedHoverColor" style="width: 30px; height: 30px; border-radius: 4px; cursor: pointer;"
+                       (click)="removePattern(i)" fxLayoutAlign="center center">
+                    <p class="semiBoldMont font18px whiteColor noMargin">x</p>
+                  </div>
+                </div>
+                <div fxFlex="10px"></div>
+              </div>
+            </div>
+            <div style="height: 10px;"></div>
+          </div>
+          <div fxLayoutAlign="center start">
+            <button class="defaultShadow greenButton semiBoldMont font12px whiteColor"
+                    fxFlex="95"
+                    style="height: 42px;"
+                    (click)="showPatternSelector()">Add Pattern
+            </button>
+          </div>
+          <div style="height: 5px;"></div>
+        </div>
+        <div style="height: 20px;"></div>
+        <app-evo-input [title]="'Num Pattern Values'"
+                       [value]="question.model.numPatternValues"
+                       (inputChangedEvent)="question.model.numPatternValues = $event">
+        </app-evo-input>
+        <div style="height: 20px"></div>
+        <app-evo-input [title]="'Missing Pattern Index'"
+                       [value]="question.model.missingPatternIndex"
+                       (inputChangedEvent)="question.model.missingPatternIndex = $event">
+        </app-evo-input>
+      </div>
+      <div fxFlex="20px" fxFlex.xs="10px"></div>
+      <div fxFlex>
+        <p class="semiBoldMont grayColor noMargin font12px">Possible Image Answers</p>
+        <div style="height: 6px;"></div>
+        <div class="noScrollBar" style="height: 216px; overflow-y: scroll;">
+          <div style="height: 5px;"></div>
+          <div *ngFor="let imageName of question.model.possiblePatternImages; let i = index;">
+            <div fxLayoutAlign="center start">
+              <div fxFlex="95" class="defaultShadow" style="height: 42px; border-radius: 4px;">
+                <div fxFlex="10px"></div>
+                <div fxFlex fxLayoutAlign="start center">
+                  <p class="semiBoldMont blackColor font14px noMargin">{{imageName}}</p>
+                </div>
+                <div fxFlex="30px" fxLayoutAlign="center center">
+                  <div class="bgRedHoverColor" style="width: 30px; height: 30px; border-radius: 4px; cursor: pointer;"
+                       (click)="removePossiblePattern(i)" fxLayoutAlign="center center">
+                    <p class="semiBoldMont font18px whiteColor noMargin">x</p>
+                  </div>
+                </div>
+                <div fxFlex="10px"></div>
+              </div>
+            </div>
+            <div style="height: 10px;"></div>
+          </div>
+          <div fxLayoutAlign="center start">
+            <button class="defaultShadow greenButton semiBoldMont font12px whiteColor"
+                    fxFlex="95"
+                    style="height: 42px;"
+                    (click)="showPossiblePatternSelector()">Add Image
+            </button>
+          </div>
+          <div style="height: 5px;"></div>
+        </div>
+        <div style="height: 20px"></div>
+        <app-evo-input [title]="'Num Answers'"
+                       [value]="question.model.numAnswers"
+                       (inputChangedEvent)="question.model.numAnswers = $event">
+        </app-evo-input>
+      </div>
+    </div>
+    <div fxFlex="20px"></div>
+  </div>
+  <div style="height: 20px;"></div>
+</div>

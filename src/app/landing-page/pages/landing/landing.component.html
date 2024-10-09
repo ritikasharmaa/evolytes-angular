@@ -1,0 +1,554 @@
+<app-land2-nav-header [hidden]="hidden" (onBurgerClicked)="setHidden()"></app-land2-nav-header>
+<div class="landcontent" style="height: calc(100% - 80px); overflow-y: scroll;" appEgg>
+  <!-- To adapt with the burger menu -->
+  <div [ngClass]="{burgerMenu: !hidden}"></div>
+
+  <!-- Introduction Computer-->
+  <div class="whiteBg" fxHide.lt-md="true" fxLayoutAlign="center start" style="padding-bottom: 50px; padding-top: 80px">
+    <div style="max-width: 1200px; width: 90%;">
+      <div fxLayoutAlign="center center" style="width: 100%;">
+        <div fxFlex="42">
+          <h1 class="boldMont noMargin blackColor font42px">{{'lp2.landing.tagline' | translate}}</h1>
+          <div style="height: 10px"></div>
+          <h1 class="regularMont noMargin grayColor font20px">{{'lp2.landing.description' | translate}}</h1>
+          <div style="height: 30px"></div>
+          <div fxLayoutAlign="start start">
+            <button fxFlex="160px"
+                    class="greenButton semiBoldMont font16px whiteColor"
+                    style="height: 50px;"
+                    (click)="goToSignup()">
+              {{'lp2.landing.buyButton' | translate }}
+            </button>
+            <div fxFlex="20px"></div>
+            <button fxFlex="160px"
+                    class="greenButton semiBoldMont font16px whiteColor"
+                    style="height: 50px;"
+                    (click)="goToSignin()">
+              {{'lp2.landing.login' | translate }}
+            </button>
+          </div>
+        </div>
+        <div fxFlex="8"></div>
+        <div fxFlex="50" fxLayoutAlign="center center">
+          <img src="../../../../assets/newWebsite/HomeIntroImage.png"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Introduction mobile-->
+  <div class="whiteBg"
+       fxHide.gt-sm="true"
+       style="padding-bottom: 50px; padding-top: 30px"
+       fxLayoutAlign="center center">
+    <div fxFlex="92">
+      <div fxLayoutAlign="center start">
+        <h1 fxFlex="90"
+            fxFlex.sm="80"
+            ngClass.sm="boldMont noMargin blackColor font42px"
+            ngClass.xs="boldMont noMargin blackColor font32px"
+            style="text-align: center;">
+          {{ 'lp2.landing.tagline' | translate }}
+        </h1>
+      </div>
+      <div style="height: 20px"></div>
+      <img src="../../../../assets/newWebsite/HomeIntroImage.png" style="max-height: 300px;"/>
+      <div style="height: 25px"></div>
+      <div fxLayoutAlign="center center">
+        <h1 fxFlex="90"
+            fxFlex.sm="80"
+            class="regularMont noMargin grayColor font18px"
+            style="text-align: center;">
+          {{ 'lp2.landing.description' | translate }}
+        </h1>
+      </div>
+      <div style="height: 30px;"></div>
+
+      <!-- Small Buttons -->
+      <div fxHide.xs="true" fxLayoutAlign="center start">
+        <button fxFlex="200px"
+                class="greenButton semiBoldMont font16px whiteColor"
+                style="height: 50px;"
+                (click)="goToSignup()">
+          {{'lp2.landing.buyButton' | translate }}
+        </button>
+        <div fxFlex="6"></div>
+        <button fxFlex="200px"
+                class="greenButton semiBoldMont font16px whiteColor"
+                style="height: 50px;"
+                (click)="goToSignin()">
+          {{'lp2.landing.login' | translate }}
+        </button>
+      </div>
+
+      <!-- extra small buttons -->
+      <div fxHide.sm="true">
+        <div fxLayoutAlign="center start">
+          <button fxFlex="250px"
+                  class="greenButton semiBoldMont font16px whiteColor"
+                  (click)="goToSignup()"
+                  style="height: 50px;">
+            {{ 'lp2.landing.buyButton' | translate }}
+          </button>
+        </div>
+        <div style="height: 10px;"></div>
+        <div fxLayoutAlign="center start">
+          <button fxFlex="250px"
+                  class="greenButton semiBoldMont font16px whiteColor"
+                  (click)="goToSignin()"
+                  style="height: 50px;">
+            {{ 'lp2.landing.login' | translate }}
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Change Part-->
+  <div class="lightGrayBg" fxLayoutAlign="center center" style="padding-bottom: 50px; padding-top: 50px">
+    <div fxFlex="90">
+      <!-- Titles -->
+      <div ngStyle.xs="width: 100%;"
+           ngStyle.sm="width: 80%; margin: 0 auto;"
+           ngStyle.gt-sm="width: 760px; margin: 0 auto;">
+        <h1 class="boldMont noMargin blackColor font30px"
+            style="text-align: center; width: 80%; margin: 0 auto;">
+          {{'lp2.landing.evolytesPart.title' | translate}}
+        </h1>
+        <div style="height: 10px;"></div>
+        <h1 class="regularMont noMargin grayColor font18px"
+            style="text-align: center;">
+          {{'lp2.landing.evolytesPart.description' | translate}}
+        </h1>
+      </div>
+
+      <!--Start carousel Computer-->
+      <app-carousel fxHide.lt-sm="true" style="margin: 30px"></app-carousel>
+      <!--End carousel Computer-->
+
+      <!--Start picture mobile-->
+      <div fxHide.gt-xs="true">
+        <!-- Game -->
+        <div>
+          <div style="height: 20px;"></div>
+          <img src="../../../../assets/newWebsite/HomeChangeSectionGame.png" alt="">
+          <div style="height: 1em"></div>
+          <div fxLayoutAlign="start center">
+            <div fxFlex="14px"></div>
+            <div fxLayoutAlign="center center">
+              <img style="height: 26px; object-fit: contain; z-index: 15; position: relative"
+                   src="../../../../assets/newWebsite/game.svg"/>
+            </div>
+            <div fxFlex="20px"></div>
+            <div fxFlex>
+              <p style="z-index: 15"
+                 class="boldMont noMargin blackColor font18px">{{'lp2.landing.evolytesPart.gameTitle' | translate}}</p>
+              <div style="height: 4px"></div>
+              <p style="z-index: 15"
+                 class="mediumMont noMargin blackColor font12px">{{'lp2.landing.evolytesPart.gameDescription' | translate}}</p>
+            </div>
+          </div>
+        </div>
+        <!-- Book -->
+        <div>
+          <div style="height: 30px;"></div>
+          <img src="../../../../assets/newWebsite/HomeChangeSectionBook.png" alt="">
+          <div style="height: 1em"></div>
+          <div fxLayoutAlign="start center">
+            <div fxFlex="14px"></div>
+            <div fxLayoutAlign="center center">
+              <img style="height: 30px; object-fit: contain; z-index: 15;"
+                   src="../../../../assets/newWebsite/book.svg"/>
+            </div>
+            <div fxFlex="20px"></div>
+            <div fxFlex>
+              <p style="z-index: 15"
+                 class="boldMont noMargin blackColor font18px">
+                {{'lp2.landing.evolytesPart.bookTitle' | translate}}
+              </p>
+              <div style="height: 4px;"></div>
+              <p style="z-index: 15"
+                 class="mediumMont noMargin blackColor font12px">
+                {{'lp2.landing.evolytesPart.bookDescription' | translate}}
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Monitor -->
+        <div style="height: 30px;"></div>
+        <img src="../../../../assets/newWebsite/HomeChangeSectionMonitor.png" alt="">
+        <div style="height: 1em"></div>
+        <div fxLayoutAlign="start center">
+          <div fxFlex="18px"></div>
+          <div fxLayoutAlign="center center">
+            <img style="height: 32px; object-fit: contain; z-index: 15;"
+                 src="../../../../assets/newWebsite/monitor.svg"/>
+          </div>
+          <div fxFlex="20px"></div>
+          <div fxFlex>
+            <p style="z-index: 15"
+               class="boldMont noMargin blackColor font18px">{{'lp2.landing.evolytesPart.monitorTitle' | translate}}</p>
+            <div style="height: 4px;"></div>
+            <p style="z-index: 15"
+               class="mediumMont noMargin blackColor font12px">{{'lp2.landing.evolytesPart.monitorDescription' | translate}}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Spacing before buttons -->
+      <div ngStyle.xs="height: 50px" ngStyle.gt-xs="height: 30px"></div>
+      <!--End picture mobile-->
+
+      <h1 ngClass.gt-xs="boldMont noMargin grayColor font14px"
+          ngClass.lt-sm="semiBoldMont noMargin grayColor font14px"
+          style="text-align: center">
+        {{'lp2.landing.startingPriceOne' | translate}}
+        {{ getStartPrice() }}
+        {{'lp2.landing.startingPriceTwo' | translate}}
+      </h1>
+      <div style="height: 14px;"></div>
+      <div style="width: 100%" fxLayoutAlign="center">
+        <button class="greenButton semiBoldMont font16px whiteColor"
+                style="height: 50px; width: 250px"
+                (click)="goToSignup()">
+          {{'lp2.landing.memberButton' | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!--Universe Part-->
+  <div class="whiteBg" style="padding-bottom: 50px; padding-top: 50px">
+    <div style="width: 100%;">
+      <h1 class="boldMont noMargin blackColor font30px"
+          ngStyle.xs="width: 90%; margin: 0 auto; text-align: center;"
+          ngStyle.sm="width: 72%; margin: 0 auto; text-align: center;"
+          ngStyle.gt-sm="width: 760px; margin: 0 auto; text-align: center;">
+        {{'lp2.landing.universePart.title' | translate}}
+      </h1>
+      <div ngStyle.gt-sm="height: 10px" ngStyle.lt-md="height: 30px"></div>
+      <!-- Mobile version -->
+      <div fxHide.gt-sm="true"
+           style="width: 90%; max-width: 600px; height: calc(90vw * 0.75); max-height: 450px; padding-bottom: 30px; margin: 0 auto;">
+        <div style="padding:0 0 0 0; position:relative; height: 100%; width: 100%; margin: 0 auto; border-radius: 10px; overflow: hidden; box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);">
+          <iframe
+            [src]="universeUrl"
+            allow="autoplay; fullscreen; picture-in-picture"
+            id="universeMobile"
+            frameborder="0"
+            style="position:absolute; top:0; left:0; bottom: 0; right: 0; width:100%; height:101%; border: black 0 solid;"
+            title="Evolytes Trailer">
+          </iframe>
+        </div>
+      </div>
+      <h1 class="regularMont grayColor font18px"
+          ngStyle.lt-md="width: 90%; margin: 0 auto; text-align: center;"
+          ngStyle.gt-sm="width: 760px; margin: 0 auto; text-align: center;">
+        {{ 'lp2.landing.universePart.description' | translate }}
+      </h1>
+      <div ngStyle.gt-sm="height: 10px" ngStyle.lt-md="height: 30px"></div>
+      <!-- Computer version -->
+      <div fxHide.lt-md="true"
+           style="background-image: url('../../../../assets/newWebsite/HomeUniverseSectionMonstersNoCut.png');
+          width: 100%; height: calc(100vw * 0.32);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: bottom;"
+        fxLayout="column" fxLayoutAlign="end center">
+        <!--
+        a fix for the border radius not working with overflow hidden on safari
+        https://gist.github.com/ayamflow/b602ab436ac9f05660d9c15190f4fd7b
+        another solution which does not break box shadow:
+        https://stackoverflow.com/questions/14383632/webkit-border-radius-and-overflow-bug-when-using-any-animation-transition/16681137
+        -->
+        <div
+          style="padding:0 0 0 0;
+          position:relative;
+          height: 90%; width: calc(100vw * 0.32 * 0.9 * 1.335);
+          border-radius: 10px;
+          overflow: hidden;
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+          -webkit-backface-visibility: hidden;
+          -moz-backface-visibility: hidden;
+          -webkit-transform: translate3d(0, 0, 0);
+          -moz-transform: translate3d(0, 0, 0);">
+          <iframe
+            [src]="universeUrl"
+            allow="autoplay; fullscreen; picture-in-picture"
+            id="universeComputer"
+            frameborder="0"
+            style="position:absolute; top: 0; left: 0; bottom: 0; right: 0; width:101%; height:101%; border: black 0 solid;"
+            title="Evolytes Trailer">
+          </iframe>
+        </div>
+      </div>
+      <!-- Mobile version -->
+      <img fxHide.gt-sm="true" src="../../../../assets/newWebsite/AllMonsters.png">
+      <div style="height: 35px"></div>
+      <div style="width: 100%;"
+           fxLayout.xs="column"
+           fxLayout.gt-xs="row"
+           fxLayoutAlign="center center">
+        <div style="cursor: pointer;" fxFlex.xs="60px" fxFlex="180px" fxLayoutAlign="center start">
+          <a (click)="CultureModel.openAppStore()">
+            <img [src]="CultureModel.getLocalizedAppStoreBadge(CultureModel.getHomepageCulture())" style="height: 66px; width: 176px; object-fit: contain; cursor: pointer;"/>
+          </a>
+        </div>
+        <div fxFlex.xs="10px" fxFlex="3"></div>
+        <div fxFlex.xs="90px" fxFlex="180px" style="position: relative; cursor: pointer;">
+          <a (click)="CultureModel.openPlayStore()">
+            <img [src]="CultureModel.getLocalizedPlayStoreBadge(CultureModel.getHomepageCulture())" style="height: 70px; width: 190px; object-fit: contain;">
+          </a>
+        </div>
+      </div>
+      <div style="height: 25px"></div>
+      <div style="width: 100%" fxLayoutAlign="center">
+        <button class="greenButton semiBoldMont font18px whiteColor"
+                (click)="goToFeature()"
+                style="height: 50px; width: 250px">
+          {{'lp2.landing.learnMoreButton' | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!--How Part Computer-->
+  <div fxHide.lt-md="true" class="lightGrayBg" fxLayoutAlign="center start"
+       style="padding-bottom: 50px; padding-top: 50px;">
+    <div fxFlex="90" fxFlex.md="94">
+      <div fxLayoutAlign="center center">
+        <div fxFlex="40">
+          <div>
+            <div fxFlex="20"></div>
+            <h1 style="text-align: center"
+                class="boldMont noMargin blackColor font30px">
+              {{'lp2.landing.howPart.title' | translate}}
+            </h1>
+          </div>
+          <div style="height: 30px;"></div>
+          <div>
+            <h1 class="boldMont noMargin font20px" [ngClass]="videoStep === 'first' ? 'blackColor' : 'disabledColor'"
+                fxFlex="20" fxLayoutAlign="center center">1</h1>
+            <h1 class="mediumMont noMargin font18px" [ngClass]="videoStep === 'first' ? 'blackColor' : 'disabledColor'"
+                fxFlex="80"> {{'lp2.landing.howPart.description1' | translate}} </h1>
+          </div>
+          <div style="height: 20px;"></div>
+          <div>
+            <h1 class="boldMont noMargin font20px" [ngClass]="videoStep === 'second' ? 'blackColor' : 'disabledColor'"
+                fxFlex="20" fxLayoutAlign="center center">2</h1>
+            <h1 class="mediumMont noMargin font18px" [ngClass]="videoStep === 'second' ? 'blackColor' : 'disabledColor'"
+                fxFlex="80"> {{'lp2.landing.howPart.description2' | translate}} </h1>
+          </div>
+          <div style="height: 20px;"></div>
+          <div>
+            <h1 class="boldMont noMargin font20px" [ngClass]="videoStep === 'third' ? 'blackColor' : 'disabledColor'"
+                fxFlex="20" fxLayoutAlign="center center">3</h1>
+            <h1 class="mediumMont noMargin font18px" [ngClass]="videoStep === 'third' ? 'blackColor' : 'disabledColor'"
+                fxFlex="80"> {{'lp2.landing.howPart.description3' | translate}} </h1>
+          </div>
+          <div style="height: 20px;"></div>
+          <div>
+            <h1 class="boldMont noMargin font20px" [ngClass]="videoStep === 'fourth' ? 'blackColor' : 'disabledColor'"
+                fxFlex="20" fxLayoutAlign="center center">4</h1>
+            <h1 class="mediumMont noMargin font18px" [ngClass]="videoStep === 'fourth' ? 'blackColor' : 'disabledColor'"
+                fxFlex="80"> {{'lp2.landing.howPart.description4' | translate}} </h1>
+          </div>
+        </div>
+        <div fxFlex="5"></div>
+        <div fxFlex="55">
+          <div style="width: 90%; height: calc(49.5vw * 0.55); margin: 0 auto">
+            <div style="padding: 0 0 0 0; position: relative; height: 100%; width: 100%">
+              <iframe
+                [src]="howItWorksUrl"
+                id="needTimerComputer"
+                allow="autoplay; fullscreen; picture-in-picture"
+                frameborder="0"
+                style="position:absolute; top:0; left:0; width:100%; height:100%; border: solid 0 black;" title="Evolytes HOW">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!--How Part mobile-->
+  <div fxHide.gt-sm="true" class="lightGrayBg" fxLayoutAlign="center start"
+       style="padding-top: 30px;">
+    <div fxFlex="90">
+      <h1 style="text-align: center"
+          class="boldMont noMargin blackColor font30px">
+        {{'lp2.landing.howPart.title' | translate}}
+      </h1>
+      <div>
+        <div style="height: 20px" ngStyle.sm="height: 30px;"></div>
+        <div style="width: 95%; max-width: 600px; height: calc(95vw * 0.55); max-height: 330px; margin: 0 auto">
+          <div
+            style="padding:0 0 0 0; position:relative; height: 100%; width: 100%">
+            <iframe
+              [src]="howItWorksUrl"
+              id="needTimerMobile"
+              allow="autoplay; fullscreen; picture-in-picture"
+              frameBorder="0"
+              style="position:absolute; top:0; left:0; width:100%; height:100%; border: solid 0 black;" title="Evolytes How it works">
+            </iframe>
+          </div>
+        </div>
+        <div style="height: 30px" ngStyle.sm="height: 40px;"></div>
+        <div ngStyle.sm="max-width: 600px; margin: 0 auto;">
+          <h1 [fxHide]="videoStep !== 'first'"
+              class="semiBoldMont noMargin font26px"
+              [ngClass]="videoStep === 'first' ? 'blackColor' : 'disabledColor'"
+              fxFlex="20" fxLayoutAlign="center center">1</h1>
+          <h1 [fxHide]="videoStep !== 'first'"
+              class="mediumMont noMargin font18px"
+              [ngClass]="videoStep === 'first' ? 'blackColor' : 'disabledColor'"
+              fxFlex="80"> {{'lp2.landing.howPart.description1' | translate}} </h1>
+        </div>
+        <div ngStyle.sm="max-width: 600px; margin: 0 auto;">
+          <h1 [fxHide]="videoStep !== 'second'"
+              class="semiBoldMont noMargin font26px"
+              [ngClass]="videoStep === 'second' ? 'blackColor' : 'disabledColor'"
+              fxFlex="20" fxLayoutAlign="center center">2</h1>
+          <h1 [fxHide]="videoStep !== 'second'"
+              class="mediumMont noMargin font18px"
+              [ngClass]="videoStep === 'second' ? 'blackColor' : 'disabledColor'"
+              fxFlex="80"> {{'lp2.landing.howPart.description2' | translate}} </h1>
+        </div>
+        <div ngStyle.sm="max-width: 600px; margin: 0 auto;">
+          <h1 [fxHide]="videoStep !== 'third'"
+              class="semiBoldMont noMargin font26px"
+              [ngClass]="videoStep === 'third' ? 'blackColor' : 'disabledColor'"
+              fxFlex="20" fxLayoutAlign="center center">3</h1>
+          <h1 [fxHide]="videoStep !== 'third'"
+              class="mediumMont noMargin font18px"
+              [ngClass]="videoStep === 'third' ? 'blackColor' : 'disabledColor'"
+              fxFlex="80"> {{'lp2.landing.howPart.description3' | translate}} </h1>
+        </div>
+        <div ngStyle.sm="max-width: 600px; margin: 0 auto;">
+          <h1 [fxHide]="videoStep !== 'fourth'"
+              class="semiBoldMont noMargin font26px"
+              [ngClass.gt-sm]="videoStep === 'fourth' ? 'blackColor' : 'disabledColor'"
+              fxFlex="20" fxLayoutAlign="center center">4</h1>
+          <h1 [fxHide]="videoStep !== 'fourth'"
+              class="mediumMont noMargin font18px"
+              [ngClass]="videoStep === 'fourth' ? 'blackColor' : 'disabledColor'"
+              fxFlex="80"> {{'lp2.landing.howPart.description4' | translate}} </h1>
+        </div>
+        <div style="height: 50px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!--Research Part-->
+  <div class="whiteBg" fxLayoutAlign="center start" style="padding-bottom: 90px; padding-top: 50px"
+       ngStyle.lt-md="padding-bottom: 170px">
+    <div fxFlex="90">
+      <h1 class="boldMont noMargin blackColor font30px"
+          ngStyle.xs="width: 100%; text-align: center;"
+          ngStyle.sm="width: 80%; margin: 0 auto; text-align: center;"
+          ngStyle.gt-sm="width: 760px; margin: 0 auto; text-align: center;">
+        {{'lp2.landing.researchPart.title' | translate}}
+      </h1>
+      <div style="height: 10px"></div>
+      <h1 class="regularMont grayColor font18px"
+          ngStyle.xs="width: 100%; text-align: center;"
+          ngStyle.sm="width: 80%; margin: 0 auto; text-align: center;"
+          ngStyle.gt-sm="width: 760px; margin: 0 auto; text-align: center;">
+        {{ 'lp2.landing.researchPart.description' | translate }}
+      </h1>
+      <div style="height: 25px"></div>
+      <div fxLayoutAlign="center center"
+           fxLayout.gt-sm="row"
+           fxLayout.lt-md="column">
+        <div fxFlex.gt-md="20" fxFlex.md="20" ngStyle.lt-md="width: 240px;">
+          <p class="boldMont noMargin lightBlueColor font60px" style="text-align: center">{{ 'lp2.common.answers.amount' | translate }}</p>
+          <p class="boldMont noMargin lightBlueColor font20px"
+             style="text-align: center; text-transform: uppercase;">
+            {{'lp2.common.answers.label' | translate}}
+          </p>
+          <div style="height: 10px"></div>
+          <p class="boldMont noMargin blackColor font18px"
+             style="text-align: center">
+            {{ 'lp2.common.answers.title' | translate }}
+          </p>
+          <div style="height: 2px"></div>
+          <p class="regularMont noMargin grayColor font16px"
+             style="text-align: center">{{'lp2.common.answers.subtitle' | translate}}</p>
+        </div>
+        <div fxHide.lt-md="true" fxFlex="16"></div>
+        <div fxHide.gt-md="true" fxHide.md="true" style="height: 20px;"></div>
+        <div fxFlex.gt-md="20" fxFlex.md="20" ngStyle.lt-md="width: 240px;">
+          <p class="boldMont noMargin greenColor font60px" style="text-align: center">26</p>
+          <p class="boldMont noMargin greenColor font20px"
+             style="text-align: center; text-transform: uppercase;">{{'lp2.common.minutes.label' | translate}}</p>
+          <div style="height: 10px"></div>
+          <p class="boldMont noMargin blackColor font18px"
+             style="text-align: center">{{'lp2.common.minutes.title' | translate}}</p>
+          <div style="height: 2px"></div>
+          <p class="regularMont noMargin grayColor font16px"
+             style="text-align: center">{{'lp2.common.minutes.subtitle' | translate}}</p>
+        </div>
+      </div>
+      <div style="height: 50px"></div>
+
+      <div fxLayout="row wrap" fxLayoutAlign="center center">
+        <div *ngFor="let theory of theoriesTab"
+             style="width: 235px; height: 225px; padding: 12px; margin: 15px 3% 15px 3%; border-radius: 4px;"
+             class="smallShadow"
+             fxLayout="column"
+             fxLayoutAlign="center center">
+          <img [src]="theory.icon" style="height: 35px; padding-bottom: 10px">
+          <p class="boldMont noMargin blackColor font18px"
+             style="text-align: center; padding-bottom: 5px">{{ theory.title | translate}}</p>
+          <p class="regularMont noMargin grayColor font14px"
+             style="text-align: center">{{ theory.description | translate}}</p>
+        </div>
+      </div>
+
+      <div style="height: 30px"></div>
+      <div fxLayoutAlign="center center">
+        <button class="greenButton semiBoldMont font16px whiteColor"
+                style="height: 50px; width: 250px"
+                (click)="goToResearch()"
+        >{{'lp2.landing.learnMoreButton' | translate }}</button>
+      </div>
+    </div>
+  </div>
+
+  <!-----testimonials---->
+  <app-testimonials></app-testimonials>
+
+  <!--Support Part-->
+  <div class="whiteBg" fxLayoutAlign="center start" style="padding-bottom: 50px; padding-top: 50px">
+    <div fxFlex="90">
+      <h1 class="boldMont noMargin blackColor font30px"
+          ngStyle.xs="width: 100%; text-align: center;"
+          ngStyle.sm="width: 80%; margin: 0 auto; text-align: center;"
+          ngStyle.gt-sm="width: 760px; margin: 0 auto; text-align: center;">
+        {{'lp2.landing.supportPart.title' | translate}}
+      </h1>
+      <div style="height: 10px;"></div>
+      <h1 class="regularMont noMargin grayColor font18px"
+          ngStyle.xs="width: 100%; text-align: center;"
+          ngStyle.sm="width: 80%; margin: 0 auto; text-align: center;"
+          ngStyle.gt-sm="width: 760px; margin: 0 auto; text-align: center;">
+        {{'lp2.landing.supportPart.description' | translate}}
+      </h1>
+      <div style="height: 30px;"></div>
+      <div fxLayoutAlign="center center">
+        <div fxFlex.gt-sm="250px" fxFlex.lt-md="40">
+          <img src="../../../../assets/newWebsite/InnovationCenter.svg">
+        </div>
+        <div fxFlex="5"></div>
+        <div fxFlex.gt-sm="250px" fxFlex.lt-md="40">
+          <img src="../../../../assets/newWebsite/TechDevFund.svg">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</div>

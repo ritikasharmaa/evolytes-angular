@@ -1,0 +1,17 @@
+.borderRadiusLeft {
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.borderRadiusRight {
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.borderRight {
+  border-right: 1px black dashed;
+}
+
+.borderLeft {
+  border-left: 1px black dashed;
+}

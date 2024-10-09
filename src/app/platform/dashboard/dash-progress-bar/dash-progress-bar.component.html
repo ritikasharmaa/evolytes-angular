@@ -1,0 +1,29 @@
+<div style="height: 100%; border-radius: 4px;" class="whiteBg defaultShadow">
+  <div style="height: 40px; border-top-left-radius: 4px;" fxLayoutAlign="start center" class="bgTitle">
+    <div fxFlex="20px"></div>
+    <p class="font16px grayColor noMargin boldMont centerAlign"
+       style="line-height: 40px; text-align: center;">
+      {{ 'dashboard.columnProgressTitle' | translate }}
+    </p>
+  </div>
+  <div class="defaultScrollBar scrollBarGreenThumb" style="height: calc(100% - 50px); overflow-y: scroll;">
+    <div fxFlex="15px"></div>
+    <div fxFlex>
+      <div style="height: 10px;"></div>
+      <div style="display: block; width: calc(100% - 40px); height: calc(100% - 40px);"
+           *ngIf="datasets.length > 0">
+        <canvas baseChart
+                width="100%"
+                height="100%"
+                [datasets]="datasets"
+                [labels]="barChartLabels"
+                [options]="barChartOptions"
+                [legend]="barChartLegend"
+                [chartType]="barChartType">
+        </canvas>
+      </div>
+    </div>
+    <div fxFlex="15px"></div>
+  </div>
+  <div style="height: 10px"></div>
+</div>

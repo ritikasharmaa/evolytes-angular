@@ -1,0 +1,52 @@
+
+<div style="width: 100%; height: 100px;" fxLayoutAlign="start center">
+  <div fxFlex="50px">
+
+  </div>
+  <div fxFlex fxLayoutAlign="center center">
+    <button class="blueButton semiBoldMont font14px whiteColor"
+            id="btn-prev"
+            fxFlex="8px 16px"
+            style="height: 40px; width: 40px;   visibility: hidden;"
+            (click)="previousPage()"
+
+            type="submit">&laquo;</button>
+
+    <div  *ngFor="let number of pagesNumbers">
+
+      <div fxFlex="10px"></div>
+      <div *ngIf="getCurrentPage() === number ; else notCurrent">
+        <button class="blueButton semiBoldMont font14px whiteColor"
+                fxFlex="8px 16px"
+                style="height: 40px; width: 40px"
+                disabled="true"
+                type="submit">{{number}}</button>
+      </div>
+
+      <ng-template #notCurrent>
+        <div>
+        <button class="blueButton semiBoldMont font14px whiteColor"
+                fxFlex="8px 16px"
+                style="height: 40px; width: 40px"
+                (click)="setCurrentPage(number)"
+                type="submit">{{number}}</button>
+        </div>
+      </ng-template>
+    </div>
+      <div fxFlex="10px"></div>
+      <button class="blueButton semiBoldMont font14px whiteColor"
+              id="btn-next"
+              fxFlex="8px 16px"
+              style="height: 40px; width: 40px"
+              (click)="nextPage()"
+              type="submit">&raquo;</button>
+
+  </div>
+  <div fxFlex="50px">
+
+  </div>
+</div>
+
+
+
+

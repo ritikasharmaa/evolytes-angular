@@ -1,0 +1,72 @@
+<div>
+  <div style="height: 50px" fxLayoutAlign="center center">
+    <p class="semiBoldMont font18px blackColor noMargin">[{{question.model.firstRange.getRange()}}]
+      + {{getOutcomeString()}} = [{{question.model.total.getRange()}}]</p>
+  </div>
+  <div>
+    <div fxFlex="20px"></div>
+    <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+      <div fxFlex>
+        <app-evo-reusable-range [title]="'First Range'"
+                                [range]="question.model.firstRange">
+        </app-evo-reusable-range>
+        <div style="height: 5px;"></div>
+      </div>
+      <div fxFlex="20px" fxFlex.xs="10px"></div>
+      <div fxFlex>
+        <app-evo-reusable-range [title]="'Total Range'"
+                                [range]="question.model.total">
+        </app-evo-reusable-range>
+        <div style="height: 5px;"></div>
+      </div>
+    </div>
+    <div fxFlex="20px"></div>
+  </div>
+  <div style="height: 20px" ngStyle.lt-md="height: 10px;"></div>
+  <div>
+    <div fxFlex="20px"></div>
+    <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+      <div fxFlex>
+        <div style="height: 65px">
+          <app-evo-dropdown [list]="QuestionModel.ImageTypes.dropdownList()"
+                            [title]="'Image Type One'"
+                            [(ngModel)]="question.model.imageTypeOne">
+          </app-evo-dropdown>
+        </div>
+        <div style="height: 10px"></div>
+        <div>
+          <app-evo-input [title]="'Minimum Outcome'"
+                         [placeholderText]="'Min Outcome'"
+                         [inputType]="'number'"
+                         [(ngModel)]="question.model.minOutcome">
+          </app-evo-input>
+        </div>
+        <div style="height: 10px"></div>
+        <div>
+          <app-evo-input [title]="'Maximum Outcome'"
+                         [placeholderText]="'Max Outcome'"
+                         [inputType]="'number'"
+                         [(ngModel)]="question.model.maxOutcome">
+          </app-evo-input>
+        </div>
+        <div style="height: 10px"></div>
+        <div *ngIf="question.answerType === QuestionModel.AnswerTypes.multipleChoice">
+          <app-evo-input [title]="'Number of Answers'"
+                         [inputType]="'number'"
+                         [(ngModel)]="question.model.numAnswers">
+          </app-evo-input>
+        </div>
+      </div>
+      <div fxFlex="20px" fxFlex.xs="10px"></div>
+      <div fxFlex>
+        <div>
+          <app-evo-reusable-range [title]="'Answers Range'"
+                                  [range]="question.model.possibleAnswers">
+          </app-evo-reusable-range>
+        </div>
+      </div>
+    </div>
+    <div fxFlex="20px"></div>
+  </div>
+  <div style="height: 20px"></div>
+</div>

@@ -1,0 +1,62 @@
+<div fxFlex="100"
+     ngClass.gt-sm="whiteBg"
+     class="noScrollBar"
+     style="height: 100%;">
+  <div class="noScrollBar" style="height: calc(100% - 35px); overflow-y: scroll;"
+       ngStyle.lt-md="height: 100%; width: 100%;">
+    <div style="height: 30px" ngStyle.lt-md="height: 10px"></div>
+    <div fxLayoutAlign="center start" fxHide.lt-md="true">
+      <p class="semiBoldMont font18px blackColor noMargin">Skill Groups filters</p>
+    </div>
+
+    <div style="height: 20px" ngStyle.lt-md="height: 5px"></div>
+
+    <div fxLayout="column" style="height: 89%">
+      <div>
+        <div fxLayoutAlign.lt-md="center center">
+          <div fxFlex="30px" fxFlex.lt-md="5px"></div>
+          <app-evo-input ngStyle.lt-md="width: 250px;"
+                         [showTitle]="false"
+                         placeholderText="Skill group name"
+                         [value]="filter.search"
+                         (inputChangedEvent)="filter.search = $event">
+          </app-evo-input>
+          <div fxFlex="30px" fxFlex.lt-md="10px"></div>
+        </div>
+
+        <div style="height: 20px" ngStyle.lt-md="height: 10px"></div>
+
+
+        <div style="height: 40px" ngStyle.lt-md="height: 10px"></div>
+
+        <div fxLayout="row" fxLayoutAlign="center end" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center">
+          <div fxFlex fxHide.lt-md="true"></div>
+          <div fxLayout="row" fxLayoutAlign="center end" fxFlex.lt-md="40px;" ngStyle.lt-md="width: 195px">
+            <div fxFlex="120px" fxFlex.lt-md="95px">
+              <div style="height: 6px;" fxHide.lt-md="true"></div>
+              <button class="redButton whiteColor semiBoldMont font14px"
+                      style="height: 40px; width: 100%;"
+                      (click)="onCancelClicked()">
+                Cancel
+              </button>
+            </div>
+
+            <div fxFlex="5px" fxFlex.lt-md="5px"></div>
+
+            <div fxFlex="120px" fxFlex.lt-md="95px">
+              <div style="height: 6px;" fxHide.lt-md="true"></div>
+              <button class="greenButton whiteColor semiBoldMont font14px"
+                      style="height: 40px; width: 100%;"
+                      (click)="onValidateClicked()">
+                Filter
+              </button>
+            </div>
+
+            <div fxFlex fxHide.lt-md="true"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

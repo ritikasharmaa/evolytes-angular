@@ -1,0 +1,178 @@
+<div style="height: 100%;" fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="center center">
+
+  <!-- Mobile Layout -->
+  <div fxHide.gt-sm="true" style="width: 100%; height: 100%;">
+    <div style="height: 10px;"></div>
+    <!-- Header -->
+    <div class="whiteBg defaultShadow" style="height: 60px; width: 95%; border-radius: 12px; margin: 0 auto;">
+      <div fxFlex="50" fxLayoutAlign="start center">
+        <div style="height: 40px;">
+          <div fxFlex="20px"></div>
+          <p class="font16px grayColor noMargin boldMont centerAlign"
+             style="line-height: 40px;">
+            {{ 'sidebar.answers' | translate }}
+          </p>
+        </div>
+      </div>
+      <div fxFlex="50" fxLayoutAlign="end center">
+        <div class="smallShadow pointer bgWhiteHoverColor" fxLayoutAlign="center center"
+             style="width: 140px; height: 40px; border-radius: 6px;" (click)="onButtonClick()">
+          <p class="semiBoldMont font14px noMargin">{{ 'reusable.filters' | translate }}</p>
+          <div fxFlex="5px"></div>
+          <img [src]="imageType()" style="width: 16px; height: 16px; object-fit: contain;">
+        </div>
+        <div fxFlex="10px"></div>
+      </div>
+    </div>
+    <div style="height: 10px;"></div>
+    <div style="height: calc(100% - 80px);">
+      <app-answers-list [filterQuery]="filter"
+                        *ngIf="!isFiltersVisible">
+      </app-answers-list>
+      <app-platform-answer-filter [filter]="filter"
+                                  (valueChanged)="filter = $event; isFiltersVisible = false;"
+                                  *ngIf="isFiltersVisible">
+      </app-platform-answer-filter>
+    </div>
+  </div>
+  <!-- Desktop Screens -->
+  <div style="width: 100%; height: 100%;" fxHide.lt-md="true">
+
+    <app-answers-list [filterQuery]="filter"
+                      fxFlex>
+    </app-answers-list>
+    <div class="whiteBg" style="height: 100%;" fxFlex="300px">
+      <app-platform-answer-filter [filter]="filter"
+                                  (valueChanged)="filter = $event">
+      </app-platform-answer-filter>
+    </div>
+  </div>
+
+  <!--
+  <div fxFlex.xs="10px"></div>
+  <div *ngIf="isFiltersVisible && mobile" fxHide.gt-xs fxFlex.xs="85" style="width: 100%;">
+    <ng-container [ngTemplateOutlet]="filters">
+    </ng-container>
+  </div>
+
+  <div *ngIf="!isFiltersVisible && mobile" fxFlex.xs="85" fxHide.gt-xs ngStyle.xs="width:100%;">
+    <ng-container [ngTemplateOutlet]="answers">
+    </ng-container>
+  </div>
+
+  <div *ngIf="!mobile" fxFlex fxHide.xs>
+    <ng-container [ngTemplateOutlet]="answers">
+    </ng-container>
+  </div>
+
+  <div class="whiteBg" style="height: 100%;" fxFlex.lt-md="200px" fxFlex.md="260px" fxFlex.gt-md="320px"
+       fxHide.xs="true">
+    <ng-container [ngTemplateOutlet]="filters">
+    </ng-container>
+  </div>
+
+  <ng-template #answers>
+    <app-answers-list
+      [filterQuery]="filter"
+      [fxLayoutLtLg]="'row'"
+      [fxFlexLtLg]="'50'"
+      [fxLayoutLtMd]="'column'"
+      [fxFlexLtMd]="'100'">
+    </app-answers-list>
+  </ng-template>
+
+  <ng-template #filters>
+    <div class="defaultScrollBar scrollBarGreenThumb" style="height: calc(100% - 60px); overflow-y: scroll;"
+         ngStyle.xs="overflow-y: visible;">
+      <div style="height: 30px;"></div>
+      <div>
+        <div style="height: 60px;" fxLayoutAlign="center start">
+          <app-evo-dropdown fxFlex="80"
+                            title="{{ 'answers.dateFilter' | translate }}"
+                            [titleColor]="'#28A745'"
+                            [list]="dateFilterList"
+                            [currentValue]="currentDateFilter"
+                            (valueChangedEvent)="updateDateFilter($event)">
+          </app-evo-dropdown>
+        </div>
+        <div *ngIf="showStartDate()">
+          <div style="height: 15px"></div>
+          <div fxLayoutAlign="center start">
+            <div fxFlex="80" fxLayoutAlign="end start">
+              <app-evo-input-date fxFlex="90"
+                                  title="{{ 'answers.startDate' | translate }}"
+                                  [titleColor]="'#28A745'"
+                                  [placeholderText]="'dd/mm/yyyy'"
+                                  (inputChangedEvent)="updateStartDate($event)">
+              </app-evo-input-date>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="showEndDate()">
+          <div style="height: 15px"></div>
+          <div fxLayoutAlign="center start">
+            <div fxFlex="80" fxLayoutAlign="end start">
+              <app-evo-input-date fxFlex="90"
+                                  title="{{ 'answers.endDate' | translate }}"
+                                  [titleColor]="'#28A745'"
+                                  [placeholderText]="'dd/mm/yyyy'"
+                                  (inputChangedEvent)="updateEndDate($event)">
+              </app-evo-input-date>
+            </div>
+          </div>
+        </div>
+        <div style="height: 20px"></div>
+        <div style="height: 60px" fxLayoutAlign="center start">
+          <app-evo-dropdown fxFlex="80"
+                            title="{{ 'answers.category' | translate }}"
+                            [titleColor]="'#009CCC'"
+                            [list]="categoryFilterList"
+                            [currentValue]="currentCategory"
+                            (valueChangedEvent)="updateCurrentCategory($event)">
+          </app-evo-dropdown>
+        </div>
+        <div style="height: 20px"></div>
+        <div style="height: 60px" fxLayoutAlign="center start">
+          <app-evo-dropdown fxFlex="80"
+                            title="{{ 'answers.answer' | translate }}"
+                            [titleColor]="'#9B59B6'"
+                            [list]="isCorrectFilterList"
+                            [currentValue]="currentIsCorrect"
+                            (valueChangedEvent)="updateIsCorrect($event)">
+          </app-evo-dropdown>
+        </div>
+        <div style="height: 20px"></div>
+        <div style="height: 60px" fxLayoutAlign="center start">
+          <app-evo-dropdown fxFlex="80"
+                            title="{{ 'answers.answerType' | translate }}"
+                            [titleColor]="'#F26522'"
+                            [list]="answerTypeFilterList"
+                            [currentValue]="currentAnswerType"
+                            (valueChangedEvent)="updateAnswerType($event)">
+          </app-evo-dropdown>
+        </div>
+        <div style="height: 20px"></div>
+        <div fxLayoutAlign="center start">
+
+        </div>
+      </div>
+    </div>
+    <div style="height: 60px;" fxLayoutAlign="space-around center">
+      <button fxFlex="35"
+              class="redButton defaultShadow"
+              style="height: 36px;"
+              (click)="clearFilter()"
+              fxLayoutAlign="center center">
+        <p class="semiBoldMont font12px whiteColor noMargin">{{ 'answers.clear' | translate }}</p>
+      </button>
+      <button fxFlex="35"
+              class="greenButton defaultShadow"
+              style="height: 36px;"
+              (click)="updateFilter(); onButtonClick()"
+              fxLayoutAlign="center center">
+        <p class="semiBoldMont font12px whiteColor noMargin">{{ 'answers.apply' | translate }}</p>
+      </button>
+    </div>
+  </ng-template>
+  -->
+</div>

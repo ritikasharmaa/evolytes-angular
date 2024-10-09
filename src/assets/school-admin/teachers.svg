@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="21px" viewBox="0 0 26 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Light</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Sidebar---Admin---Teachers" transform="translate(-27.000000, -207.000000)" stroke="#54676E">
+            <g id="Sidebar">
+                <g id="Teachers" transform="translate(27.000000, 203.000000)">
+                    <g id="Light" transform="translate(0.000000, 4.000000)">
+                        <circle id="Oval" cx="22.2083333" cy="5.14583333" r="2.4375"></circle>
+                        <path d="M22.2083333,8.66666667 C20.4134079,8.66666667 18.9583333,10.1217412 18.9583333,11.9166667 L18.9583333,14.625 L20.5833333,14.625 L21.125,19.5 L23.2916667,19.5 L23.8333333,14.625 L25.4583333,14.625 L25.4583333,11.9166667 C25.4583333,10.1217412 24.0032588,8.66666667 22.2083333,8.66666667 Z" id="Shape"></path>
+                        <circle id="Oval" cx="3.79166667" cy="5.14583333" r="2.4375"></circle>
+                        <path d="M3.79166667,8.66666667 C1.99674123,8.66666667 0.541666667,10.1217412 0.541666667,11.9166667 L0.541666667,14.625 L2.16666667,14.625 L2.70833333,19.5 L4.875,19.5 L5.41666667,14.625 L7.04166667,14.625 L7.04166667,11.9166667 C7.04166667,10.1217412 5.5865921,8.66666667 3.79166667,8.66666667 Z" id="Shape"></path>
+                        <g id="_Group_" transform="translate(8.666667, 0.000000)">
+                            <circle id="Oval" cx="4.33333333" cy="3.52083333" r="2.97916667"></circle>
+                            <path d="M8.125,11.375 C8.12499996,9.28092035 6.42741298,7.58333341 4.33333333,7.58333341 C2.23925369,7.58333341 0.541666711,9.28092035 0.541666667,11.375 L0.541666667,14.625 L2.25658333,14.625 L2.70833333,20.0416667 L5.95833333,20.0416667 L6.41008333,14.625 L8.125,14.625 L8.125,11.375 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

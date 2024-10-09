@@ -1,0 +1,106 @@
+<app-land2-nav-header [hidden]="hidden" (onBurgerClicked)="setHidden()"></app-land2-nav-header>
+<div id="scroller" class="landcontent content" style="overflow-y: scroll; height: calc(100% - 80px);" appEgg>
+  <!-- To adapt with the burger menu of the navbarre -->
+  <div [ngClass]="{burgerMenu: !hidden}"></div>
+
+  <!-- banner -->
+  <div style="width: 100%;" ngStyle.xs="height: 200px;"
+       ngStyle.sm="height: 260px;"
+       ngStyle.md="height: 300px"
+       ngStyle.lg="height: 420px"
+       ngStyle.xl="height: 560px" fxLayoutAlign="center start">
+    <img src="../../../../assets/land-images/Banner.png" style="width: 100%; height: 100%; object-fit: cover; object-position: bottom">
+  </div>
+
+  <div style="height: 20px;"></div>
+
+  <!--menu-->
+  <div fxLayoutAlign="center start" fxHide.xs="true">
+    <div fxFlex.lt-md="80" fxFlex.gt-sm="800px" fxLayoutAlign="space-between center">
+      <div fxFlex.xs="120px"
+           fxFlex="180px"
+           fxLayout="column"
+           fxLayoutAlign="center center"
+           [ngClass]="{underline: currentFeature == 'books', noUnderline: currentFeature !== 'books'}"
+           (click)="setCurrentFeature('books')"
+           style="cursor: pointer;" class="shadowHover">
+
+        <img src="../../../../assets/land-images/Books.png"
+             ngStyle.lt-sm="height: 80px; width: 80px;"
+             ngStyle.gt-xs="height: 150px; width: 150px;"
+             style="object-fit: contain;">
+
+        <p class="semiBoldMont blackColor noMargin" ngClass.xs="font14px" ngClass.sm="font16px">
+          {{ 'lp2.features.books.titleMenu' | translate }}
+        </p>
+
+        <div style="height: 16px"></div>
+      </div>
+
+      <div fxFlex.xs="120px"
+           fxFlex="180px"
+           fxLayout="column"
+           fxLayoutAlign="center center"
+           [ngClass]="{underline: currentFeature == 'game', noUnderline: currentFeature !== 'game'}"
+           (click)="setCurrentFeature('game')"
+           style="cursor: pointer;"
+           class="shadowHover">
+
+        <img src="../../../../assets/land-images/battle-monster-ipad.png"
+             style="object-fit: contain;"
+             ngStyle.xs="height: 80px; width: 80px;"
+             ngStyle.gt-xs="height: 135px; width: 135px;">
+
+
+        <div style="height: 15px"></div>
+        <p class="semiBoldMont blackColor noMargin" ngClass.xs="font14px" ngClass.sm="font16px">
+          {{ 'lp2.footer.game' | translate }}
+        </p>
+
+        <div style="height: 16px"></div>
+      </div>
+
+      <div fxFlex.xs="120px"
+           fxFlex="180px"
+           fxLayout="column"
+           fxLayoutAlign="center center"
+           [ngClass]="{underline: currentFeature == 'monitor', noUnderline: currentFeature !== 'monitor'}"
+           (click)="setCurrentFeature('monitor')"
+           style="cursor: pointer;"
+           class="shadowHover">
+
+        <img src="../../../../assets/land-images/MonitorAllDevices.png"
+             style="object-fit: contain;"
+             ngStyle.xs="height: 80px; width: 80px;"
+             ngStyle.gt-xs="height: 150px; width: 150px;">
+
+
+        <p class="semiBoldMont blackColor noMargin" ngClass.xs="font14px" ngClass.sm="font16px">
+          {{ 'lp2.landing.evolytesPart.monitorTitle' | translate }}
+        </p>
+
+        <div style="height: 16px"></div>
+      </div>
+    </div>
+  </div>
+  <div style="height: 60px;" fxHide.gt-xs="true" fxLayoutAlign="center start">
+    <div fxFlex="80">
+      <app-evo-dropdown [list]="selectionDropdown"
+                        [currentValue]="currentFeature"
+                        [semibold]="true"
+                        [iconContainerWidth]="'70px'"
+                        [leftIndent]="'2px'"
+                        [showIcon]="true"
+                        [fontSize]="'14px'"
+                        [containerHeight]="'60px'"
+                        [rowHeight]="'60px'"
+                        [iconStyle]="{ width: '40px', height: '40px' }" (valueChangedEvent)="setCurrentFeature($event)">
+      </app-evo-dropdown>
+    </div>
+  </div>
+  <div ngStyle.lt-md="height: 40px;" ngStyle.gt-sm="height: 60px"></div>
+
+  <router-outlet></router-outlet>
+
+  <app-footer></app-footer>
+</div>

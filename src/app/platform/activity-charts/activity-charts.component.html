@@ -1,0 +1,60 @@
+<div style="width: 100%; height: 100%;">
+  <div class="whiteBg defaultShadow" style="width: 100%; height: 100%; border-radius: 8px;">
+    <div fxLayout="row">
+      <div style="height: 40px; border-top-left-radius: 8px;" fxFlex
+           fxLayoutAlign="start center"
+           class="bgTitleLittle">
+        <div fxFlex="20px"></div>
+        <p class="font16px noMargin boldMont centerAlign"
+           style="line-height: 40px; text-align: center;">
+          {{ 'dashboard.activity' | translate }}
+        </p>
+      </div>
+      <div style="height: 40px" fxFlex="220px" fxLayoutAlign="center start">
+        <app-evo-dropdown fxFlex="90"
+                          [list]="optionsTime"
+                          [containerHeight]="'30px'"
+                          [rowHeight]="'30px'"
+                          [fontSize]="'12px'"
+                          [leftIndent]="'10px'"
+                          [layoutAlign]="'end center'"
+                          [semibold]="true"
+                          [textColor]="'grayColor'"
+                          [currentValue]="optionTimeSelected"
+                          (valueChangedEvent)="changeOptionTime($event);">
+        </app-evo-dropdown>
+      </div>
+      <div fxFlex.gt-sm="10px" fxFlex.lt-md="5px"></div>
+    </div>
+    <div fxLayout="row"
+         style="height: calc(100% - 97px);"
+         fxLayoutAlign="center start">
+      <div ngStyle.gt-sm="display: block; width: calc(100% - 50px); height: 100%;"
+           ngStyle.lt-md="display: block; width: calc(100% - 15px); height: 100%;"
+           *ngIf="datasets.length > 0">
+        <canvas baseChart
+                width="100%"
+                height="100%"
+                [datasets]="datasets"
+                [options]="barChartOptions"
+                [labels]="barChartLabels"
+                [chartType]="barChartType">
+        </canvas>
+      </div>
+    </div>
+    <div style="height: 19px;"></div>
+    <div style="height: 38px" fxLayoutAlign="center start">
+      <app-evo-dropdown fxFlex="200px" fxFlex.gt-md="30"
+                        [list]="optionsActivity"
+                        [containerHeight]="'30px'"
+                        [rowHeight]="'30px'"
+                        [layoutAlign]="'center center'"
+                        [fontSize]="'12px'"
+                        [semibold]="true"
+                        [textColor]="'grayColor'"
+                        [currentValue]="optionActivitySelected"
+                        (valueChangedEvent)="optionActivitySelected = $event">
+      </app-evo-dropdown>
+    </div>
+  </div>
+</div>

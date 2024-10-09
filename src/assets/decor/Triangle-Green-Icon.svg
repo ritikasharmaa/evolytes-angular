@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="38px" viewBox="0 0 32 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Triangle</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.601339286">
+        <g id="Tablet_Overview" transform="translate(-203.000000, -3.000000)" stroke="#79C570" stroke-width="3">
+            <g id="Header" transform="translate(-17.000000, -25.000000)">
+                <g id="Background-Decorations">
+                    <polygon id="Triangle" transform="translate(230.486773, 44.488983) rotate(-21.000000) translate(-230.486773, -44.488983) " points="230.488774 30.1769869 244.794926 58.799035 216.178619 58.8009789"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,166 @@
+<div class="whiteBg"
+     style="top: 60px; left: 0; right: 0; bottom: 0; position: absolute; width: 220px; height: calc(100% - 60px); z-index: 500;"
+     fxHide.gt-xs="true"
+     *ngIf="mobileSv.isVisible">
+  <div class="defaultScrollBar scrollBarBlueThumb" style="height: calc(100% - 50px); overflow-y:scroll;">
+    <div style="height: 20px"></div>
+    <div class="selectItemInactive"
+         style="height: 40px;"
+         (click)="onLinkClicked()"
+         routerLink="/admin/pricing"
+         routerLinkActive="selectItemOrangeActive" fxLayoutAlign="center center">
+      <div fxFlex="15px"></div>
+      <div fxFlex="40px" fxLayoutAlign="center center">
+        <img src="../../../assets/admin/pricing-icon.png" style="height: 30px; width: 100%;">
+      </div>
+      <div fxFlex="10px"></div>
+      <div fxFlex fxLayoutAlign="start center">
+        <p class="regularMont font14px grayColor noMargin">Pricing</p>
+      </div>
+    </div>
+    <div style="height: 20px;"></div>
+    <div class="selectItemInactive"
+         style="height: 40px;"
+         (click)="onLinkClicked()"
+         routerLink="/admin/books"
+         routerLinkActive="selectItemRedActive"
+         fxLayoutAlign="center center">
+      <div fxFlex="15px"></div>
+      <div fxFlex="40px"
+           fxLayoutAlign="center center">
+        <img style="height: 25px; width: 100%;" src="../../../assets/admin/book-open.png">
+      </div>
+      <div fxFlex="10px"></div>
+      <div fxFlex fxLayoutAlign="start center">
+        <p class="regularMont font14px grayColor noMargin">Books</p>
+      </div>
+    </div>
+    <div style="height: 20px;"></div>
+    <div class="selectItemInactive"
+         style="height: 40px;"
+         (click)="onLinkClicked()"
+         routerLink="/admin/users"
+         routerLinkActive="selectItemGreenActive"
+         fxLayoutAlign="center center">
+      <div fxFlex="15px"></div>
+      <div fxFlex="40px"
+           fxLayoutAlign="center center">
+        <img style="height: 25px; width: 100%;" src="../../../assets/admin/users-gray-icon.png">
+      </div>
+      <div fxFlex="10px"></div>
+      <div fxFlex fxLayoutAlign="start center">
+        <p class="regularMont font14px grayColor noMargin">Users</p>
+      </div>
+    </div>
+    <div style="height: 20px;"></div>
+    <div class="selectItemInactive"
+         style="height: 50px;"
+         (click)="onLinkClicked()"
+         routerLink="/admin/students"
+         routerLinkActive="selectItemYellowActive"
+         fxLayoutAlign="center center">
+      <div fxFlex="15px"></div>
+      <div fxFlex="40px" fxLayoutAlign="center center">
+        <img style="height: 24px; width: 100%;" src="../../assets/admin/school.png">
+      </div>
+      <div fxFlex="10px"></div>
+      <div fxFlex fxLayoutAlign="start center">
+        <p class="regularMont font14px grayColor noMargin">Students</p>
+      </div>
+    </div>
+    <div style="height: 20px"></div>
+    <div class="selectItemInactive"
+         style="height: 50px"
+         (click)="onLinkClicked()"
+         routerLink="/admin/questions"
+         routerLinkActive="selectItemBlueActive"
+         fxLayoutAlign="center center">
+      <div fxFlex="15px"></div>
+      <div fxFlex="40px" fxLayoutAlign="center center">
+        <img style="height: 25px; width: 100%;" src="'../../assets/admin/question-gray-icon.png">
+      </div>
+      <div fxFlex="10px"></div>
+      <div fxFlex fxLayoutAlign="start center">
+        <p class="regularMont font14px grayColor noMargin">Questions</p>
+      </div>
+    </div>
+    <div style="height: 20px"></div>
+    <div class="selectItemInactive"
+         style="height: 40px;"
+         (click)="onLinkClicked()"
+         routerLink="/admin/skillGroups"
+         routerLinkActive="selectItemPurpleActive"
+         fxLayoutAlign="center center">
+      <div fxFlex="15px"></div>
+      <div fxFlex="40px" fxLayoutAlign="center center">
+        <img style="height: 25px; width: 100%;" src="'../../assets/admin/skillGroup-icon.png">
+      </div>
+      <div fxFlex="10px"></div>
+      <div fxFlex fxLayoutAlign="start center">
+        <p class="regularMont font14px grayColor noMargin">Skill Groups</p>
+      </div>
+    </div>
+    <div style="height: 20px"></div>
+    <div class="selectItemInactive"
+         style="height: 40px;"
+         (click)="onLinkClicked()"
+         routerLink="/admin/orders"
+         routerLinkActive="selectItemYellowActive"
+         fxLayoutAlign="center center">
+      <div fxFlex="15px"></div>
+      <div fxFlex="40px" fxLayoutAlign="center center">
+        <img style="height: 24px; width: 100%;" src="../../assets/admin/order-icon.png">
+      </div>
+      <div fxFlex="10px"></div>
+      <div fxFlex fxLayoutAlign="start center">
+        <p class="regularMont font14px grayColor noMargin">Orders</p>
+      </div>
+    </div>
+    <div style="height: 20px;"></div>
+    <div class="selectItemInactive"
+         style="height: 40px;"
+         (click)="onLinkClicked()"
+         routerLink="/admin/schools"
+         routerLinkActive="selectItemOrangeActive"
+         fxLayoutAlign="center center">
+      <div fxFlex="15px"></div>
+      <div fxFlex="40px" fxLayoutAlign="center center">
+        <img style="height: 24px; width: 100%;" src="../../assets/admin/school.png">
+      </div>
+      <div fxFlex="10px"></div>
+      <div fxFlex fxLayoutAlign="start center">
+        <p class="regularMont font14px grayColor noMargin">Schools</p>
+      </div>
+    </div>
+    <div style="height: 20px"></div>
+    <div class="selectItemInactive"
+         style="height: 50px;"
+         (click)="onLinkClicked()"
+         routerLink="/admin/objectives"
+         routerLinkActive="selectItemYellowActive"
+         fxLayoutAlign="center center">
+      <div fxFlex="15px"></div>
+      <div fxFlex="40px" fxLayoutAlign="center center">
+        <img style="height: 24px; width: 100%;" src="../../../assets/admin/icon-goal.png">
+      </div>
+      <div fxFlex="10px"></div>
+      <div fxFlex fxLayoutAlign="start center">
+        <p class="regularMont font14px grayColor noMargin">Objectives</p>
+      </div>
+    </div>
+    <div style="height: 20px"></div>
+    <div class="selectItemInactive"
+         style="height: 50px;"
+         (click)="onShowUserViewClicked() && onLinkClicked()"
+         fxLayoutAlign="center center">
+      <div fxFlex="15px"></div>
+      <div fxFlex="40px" fxLayoutAlign="center center">
+        <img style="height: 20px; width: 100%;" src="../../../assets/sidebar/logout-icon.svg">
+      </div>
+      <div fxFlex="10px"></div>
+      <div fxFlex fxLayoutAlign="start center">
+        <p class="regularMont font14px grayColor noMargin">User View</p>
+      </div>
+    </div>
+  </div>
+</div>

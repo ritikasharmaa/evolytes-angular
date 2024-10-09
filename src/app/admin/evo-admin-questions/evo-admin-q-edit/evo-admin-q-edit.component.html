@@ -1,0 +1,327 @@
+<div class="defaultScrollBar scrollBarBlueThumb"
+     style="width: 100%; height: 100%; overflow-y: scroll;">
+  <div style="height: 20px"></div>
+  <div fxLayoutAlign="center center">
+    <p class="semiBoldMont blackColor font16px noMargin"
+       style="cursor: pointer;"
+       fxFlex.lt-md="94"
+       fxFlex.md="90"
+       fxFlex.gt-md="1000px"
+       (click)="onBackClicked()">< Back</p>
+  </div>
+  <div style="height: 20px;"></div>
+
+  <div fxLayoutAlign="center center">
+    <div class="whiteBg defaultShadow"
+         style="border-radius: 6px;"
+         fxFlex.lt-md="94"
+         fxFlex.md="90"
+         fxFlex.gt-md="1000px">
+      <div style="height: 10px;"></div>
+      <div>
+        <div fxFlex="20px"></div>
+        <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+          <div fxFlex>
+            <app-evo-input [placeholderText]="'Question Name'"
+                           [(ngModel)]="question.name">
+            </app-evo-input>
+          </div>
+          <div fxFlex="20px" fxFlex.lt-md="10px"></div>
+          <div fxFlex>
+            <div fxFlex fxLayoutAlign.xs="center center">
+              <div>
+                <div style="height: 6px"></div>
+                <button class="greenButton whiteColor semiBoldMont font14px"
+                        style="height: 40px; width: 120px;"
+                        (click)="onSaveClicked()">
+                  {{saveButtonTitle()}}
+                </button>
+              </div>
+            </div>
+            <div fxFlex="20px" fxFlex.lt-md="10px" *ngIf="isEditMode"></div>
+            <div fxFlex fxLayoutAlign.xs="center center" *ngIf="isEditMode">
+              <div>
+                <div style="height: 6px"></div>
+                <button class="redButton whiteColor semiBoldMont font14px"
+                        style="height: 40px; width: 120px;"
+                        (click)="onDeleteClicked()">
+                  Delete
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px;" ngStyle.lt-md="height: 10px;"></div>
+      <div>
+        <div fxFlex="20px"></div>
+        <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+          <div fxFlex>
+            <div fxFlex fxLayoutAlign.xs="center center">
+              <button class="semiBoldMont font14px whiteColor noMargin"
+                      style="height: 40px; width: 120px"
+                      [disabled]="isEditMode === false"
+                      [ngClass]="{ greenButton: question.isPublished === false, redButton: question.isPublished }"
+                      (click)="onPublishClicked()">
+                {{getPublishButtonTitle()}}
+              </button>
+            </div>
+            <div fxFlex="20px" fxFlex.lt-md="10px"></div>
+            <div fxFlex fxLayoutAlign.xs="center center">
+              <div>
+                <p class="semiBoldMont font12px grayColor noMargin">Rank</p>
+                <div fxLayoutAlign="start end" fxLayoutAlign.xs="center center">
+                  <p
+                    class="semiBoldMont font14px blackColor noMargin">{{question.decidedRankCountry.valueForCountry(UserModel.getAdminCountry())}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div fxFlex="20px" fxFlex.lt-md="10px"></div>
+          <div fxFlex>
+            <div fxFlex fxLayoutAlign.xs="center center">
+              <div>
+                <p class="semiBoldMont font12px grayColor noMargin">Ratio</p>
+                <div fxLayoutAlign="start end" fxLayoutAlign.xs="center center">
+                  <p
+                    class="semiBoldMont font14px blackColor noMargin">{{question.correctnessRatioPercentageString(UserModel.getAdminCountry())}}</p>
+                </div>
+              </div>
+            </div>
+            <div fxFlex="20px" fxFlex.lt-md="10px"></div>
+            <div fxFlex fxLayoutAlign.xs="center center">
+              <div>
+                <p class="semiBoldMont font12px grayColor noMargin">Num Answers</p>
+                <div fxLayoutAlign="start end" fxLayoutAlign.xs="center center">
+                  <p
+                    class="semiBoldMont font14px blackColor noMargin">{{question.numAnswers(UserModel.getAdminCountry()).toString(10)}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px" ngStyle.lt-md="height: 10px"></div>
+      <div style="height: 70px" ngStyle.xs="height: 140px;" fxLayoutAlign="center center">
+        <div fxFlex="20px"></div>
+        <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+          <div fxFlex>
+            <app-evo-input [value]="question._id" [title]="'_id'" [isDisabled]="true"></app-evo-input>
+          </div>
+          <div fxFlex="20px" fxFlex.lt-md="10px"></div>
+          <div fxFlex style="height: 65px;">
+            <app-evo-dropdown [title]="'Starter Question'" [list]="starterQuestionTypes"
+                              [currentValue]="getIsStarterQuestionString()"
+                              (valueChangedEvent)="setStarterQuestion($event)">
+            </app-evo-dropdown>
+          </div>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px" ngStyle.lt-md="height: 10px"></div>
+      <div fxLayoutAlign="center center">
+        <div fxFlex="20px"></div>
+        <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+          <div fxFlex style="height: 65px;">
+            <app-evo-dropdown [placeholderText]="'Topic'"
+                              [title]="'Topic'"
+                              [ngModel]="topic"
+                              (ngModelChange)="setTopic($event)"
+                              [isDisabled]="isEditMode"
+                              [list]="getTopics()">
+            </app-evo-dropdown>
+          </div>
+          <div fxFlex="20px" fxFlex.xs="10px"></div>
+          <div fxFlex style="height: 65px;">
+            <app-evo-dropdown [placeholderText]="'Category'"
+                              [title]="'Category'"
+                              [ngModel]="category"
+                              (ngModelChange)="setCategory($event)"
+                              [isDisabled]="isEditMode"
+                              [list]="getCategories()">
+            </app-evo-dropdown>
+          </div>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px" ngStyle.lt-md="height: 10px"></div>
+      <div fxLayoutAlign="center center">
+        <div fxFlex="20px"></div>
+        <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+          <div fxFlex style="height: 65px">
+            <app-evo-dropdown [placeholderText]="'Subcategory'"
+                              [title]="'Subcategory'"
+                              [ngModel]="subCategory"
+                              (ngModelChange)="setSubcategory($event)"
+                              [isDisabled]="isEditMode"
+                              [list]="getSubcategories()">
+            </app-evo-dropdown>
+          </div>
+          <div fxFlex="20px" fxFlex.xs="10px"></div>
+          <div fxFlex style="height: 65px">
+            <app-evo-lang-dropdown [type]="'country'"
+                                   [countryDropdownList]="countries"
+                                   [currentValue]="getAdminCountry()"
+                                   [isDisabled]="true">
+            </app-evo-lang-dropdown>
+          </div>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px" ngStyle.lt-md="height: 10px"></div>
+      <div fxLayoutAlign="center center">
+        <div fxFlex="20px"></div>
+        <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+          <div fxFlex style="height: 65px">
+            <app-evo-dropdown [placeholderText]="'Answer Type'"
+                              [title]="'Answer Type'"
+                              [(ngModel)]="question.answerType"
+                              [isDisabled]="isEditMode"
+                              [list]="answerTypes">
+            </app-evo-dropdown>
+          </div>
+          <div fxFlex="20px" fxFlex.xs="10px"></div>
+          <div fxFlex style="height: 65px">
+            <app-evo-dropdown [placeholderText]="'Representation'"
+                              [title]="'Representation'"
+                              [(ngModel)]="question.representation"
+                              [isDisabled]="isEditMode"
+                              [list]="getRepresentations()">
+            </app-evo-dropdown>
+          </div>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px" ngStyle.lt-md="height: 10px"></div>
+      <div fxLayoutAlign="center center">
+        <div fxFlex="20px"></div>
+        <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+          <div fxFlex style="height: 65px">
+            <app-evo-input title="Decided Rank"
+                           placeholderText="Decided Rank"
+                           inputType="number"
+                           [value]="question.decidedRankCountry.valueForCountry(UserModel.getAdminCountry())"
+                           (inputChangedEvent)="question.decidedRankCountry.setValueForCountry(UserModel.getAdminCountry(), $event)">
+            </app-evo-input>
+          </div>
+          <div fxFlex="20px" fxFlex.xs="10px"></div>
+          <div fxFlex style="height: 65px">
+          </div>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px;"></div>
+    </div>
+  </div>
+
+  <div style="height: 20px"></div>
+
+  <div fxLayoutAlign="center start">
+    <div class="whiteBg defaultShadow"
+         style="border-radius: 6px"
+         fxFlex.lt-md="94"
+         fxFlex.md="90"
+         fxFlex.gt-md="1000px">
+      <div style="height: 10px"></div>
+      <div *ngIf="subCategory === QuestionModel.SubCategoryTypes.countNumbers;">
+        <app-evo-count-numbers [question]="question"></app-evo-count-numbers>
+      </div>
+      <div *ngIf="subCategory === QuestionModel.SubCategoryTypes.countMultipleNumbers">
+        <app-evo-count-multiple-numbers [question]="question"></app-evo-count-multiple-numbers>
+      </div>
+      <div *ngIf="subCategory === QuestionModel.SubCategoryTypes.singleAddition">
+        <app-evo-single-addition [question]="question"></app-evo-single-addition>
+      </div>
+      <div *ngIf="subCategory === QuestionModel.SubCategoryTypes.singleSubtraction">
+        <app-evo-single-subtraction [question]="question"></app-evo-single-subtraction>
+      </div>
+      <app-evo-single-subtraction-needed-amount [question]="question"></app-evo-single-subtraction-needed-amount>
+      <div *ngIf="subCategory === QuestionModel.SubCategoryTypes.doubleAddition">
+        <app-evo-double-addition [question]="question"></app-evo-double-addition>
+      </div>
+      <div *ngIf="subCategory === QuestionModel.SubCategoryTypes.doubleSubtraction">
+        <app-evo-double-subtraction [question]="question"></app-evo-double-subtraction>
+      </div>
+      <div *ngIf="subCategory === QuestionModel.SubCategoryTypes.singleAdditionNeededAmount">
+        <app-evo-single-addition-needed-amount [question]="question"></app-evo-single-addition-needed-amount>
+      </div>
+      <div *ngIf="subCategory === QuestionModel.SubCategoryTypes.sizeComparisonNumbers">
+        <app-evo-size-comparison-numbers [question]="question"></app-evo-size-comparison-numbers>
+      </div>
+      <div *ngIf="subCategory === QuestionModel.SubCategoryTypes.sizeComparisonSymbols">
+        <app-evo-size-comparison-symbols [question]="question"></app-evo-size-comparison-symbols>
+      </div>
+      <div *ngIf="subCategory === QuestionModel.SubCategoryTypes.sizeComparisonWords">
+        <app-evo-size-comparison-words [question]="question"></app-evo-size-comparison-words>
+      </div>
+      <app-evo-shape-count [question]="question"></app-evo-shape-count>
+      <app-evo-shape-name-from-image [question]="question"></app-evo-shape-name-from-image>
+      <app-evo-shape-single-discrimination-count [question]="question"></app-evo-shape-single-discrimination-count>
+      <app-evo-image-pattern-single-fill [question]="question"></app-evo-image-pattern-single-fill>
+      <app-evo-number-pattern-single-fill [question]="question"></app-evo-number-pattern-single-fill>
+      <app-evo-repeated-addition [question]="question"></app-evo-repeated-addition>
+      <app-evo-unit-house [question]="question"></app-evo-unit-house>
+      <app-evo-single-multiplication [question]="question"></app-evo-single-multiplication>
+      <div style="height: 10px"></div>
+    </div>
+  </div>
+
+  <div style="height: 20px"></div>
+
+  <div fxLayoutAlign="center start">
+    <div class="whiteBg defaultShadow"
+         style="border-radius: 6px"
+         fxFlex.lt-md="94"
+         fxFlex.md="90"
+         fxFlex.gt-md="1000px">
+      <div style="height: 10px"></div>
+      <div style="height: 30px">
+        <div fxFlex="20px"></div>
+        <div fxFlex fxLayoutAlign="start center">
+          <p class="semiBoldMont font16px blackColor noMargin">Question Translated Title</p>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div>
+        <div fxFlex="20px"></div>
+        <app-evo-translated-input fxFlex [descr]="question.descriptions"
+                                  [cultures]="cultures">
+        </app-evo-translated-input>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 10px"></div>
+      <div style="height: 30px">
+        <div fxFlex="20px"></div>
+        <div fxFlex fxLayoutAlign="start center">
+          <p class="semiBoldMont font16px blackColor noMargin">Audio Help URLs</p>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div>
+        <div fxFlex="20px"></div>
+        <app-evo-translated-input fxFlex [descr]="question.audioHelp" [cultures]="cultures"></app-evo-translated-input>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 10px"></div>
+      <div style="height: 30px">
+        <div fxFlex="20px"></div>
+        <div fxFlex fxLayoutAlign="start center">
+          <p class="semiBoldMont font16px blackColor noMargin">Video Help URLs</p>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div>
+        <div fxFlex="20px"></div>
+        <app-evo-translated-input fxFlex [descr]="question.videoHelp" [cultures]="cultures"></app-evo-translated-input>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 10px"></div>
+    </div>
+
+  </div>
+
+  <div style="height: 40px"></div>
+
+</div>

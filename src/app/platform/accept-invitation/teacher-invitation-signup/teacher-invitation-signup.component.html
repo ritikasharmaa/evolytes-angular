@@ -1,0 +1,181 @@
+<app-modal></app-modal>
+<div style="height: 60px;">
+  <div fxFlex="20px"></div>
+  <div fxFlex.xs="80px" fxFlex="120px" (click)="navigateHome()" fxLayoutAlign="center start">
+    <img src="./assets/evolytes-vector.svg" style="height: 100%; width: 100%; cursor: pointer;">
+  </div>
+  <div fxFlex></div>
+</div>
+<div style="height: calc(100% - 60px); overflow-y: scroll;" class="noScrollBar"
+     [fxLayoutAlign]="state === States.CreateAccount || state === States.AlreadyLoggedIn ? 'center start' : 'center center'">
+  <div fxFlex.gt-md="900px"
+       fxFlex="90"
+       [ngStyle]="{'height': state === States.ExistButLoggedOut ? '90%' : ''}">
+    <div *ngIf="state === States.CreateAccount || state === States.AlreadyLoggedIn">
+      <div style="height: 30px;"></div>
+      <p class="boldMont font22px blackColor noMargin"
+         style="text-align: center;">{{ 'schoolInvitation.title' | translate }}</p>
+      <div style="height: 20px"></div>
+      <div fxLayoutAlign="center">
+        <div fxFlex.xs="80" fxFlex.gt-sm="400px" fxFlex.sm="300px" class="lightGrayBg2"
+             style="border-radius: 4px; height: 60px;" fxLayoutAlign="start center">
+          <div fxFlex="10px"></div>
+          <div class="greenBg" fxFlex="40px" style="height: 40px; border-radius: 4px;" fxLayoutAlign="center center">
+            <p class="boldMont font20px whiteColor noMargin">{{ getSchoolInitial() }}</p>
+          </div>
+          <div fxFlex="10px"></div>
+          <p class="semiBoldMont font16px blackColor noMargin">{{ getSchoolName() }}</p>
+          <div fxFlex="10px"></div>
+        </div>
+      </div>
+      <div style="height: 20px;"></div>
+      <div fxLayoutAlign="center start">
+        <div fxFlex="300px">
+          <p class="mediumMont font14px grayColor noMargin"
+             style="text-align: center;">{{ 'schoolInvitation.subtitle' | translate }}</p>
+          <div style="height: 16px"></div>
+          <div fxLayoutAlign="center start">
+            <div class="lightGrayBg2" style="height: 34px; border-radius: 4px;" fxLayoutAlign="start center">
+              <div fxFlex="20px"></div>
+              <p class="boldMont font16px blackColor noMargin"
+                 style="text-align: center;">{{ getAccessType() | translate }}</p>
+              <div fxFlex="20px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="height: 30px;"></div>
+    </div>
+    <!-- Create an account -->
+    <div *ngIf="state === States.CreateAccount"
+         fxLayoutAlign="center start">
+      <div fxFlex.xs="80" fxFlex="400px">
+        <app-evo-input title="{{ 'userSettings.emailTitle' | translate }}"
+                       placeholderText="{{ 'userSettings.emailPlaceholder' | translate }}" [value]="user.email"
+                       [isDisabled]="true"></app-evo-input>
+        <div style="height: 10px;"></div>
+        <app-evo-input title="{{ 'userSettings.firstNameTitle' | translate }}"
+                       placeholderText="{{ 'userSettings.firstNameTitle' | translate }}" [value]="user.firstName"
+                       (inputChangedEvent)="user.firstName = $event"></app-evo-input>
+        <div style="height: 10px;"></div>
+        <app-evo-input title="{{ 'userSettings.lastNameTitle' | translate }}"
+                       placeholderText="{{ 'userSettings.lastNameTitle' | translate }}" [value]="user.lastName"
+                       (inputChangedEvent)="user.lastName = $event"></app-evo-input>
+        <div style="height: 20px;"></div>
+        <p class="mediumMont font14px grayColor noMargin">{{ 'signup.passwordCriteria' | translate }}</p>
+        <div style="height: 10px;"></div>
+        <app-evo-input title="{{ 'signup.passwordTitle' | translate }}"
+                       placeholderText="{{ 'signup.passwordTitle' | translate }}" inputType="password"
+                       [value]="password" (inputChangedEvent)="password = $event"></app-evo-input>
+        <div style="height: 10px;"></div>
+        <app-evo-input title="{{ 'signup.confirmPasswordTitle' | translate }}"
+                       placeholderText="{{ 'signup.confirmPasswordTitle' | translate }}" inputType="password"
+                       [value]="confirmPassword" (inputChangedEvent)="confirmPassword = $event"></app-evo-input>
+        <div style="height: 20px;"></div>
+        <button class="greenButton semiBoldMont font14px whiteColor noMargin"
+                style="height: 40px; width: 100%; border-radius: 4px;"
+                (click)="onCreateAccountAndAcceptInvitation()">
+          {{ 'reusable.accept' | translate }}
+        </button>
+        <div style="height: 40px;"></div>
+      </div>
+    </div>
+    <!-- User already logged in -->
+    <div *ngIf="state === States.AlreadyLoggedIn"
+         fxLayoutAlign="center start">
+      <div fxFlex.xs="80" fxFlex="400px">
+        <app-evo-input title="{{ 'userSettings.emailTitle' | translate }}"
+                       placeholderText="{{ 'userSettings.emailPlaceholder' | translate }}" [value]="user.email"
+                       [isDisabled]="true"></app-evo-input>
+        <div style="height: 20px;"></div>
+        <button class="greenButton semiBoldMont font14px whiteColor noMargin"
+                style="height: 40px; width: 100%; border-radius: 4px;"
+                (click)="onCreateAccountAndAcceptInvitation()">
+          {{ 'reusable.accept' | translate }}
+        </button>
+        <div style="height: 40px;"></div>
+      </div>
+    </div>
+    <!-- Log a user out -->
+    <div *ngIf="state === States.Logout">
+      <div fxLayoutAlign="center start">
+        <div fxFlex.xs="80" fxFlex="400px">
+          <p class="mediumMont font14px grayColor noMargin"
+             style="text-align: center;">{{ 'schoolInvitation.wrongAccountMessagePartOne' | translate }}
+            {{ 'schoolInvitation.wrongAccountMessagePartTwo' | translate }}</p>
+          <div style="height: 20px;"></div>
+          <div fxLayoutAlign="center start">
+            <button class="redButton semiBoldMont font14px whiteColor noMargin"
+                    style="height: 40px; width: 100%;"
+                    (click)="onLogoutButtonClicked()">
+              {{ 'header.logout' | translate }}
+            </button>
+          </div>
+          <div style="height: 40px;"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Log a user in -->
+    <div *ngIf="state === States.ExistButLoggedOut">
+      <div fxLayoutAlign="center start">
+        <div fxFlex.xs="80" fxFlex="400px">
+          <p class="mediumMont font14px grayColor noMargin"
+             style="text-align: center;">{{ 'schoolInvitation.wrongAccountMessageTwoPartOne' | translate }}
+            {{ 'schoolInvitation.wrongAccountMessageTwoPartTwo' | translate }}</p>
+          <div style="height: 20px;"></div>
+          <div fxLayoutAlign="center start">
+            <app-signin-secondary [fromInvitation]="true"></app-signin-secondary>
+          </div>
+          <div style="height: 40px;"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Wrong Token Type -->
+    <div *ngIf="state === States.WrongTokenType">
+      <div fxLayoutAlign="center start">
+        <div fxFlex.xs="80" fxFlex="400px">
+          <p class="semiBoldMont font16px blackColor noMargin">{{ 'reusable.error' | translate }}</p>
+          <div style="height: 10px;"></div>
+          <p
+            class="mediumMont font14px grayColor noMargin">{{ 'schoolInvitation.wrongTokenTypeMessage' | translate  }}</p>
+          <div style="height: 20px;"></div>
+          <button class="redButton semiBoldMont font14px whiteColor noMargin"
+                  style="width: 100%; height: 42px;"
+                  (click)="onWrongTokenTypeClicked()">
+            {{ 'reusable.next' | translate }}
+          </button>
+          <div style="height: 30px;"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Token Expired -->
+    <div *ngIf="state === States.Expired">
+      <div fxLayoutAlign="center start">
+        <div fxFlex.xs="80" fxFlex="400px">
+          <p class="semiBoldMont font16px blackColor noMargin">{{ 'reusable.error' | translate }}</p>
+          <div style="height: 10px;"></div>
+          <p class="mediumMont font14px grayColor noMargin">{{ 'schoolInvitation.tokenExpired' | translate  }}</p>
+          <div style="height: 20px;"></div>
+          <button class="redButton semiBoldMont font14px whiteColor noMargin"
+                  style="width: 100%; height: 42px;"
+                  (click)="onTokenExpiredClicked()">
+            {{ 'reusable.next' | translate }}
+          </button>
+          <div style="height: 40px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="position: absolute; top: 0; right: 0; left: 0; z-index: 15; overflow: hidden; width: 100%; height: 60px;">
+  <img src="../../../assets/decor/Addition-Blue-Icon.svg"
+       style="object-fit: contain; width: 20px; height: 20px; top: 40px; left: 5px; position: absolute;">
+  <img src="../../../assets/decor/Triangle-Green-Icon.svg"
+       style="object-fit: contain; width: 42px; height: 42px; top: -14px; left: 380px; position: absolute;">
+  <img src="../../../assets/decor/Circle-Yellow-Icon.svg"
+       style="object-fit: contain; width: 34px; height: 34px; top: 20px; left: 620px; position: absolute;">
+  <img src="../../../assets/decor/Equal-Sign-Purple.svg"
+       style="object-fit: contain; width: 16px; height: 16px; top: -4px; left: 900px; position: absolute;">
+  <img src="../../../assets/decor/Pentago-Blue-Icon.svg"
+       style="object-fit: contain; width: 36px; height: 36px; top: -8px; left: 1240px; position: absolute;">
+</div>

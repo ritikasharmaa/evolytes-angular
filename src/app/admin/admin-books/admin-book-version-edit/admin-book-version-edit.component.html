@@ -1,0 +1,217 @@
+<div class="defaultScrollBar scrollBarGreenThumb"
+     style="width: 100%; height: 100%; overflow-y: scroll;">
+  <div fxFlex="20px"></div>
+  <div fxFlex>
+    <div style="height: 20px;"></div>
+    <div class="whiteBg defaultShadow" style="border-radius: 8px;">
+      <div style="height: 60px;"
+           fxLayoutAlign="start center">
+        <div fxFlex="20px"></div>
+        <app-evo-input fxFlex
+                       [showTitle]="false"
+                       [placeholderText]="'Version name'"
+                       [value]="version.name"
+                       (inputChangedEvent)="version.name = $event">
+        </app-evo-input>
+        <div fxFlex="20px"></div>
+        <button class="redButton semiBoldMont font14px whiteColor"
+                fxFlex="120px"
+                style="height: 40px;"
+                (click)="onDelete()"
+                *ngIf="isEditMode">
+          Delete
+        </button>
+        <div fxFlex="20px" *ngIf="isEditMode"></div>
+        <button class="greenButton semiBoldMont font14px whiteColor"
+                fxFlex="120px"
+                style="height: 40px;"
+                (click)="onSave()">
+          {{getTitle()}}
+        </button>
+        <div fxFlex="20px"></div>
+        <button class="semiBoldMont font14px whiteColor"
+                fxFlex="120px"
+                style="height: 40px"
+                [ngClass]="{ greenButton: getIsPublished() === false, redButton: getIsPublished() }"
+                (click)="onPublishClicked()">
+          {{getPublishTitle()}}
+        </button>
+        <div fxFlex="20px"></div>
+        <button class="semiBoldMont font14px whiteColor"
+                fxFlex="120px"
+                [disabled]="isCopybtn"
+                [ngStyle]="{background:getCopiedColor()}"
+                style="height: 40px;border-radius:8px; border:none; margin-right: 10px;"
+                (click)="onCopyVersion()">
+        {{getCopiedTitle()}}
+        </button>
+        
+      </div>
+      <div style="height: 20px;"></div>
+      <div>
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <div style="height: 60px;"></div>
+          <div fxLayoutAlign="center">
+            <img [src]="version.bookVersionImgURL()"
+                 style="width: 80%; height: 240px; object-fit: contain; margin: 0 auto;"
+                 *ngIf="version.imgType">
+          </div>
+          <div style="height: 70px;"></div>
+          <app-evo-input title="Age"
+                         placeholderText="Age"
+                         [value]="version.age"
+                         (inputChangedEvent)="version.age = $event">
+          </app-evo-input>
+          <div style="height: 10px;"></div>
+          <app-evo-input title="Grade"
+                         placeholderText="Grade Number"
+                         inputType="number"
+                         [value]="version.grade"
+                         (inputChangedEvent)="version.grade = $event">
+          </app-evo-input>
+        </div>
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <app-evo-input title="_id"
+                         placeholderText="_id"
+                         [isDisabled]="true"
+                         [value]="version._id">
+          </app-evo-input>
+          <div style="height: 10px;"></div>
+          <div style="height: 65px;">
+            <app-evo-input title="Addon Id"
+                           placeholderText="Addon Id"
+                           [value]="version.addOnId"
+                           (inputChangedEvent)="version.addOnId = $event">
+            </app-evo-input>
+          </div>
+          <div style="height: 10px;"></div>
+          <div style="height: 65px;">
+            <app-evo-input title="Book Number"
+                           placeholderText="Book Number"
+                           inputType="number"
+                           [value]="version.bookNumber"
+                           (inputChangedEvent)="version.bookNumber = $event">
+            </app-evo-input>
+          </div>
+          <div style="height: 10px;"></div>
+          <div style="height: 65px;">
+            <app-evo-input title="Edition name"
+                           placeholderText="Edition Name"
+                           [value]="version.edition"
+                           (inputChangedEvent)="version.edition = $event">
+            </app-evo-input>
+          </div>
+          <div style="height: 10px;"></div>
+          <app-evo-input title="Edition Number"
+                         placeholderText="Edition Number"
+                         inputType="number"
+                         [value]="version.editionNumber"
+                         (inputChangedEvent)="version.editionNumber = $event">
+          </app-evo-input>
+          <div style="height: 10px;"></div>
+          <app-evo-input title="Num Pages"
+                         placeholderText="Num Pages"
+                         inputType="number"
+                         [value]="version.numPages"
+                         (inputChangedEvent)="version.numPages = $event">
+          </app-evo-input>
+          <div style="height: 10px;"></div>
+          <div style="height: 65px;">
+            <app-evo-dropdown title="Book Image"
+                              [list]="BookVersion.BookImgTypes.dropdownList()"
+                              [currentValue]="version.imgType"
+                              (valueChangedEvent)="version.imgType = $event">
+            </app-evo-dropdown>
+          </div>
+
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px;"></div>
+      <div style="height: 65px;">
+        <div fxFlex="20px"></div>
+        <app-evo-translated-input fxFlex
+                                  inputTitle="Translated Description"
+                                  [descr]="version.translatedDescription"
+                                  [cultures]="CultureModel.privateDropdownList()">
+        </app-evo-translated-input>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 20px;"></div>
+    </div>
+    <div style="height: 20px;"></div>
+    <div class="whiteBg defaultShadow" style="border-radius: 8px;">
+      <div style="height: 50px;" fxLayoutAlign="start center">
+        <div fxFlex="20px"></div>
+        <p class="semiBoldMont font18px blackColor noMargin">Integrations</p>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 460px;">
+        <div fxFlex="20px"></div>
+        <div fxFlex class="lightGrayBg scrollBarGreenThumb" style="border-radius: 6px; overflow-y: scroll;">
+          <div fxFlex="10px"></div>
+          <div fxFlex>
+            <div style="height: 10px;"></div>
+            <div fxLayout="row wrap"
+                 fxLayoutGap="20px"
+                 fxLayoutAlign="flex-start">
+              <div fxFlex="160px" *ngFor="let integration of version.integrations">
+                <div class="bgWhiteHoverColor defaultShadow"
+                     style="height: 200px; border-radius: 4px; cursor: pointer;"
+                     (click)="onIntegrationClicked(integration)">
+                  <div fxFlex="8px"></div>
+                  <div fxFlex>
+                    <div style="height: 20px;"></div>
+                    <div fxLayoutAlign="center start">
+                      <qrcode [qrdata]="integration._id" [size]="100"></qrcode>
+                    </div>
+                    <div style="height: 10px"></div>
+                    <p class="semiBoldMont font12px blackColor noMargin" style="text-align: center;">{{ integration.name }}</p>
+                    <div style="height: 10px;"></div>
+                    <div>
+                      <div fxFlex="40px">
+                        <p class="mediumMont grayColor font10px noMargin" style="text-align: center;">Page</p>
+                        <div style="height: 4px"></div>
+                        <p class="semiBoldMont blackColor font12px noMargin" style="text-align: center;">{{integration.page}}</p>
+                      </div>
+                      <div fxFlex="10px"></div>
+                      <div fxFlex>
+                        <p class="mediumMont grayColor font10px noMargin" style="text-align: center;">Type</p>
+                        <div style="height: 4px;"></div>
+                        <p class="semiBoldMont blackColor font12px noMargin" style="text-align: center;">{{integration.type}}</p>
+                      </div>
+                    </div>
+                    <div style="height: 10px"></div>
+                  </div>
+                  <div fxFlex="8px"></div>
+                </div>
+                <div style="height: 10px;"></div>
+              </div>
+              <div fxFlex="160px">
+                <div class="bgGreenHoverColor defaultShadow"
+                     style="height: 200px; margin-bottom: 10px; border-radius: 4px; cursor: pointer;"
+                     fxLayoutAlign="center center"
+                     (click)="onCreateIntegrationClicked()">
+                  <div>
+                    <p class="mediumMont font26px whiteColor noMargin" style="text-align: center;">+</p>
+                    <div style="height: 10px;"></div>
+                    <p class="semiBoldMont font12px whiteColor noMargin" style="text-align: center">Add integration</p>
+                  </div>
+                </div>
+                <div style="height: 10px"></div>
+              </div>
+            </div>
+            <div style="height: 10px;"></div>
+          </div>
+          <div fxFlex="10px"></div>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+      <div style="height: 10px;"></div>
+    </div>
+    <div style="height: 20px;"></div>
+  </div>
+  <div fxFlex="20px"></div>
+</div>

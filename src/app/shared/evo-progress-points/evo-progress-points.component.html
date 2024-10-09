@@ -1,0 +1,11 @@
+<div>
+  <div [fxFlex]="getWidth(i)"
+       *ngFor="let i of pointsList()"
+       fxLayoutAlign="start center">
+    <div [ngStyle]="{ height: this.getPointSize(),
+    width: this.getPointSize(),
+    'border-radius': this.getPointBorderRadius(),
+    'background-color': this.getBackgroundColor(i) }">
+    </div>
+  </div>
+</div>

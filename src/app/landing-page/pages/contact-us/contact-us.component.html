@@ -1,0 +1,192 @@
+<app-land2-nav-header [hidden]="hidden" (onBurgerClicked)="setHidden()"></app-land2-nav-header>
+
+<div appEgg class="landcontent" style="width: 100%">
+
+  <!-- To adapt with the burger menu -->
+  <div [ngClass]="{burgerMenu: !hidden}"></div>
+
+  <div style="width: 100%; min-height: calc(100% - 194px);" fxLayoutAlign="center start">
+    <div ngStyle.gt-md="max-width: 1100px; margin: 30px 0 30px 0; width: 80%"
+         ngStyle.lt-lg="margin: 30px 0 30px 0; width: 96%"
+         fxLayout.gt-sm="row"
+         fxLayout.lt-md="column">
+      <div fxFlex.gt-sm="49" fxFlexOrder.lt-md="2" fxLayout="column" fxLayoutAlign="start start">
+
+        <h1 class="noMargin blackColor boldMont font30px"
+            style="text-align: center; width: 100%">
+          {{'lp2.contactUs.title' | translate}}
+        </h1>
+        <div style="height: 20px;"></div>
+        <div style="width: 100%; max-width: 420px; margin: 0 auto">
+          <h1 class="noMargin grayColor regularMont font18px"
+              style="text-align: center">
+            {{'lp2.contactUs.description' | translate}}
+          </h1>
+        </div>
+
+        <div style="height: 50px"></div>
+
+        <div fxLayout="row" ngStyle.gt-sm="width: 450px;" style=" padding: 40px 0 20px 0"
+             ngStyle.lt-md="margin: 0 auto; width: 302px">
+          <div fxFlex="80px" fxLayoutAlign="center center">
+            <img src="../../../../assets/newWebsite/pin-location.svg" style="object-fit: contain; width: 30px; height: 30px" alt="">
+          </div>
+          <div fxFlex="20px"></div>
+          <div fxFlex>
+            <h1 class="boldMont noMargin blackColor font18px">
+              {{'lp2.contactUs.address' | translate}}
+            </h1>
+          </div>
+        </div>
+
+        <div fxLayout="row" ngStyle.gt-sm="width: 450px;" style="padding: 40px 0 20px 0"
+             ngStyle.lt-md="margin: 0 auto; width: 302px">
+          <div fxFlex="80px" fxLayoutAlign="center center">
+            <img src="../../../../assets/newWebsite/phone.svg" style="object-fit: contain; width: 30px; height: 30px"
+                 alt="">
+          </div>
+          <div fxFlex="20px"></div>
+          <div fxFlex>
+            <h1 class="boldMont noMargin blackColor font18px">
+              +354 7766462
+            </h1>
+          </div>
+        </div>
+
+        <div fxLayout="row" ngStyle.gt-sm="width: 450px;" style=" padding: 40px 0 20px 0"
+             ngStyle.lt-md="margin: 0 auto; width: 302px">
+          <div fxFlex="80px" fxLayoutAlign="center center">
+            <img src="../../../../assets/newWebsite/envelope.svg"
+                 style="object-fit: contain; width: 30px; height: 30px" alt="">
+          </div>
+          <div fxFlex="20px"></div>
+          <div fxFlex>
+            <h1 class="boldMont noMargin blackColor font18px">
+              evolytes@evolytes.com
+            </h1>
+          </div>
+        </div>
+
+        <div fxLayoutAlign="row wrap" style="padding-top: 30px; margin: 0 auto">
+          <img style="object-fit: contain; height: 37px; width: 37px; padding: 0 15px 0 15px"
+               src="../../../../assets/linkedin-icon.png">
+          <img style="object-fit: contain; height: 37px; width: 37px; padding: 0 15px 0 15px"
+               src="../../../../assets/instagram-icon.png">
+          <img style="object-fit: contain; height: 37px; width: 37px; padding: 0 15px 0 15px"
+               src="../../../../assets/facebook-icon.png">
+          <img style="object-fit: contain; height: 37px; width: 37px; padding: 0 15px 0 15px"
+               src="../../../../assets/youtube-icon.png">
+        </div>
+
+      </div>
+
+      <div fxFlex="2" fxHide.lt-md="true"></div>
+
+      <div fxFlex.gt-sm="49" fxFlexOrder.lt-md="1" ngStyle.lt-md="width: 90%; margin: 0 auto 30px auto" class="smallShadow" fxLayout="column"
+           fxLayoutAlign="start center">
+        <div class="lightGrayBg" style="width: 100%; padding: 10px 0 10px 0">
+          <h1 class="noMargin boldMont blackColor font20px"
+              style="text-align: center">
+            {{'lp2.contactUs.messageTitle' | translate}}
+          </h1>
+        </div>
+        <div style="width: 90%;" ngStyle.gt-md="min-height: 570px" ngStyle.lt-lg="min-height: 600px" fxLayout="column" fxLayoutAlign="space-evenly stretch">
+
+          <div style="height: 20px;"></div>
+
+          <p class="semiBoldMont font12px noMargin redColor">{{'lp2.contactUs.required' | translate}}</p>
+
+          <div style="height: 20px;"></div>
+
+          <div fxLayoutAlign="space-between  start" style="width: 100%">
+
+            <app-evo-input
+              style="width: 50%"
+              [title]="'lp2.contactUs.name' | translate"
+              [value]="messageInfo.name"
+              [titleColor]="messageError.name ? '#D0021B' : '#54676E'"
+              (inputChangedEvent)="messageInfo.name = $event"
+              placeholderText="Jane Doe">
+
+            </app-evo-input>
+
+            <div style="height: 20px;"></div>
+
+            <app-evo-input
+              style="width: 45%"
+              [title]="'lp2.contactUs.phone' | translate"
+              [value]="messageInfo.phone"
+              (inputChangedEvent)="messageInfo.phone = $event"
+              placeholderText="(+33) 193847584">
+            </app-evo-input>
+
+          </div>
+
+          <div style="height: 20px;"></div>
+
+          <app-evo-input
+            [title]="'lp2.contactUs.email' | translate"
+            [value]="messageInfo.email"
+            [titleColor]="messageError.email ? '#D0021B' : '#54676E'"
+            (inputChangedEvent)="messageInfo.email = $event"
+            placeholderText="email@email.com">
+          </app-evo-input>
+
+          <div style="height: 20px;"></div>
+
+          <app-evo-lang-dropdown [type]="'culture'"
+                                 [currentValue]="messageInfo.culture"
+                                 (valueChangedEvent)="messageInfo.culture = $event"
+                                 style="width: 100%">
+          </app-evo-lang-dropdown>
+
+          <div style="height: 20px;"></div>
+
+          <app-evo-lang-dropdown [type]="'country'"
+                                 [currentValue]="messageInfo.country"
+                                 (valueChangedEvent)="messageInfo.country = $event"
+                                 style="width: 100%">
+          </app-evo-lang-dropdown>
+
+          <div style="height: 20px;"></div>
+
+          <app-evo-input
+            [title]="'lp2.contactUs.subject' | translate"
+            [value]="messageInfo.subject"
+            [titleColor]="messageError.subject ? '#D0021B' : '#54676E'"
+            (inputChangedEvent)="messageInfo.subject = $event"
+            [placeholderText]="'lp2.contactUs.placeholderSubject' | translate">
+          </app-evo-input>
+
+          <div style="height: 20px;"></div>
+
+          <div>
+            <p class="semiBoldMont font12px noMargin"
+               [ngClass]="messageError.message ? 'redColor': 'grayColor'">{{'lp2.contactUs.message' | translate}}</p>
+            <div style="height: 6px"></div>
+            <div style="width: 100%; border-radius: 4px; padding-top: 10px"
+                 [ngClass]="{ whiteBg: true , containerShadow: true }"
+                 [fxLayoutAlign]="'center center'">
+              <textarea class="mediumMont blackColor whiteBg"
+                        style="outline: none; border: none; border-radius: 4px; width: calc(100% - 20px); height: 100px"
+                        [placeholder]="'lp2.contactUs.placeholderMessage' | translate"
+                        [value]="messageInfo.message"
+                        (keyup)="inputChanged($event)">
+              </textarea>
+            </div>
+          </div>
+          <div style="height: 10px;"></div>
+          <button class="greenButton whiteColor semiBoldMont noMargin font16px" style="width: 100%; height: 50px"
+                  [disabled]="isSendingContactRequest"
+                  (click)="sendMessage()">
+            {{'lp2.contactUs.send' | translate}}
+          </button>
+          <div style="height: 20px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+
+</div>

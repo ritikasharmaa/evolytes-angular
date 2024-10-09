@@ -1,0 +1,1320 @@
+{
+  "lp2": {
+    "common": {
+      "answers": {
+        "amount": "1200",
+        "label": "SVAR",
+        "title": "Svar per dag",
+        "subtitle": "Barn svarer på opptil 1200 spørsmål om dagen i Evolytes-spillet"
+      },
+      "minutes": {
+        "label": "MINUTTER",
+        "title": "Gjennomsnittlig tid brukt",
+        "subtitle": "Barn bruker i gjennomsnitt 26 minutter hver gang de åpner spillet"
+      },
+      "research": {
+        "subtitle": "Evolytes er basert på 3 års tverrfaglig forskning innen informatikk og psykologi for å gjøre læring morsomt, engasjerende og for å forbedre ferdighetsanskaffelse. Resultatene av eksperimentet bak Evolytes-plattformen overgikk våre villeste forventninger.",
+        "answers12": "Barn med lærevansker viste størst vekst gjennom hele studien",
+        "answers1200": "Barn svarte på opptil 1200 spørsmål om dagen i Evolytes-spillet på fritiden av sin egen volition",
+        "answers4": "Barn svarte i gjennomsnitt 4 ganger flere spørsmål i Evolytes enn på skolen gjennom hele studien",
+        "theory": {
+          "reinforcementTitle": "Forsterkningsteori",
+          "reinforcementDescription": "Gjør spillet underholdende og belønner studentene for å holde dem engasjert",
+          "flowTitle": "Flytteori",
+          "flowDescription": "Brukes til å tilpasse seg ferdighetsnivået til hver student for å maksimere potensial",
+          "spacingTitle": "Avstandseffekt",
+          "spacingDescription": "Sikrer langsiktig læring og ferdighetsanskaffelse etter avstandspraksis",
+          "skillTitle": "Anskaffelse av ferdigheter",
+          "skillDescription": "Vi bruker nye utviklinger innen kompetanseanskaffelsesforskning for å måle og vurdere ferdigheter",
+          "multimodalTitle": "Multimodal koding",
+          "multimodalDescription": "Ved å lære i forskjellige miljøer, er studentene bedre til å huske disse ferdighetene i det virkelige liv",
+          "mindsetTitle": "Tankesett for vekst",
+          "mindsetDescription": "Brukes til å vurdere og vise studentfremdrift i plattformen"
+        }
+      },
+      "androidComingSoon": "Kommer april 2022"
+    },
+    "features": {
+      "books": {
+        "titleMenu": "Bøker",
+        "subtitle": "Evolytes-bøkene er spesielt designet for å øve på lese- og skriveferdigheter på en morsom og unik måte.",
+        "skills": "Lese- og skriveferdigheter",
+        "skillsSubtitle": "Bøkene er designet for å praktisere lese- og skriveferdigheter for å forbedre læringsutbyttet.",
+        "integration": "Spillintegrasjon",
+        "integrationSubtitle": "Bøkene integreres med spillet gjennom kapitteleksamener som gjør læring morsomt og engasjerende.",
+        "rewards": "Læringsbelønninger",
+        "rewardsSubtitle": "Barn blir belønnet i spillet for å jobbe i bøkene, noe som gjør dem glade for å lære matematikk ved hjelp av bøker!",
+        "integrationGame": {
+          "title": "Alle Evolytes bøker integreres med spillet på en unik måte",
+          "subtitle": "Evolytes-bøkene integreres med spillet gjennom QR-koder etterfulgt av en eksamen. Hvis barn svarer riktig, får de belønninger i spillet for å holde dem motiverte!",
+          "step1": "Arbeid i boken",
+          "step1Description": "Barn lærer å løse nye problemer i Evolytes-bøkene i hvert kapittel.",
+          "step2": "Skann QR-koden",
+          "step2Description": "På slutten av kapitlet skanner du QR-koden for å ta en eksamen for å gjennomgå kapitlet.",
+          "step3": "Avslutte eksamen",
+          "step3Description": "Når barn fullfører en eksamen, får de en belønning.",
+          "step4": "Overvåke fremdriften i boken",
+          "step4Description": "I monitoren kan du se hvordan barnet ditt utvikler seg i bøkene og hvilke kapitler de er ferdige eller sliter med."
+        },
+        "shop": {
+          "subtitle": "Vi tilbyr flere bøker for ulike aldre og ferdighetsnivåer. Vi legger stadig til nye bøker med nye funksjoner, skapninger og eventyr.",
+          "now": "handle nå",
+          "errorFetchBook": "Beklager, noe er galt under henting av bøkene",
+          "age": "år gammel",
+          "grade": "trinn"
+        },
+        "features": {
+          "title": "Funksjoner",
+          "description": "Evolytes-bøkene tilbyr forskjellige unike funksjoner for å gjøre det morsomt å lære matematikk og engasjere seg i Evolytes-universet",
+          "feature1": {
+            "title": "Bedre læringsutbytte og positiv holdning til matematikk",
+            "description1": "Studentene lærer matematikk på en morsom måte i bøkene gjennom Evolytes og den unike informasjonen om dem.",
+            "description2": "Ved å integrere bøkene med spillet, fullfører barna Evolytes-bøkene på rekordtid, forbedrer læringsutbyttet og blir mer positive til matematikk.",
+            "benef1": "Læringsutbytte",
+            "benef2": "Positive følelser"
+          },
+          "feature2": {
+            "title": "Designet for å lære barn å løse nye matteproblemer",
+            "description1": "Evolytes lærer barn å løse nye matteproblemer i bøkene. I hvert kapittel får studentene trinnvise instruksjoner om hvordan man løser nye matteproblemer ved hjelp av en Evolyte! ",
+            "description2": "Bøkene er designet av våre kunstnere og illustratører som har flere tiårs erfaring innen design og illustrasjon.",
+            "benef1": "Skriveferdigheter",
+            "benef2": "Leseferdigheter"
+          },
+          "feature3": {
+            "title": "Integrert med plattformen",
+            "description1": "Evolytes-bøkene introduserer spillelementer og skapninger fra Evolytes-universet mens de lærer barn matematikk.",
+            "description2": "Bøkene integreres med spillet gjennom QR-koder på slutten av hvert kapittel. Kodene lenker til eksamener, som er direkte knyttet til innholdet. Hvis barna fullfører eksamenen, får de belønninger. Belønningene i spillet motiverer studentene til å fullføre bøkene på rekordtid. Lærere kan se elevenes fremgang i bøkene og eventuelle kapitler eleven strever med i skjermen.",
+            "benef1": "Spillintegrasjon",
+            "benef2": "Belønninger"
+          }
+        }
+      },
+      "game": {
+        "subtitle": "Evolytes spillet rivaler spillene barna spiller for moro skyld og gjør læring matematikk morsomt og engasjerende.",
+        "math": {
+          "title": "Gjør matematikk morsomt",
+          "subtitle": "Evolytes-spillet gjør det morsomt å lære matematikk gjennom et spill av høy kvalitet, vakre skapninger, engasjerende univers og spennende eventyr.",
+          "explanations": {
+            "title1": "Fang, spill og konkurrer",
+            "subtitle1": "For å fange, leke eller konkurrere med andre skapninger, må barn svare på mattespørsmål.",
+            "title2": "Lær evner og utvikle deg",
+            "subtitle2": "Etter hvert som barn spiller spillet mer, lærer skapningene nye evner og utvikler seg.",
+            "title3": "Stadig voksende univers",
+            "subtitle3": "Velg din karakter og oppdag det stadig voksende Evolytes-universet og dets historier.",
+            "title4": "Skjulte kister",
+            "subtitle4": "Det er forskjellige kister i universet der barn må svare på spørsmål for å åpne dem og få belønninger!"
+          }
+        },
+        "character": {
+          "title": "Velg karakter",
+          "subtitle": "Barn får velge hvilken karakter og følgesvenn skapning å spille i spillet. Hver skapning tilhører en familie av evolusjoner å velge mellom.",
+          "Lucas": "Lucas & Lighter",
+          "Eva": "Eva & Swirly",
+          "Oliver": "Oliver & Badger",
+          "Sarah": "Sara & Ava"
+        },
+        "story": {
+          "title": "Bli kjent med historien",
+          "subtitle": "Barn følger historien om 4 venner som oppdager sine Evolyte-følgesvenner. Se introduksjonen nedenfor."
+        },
+        "evolve": {
+          "title": "Samle og utvikle",
+          "subtitle1": "Flere evolusjoner",
+          "explanation1": "Hver Evolyte har flere evolusjoner som gir dem unike evner å oppdage.",
+          "subtitle2": "Evolyte-familier",
+          "explanation2": "Hver Evolyte tilhører et slektstre som skisserer sine forskjellige mulige evolusjoner. Hver familie har sine unike egenskaper."
+        },
+        "engaged": {
+          "title": "Evolytes er designet for å holde barnet underholdt og engasjert",
+          "subtitle": "Evolytes er basert på flere års forskning og bruker ledende psykologiske teorier for å forbedre læringsutbyttet og holde barnet engasjert."
+        },
+        "platform": {
+          "title": "Evolytes-plattformen",
+          "subtitle": "Finn ut mer om hvordan bøkene, spillet og skjermen gjør Evolytes til en ledende læringsplattform for matematikk.",
+          "booksSubtitle": "Evolytes-bøkene er spesielt designet for å lære lese- og skriveferdigheter og integrere med spillet",
+          "monitorSubtitle": "Få inngående læringsinnsikt i styrker og forbedringsområder i sanntid med skjermen",
+          "gameSubtitle": "Evolytes-spillet gjør det morsomt og engasjerende å lære matematikk mens du tilpasser deg barns ferdighetsnivåer for å maksimere potensialet"
+        }
+      },
+      "monitor": {
+        "subtitle": "Skjermen gir deg sanntidsinnsikt i dine barns læringsfremgang, styrker og svakhet",
+        "overview": {
+          "title": "Oversikt i sanntid",
+          "subtitle": "Barn lærer raskere og mer effektivt med Evolytes. Ikke ta vårt ord for det: følg deres fremgang i sanntid i skjermen",
+          "explanations": {
+            "title1": "Dashbord",
+            "subtitle1": "Få en klar oversikt over barnets fremdrift i instrumentbordet.",
+            "title2": "Bruksstatistikk",
+            "subtitle2": "I aktivitetsdelen på instrumentbordet kan du se bruksstatistikk for barnet ditt.",
+            "title3": "Bestill fremdrift",
+            "subtitle3": "Vær oppdatert på barnets fremgang i bøkene og hva de sliter med.",
+            "title4": "Svar",
+            "subtitle4": "Du kan se mønstre dukke opp basert på alle spørsmålene barnet ditt har besvart."
+          }
+        },
+        "features": {
+          "title": "Funksjoner",
+          "subtitle": "Monitoren er i stadig utvikling og tilbyr forskjellige funksjoner for å gi deg en oversikt over barnets læringsfremdrift, styrker og forbedringsområder.",
+          "explanation": {
+            "title": "Sanntidsoversikt over barnets fremgang",
+            "subtitle1": "Dashbordet gir deg en enkel og effektiv oversikt over barnets aktivitet, fremgang i bøkene og ferdighetsutviklingen.",
+            "subtitle2": "Dashbordet er det perfekte stedet å holde seg oppdatert på barnets matematikklæring.",
+            "progress": "Oversikt over fremdrift",
+            "realTime": "Sanntidsdata"
+          }
+        },
+        "skills": {
+          "title": "Se barnets ferdigheter utvikle seg over tid",
+          "subtitle": "På skjermen kan du se hvordan barnets ferdigheter utvikler seg over tid og hvordan de utvikler seg. Dette kan hjelpe deg med å identifisere problemområder og holde deg oppdatert på barnets ferdighetsanskaffelse.",
+          "acquisiton": "Kompetanseanskaffelse",
+          "analytics": "Kompetanseanalyse"
+        },
+        "book": {
+          "title": "Se barnets fremgang i bøkene",
+          "subtitle1": "Med bok- og spillintegrasjonen kan du få innsikt i barnets fremgang i bøkene, kapitlene de er ferdige med og kapitlene de sliter med.",
+          "subtitle2": "",
+          "bookProgress": "Bestill fremdrift",
+          "problem": "Problemområder"
+        },
+        "answers": {
+          "title": "Få grundig analyse i svardelen",
+          "subtitle": "I svardelen kan du filtrere og analysere alle barnets svar på ett sted, slik at du kan avdekke trender og vanskelige områder. Denne funksjonen lar deg analysere barnas svar på et dypere nivå for å forstå hvor problemer oppstår.",
+          "answerIcon": "Svar",
+          "filtering": "Kraftig filtrering"
+        }
+      }
+    },
+    "pricing": {
+      "Subscriptions": {
+        "title": "Abonnementer",
+        "subtitle": "Ulike abonnementsplaner er tilgjengelige for å transformere måten barnet ditt lærer matematikk på.",
+        "month": "måned",
+        "perChild": "Per barn, ",
+        "paymentFrequency1": "faktureres månedlig",
+        "paymentFrequency2": "faktureres hver tredje måned",
+        "paymentFrequency3": "faktureres hver sjette måned",
+        "buyNow": "Kjøp nå",
+        "Bonus": "Bonus",
+        "BonusSubtitle": "Inkludert i første kjøp",
+        "BookText": "Ditt valg av Evolytes ledsagerbok",
+        "includes": "Inkluderer",
+        "shortDescription": "Evolytes iPad-appen og tilgang til Evolytes-skjermen.",
+        "freeTrial": {
+          "title": "Prøveversjon",
+          "message": " dagers gratis prøveperiode",
+          "detailMessage": "Ingen kredittkort kreves!",
+          "try": "Prøv nå",
+          "startTrialTitle": "Velkommen til din gratis prøveperiode",
+          "startTrialMessage": "Du er i ferd med å starte en 7 dagers gratis prøveversjon av Evolytes. Vi krever ikke kredittkort eller betalingsinformasjon. Vi håper barnet ditt liker Evolytes-universet og lærer så mye som mulig i løpet av prøveperioden!",
+          "expired": "Prøveversjon over"
+        },
+        "1m": {
+          "title": "1 måned"
+        },
+        "3m": {
+          "title": "3 måneder"
+        },
+        "6m": {
+          "title": "6 måneder"
+        },
+        "12m": {
+          "title": "12 måneder"
+        }
+      },
+      "School": {
+        "title": "Skoler",
+        "subtitle": "Evolytes har en spesiell pris og funksjoner spesielt designet for skoler og deres behov. Lær hvorfor over 50% av skolene på Island velger Evolytes!",
+        "subtitle2": "Hva er inkludert",
+        "leftIcon1": {
+          "title": "Evolytes spill",
+          "subtitle": "Alle skoler får ubegrenset tilgang til Evolytes-spillet, funksjoner og alle fremtidige oppdateringer."
+        },
+        "leftIcon2": {
+          "title": "Evolytes bøker",
+          "subtitle": "Evolytes ledsagerbøker er spesielt designet for å lære nytt materiale."
+        },
+        "leftIcon3": {
+          "title": "Monitor",
+          "subtitle": "Evolytes Monitor gir deg sanntidsinnsikt om elevenes styrker og problemområder."
+        },
+        "rightIcon1": {
+          "title": "Dedikert støtte",
+          "subtitle": "Support er lett tilgjengelig hver dag i uken via vår e-post eller telefon."
+        },
+        "rightIcon2": {
+          "title": "Gratis kurs",
+          "subtitle": "Alle lærere og administratorer kan melde seg på et gratis kurs for å lære å få mest mulig ut av Evolytes."
+        },
+        "rightIcon3": {
+          "title": "Lære ressurser",
+          "subtitle": "Skoler får tilgang til spesielle videoer og guider for å dykke dypt inn i funksjonene i Evolytes."
+        },
+        "buttonGetAQuote": "Få et tilbud",
+        "buttonRequestADemo": "Be om en demo",
+        "textMore": "Trenger du mer informasjon om Evolytes for skoler?",
+        "MoreButton": "Få mer informasjon"
+      },
+      "Learning": {
+        "title": "Læringsutbytte",
+        "subtitle": "Evolytes er basert på flere års forskning og bruker ledende psykologiske teorier for å forbedre læringsutbyttet og holde barnet engasjert",
+        "endingText": "Begynn å styrke barnet ditt eller studentene dine med Evolytes-plattformen i dag."
+      }
+    },
+    "landing": {
+      "tagline": "Lær matematikk på en morsom og engasjerende måte",
+      "description": "Bruk Evolytes-spillet og -bøkene til å lære barn matematikk raskere, på en morsom og engasjerende måte. Plattformen er designet for barn i alderen 5–9 år.",
+      "buyButton": "Kjøp nå",
+      "login": "Pålogging",
+      "evolytesPart": {
+        "title": "Endre måten barn lærer på",
+        "description": "Evolytes-plattformen kombinerer Evolytes-spillet, bøkene og monitoren for å forbedre læringsutbyttet.",
+        "gameTitle": "Evolytes spill",
+        "gameDescription": "Evolytes-spillet gjør det morsomt å lære matematikk i en åpen verden med forskjellige eventyr.",
+        "bookTitle": "Bøker",
+        "bookDescription": "Evolytes-bøkene er spesielt designet for å utvikle lese- og skriveferdigheter.",
+        "monitorTitle": "Monitor",
+        "monitorDescription": "Med monitor kan du ha en sanntidsoversikt over barns læringsfremdrift, styrker og svakheter."
+      },
+      "universePart": {
+        "title": "Evolytes-universet",
+        "description": "Evolytes-universet, dets karakterer og historier vil holde barnet ditt i et utrolig tempo."
+      },
+      "howPart": {
+        "title": "Slik fungerer Evolytes",
+        "description1": "Barn spiller i Evolytes-spillet der de svarer på mattespørsmål for å avansere i spillet.",
+        "description2": "Når barnet svarer på flere spørsmål, tilpasser spørsmålene seg til barnets ferdighetsnivå.",
+        "description3": "Barn arbeider i bøkene og bruker QR-kodene på slutten av hvert kapittel for å ta en eksamen og få belønninger.",
+        "description4": "Lærere og foreldre kan overvåke barnets fremgang, styrker og forbedringsområder i overvåkingsdelen."
+      },
+      "researchPart": {
+        "title": "Grunnlagt i forskning",
+        "description": "Evolytes er basert på mange års forskning og bruker ledende psykologiske teorier for å forbedre læringsutbyttet og holde barnet engasjert.",
+        "theory": {
+          "reinforcementTitle": "Forsterkningsteori",
+          "reinforcementDescription": "Gjør spillet underholdende og belønner barn for å holde dem engasjert",
+          "flowTitle": "Flytteori",
+          "flowDescription": "Brukes til å tilpasse seg ferdighetsnivået til hvert barn, for å maksimere potensialet",
+          "spacingTitle": "Avstandseffekt",
+          "spacingDescription": "Sikrer langsiktig læring og ferdighetsanskaffelse etter avstandspraksis"
+        }
+      },
+      "featureSection": {
+        "title": "Nye funksjoner",
+        "description": "Vi jobber tett med våre samarbeidsskoler for å skape den beste matematikkundervisningsplattformen der ute. Hvis du har noen funksjoner du vil at vi skal legge til, ta gjerne kontakt, vi elsker alltid nye ideer!"
+      },
+      "schoolSection": {
+        "title": "Evolytes på skolene",
+        "description": "Evolytes har en spesiell versjon og priser for skoler. Finn ut hvorfor over 50 % av skolene på Island bruker Evolytes."
+      },
+      "testimonials": {
+        "1": {
+          "position": "Leder for informasjonsteknologi",
+          "school": "Fjallabyggð barneskole",
+          "text": "Et par elever har startet Evolytes-eventyret. Dette er utrolig. Vi har sett en enorm vekst umiddelbart fra våre studenter! Stor takk fra oss! Nå er flere lærere grønne av misunnelse og ønsker å legge til elevene sine på Evolytes-plattformen."
+        },
+        "2": {
+          "position": "",
+          "school":"",
+          "text": ""
+        }
+      },
+      "supportPart": {
+        "title": "Støtte",
+        "description": "Evolytes-plattformen fikk støtte fra Teknologiutviklingsfondet og Innovasjonssenteret på Island, som var avgjørende for utviklingen av plattformen."
+      },
+      "startingPriceOne": "Planer som starter fra ",
+      "startingPriceTwo": "en måned",
+      "memberButton": "Bli medlem",
+      "download": "Last ned den",
+      "appStore": "App Store",
+      "appGoogle": "Google Play",
+      "learnMoreButton": "Få mer informasjon",
+      "demoButton": "Be om en demo"
+    },
+    "schools": {
+      "introduction": {
+        "title": "Evolytes for skoler",
+        "subtitle": "Evolytes er spesielt designet for skoler, i nært samarbeid med våre partnere. Vi ønsker å styrke lærerne med moderne verktøy for å hjelpe elevene å lykkes"
+      },
+      "tool": {
+        "title": "Verktøy for lærere",
+        "subtitle": "Evolytes-plattformen er designet for å styrke lærere og elever. Skjermen gir lærerne sanntidsinnsikt om elevenes fremgang, styrker og forbedringsområder.",
+        "monitorDescription": "På skjermen kan du ha en sanntidsoversikt over studentenes læringsfremgang, styrker og vanskelige områder.",
+        "gameDescription": "Studentene svarer på et mattespørsmål for å kunne gjøre operasjoner i spillet, for eksempel å fange og mate Evolytes."
+      },
+      "engaging": {
+        "title": "Engasjere studenter",
+        "subtitle": "Evolytes spill og bøker er designet for å holde studentene engasjerte, interesserte og beregne matematikk basert på deres ferdighetsnivå for å maksimere potensialet.",
+        "individualizedTitle": "Individualisert innhold",
+        "individualizedSubtitle1": "Kjernen i Evolytes-plattformen er sanntidsvurderingen der studentene får individualisert innhold basert på ferdighetsnivået.",
+        "individualizedSubtitle2": "Lærere får en klar oversikt og innsikt i elevenes læringsfremdrift for å løse problemområder. Plattformen sparer lærerne mye tid, noe som går inn i studentvurdering.",
+        "savesTime": "Sparer tid",
+        "LearningInsights": "Innsikt i læring",
+        "dashboardTitle": "Instrumentbord - Oversikt i sanntid",
+        "dashboardSubtitle": "I monitoren har lærerne en sanntidsoversikt og innsikt i elevenes læring. Studenten får individualisert innhold basert på deres nivå."
+      },
+      "keeping": {
+        "title": "Holde elevene engasjert",
+        "description1": "Evolytes er et spill av høy kvalitet som konkurrerer med spillene barna spiller for moro skyld på fritiden. Spillet er designet for å gjøre det morsomt og engasjerende å lære matematikk gjennom Evolytes-universet, dets historier og karakterer.",
+        "description2": "Elevene lærer raskere i Evolytes-spillet, bruker mer tid på å lære matematikk hjemme og er mer positive til matematikk i alle dens former.",
+        "fun": "Moro",
+        "positiveFeeling": "Positive følelser",
+        "pictureTitle": "Eventyr i åpen verden",
+        "pictureSubtitle": "Evolytes har en rik åpen verden med dusinvis av skapninger, oppdrag og historier for å holde elevene engasjert og lære!"
+      },
+      "books": {
+        "title": "Integrert med plattformen",
+        "description1": "Evolytes-bøkene introduserer spillelementer og skapninger fra Evolytes-universet mens de lærer barn matematikk.",
+        "description2": "Bøkene integreres med spillet gjennom QR-koder på slutten av hvert kapittel. Kodene lenker til eksamener, som er direkte knyttet til innholdet. Hvis studentene fullfører eksamenen, får de belønninger. Belønningene i spillet motiverer studentene til å fullføre bøkene på rekordtid. Lærere kan se elevenes fremgang i bøkene og eventuelle kapitler elevene strever med i skjermen.",
+        "writingSkills": "Skriveferdigheter",
+        "readingSkills": "Leseferdigheter",
+        "pictureTitle": "Evolytes bøker",
+        "pictureSubtitle": "Evolytes-bøkene er spesielt designet for å utvikle lese- og skriveferdigheter mens de integreres med Evolytes-spillet på en unik måte."
+      },
+      "how": {
+        "title": "Tjeneste for skoler",
+        "subtitle": "Det er en unik versjon av plattformen, med spesiell støtte og kvalitetsservice, bare for skoler. Alle skoler kan få en gratis prøveperiode og kurs for å prøve ut plattformen.",
+        "freeTrial": {
+          "title": "Gratis prøveperiode",
+          "subtitle": "Skoler kan få en gratis prøveperiode for å teste plattformen med en håndfull lærere og elever."
+        },
+        "requestText": "Velg nedenfor for å be om din gratis demo eller et skreddersydd tilbud basert på skolens behov."
+      },
+      "research": {
+        "title": "Basert på forskning",
+        "subtitle": "Evolytes er basert på 3 års tverrfaglig forskning innen informatikk og psykologi for å gjøre læring morsomt, engasjerende og forbedre ferdighetsanskaffelse. Resultatene av eksperimentet bak Evolytes-plattformen overgikk våre villeste forventninger",
+        "learnMore": "Få mer informasjon"
+      }
+    },
+    "faq": {
+      "title": "Vanlige spørsmål",
+      "subtitle": "Før du går til bryet med å ringe eller sende oss en e-post, kan våre ofte stilte spørsmål hjelpe deg med å finne en rask løsning.",
+      "q1": "Hvilke aldre er Evolytes for?",
+      "a1": "Evolytes er design for barn 5 - 9 år. Disse alderene er som referanse og kan variere avhengig av barnets ferdighetsnivå. \n\n Evolytes fungerer bra for alle typer barn som tar sine første skritt i matematikk. Evolytes brukes ofte av barn med læringsmangler fra 6 - 12 år, da det fremskynder ferdighetsanskaffelse og gir individualisert innhold i sanntid. Evolytes har også blitt brukt med gode resultater med yngre barn som lærer å telle. Hvis du tror at barnet ditt er klar til å lære matematikk, bare gå for det! Evolytes tilpasser innholdet til ferdighetsnivået.\n\nEvolytes brukes av barn i alderen 3-16 år. Alt avhenger av hvert enkelt individ, selv om det pedagogiske innholdet er designet for barn i alderen 5-9 år.",
+      "q2": "Hvilke enheter og operativsystemer er Evolytes kompatible med?",
+      "a2": "Evolytes-spillet er for øyeblikket bare kompatibelt med iOS-nettbrett (Apple iPda). I februar 2022 lanserer vi en ny plattformversjon for alle iOS- og Android-enheter.\n\n Evolytes nettside og skjerm er kompatible med de fleste nettlesere for de fleste skjermstørrelser.\n\nEvolytes bøker er fysiske bøker og krever derfor ingen enheter for å bruke dem.",
+      "q3": "Hvordan fungerer Evolytes bokintegrasjon med spillet og monitoren?",
+      "a3": "Du kan bare skanne QR-koder i Evolytes-bøker i Evolytes-mobilspillet.\n\nÅpne Evolytes-spillet og velg brukeren som eier boken du bruker. På hovedskjermen i spillet vil du se flere knapper øverst til høyre. Trykk på knappen med kameraikonet. Det er viktig å gi spillet tilgang til kameraet på enheten, ellers vil ikke spillet kunne skanne QR-koden. Du må få tilgang til enhetsinnstillingene og gi den tilgang til kameraet.\n\nNå sikte kameraet på QR-koden som du vil skanne. Når spillet har gjenkjent QR-koden, blir den grå knappen midt på skjermen grønn. Når knappen blir grønn, kan du trykke på den, og du vil bli bedt om å ta en kapitteleksamen.",
+      "q4": "Hvordan skanner jeg en QR-kode i en Evolytes-bok?",
+      "a4": "Evolytes bøker integreres med Evolytes-plattformen gjennom QR-koder i Evolytes-mobilspillet. QR-kodene finner du på slutten av hvert kapittel i bøkene. QR-kodene kan bare skannes i Evolytes-mobilappen. Du kan ikke bruke den innebygde kameraappen til å skanne QR-koden i bøkene.\n\n Hver QR-kode i bøkene vil teste studentens kunnskap om innholdet i kapitlet, og hvis de svarer riktig på 80% av spørsmålene i kapitlet, vil de få en belønning i spillet for å fullføre kapitlet. Denne metoden lar oss positivt knytte skriveferdigheter med positive stimuli av Evolytes mobilspill.\n\nVed å logge inn på Evolytes-plattformen på nettet kan du overvåke barnets matematikkfremdrift og deres fremgang i Evolytes-bøkene.",
+      "q5": "Kameraet fungerer ikke i appen. Hvordan fikser jeg det?",
+      "a5": "Hvis kameraet ikke fungerer i Evolytes-spillet, skyldes det mest sannsynlig at appen ikke har fått tilgang til enhetens kamera. Du må avslutte spillet og gå til enhetens innstillinger for å endre tilgangsrettighetene.\n\n I Innstillinger må du finne at du er Evolytes-mobilspillet i listen over apper og gi det tilgang til enhetskameraet. Når appen har fått tilgang til kameraet, kan du åpne Evolytes-spillet, og kameraet skal fungere.",
+      "q6": "Hva er unikt med Evolytes?",
+      "a6": "Evolytes matematikkplattform er basert på unik tverrfaglig forskning der ledende psykologiske teorier ble brukt til å fremskynde oppkjøpet av studentferdigheter i matematikk. Tidligere studier og eksperimenter gjorde det mulig for oss å fremskynde oppkjøpet av studentferdigheter for å gjøre læringen raskere, mer effektiv mens vi holdt oss morsomme og engasjerende.\n\nBokintegrasjonen med Evolytes-plattformen er en unik funksjon som ble utviklet for å sikre at studenten utvikler lese- og skriveferdigheter som vil forbedre læringsutbyttet og karakterene deres.",
+      "q7": "Hvilke ferdigheter praktiserer Evolytes?",
+      "a7": "Evolytes gir barnet ditt det grunnlaget de trenger i matematikk, både frasering og tallsans forbundet. Vi legger regelmessig til nytt matematikkinnhold. For øyeblikket går vi gjennom følgende matematikkinnhold: \n\nAntall, koble beløp med tall.\n\nTillegg 1-999\n\nSubtraksjon 1-999\n\nEnhetshus, enheter, titalls og hundrevis\n\nTillegg for flere parametere\n\nMultiplikasjon\n\nAlgebra\n\nMønster\n\nSammenslende størrelser (Flott enn, mindre enn osv.) \n\nFormer\n\nDekoding.\n\nVi legger regelmessig til nytt innhold i spillet, slik at denne listen ikke er uttømmende, og vi vil fortsette å legge til innhold slik at appen kan vokse med barnets matematikkprogresjon.",
+      "q8": "Hvordan endrer eller avbryter jeg abonnementet mitt?",
+      "a8": "Du kan avbryte eller endre abonnementet ved å logge på brukeren på Evolytes webplattform.\n\nLogg på Evolytes-skjermen på denne siden, velg barnet du vil endre faktureringsinformasjonen for. Gå til innstillinger, faktureringsinformasjon og trykk endre abonnement.",
+      "q9": "Hvilke språk er Evolytes tilgjengelig på?",
+      "a9": "Evolytes er tilgjengelig på islandsk, engelsk og fransk. \n\nEvolytes vil snart være tilgjengelige på svensk, norsk og tysk.",
+      "q10": "Hvorfor er skjermen tom?",
+      "a10": "For at Evolytes-skjermen skal kunne vise data, må barnet ditt begynne å spille Evolytes-mobilspillet. Hvis det fortsatt ikke vises noe, kan det skyldes det faktum at du ikke er koblet til internett.",
+      "q11": "Kan jeg dele skjermtilgangen min med en forelder eller lærer?",
+      "a11": "For å dele din tilgang til en student med en annen forelder, verge eller lærer, må du sende oss en e-post på evolytes@evolytes.com og formelt be om at dataene blir delt med en annen bruker. For at vi skal kunne behandle forespørselen, må du oppgi følgende informasjon: \n\nDen e-postadressen som brukes til å logge på Evolytes\nNavnet på barnet du vil dele din tilgang til, vil motta en e-post slik at vedkommende kan aktivere kontoen sin. De vil da kunne visualisere studentenes fremgang på skjermen og åpne Evolytes-mobilspillet med legitimasjonen sin og velge barnet som en konto å spille.",
+      "q12": "Hvordan tilpasser Evolytes seg til barnets / studentens nivå?",
+      "a12": "Alle svarene barnet ditt gir mens du lærer i Evolytes, brukes til å vurdere ferdighetsnivået. Vi vil deretter tilpasse innholdet basert på barnets strenger og svakheter.\n\nPlattformen tilpasser vanskeligheten med innholdet basert på barnets svar i sanntid. Alle barn starter med enkelt materiale som deretter gjøres vanskeligere basert på studentens ferdigheter.\n\nBarn vil fortsette å få spørsmål om ferdigheter vi vet de har utviklet for å utvikle langsiktig ferdighetsoppkjøp og glemmer ikke hva de har lært tidligere. Hvis studenten begynner å slite med materiale de har mestret før de må øve på det igjen, og spørsmålstypen knyttet til det vil begynne å bli bedt oftere igjen.",
+      "ManualsButton": "Håndbøker og videoer",
+      "HelpButton": "Hjelpesenter"
+    },
+    "footer": {
+      "product": "Produkt",
+      "game": "Spill",
+      "research": "Forskning",
+      "schools": "Skoler",
+      "company": "Firma",
+      "aboutUs": "Om oss",
+      "contactUs": "Kontakt oss",
+      "help": "Hjelp og juridisk",
+      "faq": "FAQ",
+      "terms": "Vilkår og betingelser",
+      "policy": "Personvernpolicy",
+      "email": "evolytes@evolytes.com",
+      "culture": "Storbritannia"
+    },
+    "aboutUs": {
+      "title": "Endre måten barn lærer matematikk på",
+      "ourStory": {
+        "title": "Vår historie",
+        "description": "En av grunnleggerne våre, Mathieu Grettir Skúlason, så søsteren slite med matematikk hjemme og innså at han kunne bruke sin forskning i psykologi for å hjelpe henne å lære matematikk. Han utførte et eksperiment som hadde svært oppmuntrende resultater, noe som til slutt førte til utviklingen av Evolytes.",
+        "y2014": {
+          "title": "Tverrfaglig forskning som Evolytes-spillet er basert på",
+          "description": "Evolytes-spillet var basert på tre års tverrfaglig forskning innen forsterkningsteori av Mathieu Grettir Skúlason i Aperio-æresprogrammet ved Reykjavík University, som startet i 2014."
+        },
+        "y2016": {
+          "title": "Eksperimenter for å fremskynde oppkjøpet av matematikkferdigheter",
+          "description": "I 2016 kom Mathieu hjem til søsteren som slet med matematikk der han innså at han kunne bruke forskningen sin for å gjøre det morsomt og engasjerende å lære matematikk. Etter sin åpenbaring utviklet han et prototype-videospill som han brukte i et eksperiment for å se effekten på læring. Resultatene var hinsides hans villeste forventning."
+        },
+        "y2017": {
+          "title": "Golden egg business planning konkurranse - 3. plass",
+          "description": "De eksperimentelle resultatene var så oppmuntrende at Mathieu tok prosjektet til Golden Egg forretningsplanleggingskonkurranse. Jónas Ingi Valdimarsson og Íris Eva Gísladóttir ble med i prosjektet der de flyktet ut av visjonen om selskapet som senere skulle bli Evolytes. Prosjektet ble tildelt 3.-plass av over 250 andre lag."
+        },
+        "y2017bis": {
+          "title": "Oppstart Reykjavík Accelerator og tilskudd",
+          "description": "Etter forretningskonkurransen Golden Egg deltok prosjektet i forretningsakseleratoren Startup Reykjavík under navnet Flow Education. Prosjektet fikk en kapitalforhøyelse på 2,4 millioner ISK for 6% andel i selskapet som en del av deres deltakelse i akseleratoren. Prosjektet mottok tilskudd fra Teknologiutviklingsfondet på Island og Innovasjonssenteret på Island."
+        },
+        "y2018": {
+          "title": "Tilskudd mottatt fra Teknologiutviklingsfondet på Island",
+          "description": "Evolytes fikk to års stipend, verdt 20 millioner ISK, for å utvikle Evolytes-plattformen og få den på markedet på Island. Tilskuddet spilte en avgjørende rolle i å gjøre Evolytes til det det er i dag."
+        },
+        "y2020": {
+          "title": "Evolytes lansert på Island om våren",
+          "description": "Evolytes ble utgitt i slutten av mars 2020 med en varm mottakelse fra forbrukere. Skolene viste stor interesse for plattformen da Evolytes ble brukt i 15 skoler i løpet av skoleåret 2020-2021."
+        },
+        "y2021": {
+          "title": "Evolytes brukt i over 50% av islandske skoler",
+          "description": "Evolytes brukes av over 50% av alle skoler på Island, noe som gjør det til den dominerende mattelæringsplattformen i landet. Vi er veldig glade for å endre måten barn lærer og styrker lærere med moderne verktøy."
+        }
+      },
+      "team": {
+        "title": "Teamet",
+        "description": "Teamet bak Evolytes har tiår med erfaring og et stort tverrfaglig sett med kompetanse som syter fra psykologi, pedagogikk og forskning til illustrasjon, spillutvikling og programvareutvikling.",
+        "ceo": "Direktør og utvikler",
+        "cmo": "CMO og designer",
+        "design": "Designer og Illustratør",
+        "pedagogy": "Pedagogisk leder",
+        "game": "Spilldesigner og utvikler",
+        "cfo": "CFO",
+        "sales": "Salgs- og kunderepresentant"
+      }
+    },
+    "research": {
+      "learnMore": "Få mer informasjon",
+      "exp": {
+        "title": "Eksperimentelt resultat",
+        "conclusion": "Elevene fikk Evolytes-spillet til å spille hjemme utenom skoletiden, der det ble understreket at de måtte spille det på fritiden. Deres prestasjoner ble sammenlignet med deres matematikkaktivitet på skolen."
+      },
+      "positiveTowards": {
+        "title": "Positiv holdning til matematikk",
+        "descr1": "På slutten av studien hadde alle studentene mer positive følelser knyttet til matematikk. Uansett form for matematikk var studentene mer åpne for å studere matematikk.",
+        "descr2": "Ved å gi studentene individualisert innhold, på en morsom og engasjerende måte, forbinder studentene positive følelser med matematikk og får den tilliten de trenger for å fortsette å studere."
+      },
+      "theoretical": {
+        "title": "Teoretisk grunnlag",
+        "description": "Evolytes-plattformen bruker flere forskjellige psykologiske teorier for å forbedre læring og ferdighetsanskaffelse samtidig som prosessen blir morsom og engasjerende."
+      },
+      "history": {
+        "title": "Forskningshistorie",
+        "description": "Evolytes er basert på flere års forskning i psykologi for å gjøre læring morsomt og engasjerende.",
+        "y2014": {
+          "season": "Vår",
+          "title": "Effekter av variable og faste forsterkningsplaner på barns respons i videospill",
+          "descr1": "Vår første studie satte seg fore å belyse mønstre for å svare barn for forskjellige forsterkningsplaner i videospill. Ulike eksperimenter har vist at mennesker er ufølsomme for tidsplanene, og deres mønstre avviker betydelig fra det som observeres med infrahumanske arter.",
+          "descr2": "Resultatene viste at bare fast forhold hadde et lignende mønster for å reagere sett i enklere arter. Andre tidsplaner viste ukarakteristiske mønstre for å svare for variable forhold, fast intervall og variable intervallforsterkningsplaner."
+        },
+        "y2015": {
+          "season": "Vår",
+          "title": "Effekter av alder og kjønn på å svare på variable og faste forsterkningshastigheter i videospill",
+          "descr1": "Etter å ha studert mønstrene for å svare i vårt første eksperiment, bestemte vi oss for å se om alder og kjønn har en effekt på resondingmønstre under forskjellige forsterkningshastigheter.",
+          "descr2": "Resultatene viste at alder hadde en effekt på mønstre for å respondere, spesielt forsterkningshastigheten og hvor lenge deltakerne var aktive gjennom forsterkningsplanen. Yngre barn viste større følsomhet for de forskjellige forsterkningsplanene enn eldre. Dette kan skyldes at barn har kortere forsterkningshistorie enn eldre studenter."
+        },
+        "y2016": {
+          "season": "Høst",
+          "title": "Anvendt forsterkningsteori i videospill for å fremskynde matematisk ferdighetsanskaffelse",
+          "descr1": "Basert på våre tidligere eksperimenter laget vi et videospill basert på en optimal forsterkningsstrategi for å stimulere elever i fjerde klasse til å lære matematikk raskere hjemme på fritiden.",
+          "descr2": "Resultatene viste at elevene i gjennomsnitt svarte 4 ganger flere spørsmål i spillet sammenlignet med samme periode på skolen og opptil 1200 spørsmål om dagen. Elever med lærevansker viste størst vekst i å svare på besvarte opptil 12 ganger flere spørsmål sammenlignet med på skolen. På slutten av studiet var alle studenter mer positive til matematikk."
+        }
+      }
+    },
+    "contactUs": {
+      "title": "Kontakt oss",
+      "description": "Hvis du har spørsmål, kan du kontakte oss ved å bruke detaljene nedenfor eller bruke meldingsskjemaet.",
+      "address": "Bankastræti 5, 101 Reykjavík, Island",
+      "messageTitle": "Send oss en melding",
+      "name": "Fullt navn *",
+      "email": "E-post *",
+      "phone": "Telefon",
+      "subject": "Emne *",
+      "placeholderSubject": "Jeg trenger hjelp med fakturering",
+      "message": "Melding *",
+      "placeholderMessage": "Jeg trenger hjelp med...",
+      "send": "Send",
+      "required": "Attributter med * kreves",
+      "popUpSuccessMessage": "Forespørselen er mottatt. Du bør få svar innen 48 timer.",
+      "popUpErrorMessage": "Forespørselen mislyktes. Send en e-post til evolytes@evolytes.com. Vi vil svare innen 48 timer på forespørselen din.",
+      "popUpMissingNameField": "Navnefeltet er obligatorisk.",
+      "popUpMissingEmailField": "E-postfeltet er obligatorisk.",
+      "popUpMissingSubjectField": "Emnefeltet er obligatorisk.",
+      "popUoMissingMessageField": "Det kreves en melding for å sende en forespørsel."
+    },
+    "changeLanguage": {
+      "title": "Velg land og språk"
+    },
+    "newsletter": {
+      "title": "Nyhetsbrev",
+      "subtitle": "Få de siste nyhetene, funksjonene og tilbudene for Evolytes!",
+      "buttonTitle": "Abonnere",
+      "alreadySubscribed": "Denne e-posten har allerede abonnert på nyhetsbrevet",
+      "emailInvalid": "E-postadressen er ugyldig.",
+      "subscribed": "Abonnerer",
+      "subscribedMessage": "Du har abonnert på nyhetsbrevet for e-posten: "
+    }
+  },
+  "signin": {
+    "title": "Logg inn",
+    "subtitle": "Du er bare noen få skritt unna å gi deg en unik matematikkutdanning for å lære matematikk raskere og mer effektivt.",
+    "emailTitle": "E-post",
+    "emailPlaceholder": "email@email.com",
+    "passwordTitle": "Passord",
+    "loginButtonTitle": "Logg inn",
+    "forgotPasswordTitle": "Glemt passord",
+    "signupPartOne": "Har du ikke en konto?",
+    "signupPartTwo": "Registrer deg nå!",
+    "signinWrong": "Passord eller e-post er feil."
+  },
+  "initPassword": {
+    "title": "Initialiser passord",
+    "subtitle": "Skriv inn et passord for kontoen din og bekreft det. Begge passordene må samsvare.",
+    "password": "Passord",
+    "confirmPassword": "Bekreft passord",
+    "save": "Lagre",
+    "tokenExpired": "Denne koblingen for passordinitialisering er utløpt eller feil utformet. E-posten for passordinitialisering utløper etter 24 timer.",
+    "passwordsDoNotMatch": "Passordene stemmer ikke overens, skriv inn passordene dine på nytt.",
+    "success": "Passordinitialiseringen var vellykket. Trykk på knappen nedenfor for å gå til innlogging."
+  },
+  "signup": {
+    "title": "Melde seg på!",
+    "subtitle": "Den oppgitte e-postadressen og passordet vil bli brukt til å logge inn på spillet og plattformen.",
+    "firstNameTitle": "Fornavn",
+    "lastNameTitle": "Etternavn",
+    "emailTitle": "E-post",
+    "emailPlaceholderTitle": "email@email.com",
+    "passwordTitle": "Passord",
+    "confirmPasswordTitle": "Bekreft passord",
+    "signupButtonTitle": "Melde seg på",
+    "signinPartOne": "Har du en konto?",
+    "signinPartTwo": "Logg inn nå!",
+    "passwordCriteria": "Passordet må inneholde minst 7 tegn og inneholde numeriske og alfabetiske tegn",
+    "termsMessage": "Ved å registrere deg godtar du vår",
+    "terms": "Vilkår og betingelser",
+    "privacyMessage": "Hvis du vil vite mer om hvordan Evolytes bruker, deler og samler inn din personlige dato, kan du lese Evolytes'",
+    "privacy": "Personvernpolicy",
+    "passwordsDoNotMatch": "Passordene stemmer ikke overens, skriv inn passordene dine på nytt.",
+    "passwordMissing": "Passordet mangler.",
+    "passwordNotLongEnough": "Passordet må inneholde minst 7 tegn",
+    "passwordMustIncludeAlpha": "Passordet må inneholde minst ett alfabetisk tegn",
+    "passwordMustIncludeNumeric": "Passordet må inneholde minst ett numerisk tegn",
+    "selectCountry": "Velg et land",
+    "selectLanguage": "Velg et språk"
+  },
+  "selectCountry": {
+    "title": "Velg land"
+  },
+  "selectLanguage": {
+    "title": "Velg språk"
+  },
+  "createStudent": {
+    "title": "Opprett student",
+    "subtitle": "I dette trinnet oppretter du en studentprofil som er laget for en enkelt bruker, slik at vi kan tilpasse oss ferdighetsnivået deres og gi dem individualisert innhold.",
+    "firstName": "Fornavn",
+    "middleName": "Mellomnavn",
+    "lastName": "Etternavn",
+    "birthDate": "Fødselsdato",
+    "birthDatePlaceholder": "dd/mm/yyyy",
+    "schoolType": "Skoletype",
+    "nextButton": "Neste",
+    "firstNameRequired": "Fornavn er obligatorisk.",
+    "lastNameRequired": "Etternavn er obligatorisk.",
+    "birthDateInvalid": "Angi en gyldig fødselsdato. Fødselsdatoformatet skal være 23.03.2012 (dd/mm/yyyy)."
+  },
+  "createGroup": {
+    "title": "Opprett gruppe",
+    "name": "Navn"
+  },
+  "emailVerifyReminder": {
+    "title": "Bekreft e-posten din",
+    "subtitlePartOne": "E-posten din er ikke bekreftet. En e-post ble sendt til",
+    "subtitlePartTwo": "med instruksjoner om hvordan du bekrefter e-posten din. Det kan ta et par minutter før e-posten ankommer.",
+    "resendEmail": "Mottok du ikke en e-post? Trykk på knappen nedenfor for å motta en ny e-post.",
+    "skipButtonTitle": "Hopp over",
+    "sendAgainTitle": "Send"
+  },
+  "verifyEmail": {
+    "title": "Bekrefte e-post",
+    "subtitleInProgress": "Vi bekrefter for øyeblikket e-posten din, gi oss et øyeblikk.",
+    "subtitleError": "Vi hadde problemer med å bekrefte e-posten din for å få en ny e-postpålogging. Knappen nedenfor tar deg til landingssiden vår.",
+    "success": "Suksess",
+    "successMessage": "E-posten er bekreftet.",
+    "done": "Ferdig",
+    "emailSentPartOne": "En bekreftelses-e-post er sendt til: ",
+    "emailSentPartTwo": " du bør motta det et øyeblikk."
+  },
+  "resetPassword": {
+    "title": "Tilbakestill passord",
+    "subtitle": "Skriv inn et nytt passord for kontoen din og bekreft det. Begge passordene må samsvare.",
+    "password": "Nytt passord",
+    "confirmPassword": "Bekreft nytt passord",
+    "reset": "Nullstill",
+    "tokenExpired": "Denne koblingen for tilbakestilling av passord er utløpt eller feil utformet. E-posten for tilbakestilling av passord utløper etter 24 timer.",
+    "passwordsDoNotMatch": "Passordene stemmer ikke overens, skriv inn passordene dine på nytt.",
+    "success": "Tilbakestillingen av passordet var vellykket. Trykk på knappen nedenfor for å gå til innlogging."
+  },
+  "forgotPassword": {
+    "title": "Glemt passord",
+    "subtitle": "Skriv inn e-postadressen din nedenfor for å tilbakestille passordet. Vi sender deg en e-post med en lenke for å tilbakestille passordet ditt.",
+    "emailTitle": "E-post",
+    "emailPlaceholder": "email@email.com",
+    "sendButtonTitle": "Send",
+    "signinPartOne": "Har du en konto?",
+    "signinPartTwo": "Logg inn!",
+    "signupPartOne": "Har du ikke en konto?",
+    "signupPartTwo": "Registrer deg!",
+    "success": "En e-post for å tilbakestille passordet er sendt til e-posten: "
+  },
+  "selectStudent": {
+    "title": "Velg konto",
+    "nameTitle": "Navn",
+    "stateTitle": "Status",
+    "ageTitle": "Alder",
+    "addAccount": "Legg til konto",
+    "statusActive": "Aktiv",
+    "statusFailed": "Fakturering mislyktes",
+    "statusNotSetup": "Ikke oppsett",
+    "licenseExpired": "Lisens utløpt",
+    "active": "Aktiv",
+    "future": "Fremtidig abonnement",
+    "in_trial": "Rettergang",
+    "trial_over": "Rettergang fullført",
+    "paused": "Midlertidig stanset",
+    "cancelled": "Avlyst",
+    "not_subscribed": "Abonnerer ikke",
+    "student": "Student",
+    "students": "Studenter",
+    "groups": "Grupper"
+  },
+  "selectSub": {
+    "title": "Velg et abonnement",
+    "subtitle": "Velg et abonnement som passer deg. En Evolytes pedagogisk bok er inkludert i hvert nytt abonnement som du vil velge i neste trinn.",
+    "nextButtonTitle": "Neste"
+  },
+  "selectBook": {
+    "title": "Velg en bok",
+    "subtitle": "Velg en bok som passer best for barnet ditt. Vi kom tilbake med å velge en enklere bok, da det er mer sannsynlig å vekke barnets interesse for matematikk i kombinasjon med Evolytes-spillet.",
+    "nextButtonTitle": "Neste",
+    "ageTitle": "år gammel",
+    "contentsTitle": "Innhold"
+  },
+  "confirmSubscription": {
+    "title": "Bekreft kjøp",
+    "subtitle": "Fullfør betalingsinformasjonen for å gi barnet ditt en unik matematikkutdanning.",
+    "subscriptionTitle": "Abonnement",
+    "bookIncluded": "Opplæringsbok inkludert",
+    "bookContents": "Innhold",
+    "deliveryTitle": "Levering",
+    "deliverySubtitle": "Sporet levering, skal ankomme om 3-5 virkedager.",
+    "breakdownTitle": "Sammenbrudd",
+    "breakdownSubscriptionTitle": "Abonnement: ",
+    "breakdownDeliveryTitle": "Levering: ",
+    "billingInformationTitle": "Faktureringsinformasjon",
+    "shippingInformationTitle": "Informasjon om forsendelse",
+    "shippingSameAsBillingTitle": "Samme som faktureringsadresse",
+    "confirmButtonTitle": "Kasse",
+    "total": "Total",
+    "companyInformationTitle": "Om Evolytes",
+    "companyInformationString": "Evolytes ehf., registreringsnummer: 600617-1250, mva-id: 128833. Adresse: Bankastræti 5, 101 Reykjavík, Island.",
+    "tcAgreeMessage": "Jeg godtar ",
+    "tcLinkMessage": "Vilkår og betingelser og retningslinjene for refusjon og kansellering."
+  },
+  "billingInformation": {
+    "fullName": "Fullt navn",
+    "address": "Adresse",
+    "city": "By",
+    "zip": "Glidelås",
+    "state": "Tilstand",
+    "statePlaceholder": "Tilstand",
+    "phoneNumber": "Telefonnummer",
+    "country": "Land",
+    "subscriptionExistsMessage": "Det finnes allerede et abonnement for studenten. Du blir ført til studentenes dashbord."
+  },
+  "subscriptions": {
+    "monthBreakdown": "måned(er)"
+  },
+  "billingComplete": {
+    "title": "Takk for kjøpet!",
+    "subtitle": "Du har mottatt en e-post med bekreftelse på kjøpet.",
+    "subtitleTwo": "Vi håper du vil like å se barnets matematikkevne vokse raskere og mer effektivt! Kom i gang ved å trykke på knappen nedenfor.",
+    "getStartedButtonTitle": "Kom i gang",
+    "invoiceTitle": "Faktura",
+    "billedToTitle": "Fakturert til",
+    "productsTitle": "Produkter",
+    "priceTitle": "Pris",
+    "evolytesProductTitle": "Evolytes-plattformen",
+    "evolytesProductSubtitle": "6 måneders abonnement",
+    "includedTitle": "Inkludert",
+    "total": "Total",
+    "6m": {
+      "evolytesProductSubtitle": "6 måneders abonnement"
+    },
+    "3m": {
+      "evolytesProductSubtitle": "3 måneders abonnement"
+    },
+    "1m": {
+      "evolytesProductSubtitle": "1 måneds abonnement"
+    }
+  },
+  "bookIntro": {
+    "title": "Evolytes bok",
+    "subtitle": "Evolytes-boken skal ankomme innen 3-5 virkedager til leveringsadressen som er oppgitt i kassen.",
+    "nextButtonTitle": "Neste"
+  },
+  "gameIntro": {
+    "title": "Evolytes iPad-spill",
+    "subtitle": "Evolytes iPad-spillet er tilgjengelig i App Store. Du bruker samme påloggingsinformasjon for å logge inn i spillet.",
+    "nextButtonTitle": "Neste"
+  },
+  "monitorIntro": {
+    "title": "Evolytes-skjerm",
+    "subtitle": "Du kan bruke Evolytes-skjermen når som helst via nettet for å overvåke barnets aktivitet, fremgang og ferdigheter i sanntid.",
+    "nextButtonTitle": "Avslutt"
+  },
+  "dashboard": {
+    "paymentError": {
+      "trialExpired": "Prøveperioden er utløpt",
+      "cancelled": "Abonnementet ble avbrutt",
+      "notSubscribed": "Ikke noe abonnement"
+    },
+    "answersTitle": "Svar",
+    "timeTitle": "Tid",
+    "answersListTitle": "Svar",
+    "columnProgressTitle": "Fremgang",
+    "bookProgressTitle": "Bestill fremdrift",
+    "minuteDelimeter": "m",
+    "hourDelimeter": "h",
+    "dayDelimeter": "",
+    "noQRScannedTitle": "Ingen QR-kode skannet",
+    "noQRScannedMessage": "Fremdriften i Evolytes-boken vises her når studenten har skannet en QR-kode i boken og besvart spørsmålene.",
+    "noAnswerTitle": "Ikke noe svar",
+    "noAnswersMessage": "Svarene vises her når studenten har begynt å spille.",
+    "noProfileMessage": "For å begynne å spille, må du laste ned applikasjonen.",
+    "objective": "Målsetting",
+    "selectObjective": "Kommer snart",
+    "age": "År",
+    "activity": "Aktivitet",
+    "chart": {
+      "timeSpent": "Brukt tid",
+      "thisWeek": "Denne uken",
+      "lastWeek": "Forrige uke",
+      "lastMonth": "Forrige måned",
+      "thisMonth": "Denne måneden",
+      "skillProgress": "Fremdrift for kompetanse",
+      "skills": "Ferdigheter arbeidet med",
+      "home": "Hjem",
+      "school": "Skole"
+    }
+  },
+  "books": {
+    "bookProgressTitle": "Bestill fremdrift",
+    "nextChapterTitle": "Neste kapittel",
+    "finishedTitle": "Nettopp fullført",
+    "failedTitle": "Trenger hjelp",
+    "chaptersTitle": "Kapitler",
+    "noNextChapterTitle": "Du er ferdig med boken",
+    "noFailedTitle": "Du trenger ikke hjelp med et kapittel",
+    "back": "Tilbake til bøker"
+  },
+  "answers": {
+    "moreData": "Last inn mer",
+    "dateFilter": "Filter for dato",
+    "startDate": "Startdato",
+    "endDate": "Sluttdato",
+    "category": "Kategori",
+    "answer": "Svar",
+    "skill": "Ferdighet",
+    "progress": "Fremgang",
+    "answerType": "Svartype",
+    "clear": "Klar",
+    "apply": "Bruk",
+    "filters": {
+      "noFilter": "Ikke noe filter",
+      "dateRange": "Datointervall",
+      "startDate": "Startdato",
+      "endDate": "Sluttdato"
+    }
+  },
+  "recentActivity": {
+    "title": "Aktivitet siste 7 dager",
+    "time": "Brukt tid",
+    "answers": "Svar",
+    "skills": "Ferdigheter",
+    "total": "Total"
+  },
+  "sidebar": {
+    "dashboard": "Dashbord",
+    "answers": "Svar",
+    "help": "Hjelp",
+    "settings": "Innstillinger",
+    "logout": "Logge av"
+  },
+  "header": {
+    "getStarted": "Kom i gang",
+    "login": "Pålogging",
+    "logout": "Logout",
+    "dashboard": "Dashbord",
+    "research": "Forskning",
+    "princing": "Priser",
+    "schools": "Skoler",
+    "features": "Funksjoner"
+  },
+  "schoolAdministration": {
+    "settingsDropdown": {
+      "administration": "Administrasjon",
+      "settings": "Innstillinger",
+      "logout": "Logout",
+      "selectStudent": "Velg student",
+      "switchStudent": "Bytt student"
+    },
+    "licenses":{
+      "title": "Lisenser",
+      "assigned": "Tilordnet",
+      "available": "Tilgjengelig",
+      "licenseStart": "Start av lisens",
+      "licenseEnd": "Slutt på lisens",
+      "licenseType": "Lisenstype",
+      "licenseTypes": {
+        "trial": "Prøveperiode",
+        "full": "Full"
+      },
+      "licenseCost": "Pris per student",
+      "total": "Total",
+      "licenseHistory": "Lisenshistorikk",
+      "createdBy": "Opprettet av"
+    },
+    "groups": {
+      "title": "Grupper",
+      "search": "Søk etter grupper",
+      "searchPlaceholder": "Navn på gruppe",
+      "addGroup": "Legg til gruppe",
+      "nameLegend": "Navn",
+      "createdAtLegend": "Opprettet den",
+      "updateGroupMessage": "Gruppeinformasjonen er oppdatert.",
+      "deleteGroupModalWarning": "Du er i ferd med å slette en gruppe, denne handlingen kan ikke angres.",
+      "deleteGroupModalSuccess": "Gruppen ble slettet.",
+      "deleteGroupTitle": "Slett gruppe",
+      "deleteStudentFromGroupModalSuccess": "Studenten er fjernet fra gruppen.",
+      "deleteTeacherFromGroupModalSuccess": "Læreren er fjernet fra gruppen.",
+      "addTeacherButtonTitle": "Legg til lærer",
+      "addTeacherTitle": "Legg til lærere",
+      "teachersListTitle": "Lærerliste"
+    },
+    "students": {
+      "title": "Studenter",
+      "search": "Søk etter studenter",
+      "searchPlaceholder": "Elevens navn",
+      "addStudent": "Legg til student",
+      "import": "Importere",
+      "nameLegend": "Navn",
+      "birthYearLegend": "Fødselsår",
+      "statusLegend": "Status",
+      "licenseExpiresAtLegend": "Utløp av lisens",
+      "createdAtLegend": "Opprettet den",
+      "importStudents": "Importer studenter",
+      "selectFile": "Velg fil",
+      "deleteStudentTitle": "Slett student",
+      "studentsCreatedModalMessage": "Studentene ble opprettet og lagt til.",
+      "updateStudentMessage": "Studentinformasjonen er oppdatert.",
+      "deleteStudentModalWarning": "Du er i ferd med å slette en student, denne handlingen kan ikke angres, er du sikker på at du vil fortsette?",
+      "deleteStudentModalSuccess": "Studentkontoen ble slettet."
+    },
+    "teachers": {
+      "title": "Lærere",
+      "teachersInvitationsTitle": "Invitasjoner",
+      "search": "Søk etter lærere",
+      "searchPlaceholder": "Lærerens navn eller e-postadresse",
+      "inviteTeacher": "Inviter lærer",
+      "addTeacherButtonTitle": "Legg til en annen lærer",
+      "addMore": "Legg til flere",
+      "nameLegend": "Navn",
+      "accountTypeLegend": "Type forretningsforbindelse",
+      "memberSinceLegend": "Medlem siden",
+      "inviteTeacherTitle": "Inviter lærer",
+      "studentsListTitle": "Studentliste",
+      "addStudentButtonTitle": "Legg til student",
+      "addStudentTitle": "Koble sammen elever",
+      "updateTeacherMessage": "Lærerinformasjonen er oppdatert.",
+      "deleteTeacherTitle": "Slett lærer",
+      "deleteTeacherModalWarning": "Du er i ferd med å slette en lærer, denne handlingen kan ikke angres.",
+      "deleteTeacherModalMessage": "Læreren, studenttilgangen og andre data er slettet."
+    },
+    "teachersInvitations": {
+      "importTeachersInvitations": "Importere invitasjoner",
+      "teachersInvitationsTitle": "Ventende invitasjoner",
+      "teacherInvitationSentLegend": "Invitasjon sendt",
+      "teacherInvitationStatusLegend": "Status for invitasjon",
+      "updateTeacherInvitationMessage": "Informasjonen om lærerinvitasjonen er oppdatert.",
+      "resendTeacherInvitationTitle": "Send invitasjon på nytt",
+      "lastTeacherInvitationSentTitle": "Siste invitasjon sendt",
+      "resendTeacherInvitationModalWarning": "Du er i ferd med å sende en invitasjons-e-post til en lærer på nytt, denne handlingen kan ikke angres.",
+      "resendTeacherInvitationModalMessage": "Lærerinvitasjonen har blitt mislikt.",
+      "deleteTeacherInvitationTitle": "Slett lærerinvitasjon",
+      "deleteTeacherInvitationModalWarning": "Du er i ferd med å slette en lærerinvitasjon.",
+      "deleteTeacherInvitationModalMessage": "Lærerinvitasjonen er slettet."
+    },
+    "sidebar": {
+      "students": "Studenter",
+      "teachers": "Lærere",
+      "groups": "Grupper"
+    },
+    "licenseState": {
+      "active": "Aktiv"
+    }
+  },
+  "schoolInvitation": {
+    "title": "Du er invitert til å",
+    "subtitle": "Du ble invitert til skolen med følgende kontotype",
+    "wrongAccountMessagePartOne": "E-postadressen til den påloggede brukeren samsvarer ikke med invitasjons-e-posten.",
+    "wrongAccountMessagePartTwo": "Logg av for å opprette en konto med invitasjonen.",
+    "wrongAccountMessageTwoPartOne": "E-postadressen til invitasjonen samsvarer med en eksisterende konto.",
+    "wrongAccountMessageTwoPartTwo": "Logg inn for å få tilgang til invitasjonen.",
+    "wrongTokenTypeMessage": "Koblingen som ble brukt, har ikke riktig format. Be om en ny invitasjon fra en skoleadministrator.",
+    "tokenExpired": "Invitasjonskoblingen er utløpt, snakk med en skoleadministrator for å få en ny invitasjon",
+    "firstNameRequiredError": "For å godta invitasjonen må du oppgi et fornavn.",
+    "lastNameRequiredError": "For å godta invitasjonen må du oppgi et etternavn."
+  },
+  "reusable": {
+    "buyNow": "Kjøp nå",
+    "renewNow": "Kjøp nå",
+    "close": "Lukk",
+    "invitation": "Invitasjon",
+    "selectFile": "Velg fil",
+    "import": "Importere",
+    "resend": "Send",
+    "active": "Aktiv",
+    "expired": "Utløpt",
+    "cultureTitle": "Språk",
+    "countryTitle": "Land",
+    "selectCulture": "Velg et språk",
+    "selectCountry": "Velg et land",
+    "chapter": "Kapittel",
+    "error": "Feil",
+    "unknownError": "Det oppstod en ukjent feil.",
+    "success": "Suksess",
+    "done": "Gjort",
+    "cancel": "Annullere",
+    "accept": "Godta",
+    "attempt": "Forsøk",
+    "attempts": "Forsøk",
+    "required": "Påkrevd",
+    "finished": "Ferdig",
+    "unfinished": "Uferdig",
+    "result": "Resultat",
+    "noTrial": "Ingen prøveversjon",
+    "grade": "Trinn",
+    "edition": "Utgave",
+    "none": "Ingen",
+    "book": "Bok",
+    "books": "Bøker",
+    "next": "Neste",
+    "send": "Send",
+    "save": "Lagre",
+    "delete": "Slette",
+    "add": "Tilføye",
+    "faster": "Raskere",
+    "create": "Lag",
+    "warning": "Advarsel",
+    "clearAll": "Fjern alle",
+    "birthYear": "Fødselsår",
+    "filters": "Filtre",
+    "profile": "Profil",
+    "qrCode": "QR-kode",
+    "dayNames": {
+      "1": "Mandag",
+      "2": "Tirsdag",
+      "3": "Onsdag",
+      "4": "Torsdag",
+      "5": "Fredag",
+      "6": "Lørdag",
+      "7": "Søndag"
+    },
+    "dayShortNames": {
+      "1": "Man",
+      "2": "Tue",
+      "3": "Ons",
+      "4": "Tor",
+      "5": "Fre",
+      "6": "Lør",
+      "7": "Søn"
+    },
+    "monthNames": {
+      "1": "Januar",
+      "2": "Februar",
+      "3": "Mars",
+      "4": "April",
+      "5": "Mai",
+      "6": "Juni",
+      "7": "Juli",
+      "8": "August",
+      "9": "September",
+      "10": "Oktober",
+      "11": "November",
+      "12": "Desember"
+    }
+  },
+  "months": {
+    "January": "Januar",
+    "February": "Februar",
+    "March": "Mars",
+    "April": "April",
+    "May": "Mai",
+    "June": "Juni",
+    "July": "Juli",
+    "August": "August",
+    "September": "September",
+    "October": "Oktober",
+    "November": "November",
+    "December": "Desember"
+  },
+  "settings": {
+    "profileSettings": {
+      "profile": "Profil",
+      "myProfile": "Min profil",
+      "profileDesc": "Her kan du administrere de fleste innstillingene rundt kontoen din.",
+      "myInfo": "Min informasjon",
+      "infoDesc": "Denne informasjonen brukes til å kontakte deg og godkjenne kontoen din.",
+      "language": "Språk og område",
+      "languageDesc": "Du kan endre språkinnstillingene. Hvis du trenger å endre regioner, må du kontakte oss via e-post.",
+      "delete": "Slett",
+      "deleteDesc": "Sletting av konto er permanent, og den sletter alle underordnede kontoer som er knyttet til den, og avbryter alle abonnementer. Denne handlingen kan ikke angres."
+    },
+    "passwordSettings": {
+      "password": "Passord",
+      "passwordDesc": "Nedenfor kan du endre passordet og andre godkjenningsmetoder når de legges til.",
+      "changePassword": "Endre passord",
+      "changeDesc": "Skriv inn ditt nåværende passord og bekreft det med det nye passordet."
+    },
+    "newBillingSettings": {
+      "billing": "Fakturering",
+      "billingDesc": "Her kan du se faktureringsstatusen for studentkontoer. Gå til Administrer fakturering for den kontoen for å få faktureringsloggen for hver konto."
+    },
+    "accountSettings": {
+      "accounts": "Konto",
+      "accountsDesc": "Du kan redigere informasjonen for selecte dstudent-kontoen, for eksempel navn, språk og annen relatert informasjon.",
+      "accountInfo": "Informasjon om forretningsforbindelse",
+      "language": "Språk og land"
+    },
+    "authSettings": {
+      "auth": "Godkjenning",
+      "authDesc": "Nedenfor kan du aktivere og bruke forskjellige autentiseringsmetoder for studenter. Du kan fortsatt logge inn via din egen konto. Dette er en ekstra autentiseringsmekanisme bare for studentkontoer.",
+      "qrCode": "Godkjenning av QR-kode",
+      "qrCodeDesc": "Du kan bruke en QR-kode slik at barnet kan logge inn på kontoen sin i Evolytes-spillet. QR-koden fungerer som et passord, så hvis en tredjepart får tak i det, kan du generere et nytt og ugyldiggjøre den gamle koden. Du kan skrive ut koden og beholde den der barnet ditt har enkel tilgang til den",
+      "enable": "Aktiver",
+      "newCode": "Ny kode",
+      "download": "Laste ned",
+      "pinConfirmation": "Bekreftelse på pinne",
+      "pinDesc": "Hvis du har flere barnekontoer, kan du legge til en PIN-kode med fire tall, slik at barn eller studenter ikke kan bytte mellom kontoer. For å komme inn på den valgte kontoen må barnet eller studenten bruke PIN-koden sin.",
+      "pin": "PIN",
+      "email": "Godkjenning av e-post og passord",
+      "emailDesc": "Hvis barnet ditt har en e-postkonto, kan du opprette en e-post og et passord, du må bekrefte e-posten slik at barnet ditt kan logge på med den i spillet."
+    },
+    "userSettingsTitle": "Innstillingene dine",
+    "accountSettingsTitle": "Innstillinger for konto",
+    "billingSettingsTitle": "Innstillinger for fakturering",
+    "tcSettingsTitle": "Vilkår og betingelser"
+  },
+  "userSettings": {
+    "userSectionTitle": "Din informasjon",
+    "emailTitle": "E-post",
+    "emailPlaceholder": "email@email.com",
+    "firstNameTitle": "Fornavn",
+    "lastNameTitle": "Etternavn",
+    "phoneTitle": "Telefon",
+    "changePasswordSectionTitle": "Endre passord",
+    "currentPasswordTitle": "Gjeldende passord",
+    "newPasswordTitle": "Nytt passord",
+    "newPasswordConfirmTitle": "Bekreft nytt passord",
+    "saveButtonTitle": "Lagre"
+  },
+  "studentSettings": {
+    "studentInformationTitle": "Informasjon om forretningsforbindelse",
+    "firstName": "Fornavn",
+    "middleName": "Middle Name",
+    "lastName": "Etternavn",
+    "birthDate": "Fødselsdato",
+    "datePlaceholder": "dd/mm/yyyy",
+    "schoolType": "Skoletype"
+  },
+  "billingSettings": {
+    "title": "Status for abonnement",
+    "manageSubscription": "Behandle abonnement",
+    "statusTitle": "Status",
+    "renewNow": "Forny nå",
+    "renewalDateTitle": "Fornyelsesdato",
+    "renewalPriceTitle": "Pris for fornyelse",
+    "cardNumberTitle": "Kortnummer",
+    "cardType": "Korttype",
+    "billingInformationTitle": "Faktureringsinformasjon",
+    "invoiceTitle": "Fakturaer",
+    "viewTitle": "Utsikt"
+  },
+  "schoolTypes": {
+    "public": "Offentlig skole",
+    "private": "Privatskole",
+    "home": "Hjemmeskole"
+  },
+  "schoolAccessTypes": {
+    "admin": "Administrator",
+    "teacher": "Lærer"
+  },
+  "tc": {
+    "title": "Vilkår og betingelser"
+  },
+  "privacy": {
+    "title": "Personvernpolicy"
+  },
+  "categories": {
+    "none": "Ingen",
+    "addition": "Addisjon",
+    "count": "tell",
+    "subtraction": "Subtraksjon",
+    "multiplication": "Multiplikasjon",
+    "sizeComparison": "Størrelser",
+    "numberPatterns": "Tallmønstre",
+    "imagePatterns": "Bildemønstre",
+    "shapes": "Figurer",
+    "placeValue": "Plasser verdi"
+  },
+  "answerTypes": {
+    "none": "Ingen",
+    "input": "Innspill",
+    "multipleChoice": "Flere valg"
+  },
+  "answerCorrect": {
+    "none": "Ingen",
+    "correct": "Korrigere",
+    "wrong": "Feil"
+  },
+  "subscriptionStatuses": {
+    "FirstBillingFailed": "Fakturering mislyktes",
+    "BillingFailed": "Fakturering mislyktes",
+    "Active": "Aktiv",
+    "NotSetup": "Ikke oppsett",
+    "Test": "Prøve"
+  },
+  "cbSubscriptionStatuses": {
+    "active": "Aktiv",
+    "future": "Fremtidig abonnement",
+    "in_trial": "Rettergang",
+    "paused": "Midlertidig stanset",
+    "cancelled": "Avlyst",
+    "not_subscribed": "Abonnerer ikke"
+  },
+  "videosPage": {
+    "title": "Støtte videoer"
+  },
+  "platformVideos": [
+    {
+      "name": "plattformInf",
+      "title": "Skjermen",
+      "iconLink": "./assets/sidebar/dashboard-overview-2.svg",
+      "subCategories": [
+        {
+          "subCatTitle": "Logg inn og studenter",
+          "videos": [
+            {
+              "urlId": "671067510",
+              "videoTitle": "Logg på",
+              "videoDescription": "Finn ut hvordan vi logger inn og bytter mellom studenter"
+            }
+          ]
+        },
+        {
+          "subCatTitle": "Skjermen",
+          "videos": [
+            {
+              "urlId": "671100653",
+              "videoTitle": "Skjermen",
+              "videoDescription": "Finn ut mer om Evolytes' skjerm.  Hvordan vi sjekker studentenes status og studerer svarmønstre."
+            }
+          ]
+        },
+        {
+          "subCatTitle": "Innstillinger",
+          "videos": [
+            {
+              "urlId": "671100318",
+              "videoTitle": "Innstillinger",
+              "videoDescription": "Finn ut mer om kontoinnstillinger, det vil si hvordan du endrer e-post og passord."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "plattformspill",
+      "title": "Evolytes-spillet",
+      "iconLink": "./assets/sidebar/dashboard-overview-2.svg",
+      "subCategories": [
+        {
+          "subCatTitle": "Logg på",
+          "videos": [
+            {
+              "urlId": "672715442",
+              "videoTitle": "Logg på",
+              "videoDescription": "Finn ut hvordan du logger inn i spillet og velger/bytter studenter."
+            }
+          ]
+        },
+        {
+          "subCatTitle": "Knapper og brukergrensesnitt",
+          "videos": [
+            {
+              "urlId": "672716320",
+              "videoTitle": "Hovedbrukergrensesnitt",
+              "videoDescription": "Lær om de fire viktigste brukergrensesnittknappene i Evolytes-spillet."
+            }
+          ]
+        },
+        {
+          "subCatTitle": "Treff og spørsmål",
+          "videos": [
+            {
+              "urlId": "672715537",
+              "videoTitle": "Slik fungerer treff",
+              "videoDescription": "Finn ut hvordan kamper fungerer i Evolytes-spillet."
+            }
+          ]
+        },
+        {
+          "subCatTitle": "Samle Evolytes",
+          "videos": [
+            {
+              "urlId": "672715828",
+              "videoTitle": "Krystall fange",
+              "videoDescription": "Lær hvordan du bruker krystallene til å samle nye Evolytes."
+            }
+          ]
+        },
+        {
+          "subCatTitle": "Kart og oppdrag",
+          "videos": [
+            {
+              "urlId": "672715723",
+              "videoTitle": "Øy 1",
+              "videoDescription": "Lær om utformingen av øy 1 og hvor viktige ting ligger."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "adminVideos": [
+    {
+      "name": "skoleAdmin",
+      "title": "Administrasjonssystem",
+      "iconLink": "./assets/school-admin/school-gray.svg",
+      "subCategories": [
+        {
+          "subCatTitle": "Admin",
+          "videos": [
+            {
+              "urlId": "671100995",
+              "videoTitle": "Administrasjonssystem",
+              "videoDescription": "Finn ut hvordan vi bruker administrasjonssystemet til å kontrollere lærere og elever på skolen din."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": {
+    "LicenseLimitReached": "Du har nådd lisensgrensen. Slett en student eller kjøp ekstra lisenser."
+  }
+}

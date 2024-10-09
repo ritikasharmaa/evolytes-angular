@@ -1,0 +1,25 @@
+div.grayBorder {
+  padding: 0.5em;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+/* lt-lg */
+@media only screen and (max-width: 1279px) {
+  .monitorGif {
+    height: calc(90vw * 374.656/663.766);
+    max-height: 270px;
+    width: 90%;
+    max-width: 480px;
+  }
+}
+
+/* gt-md */
+@media only screen and (min-width: 1280px) {
+  .monitorGif{
+    height: calc(37vw * 374.656/663.766);
+  }
+}
+
+div.content {
+
+}

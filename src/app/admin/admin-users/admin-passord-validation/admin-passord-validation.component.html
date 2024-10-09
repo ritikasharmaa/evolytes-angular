@@ -1,0 +1,43 @@
+<div style="position: absolute; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); z-index: 5000;"
+     fxLayoutAlign="center center"
+     *ngIf="adminPasswordValidationSrv.isVisible">
+
+  <div fxFlex="400px"
+       fxFlex.xs="90"
+       class="whiteBg defaultShadow"
+       style="height: 320px; border-radius: 4px;">
+    <div class="greenBg"
+         style="height: 60px; border-radius: 4px 4px 0 0;"
+         fxLayoutAlign="center center">
+      <p class="boldMont font20px whiteColor">Enter your password</p>
+    </div>
+    <div fxLayoutAlign="space-around center" style="height: calc(100% - 110px);">
+      <div fxFlex="20px"></div>
+      <div fxFlex>
+        <app-evo-input [value]="adminPasswordValidationSrv.enteredPassword"
+                       [placeholderText]="'school password'"
+                       [inputType]="'password'"
+                       [title]="'password'"
+                       (inputChangedEvent)="adminPasswordValidationSrv.enteredPassword = $event"
+        >
+        </app-evo-input>
+      </div>
+      <div fxFlex="20px"></div>
+    </div>
+    <div fxLayoutAlign="space-around center" style="height: 50px">
+      <button fxFlex="120px"
+              class="redButton defaultShadow boldMont font16px whiteColor"
+              style="height: 40px;"
+              (click)="adminPasswordValidationSrv.cancel()">
+        Cancel
+      </button>
+      <button fxFlex="120px"
+              class="greenButton defaultShadow boldMont font16px whiteColor"
+              style="height: 40px;"
+              (click)="adminPasswordValidationSrv.validate()">
+        Validate
+      </button>
+    </div>
+  </div>
+
+</div>

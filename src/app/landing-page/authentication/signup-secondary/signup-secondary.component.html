@@ -1,0 +1,197 @@
+<app-land-nav-header [onlyIcon]="true"></app-land-nav-header>
+<app-evo-decoration-background-signup></app-evo-decoration-background-signup>
+<div >
+  <form #f="ngForm" style="width: 100%; height: 100%;" fxLayoutAlign="center start">
+    <div fxFlex.xs="95" fxFlex.sm="90" fxFlex.gt-sm="800px" style="overflow-y: auto;">
+
+      <div style="height: 20px"></div>
+
+      <div fxLayoutAlign="center start">
+        <p fxFlex.gt-sm="90"
+           class="boldMont font22px blackColor noMargin"
+           style="text-align: center">{{ 'signup.title' | translate }}</p>
+      </div>
+
+      <div style="height: 5px"></div>
+
+      <div fxLayoutAlign="center start">
+        <p fxFlex="80"
+           class="regularMont font14px grayColor noMargin"
+           style="text-align: center;">{{ 'signup.subtitle' | translate }}</p>
+      </div>
+
+      <div style="height: 20px;"></div>
+
+      <div fxLayoutAlign="center start" fxHide.gt-xs="true">
+        <div fxFlex="80">
+          <app-evo-input title="{{ 'signup.emailTitle' | translate }}"
+                         placeholderText="{{ 'signup.emailPlaceholderTitle' | translate}}"
+                         ngModel
+                         inputType="email"
+                         autoCapitalize="none"
+                         autoComplete="off"
+                         name="email"></app-evo-input>
+          <div style="height: 20px;"></div>
+          <app-evo-input title="{{ 'signup.firstNameTitle' | translate }}"
+                         placeholderText="{{ 'signup.firstNameTitle' | translate }}"
+                         ngModel
+                         autoCapitalize="words"
+                         name="firstName"></app-evo-input>
+          <div style="height: 20px"></div>
+          <app-evo-input title="{{ 'signup.lastNameTitle' | translate }}"
+                         placeholderText="{{ 'signup.lastNameTitle' | translate }}"
+                         ngModel
+                         autoCapitalize="words"
+                         name="lastName">
+          </app-evo-input>
+          <div style="height: 20px"></div>
+          <div style="height: 62px">
+            <app-evo-lang-dropdown [type]="'culture'" [(ngModel)]="user.culture" [ngModelOptions]="{ standalone: true }"></app-evo-lang-dropdown>
+          </div>
+          <div style="height: 20px"></div>
+          <div style="height: 62px">
+            <app-evo-lang-dropdown [type]="'country'" [(ngModel)]="user.country" [ngModelOptions]="{ standalone: true }"></app-evo-lang-dropdown>
+          </div>
+          <div style="height: 20px"></div>
+          <div>
+            <p class="mediumMont font12px grayColor noMargin">{{ 'signup.passwordCriteria' | translate }}</p>
+          </div>
+          <div style="height: 10px"></div>
+          <app-evo-input title="{{ 'signup.passwordTitle' | translate }}"
+                         [inputType]="'password'"
+                         placeholderText="{{ 'signup.confirmPasswordTitle' | translate }}"
+                         ngModel
+                         name="password">
+          </app-evo-input>
+          <div style="height: 20px"></div>
+          <app-evo-input title="{{ 'signup.confirmPasswordTitle' | translate }}"
+                         [inputType]="'password'"
+                         placeholderText="{{ 'signup.confirmPasswordTitle' | translate }}"
+                         ngModel
+                         name="confirmPassword">
+          </app-evo-input>
+        </div>
+      </div>
+
+      <div fxHide.xs="true" fxLayoutAlign="center start">
+        <div fxFlex="90" fxLayoutAlign="space-between start">
+          <div fxFlex="45">
+            <app-evo-input title="{{ 'signup.emailTitle' | translate }}"
+                           placeholderText="{{ 'signup.emailPlaceholderTitle' | translate }}"
+                           ngModel
+                           inputType="email"
+                           autoComplete="off"
+                           autoCapitalize="none"
+                           name="email">
+            </app-evo-input>
+            <div style="height: 20px;"></div>
+            <div style="height: 62px">
+              <app-evo-lang-dropdown [type]="'country'"
+                                     [(ngModel)]="user.country"
+                                     [ngModelOptions]="{ standalone: true }">
+              </app-evo-lang-dropdown>
+            </div>
+            <div style="height: 20px;"></div>
+            <app-evo-input title="{{ 'signup.firstNameTitle' | translate }}"
+                           [placeholderText]="'John'"
+                           ngModel
+                           autoCapitalize="words"
+                           name="firstName">
+            </app-evo-input>
+            <div style="height: 20px"></div>
+            <app-evo-input title="{{ 'signup.lastNameTitle' | translate }}"
+                           [placeholderText]="'Doe'"
+                           ngModel
+                           autoCapitalize="words"
+                           name="lastName">
+            </app-evo-input>
+          </div>
+          <div fxFlex="45">
+            <div style="height: 62px">
+              <app-evo-lang-dropdown [type]="'culture'"
+                                     [(ngModel)]="user.culture"
+                                     [ngModelOptions]="{ standalone: true }">
+              </app-evo-lang-dropdown>
+            </div>
+            <div style="height: 20px"></div>
+            <div>
+              <p class="mediumMont font12px grayColor noMargin">{{ 'signup.passwordCriteria' | translate }}</p>
+            </div>
+            <div style="height: 10px"></div>
+            <app-evo-input title="{{ 'signup.passwordTitle' | translate }}"
+                           [inputType]="'password'"
+                           placeholderText="{{ 'signup.passwordTitle' | translate }}"
+                           ngModel
+                           name="password">
+            </app-evo-input>
+            <div style="height: 20px"></div>
+            <app-evo-input title="{{ 'signup.confirmPasswordTitle' | translate }}"
+                           [inputType]="'password'"
+                           placeholderText="{{ 'signup.confirmPasswordTitle' | translate }}"
+                           ngModel
+                           name="confirmPassword">
+            </app-evo-input>
+          </div>
+        </div>
+      </div>
+
+      <div style="height: 20px"></div>
+
+      <div fxLayoutAlign="center start">
+        <div fxFlex="80">
+          <p class="semiBoldMont font12px noMargin blackColor"
+             style="text-align: center">
+            {{ 'signup.termsMessage' | translate }}
+          </p>
+          <div style="height: 4px"></div>
+          <p class="semiBoldMont font12px noMargin blueHoverColor"
+             style="text-align: center; cursor: pointer;"
+             (click)="onEULAClicked()">
+            {{ 'signup.terms' | translate }}
+          </p>
+          <div style="height: 10px"></div>
+          <p class="semiBoldMont font12px noMargin blackColor"
+             style="text-align: center;">
+            {{ 'signup.privacyMessage' | translate }}
+          </p>
+          <div style="height: 4px;"></div>
+          <p class="semiBoldMont font12px noMargin blueHoverColor"
+             style="text-align: center; cursor: pointer;"
+             (click)="onPrivacyPolicyClicked()">
+            {{ 'signup.privacy' | translate }}
+          </p>
+        </div>
+      </div>
+
+
+      <div style="height: 20px"></div>
+
+      <div fxLayoutAlign="center start">
+        <button class="greenButton defaultShadow"
+                style="width: 140px; height: 40px;"
+                fxLayoutAlign="center center"
+                (click)="onSignupClicked(f)">
+          <p class="semiBoldMont font16px whiteColor noMargin">
+            {{ 'signup.signupButtonTitle' | translate }}
+          </p>
+        </button>
+      </div>
+
+      <div style="height: 20px"></div>
+
+      <div fxLayoutAlign="center start">
+        <p class="regularMont font14px grayColor noMargin" style="text-align: center">{{ 'signup.signinPartOne' | translate }}</p>
+        <div fxFlex="5px"></div>
+        <p class="semiBoldMont font14px blueHoverColor noMargin"
+           style="cursor: pointer"
+           (click)="onSignInClicked()">
+          {{ 'signup.signinPartTwo' | translate }}
+        </p>
+      </div>
+
+      <div style="height: 30px"></div>
+
+    </div>
+  </form>
+
+</div>

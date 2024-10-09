@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="14px" viewBox="0 0 15 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Tablet_Overview-Copy-6" transform="translate(-243.000000, -477.000000)" stroke="#54676E">
+            <g id="TimeSpentThisWeek" transform="translate(103.000000, 294.000000)">
+                <g id="BackgroundSectionWithTitle">
+                    <g id="Question-1" transform="translate(27.000000, 132.000000)">
+                        <g id="Group-3" transform="translate(114.000000, 51.000000)">
+                            <g id="Group" transform="translate(0.000000, 0.500000)">
+                                <g id="question-help-circle">
+                                    <path d="M4.46875,5.27691667 C4.46718145,4.21125209 5.28902272,3.32535232 6.35181013,3.2470812 C7.41459754,3.16881009 8.35735556,3.9247524 8.51192318,4.97914906 C8.6664908,6.03354571 7.98036916,7.02827108 6.93983333,7.25833333 C6.68680354,7.30825432 6.50331815,7.52857237 6.5,7.78645833 L6.5,8.38933333" id="Shape"></path>
+                                    <path d="M6.5,9.74566667 C6.57478856,9.74566667 6.63541667,9.80629477 6.63541667,9.88108333 C6.63541667,9.95587189 6.57478856,10.0165 6.5,10.0165 C6.42521144,10.0165 6.36458333,9.95587189 6.36458333,9.88108333 C6.36458333,9.80629477 6.42521144,9.74566667 6.5,9.74566667" id="Shape"></path>
+                                    <circle id="Oval" cx="6.5" cy="6.50054167" r="6.22916667"></circle>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

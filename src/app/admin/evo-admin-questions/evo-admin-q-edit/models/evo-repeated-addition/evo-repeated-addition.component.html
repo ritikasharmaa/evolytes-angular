@@ -1,0 +1,42 @@
+<div *ngIf="showQuestion()">
+  <div fxLayoutAlign="center start">
+    <p fxFlex="80" class="semiBoldMont font18px blackColor noMargin"
+       style="text-align: center">
+      {{questionString()}}
+    </p>
+  </div>
+  <div style="height: 20px;"></div>
+  <div>
+    <div fxFlex="20px"></div>
+    <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+      <div fxFlex>
+        <app-evo-reusable-range [title]="'Base Value Range'"
+                                [range]="question.model.multipliedValueRange">
+        </app-evo-reusable-range>
+        <div style="height: 20px;"></div>
+        <app-evo-dropdown [title]="'Image'"
+                          [list]="QuestionModel.ImageTypes.dropdownList()"
+                          [currentValue]="question.model.imageTypeOne"
+                          (valueChangedEvent)="question.model.imageTypeOne = $event">
+        </app-evo-dropdown>
+        <div style="height: 20px;"></div>
+        <app-evo-input [title]="'Num Answers'"
+                       [inputType]="'number'"
+                       [value]="question.model.numAnswers"
+                       (inputChangedEvent)="question.model.numAnswers = $event">
+        </app-evo-input>
+      </div>
+      <div fxFlex="20px" fxFlex.xs="10px"></div>
+      <div fxFlex>
+        <app-evo-reusable-range [title]="'Repetition Range (Multiplier)'"
+                                [range]="question.model.multiplierRange">
+        </app-evo-reusable-range>
+        <div style="height: 20px;"></div>
+        <app-evo-reusable-range [title]="'Possible Answers'"
+                                [range]="question.model.possibleAnswers">
+        </app-evo-reusable-range>
+      </div>
+    </div>
+    <div fxFlex="20px"></div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div *ngIf="showTitle">
+  <p class="semiBoldMont font12px noMargin" [ngStyle]="{ color: getTitleColor() }">{{getTitle()}}</p>
+  <div style="height: 6px"></div>
+</div>
+<div class="containerShadow"
+     style="width: 100%; border-radius: 4px"
+     [ngClass]="{ whiteBg: isDisabled === false, bgGrayColor: isDisabled === true }"
+     fxLayoutAlign="center center">
+  <input class="mediumMont blackColor whiteBg"
+         style="outline: none; border: none; border-radius: 4px; width: calc(100% - 20px);"
+         [autocomplete]="autoComplete"
+         [autocapitalize]="autoCapitalize"
+         [disabled]="isDisabled"
+         [placeholder]="getPlaceholderText()"
+         [value]="getValue()"
+         [ngStyle]="{ height: getContainerHeight(), 'font-size' : getFontSize() }"
+         (keyup)="inputChanged($event)"
+         [type]="inputType">
+</div>
+<!--<div style="height: 2px;"></div>-->

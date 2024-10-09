@@ -1,0 +1,59 @@
+<div *ngIf="showTitle">
+  <p class="semiBoldMont font12px noMargin" [ngStyle]="{ color: getTitleColor() }">{{title}}</p>
+  <div style="height: 6px;"></div>
+</div>
+<div class="containerShadow bgWhiteHoverColor"
+     [ngStyle]="{ height: containerHeight, cursor: getCursor() }"
+     [ngClass]="{ whiteBg: isDisabled === false, bgGrayColor: isDisabled === true}"
+     style="border-radius: 4px; width: 100%;"
+     (click)="onContainerClicked()"
+     fxLayoutAlign="start center">
+  <div [fxFlex]="leftIndent"></div>
+  <div [fxFlex]="iconContainerWidth" *ngIf="showIcon" fxLayoutAlign="center center">
+    <img [src]="getCurrentIconURL()"
+         style="object-fit: contain;"
+         [ngStyle]="iconStyle"
+         *ngIf="getCurrentIconURL() !== null">
+  </div>
+  <app-evo-input fxFlex class="mediumMont blackColor noMargin"
+                 style="width: 100%"
+                 [ngStyle]="{ 'font-size': fontSize}"
+                 [value]="currentInput"
+                 [placeholderText]="placeholderText"
+                 [showTitle]="false"
+                 [needAll]="false"
+                 (inputChangedEvent)="currentInput = $event"
+  ></app-evo-input>
+  <div fxFlex="40px" fxLayoutAlign="center center">
+    <img src="../../../assets/icons/down-arrow.svg" style="object-fit: contain; width: 18px; height: 18px;">
+  </div>
+  <div fxFlex="10px"></div>
+</div>
+<div style="height: 2px;"></div>
+<!-- Dropdown Container -->
+<div style="position: relative; z-index: 100;"
+     *ngIf="isOpen">
+  <div class="containerShadow"
+       [ngStyle]="{ height: getDropdownHeight(), 'overflow-y': getOverflowY() }"
+       style="border-radius: 4px; width: 100%;">
+    <div *ngFor="let el of getList();"
+         class="bgWhiteHoverColor"
+         [ngStyle]="{ height: rowHeight }"
+         style="cursor: pointer"
+         (click)="onRowClicked(el)"
+         fxLayoutAlign="start center">
+      <div [fxFlex]="leftIndent"></div>
+      <div [fxFlex]="iconContainerWidth" *ngIf="showIcon" fxLayoutAlign="center center">
+        <img [src]="el.iconURL"
+             style="object-fit: contain;"
+             [ngStyle]="iconStyle"
+             *ngIf="el.iconURL !== null">
+      </div>
+      <div fxLayoutAlign="start center">
+        <p class="mediumMont blackColor noMargin" [ngStyle]="{ 'font-size': fontSize }">{{ el.value | translate }}</p>
+      </div>
+      <div fxFlex="50px"></div>
+    </div>
+  </div>
+  <div style="height: 20px;"></div>
+</div>

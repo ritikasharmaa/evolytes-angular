@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>phone</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Landing-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Contact-Us" transform="translate(-111.000000, -600.000000)" stroke="#54676E" stroke-width="3">
+            <g id="Intro-Section" transform="translate(0.000000, 98.000000)">
+                <g id="Information" transform="translate(50.000000, 86.000000)">
+                    <g id="Email" transform="translate(61.000000, 394.000000)">
+                        <g id="phone" transform="translate(0.000000, 22.000000)">
+                            <path d="M21.2006667,17.2666667 C23.3056348,15.1579621 23.3056348,11.7430379 21.2006667,9.63433333 L15.4746667,3.91533333 C13.3670273,1.8077919 9.94997266,1.8077919 7.84233333,3.91533333 L4.704,7.056 C1.98144535,9.77423596 1.55292293,14.0350568 3.67966667,17.241 C12.9217746,31.1520787 24.8479213,43.0782254 38.759,52.3203333 C41.9657555,54.4439666 46.2240923,54.0177428 48.9463333,51.3006667 L52.0846667,48.16 C53.0973184,47.1481771 53.6662899,45.7753532 53.6662899,44.3438333 C53.6662899,42.9123135 53.0973184,41.5394896 52.0846667,40.5276667 L46.361,34.804 C45.3491771,33.7913483 43.9763532,33.2223768 42.5448333,33.2223768 C41.1133135,33.2223768 39.7404896,33.7913483 38.7286667,34.804 L36.82,36.7126667 C30.4240114,31.4491238 24.55384,25.5773895 19.292,19.18 L21.2006667,17.2666667 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

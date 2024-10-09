@@ -1,0 +1,36 @@
+/** Navigation Header **/
+div.evoHomeNav {
+  height: 80px;
+}
+
+div.evoHomeNav a {
+  font-size: 14px;
+  color: #54676E;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+div.login:hover p {
+  color: #3E4C51;
+}
+
+div.login p:focus {
+  outline: none;
+}
+
+div.evoHomeNav a.redUnderline {
+  border-bottom: 2px solid #ED1C24;
+}
+
+div.evoHomeNav a.blueUnderline {
+  border-bottom: 2px solid #009CCC;
+}
+
+div.evoHomeNav a.greenUnderline {
+  border-bottom: 2px solid #79C570;
+}
+
+div.evoHomeNav a.yellowUnderline {
+  border-bottom: 2px solid #FFCB05;
+}
+

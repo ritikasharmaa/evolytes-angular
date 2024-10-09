@@ -1,0 +1,185 @@
+<div class="defaultScrollBar scrollBarGreenThumb" style="width: 100%; height: 100%; overflow-y: scroll">
+  <div style="height: 20px"></div>
+  <div fxLayoutAlign="center center">
+    <div class="whiteBg defaultShadow"
+         style="border-radius: 6px"
+         fxFlex.lt-lg="94"
+         fxFlex.gt-md="1000px">
+
+      <div style="height: 20px"></div>
+      <!-- Content -->
+      <div>
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <p class="boldMont font20px blackColor noMargin">{{ 'schoolAdministration.licenses.title' | translate }}</p>
+          <div style="height: 20px;"></div>
+          <div fxLayout.xs="column" fxLayout="row">
+            <div fxFlex="140px" style="height: 140px; width: 140px;">
+              <app-circle-progress-bar [chartData]="chartData"
+                                       [chartDataLabels]="labels"
+                                       [chartTitle]="chartTitle">
+              </app-circle-progress-bar>
+            </div>
+            <div fxFlex.xs="20px" fxFlex="6"></div>
+            <div fxFlex>
+              <p class="boldMont px16 grayColor noMargin">
+                {{ 'schoolAdministration.licenses.assigned' | translate }}
+              </p>
+              <div style="height: 10px;"></div>
+              <p class="boldMont px28 blackColor noMargin">
+                {{ getNumActiveLicenses() }}
+              </p>
+              <div style="height: 10px;"></div>
+              <app-evo-input title="{{ 'schoolAdministration.licenses.licenseStart' | translate }}"
+                             [value]="getLicenseStart()"
+                             [isDisabled]="true">
+              </app-evo-input>
+            </div>
+            <div fxFlex.xs="20px" fxFlex="6"></div>
+            <div fxFlex>
+              <p class="boldMont px16 grayColor noMargin">
+                {{ 'schoolAdministration.licenses.available' | translate }}
+              </p>
+              <div style="height: 10px;"></div>
+              <p class="boldMont px28 blackColor noMargin">
+                {{ getAvailableLicenses() }}
+              </p>
+              <div style="height: 10px;"></div>
+              <app-evo-input title="{{ 'schoolAdministration.licenses.licenseEnd' | translate }}"
+                             [value]="getLicenseEnd()"
+                             [isDisabled]="true">
+              </app-evo-input>
+            </div>
+            <div fxFlex.xs="10px" fxFlex="4"></div>
+          </div>
+          <div style="height: 20px"></div>
+          <!-- License types -->
+          <div fxLayout="row" fxLayout.xs="column">
+            <div fxFlex>
+              <app-evo-input [isDisabled]="true"
+                             title="{{ 'schoolAdministration.licenses.licenseType' | translate }}"
+                             placeholderText="{{ 'schoolAdministration.licenses.licenseType' | translate }}"
+                             [value]="getSchoolLicenseType(this.license)">
+              </app-evo-input>
+            </div>
+            <div fxFlex="30px" fxFlex.xs="10px"></div>
+            <div fxFlex>
+              <app-evo-input title="{{ 'schoolAdministration.licenses.licenseCost' | translate }}"
+                             placeholderText="{{ 'schoolAdministration.licenses.licenseCost' | translate }}"
+                             [value]="getSchoolPricePerStudent(this.license)"
+                             [isDisabled]="true">
+              </app-evo-input>
+            </div>
+          </div>
+          <div style="height: 20px;" ngStyle.xs="height: 10px;"></div>
+          <div fxLayout="row" fxLayout.xs="column">
+            <div fxFlex>
+              <app-evo-input title="{{ 'schoolAdministration.licenses.total' | translate }}"
+                             placeholderText="{{ 'schoolAdministration.licenses.total' | translate }}"
+                             [value]="getSchoolTotalCost(license)"
+                             [isDisabled]="true">
+              </app-evo-input>
+            </div>
+            <div fxFlex="30px" fxFlex.xs="10px"></div>
+            <div fxFlex></div>
+          </div>
+          <div style="height: 20px;"></div>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="height: 40px;"></div>
+
+  <div fxLayoutAlign="center center">
+    <div class="whiteBg defaultShadow"
+         style="border-radius: 6px"
+         fxFlex.lt-lg="94"
+         fxFlex.gt-md="1000px">
+
+      <div style="height: 20px"></div>
+      <!-- Content -->
+      <div>
+        <div fxFlex="20px"></div>
+        <div fxFlex>
+          <p class="boldMont font20px blackColor noMargin">
+            {{ 'schoolAdministration.licenses.licenseHistory' | translate }}
+          </p>
+          <div style="height: 20px;"></div>
+          <!-- License types -->
+          <div *ngFor="let history of licenseHistory">
+            <div style="height: 20px;"></div>
+            <p class="semiBoldMont font14px lightGrayColor noMargin" *ngIf="history.user">{{ history.changedAt | date:'dd / MM / yyyy' }} - {{ 'schoolAdministration.licenses.createdBy' | translate }} {{ history.user.getFullName() }}</p>
+            <div style="height: 10px;"></div>
+            <div class="line"></div>
+            <div style="height: 20px;"></div>
+            <div fxLayout="row"
+                 fxLayout.xs="column">
+              <div fxFlex>
+                <app-evo-input [isDisabled]="true"
+                               title="{{ 'schoolAdministration.licenses.numLicenses' | translate }}"
+                               placeholderText="{{ 'schoolAdministration.licenses.numLicenses' | translate }}"
+                               [value]="history.numLicenses">
+                </app-evo-input>
+              </div>
+              <div fxFlex="30px" fxFlex.xs="10px"></div>
+              <div fxFlex>
+                <app-evo-input title="{{ 'schoolAdministration.licenses.licenseType' | translate }}"
+                               placeholderText="{{ 'schoolAdministration.licenses.licenseType' | translate }}"
+                               [isDisabled]="true"
+                               [value]="getSchoolLicenseType(history)">
+                </app-evo-input>
+              </div>
+            </div>
+            <div style="height: 20px;"></div>
+            <div fxLayout="row"
+                 fxLayout.xs="column">
+              <div fxFlex>
+                <app-evo-date-input title="{{ 'schoolAdministration.licenses.licenseStart' | translate }}"
+                                    placeholder="{{ 'schoolAdministration.licenses.licenseStart' | translate }}"
+                                    [ngModel]="history.licenseStartsAt"
+                                    [isDisabled]="true">
+                </app-evo-date-input>
+              </div>
+              <div fxFlex="30px" fxFlex.xs="10px"></div>
+              <div fxFlex>
+                <app-evo-date-input title="{{ 'schoolAdministration.licenses.licenseType' | translate }}"
+                                    placeholder="{{ 'schoolAdministration.licenses.licenseType' | translate }}"
+                                    [ngModel]="history.licenseExpiresAt"
+                                    [isDisabled]="true">
+                </app-evo-date-input>
+              </div>
+            </div>
+            <div style="height: 20px;"></div>
+            <div fxLayout="row"
+                 fxLayout.xs="column">
+              <div fxFlex>
+                <app-evo-input title="{{ 'schoolAdministration.licenses.licenseCost' | translate }}"
+                               placeholderText="{{ 'schoolAdministration.licenses.licenseCost' | translate }}"
+                               [ngModel]="getSchoolPricePerStudent(history)"
+                               [isDisabled]="true">
+                </app-evo-input>
+              </div>
+              <div fxFlex="30px" fxFlex.xs="10px"></div>
+              <div fxFlex>
+                <app-evo-input title="{{ 'schoolAdministration.licenses.total' | translate }}"
+                                    placeholderText="{{ 'schoolAdministration.licenses.total' | translate }}"
+                                    [isDisabled]="true"
+                                    [ngModel]="getSchoolTotalCost(history)">
+                </app-evo-input>
+              </div>
+            </div>
+            <div style="height: 20px;"></div>
+          </div>
+          <div style="height: 20px;" ngStyle.xs="height: 10px;"></div>
+        </div>
+        <div fxFlex="20px"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <div style="height: 20px;"></div>
+
+</div>

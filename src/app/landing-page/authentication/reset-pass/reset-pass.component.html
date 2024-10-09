@@ -1,0 +1,58 @@
+<app-land-nav-header [onlyIcon]="true"></app-land-nav-header>
+<div class="lightGrayBg" style="width: 100%; height: calc(100% - 80px);">
+
+  <form #f="ngForm" style="width: 100%; height: 100%;">
+    <div fxFlex.xs="100" fxFlex.gt-xs="320px" class="whiteBg">
+
+      <div style="height: 40px"></div>
+
+      <div fxLayoutAlign="center start">
+        <p fxFlex.gt-sm="90" class="boldMont font22px blackColor noMargin" style="text-align: center">{{ 'resetPassword.title' | translate }}</p>
+      </div>
+
+      <div style="height: 20px"></div>
+
+      <div style="min-height: 40px;" fxLayoutAlign="center start">
+        <p fxFlex="80" class="regularMont font14px grayColor noMargin" style="text-align: center">{{ 'resetPassword.subtitle' | translate }}</p>
+      </div>
+
+      <div style="height: 20px"></div>
+
+      <div fxLayoutAlign="center start">
+        <div fxFlex="80">
+          <app-evo-input title="{{ 'resetPassword.password' | translate }}" [inputType]="'password'" placeholderText="{{ 'resetPassword.password' | translate }}" ngModel name="password"></app-evo-input>
+          <div style="height: 20px"></div>
+          <app-evo-input title="{{ 'resetPassword.confirmPassword' | translate }}" [inputType]="'password'" placeholderText="{{ 'resetPassword.confirmPassword' | translate }}" ngModel name="confirmPassword"></app-evo-input>
+        </div>
+      </div>
+
+      <div style="height: 40px"></div>
+
+      <div fxLayoutAlign="center start">
+        <button class="greenButton defaultShadow"
+                style="width: 140px; height: 40px;"
+                fxLayoutAlign="center center" (click)="resetPasswordClicked(f)">
+          <p class="semiBoldMont font16px whiteColor noMargin">{{ 'resetPassword.reset' | translate }}</p>
+        </button>
+      </div>
+
+      <div style="height: 20px;"></div>
+
+      <!--
+      <div fxLayoutAlign="center start">
+        <button class="blueButton defaultShadow"
+                style="width: 140px; height: 40px;"
+                fxLayoutAlign="center center"
+                (click)="onSignupClicked()">
+          <p class="semiBoldMont font16px whiteColor noMargin">Signup</p>
+        </button>
+      </div>
+      -->
+
+    </div>
+    <div fxHide.xs="true">
+      <img src="../../../../assets/land-images/LoginCoverCloseUpNoLogo.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+  </form>
+
+</div>

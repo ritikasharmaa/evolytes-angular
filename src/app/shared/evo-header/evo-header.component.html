@@ -1,0 +1,143 @@
+<div>
+  <div style="height: 60px; position: relative; z-index: 20">
+    <div fxFlex="20px" fxHide.xs="true"></div>
+    <div fxFlex="60px"
+         fxHide.gt-xs="true"
+         [ngClass]="{ pointer: hideHamburgerIcon === false }"
+         fxLayoutAlign="center center"
+         (click)="onMobileMenuClicked()">
+      <app-hamburger-button *ngIf="hideHamburgerIcon === false"></app-hamburger-button>
+    </div>
+    <div fxFlex.xs="80px" fxFlex="120px" (click)="navigateHome()" fxLayoutAlign="center start">
+      <img src="./assets/evolytes-vector.svg" style="height: 100%; width: 100%; cursor: pointer;">
+    </div>
+    <div fxFlex="20px"></div>
+    <div fxFlex.xs="20px"></div>
+    <div fxFlex fxHide.xs="true"></div>
+    <div fxFlex></div>
+    <div fxFlex="240px" fxHide.xs="true" fxLayoutAlign="center center">
+      <div class="defaultShadow bgWhiteHoverColor pointer"
+           style="height: 44px; width: 100%; border-radius: 4px;"
+           (click)="onStudentButtonClicked()"
+           fxLayoutAlign="start center">
+        <div *ngIf="currentStudent() === null"
+             fxLayoutAlign="start center">
+          <div fxFlex="10px"></div>
+          <img fxFlex="16px" src="./assets/student/switch.svg" style="object-fit: contain; height: 16px;">
+          <div fxFlex="10px"></div>
+          <p fxFlex
+             class="semiBoldMont blackColor font12px noMargin">{{ 'schoolAdministration.settingsDropdown.selectStudent' | translate }}</p>
+          <div fxFlex="10px"></div>
+        </div>
+        <div *ngIf="currentStudent()"
+             fxLayoutAlign="start center">
+          <div fxFlex="6px"></div>
+          <img [src]="currentStudent().evolytesProfile.profileImage()"
+               style="width: 34px; height: 34px; object-fit: contain; border-radius: 16px; border-style: solid; border-width: 2px;"
+               [ngStyle]="{ borderColor: currentStudent().evolytesProfile.profileOutlineColor() }">
+          <div fxFlex="10px"></div>
+          <p fxFlex class="semiBoldMont blackColor font12px noMargin"
+             style="max-height: 40px;">{{ currentStudent().fullName() }}</p>
+          <div fxFlex="6px"></div>
+        </div>
+      </div>
+    </div>
+    <div fxFlex="10px"></div>
+    <div fxFlex="50px" fxLayoutAlign="center center">
+      <div class="defaultShadow bgWhiteHoverColor pointer"
+           style="height: 46px; width: 46px; border-radius: 23px;"
+           fxLayoutAlign="center center"
+           (click)="onUserClicked()">
+        <p class="boldMont font16px blackColor noMargin">{{ userInitials() }}</p>
+      </div>
+    </div>
+    <div fxFlex="10px"></div>
+  </div>
+  <div class="defaultShadow whiteBg"
+       style="position: absolute; border-radius: 4px; z-index: 100; width: 240px; right: 4px; top: 64px;"
+       *ngIf="openUserDropdown">
+    <div style="height: 10px;"></div>
+    <div fxLayoutAlign="center center">
+      <p fxFlex="84" style="text-align: left;" class="semiBoldMont font16px grayColor noMargin">{{ userName() }}</p>
+    </div>
+    <div style="height: 10px;"></div>
+    <div class="bgWhiteHoverColor pointer"
+         style="height: 36px;"
+         fxLayoutAlign="start center"
+         (click)="onSchoolAdminClicked()"
+         *ngIf="isSchoolAdmin()">
+      <div fxFlex="10px"></div>
+      <img src="./assets/school-admin/school-gray.svg" fxFlex="20px" style="width: 100%;">
+      <div fxFlex="16px"></div>
+      <p
+        class="mediumMont font12px grayColor noMargin">{{ 'schoolAdministration.settingsDropdown.administration' | translate }}</p>
+      <div fxFlex="16px"></div>
+    </div>
+    <div style="height: 6px;"></div>
+    <div class="bgWhiteHoverColor pointer"
+         style="height: 36px;"
+         fxLayoutAlign="start center"
+         (click)="onSwitchStudentClicked()">
+      <div fxFlex="10px"></div>
+      <img src="./assets/student/switch-gray.svg" fxFlex="20px" style="width: 100%;">
+      <div fxFlex="16px"></div>
+      <p
+        class="mediumMont font12px grayColor noMargin">{{ 'schoolAdministration.settingsDropdown.switchStudent' | translate }}</p>
+      <div fxFlex="10px"></div>
+    </div>
+    <div style="height: 6px;"></div>
+
+    <div class="bgWhiteHoverColor pointer"
+         style="height: 36px;"
+         fxLayoutAlign="start center"
+         (click)="goToSettings()">
+      <div fxFlex="10px"></div>
+      <img src="./assets/school-admin/settings.svg" fxFlex="20px" style="width: 100%;">
+      <div fxFlex="16px"></div>
+      <p class="mediumMont font12px grayColor noMargin">{{ 'schoolAdministration.settingsDropdown.settings' | translate }}</p>
+      <div fxFlex="10px"></div>
+    </div>
+
+    <div style="height: 6px;"></div>
+    <!--
+    <div class="bgWhiteHoverColor pointer"
+         style="height: 36px;"
+         fxLayoutAlign="start center"
+         (click)="settingsClicked()">
+      <div fxFlex="10px"></div>
+      <img src="./assets/school-school/settings.svg" fxFlex="20px" style="width: 100%;">
+      <div fxFlex="16px"></div>
+      <p class="mediumMont font12px grayColor noMargin">{{ 'schoolAdministration.settingsDropdown.settings' | translate }}</p>
+      <div fxFlex="10px"></div>
+    </div>
+    <div style="height: 10px"></div>
+    -->
+    <div class="lightGrayBg2" style="height: 1px;"></div>
+    <div style="height: 10px;"></div>
+    <div class="bgWhiteHoverColor pointer"
+         style="height: 36px;"
+         fxLayoutAlign="start center"
+         (click)="onLogoutClicked()">
+      <div fxFlex="10px"></div>
+      <img src="./assets/school-admin/logout.svg" fxFlex="20px" style="width: 100%;">
+      <div fxFlex="16px"></div>
+      <p
+        class="mediumMont font12px grayColor noMargin">{{ 'schoolAdministration.settingsDropdown.logout' | translate }}</p>
+      <div fxFlex="10px"></div>
+    </div>
+    <div style="height: 10px;"></div>
+  </div>
+</div>
+
+<div style="position: absolute; top: 0; right: 0; left: 0; z-index: 15; overflow: hidden; width: 100%; height: 60px;">
+  <img src="../../../assets/decor/Addition-Blue-Icon.svg"
+       style="object-fit: contain; width: 20px; height: 20px; top: 40px; left: 5px; position: absolute;">
+  <img src="../../../assets/decor/Triangle-Green-Icon.svg"
+       style="object-fit: contain; width: 42px; height: 42px; top: -14px; left: 380px; position: absolute;">
+  <img src="../../../assets/decor/Circle-Yellow-Icon.svg"
+       style="object-fit: contain; width: 34px; height: 34px; top: 20px; left: 620px; position: absolute;">
+  <img src="../../../assets/decor/Equal-Sign-Purple.svg"
+       style="object-fit: contain; width: 16px; height: 16px; top: -4px; left: 900px; position: absolute;">
+  <img src="../../../assets/decor/Pentago-Blue-Icon.svg"
+       style="object-fit: contain; width: 36px; height: 36px; top: -8px; left: 1240px; position: absolute;">
+</div>

@@ -1,0 +1,48 @@
+<div style="height: 30px"></div>
+<div style="width: 70%; margin: 0 auto;">
+  <div fxLayoutAlign="center center">
+    <img [src]="bookVersion.bookVersionImgURL()"
+         style="width: 90%; height: 150px; object-fit: contain;">
+  </div>
+  <div style="height: 10px;"></div>
+  <div fxLayoutAlign="center start">
+    <div fxFlex="70px" fxFlex.lt-md="60px" class="greenLightBg" fxLayoutAlign="center center"
+         style="height:20px; border-radius:4px;">
+      <p class="semiBoldMont font10px whiteColor noMargin">
+        {{bookVersion.grade}} {{ 'reusable.grade' | translate }}
+      </p>
+    </div>
+    <div fxFlex="10px"></div>
+    <div fxFlex="70px" fxFlex.lt-md="60px" class="greenLightBg" fxLayoutAlign="center center"
+         style="height:20px; border-radius:4px;">
+      <p class="semiBoldMont font10px whiteColor noMargin">
+        {{bookVersion.editionNumber}} {{ 'reusable.edition' | translate }}
+      </p>
+    </div>
+  </div>
+  <div style="height: 10px;"></div>
+  <div style="width: 100%; margin: 0 auto;">
+    <p class="boldMont font12px noMargin centerAlign">Evolytes #{{bookVersion.bookNumber}}</p>
+    <div style="height: 2px;"></div>
+    <p class="boldMont font12px noMargin centerAlign">{{bookVersion.name}}</p>
+  </div>
+  <div style="height: 10px;"></div>
+  <div style="width: 100%; margin: 0 auto;" fxLayoutAlign="center center">
+    <div class="bgLightGrayColor defaultShadow"
+         ngStyle.gt-sm="height: 15px; width:100%; border-radius: 8px;"
+         ngStyle.lt-md="height: 16px; width:50%; border-radius: 8px;">
+      <div class="greenLightBg"
+           [fxFlex]="currentBookProgress()"
+           *ngIf="hasCurrentBookProgress()"
+           style="border-radius: 6px"
+           fxLayoutAlign="center center">
+        <p class="semiBoldMont whiteColor font8px noMargin">{{ currentBookProgress() }}%</p>
+      </div>
+      <div fxFlex="100"
+           style="background-color: transparent" fxLayoutAlign.gt-md="start center"
+           *ngIf="hasCurrentBookProgress() === false">
+        <p fxFlex class="semiBoldMont grayColor font10px noMargin" style="text-align: center;">0%</p>
+      </div>
+    </div>
+  </div>
+</div>

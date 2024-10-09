@@ -1,0 +1,58 @@
+<div style="height: 100%;">
+  <div class="defaultScrollBar scrollBarGreenThumb" style="height: 100%; overflow-y: scroll;"
+       fxLayoutAlign="center start">
+    <div fxFlex="90">
+      <div>
+        <div style="height: 20px"></div>
+        <div class="defaultShadow whiteBg" style="border-radius: 6px; overflow: hidden; height: 40px;">
+          <p class="boldMont font18px blackColor noMargin" fxLayoutAlign="center center" style="height: 100%;">
+            {{'videosPage.title' | translate}}
+          </p>
+        </div>
+      </div>
+      <div *ngFor="let category of categories">
+        <div style="height: 20px"></div>
+        <div class="defaultShadow whiteBg" style="border-radius: 6px; overflow: hidden;">
+          <div class="bgWhiteHoverColor" style="height: 60px; cursor: pointer;" (click)="onSectionClick(category.name)">
+            <div fxFlex="20px"></div>
+            <div fxFlex="60px" fxLayoutAlign="center center">
+              <img [src]="category.iconLink" style="width: 30px; height: 30px; object-fit: contain;">
+            </div>
+            <div fxFlex="20px"></div>
+            <div fxFlex fxLayoutAlign="start center">
+              <p class="mediumMont font18px blackColor noMargin">{{category.title}}</p>
+            </div>
+            <div fxFlex="40px" fxLayoutAlign="center center">
+              <img [src]="imageType(category.name)" style="width: 20px; height: 20px; object-fit: contain;">
+            </div>
+            <div fxFlex="20px"></div>
+          </div>
+          <div [style.display]="videoSections[category.name] ? 'block' : 'none'">
+            <ng-container *ngFor="let subCategory of category.subCategories; let i = index">
+              <div fxFlex fxLayoutAlign="center start">
+                <div fxFlex="5"></div>
+                <div fxFlex>
+                  <div style="height: 20px;"></div>
+                  <div>
+                    <p fxLayoutAlign="center start" class="boldMont font18px blackColor noMargin">
+                      {{subCategory.subCatTitle}}
+                    </p>
+                  </div>
+                  <ng-container *ngFor="let video of subCategory.videos; let i = index">
+                    <app-video-detail [urlId]="video.urlId" [videoNumber]="i+1" [videoTitle]="video.videoTitle"
+                                      [videoDescription]="video.videoDescription" [video]="video">
+                    </app-video-detail>
+                  </ng-container>
+                </div>
+                <div fxFlex="10"></div>
+              </div>
+              <div style="height: 10px"></div>
+              <div class="bgGrayDarkColor" style="height: 1px" *ngIf="i !== (category.subCategories.length - 1)"></div>
+            </ng-container>
+          </div>
+        </div>
+        <div style="height: 5px"></div>
+      </div>
+    </div>
+  </div>
+</div>

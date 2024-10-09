@@ -1,0 +1,191 @@
+<div class="lightGrayBg" fxLayoutAlign="center center" style="padding-top: 20px; padding-bottom: 10px">
+  <div fxFlex="95">
+
+    <!-- Computer footer -->
+    <div fxHide.lt-md="true" fxLayoutAlign="start start">
+      <div fxFlex="25">
+        <img style="height: 55px; padding-bottom: 5px; cursor: pointer" src="../../../../assets/evolytes-vector.svg"
+             (click)="onEvolytesClick()"/>
+        <div fxLayoutAlign="start start">
+          <div fxFlex>
+            <p class="grayColor regularMont font12px noMargin">Evolytes ehf.</p>
+            <p class="grayColor regularMont font12px noMargin">600617-1250</p>
+            <p class="grayColor regularMont font12px noMargin">VAT ID: 128833</p>
+          </div>
+          <div fxFlex>
+            <p class="grayColor regularMont font12px noMargin">Bankastræti 5,</p>
+            <p class="grayColor regularMont font12px noMargin">101 Reykjavik,</p>
+            <p class="grayColor regularMont font12px noMargin">Iceland</p>
+          </div>
+        </div>
+      </div>
+
+      <div fxFlex="15"></div>
+
+      <div fxFlex="20" style="padding-top: 10px">
+        <h1 class="grayColor semiBoldMont font14px noMargin">
+          {{'lp2.footer.product' | translate}}
+        </h1>
+        <h1 class="grayHoverColor mediumMont font14px pointer noMargin"
+            (click)="onGameClick()">
+          {{'lp2.footer.game' | translate}}
+        </h1>
+        <h1 class="grayHoverColor mediumMont font14px pointer noMargin"
+            (click)="onReasearchClick()">
+          {{'lp2.footer.research' | translate}}
+        </h1>
+        <h1 class="grayHoverColor mediumMont font14px pointer noMargin"
+            (click)="onSchoolsClicked()">
+          {{'lp2.footer.schools' | translate}}
+        </h1>
+      </div>
+      <div fxFlex="20" style="padding-top: 10px">
+        <h1 class="grayColor semiBoldMont font14px noMargin">
+          {{'lp2.footer.company' | translate}}
+        </h1>
+        <h1 class="grayHoverColor mediumMont font14px pointer noMargin"
+            (click)="onAboutUsClick()">
+          {{'lp2.footer.aboutUs' | translate}}
+        </h1>
+        <h1 class="grayHoverColor mediumMont font14px pointer noMargin"
+            (click)="onContactUsClick()">
+          {{'lp2.footer.contactUs' | translate}}
+        </h1>
+      </div>
+      <div fxFlex="20" style="padding-top: 10px">
+        <h1 class="grayColor semiBoldMont font14px noMargin">
+          {{'lp2.footer.help' | translate}}
+        </h1>
+        <h1 class="grayHoverColor mediumMont font14px pointer noMargin"
+            (click)="onFaqClicked()">
+          {{'lp2.footer.faq' | translate}}
+        </h1>
+        <h1 class="grayHoverColor mediumMont font14px pointer noMargin"
+            (click)="goToTerms()">
+          {{'lp2.footer.terms' | translate}}
+        </h1>
+        <h1 class="grayHoverColor mediumMont font14px pointer noMargin"
+            (click)="goToPolicy()">
+          {{'lp2.footer.policy' | translate}}
+        </h1>
+      </div>
+    </div>
+
+
+    <div fxHide.lt-md="true" fxLayoutAlign="start center" style="padding-top: 15px">
+      <div fxFlex="33" fxLayoutAlign="start start">
+        <img style="height: 20px; padding: 10px" src="../../../../assets/linkedin-icon.svg" class="pointer" alt="" (click)="goToLinkedin()"/>
+        <img style="height: 20px; padding: 10px" src="../../../../assets/instagram-icon.svg" class="pointer" alt="" (click)="goToInstagram()"/>
+        <img style="height: 20px; padding: 10px" src="../../../../assets/facebook-icon.svg" class="pointer" alt="" (click)="goToFacebook()"/>
+        <img style="height: 20px; padding: 10px" src="../../../../assets/youtube-icon.svg" class="pointer" alt="" (click)="goToYoutube()"/>
+      </div>
+      <div fxFlex="33" fxLayoutAlign="center center" style="cursor: pointer" (click)="onCultureClick()">
+        <img style="height: 20px;" [src]="getCountryFlagImage()" alt=""/>
+        <div fxFlex="10px"></div>
+        <p class="blackColor boldMont font14px noMargin">{{ getCultureString() | translate}}</p>
+        <div fxFlex="10px"></div>
+      </div>
+      <a fxFlex="33"
+         class="pointer"
+         href="mailto:evolytes@evolytes.com"
+         style="text-decoration: none;"
+         fxLayoutAlign="end center">
+        <img style="height: 15px; padding-right: 10px" src="../../../../assets/newWebsite/envelope.svg" alt=""/>
+        <p class="grayHoverColor mediumMont font14px noMargin">evolytes@evolytes.com</p>
+      </a>
+    </div>
+
+    <!-- Mobile footer -->
+    <div fxHide.gt-md="true" fxHide.md="true" fxLayout="column" fxLayoutAlign="center center">
+      <img style="height: 55px; padding-bottom: 15px; cursor: pointer" src="../../../../assets/evolytes-vector.svg"
+           (click)="onEvolytesClick()"/>
+      <div fxLayout="column" fxLayoutAlign="start center" style="width: 100%; padding-bottom: 20px">
+        <div style="padding: 10px">
+          <h1 style="text-align: center;"
+              class="grayColor semiBoldMont font14px noMargin">
+            {{'lp2.footer.product' | translate}}
+          </h1>
+          <h1 style="text-align: center;"
+              class="grayColor mediumMont font14px pointer noMargin"
+              (click)="onGameClick()">{{'lp2.footer.game' | translate}}
+          </h1>
+          <h1 style="text-align: center;"
+              class="grayHoverColor mediumMont font14px pointer noMargin"
+              (click)="onReasearchClick()">
+            {{'lp2.footer.research' | translate}}
+          </h1>
+          <h1 style="text-align: center;"
+              class="grayHoverColor mediumMont font14px pointer noMargin"
+              (click)="onSchoolsClicked()">
+            {{'lp2.footer.schools' | translate}}
+          </h1>
+        </div>
+        <div style="padding: 10px">
+          <h1 style="text-align: center"
+              class="grayColor semiBoldMont font14px noMargin">
+            {{'lp2.footer.company' | translate}}
+          </h1>
+          <h1 style="text-align: center"
+              class="grayHoverColor mediumMont font14px pointer noMargin"
+              (click)="onAboutUsClick()">
+            {{'lp2.footer.aboutUs' | translate}}
+          </h1>
+          <h1 style="text-align: center"
+              class="grayHoverColor mediumMont font14px pointer noMargin"
+              (click)="onContactUsClick()">
+            {{'lp2.footer.contactUs' | translate}}
+          </h1>
+        </div>
+        <div style="padding: 10px">
+          <h1 style="text-align: center"
+              class="grayColor semiBoldMont font14px noMargin">
+            {{'lp2.footer.help' | translate}}
+          </h1>
+          <h1 style="text-align: center"
+              class="grayHoverColor mediumMont font14px pointer noMargin"
+              (click)="onFaqClicked()">
+            {{'lp2.footer.faq' | translate}}
+          </h1>
+          <h1 style="text-align: center"
+              class="grayHoverColor mediumMont font14px pointer noMargin"
+              (click)="goToTerms()">
+            {{'lp2.footer.terms' | translate}}
+          </h1>
+          <h1 style="text-align: center"
+              class="grayHoverColor mediumMont font14px pointer noMargin"
+              (click)="goToPolicy()">
+            {{'lp2.footer.policy' | translate}}
+          </h1>
+        </div>
+      </div>
+      <div fxLayoutAlign="center center" style="padding-bottom: 20px">
+        <img style="height: 15px; padding-right: 10px" src="../../../../assets/newWebsite/envelope.svg" alt=""/>
+        <p class="grayColor mediumMont font14px noMargin">{{'lp2.footer.email' | translate}}</p>
+      </div>
+      <div fxLayoutAlign="center center" style="padding-bottom: 20px">
+        <img style="height: 20px; padding: 10px" src="../../../../assets/linkedin-icon.svg" class="pointer" alt="" (click)="goToLinkedin()"/>
+        <img style="height: 20px; padding: 10px" src="../../../../assets/instagram-icon.svg" class="pointer" alt="" (click)="goToInstagram()"/>
+        <img style="height: 20px; padding: 10px" src="../../../../assets/facebook-icon.svg" class="pointer" alt="" (click)="goToYoutube()"/>
+        <img style="height: 20px; padding: 10px" src="../../../../assets/youtube-icon.svg" class="pointer" alt="" (click)="goToYoutube()"/>
+      </div>
+      <div fxLayoutAlign="start start" style="padding-bottom: 20px">
+        <div fxFlex>
+          <p class="grayColor regularMont font12px noMargin">Evolytes ehf.</p>
+          <p class="grayColor regularMont font12px noMargin">600617-1250</p>
+          <p class="grayColor regularMont font12px noMargin">VAT ID: 128833</p>
+        </div>
+        <div fxFlex>
+          <p class="grayColor regularMont font12px noMargin">Bankastræti 5,</p>
+          <p class="grayColor regularMont font12px noMargin">101 Reykjavik,</p>
+          <p class="grayColor regularMont font12px noMargin">Iceland</p>
+        </div>
+      </div>
+      <div fxLayoutAlign="center center" class="pointer" (click)="onCultureClick()">
+        <img style="height: 20px;" [src]="getCountryFlagImage()" alt=""/>
+        <div fxFlex="10px"></div>
+        <p class="blackColor boldMont font14px noMargin">{{ getCultureString() | translate}}</p>
+        <div fxFlex="10px"></div>
+      </div>
+    </div>
+  </div>
+</div>

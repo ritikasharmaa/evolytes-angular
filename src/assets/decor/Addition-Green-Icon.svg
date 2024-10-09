@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="31px" viewBox="0 0 32 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>+</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Webpage_PaymentProcess" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="Montserrat-Bold, Montserrat" font-size="64" font-weight="bold" opacity="0.6">
+        <g id="Desktop-HD-Copy-7" transform="translate(-521.000000, -48.000000)" fill="#79C570">
+            <g id="Top-part" transform="translate(719.500000, 518.500000) scale(-1, -1) translate(-719.500000, -518.500000) translate(-20.000000, 13.000000)">
+                <text id="+" transform="translate(931.672327, 963.685730) rotate(22.000000) translate(-931.672327, -963.685730) ">
+                    <tspan x="902.672327" y="986.68573">+</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

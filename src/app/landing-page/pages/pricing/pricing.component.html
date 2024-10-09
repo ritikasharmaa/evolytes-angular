@@ -1,0 +1,637 @@
+<app-land2-nav-header [hidden]="hidden" (onBurgerClicked)="setHidden()"></app-land2-nav-header>
+
+<div class="landcontent" appEgg>
+
+  <!-- To adapt with the burger menu of the navbarre -->
+  <div [ngClass]="{burgerMenu: !hidden}"></div>
+
+  <!-- Subscription section -->
+
+  <div>
+
+    <div style="height: 50px;"></div>
+    <div ngStyle.xs="width: 90%; margin: 0 auto;"
+         ngStyle.sm="width: 72%; margin: 0 auto;"
+         ngStyle.gt-sm="width: 760px; margin: 0 auto;">
+      <h1 class="boldMont blackColor font30px centerAlign"
+          style="width: 80%; margin: 0 auto;">
+        {{ 'lp2.pricing.Subscriptions.title' | translate }}
+      </h1>
+      <div style="height: 10px"></div>
+      <p class="regularMont noMargin font20px grayColor centerAlign">
+        {{ 'lp2.pricing.Subscriptions.subtitle' | translate }}
+      </p>
+    </div>
+    <div style="height: 40px"></div>
+    <div fxLayout="row"
+         fxLayoutAlign="center start"
+         fxLayout.lt-md="column"
+         fxLayoutAlign.lt-md="start center">
+
+      <!-- Free Trial -->
+      <div style="width: 280px"
+           *ngIf="showFreeTrial()">
+        <div class="pricingRoundedTitle greenBg">
+          <div style="height: 20px"></div>
+          <h1 class="boldMont font16px whiteColor noMargin"
+              style="text-align: center">{{ 'lp2.pricing.Subscriptions.freeTrial.title' | translate }}</h1>
+          <div style="height: 20px"></div>
+        </div>
+
+        <div class="cardOneMonth whiteBg">
+          <div style="height: 20px;"></div>
+          <h1 class="boldMont font22px blackColor noMargin"
+              style="text-align: center">
+            {{pricing.trial.trialLength}} {{ 'lp2.pricing.Subscriptions.freeTrial.message' | translate }}
+          </h1>
+          <div style="height: 20px;"></div>
+          <p class="mediumMont font12px grayColor noMargin centerAlign"
+             style="margin: 0 2em 0">
+            {{ 'lp2.pricing.Subscriptions.freeTrial.detailMessage' | translate }}
+          </p>
+          <div style="height: 20px;"></div>
+          <div fxLayoutAlign="center start">
+            <button class="greenButton" style="height: 50px; width: 160px;" (click)="tryNowClicked()">
+              <p class="semiBoldMont whiteColor font16px noMargin">
+                {{ 'lp2.pricing.Subscriptions.freeTrial.try' | translate }}
+              </p>
+            </button>
+          </div>
+          <div style="height: 20px;"></div>
+          <h1 class="boldMont font14px grayColor noMargin"
+              style="text-align: center">
+            {{ 'lp2.pricing.Subscriptions.includes' | translate }}
+          </h1>
+          <div style="height: 20px;"></div>
+          <div fxLayout="row" fxLayoutAlign="start center">
+            <img src='../../../../assets/icons/CheckmarkGray.png'
+                 style="object-fit: contain; height: 20px; width: 20px; margin-right: 1em; margin-left: 1em">
+            <p class="mediumMont font14px grayColor noMargin">
+              {{ pricing["1M"].messageOne.stringForCulture(CultureModel.getHomepageCulture()) }}
+            </p>
+            <div style="width: 10px;"></div>
+          </div>
+          <div style="height: 20px;"></div>
+          <div fxLayout="row" fxLayoutAlign="start center">
+            <img src='../../../../assets/icons/CheckmarkGray.png'
+                 style="object-fit: contain; height: 20px; width: 20px; margin-right: 1em; margin-left: 1em">
+            <p class="mediumMont font14px grayColor noMargin">
+              {{ pricing["1M"].messageTwo.stringForCulture(CultureModel.getHomepageCulture()) }}
+            </p>
+            <div style="width: 10px;"></div>
+          </div>
+          <div style="height: 20px;"></div>
+          <div fxLayout="row" fxLayoutAlign="start center">
+            <img src='../../../../assets/icons/CheckmarkGray.png'
+                 style="object-fit: contain; height: 20px; width: 20px; margin-right: 1em; margin-left: 1em">
+            <p class="mediumMont font14px grayColor noMargin">
+              {{ pricing["1M"].messageThree.stringForCulture(CultureModel.getHomepageCulture()) }}
+            </p>
+            <div style="width: 10px;"></div>
+          </div>
+          <div class="pricingRoundedBonus blueBg" *ngIf="show1MBook()">
+            <div style="height: 20px"></div>
+            <h1 class="boldMont font18px whiteColor noMargin"
+                style="margin-left: 1em">
+              {{ 'lp2.pricing.Subscriptions.Bonus' | translate }}
+            </h1>
+            <div style="height: 5px"></div>
+            <p class="regularMont font14px whiteColor noMargin"
+               style="margin-left: 1em">
+              {{ 'lp2.pricing.Subscriptions.BonusSubtitle' | translate  }}
+            </p>
+            <div style="height: 20px"></div>
+            <div fxLayout="row" fxLayoutAlign="center center">
+              <img src='../../../../assets/books/Book-One-EN.png'
+                   style="object-fit: contain; height: 60px; width: 60px; margin-left: 1em; margin-right: 1em;">
+              <h1 class="semiBoldMont font14px whiteColor noMargin"
+                  style="margin-left: 1em">
+                {{ 'lp2.pricing.Subscriptions.BookText' | translate }}
+              </h1>
+            </div>
+            <div style="height: 20px"></div>
+          </div>
+          <div style="height: 20px;"></div>
+        </div>
+
+      </div>
+      <div fxFlex="40px" fxFlex.md="60px" fxFlex.gt-md="80px" style="height: 20px;" *ngIf="show1MSubscription()"></div>
+
+      <!-- 1 Month Subscription -->
+      <div style="width: 280px"
+           *ngIf="show1MSubscription()">
+        <div class="pricingRoundedTitle blueBg">
+          <div style="height: 20px"></div>
+          <h1 class="boldMont font16px whiteColor noMargin"
+              style="text-align: center">{{ 'lp2.pricing.Subscriptions.1m.title' | translate }}</h1>
+          <div style="height: 20px"></div>
+        </div>
+
+        <div class="cardOneMonth whiteBg">
+          <div style="height: 20px;"></div>
+          <h1 class="boldMont font22px blackColor noMargin"
+              style="text-align: center">
+            {{ landingPageMonthlyPricing('1M') + ' / '}}{{ 'lp2.pricing.Subscriptions.month' | translate }}
+          </h1>
+          <div style="height: 20px;"></div>
+          <p class="mediumMont font12px grayColor noMargin centerAlign"
+             style="margin: 0 2em 0">
+            {{ 'lp2.pricing.Subscriptions.perChild' | translate }}{{ landingPageTotalPrice('1M') + ' '}}{{ 'lp2.pricing.Subscriptions.paymentFrequency1' | translate }}
+          </p>
+          <div style="height: 20px;"></div>
+          <div fxLayoutAlign="center start">
+            <button class="blueButton" style="height: 50px; width: 160px;" (click)="buyNowClicked(this.pricing['1M'])">
+              <p class="semiBoldMont whiteColor font16px noMargin">
+                {{ 'lp2.pricing.Subscriptions.buyNow' | translate }}
+              </p>
+            </button>
+          </div>
+          <div style="height: 20px;"></div>
+          <h1 class="boldMont font14px grayColor noMargin"
+              style="text-align: center">
+            {{ 'lp2.pricing.Subscriptions.includes' | translate }}
+          </h1>
+          <div style="height: 20px;"></div>
+          <div fxLayout="row" fxLayoutAlign="start center">
+            <img src='../../../../assets/icons/CheckmarkGray.png'
+                 style="object-fit: contain; height: 20px; width: 20px; margin-right: 1em; margin-left: 1em">
+            <p class="mediumMont font14px grayColor noMargin">
+              {{ pricing["1M"].messageOne.stringForCulture(CultureModel.getHomepageCulture()) }}
+            </p>
+            <div style="width: 10px;"></div>
+          </div>
+          <div style="height: 20px;"></div>
+          <div fxLayout="row" fxLayoutAlign="start center">
+            <img src='../../../../assets/icons/CheckmarkGray.png'
+                 style="object-fit: contain; height: 20px; width: 20px; margin-right: 1em; margin-left: 1em">
+            <p class="mediumMont font14px grayColor noMargin">
+              {{ pricing["1M"].messageTwo.stringForCulture(CultureModel.getHomepageCulture()) }}
+            </p>
+            <div style="width: 10px;"></div>
+          </div>
+          <div style="height: 20px;"></div>
+          <div fxLayout="row" fxLayoutAlign="start center">
+            <img src='../../../../assets/icons/CheckmarkGray.png'
+                 style="object-fit: contain; height: 20px; width: 20px; margin-right: 1em; margin-left: 1em">
+            <p class="mediumMont font14px grayColor noMargin">
+              {{ pricing["1M"].messageThree.stringForCulture(CultureModel.getHomepageCulture()) }}
+            </p>
+            <div style="width: 10px;"></div>
+          </div>
+          <div class="pricingRoundedBonus blueBg" *ngIf="show1MBook()">
+            <div style="height: 20px"></div>
+            <h1 class="boldMont font18px whiteColor noMargin"
+                style="margin-left: 1em">
+              {{ 'lp2.pricing.Subscriptions.Bonus' | translate }}
+            </h1>
+            <div style="height: 5px"></div>
+            <p class="regularMont font14px whiteColor noMargin"
+               style="margin-left: 1em">
+              {{ 'lp2.pricing.Subscriptions.BonusSubtitle' | translate  }}
+            </p>
+            <div style="height: 20px"></div>
+            <div fxLayout="row" fxLayoutAlign="center center">
+              <img src='../../../../assets/books/Book-One-EN.png'
+                   style="object-fit: contain; height: 60px; width: 60px; margin-left: 1em; margin-right: 1em;">
+              <h1 class="semiBoldMont font14px whiteColor noMargin"
+                  style="margin-left: 1em">
+                {{ 'lp2.pricing.Subscriptions.BookText' | translate }}
+              </h1>
+            </div>
+            <div style="height: 20px"></div>
+          </div>
+          <div style="height: 20px;"></div>
+        </div>
+
+      </div>
+      <div fxFlex="40px" fxFlex.md="60px" fxFlex.gt-md="80px" style="height: 20px;" *ngIf="show3MSubscription()"></div>
+
+      <!-- 3 Month Subscription -->
+      <div style="width: 280px"
+           *ngIf="show3MSubscription()">
+        <div class="pricingRoundedTitle greenBg">
+          <div style="height: 20px"></div>
+          <h1 class="boldMont font16px whiteColor noMargin"
+              style="text-align: center">
+            {{ 'lp2.pricing.Subscriptions.3m.title' | translate }}
+          </h1>
+          <div style="height: 20px"></div>
+        </div>
+
+        <div class="middlePrincingCards whiteBg">
+          <div style="height: 20px;"></div>
+          <h1 class="boldMont font22px blackColor noMargin"
+              style="text-align: center">
+            {{ landingPageMonthlyPricing('3M') + ' / '}}{{ 'lp2.pricing.Subscriptions.month' | translate }}
+          </h1>
+          <div style="height: 20px;"></div>
+          <p class="mediumMont font12px grayColor noMargin centerAlign"
+             style="margin: 0 2em 0">
+            {{ 'lp2.pricing.Subscriptions.perChild' | translate }}{{ landingPageTotalPrice('3M') + ' '}}{{ 'lp2.pricing.Subscriptions.paymentFrequency2' | translate }}
+          </p>
+          <div style="height: 20px;"></div>
+          <div fxLayoutAlign="center start">
+            <button class="greenButton" style="height: 50px; width: 160px;" (click)="buyNowClicked(this.pricing['3M'])">
+              <p class="semiBoldMont whiteColor font16px noMargin">
+                {{ 'lp2.pricing.Subscriptions.buyNow' | translate }}
+              </p>
+            </button>
+          </div>
+          <div style="height: 20px;"></div>
+          <h1 class="boldMont font14px grayColor noMargin"
+              style="text-align: center">
+            {{ 'lp2.pricing.Subscriptions.includes' | translate }}
+          </h1>
+          <div style="height: 20px;"></div>
+          <div fxLayout="row" fxLayoutAlign="start center">
+            <img src='../../../../assets/icons/CheckmarkGray.png'
+                 style="object-fit: contain; height: 20px; width: 20px; margin-right: 1em; margin-left: 1em">
+            <p class="mediumMont font14px grayColor noMargin">
+              {{ pricing["3M"].messageOne.stringForCulture(CultureModel.getHomepageCulture()) }}
+            </p>
+            <div style="width: 10px;"></div>
+          </div>
+          <div style="height: 20px;"></div>
+          <div fxLayout="row" fxLayoutAlign="start center">
+            <img src='../../../../assets/icons/CheckmarkGray.png'
+                 style="object-fit: contain; height: 20px; width: 20px; margin-right: 1em; margin-left: 1em">
+            <p class="mediumMont font14px grayColor noMargin">
+              {{ pricing["3M"].messageTwo.stringForCulture(CultureModel.getHomepageCulture()) }}
+            </p>
+            <div style="width: 10px;"></div>
+          </div>
+          <div style="height: 20px;"></div>
+          <div fxLayout="row" fxLayoutAlign="start center">
+            <img src='../../../../assets/icons/CheckmarkGray.png'
+                 style="object-fit: contain; height: 20px; width: 20px; margin-right: 1em ; margin-left: 1em">
+            <p class="mediumMont font14px grayColor noMargin">
+              {{ pricing["3M"].messageThree.stringForCulture(CultureModel.getHomepageCulture()) }}
+            </p>
+            <div style="width: 10px;"></div>
+          </div>
+          <div style="height: 20px;"></div>
+        </div>
+        <div class="pricingRoundedBonus greenBg" *ngIf="show3MBook()">
+          <div style="height: 20px"></div>
+          <h1 class="boldMont font18px whiteColor noMargin"
+              style="margin-left: 1em">{{ 'lp2.pricing.Subscriptions.Bonus' | translate }}</h1>
+          <div style="height: 5px"></div>
+          <p class="regularMont font14px whiteColor noMargin"
+             style="margin-left: 1em">
+            {{ 'lp2.pricing.Subscriptions.BonusSubtitle' | translate  }}
+          </p>
+          <div style="height: 20px"></div>
+          <div fxLayout="row" fxLayoutAlign="center center">
+            <img src='../../../../assets/books/Book-One-EN.png'
+                 style="object-fit: contain; height: 60px; width: 60px; margin-left: 1em; margin-right: 1em;">
+            <h1 class="semiBoldMont font14px whiteColor noMargin"
+                style="margin-left: 1em">
+              {{ 'lp2.pricing.Subscriptions.BookText' | translate }}
+            </h1>
+          </div>
+          <div style="height: 20px"></div>
+        </div>
+      </div>
+      <div fxFlex="40px" fxFlex.md="60px" fxFlex.gt-md="80px" style="height: 20px;" *ngIf="show6MSubscription()"></div>
+
+      <!-- 6 Month Subscription -->
+      <div style="width: 280px"
+           *ngIf="show6MSubscription()">
+        <div class="pricingRoundedTitle purpleBg">
+          <div style="height: 20px"></div>
+          <h1 class="boldMont font16px whiteColor noMargin"
+              style="text-align: center">
+            {{ 'lp2.pricing.Subscriptions.6m.title' | translate }}
+          </h1>
+          <div style="height: 20px"></div>
+        </div>
+        <div class="middlePrincingCards whiteBg">
+          <div style="height: 20px;"></div>
+          <h1 class="boldMont font22px blackColor noMargin"
+              style="text-align: center">
+            {{ landingPageMonthlyPricing('6M') + ' / '}}{{ 'lp2.pricing.Subscriptions.month' | translate }}
+          </h1>
+          <div style="height: 20px;"></div>
+          <p class="mediumMont font12px grayColor noMargin centerAlign"
+             style="margin: 0 2em 0">
+            {{ 'lp2.pricing.Subscriptions.perChild' | translate }}{{ landingPageTotalPrice('6M') + ' '}}{{ 'lp2.pricing.Subscriptions.paymentFrequency3' | translate }}
+          </p>
+          <div style="height: 20px;"></div>
+          <div fxLayoutAlign="center start">
+            <button class="purpleButton" style="height: 50px; width: 160px;" (click)="buyNowClicked(this.pricing['6M'])">
+              <p class="semiBoldMont whiteColor font16px noMargin">
+                {{ 'lp2.pricing.Subscriptions.buyNow' | translate }}
+              </p>
+            </button>
+          </div>
+          <div style="height: 20px;"></div>
+          <h1 class="boldMont font14px grayColor noMargin"
+              style="text-align: center">
+            {{ 'lp2.pricing.Subscriptions.includes' | translate }}
+          </h1>
+          <div style="height: 20px;"></div>
+          <div fxLayout="row" fxLayoutAlign="start center">
+            <img src='../../../../assets/icons/CheckmarkGray.png'
+                 style="object-fit: contain; height: 20px; width: 20px; margin-right: 1em; margin-left: 1em">
+            <p class="mediumMont font14px grayColor noMargin">
+              {{ pricing["6M"].messageOne.stringForCulture(CultureModel.getHomepageCulture()) }}
+            </p>
+            <div style="width: 10px;"></div>
+          </div>
+          <div style="height: 20px;"></div>
+          <div fxLayout="row" fxLayoutAlign="start center">
+            <img src='../../../../assets/icons/CheckmarkGray.png'
+                 style="object-fit: contain; height: 20px; width: 20px; margin-right: 1em; margin-left: 1em">
+            <p class="mediumMont font14px grayColor noMargin">
+              {{ pricing["6M"].messageTwo.stringForCulture(CultureModel.getHomepageCulture()) }}
+            </p>
+            <div style="width: 10px;"></div>
+          </div>
+          <div style="height: 20px;"></div>
+          <div fxLayout="row" fxLayoutAlign="start center">
+            <img src='../../../../assets/icons/CheckmarkGray.png'
+                 style="object-fit: contain; height: 20px; width: 20px; margin-right: 1em; margin-left: 1em">
+            <p class="mediumMont font14px grayColor noMargin">
+              {{ pricing["6M"].messageThree.stringForCulture(CultureModel.getHomepageCulture()) }}
+            </p>
+            <div style="width: 10px;"></div>
+          </div>
+          <div style="height: 20px;"></div>
+        </div>
+        <div class="pricingRoundedBonus purpleBg" *ngIf="show6MBook()">
+          <div style="height: 20px"></div>
+          <h1 class="boldMont font18px whiteColor noMargin"
+              style="margin-left: 1em">
+            {{ 'lp2.pricing.Subscriptions.Bonus' | translate }}
+          </h1>
+          <div style="height: 5px"></div>
+          <p class="regularMont font14px whiteColor noMargin"
+             style="margin-left: 1em">
+            {{ 'lp2.pricing.Subscriptions.BonusSubtitle' | translate  }}
+          </p>
+          <div style="height: 20px"></div>
+          <div fxLayout="row" fxLayoutAlign="center center">
+            <img src='../../../../assets/books/Book-One-EN.png'
+                 style="object-fit: contain; height: 60px; width: 60px; margin-left: 1em; margin-right: 1em;">
+            <h1 class="semiBoldMont font14px whiteColor noMargin"
+                style="margin-left: 1em">
+              {{ 'lp2.pricing.Subscriptions.BookText' | translate }}
+            </h1>
+          </div>
+          <div style="height: 20px"></div>
+        </div>
+      </div>
+    </div>
+    <div style="height: 50px;"></div>
+
+  </div>
+  <!-- School section -->
+  <div class="lightGrayBg" fxLayoutAlign="center start">
+    <div fxFlex.gt-md="1300px">
+      <div style="height: 50px;"></div>
+      <div ngStyle.xs="width: 90%; margin: 0 auto;"
+           ngStyle.sm="width: 72%; margin: 0 auto;"
+           ngStyle.gt-sm="width: 760px; margin: 0 auto;">
+        <h1 class="boldMont noMargin blackColor font30px centerAlign"
+            style="width: 80%; margin: 0 auto;">
+          {{ 'lp2.pricing.School.title' | translate }}</h1>
+        <div style="height: 10px"></div>
+        <p class="regularMont noMargin font20px grayColor centerAlign">
+          {{ 'lp2.pricing.School.subtitle' | translate }}
+        </p>
+        <div style="height: 40px"></div>
+        <h1 class="boldMont noMargin blackColor font20px centerAlign">
+          {{ 'lp2.pricing.School.subtitle2' | translate }}
+        </h1>
+      </div>
+      <div style="height: 40px"></div>
+      <div>
+        <div fxLayout="row"
+             fxLayoutAlign.gt-xs="space-evenly start"
+             fxLayout.xs="column"
+             fxLayoutAlign.xs="space-evenly center">
+          <!-- left section -->
+          <div style="margin-right: 2em">
+            <!-- icon 1 -->
+            <div>
+              <div fxFlex="40px"></div>
+              <div fxFlex="40px" style="height: 80px" fxLayoutAlign="center center">
+                <img src="../../../../assets/icons/GameIcon.svg" style="object-fit: contain; height: 40px; width: 40px;">
+              </div>
+              <div fxFlex="40px"></div>
+              <div fxFlex fxLayoutAlign="start center">
+                <div>
+                  <p class="semiBoldMont font16px blackColor noMargin">{{ 'lp2.pricing.School.leftIcon1.title' | translate }}</p>
+                  <div style="height: 8px"></div>
+                  <p class="regularMont font16px grayColor noMargin">{{ 'lp2.pricing.School.leftIcon1.subtitle' | translate }}</p>
+                </div>
+              </div>
+            </div>
+            <div style="height: 20px"></div>
+
+            <!-- icon 2 -->
+            <div>
+              <div fxFlex="40px"></div>
+              <div fxFlex="40px" style="height: 80px" fxLayoutAlign="center center">
+                <img src="../../../../assets/icons/BookRedIcon.svg" style="object-fit: contain; height: 40px; width: 40px;">
+              </div>
+              <div fxFlex="40px"></div>
+              <div fxFlex fxLayoutAlign="start center">
+                <div>
+                  <p class="semiBoldMont font16px blackColor noMargin"
+                  > {{ 'lp2.pricing.School.leftIcon2.title' | translate }}</p>
+                  <div style="height: 8px"></div>
+                  <p class="regularMont font16px grayColor noMargin"
+                  >{{ 'lp2.pricing.School.leftIcon2.subtitle' | translate }}</p>
+                </div>
+              </div>
+            </div>
+            <div style="height: 20px"></div>
+
+            <!-- icon 3 -->
+            <div>
+              <div fxFlex="40px"></div>
+              <div fxFlex="40px" style="height: 80px" fxLayoutAlign="center center">
+                <img src="../../../../assets/icons/MonitorPurpleIcon.svg" style="object-fit: contain; height: 40px; width: 40px;">
+              </div>
+              <div fxFlex="40px"></div>
+              <div fxFlex fxLayoutAlign="start center">
+                <div>
+                  <p class="semiBoldMont font16px blackColor noMargin"
+                  > {{ 'lp2.pricing.School.leftIcon3.title' | translate }}</p>
+                  <div style="height: 8px"></div>
+                  <p class="regularMont font16px grayColor noMargin"
+                  >{{ 'lp2.pricing.School.leftIcon3.subtitle' | translate }}</p>
+                </div>
+              </div>
+            </div>
+            <div style="height: 20px"></div>
+
+          </div>
+          <!-- right section -->
+          <div style="margin-right: 2em">
+            <!-- icon 1 -->
+            <div>
+              <div fxFlex="40px"></div>
+              <div fxFlex="40px" style="height: 80px" fxLayoutAlign="center center">
+                <img src="../../../../assets/icons/HeadsetIcon.svg" style="object-fit: contain; height: 40px; width: 40px;">
+              </div>
+              <div fxFlex="40px"></div>
+              <div fxFlex fxLayoutAlign="start center">
+                <div>
+                  <p class="semiBoldMont font16px blackColor noMargin"
+                  > {{ 'lp2.pricing.School.rightIcon1.title' | translate }}</p>
+                  <div style="height: 8px"></div>
+                  <p class="regularMont font16px grayColor noMargin"
+                  >{{ 'lp2.pricing.School.rightIcon1.subtitle' | translate }}</p>
+                </div>
+              </div>
+            </div>
+            <div style="height: 20px"></div>
+            <!-- icon 2 -->
+            <div>
+              <div fxFlex="40px"></div>
+              <div fxFlex="40px" style="height: 80px" fxLayoutAlign="center center">
+                <img src="../../../../assets/land-icons/projector-content-blue-icon.svg"
+                     style="object-fit: contain; height: 40px; width: 40px;">
+              </div>
+              <div fxFlex="40px"></div>
+              <div fxFlex fxLayoutAlign="start center">
+                <div>
+                  <p class="semiBoldMont font16px blackColor noMargin"
+                  > {{ 'lp2.pricing.School.rightIcon2.title' | translate }}</p>
+                  <div style="height: 8px"></div>
+                  <p class="regularMont font16px grayColor noMargin"
+                  >{{ 'lp2.pricing.School.rightIcon2.subtitle' | translate }}</p>
+                </div>
+              </div>
+            </div>
+            <div style="height: 20px"></div>
+            <!-- icon 3 -->
+            <div>
+              <div fxFlex="40px"></div>
+              <div fxFlex="40px" style="height: 80px" fxLayoutAlign="center center">
+                <img src="../../../../assets/icons/BooksOrangeIcon.svg" style="object-fit: contain; height: 40px; width: 40px;">
+              </div>
+              <div fxFlex="40px"></div>
+              <div fxFlex fxLayoutAlign="start center">
+                <div>
+                  <p class="semiBoldMont font16px blackColor noMargin"
+                  > {{ 'lp2.pricing.School.rightIcon3.title' | translate }}</p>
+                  <div style="height: 8px"></div>
+                  <p class="regularMont font16px grayColor noMargin"
+                  >{{ 'lp2.pricing.School.rightIcon3.subtitle' | translate }}</p>
+                </div>
+              </div>
+            </div>
+            <div style="height: 20px"></div>
+          </div>
+        </div>
+      </div>
+      <div style="height: 40px"></div>
+      <div fxLayout="row" fxLayoutAlign.gt-xs="space-evenly start"
+           fxLayout.xs="column" fxLayoutAlign.xs="space-evenly center">
+        <button class="greenButton semiBoldMont whiteColor font16px noMargin" style="height: 50px; width: 240px;"
+                (click)="goToContact('lp2.pricing.School.buttonGetAQuote')">
+          {{ 'lp2.pricing.School.buttonGetAQuote' | translate }}
+        </button>
+        <div ngStyle.xs="height: 10px;" ngStyle.gt-xs="height: 40px"></div>
+        <button class="greenButton semiBoldMont whiteColor font16px noMargin" style="height: 50px; width: 240px;"
+                (click)="goToContact('lp2.pricing.School.buttonRequestADemo')">
+          {{ 'lp2.pricing.School.buttonRequestADemo' | translate }}
+        </button>
+      </div>
+      <div style="height: 40px"></div>
+      <div>
+        <div fxLayoutAlign="center center" style="width: 100%">
+          <div fxFlex="20" fxFlex.lt-md="30" fxFlex.xs="50">
+            <p class="regularMont noMargin font16px grayColor centerAlign">
+              {{ 'lp2.pricing.School.textMore' | translate }}
+            </p>
+          </div>
+        </div>
+        <div style="height: 20px"></div>
+
+        <h1 class="boldMont noMargin greenHoverColor font18px centerAlign pointer"
+            (click)="goToSchool()">
+          {{ 'lp2.pricing.School.MoreButton' | translate }}
+        </h1>
+        <div style="height: 50px"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Learning outcomes section -->
+  <div class="whiteBg" fxLayoutAlign="center start" style="padding-bottom: 100px; padding-top: 50px">
+    <div fxFlex="90">
+      <h1 class="boldMont noMargin blackColor font30px"
+          ngStyle.xs="width: 100%; text-align: center;"
+          ngStyle.sm="width: 80%; margin: 0 auto; text-align: center;"
+          ngStyle.gt-sm="width: 760px; margin: 0 auto; text-align: center;">
+        {{ 'lp2.pricing.Learning.title' | translate }}
+      </h1>
+      <div style="height: 10px"></div>
+      <h1 class="regularMont grayColor font18px"
+          ngStyle.xs="width: 100%; text-align: center;"
+          ngStyle.sm="width: 80%; margin: 0 auto; text-align: center;"
+          ngStyle.gt-sm="width: 760px; margin: 0 auto; text-align: center;">
+        {{ 'lp2.pricing.Learning.subtitle' | translate }}
+      </h1>
+      <div style="height: 25px"></div>
+      <div fxLayoutAlign="center center"
+           fxLayout.gt-sm="row"
+           fxLayout.lt-md="column">
+        <div fxFlex.gt-md="20" fxFlex.md="20" ngStyle.lt-md="width: 240px;">
+          <p class="boldMont noMargin lightBlueColor font60px" style="text-align: center">1.200</p>
+          <p class="boldMont noMargin lightBlueColor font20px"
+             style="text-align: center; text-transform: uppercase;">
+            {{'lp2.common.answers.label' | translate}}
+          </p>
+          <div style="height: 10px"></div>
+          <p class="boldMont noMargin blackColor font18px"
+             style="text-align: center">
+            {{ 'lp2.common.answers.title' | translate }}
+          </p>
+          <div style="height: 2px"></div>
+          <p class="regularMont noMargin grayColor font16px"
+             style="text-align: center">{{'lp2.common.answers.subtitle' | translate}}</p>
+        </div>
+        <div fxHide.lt-md="true" fxFlex="16"></div>
+        <div fxHide.gt-md="true" fxHide.md="true" style="height: 20px;"></div>
+        <div fxFlex.gt-md="20" fxFlex.md="20" ngStyle.lt-md="width: 240px;">
+          <p class="boldMont noMargin greenColor font60px" style="text-align: center">26</p>
+          <p class="boldMont noMargin greenColor font20px centerAlign"
+             style="text-transform: uppercase;">
+            {{'lp2.common.minutes.label' | translate}}
+          </p>
+          <div style="height: 10px"></div>
+          <p class="boldMont noMargin blackColor font18px centerAlign">
+            {{'lp2.common.minutes.title' | translate}}
+          </p>
+          <div style="height: 2px"></div>
+          <p class="regularMont noMargin grayColor font16px centerAlign">
+            {{'lp2.common.minutes.subtitle' | translate}}
+          </p>
+        </div>
+      </div>
+      <div style="height: 50px"></div>
+      <div fxLayoutAlign="center center" style="width: 100%">
+        <div fxFlex.gt-sm="35" fxFlex.md="45" fxFlex.lt-md="65">
+          <p class="regularMont grayColor font18px noMargin centerAlign">
+            {{ 'lp2.pricing.Learning.endingText' | translate }}
+          </p>
+        </div>
+      </div>
+      <div style="height: 40px"></div>
+      <div fxLayoutAlign="center start">
+        <button class="greenButton" style="height: 50px; width: 200px;" (click)="goToSignup()">
+          <p class="semiBoldMont whiteColor font16px noMargin">
+            {{ 'billingComplete.getStartedButtonTitle' | translate }}
+          </p>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</div>

@@ -1,0 +1,200 @@
+<div class="content">
+  <!-- introduction part
+<div fxLayout="column" fxLayoutAlign="center center" style="margin: 1em">
+  <h1 class="regularMont noMargin grayColor font20px"
+      style="text-align: center; width: 80%; max-width: 900px;">
+    {{'lp2.features.monitor.subtitle' | translate}}
+  </h1>
+
+  <div style="height: 40px"></div>
+  <div fxFlex="70" fxLayoutAlign="center center">
+    <img fxFlex="80" src="../../../../assets/newWebsite/BookProgress.png" alt="dashboard">
+  </div>
+</div>
+<div style="height: 40px"></div>
+-->
+  <!--- Overview part -->
+
+  <div class="whiteBg" fxLayout="column" fxLayoutAlign="center center" style="padding: 20px 0 50px 0; width: 100%">
+
+    <div ngStyle.xs="width: 90%;"
+         ngStyle.sm="width: 72%; margin: 0 auto;"
+         ngStyle.gt-sm="width: 760px; margin: 0 auto;">
+      <h1 class="boldMont noMargin blackColor font30px"
+          style="text-align: center;">
+        {{'lp2.features.monitor.overview.title' | translate}}
+      </h1>
+      <div style="height: 20px"></div>
+      <h1 class="regularMont noMargin grayColor font20px"
+          style="text-align: center;">
+        {{'lp2.features.monitor.overview.subtitle' | translate}}
+      </h1>
+    </div>
+
+    <div style="height: 40px;"></div>
+
+    <div fxLayoutAlign="center center"
+         style="padding: 30px 0 30px 0; width: 100%"
+         fxLayout.gt-sm="row"
+         fxLayout.lt-md="column">
+      <div fxFlex.gt-sm="37"
+           class="monitorGif"
+           style=" margin-bottom: 30px">
+        <div style="padding:0 0 0 0; position:relative; height: 100%; width: 100%">
+          <iframe
+            [src]="urlVimeo"
+            id="needTimerGif"
+            allow="autoplay; fullscreen; picture-in-picture"
+            style="position:absolute; top:0; left:0; width:100%; height:100%; border: black 0 solid"
+            title="gif game 1">
+          </iframe>
+        </div>
+      </div>
+      <div fxFlex="5" fxHide.lt-md="true"></div>
+      <div fxFlex.gt-sm="37">
+        <div *ngFor="let pres of gifIntegrationTab; let i = index"
+             ngStyle.xs="padding: 0 20px 0 20px; width: calc(100% - 20px);"
+             ngStyle.lt-lg="padding: 0 35px 0 35px; width: calc(100% - 70px);"
+             style="max-width: 550px"
+             [fxHide.lt-md]="i !== gifStep">
+          <h1 class="boldMont noMargin font16px"
+              [ngClass]="i === gifStep ? 'blackColor' : 'disabledColor'"
+              ngStyle.gt-xs="margin-bottom: 5px"
+              ngStyle.lt-sm="margin: 0 5px 5px 10px">
+            {{ pres.title | translate }}
+          </h1>
+          <h1 class="regularMont noMargin font16px"
+              [ngClass]="i === gifStep ? 'blackColor' : 'disabledColor'"
+              ngStyle.gt-xs="margin-bottom: 20px"
+              ngStyle.lt-sm="margin: 0 5px 10px 10px">
+            {{ pres.description | translate}}
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="boldMont noMargin grayColor font18px"
+        style="text-align: center">
+      {{'lp2.landing.startingPriceOne' | translate}}
+      {{ getStartPrice() }}
+      {{'lp2.landing.startingPriceTwo' | translate}}
+    </h1>
+    <div style="height: 20px"></div>
+    <div style="width: 100%" fxLayoutAlign="center">
+      <button class="greenButton semiBoldMont font18px whiteColor pointer"
+              (click)="goToSignup()"
+              style="height: 50px; width: 260px">
+        {{'lp2.landing.memberButton' | translate }}
+      </button>
+    </div>
+  </div>
+
+  <!-- feature part-->
+  <div class="whiteBg" fxLayoutAlign="center center" style="padding-top: 50px">
+
+    <div ngStyle.xs="width: 90%;"
+         ngStyle.sm="width: 72%; margin: 0 auto;"
+         ngStyle.gt-sm="width: 760px; margin: 0 auto;">
+      <h1 class="boldMont noMargin blackColor font30px"
+          style="text-align: center">
+        {{'lp2.features.monitor.features.title' | translate}}
+      </h1>
+      <div style="height: 20px"></div>
+      <h1 class="regularMont noMargin grayColor font18px"
+          style="text-align: center;">
+        {{'lp2.features.monitor.features.subtitle' | translate}}
+      </h1>
+    </div>
+  </div>
+
+  <app-feature-tab [beginByWhite]="1" [featureTab]="featureTab"></app-feature-tab>
+  <div style="height: 40px;"></div>
+  <div>
+    <div ngStyle.xs="width: 90%; margin: 0 auto;"
+         ngStyle.sm="width: 72%; margin: 0 auto;"
+         ngStyle.gt-sm="width: 760px; margin: 0 auto;">
+      <h1 class="boldMont noMargin blackColor font30px"
+          style="text-align: center">
+        {{'lp2.features.game.platform.title' | translate}}
+      </h1>
+      <div style="height: 20px"></div>
+      <h1 class="regularMont noMargin grayColor font18px"
+          style="text-align: center;">
+        {{'lp2.features.game.platform.subtitle' | translate}}
+      </h1>
+    </div>
+    <div style="height: 50px;"></div>
+    <div ngStyle.lt-lg="width: 90%; max-width: 900px;"
+         ngStyle.gt-md="width: 900px;"
+         style="margin: 0 auto;">
+      <div fxLayout.gt-sm="row"
+           fxLayout.lt-md="column"
+           fxLayoutAlign="space-evenly center">
+
+        <div fxFlex.gt-sm="30"
+             fxLayout="column"
+             fxLayoutAlign="center center"
+             ngStyle.xs="width: 80%"
+             ngStyle.sm="width: 300px"
+             style="position: relative;">
+          <img src="../../../../../assets/land-images/Books.png" style="object-fit: contain; height: 250px; width: 250px;">
+
+          <p class="boldMont font16px blackColor noMargin">
+            {{ 'lp2.features.books.titleMenu' | translate }}
+          </p>
+
+          <div style="height: 20px"></div>
+
+          <div fxLayoutAlign="center center">
+            <h1 class="regularMont noMargin grayColor font16px"
+                style="text-align: center; max-width: 600px">
+              {{'lp2.features.game.platform.booksSubtitle' | translate}}
+            </h1>
+          </div>
+
+          <div style="height: 40px"></div>
+
+          <div fxLayoutAlign="center start">
+            <button class="greenButton" style="height: 40px; width: 200px;" (click)="goToBooks()">
+              <p class="semiBoldMont whiteColor font14px noMargin">{{ 'lp2.schools.research.learnMore' | translate }}</p>
+            </button>
+          </div>
+
+        </div>
+        <div fxHide.lt-md="true" style="width: 5px"></div>
+        <div fxFlex.gt-sm="30"
+             fxLayout="column"
+             fxLayoutAlign="center center"
+             ngStyle.xs="width: 80%"
+             ngStyle.sm="width: 300px"
+             style="position: relative;">
+          <img src="../../../../../assets/land-images/battle-monster-ipad.png" style="object-fit: contain; height: 250px; width: 250px;">
+
+          <p class="boldMont font16px blackColor noMargin">
+            {{ 'lp2.footer.game' | translate }}
+          </p>
+
+          <div style="height: 20px"></div>
+
+          <div fxLayoutAlign="center center">
+            <h1 class="regularMont noMargin grayColor font16px"
+                style="text-align: center; max-width: 600px">
+              {{'lp2.features.game.platform.gameSubtitle' | translate}}
+            </h1>
+          </div>
+
+          <div style="height: 40px"></div>
+          <div fxLayoutAlign="center start">
+            <button class="greenButton" style="height: 40px; width: 200px;" (click)="goToGame()">
+              <p class="semiBoldMont whiteColor font14px noMargin">
+                {{ 'lp2.schools.research.learnMore' | translate }}
+              </p>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div style="height: 60px"></div>
+  </div>
+</div>

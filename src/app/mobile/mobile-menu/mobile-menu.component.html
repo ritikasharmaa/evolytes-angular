@@ -1,0 +1,79 @@
+<div class="whiteBg"
+     style="top: 60px; left: 0; right: 0; bottom: 0; position: absolute; width: 220px; height: calc(100% - 60px); z-index: 500;"
+     fxHide.gt-xs="true"
+     *ngIf="mobileSv.isVisible">
+  <div class="defaultScrollBar scrollBarBlueThumb" style="height: calc(100% - 50px)">
+    <div style="height: 20px"></div>
+    <div class="selectItemInactive"
+         style="height: 50px"
+         routerLink="/platform/dash"
+         routerLinkActive="selectItemOrangeActive"
+         (click)="onDashClicked()">
+      <div fxFlex="15px"></div>
+      <div fxFlex="40px" fxLayoutAlign="center center">
+        <img style="height: 34px; width: 34px;" src="./assets/sidebar/dashboard-overview-2.svg">
+      </div>
+      <div fxFlex="10px"></div>
+      <div fxFlex fxLayoutAlign="start center">
+        <p class="regularMont font14px grayColor noMargin">{{ 'sidebar.dashboard' | translate }}</p>
+      </div>
+    </div>
+    <div style="height: 20px"></div>
+    <div class="selectItemInactive"
+         style="height: 50px"
+         routerLink="/platform/books"
+         routerLinkActive="selectItemBlueActive"
+         (click)="onBooksClicked()">
+      <div fxFlex="15px"></div>
+      <div fxFlex="40px" fxLayoutAlign="center center">
+        <img style="height: 34px; width: 34px;" src="./assets/sidebar/book-circular-icon.svg">
+      </div>
+      <div fxFlex="10px"></div>
+      <div fxFlex fxLayoutAlign="start center">
+        <p class="regularMont font14px grayColor noMargin">{{ 'reusable.books' | translate }}</p>
+      </div>
+    </div>
+    <div style="height: 20px"></div>
+    <div class="selectItemInactive"
+         style="height: 50px"
+         routerLink="/platform/answers"
+         routerLinkActive="selectItemGreenActive"
+         (click)="onAnswersClicked()">
+      <div fxFlex="15px"></div>
+      <div fxFlex="40px" fxLayoutAlign="center center">
+        <img style="height: 34px; width: 34px;" src="./assets/sidebar/answers-cricle-gray-icon.svg">
+      </div>
+      <div fxFlex="10px"></div>
+      <div fxFlex fxLayoutAlign="start center">
+        <p class="regularMont font14px grayColor noMargin">{{ 'sidebar.answers' | translate }}</p>
+      </div>
+    </div>
+    <div style="height: 20px"></div>
+    <div class="selectItemInactive"
+         style="height: 50px"
+         routerLink="/platform/settings/account"
+         routerLinkActive="selectItemPurpleActive"
+         (click)="onSettingsClicked()">
+      <div fxFlex="15px"></div>
+      <div fxFlex="40px" fxLayoutAlign="center center">
+        <img style="height: 34px; width: 34px;" src="./assets/sidebar/settings-circular-icon.svg">
+      </div>
+      <div fxFlex="10px"></div>
+      <div fxFlex fxLayoutAlign="start center">
+        <p class="regularMont font14px grayColor noMargin">{{ 'sidebar.settings' | translate }}</p>
+      </div>
+    </div>
+    <div style="height: 40px"></div>
+  </div>
+  <div style="height: 50px; cursor: pointer;"
+       (click)="onLogoutClicked()">
+    <div fxFlex="15px"></div>
+    <div fxFlex="40px" fxLayoutAlign="center center">
+      <img style="height: 20px; width: 100%;" src="../../../assets/sidebar/logout-icon.svg">
+    </div>
+    <div fxFlex="10px"></div>
+    <div fxFlex fxLayoutAlign="start center">
+      <p class="regularMont font14px grayColor noMargin">{{ 'sidebar.logout' | translate }}</p>
+    </div>
+  </div>
+</div>

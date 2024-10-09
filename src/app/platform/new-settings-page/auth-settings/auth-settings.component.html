@@ -1,0 +1,219 @@
+<div>
+  <p class="font16px blackColor noMargin boldMont"
+     style="line-height: 44px;">
+    {{ 'settings.authSettings.auth' | translate }}
+  </p>
+  <p class="semiBoldMont noMargin font14px lightGrayColor" style="width:70%;">
+    {{ 'settings.authSettings.authDesc' | translate }}
+  </p>
+  <div style="height: 20px"></div>
+  <div class="line"></div>
+  <!--
+  <div style="height: 10px"></div>
+
+  <p class="font16px lightGrayColor noMargin boldMont"
+     style="line-height: 44px;">
+    {{ 'settings.authSettings.childAccounts' | translate }}
+  </p>
+
+  <p class="semiBoldMont noMargin font14px lightGrayColor" style="width:70%;">
+    {{ 'settings.authSettings.childDesc' | translate }}
+  </p>
+  <div style="height: 20px"></div>
+  <div class="line"></div>
+  -->
+  <div style="height: 5px;"></div>
+  <app-account-name [student]="student"></app-account-name>
+  <div style="height: 5px;"></div>
+  <div class="line"></div>
+  <!-- QRCode -->
+  <div>
+    <div style="height: 10px"></div>
+    <p class="font14px lightGrayColor noMargin boldMont"
+       style="line-height: 44px;">
+      {{ 'settings.authSettings.qrCode' | translate }}
+    </p>
+
+    <p class="semiBoldMont noMargin font14px lightGrayColor" style="width:70%;">
+      {{ 'settings.authSettings.qrCodeDesc' | translate }}
+    </p>
+    <div style="height: 20px"></div>
+    <p class="font14px lightGrayColor noMargin boldMont">
+      {{ 'settings.authSettings.enable' | translate }}
+    </p>
+    <div style="height: 10px"></div>
+    <app-toggle-switch [ngModel]="isQRCodeEnabled()"
+                       (valueChanged)="onQRCodeEnable()">
+    </app-toggle-switch>
+    <div style="height: 20px;"></div>
+
+    <div fxLayout.gt-xs="row"
+         fxLayout.xs="column"
+         fxLayoutAlign.xs="start center"
+         fxLayoutAlign.gt-xs="start end">
+      <div style="width: 200px; height: 190px;  border-radius: 4px;"
+           class="smallShadow"
+           fxLayoutAlign="center center" *ngIf="hasQRCode()">
+        <div class="ring" *ngIf="loading else loaded">
+        </div>
+        <ng-template #loaded>
+          <qrcode [qrdata]="QRCodeData()" [size]="144"></qrcode>
+        </ng-template>
+      </div>
+      <div fxFlex.xs="20px" fxFlex="30px" *ngIf="hasQRCode()"></div>
+      <div ngStyle.xs="width: 100%;">
+        <button class="greenButton semiBoldMont whiteColor font14px noMargin"
+                ngStyle.xs="width: 100%;"
+                style="width: 160px; height: 40px;"
+                (click)="newCode()">
+          {{ 'settings.authSettings.newCode' | translate }}
+        </button>
+        <div style="height: 10px" *ngIf="hasQRCode()"></div>
+        <button class="blueButton semiBoldMont whiteColor font14px noMargin"
+                ngStyle.xs="width: 100%;"
+                style="width: 160px; height: 40px;"
+                (click)="saveAsImage(parent)"
+                *ngIf="hasQRCode()">
+          {{ 'settings.authSettings.download' | translate }}
+        </button>
+      </div>
+    </div>
+    <div style="height: 30px;"></div>
+  </div>
+
+  <div style="display: none;">
+    <qrcode [qrdata]="QRCodeData()" [size]="512" #qrimage></qrcode>
+  </div>
+  <!-- Pin -->
+  <!--
+  <div>
+    <div class="line"></div>
+    <div style="height: 10px"></div>
+    <p class="font14px lightGrayColor noMargin boldMont" style="line-height: 44px;">
+      {{ 'settings.authSettings.pinConfirmation' | translate }}
+    </p>
+    <p class="semiBoldMont noMargin font14px lightGrayColor" style="width:70%;">
+      {{ 'settings.authSettings.pinDesc' | translate }}
+    </p>
+    <div style="height:20px;"></div>
+    <p class="font14px lightGrayColor noMargin boldMont">
+      {{ 'settings.authSettings.enable' | translate }}
+    </p>
+    <div style="height: 10px"></div>
+    <app-toggle-switch (valueChanged)="pinChecked = $event"></app-toggle-switch>
+    <div style="height:20px;"></div>
+    <div fxLayoutAlign="start end">
+      <div fxFlex="38">
+        <app-evo-input title="{{ 'settings.authSettings.pin' | translate }}"
+                       placeholderText="4157"
+                       [value]="currentPin"
+                       (inputChangedEvent)="currentPin = $event">
+        </app-evo-input>
+      </div>
+      <div fxFlex="33"></div>
+      <div fxFlex>
+        <button class="greenButton semiBoldMont font14px whiteColor"
+                style="width: 140px; height: 40px;"
+                [disabled]="isSavePinDisabled()">
+          {{ 'userSettings.saveButtonTitle' | translate }}
+        </button>
+      </div>
+    </div>
+
+    <div style="height: 30px"></div>
+  </div>
+  -->
+
+  <!-- Email -->
+  <!--
+  <div>
+    <div class="line"></div>
+    <div style="height: 10px"></div>
+    <p class="font14px lightGrayColor noMargin boldMont" style="line-height: 44px;">
+      {{ 'settings.authSettings.email' | translate }}
+    </p>
+
+    <p class="semiBoldMont noMargin font14px lightGrayColor" style="width:70%;">
+      {{ 'settings.authSettings.emailDesc' | translate }}
+    </p>
+    <div style="height: 20px"></div>
+    <p class="font14px lightGrayColor noMargin boldMont">
+      {{ 'settings.authSettings.enable' | translate }}
+    </p>
+    <div style="height: 10px"></div>
+    <app-toggle-switch (valueChanged)="emailChecked = $event"></app-toggle-switch>
+    <div style="height: 20px"></div>
+
+    <div fxLayoutAlign="space-between start" fxHide.xs="true">
+      <div fxFlex="47" fxFlex.xs="100">
+        <app-evo-input title="{{ 'userSettings.emailTitle' | translate }}"
+                       placeholderText="{{ 'userSettings.emailTitle' | translate }}"
+                       [value]="email"
+                       (inputChangedEvent)="email = $event"
+        ></app-evo-input>
+      </div>
+
+    </div>
+
+    <div fxHide.gt-xs="true">
+      <div>
+        <app-evo-input title="{{ 'userSettings.emailTitle' | translate }}"
+                       placeholderText="{{ 'userSettings.emailTitle' | translate }}"
+        ></app-evo-input>
+      </div>
+    </div>
+    <div style="height: 20px"></div>
+
+    <div fxLayoutAlign="space-between center" fxHide.xs="true">
+      <div fxFlex="47">
+        <app-evo-input title="{{ 'userSettings.newPasswordTitle' | translate }}"
+                       placeholderText="{{ 'userSettings.newPasswordTitle' | translate }}"
+                       [inputType]="'password'"
+                       [value]="newPassword"
+                       (inputChangedEvent)="newPassword = $event">
+        </app-evo-input>
+      </div>
+      <div fxFlex="47">
+        <app-evo-input title="{{ 'userSettings.newPasswordTitle' | translate }}"
+                       placeholderText="{{ 'userSettings.newPasswordTitle' | translate }}"
+                       [inputType]="'password'"
+                       [value]="confirmNewPassword"
+                       (inputChangedEvent)="confirmNewPassword = $event">
+        </app-evo-input>
+      </div>
+
+      <div fxHide.gt-xs="true">
+        <div>
+          <app-evo-input title="{{ 'userSettings.newPasswordTitle' | translate }}"
+                         placeholderText="{{ 'userSettings.newPasswordTitle' | translate }}"
+                         [inputType]="'password'"
+                         [value]="newPassword"
+                         (inputChangedEvent)="newPassword = $event"
+          >
+          </app-evo-input>
+        </div>
+        <div style="height: 20px;"></div>
+        <div>
+          <app-evo-input title="{{ 'userSettings.newPasswordTitle' | translate }}"
+                         placeholderText="{{ 'userSettings.newPasswordTitle' | translate }}"
+                         [inputType]="'password'"
+                         [value]="confirmNewPassword"
+                         (inputChangedEvent)="confirmNewPassword = $event">
+          </app-evo-input>
+        </div>
+      </div>
+      <div style="height: 20px"></div>
+      <div fxLayoutAlign="end start">
+        <button class="greenButton semiBoldMont font14px whiteColor"
+                style="width: 140px; height: 40px;"
+                [disabled]="isSaveEmailDisabled()">
+          {{ 'userSettings.saveButtonTitle' | translate }}
+        </button>
+      </div>
+      <div style="height: 40px"></div>
+
+    </div>
+
+  </div>-->
+
+</div>

@@ -1,0 +1,20 @@
+.license-history{
+    border-radius: 6px; 
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-flow: column;
+    width: 750px !important;
+    padding-left: 8%;
+
+}
+.loadMoreButton{
+    padding: 8px 12px 8px;
+    font-size: 15px;
+    line-height: 1.5;
+    border-radius: 25px;
+    width:150px;
+    margin-left: 65%;
+    margin-right:25%;
+    background-color: #28A745;
+  
+  }

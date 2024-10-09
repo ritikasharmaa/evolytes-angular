@@ -1,0 +1,123 @@
+<div style=" height: 80px;">
+  <div style="height: 100%; position: relative; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); z-index: 20">
+
+    <div fxFlex.xs="10px" fxFlex.sm="20px" fxFlex.md="20px" fxFlex.gt-md="40px"></div>
+
+    <div fxLayoutAlign="center center" fxHide.gt-sm="true">
+      <div style="height: 40px;" fxFlex="60px" fxLayoutAlign="center center" (click)="onClicked()">
+        <img src="../../../../assets/icons/navigation-menu.svg" style="height: 40px; width: 40px; cursor: pointer;"
+             alt="burger menu">
+      </div>
+      <div fxFlex.xs="10px" fxFlex.sm="20px" fxFlex.md="20px" fxFlex.gt-md="40px"></div>
+    </div>
+
+    <div fxFlex.xs="80px" fxFlex="120px" (click)="navigateHome()" fxLayoutAlign="center center">
+      <img src="../../../../assets/evolytes-vector.svg" style="height: 100%; width: 100%; cursor: pointer;"
+           alt="Evolytes logo">
+    </div>
+
+    <div fxFlex.xs="10px" fxFlex.gt-xs="20px"></div>
+
+    <div fxFlex fxLayoutAlign="end center">
+
+      <a fxHide.lt-md
+         class="boldMont noMargin grayHoverColor font14px pointer centerAlign"
+         (click)="navigateFeatures()">
+        {{ 'header.features' | translate }}
+      </a>
+
+      <div fxFlex="30px" fxFlex.gt-md="40px" fxHide.lt-md></div>
+
+      <a fxHide.lt-md="true"
+         class="boldMont noMargin grayHoverColor font14px pointer centerAlign"
+         (click)="navigateSchools()">
+        {{ 'header.schools' | translate }}
+      </a>
+
+      <div fxFlex="30px" fxFlex.gt-md="40px" fxHide.lt-md></div>
+
+      <a fxHide.lt-md="true"
+         class="boldMont noMargin grayHoverColor font14px pointer centerAlign"
+         (click)="navigatePricing()">
+        {{ 'header.princing' | translate }}
+      </a>
+
+      <div fxFlex="30px" fxFlex.gt-md="40px" fxHide.lt-md></div>
+
+      <a fxHide.lt-md="true"
+         class="boldMont noMargin grayHoverColor font14px pointer centerAlign"
+         (click)="navigateResearch()">
+        {{ 'header.research' | translate }}
+      </a>
+
+      <div fxFlex="30px" fxFlex.gt-md="40px" fxHide.lt-md></div>
+
+      <a fxHide.lt-sm="true"
+         class="boldMont noMargin grayHoverColor font14px pointer"
+         style="text-align: center;"
+         (click)="login()"
+         *ngIf="isUserLoggedIn() === false">
+        {{ 'header.login' | translate }}
+      </a>
+
+      <div fxFlex="30px" fxFlex.gt-md="40px" *ngIf="isUserLoggedIn() === false" fxHide.lt-sm></div>
+
+      <button class="greenButton semiBoldMont whiteColor font14px defaultShadow"
+              style="height: 40px;"
+              fxFlex="150px"
+              fxFlex.xs="120px"
+              fxLayoutAlign="center center"
+              (click)="getStartedClicked()">
+        {{ getStartedButtonTitle() | translate }}
+      </button>
+    </div>
+
+    <div fxFlex.xs="10px" fxFlex.sm="20px" fxFlex.md="20px" fxFlex.lg="40px"></div>
+  </div>
+</div>
+
+<!-- Burger menu--->
+<div style="height: 200px;  z-index: 20; opacity: 1" [fxHide]="hidden">
+  <div style="height: 100%; position: relative; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); background: #ffffff; z-index: 20">
+
+    <div fxLayout="column" fxLayoutAlign="start start" style="margin-left: 2em">
+      <div style="height: 20px"></div>
+      <a
+        class="boldMont noMargin grayColor font14px pointer"
+        style="text-align: center;"
+        (click)="navigateFeatures()">
+        {{ 'header.features' | translate }}
+      </a>
+      <div style="height: 20px"></div>
+      <a
+        class="boldMont noMargin grayColor font14px pointer"
+        style="text-align: center;"
+        (click)="navigateSchools()">
+        {{ 'header.schools' | translate }}
+      </a>
+
+      <div style="height: 20px"></div>
+
+      <a
+        class="boldMont noMargin grayColor font14px pointer"
+        style="text-align: center;"
+        (click)="navigatePricing()">
+        {{ 'header.princing' | translate }}
+      </a>
+      <div style="height: 20px"></div>
+      <a
+        class="boldMont noMargin grayColor font14px pointer"
+        style="text-align: center;"
+        (click)="navigateResearch()">
+        {{ 'header.research' | translate }}
+      </a>
+      <div style="height: 20px"></div>
+      <a
+        class="boldMont noMargin grayColor font14px pointer"
+        style="text-align: center;"
+        (click)="login()">
+        {{ 'header.login' | translate }}
+      </a>
+    </div>
+  </div>
+</div>

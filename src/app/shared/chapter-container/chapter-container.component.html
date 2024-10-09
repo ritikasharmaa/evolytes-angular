@@ -1,0 +1,103 @@
+<div fxLayout="column" style="width: 100%;">
+  <div fxFlex *ngIf="integration">
+    <div class="smallShadow pointer bgWhiteHoverColor" style="height: 110px; border-radius: 4px;">
+      <div style="height: 75px;">
+        <div fxFlex>
+          <div style="height:20px;" class="bgBox">
+            <div fxFlex="5px"></div>
+            <div fxLayoutAlign="center center">
+              <p class="semiBoldMont font10px grayColor noMargin" *ngIf="integrationLastAttempt(integration)">
+                {{ integrationLastAttempt(integration) }}
+              </p>
+              <p class="semiBoldMont font10px grayColor noMargin" *ngIf="!integrationLastAttempt(integration)">
+                {{ 'reusable.noTrial' | translate }}
+              </p>
+            </div>
+          </div>
+          <div style="height: 55px;">
+            <div fxFlex="10px"></div>
+            <div fxFlex="50px" fxLayoutAlign="center center">
+              <img [src]="integration.iconURL()"
+                   class="bigLeftIcon" *ngIf="integration.iconURL()">
+            </div>
+            <div fxFlex="5px"></div>
+            <div fxFlex fxLayoutAlign="start center">
+              <div>
+                <p class="semiBoldMont font12px blackColor noMargin" style="height: 14px;">
+                  {{ integrationName(integration) }}
+                </p>
+                <div style="height: 4px;"></div>
+                <p class="semiBoldMont font10px grayColor noMargin" style="height: 14px;">
+                  {{ 'reusable.chapter' | translate }} {{ integration.chapter }}
+                </p>
+              </div>
+            </div>
+            <div fxFlex="10px"></div>
+          </div>
+        </div>
+        <div *ngIf="integrationExamStatus(integration) !== null" fxFlex="40px" fxLayoutAlign="center center"
+             [ngClass]="integrationExamStatus(integration).bgColor"
+             style="border-top-right-radius: 4px">
+          <img [src]="integrationExamStatus(integration).url"
+               [ngClass]="integrationExamStatus(integration).className">
+        </div>
+      </div>
+      <div class="lightGrayBg"
+           style="height: 35px; border-radius: 0 0 4px 4px;"
+           fxLayoutAlign="start center">
+        <div fxFlex="10px"></div>
+        <div fxFlex>
+          <div style="height: 2px"></div>
+          <p class="semiBoldMont font8px grayColor noMargin">
+            {{ 'reusable.attempts' | translate }}
+          </p>
+          <div style="height: 3px"></div>
+          <div fxLayoutAlign="start center">
+            <div fxFlex="3px"></div>
+            <img src="./assets/icons/gray-hashtag-icon.png"
+                 class="smallHashtagIcon">
+            <div fxFlex="6px"></div>
+            <p class="mediumMont font10px grayColor noMargin">
+              {{ integrationExamNumAttempts(integration) }}
+            </p>
+          </div>
+        </div>
+        <div fxFlex="10px"></div>
+        <div fxFlex>
+          <div style="height: 2px"></div>
+          <p class="semiBoldMont font8px grayColor noMargin">
+            {{ 'reusable.required' | translate }}
+          </p>
+          <div style="height: 3px"></div>
+          <div fxLayoutAlign="start center">
+            <div fxFlex="3px"></div>
+            <img src="./assets/icons/gray-checkmark-icon.svg"
+                 class="smallCheckmarkIcon">
+            <div fxFlex="6px"></div>
+            <p class="mediumMont font10px grayColor noMargin">
+              {{ integration.numCorrect }} / {{ integration.numQuestions() }}
+            </p>
+          </div>
+        </div>
+        <div fxFlex="10px"></div>
+        <div fxFlex>
+          <div style="height: 2px"></div>
+          <p class="semiBoldMont font8px grayColor noMargin">
+            {{ 'reusable.result' | translate }}
+          </p>
+          <div style="height: 3px"></div>
+          <div fxLayoutAlign="start center">
+            <div fxFlex="3px"></div>
+            <img src="./assets/icons/gray-checkmark-icon.svg"
+                 class="smallCheckmarkIcon">
+            <div fxFlex="6px"></div>
+            <p class="mediumMont font10px grayColor noMargin">
+              {{ integrationCorrectAnswers(integration) }}
+            </p>
+          </div>
+        </div>
+        <div fxFlex="10px"></div>
+      </div>
+    </div>
+  </div>
+</div>

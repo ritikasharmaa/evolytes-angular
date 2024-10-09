@@ -1,0 +1,38 @@
+<app-modal></app-modal>
+<app-evo-header></app-evo-header>
+<div style="height: calc(100% - 80px - 50px);">
+
+  <div style="height: 40px"></div>
+
+  <div fxLayoutAlign="center start">
+    <p fxFlex="90" class="boldMont font22px blackColor noMargin" style="text-align: center;">{{ 'emailVerifyReminder.title' | translate }}</p>
+  </div>
+
+  <div style="height: 40px"></div>
+
+  <div fxLayoutAlign="center start">
+    <p fxFlex="90" fxFlex.gt-xs="600px" class="regularMont font14px grayColor noMargin" style="text-align: center;">{{ 'emailVerifyReminder.subtitlePartOne' | translate }} {{ userEmail() }} {{ 'emailVerifyReminder.subtitlePartTwo' | translate }}</p>
+  </div>
+
+  <div style="height: 20px"></div>
+
+  <div fxLayoutAlign="center start">
+    <button class="evoButton bgGreenHoverColor defaultShadow boldMont font14px whiteColor" style="width: 140px; height: 40px;" (click)="onSkipClicked()">{{ 'emailVerifyReminder.skipButtonTitle' | translate }}</button>
+  </div>
+
+  <div style="height: 40px;"></div>
+
+  <div fxLayoutAlign="center start">
+    <p fxFlex="90" fxFlex.gt-sm="600px" class="regularMont font14px grayColor noMargin" style="text-align: center">{{ 'emailVerifyReminder.resendEmail' | translate }}</p>
+  </div>
+
+  <div style="height: 20px"></div>
+
+  <div fxLayoutAlign="center start">
+    <button class="evoButton bgGreenHoverColor defaultShadow boldMont font14px whiteColor"
+            style="width: 140px; height: 40px;"
+            (click)="resendVerificationEmail()">{{ 'emailVerifyReminder.sendAgainTitle' | translate }}</button>
+  </div>
+
+</div>
+<app-evo-footer></app-evo-footer>

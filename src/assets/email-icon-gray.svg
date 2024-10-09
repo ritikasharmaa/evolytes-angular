@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="20px" viewBox="0 0 29 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>EmailIcon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Landing-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Landing-Page-V2-(Design-Sprint)-IRIS-" transform="translate(-56.000000, -4290.000000)" stroke="#54676E">
+            <g id="Content" transform="translate(-42.000000, 220.000000)">
+                <g id="Footer" transform="translate(42.000000, 4027.000000)">
+                    <g id="EmailIcon" transform="translate(56.000000, 43.000000)">
+                        <g id="Email-Icon">
+                            <rect id="Rectangle-5" stroke-width="1.5" x="0.75" y="0.75" width="27.5" height="18.5" rx="1"></rect>
+                            <path d="M1.16,1.17647059 L13.8037039,13.442168 C14.1916287,13.8184951 14.8083713,13.8184951 15.1962961,13.442168 L27.84,1.17647059" id="Line-2" stroke-width="1.5" stroke-linecap="square"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

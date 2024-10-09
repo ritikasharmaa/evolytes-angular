@@ -1,0 +1,91 @@
+<div fxLayoutAlign="center center">
+  <div fxLayout="column" style="width:100%;" ngStyle.lt-lg="80%">
+    <div fxFlex="5px"></div>
+    <div fxFlex>
+      <div class="smallShadow pointer bgWhiteHoverColor" style="height: 90px; border-radius: 4px;">
+        <div style="height: 55px;">
+          <div fxFlex>
+            <div style="height: 55px;">
+              <div fxFlex="10px"></div>
+              <div fxFlex="50px" fxLayoutAlign="center center">
+                <img [src]="answerTypeIconURL()"
+                     class="bigLeftIcon" *ngIf="answerTypeIconURL() !== null">
+              </div>
+              <div fxFlex="5px"></div>
+              <div fxFlex fxLayoutAlign="start center">
+                <div>
+                  <p class="semiBoldMont font12px grayColor noMargin">
+                    {{ answerString() }}
+                  </p>
+                  <div style="height: 4px;"></div>
+                  <p class="mediumMont font10px grayColor noMargin">
+                    {{ answerCategory() | translate }}
+                  </p>
+                </div>
+              </div>
+              <div fxFlex="10px"></div>
+            </div>
+          </div>
+          <div *ngIf="isCorrectIconURL() !== null" fxFlex="40px" fxLayoutAlign="center center"
+               [ngClass]="isCorrectIconURL().bgColor" style="border-top-right-radius: 4px">
+            <img [src]="isCorrectIconURL().url"
+                 [ngClass]="isCorrectIconURL().className">
+          </div>
+
+        </div>
+        <div class="lightGrayBg"
+             style="height: 35px; border-radius: 0 0 4px 4px;"
+             fxLayoutAlign="start center">
+          <div fxFlex="10px"></div>
+          <div fxFlex>
+            <div style="height: 2px"></div>
+            <div fxLayoutAlign="start center">
+              <p class="semiBoldMont font7px grayColor noMargin">
+                {{ 'answers.answerType' |translate }}
+              </p>
+            </div>
+            <div style="height: 3px"></div>
+            <div fxLayoutAlign="start center">
+              <p class="boldMont font9px grayColor noMargin">
+                {{ answerType() |translate }}
+              </p>
+            </div>
+          </div>
+          <div fxFlex="10px"></div>
+          <div fxFlex>
+            <div style="height: 2px"></div>
+            <div fxLayoutAlign="start center">
+              <p class="semiBoldMont font7px grayColor noMargin">
+                {{ 'answers.category' |translate }}
+              </p>
+            </div>
+            <div style="height: 3px"></div>
+            <div fxLayoutAlign="start center">
+              <p class="boldMont font9px grayColor noMargin">
+                {{ answerCategory() | translate }}
+              </p>
+            </div>
+          </div>
+          <div fxFlex="10px"></div>
+          <div fxFlex>
+            <!--
+            <div style="height: 2px"></div>
+            <div fxLayoutAlign="start center">
+              <p class="semiBoldMont font7px grayColor noMargin">
+                {{ 'answers.progress' |translate }}
+              </p>
+            </div>
+            <div style="height: 3px"></div>
+            <div fxLayoutAlign="start center">
+              <p class="boldMont font9px grayColor noMargin">
+                1%
+              </p>
+            </div>-->
+          </div>
+          <div fxFlex="10px"></div>
+        </div>
+      </div>
+      <div style="height: 5px;"></div>
+    </div>
+  </div>
+</div>

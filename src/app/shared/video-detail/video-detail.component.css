@@ -1,0 +1,4 @@
+.bgSubCatHover:hover {
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.075);
+}

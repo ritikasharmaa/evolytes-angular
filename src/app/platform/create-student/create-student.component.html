@@ -1,0 +1,136 @@
+<app-modal></app-modal>
+<app-evo-header></app-evo-header>
+<app-evo-decoration-background-signup></app-evo-decoration-background-signup>
+<div class="defaultScrollBar scrollBarBlueThumb"
+     style="height: calc(100% - 60px); z-index: 10; overflow-y: scroll;"
+     fxLayoutAlign="center start">
+
+  <form #f="ngForm" fxFlex.gt-md="960px" fxFlex.md="80" fxFlex.lt-md="90" style="width: 100%; height: 100%;">
+
+    <div style="height: 20px;"></div>
+
+    <div style="height: 30px" fxLayoutAlign="center center">
+      <p class="boldMont font24px blackColor noMargin" style="text-align: center;">{{ 'createStudent.title' | translate }}</p>
+    </div>
+
+    <div style="height: 10px;"></div>
+
+    <div fxLayoutAlign="center start">
+      <p fxFlex="100" fxFlex.gt-sm="700px" class="regularMont font16px grayColor noMargin" style="text-align: center;">{{ 'createStudent.subtitle' | translate }}</p>
+    </div>
+
+    <div style="height: 30px;"></div>
+
+    <div fxHide.lt-sm="true" fxLayoutAlign="space-around start">
+      <div fxFlex="45">
+        <app-evo-input title="{{ 'createStudent.firstName' | translate }}"
+                       placeholderText="{{ 'createStudent.firstName' | translate }}"
+                       ngModel
+                       name="firstName">
+        </app-evo-input>
+        <div style="height: 20px"></div>
+        <app-evo-input title="{{ 'createStudent.lastName' | translate }}"
+                       placeholderText="{{ 'createStudent.lastName' | translate }}"
+                       ngModel
+                       name="lastName">
+        </app-evo-input>
+        <div style="height: 20px"></div>
+        <app-evo-input-date title="{{ 'createStudent.birthDate' | translate }}"
+                            placeholderText="{{ 'createStudent.birthDatePlaceholder' | translate }}" ngModel name="birthDate"></app-evo-input-date>
+      </div>
+      <div fxFlex="45">
+        <div style="height: 65px">
+          <app-evo-lang-dropdown [type]="'country'"
+                                 [currentValue]="student.country"
+                                 [isDisabled]="true">
+          </app-evo-lang-dropdown>
+        </div>
+        <div style="height: 20px"></div>
+        <div style="height: 65px">
+          <app-evo-lang-dropdown [type]="'culture'"
+                                 [autoselect]="true"
+                                 [currentValue]="student.culture"
+                                 (valueChangedEvent)="student.culture = $event">
+          </app-evo-lang-dropdown>
+        </div>
+        <div style="height: 20px"></div>
+        <div style="height: 65px;">
+          <app-evo-dropdown title="{{ 'createStudent.schoolType' | translate }}"
+                            [list]="schoolTypes"
+                            [ngModel]="schoolTypes[0]"
+                            name="schoolType">
+          </app-evo-dropdown>
+        </div>
+      </div>
+    </div>
+
+    <div fxHide.gt-xs="true">
+      <app-evo-input title="{{ 'createStudent.firstName' | translate }}"
+                     placeholderText="{{ 'createStudent.firstName' | translate }}"
+                     ngModel
+                     name="firstName">
+      </app-evo-input>
+      <div style="height: 20px"></div>
+      <app-evo-input title="{{ 'createStudent.lastName' | translate }}"
+                     placeholderText="{{ 'createStudent.lastName' | translate }}"
+                     ngModel
+                     name="lastName">
+      </app-evo-input>
+      <div style="height: 20px"></div>
+      <app-evo-input-date title="{{ 'createStudent.birthDate' | translate }}"
+                          placeholderText="{{ 'createStudent.birthDatePlaceholder' | translate }}"
+                          [ngModel]="null"
+                          name="birthDate">
+      </app-evo-input-date>
+      <div style="height: 20px"></div>
+      <div style="height: 65px">
+        <app-evo-lang-dropdown [type]="'country'"
+                               [autoselect]="true"
+                               [currentValue]="student.country"
+                               (valueChangedEvent)="student.country = $event">
+        </app-evo-lang-dropdown>
+      </div>
+      <div style="height: 20px"></div>
+      <div style="height: 65px">
+        <app-evo-lang-dropdown [type]="'culture'"
+                               [autoselect]="true"
+                               [currentValue]="student.culture"
+                               (valueChangedEvent)="student.culture = $event">
+        </app-evo-lang-dropdown>
+      </div>
+      <div style="height: 20px"></div>
+      <div style="height: 65px;">
+        <app-evo-dropdown title="{{ 'createStudent.schoolType' | translate }}"
+                          [list]="schoolTypes"
+                          [ngModel]="schoolTypes[0]"
+                          name="schoolType">
+        </app-evo-dropdown>
+      </div>
+    </div>
+
+    <div style="height: 50px"></div>
+
+    <div fxLayoutAlign="center start">
+      <button class="greenButton whiteColor semiBoldMont font14px noMargin"
+              style="height: 40px; width: 140px;"
+              fxLayoutAlign="center center"
+              (click)="createStudent(f)">
+        {{ 'createStudent.nextButton' | translate }}
+      </button>
+    </div>
+
+    <div style="height: 20px"></div>
+
+    <div fxLayoutAlign="center start">
+      <app-evo-progress-points [currentIndex]="0"
+                               [numPoints]="4"
+                               [defaultColor]="'#979797'"
+                               [selectedColor]="'#009CCC'">
+      </app-evo-progress-points>
+    </div>
+
+    <div style="height: 40px"></div>
+
+  </form>
+
+</div>

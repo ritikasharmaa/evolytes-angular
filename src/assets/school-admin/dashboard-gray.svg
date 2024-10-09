@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="18px" viewBox="0 0 24 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>gauge-dashboard</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Platform" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Settings---Schools---Licenses" transform="translate(-26.000000, -222.000000)" stroke="#54676E">
+            <g id="Sidebar" transform="translate(0.000000, 71.000000)">
+                <g id="Overview" transform="translate(26.000000, 146.153361)">
+                    <g id="gauge-dashboard" transform="translate(0.000000, 6.006303)">
+                        <ellipse id="Oval" cx="12" cy="11.6121849" rx="1.5" ry="1.50157563"></ellipse>
+                        <path d="M13.06,10.5500704 L18.011,5.59587185" id="Shape"></path>
+                        <path d="M2.5,12.1127101 L4.5,12.1127101" id="Shape"></path>
+                        <path d="M21.5,12.1127101 L19.5,12.1127101" id="Shape"></path>
+                        <path d="M20.776,7.9733666 L18.929,8.73917017" id="Shape"></path>
+                        <path d="M15.635,2.82596534 L14.87,4.67590651" id="Shape"></path>
+                        <path d="M12,2.10220588 L12,4.10430672" id="Shape"></path>
+                        <path d="M8.365,2.82596534 L9.13,4.67590651" id="Shape"></path>
+                        <path d="M5.283,4.88712815 L6.695,6.3036145" id="Shape"></path>
+                        <path d="M3.224,7.9733666 L5.07,8.73917017" id="Shape"></path>
+                        <path d="M12,0.100105042 C5.64872538,0.100105042 0.5,5.25423874 0.5,11.6121849 L0.5,15.1158613 C0.5,15.6687262 0.94771525,16.1169118 1.5,16.1169118 L22.5,16.1169118 C23.0522847,16.1169118 23.5,15.6687262 23.5,15.1158613 L23.5,11.6121849 C23.5,5.25423874 18.3512746,0.100105042 12,0.100105042 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

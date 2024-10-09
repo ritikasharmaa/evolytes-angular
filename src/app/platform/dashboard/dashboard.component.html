@@ -1,0 +1,103 @@
+<div style="height: 100%;">
+  <div style="height: 100%;">
+    <div class="defaultScrollBar scrollBarGreenThumb" style="height: 100%; width: 100%; overflow-y: scroll;"
+         *ngIf="isSetup">
+      <div style="height: 15px;"></div>
+      <div fxLayout.gt-sm="row"
+           fxLayout.lt-md="column"
+           fxLayoutAlign.gt-sm="center start"
+           fxLayoutAlign.lt-md="start center"
+           style="height: 458px;">
+        <div fxFlex.gt-sm="32" [ngStyle.lt-md]="{ width: '96%' }">
+          <div>
+            <app-student-profile></app-student-profile>
+          </div>
+        </div>
+        <div style="height: 15px;"></div>
+        <div fxFlex="1"></div>
+        <div fxFlex="63"
+             [ngStyle.lt-md]="{ width: '96%' }"
+             style="height: 458px;">
+          <app-activity-charts></app-activity-charts>
+        </div>
+      </div>
+      <div style="height: 15px;"></div>
+      <div fxLayout.gt-sm="row" fxLayoutAlign.gt-sm="center start" fxLayout.lt-md="column"
+           fxLayoutAlign.lt-md="start center">
+        <div fxFlex.gt-sm="32" [ngStyle.lt-md]="{ width: '96%' }">
+          <div style="height: 500px;">
+            <app-book-dashboard-container></app-book-dashboard-container>
+          </div>
+        </div>
+        <div fxFlex="1"></div>
+        <div fxFlex="63" [ngStyle.lt-md]="{ width: '96%' }">
+          <div class="whiteBg defaultShadow" style="height: 500px; border-radius: 12px;">
+            <div style="height: 40px; border-top-left-radius: 12px;" fxLayoutAlign="start center" class="bgTitle">
+              <div fxFlex="20px"></div>
+              <p class="font16px grayColor noMargin boldMont centerAlign"
+                 style="line-height: 40px; text-align: center;">
+                {{ 'dashboard.answersListTitle' | translate }}
+              </p>
+            </div>
+            <div style="height:15px;"></div>
+            <div style="height: calc(100% - 70px)" fxLayoutAlign="center start">
+              <div fxFlex="20px"></div>
+              <div style="height: 100%" fxFlex>
+                <app-answers-list [filterQuery]="filter"></app-answers-list>
+              </div>
+              <div fxFlex="20px"></div>
+            </div>
+            <div style="height: 10px;"></div>
+          </div>
+        </div>
+      </div>
+      <div style="height: 15px;"></div>
+      <div>
+        <div fxFlex="2"></div>
+        <app-dash-progress-bar fxFlex style="height: 500px;"></app-dash-progress-bar>
+        <div fxFlex="2"></div>
+      </div>
+      <div style="height: 15px;"></div>
+    </div>
+    <div *ngIf="!isSetup" fxFlex="100"
+         fxLayoutAlign="center center"
+         class="defaultScrollBar scrollBarGreenThumb"
+         style="height: 100%; overflow-y: scroll;">
+      <div fxLayoutAlign="center center">
+        <div fxFlex="450px" fxFlex.lt-md="90" class="whiteBg defaultShadow"
+             fxLayout="column" fxLayoutAlign="center center"
+             style="border-radius: 12px;">
+          <div style="height: 20px;"></div>
+          <div fxLayoutAlign="center start">
+            <img src="./assets/land-images/game-icon.png" style="height: 80px; width: 80px; object-fit: contain;">
+          </div>
+          <div style="height: 20px;"></div>
+          <div fxLayoutAlign="center start">
+            <p class="boldMont font16px blackColor noMargin centerAlign">
+              {{ 'dashboard.noProfileMessage' | translate }}
+            </p>
+          </div>
+          <div style="height: 20px;"></div>
+          <div style="width: 100%;"
+               fxLayout.xs="column"
+               fxLayout.gt-xs="row"
+               fxLayoutAlign="center center">
+            <div fxFlex.xs="60px" fxFlex="180px" fxLayoutAlign="center start" style="cursor: pointer;"
+                 (click)="CultureModel.openAppStore()">
+              <img [src]="CultureModel.getLocalizedAppStoreBadge(UserModel.getCurrent().culture)"
+                   style="height: 66px; width: 176px; object-fit: contain; cursor: pointer;">
+            </div>
+            <div fxFlex.xs="10px" fxFlex="3"></div>
+            <div fxFlex.xs="90px" fxFlex="180px" style="position: relative; cursor: pointer;"
+                 (click)="CultureModel.openPlayStore()">
+              <img [src]="CultureModel.getLocalizedPlayStoreBadge(UserModel.getCurrent().culture)"
+                   style="height: 70px; width: 190px; object-fit: contain;">
+            </div>
+          </div>
+          <div style="height: 20px;"></div>
+        </div>
+      </div>
+      <div style="height: 10px;"></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+<div style="width: 100%;">
+  <div style="height: 30px" fxLayoutAlign="start center">
+    <p class="semiBoldMont blackColor font14px noMargin">{{title}}</p>
+  </div>
+  <div style="height: 45px;"
+       fxLayoutAlign="center center">
+    <p class="semiBoldMont blackColor font14px noMargin">{{range.getRange()}}</p>
+  </div>
+  <div style="height: 65px">
+    <div fxFlex>
+      <app-evo-input [placeholderText]="'Min'"
+                     [title]="'Min'"
+                     [inputType]="'number'"
+                     [(ngModel)]="range.min">
+      </app-evo-input>
+    </div>
+    <div fxFlex="20px"></div>
+    <div fxFlex>
+      <app-evo-input [placeholderText]="'Max'"
+                     [title]="'Max'"
+                     [inputType]="'number'"
+                     [(ngModel)]="range.max">
+      </app-evo-input>
+    </div>
+  </div>
+  <div style="height: 10px"></div>
+  <div style="height: 65px">
+    <div fxFlex>
+      <app-evo-dropdown [title]="'Op 1 Type'"
+                        [placeholderText]="'Type'"
+                        [list]="RangeModel.OperationTypesDropdown"
+                        [(ngModel)]="range.operationOneType">
+      </app-evo-dropdown>
+    </div>
+    <div fxFlex="20px"></div>
+    <div fxFlex>
+      <app-evo-input [title]="'Op 1 Value'"
+                     [placeholderText]="'Value'"
+                     [inputType]="'number'"
+                     [isDisabled]="range.operationOneType === RangeModel.OperationTypes.none"
+                     [(ngModel)]="range.operationOneValue">
+      </app-evo-input>
+    </div>
+  </div>
+  <div style="height: 10px"></div>
+  <div style="height: 65px;">
+    <div fxFlex>
+      <app-evo-dropdown [title]="'Op 2 Type'"
+                        [placeholderText]="'Type'"
+                        [list]="RangeModel.OperationTypesDropdown"
+                        [(ngModel)]="range.operationTwoType">
+      </app-evo-dropdown>
+    </div>
+    <div fxFlex="20px"></div>
+    <div fxFlex>
+      <app-evo-input [title]="'Op 2 Value'"
+                     [placeholderText]="'Value'"
+                     [inputType]="'number'"
+                     [isDisabled]="range.operationTwoType === RangeModel.OperationTypes.none"
+                     [(ngModel)]="range.operationTwoValue">
+      </app-evo-input>
+    </div>
+  </div>
+</div>

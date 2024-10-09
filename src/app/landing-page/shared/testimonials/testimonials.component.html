@@ -1,0 +1,187 @@
+<!--Computer-->
+<div class="blueBg"
+     fxHide.lt-md="true"
+     style="margin-top: 80px;">
+  <div style="height: 100%; width: 90%; max-width: 1530px; margin: 0 auto">
+    <div fxFlex.gt-md></div>
+    <div fxFlex="400px" style="height: 100%;" fxLayout="column" fxLayoutAlign="center center">
+      <div style="height: 20px;"></div>
+      <h1 class="boldMont noMargin whiteColor font30px"
+          style="text-align: center">
+        {{ getGeneralTitle() }}
+      </h1>
+      <div style="height: 20px;"></div>
+      <h1 class="regularMont noMargin whiteColor font18px">
+        {{ getGeneralSubtitle() }}
+      </h1>
+      <div style="height: 40px;"></div>
+      <!-- Feature request -->
+      <div fxLayoutAlign="start center" style="width: 100%" *ngIf="type === 'feature'">
+        <button fxFlex="47" class="whiteButton semiBoldMont font16px blueColor"
+                (click)="goToContact('lp2.landing.featureSection.title')"
+                style="height: 50px;">
+          {{'lp2.footer.contactUs' | translate }}
+        </button>
+      </div>
+      <!-- Schools -->
+      <div fxLayoutAlign="start center" style="width: 100%" *ngIf="type === 'school'">
+        <button fxFlex="47" class="whiteButton semiBoldMont font16px blueColor"
+                (click)="goToSchool()"
+                style="height: 50px;">
+          {{'lp2.landing.learnMoreButton' | translate }}
+        </button>
+        <div fxFlex="6"></div>
+        <button fxFlex="47" class="whiteButton semiBoldMont font16px blueColor"
+                (click)="goToContact('lp2.landing.demoButton')"
+                style="height: 50px;">
+          {{'lp2.landing.demoButton' | translate }}
+        </button>
+      </div>
+      <div style="height: 30px;"></div>
+    </div>
+    <div fxFlex></div>
+    <div fxFlex="460px" style="position: relative">
+      <div style="position: absolute; width: 100%; min-width: 300px; height: 140%; bottom: 0; left: 0;">
+        <div fxLayoutAlign="space-between center">
+          <h1 class="whiteColor" style="z-index: 2; cursor: pointer" (click)="decrement()"><</h1>
+          <div class="smallShadow"
+               style="top: 0; z-index: 1; background: #ffffff; width: 70%; height: 320px; padding: 20px; border-radius: 4px; overflow-y: hidden;">
+            <div style="width: 100%;" fxLayoutAlign="end start">
+              <img class="blueQuotes" src="../../../../assets/newWebsite/quotes-icon.png" alt="" style="width: 40px">
+            </div>
+            <div style="height: 30px;"></div>
+            <div style="height: calc(100% - 120px); overflow-y: hidden;">
+              <h1 class="blackColor noMargin mediumMont font16px defaultScrollBar"
+                  style="overflow: auto;">
+                {{getText()}}
+              </h1>
+            </div>
+            <div style="height: 20px;"></div>
+            <div>
+              <p class="blackColor noMargin boldMont font16px">{{ getPosition() }}</p>
+              <div style="height: 4px;"></div>
+              <p class="grayColor semiBoldMont noMargin font14px">{{ getSchool()}}</p>
+            </div>
+          </div>
+          <h1 class="whiteColor" style="z-index: 2; cursor: pointer" (click)="increment()">></h1>
+        </div>
+        <div fxLayoutAlign="center center">
+          <div
+            style="border: white 3px solid; border-radius: 20px; width: 8px; height: 8px; margin: 10px 5px 0 5px;"
+            [ngStyle]="{ 'background-color': getColor(i) }"
+            *ngFor="let t of getTestimonials(); let i = index"></div>
+        </div>
+      </div>
+    </div>
+    <div fxFlex.gt-md></div>
+  </div>
+</div>
+
+<!--Mobile-->
+<div class="blueBg"
+     fxHide.gt-sm="true"
+     fxLayout="column"
+     fxLayoutAlign="center center"
+     style="margin-top: 80px;">
+
+  <div style="position: relative; width: 100%; height: 230px">
+    <div style="position: absolute; bottom: 20px; width: 90%; height: 155%; left: 5%">
+      <div ngStyle.sm="width: 460px"
+           ngStyle.xs="width: 100%;"
+           style="margin: 0 auto;"
+           fxLayoutAlign="space-between center">
+        <h1 class="whiteColor" style="z-index: 2; cursor: pointer" (click)="decrement()"><</h1>
+        <div class="smallShadow whiteBg"
+             style="top: 0; z-index: 1; width: 70%; border-radius: 4px; height: 320px; padding: 20px">
+          <div style="width: 100%;" fxLayoutAlign="end start">
+            <img class="blueQuotes" src="../../../../assets/newWebsite/quotes-icon.png" alt="" style="width: 30px">
+          </div>
+          <div style="height: 30px;"></div>
+          <div style="height: calc(100% - 130px); overflow-y: hidden;">
+            <h1 class="blackColor noMargin mediumMont font16px defaultScrollBar"
+                style="overflow: auto;">
+              {{getText()}}
+            </h1>
+          </div>
+          <div style="height: 20px;"></div>
+          <div>
+            <p class="blackColor noMargin boldMont font16px">{{ getPosition() }}</p>
+            <div style="height: 4px;"></div>
+            <p class="grayColor semiBoldMont noMargin font14px">{{ getSchool() }}</p>
+          </div>
+        </div>
+        <h1 class="whiteColor" style="z-index: 2; cursor: pointer" (click)="increment()">></h1>
+      </div>
+      <div fxLayoutAlign="center center">
+        <div
+          style="border: white 3px solid; border-radius: 20px; width: 8px; height: 8px; margin: 10px 5px 0 5px;"
+          [ngStyle]="{ 'background-color': getColor(i) }"
+          *ngFor="let t of getTestimonials(); let i = index"></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding: 35px 0 30px 0; width: 80%">
+    <h1 class="boldMont noMargin whiteColor font30px"
+        style="text-align: center">
+      {{ getGeneralTitle() }}
+    </h1>
+    <div style="height: 20px;"></div>
+    <h1 class="regularMont noMargin whiteColor font18px"
+        style="margin: 0 auto;"
+        ngStyle.xs="width: 100%;"
+        ngStyle.sm="width: 80%;">
+      {{ getGeneralSubtitle() }}
+    </h1>
+    <div style="height: 40px;"></div>
+    <div fxHide.sm style="width: 100%;">
+      <!-- Feature request -->
+      <button class="whiteButton semiBoldMont font16px blueColor"
+              (click)="goToContact('lp2.landing.featureSection.title')"
+              style="width: 250px; height: 50px; margin: 0 auto; display: block;"
+              *ngIf="type === 'feature'">
+        {{'lp2.footer.contactUs' | translate }}
+      </button>
+      <!-- Schools -->
+      <button class="whiteButton semiBoldMont font16px blueColor"
+              style="width: 250px; height: 50px; margin: 0 auto; display: block;"
+              (click)="goToSchool()"
+              *ngIf="type === 'school'">
+        {{'lp2.landing.learnMoreButton' | translate }}
+      </button>
+      <div style="height: 20px;" *ngIf="type === 'school'"></div>
+      <button class="whiteButton semiBoldMont font16px blueColor"
+              (click)="goToContact('lp2.landing.demoButton')"
+              style="width: 250px; height: 50px; margin: 0 auto; display: block;"
+              *ngIf="type === 'school'">
+        {{'lp2.landing.demoButton' | translate }}
+      </button>
+    </div>
+    <div fxHide.xs fxLayoutAlign="center center">
+      <!-- Feature request -->
+      <div fxLayoutAlign="center center" style="width: 100%" *ngIf="type === 'feature'">
+        <button fxFlex="50" class="whiteButton semiBoldMont font16px blueColor"
+                (click)="goToContact('lp2.landing.featureSection.title')"
+                style="height: 50px;">
+          {{'lp2.footer.contactUs' | translate }}
+        </button>
+      </div>
+      <!-- Schools -->
+      <div fxLayoutAlign="start center" style="width: 100%" *ngIf="type === 'school'">
+        <button fxFlex="47" class="whiteButton semiBoldMont font16px blueColor"
+                (click)="goToSchool()"
+                style="height: 50px;">
+          {{'lp2.landing.learnMoreButton' | translate }}
+        </button>
+        <div fxFlex="6"></div>
+        <button fxFlex="47" class="whiteButton semiBoldMont font16px blueColor"
+                (click)="goToContact('lp2.landing.demoButton')"
+                style="height: 50px;">
+          {{'lp2.landing.demoButton' | translate }}
+        </button>
+      </div>
+    </div>
+    <div style="height: 30px;"></div>
+  </div>
+
+</div>

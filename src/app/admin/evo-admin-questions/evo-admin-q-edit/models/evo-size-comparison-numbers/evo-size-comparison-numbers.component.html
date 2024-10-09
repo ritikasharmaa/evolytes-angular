@@ -1,0 +1,68 @@
+<div>
+  <div style="height: 50px;" fxLayoutAlign="center center">
+    <p class="semiBoldMont font18px blackColor noMargin">{{getFirstRange()}} {{getSymbol()}} {{getSecondRange()}}</p>
+  </div>
+  <div>
+    <div fxFlex="20px"></div>
+    <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+      <div fxFlex>
+        <app-evo-reusable-range [title]="'Range'"
+                                [range]="question.model.firstRange">
+        </app-evo-reusable-range>
+        <div style="height: 5px;"></div>
+      </div>
+      <div fxFlex="20px" fxFlex.xs="10px"></div>
+      <div fxFlex>
+        <app-evo-reusable-range [title]="'Possible Answers'"
+                                [range]="question.model.possibleAnswers">
+        </app-evo-reusable-range>
+      </div>
+    </div>
+    <div fxFlex="20px"></div>
+  </div>
+  <div style="height: 20px" ngStyle.lt-md="height: 10px"></div>
+  <div>
+    <div fxFlex="20px"></div>
+    <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+      <div fxFlex style="height: 65px;">
+        <app-evo-dropdown [list]="QuestionModel.SizeComparisonTypes.dropdownList()"
+                          [title]="'Symbol'"
+                          [(ngModel)]="question.model.symbol">
+        </app-evo-dropdown>
+      </div>
+      <div fxFlex="20px" fxFlex.xs="10px"></div>
+      <div fxFlex>
+        <app-evo-input [title]="'Num Answers'"
+                       [(ngModel)]="question.model.numAnswers">
+        </app-evo-input>
+      </div>
+    </div>
+    <div fxFlex="20px"></div>
+  </div>
+  <div style="height: 20px;" ngStyle.lt-md="height: 10px"></div>
+  <div>
+    <div fxFlex="20px"></div>
+    <div fxLayout="row" fxLayout.xs="column" style="width: 100%;">
+      <div fxFlex>
+        <div fxFlex style="height: 65px;">
+          <app-evo-dropdown [list]="QuestionModel.ImageTypes.dropdownList()"
+                            [title]="'Image Type'"
+                            [(ngModel)]="question.model.imageTypeOne">
+          </app-evo-dropdown>
+        </div>
+      </div>
+    </div>
+    <div fxFlex="20px"></div>
+    <div fxFlex>
+      <p class="semiBoldMont font12px grayColor noMargin">Left Side Unknown</p>
+      <div style="height: 6px;"></div>
+      <div style="height: 42px; width: 42px;">
+        <app-evo-circle-checkmark title="Left Side Unknown"
+                                  [currentValue]="question.model.leftSideUnknown"
+                                  (valueChanged)="question.model.leftSideUnknown = $event">
+        </app-evo-circle-checkmark>
+      </div>
+    </div>
+    <div fxFlex="20px"></div>
+  </div>
+</div>

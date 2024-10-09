@@ -1,0 +1,11 @@
+.noBorder {
+  border: 2px solid transparent;
+}
+
+.greenBorder {
+  border: 2px solid #28A745;
+}
+
+.blueBorder {
+  border: 2px solid #009CCC;
+}
